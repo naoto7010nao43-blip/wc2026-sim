@@ -53,6 +53,12 @@ def simulate_match(
 
     home_lineup = lineup_snapshot(home)
     away_lineup = lineup_snapshot(away)
+    # Name lookup for every player who actually appeared (starters + subs
+    # brought on), used for post-match player-rating display. Kept separate
+    # from home_lineup/away_lineup (starting XI only) so the pitch view's
+    # static formation dots aren't affected by substitutions.
+    home_roster = {p["player_id"]: p["name"] for p in home_lineup}
+    away_roster = {p["player_id"]: p["name"] for p in away_lineup}
 
     events: list[dict] = []
     ball_x, ball_y = 50.0, 50.0
@@ -84,9 +90,12 @@ def simulate_match(
             last_minute_processed = minute
             update_score_state_tactics(home, away, clock, final_minute)
             update_score_state_tactics(away, home, clock, final_minute)
-            for team in (home, away):
+            for team, roster in ((home, home_roster), (away, away_roster)):
                 sub_event = maybe_substitute(team, minute, rng)
                 if sub_event is not None:
+                    sub_in = next((p for p in team.lineup if p.player_id == sub_event["player_id"]), None)
+                    if sub_in is not None:
+                        roster[sub_in.player_id] = sub_in.display_name
                     events.append(sub_event)
 
         attacker = possession
@@ -257,6 +266,8 @@ def simulate_match(
         "penalty_away_score": penalty_away_score,
         "home_lineup": home_lineup,
         "away_lineup": away_lineup,
+        "home_roster": home_roster,
+        "away_roster": away_roster,
         "home_possession_pct": home_possession_pct,
         "away_possession_pct": round(100.0 - home_possession_pct, 1),
         "home_shots": stats[home.team_id]["shots"],

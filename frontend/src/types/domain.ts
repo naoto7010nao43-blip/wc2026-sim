@@ -68,6 +68,14 @@ export interface LineupPlayer {
   y: number;
 }
 
+export interface PlayerRating {
+  player_id: string;
+  name: string;
+  team_id: string;
+  rating: number;
+  is_mom: boolean;
+}
+
 export interface MatchResult extends MatchSummary {
   home_formation: string;
   away_formation: string;
@@ -83,6 +91,7 @@ export interface MatchResult extends MatchSummary {
   away_shots_on_target: number | null;
   home_yellow_cards: number | null;
   away_yellow_cards: number | null;
+  player_ratings: PlayerRating[];
 }
 
 export interface StandingsRow {

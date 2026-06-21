@@ -57,6 +57,14 @@ class LineupPlayer(BaseModel):
     y: float
 
 
+class PlayerRating(BaseModel):
+    player_id: str
+    name: str
+    team_id: str
+    rating: float
+    is_mom: bool
+
+
 class MatchResult(MatchSummary):
     home_formation: str
     away_formation: str
@@ -72,6 +80,7 @@ class MatchResult(MatchSummary):
     away_shots_on_target: int | None = None
     home_yellow_cards: int | None = None
     away_yellow_cards: int | None = None
+    player_ratings: list[PlayerRating] = []
 
 
 class SimulateRoundRobinRequest(BaseModel):

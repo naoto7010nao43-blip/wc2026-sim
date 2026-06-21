@@ -10,6 +10,7 @@ from app.models.match import Match, MatchEvent
 from app.models.player import Player
 from app.models.team import Team
 from app.schemas.match import MatchEventOut, MatchResult, SimulateMatchRequest
+from app.services.player_ratings import compute_player_ratings
 
 router = APIRouter(prefix="/api/matches", tags=["matches"])
 
@@ -70,6 +71,8 @@ def run_and_persist_match(db: Session, req: SimulateMatchRequest) -> Match:
         away_formation=away_formation,
         home_lineup=result["home_lineup"],
         away_lineup=result["away_lineup"],
+        home_roster=result["home_roster"],
+        away_roster=result["away_roster"],
         home_score=result["home_score"],
         away_score=result["away_score"],
         went_to_penalties=result["went_to_penalties"],
@@ -98,6 +101,21 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
     events = db.scalars(
         select(MatchEvent).where(MatchEvent.match_id == match.id).order_by(MatchEvent.id)
     ).all()
+    player_ratings = compute_player_ratings(
+        [
+            {
+                "event_type": e.event_type,
+                "player_id": e.player_id,
+                "secondary_player_id": e.secondary_player_id,
+                "event_metadata": e.event_metadata,
+            }
+            for e in events
+        ],
+        match.home_roster or {},
+        match.away_roster or {},
+        match.home_team_id,
+        match.away_team_id,
+    )
     return MatchResult(
         id=match.id,
         group_id=match.group_id,
@@ -128,6 +146,7 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
         away_shots_on_target=match.away_shots_on_target,
         home_yellow_cards=match.home_yellow_cards,
         away_yellow_cards=match.away_yellow_cards,
+        player_ratings=player_ratings,
     )
 
 

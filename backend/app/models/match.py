@@ -25,6 +25,10 @@ class Match(Base):
     # Starting XI positions: list of {player_id, name, slot_position, x, y}.
     home_lineup: Mapped[list | None] = mapped_column(JSON, nullable=True)
     away_lineup: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    # player_id -> display name, for every player who appeared (starters +
+    # substitutes) -- used for post-match rating/MOM name lookup.
+    home_roster: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    away_roster: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     home_score: Mapped[int] = mapped_column(Integer, default=0)
     away_score: Mapped[int] = mapped_column(Integer, default=0)
     went_to_penalties: Mapped[bool] = mapped_column(default=False)

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { MatchEventTimeline } from "../components/MatchEventTimeline";
 import { PitchFormationView } from "../components/PitchFormationView";
+import { PlayerRatingsPanel } from "../components/PlayerRatingsPanel";
 import { TeamBadge } from "../components/TeamBadge";
 import type { MatchResult, RoundName } from "../types/domain";
 
@@ -180,6 +181,8 @@ export function MatchDetailPage() {
           }}
         />
       </div>
+
+      <PlayerRatingsPanel ratings={match.player_ratings} homeTeamId={match.home_team_id} awayTeamId={match.away_team_id} />
     </div>
   );
 }
