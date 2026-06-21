@@ -6,7 +6,7 @@ import { SimulatorPage } from "./pages/SimulatorPage";
 import { TournamentPage } from "./pages/TournamentPage";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `rounded-md px-3 py-1.5 text-sm font-medium transition ${
+  `whitespace-nowrap rounded-md px-2 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
     isActive ? "bg-emerald-600 text-white" : "text-slate-300 hover:bg-slate-700 hover:text-white"
   }`;
 
@@ -15,11 +15,12 @@ function App() {
     <TeamsProvider>
       <div className="min-h-screen bg-slate-900 text-slate-100">
         <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <Link to="/" className="text-lg font-bold tracking-tight">
-              <span className="text-emerald-400">WC</span>2026 シミュレーター
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
+            <Link to="/" className="whitespace-nowrap text-base font-bold tracking-tight sm:text-lg">
+              <span className="text-emerald-400">WC</span>2026
+              <span className="hidden sm:inline"> シミュレーター</span>
             </Link>
-            <nav className="flex gap-2">
+            <nav className="flex gap-1 sm:gap-2">
               <NavLink to="/tournament" className={navLinkClass}>
                 大会モード
               </NavLink>

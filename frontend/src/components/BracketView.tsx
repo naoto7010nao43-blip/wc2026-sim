@@ -20,7 +20,7 @@ const BRACKET_ROUNDS: RoundName[] = ["R32", "R16", "QF", "SF", "FINAL"];
 
 function BracketColumn({ round, matches }: { round: RoundName; matches: MatchSummary[] }) {
   return (
-    <div className="flex min-w-[180px] flex-1 flex-col justify-around gap-4">
+    <div className="flex w-[180px] flex-shrink-0 flex-col justify-around gap-4">
       <h4 className="text-center text-xs font-semibold tracking-wide text-slate-400">{ROUND_LABELS[round]}</h4>
       <div className="flex flex-1 flex-col justify-around gap-3">
         {matches.length === 0
