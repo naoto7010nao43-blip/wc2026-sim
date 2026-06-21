@@ -3,8 +3,31 @@
 import math
 import random
 
-from app.engine.pitch import attacking_progress, distance, distance_to_target_goal
+from app.engine.pitch import attacking_progress, distance, distance_to_target_goal, zone_for_progress
 from app.engine.state import PlayerState, TeamState
+
+# Role group used to weight ball-carrier selection by zone, so a center-back
+# rarely ends up as the one dribbling deep into the attacking third during
+# open play (real CB goals are overwhelmingly set-piece headers, not
+# self-created dribbles) -- the bench/lineup picker still allows a CB
+# secondary-position fallback, this only governs in-possession positioning.
+_ROLE_GROUP: dict[str, str] = {
+    "GK": "GK", "CB": "DEF", "LB": "DEF", "RB": "DEF",
+    "CDM": "MID", "CM": "MID", "CAM": "MID", "LM": "MID", "RM": "MID",
+    "ST": "ATT", "LW": "ATT", "RW": "ATT",
+}
+_ZONE_ROLE_WEIGHT: dict[str, dict[str, float]] = {
+    "DEF_THIRD": {"DEF": 1.0, "MID": 0.9, "ATT": 0.6},
+    "MID_THIRD": {"DEF": 0.75, "MID": 1.0, "ATT": 0.95},
+    "ATT_THIRD": {"DEF": 0.4, "MID": 0.95, "ATT": 1.0},
+}
+# Defenders snap back to shape quickly (real positional discipline); midfield
+# and attacking roles recover more slowly so a CAM/winger making a forward
+# run can sustain an advanced position long enough to credibly be the one
+# who arrives to finish -- otherwise every chance funnels to whichever
+# player's *nominal* slot happens to sit nearest goal (the striker) instead
+# of reflecting an actual attacking sequence.
+_GRAVITY_BY_ROLE: dict[str, float] = {"GK": 0.05, "DEF": 0.18, "MID": 0.06, "ATT": 0.04}
 
 
 def sigmoid(z: float) -> float:
@@ -31,14 +54,40 @@ def nearest_player(team: TeamState, x: float, y: float, exclude_gk: bool = False
 
 
 def pick_ball_carrier(team: TeamState, ball_x: float, ball_y: float, rng: random.Random) -> PlayerState:
-    """Weighted toward players closer to the ball, excluding the GK unless
-    the ball is deep in their own defensive zone."""
+    """Weighted toward players closer to the ball, scaled by how well their
+    role fits the current zone (a CB is much less likely than a midfielder
+    or forward to be the one carrying the ball deep into the attacking
+    third, even if they happen to be nearby)."""
     outfield = team.outfield()
+    progress = attacking_progress(ball_x, team.attacking_direction)
+    role_weights = _ZONE_ROLE_WEIGHT[zone_for_progress(progress)]
     weights = []
     for p in outfield:
+        # Dampened (sqrt) distance penalty: a flat 1/(1+d) let whichever
+        # attacker's *nominal* slot is literally nearest the goal point
+        # (almost always the central striker) dominate every chance near
+        # goal, crowding out wingers/attacking mids arriving from the side
+        # or from deeper -- real attacking sequences involve more than the
+        # single closest player.
         d = distance((p.x, p.y), (ball_x, ball_y))
-        weights.append(1.0 / (1.0 + d))
+        role = _ROLE_GROUP.get(p.slot_position, "MID")
+        weights.append(role_weights.get(role, 0.8) / (1.0 + d ** 0.5))
     return rng.choices(outfield, weights=weights, k=1)[0]
+
+
+def apply_positional_gravity(team: TeamState, exclude: PlayerState | None) -> None:
+    """Pulls every outfield player (except the one currently on the ball)
+    a step back toward their formation slot's nominal position each tick.
+    Without this, a single successful dribble would permanently relocate a
+    player (e.g. a CB who broke forward once) for the rest of the match,
+    instead of them recovering defensive shape within a few minutes like a
+    real team would."""
+    for p in team.outfield():
+        if p is exclude:
+            continue
+        g = _GRAVITY_BY_ROLE.get(_ROLE_GROUP.get(p.slot_position, "MID"), 0.08)
+        p.x += (p.home_x - p.x) * g
+        p.y += (p.home_y - p.y) * g
 
 
 def compute_pass_success(passer: PlayerState, contest: PlayerState, pass_distance: float, press_intensity: float = 50.0) -> float:
@@ -83,7 +132,7 @@ def compute_shot_xg(
     keeper_factor = 1.0 - (keeper.attributes.get("gk_reflexes") or 50) / 160.0
     pressure_penalty = pressure * 0.12 * (1 + (defensive_line_height - 50.0) / 150.0)
 
-    base = 0.05 + 0.50 * distance_factor * shooting_factor * keeper_factor
+    base = 0.05 + 0.54 * distance_factor * shooting_factor * keeper_factor
     base -= angle_penalty + pressure_penalty
     return clamp_prob(base, 0.02, 0.6)
 
@@ -125,7 +174,11 @@ def choose_action(carrier: PlayerState, ball_x: float, ball_y: float, attacking_
     # Shooting-range radius and trigger probability widened from an earlier,
     # too-conservative version that produced ~half the shots/match of real
     # football (calibrated against scripts/analyze_simulation_quality.py).
-    if dist_to_goal < 30 and rng.random() < (0.22 + carrier.attributes["shooting"] / 250):
+    # Re-widened again after the positional-realism fix (pick_ball_carrier's
+    # sqrt-damped distance weighting + role-aware gravity) added more
+    # friction to reaching the box at all, which had pulled shot/goal volume
+    # back down below benchmark.
+    if dist_to_goal < 34 and rng.random() < (0.27 + carrier.attributes["shooting"] / 220):
         return "SHOOT"
 
     style_shift = (possession_style - 50.0) * 0.004

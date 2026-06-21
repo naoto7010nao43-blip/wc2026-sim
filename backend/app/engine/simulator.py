@@ -4,6 +4,7 @@ import random
 
 from app.engine.actions import (
     advance_position,
+    apply_positional_gravity,
     choose_action,
     choose_pass_target,
     compute_dribble_success,
@@ -221,6 +222,9 @@ def simulate_match(
                     ))
                 ball_x, ball_y = nearest_def.x, nearest_def.y
                 possession = defender
+
+        apply_positional_gravity(attacker, exclude=carrier)
+        apply_positional_gravity(defender, exclude=None)
 
         clock += rng.uniform(*EVENT_DURATION_RANGE)
 
