@@ -1,0 +1,54 @@
+[
+  {
+    "id": "BRA",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Carlo Ancelotti",
+      "press_intensity": 60,
+      "possession_style": 68,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "MAR",
+    "name": "Morocco",
+    "confederation": "CAF",
+    "fifa_rank": 8,
+    "default_formation": "4-3-3",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Mohamed Ouahbi",
+      "press_intensity": 78,
+      "possession_style": 56,
+      "defensive_line_height": 64
+    }
+  },
+  {
+    "id": "HAI",
+    "name": "Haiti",
+    "confederation": "CONCACAF",
+    "fifa_rank": 83,
+    "default_formation": "4-2-3-1",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Sebastien Migne",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 24
+    }
+  },
+  {
+    "id": "SCO",
+    "name": "Scotland",
+    "confederation": "UEFA",
+    "fifa_rank": 38,
+    "default_formation": "4-2-3-1",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Steve Clarke",
+      "press_intensity": 52,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  }
+]

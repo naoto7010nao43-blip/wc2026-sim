@@ -1,0 +1,256 @@
+[
+  {
+    "id": "MAR_BOUNOU", "team_id": "MAR", "name": "Yassine Bounou", "age": 35, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 65, "goals": 0, "assists": 0, "minutes_played": 5600, "key_passes_per90": 0.1, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 80.0, "save_pct": 69.5, "goals_conceded_per90": 1.0},
+    "market_value_eur": 2400000, "qualitative_adjustments": {"defending": 2, "passing": 0},
+    "source_citations": ["Transfermarkt profile 25/26", "Al-Hilal Saudi Pro League 2025-26 stats", "EA Sports FC 26 headline rating (minor signal)"], "stamina_max": 79
+  },
+  {
+    "id": "MAR_ELKAJOUI", "team_id": "MAR", "name": "Munir El Kajoui", "age": 33, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 0, "minutes_played": 3500, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 78.0, "save_pct": 66.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 800000, "qualitative_adjustments": {"defending": 0},
+    "source_citations": ["Transfermarkt profile 25/26", "Botola Pro 2025-26 stats"], "stamina_max": 75
+  },
+  {
+    "id": "MAR_HAKIMI", "team_id": "MAR", "name": "Achraf Hakimi", "age": 27, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 68, "goals": 11, "assists": 14, "minutes_played": 5900, "key_passes_per90": 1.6, "successful_dribbles_per90": 2.1, "tackles_per90": 1.7, "interceptions_per90": 1.1, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 75000000, "qualitative_adjustments": {"pace": 3, "passing": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "PSG Ligue 1/UCL 2025-26 stats", "EA Sports FC 26 headline rating (minor signal)"], "stamina_max": 93
+  },
+  {
+    "id": "MAR_MAZRAOUI", "team_id": "MAR", "name": "Noussair Mazraoui", "age": 28, "primary_position": "RB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 50, "goals": 1, "assists": 4, "minutes_played": 4000, "key_passes_per90": 0.7, "successful_dribbles_per90": 0.9, "tackles_per90": 1.9, "interceptions_per90": 1.4, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 18000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Manchester United 2025-26 PL stats"], "stamina_max": 87
+  },
+  {
+    "id": "MAR_AGUERD", "team_id": "MAR", "name": "Nayef Aguerd", "age": 29, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 3, "assists": 1, "minutes_played": 4600, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.3, "tackles_per90": 1.9, "interceptions_per90": 2.0, "aerial_duels_won_pct": 71.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 20000000, "qualitative_adjustments": {"defending": 2, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Marseille Ligue 1 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "MAR_SAISS", "team_id": "MAR", "name": "Romain Saiss", "age": 35, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 40, "goals": 2, "assists": 1, "minutes_played": 3200, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.2, "tackles_per90": 1.7, "interceptions_per90": 1.6, "aerial_duels_won_pct": 65.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 1200000, "qualitative_adjustments": {"pace": -2, "defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Besiktas Super Lig 2025-26 stats"], "stamina_max": 74
+  },
+  {
+    "id": "MAR_MENDYL", "team_id": "MAR", "name": "Yahia Attiyat Allah", "age": 29, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 48, "goals": 2, "assists": 6, "minutes_played": 3900, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.3, "tackles_per90": 1.8, "interceptions_per90": 1.3, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"pace": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Wydad AC Botola Pro 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "MAR_AMRABAT", "team_id": "MAR", "name": "Sofyan Amrabat", "age": 29, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 50, "goals": 1, "assists": 2, "minutes_played": 3800, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.1, "tackles_per90": 2.7, "interceptions_per90": 2.1, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"defending": 2, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Real Betis La Liga loan 2025-26 stats"], "stamina_max": 89
+  },
+  {
+    "id": "MAR_OUNAHI", "team_id": "MAR", "name": "Azzedine Ounahi", "age": 26, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 45, "goals": 3, "assists": 5, "minutes_played": 3500, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.6, "tackles_per90": 2.0, "interceptions_per90": 1.5, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 10000000, "qualitative_adjustments": {"passing": 1, "dribbling": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Girona La Liga 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "MAR_ELKHANNOUSS", "team_id": "MAR", "name": "Bilal El Khannouss", "age": 21, "primary_position": "CAM", "secondary_positions": ["CM", "RW"],
+    "career_stats": {"appearances": 42, "goals": 6, "assists": 9, "minutes_played": 3400, "key_passes_per90": 2.1, "successful_dribbles_per90": 2.3, "tackles_per90": 1.1, "interceptions_per90": 0.8, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 28000000, "qualitative_adjustments": {"passing": 2, "dribbling": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "VfB Stuttgart Bundesliga 2025-26 stats", "EA Sports FC 26 headline rating (minor signal)"], "stamina_max": 90
+  },
+  {
+    "id": "MAR_DIAZ", "team_id": "MAR", "name": "Brahim Diaz", "age": 26, "primary_position": "CAM", "secondary_positions": ["RW", "LW"],
+    "career_stats": {"appearances": 60, "goals": 13, "assists": 16, "minutes_played": 4700, "key_passes_per90": 2.4, "successful_dribbles_per90": 3.0, "tackles_per90": 0.7, "interceptions_per90": 0.5, "aerial_duels_won_pct": 38.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 60000000, "qualitative_adjustments": {"dribbling": 2, "passing": 2},
+    "source_citations": ["Transfermarkt profile 25/26", "Real Madrid La Liga/UCL 2025-26 stats", "EA Sports FC 26 headline rating (minor signal)"], "stamina_max": 88
+  },
+  {
+    "id": "MAR_ZIYECH", "team_id": "MAR", "name": "Hakim Ziyech", "age": 33, "primary_position": "RW", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 38, "goals": 9, "assists": 8, "minutes_played": 2900, "key_passes_per90": 2.0, "successful_dribbles_per90": 1.8, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 40.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 4000000, "qualitative_adjustments": {"passing": 1, "pace": -2},
+    "source_citations": ["Transfermarkt profile 25/26", "Galatasaray Super Lig 2025-26 stats"], "stamina_max": 78
+  },
+  {
+    "id": "MAR_AKHOMACH", "team_id": "MAR", "name": "Ilias Akhomach", "age": 21, "primary_position": "LW", "secondary_positions": ["RW"],
+    "career_stats": {"appearances": 35, "goals": 7, "assists": 5, "minutes_played": 2700, "key_passes_per90": 1.4, "successful_dribbles_per90": 2.8, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 41.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 15000000, "qualitative_adjustments": {"pace": 1, "dribbling": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Villarreal La Liga 2025-26 stats"], "stamina_max": 89
+  },
+  {
+    "id": "MAR_ELKAABI", "team_id": "MAR", "name": "Ayoub El Kaabi", "age": 32, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 22, "assists": 4, "minutes_played": 3600, "key_passes_per90": 0.7, "successful_dribbles_per90": 1.0, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 76.0},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"shooting": 2},
+    "source_citations": ["Transfermarkt profile 25/26", "Olympiacos Super League Greece 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "MAR_ENNESYRI", "team_id": "MAR", "name": "Youssef En-Nesyri", "age": 29, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 19, "assists": 3, "minutes_played": 3900, "key_passes_per90": 0.5, "successful_dribbles_per90": 0.8, "tackles_per90": 0.4, "interceptions_per90": 0.3, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 75.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"shooting": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Fenerbahce Super Lig 2025-26 stats"], "stamina_max": 85
+  },
+
+  {
+    "id": "HAI_PLACIDE", "team_id": "HAI", "name": "Johny Placide", "age": 38, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 60, "goals": 0, "assists": 0, "minutes_played": 5300, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 68.0, "save_pct": 71.0, "goals_conceded_per90": 1.3},
+    "market_value_eur": 150000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Haiti national team captain - CONCACAF qualifying record"], "stamina_max": 72
+  },
+  {
+    "id": "HAI_FORTUNE", "team_id": "HAI", "name": "Yassin Fortune", "age": 27, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 30, "goals": 0, "assists": 0, "minutes_played": 2600, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 65.0, "save_pct": 67.0, "goals_conceded_per90": 1.5},
+    "market_value_eur": 100000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 25/26", "USL Championship 2025-26 stats"], "stamina_max": 76
+  },
+  {
+    "id": "HAI_ADE", "team_id": "HAI", "name": "Ricardo Ade", "age": 28, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 1, "minutes_played": 4300, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 2.0, "interceptions_per90": 1.9, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 800000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Belgian second division 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "HAI_ARCUS", "team_id": "HAI", "name": "Carlens Arcus", "age": 23, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 45, "goals": 1, "assists": 4, "minutes_played": 3700, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.2, "tackles_per90": 2.1, "interceptions_per90": 1.5, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 3000000, "qualitative_adjustments": {"pace": 1, "defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Stade de Reims Ligue 1 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "HAI_DELCROIX", "team_id": "HAI", "name": "Hannes Delcroix", "age": 28, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 48, "goals": 1, "assists": 0, "minutes_played": 4100, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.1, "tackles_per90": 1.8, "interceptions_per90": 1.8, "aerial_duels_won_pct": 66.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 1800000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Burnley Championship 2025-26 stats"], "stamina_max": 83
+  },
+  {
+    "id": "HAI_DUVERNE", "team_id": "HAI", "name": "Jean-Kevin Duverne", "age": 26, "primary_position": "LB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 2, "minutes_played": 3300, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.5, "tackles_per90": 1.7, "interceptions_per90": 1.4, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 77.0},
+    "market_value_eur": 700000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 25/26", "Ligue 2 2025-26 stats"], "stamina_max": 82
+  },
+  {
+    "id": "HAI_JEANJACQUES", "team_id": "HAI", "name": "Danley Jean Jacques", "age": 24, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 42, "goals": 3, "assists": 4, "minutes_played": 3500, "key_passes_per90": 1.1, "successful_dribbles_per90": 1.0, "tackles_per90": 2.2, "interceptions_per90": 1.6, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 2200000, "qualitative_adjustments": {"defending": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "MLS 2025-26 stats"], "stamina_max": 87
+  },
+  {
+    "id": "HAI_BELLEGARDE", "team_id": "HAI", "name": "Jean-Ricner Bellegarde", "age": 27, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 55, "goals": 7, "assists": 8, "minutes_played": 4400, "key_passes_per90": 1.6, "successful_dribbles_per90": 1.4, "tackles_per90": 1.6, "interceptions_per90": 1.1, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"passing": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "RC Lens Ligue 1 2025-26 stats", "switched allegiance from France"], "stamina_max": 89
+  },
+  {
+    "id": "HAI_SIMON", "team_id": "HAI", "name": "Dominique Simon", "age": 25, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 35, "goals": 1, "assists": 2, "minutes_played": 2900, "key_passes_per90": 0.6, "successful_dribbles_per90": 0.7, "tackles_per90": 2.4, "interceptions_per90": 1.8, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 600000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "USL Championship 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "HAI_ETIENNE", "team_id": "HAI", "name": "Derrick Etienne Jr.", "age": 28, "primary_position": "RW", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 60, "goals": 12, "assists": 11, "minutes_played": 4800, "key_passes_per90": 1.5, "successful_dribbles_per90": 2.2, "tackles_per90": 1.0, "interceptions_per90": 0.6, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 2500000, "qualitative_adjustments": {"pace": 2, "dribbling": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "MLS (Columbus Crew) 2025-26 stats"], "stamina_max": 90
+  },
+  {
+    "id": "HAI_ISIDOR", "team_id": "HAI", "name": "Wilson Isidor", "age": 26, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 48, "goals": 14, "assists": 3, "minutes_played": 3700, "key_passes_per90": 0.6, "successful_dribbles_per90": 1.0, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 76.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"shooting": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Sunderland Premier League 2025-26 stats", "switched allegiance from France"], "stamina_max": 87
+  },
+  {
+    "id": "HAI_NAZON", "team_id": "HAI", "name": "Duckens Nazon", "age": 30, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 74, "goals": 44, "assists": 9, "minutes_played": 5900, "key_passes_per90": 0.7, "successful_dribbles_per90": 1.3, "tackles_per90": 0.4, "interceptions_per90": 0.3, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 74.0},
+    "market_value_eur": 1500000, "qualitative_adjustments": {"shooting": 2},
+    "source_citations": ["Transfermarkt profile 25/26", "Haiti all-time leading scorer - national team qualifying record"], "stamina_max": 82
+  },
+  {
+    "id": "HAI_PIERROT", "team_id": "HAI", "name": "Frantzdy Pierrot", "age": 26, "primary_position": "ST", "secondary_positions": ["LW"],
+    "career_stats": {"appearances": 40, "goals": 9, "assists": 5, "minutes_played": 3000, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.5, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 49.0, "pass_completion_pct": 77.0},
+    "market_value_eur": 1200000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Belgian Pro League 2025-26 stats"], "stamina_max": 85
+  },
+
+  {
+    "id": "SCO_GORDON", "team_id": "SCO", "name": "Craig Gordon", "age": 43, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 0, "assists": 0, "minutes_played": 4000, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 72.0, "save_pct": 70.0, "goals_conceded_per90": 1.15},
+    "market_value_eur": 300000, "qualitative_adjustments": {"defending": 1, "pace": -3},
+    "source_citations": ["Transfermarkt profile 25/26", "Hearts Scottish Premiership 2025-26 stats"], "stamina_max": 70
+  },
+  {
+    "id": "SCO_GUNN", "team_id": "SCO", "name": "Angus Gunn", "age": 30, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 0, "assists": 0, "minutes_played": 4900, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 75.0, "save_pct": 69.0, "goals_conceded_per90": 1.3},
+    "market_value_eur": 3500000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 25/26", "Nottingham Forest Premier League 2025-26 stats"], "stamina_max": 81
+  },
+  {
+    "id": "SCO_ROBERTSON", "team_id": "SCO", "name": "Andy Robertson", "age": 32, "primary_position": "LB", "secondary_positions": [],
+    "career_stats": {"appearances": 68, "goals": 2, "assists": 12, "minutes_played": 5700, "key_passes_per90": 1.4, "successful_dribbles_per90": 0.9, "tackles_per90": 2.0, "interceptions_per90": 1.3, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 18000000, "qualitative_adjustments": {"passing": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Liverpool Premier League 2025-26 stats", "Scotland captain"], "stamina_max": 88
+  },
+  {
+    "id": "SCO_TIERNEY", "team_id": "SCO", "name": "Kieran Tierney", "age": 29, "primary_position": "LB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 40, "goals": 1, "assists": 4, "minutes_played": 3200, "key_passes_per90": 0.8, "successful_dribbles_per90": 0.8, "tackles_per90": 2.1, "interceptions_per90": 1.5, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Celtic Scottish Premiership 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "SCO_PATTERSON", "team_id": "SCO", "name": "Nathan Patterson", "age": 24, "primary_position": "RB", "secondary_positions": [],
+    "career_stats": {"appearances": 38, "goals": 0, "assists": 3, "minutes_played": 2900, "key_passes_per90": 0.7, "successful_dribbles_per90": 0.9, "tackles_per90": 2.0, "interceptions_per90": 1.4, "aerial_duels_won_pct": 53.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Everton Premier League 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "SCO_HENDRY", "team_id": "SCO", "name": "Jack Hendry", "age": 30, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 3, "assists": 1, "minutes_played": 3900, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.7, "interceptions_per90": 1.8, "aerial_duels_won_pct": 68.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 3000000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Al-Ettifaq Saudi Pro League 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "SCO_MCKENNA", "team_id": "SCO", "name": "Scott McKenna", "age": 29, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 42, "goals": 2, "assists": 0, "minutes_played": 3700, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.2, "tackles_per90": 1.9, "interceptions_per90": 1.9, "aerial_duels_won_pct": 70.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 2500000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Dinamo Zagreb HNL 2025-26 stats"], "stamina_max": 83
+  },
+  {
+    "id": "SCO_HANLEY", "team_id": "SCO", "name": "Grant Hanley", "age": 34, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 0, "minutes_played": 4300, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.1, "tackles_per90": 1.6, "interceptions_per90": 1.7, "aerial_duels_won_pct": 65.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 700000, "qualitative_adjustments": {"pace": -2, "defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Hibernian Scottish Premiership 2025-26 stats"], "stamina_max": 75
+  },
+  {
+    "id": "SCO_MCGINN", "team_id": "SCO", "name": "John McGinn", "age": 31, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 62, "goals": 9, "assists": 7, "minutes_played": 5200, "key_passes_per90": 1.3, "successful_dribbles_per90": 1.1, "tackles_per90": 1.8, "interceptions_per90": 1.0, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 15000000, "qualitative_adjustments": {"physical": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Aston Villa Premier League 2025-26 stats", "Scotland vice-captain"], "stamina_max": 89
+  },
+  {
+    "id": "SCO_MCTOMINAY", "team_id": "SCO", "name": "Scott McTominay", "age": 29, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 55, "goals": 16, "assists": 5, "minutes_played": 4400, "key_passes_per90": 1.2, "successful_dribbles_per90": 1.0, "tackles_per90": 1.6, "interceptions_per90": 0.9, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 40000000, "qualitative_adjustments": {"shooting": 2, "physical": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Napoli Serie A 2025-26 stats (Serie A title winner)", "EA Sports FC 26 headline rating (minor signal)"], "stamina_max": 87
+  },
+  {
+    "id": "SCO_FERGUSON", "team_id": "SCO", "name": "Lewis Ferguson", "age": 26, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 48, "goals": 8, "assists": 4, "minutes_played": 3900, "key_passes_per90": 0.9, "successful_dribbles_per90": 0.8, "tackles_per90": 2.0, "interceptions_per90": 1.3, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Bologna Serie A 2025-26 stats", "Scotland captain on the pitch"], "stamina_max": 88
+  },
+  {
+    "id": "SCO_CHRISTIE", "team_id": "SCO", "name": "Ryan Christie", "age": 31, "primary_position": "CAM", "secondary_positions": ["RM", "LM"],
+    "career_stats": {"appearances": 50, "goals": 7, "assists": 6, "minutes_played": 3800, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.4, "tackles_per90": 1.4, "interceptions_per90": 0.8, "aerial_duels_won_pct": 46.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 5000000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Bournemouth Premier League 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "SCO_ADAMS", "team_id": "SCO", "name": "Che Adams", "age": 29, "primary_position": "ST", "secondary_positions": ["LW"],
+    "career_stats": {"appearances": 55, "goals": 18, "assists": 7, "minutes_played": 4300, "key_passes_per90": 1.0, "successful_dribbles_per90": 1.6, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"shooting": 1, "pace": 1},
+    "source_citations": ["Transfermarkt profile 25/26", "Torino Serie A 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "SCO_SHANKLAND", "team_id": "SCO", "name": "Lawrence Shankland", "age": 30, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 24, "assists": 5, "minutes_played": 4100, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.2, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 76.0},
+    "market_value_eur": 3500000, "qualitative_adjustments": {"shooting": 2},
+    "source_citations": ["Transfermarkt profile 25/26", "Hearts Scottish Premiership 2025-26 stats"], "stamina_max": 84
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "home_team_id": "BEL",
+    "away_team_id": "EGY",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-15"
+  },
+  {
+    "home_team_id": "IRN",
+    "away_team_id": "NZL",
+    "home_score": 2,
+    "away_score": 2,
+    "date": "2026-06-15"
+  }
+]

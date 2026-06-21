@@ -1,0 +1,55 @@
+CIV_ADINGRA	Simon Adingra	Ivory Coast
+CIV_DIAKITE	Oumar Diakite	Ivory Coast
+CIV_DIALLO_A	Amad Diallo	Ivory Coast
+CIV_DOUE_G	Guela Doue	Ivory Coast
+CIV_FOFANA_S	Seko Fofana	Ivory Coast
+CIV_FOFANA_Y	Yahia Fofana	Ivory Coast
+CIV_KESSIE	Franck Kessie	Ivory Coast
+CIV_KOSSOUNOU	Odilon Kossounou	Ivory Coast
+CIV_LAFONT	Alban Lafont	Ivory Coast
+CIV_NDICKA	Evan Ndicka	Ivory Coast
+CIV_PEPE	Nicolas Pepe	Ivory Coast
+CIV_SANGARE	Ibrahim Sangare	Ivory Coast
+CIV_SINGO	Wilfried Singo	Ivory Coast
+CUW_BACUNA_J	Juninho Bacuna	Curacao
+CUW_BACUNA_L	Leandro Bacuna	Curacao
+CUW_BAZOER	Riechedly Bazoer	Curacao
+CUW_BODAK	Tyrick Bodak	Curacao
+CUW_BRENET	Joshua Brenet	Curacao
+CUW_FONVILLE	Deveron Fonville	Curacao
+CUW_GAARI	Jurien Gaari	Curacao
+CUW_GORRE	Kenji Gorre	Curacao
+CUW_KASTANEER	Gervane Kastaneer	Curacao
+CUW_LOCADIA	Jurgen Locadia	Curacao
+CUW_MARGARITHA	Jearl Margaritha	Curacao
+CUW_OBISPO	Armando Obispo	Curacao
+CUW_ROOM	Eloy Room	Curacao
+CUW_SAMBO	Shurandy Sambo	Curacao
+CUW_VANEIJMA	Roshon van Eijma	Curacao
+ECU_CAICEDO_M	Moises Caicedo	Ecuador
+ECU_DOMINGUEZ	Moises Ramirez	Ecuador
+ECU_ESTUPINAN	Pervis Estupinan	Ecuador
+ECU_FRANCO	Alan Franco	Ecuador
+ECU_GALINDEZ	Hernan Galindez	Ecuador
+ECU_HINCAPIE	Piero Hincapie	Ecuador
+ECU_PACHO	Willian Pacho	Ecuador
+ECU_PAEZ	Kendry Paez	Ecuador
+ECU_PLATA	Gonzalo Plata	Ecuador
+ECU_PRECIADO	Angelo Preciado	Ecuador
+ECU_RODRIGUEZ_K	Kevin Rodriguez	Ecuador
+ECU_VALENCIA_E	Enner Valencia	Ecuador
+GER_BAUMANN	Oliver Baumann	Germany
+GER_GORETZKA	Leon Goretzka	Germany
+GER_HAVERTZ	Kai Havertz	Germany
+GER_KIMMICH	Joshua Kimmich	Germany
+GER_MUSIALA	Jamal Musiala	Germany
+GER_NEUER	Manuel Neuer	Germany
+GER_PAVLOVIC	Aleksandar Pavlovic	Germany
+GER_RAUM	David Raum	Germany
+GER_RUDIGER	Antonio Rudiger	Germany
+GER_SANE	Leroy Sane	Germany
+GER_SCHLOTTERBECK	Nico Schlotterbeck	Germany
+GER_TAH	Jonathan Tah	Germany
+GER_UNDAV	Deniz Undav	Germany
+GER_WIRTZ	Florian Wirtz	Germany
+GER_WOLTEMADE	Nick Woltemade	Germany

@@ -1,0 +1,53 @@
+BIH_ALAJBEGOVIC	Kerim Alajbegovic	Bosnia and Herzegovina
+BIH_BAJRAKTAREVIC	Esmir Bajraktarevic	Bosnia and Herzegovina
+BIH_BARISIC	Ognjen Vranjes	Bosnia and Herzegovina
+BIH_BICAKCIC	Amir Hadziahmetovic	Bosnia and Herzegovina
+BIH_DEMIROVIC	Ermedin Demirovic	Bosnia and Herzegovina
+BIH_DZEKO	Edin Dzeko	Bosnia and Herzegovina
+BIH_GOJAK	Gojko Cimirot	Bosnia and Herzegovina
+BIH_HADZIKADUNIC	Toni Sunjic	Bosnia and Herzegovina
+BIH_KOLASINAC	Sead Kolasinac	Bosnia and Herzegovina
+BIH_KRUNIC	Rade Krunic	Bosnia and Herzegovina
+BIH_SEHIC	Adnan Sehic	Bosnia and Herzegovina
+BIH_TURKES	Anel Ahmedhodzic	Bosnia and Herzegovina
+BIH_VASILJ	Nikola Vasilj	Bosnia and Herzegovina
+CAN_BOMBITO	Moise Bombito	Canada
+CAN_BUCHANAN	Tajon Buchanan	Canada
+CAN_CORNELIUS	Derek Cornelius	Canada
+CAN_CREPEAU	Maxime Crepeau	Canada
+CAN_DAVID_J	Jonathan David	Canada
+CAN_DAVIES	Alphonso Davies	Canada
+CAN_EUSTAQUIO	Stephen Eustaquio	Canada
+CAN_JOHNSTON	Alistair Johnston	Canada
+CAN_KONE	Ismael Kone	Canada
+CAN_LARIN	Cyle Larin	Canada
+CAN_LARYEA	Richie Laryea	Canada
+CAN_OLUWASEYI	Tani Oluwaseyi	Canada
+CAN_OSORIO	Jonathan Osorio	Canada
+CAN_STCLAIR	Dayne St. Clair	Canada
+QAT_ABUNADA	Mahmoud Abunada	Qatar
+QAT_AFIF	Akram Afif	Qatar
+QAT_ALHAYDOS	Hassan Al-Haydos	Qatar
+QAT_ALMOEZALI	Almoez Ali	Qatar
+QAT_BARSHAM	Meshaal Barsham	Qatar
+QAT_BOUDIAF	Karim Boudiaf	Qatar
+QAT_HASHMI	Al Hashmi Al Hussein	Qatar
+QAT_HATEM	Abdulaziz Hatem	Qatar
+QAT_KHOUKHI	Boualem Khoukhi	Qatar
+QAT_LAAYE	Issa Laaye	Qatar
+QAT_MADIBO	Assim Madibo	Qatar
+QAT_MUNTARI	Mohammed Muntari	Qatar
+QAT_PEDROMIGUEL	Pedro Miguel	Qatar
+SUI_AKANJI	Manuel Akanji	Switzerland
+SUI_AMDOUNI	Zeki Amdouni	Switzerland
+SUI_ELVEDI	Nico Elvedi	Switzerland
+SUI_EMBOLO	Breel Embolo	Switzerland
+SUI_JASHARI	Ardon Jashari	Switzerland
+SUI_KOBEL	Gregor Kobel	Switzerland
+SUI_NDOYE	Dan Ndoye	Switzerland
+SUI_RODRIGUEZ	Ricardo Rodriguez	Switzerland
+SUI_SOMMER	Yann Sommer	Switzerland
+SUI_SOW	Djibril Sow	Switzerland
+SUI_VARGAS	Ruben Vargas	Switzerland
+SUI_WIDMER	Silvan Widmer	Switzerland
+SUI_XHAKA	Granit Xhaka	Switzerland

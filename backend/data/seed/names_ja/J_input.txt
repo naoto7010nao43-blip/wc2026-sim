@@ -1,0 +1,55 @@
+ALG_AITNOURI	Rayan Ait-Nouri	Algeria
+ALG_AMOURA	Mohamed Amine Amoura	Algeria
+ALG_BENBOT	Oussama Benbot	Algeria
+ALG_BENSEBAINI	Ramy Bensebaini	Algeria
+ALG_BENTALEB	Nabil Bentaleb	Algeria
+ALG_BOUDAOUI	Hicham Boudaoui	Algeria
+ALG_CHAIBI	Fares Chaibi	Algeria
+ALG_GOUIRI	Amine Gouiri	Algeria
+ALG_HADJAM	Jaouen Hadjam	Algeria
+ALG_MAHREZ	Riyad Mahrez	Algeria
+ALG_MANDI	Aissa Mandi	Algeria
+ALG_MAZA	Ibrahim Maza	Algeria
+ALG_ZERROUKI	Ramiz Zerrouki	Algeria
+ALG_ZIDANE_L	Luca Zidane	Algeria
+ARG_ALVAREZ	Julian Alvarez	Argentina
+ARG_DEPAUL	Rodrigo De Paul	Argentina
+ARG_ENZO	Enzo Fernandez	Argentina
+ARG_LAUTARO	Lautaro Martinez	Argentina
+ARG_LISANDRO	Lisandro Martinez	Argentina
+ARG_LOCELSO	Giovani Lo Celso	Argentina
+ARG_MACALLISTER	Alexis Mac Allister	Argentina
+ARG_MARTINEZ_E	Emiliano Martinez	Argentina
+ARG_MESSI	Lionel Messi	Argentina
+ARG_MOLINA	Nahuel Molina	Argentina
+ARG_OTAMENDI	Nicolas Otamendi	Argentina
+ARG_PAREDES	Leandro Paredes	Argentina
+ARG_ROMERO	Cristian Romero	Argentina
+ARG_RULLI	Geronimo Rulli	Argentina
+ARG_TAGLIAFICO	Nicolas Tagliafico	Argentina
+AUT_ALABA	David Alaba	Austria
+AUT_ARNAUTOVIC	Marko Arnautovic	Austria
+AUT_BAUMGARTNER	Christoph Baumgartner	Austria
+AUT_DANSO	Kevin Danso	Austria
+AUT_FRIEDL	Marco Friedl	Austria
+AUT_GREGORITSCH	Michael Gregoritsch	Austria
+AUT_LAIMER	Konrad Laimer	Austria
+AUT_LIENHART	Philipp Lienhart	Austria
+AUT_PENTZ	Patrick Pentz	Austria
+AUT_POSCH	Stefan Posch	Austria
+AUT_SABITZER	Marcel Sabitzer	Austria
+AUT_SCHLAGER_A	Alexander Schlager	Austria
+AUT_SEIWALD	Nicolas Seiwald	Austria
+JOR_ABULAILA	Yazeed Abulaila	Jordan
+JOR_ABUTAHA	Mohannad Abu Taha	Jordan
+JOR_ABUZRAYQ	Mohammad Abu Zrayq	Jordan
+JOR_ALDAWOUD	Mohammad Al-Dawoud	Jordan
+JOR_AZAIZEH	Ali Azaizeh	Jordan
+JOR_BANAWI	Anas Banawi	Jordan
+JOR_BANIATTIAH	Noor Bani Attiah	Jordan
+JOR_FAKHOURI_O	Odeh Al-Fakhouri	Jordan
+JOR_NASIB	Abdallah Nasib	Jordan
+JOR_OLWAN	Ali Olwan	Jordan
+JOR_RAWABDEH	Noor Al-Rawabdeh	Jordan
+JOR_SAADEH	Ibrahim Saadeh	Jordan
+JOR_TAMARI	Mousa Al-Tamari	Jordan

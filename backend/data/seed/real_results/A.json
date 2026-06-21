@@ -1,0 +1,46 @@
+[
+  {
+    "home_team_id": "MEX",
+    "away_team_id": "RSA",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-06-11",
+    "goals": [
+      {"minute": 9, "team_id": "MEX", "scorer_name": "Julian Quinones"},
+      {"minute": 67, "team_id": "MEX", "scorer_name": "Raul Jimenez"}
+    ]
+  },
+  {
+    "home_team_id": "KOR",
+    "away_team_id": "CZE",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-06-11",
+    "goals": [
+      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek"},
+      {"minute": 67, "team_id": "KOR", "scorer_name": "Hwang In-beom"},
+      {"minute": 80, "team_id": "KOR", "scorer_name": "Oh Hyeon-gyu"}
+    ]
+  },
+  {
+    "home_team_id": "CZE",
+    "away_team_id": "RSA",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-18",
+    "goals": [
+      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek"},
+      {"minute": 83, "team_id": "RSA", "scorer_name": "Teboho Mokoena"}
+    ]
+  },
+  {
+    "home_team_id": "MEX",
+    "away_team_id": "KOR",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-06-18",
+    "goals": [
+      {"minute": 50, "team_id": "MEX", "scorer_name": "Luis Romo"}
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "NED",
+    "name": "Netherlands",
+    "confederation": "UEFA",
+    "fifa_rank": 7,
+    "default_formation": "4-3-3",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Ronald Koeman",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 64
+    }
+  },
+  {
+    "id": "JPN",
+    "name": "Japan",
+    "confederation": "AFC",
+    "fifa_rank": 18,
+    "default_formation": "4-2-3-1",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Hajime Moriyasu",
+      "press_intensity": 60,
+      "possession_style": 61,
+      "defensive_line_height": 52
+    }
+  },
+  {
+    "id": "SWE",
+    "name": "Sweden",
+    "confederation": "UEFA",
+    "fifa_rank": 25,
+    "default_formation": "4-4-2",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Graham Potter",
+      "press_intensity": 55,
+      "possession_style": 53,
+      "defensive_line_height": 48
+    }
+  },
+  {
+    "id": "TUN",
+    "name": "Tunisia",
+    "confederation": "CAF",
+    "fifa_rank": 38,
+    "default_formation": "4-2-3-1",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Sabri Lamouchi",
+      "press_intensity": 42,
+      "possession_style": 38,
+      "defensive_line_height": 36
+    }
+  }
+]

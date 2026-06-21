@@ -1,0 +1,55 @@
+CZE_CHYTIL	Mojmir Chytil	Czechia
+CZE_COUFAL	Vladimir Coufal	Czechia
+CZE_DOUDERA	David Doudera	Czechia
+CZE_HOLES	Tomas Holes	Czechia
+CZE_HRANAC	Robin Hranac	Czechia
+CZE_JAROS	Antonin Kinsky	Czechia
+CZE_KOVAR	Matyas Vagner	Czechia
+CZE_KREJCI	Vaclav Jurecka	Czechia
+CZE_PROVOD	Lukas Provod	Czechia
+CZE_SCHICK	Patrik Schick	Czechia
+CZE_SOUCEK	Tomas Soucek	Czechia
+CZE_STANEK	Jindrich Stanek	Czechia
+CZE_ZIMA	David Zima	Czechia
+KOR_CHOJUNHOO	Cho Gue-sung	South Korea
+KOR_HWANGHEECHAN	Hwang Hee-chan	South Korea
+KOR_HWANGINBEOM	Hwang In-beom	South Korea
+KOR_JOHYEONWOO	Jo Hyeon-woo	South Korea
+KOR_KIMJINSU	Kim Jin-su	South Korea
+KOR_KIMMINJAE	Kim Min-jae	South Korea
+KOR_KIMMOONHWAN	Kim Moon-hwan	South Korea
+KOR_KIMSEUNGGYU	Kim Seung-gyu	South Korea
+KOR_KIMYOUNGGWON	Kim Young-gwon	South Korea
+KOR_LEEKANGIN	Lee Kang-in	South Korea
+KOR_PAIKSEUNGHO	Paik Seung-ho	South Korea
+KOR_SONGBUMKEUN	Song Bum-keun	South Korea
+KOR_SONHEUNGMIN	Son Heung-min	South Korea
+MEX_ALVAREZ_E	Erick Sanchez	Mexico
+MEX_ANTUNA	Alexis Vega	Mexico
+MEX_ARTEAGA	Gerardo Arteaga	Mexico
+MEX_GALLARDO	Jesus Gallardo	Mexico
+MEX_GIMENEZ	Santiago Gimenez	Mexico
+MEX_GUTIERREZ	Luis Chavez	Mexico
+MEX_JIMENEZ_R	Raul Jimenez	Mexico
+MEX_LOZANO	Hirving Lozano	Mexico
+MEX_MALAGON	Luis Malagon	Mexico
+MEX_MONTES	Cesar Montes	Mexico
+MEX_OCHOA	Guillermo Ochoa	Mexico
+MEX_PINEDA	Orbelin Pineda	Mexico
+MEX_RODRIGUEZ_E	Edson Alvarez	Mexico
+MEX_SANCHEZ_J	Jorge Sanchez	Mexico
+MEX_VASQUEZ	Johan Vasquez	Mexico
+MEX_VEGA	Julio Gonzalez	Mexico
+RSA_FOSTER	Lyle Foster	South Africa
+RSA_MABASO	Iqraam Rayners	South Africa
+RSA_MAYAMBELA	Sphephelo Sithole	South Africa
+RSA_MEYIWA	Innocent Maela	South Africa
+RSA_MNTAMBO	Oswin Appollis	South Africa
+RSA_MOKOENA_G	Grant Kekana	South Africa
+RSA_MOKOENA_T	Teboho Mokoena	South Africa
+RSA_MOROAPULA	Sage Stephens	South Africa
+RSA_MTHETHWA	Khuliso Mudau	South Africa
+RSA_NGCOBO	Nkosinathi Sibisi	South Africa
+RSA_PETERSEN	Ronald Chitiza	South Africa
+RSA_WILLIAMS	Ronwen Williams	South Africa
+RSA_ZWANE	Themba Zwane	South Africa

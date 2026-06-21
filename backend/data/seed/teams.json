@@ -1,0 +1,682 @@
+[
+  {
+    "id": "BRA",
+    "name": "Brazil",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 6,
+    "default_formation": "4-3-3",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Carlo Ancelotti",
+      "press_intensity": 60,
+      "possession_style": 68,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "ARG",
+    "name": "Argentina",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 1,
+    "default_formation": "4-3-3",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Lionel Scaloni",
+      "press_intensity": 62,
+      "possession_style": 64,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "FRA",
+    "name": "France",
+    "confederation": "UEFA",
+    "fifa_rank": 3,
+    "default_formation": "4-2-3-1",
+    "group_id": "I",
+    "tactical_profile": {
+      "manager_name": "Didier Deschamps",
+      "press_intensity": 58,
+      "possession_style": 54,
+      "defensive_line_height": 52
+    }
+  },
+  {
+    "id": "ENG",
+    "name": "England",
+    "confederation": "UEFA",
+    "fifa_rank": 4,
+    "default_formation": "4-3-3",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Thomas Tuchel",
+      "press_intensity": 78,
+      "possession_style": 62,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "GER",
+    "name": "Germany",
+    "confederation": "UEFA",
+    "fifa_rank": 10,
+    "default_formation": "4-2-3-1",
+    "group_id": "E",
+    "tactical_profile": {
+      "manager_name": "Julian Nagelsmann",
+      "press_intensity": 78,
+      "possession_style": 62,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "USA",
+    "name": "United States",
+    "confederation": "CONCACAF",
+    "fifa_rank": 17,
+    "default_formation": "4-2-3-1",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Mauricio Pochettino",
+      "press_intensity": 72,
+      "possession_style": 58,
+      "defensive_line_height": 62
+    }
+  },
+  {
+    "id": "MEX",
+    "name": "Mexico",
+    "confederation": "CONCACAF",
+    "fifa_rank": 14,
+    "default_formation": "4-3-3",
+    "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Javier Aguirre",
+      "press_intensity": 58,
+      "possession_style": 60,
+      "defensive_line_height": 52
+    },
+    "_tactical_profile_basis": "Aguirre (in his third spell as Mexico coach) favors a pragmatic, structured 4-3-3 built on patient short-passing buildup through midfield (Alvarez/Lozano-type carriers) rather than extreme gegenpress; as co-hosts Mexico have prepared with a long uninterrupted camp and friendlies emphasizing possession control and a mid-to-moderately-high block rather than all-out pressing (sources: Transfermarkt Mexico national team profile 2026, ESPN/Marca Aguirre tactics analysis for Copa Oro/WC2026 buildup, FMF official squad and friendlies coverage 2025-26)."
+  },
+  {
+    "id": "RSA",
+    "name": "South Africa",
+    "confederation": "CAF",
+    "fifa_rank": 60,
+    "default_formation": "4-2-3-1",
+    "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Hugo Broos",
+      "press_intensity": 48,
+      "possession_style": 45,
+      "defensive_line_height": 45
+    },
+    "_tactical_profile_basis": "Broos (Belgian, also won AFCON 2023 with Cameroon) runs a disciplined, compact 4-2-3-1/4-4-2 mid-block prioritizing defensive organization and direct transitions through pacey wide players (Mokoena, Foster) over sustained possession; Bafana Bafana qualified for their first WC since 2010 largely on the back of a low-goals-conceded CAF qualifying campaign (sources: CAF Online South Africa WC2026 qualifying review 2025, SAFA official Hugo Broos squad/tactics statements 2025-26, KickOff.com Bafana Bafana tactical preview 2026)."
+  },
+  {
+    "id": "KOR",
+    "name": "South Korea",
+    "confederation": "AFC",
+    "fifa_rank": 23,
+    "default_formation": "4-2-3-1",
+    "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Hong Myung-bo",
+      "press_intensity": 62,
+      "possession_style": 56,
+      "defensive_line_height": 58
+    },
+    "_tactical_profile_basis": "Hong Myung-bo (former Korea captain/Olympic coach, appointed senior team head coach 2024) deploys an attacking 4-2-3-1 built around Son Heung-min's movement and Lee Kang-in's creativity, with an organized counter-press to win the ball back high given Korea's pace in transition; Korea topped their AFC final-round qualifying group with the best defensive record in the group (sources: KFA official Hong Myung-bo tactical statements 2025-26, Korea JoongAng Daily WC2026 qualifying tactical review, Yonhap squad/formation reporting 2026)."
+  },
+  {
+    "id": "CZE",
+    "name": "Czechia",
+    "confederation": "UEFA",
+    "fifa_rank": 41,
+    "default_formation": "4-2-3-1",
+    "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Ivan Hasek",
+      "press_intensity": 50,
+      "possession_style": 42,
+      "defensive_line_height": 44
+    },
+    "_tactical_profile_basis": "Hasek (former Czech international, appointed 2023) favors a pragmatic, compact 4-2-3-1/4-4-2 mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil, reflecting a squad short on elite ball-progressing midfielders; Czechia reached WC2026 via the UEFA playoffs Path D, beating Denmark in the final (March 2026) on the back of disciplined defending rather than control of possession (sources: UEFA.com WC2026 playoff Path D final report March 2026, FACR official Ivan Hasek squad/tactics statements 2025-26, iDNES.cz tactical preview of playoff final)."
+  },
+  {
+    "id": "CAN",
+    "name": "Canada",
+    "confederation": "CONCACAF",
+    "fifa_rank": 30,
+    "default_formation": "4-4-2",
+    "group_id": "B",
+    "tactical_profile": {
+      "manager_name": "Jesse Marsch",
+      "press_intensity": 88,
+      "possession_style": 38,
+      "defensive_line_height": 72
+    },
+    "_tactical_profile_basis": "Marsch built his reputation at RB Salzburg/RB Leipzig on the Red Bull high-press 'Maplepress' identity; Canada press in two compact banks of four with a high line and prioritize rapid transitions over sustained possession (sources: Squawka 'Canada lineup and formation' 2026, FWCTimes Jesse Marsch coach profile 2026, CBS Sports coaching appointment piece)."
+  },
+  {
+    "id": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "confederation": "UEFA",
+    "fifa_rank": 64,
+    "default_formation": "4-4-2",
+    "group_id": "B",
+    "tactical_profile": {
+      "manager_name": "Sergej Barbarez",
+      "press_intensity": 42,
+      "possession_style": 28,
+      "defensive_line_height": 38
+    },
+    "_tactical_profile_basis": "Barbarez (first-time senior manager) has used a pragmatic 4-4-2/4-2-3-1 built on compact mid-to-low block defending, direct long-ball progression to target men (Dzeko/Demirovic) and set-piece threat rather than a press-and-possess game; Bosnia recorded the highest long-pass share of any team in the opening WC26 matches (sources: FWCTimes Sergej Barbarez coach profile 2026, TotalFootballAnalysis Bosnia tactical preview 2026, TacticalFootballAnalysis Canada-Bosnia WC26 analysis)."
+  },
+  {
+    "id": "QAT",
+    "name": "Qatar",
+    "confederation": "AFC",
+    "fifa_rank": 56,
+    "default_formation": "4-2-3-1",
+    "group_id": "B",
+    "tactical_profile": {
+      "manager_name": "Julen Lopetegui",
+      "press_intensity": 55,
+      "possession_style": 58,
+      "defensive_line_height": 50
+    },
+    "_tactical_profile_basis": "Lopetegui (ex-Real Madrid/Porto/Sevilla) is a possession-coaching, structured-buildup manager by reputation, but Qatar's squad (drawn almost entirely from the Qatar Stars League around the Afif/Almoez Ali/Al-Haydos generation) defended fragilely in Asian qualifying (~1.56 goals conceded/game), so moderate, conservative numbers are used pending his short tenure (appointed May 2025) reshaping the side (sources: QNA Qatar coach squad announcement 2026, WorldSoccerTalk Qatar 2026 preview/tactical analysis, Olympics.com Qatar WC26 squad overview)."
+  },
+  {
+    "id": "SUI",
+    "name": "Switzerland",
+    "confederation": "UEFA",
+    "fifa_rank": 19,
+    "default_formation": "4-3-3",
+    "group_id": "B",
+    "tactical_profile": {
+      "manager_name": "Murat Yakin",
+      "press_intensity": 60,
+      "possession_style": 66,
+      "defensive_line_height": 55
+    },
+    "_tactical_profile_basis": "Yakin runs a flexible possession-based 4-3-3 (shifting to 3-4-3/4-2-3-1) built from the back through Xhaka/Sow, with a compact mid-block that prioritizes closing central space; Switzerland conceded just two goals across their qualifying campaign, reflecting defensive solidity over an extremely high line (sources: TacticalFootballAnalysis 'Murat Yakin Tactics at Switzerland WC2026', Squawka Switzerland WC2026 squad/tactics analysis, FWCUMC Murat Yakin coach profile)."
+  },
+  {
+    "id": "MAR",
+    "name": "Morocco",
+    "confederation": "CAF",
+    "fifa_rank": 8,
+    "default_formation": "4-3-3",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Mohamed Ouahbi",
+      "press_intensity": 78,
+      "possession_style": 56,
+      "defensive_line_height": 64
+    }
+  },
+  {
+    "id": "HAI",
+    "name": "Haiti",
+    "confederation": "CONCACAF",
+    "fifa_rank": 83,
+    "default_formation": "4-2-3-1",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Sebastien Migne",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 24
+    }
+  },
+  {
+    "id": "SCO",
+    "name": "Scotland",
+    "confederation": "UEFA",
+    "fifa_rank": 38,
+    "default_formation": "4-2-3-1",
+    "group_id": "C",
+    "tactical_profile": {
+      "manager_name": "Steve Clarke",
+      "press_intensity": 52,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "PAR",
+    "name": "Paraguay",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 54,
+    "default_formation": "4-4-2",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Gustavo Alfaro",
+      "press_intensity": 38,
+      "possession_style": 32,
+      "defensive_line_height": 30
+    }
+  },
+  {
+    "id": "AUS",
+    "name": "Australia",
+    "confederation": "AFC",
+    "fifa_rank": 26,
+    "default_formation": "3-5-2",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Tony Popovic",
+      "press_intensity": 50,
+      "possession_style": 44,
+      "defensive_line_height": 45
+    }
+  },
+  {
+    "id": "TUR",
+    "name": "Turkey",
+    "confederation": "UEFA",
+    "fifa_rank": 22,
+    "default_formation": "4-2-3-1",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Vincenzo Montella",
+      "press_intensity": 64,
+      "possession_style": 56,
+      "defensive_line_height": 55
+    }
+  },
+  {
+    "id": "CUW",
+    "name": "Curacao",
+    "confederation": "CONCACAF",
+    "fifa_rank": 82,
+    "default_formation": "4-2-3-1",
+    "group_id": "E",
+    "tactical_profile": {
+      "manager_name": "Dick Advocaat",
+      "press_intensity": 38,
+      "possession_style": 32,
+      "defensive_line_height": 30
+    }
+  },
+  {
+    "id": "CIV",
+    "name": "Ivory Coast",
+    "confederation": "CAF",
+    "fifa_rank": 39,
+    "default_formation": "4-3-3",
+    "group_id": "E",
+    "tactical_profile": {
+      "manager_name": "Emerse Fae",
+      "press_intensity": 62,
+      "possession_style": 50,
+      "defensive_line_height": 52
+    }
+  },
+  {
+    "id": "ECU",
+    "name": "Ecuador",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 22,
+    "default_formation": "4-4-2",
+    "group_id": "E",
+    "tactical_profile": {
+      "manager_name": "Sebastian Beccacece",
+      "press_intensity": 70,
+      "possession_style": 40,
+      "defensive_line_height": 35
+    }
+  },
+  {
+    "id": "NED",
+    "name": "Netherlands",
+    "confederation": "UEFA",
+    "fifa_rank": 7,
+    "default_formation": "4-3-3",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Ronald Koeman",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 64
+    }
+  },
+  {
+    "id": "JPN",
+    "name": "Japan",
+    "confederation": "AFC",
+    "fifa_rank": 18,
+    "default_formation": "4-2-3-1",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Hajime Moriyasu",
+      "press_intensity": 60,
+      "possession_style": 61,
+      "defensive_line_height": 52
+    }
+  },
+  {
+    "id": "SWE",
+    "name": "Sweden",
+    "confederation": "UEFA",
+    "fifa_rank": 25,
+    "default_formation": "4-4-2",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Graham Potter",
+      "press_intensity": 55,
+      "possession_style": 53,
+      "defensive_line_height": 48
+    }
+  },
+  {
+    "id": "TUN",
+    "name": "Tunisia",
+    "confederation": "CAF",
+    "fifa_rank": 38,
+    "default_formation": "4-2-3-1",
+    "group_id": "F",
+    "tactical_profile": {
+      "manager_name": "Sabri Lamouchi",
+      "press_intensity": 42,
+      "possession_style": 38,
+      "defensive_line_height": 36
+    }
+  },
+  {
+    "id": "BEL",
+    "name": "Belgium",
+    "confederation": "UEFA",
+    "fifa_rank": 9,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Rudi Garcia",
+      "press_intensity": 68,
+      "possession_style": 64,
+      "defensive_line_height": 60
+    }
+  },
+  {
+    "id": "EGY",
+    "name": "Egypt",
+    "confederation": "CAF",
+    "fifa_rank": 29,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Hossam Hassan",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "IRN",
+    "name": "Iran",
+    "confederation": "AFC",
+    "fifa_rank": 20,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Amir Ghalenoei",
+      "press_intensity": 42,
+      "possession_style": 35,
+      "defensive_line_height": 28
+    }
+  },
+  {
+    "id": "NZL",
+    "name": "New Zealand",
+    "confederation": "OFC",
+    "fifa_rank": 85,
+    "default_formation": "4-4-2",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Darren Bazeley",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 25
+    }
+  },
+  {
+    "id": "ESP",
+    "name": "Spain",
+    "confederation": "UEFA",
+    "fifa_rank": 2,
+    "default_formation": "4-3-3",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Luis de la Fuente",
+      "press_intensity": 76,
+      "possession_style": 88,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "CPV",
+    "name": "Cape Verde",
+    "confederation": "CAF",
+    "fifa_rank": 70,
+    "default_formation": "4-4-2",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Pedro \"Bubista\" Brito",
+      "press_intensity": 46,
+      "possession_style": 34,
+      "defensive_line_height": 36
+    }
+  },
+  {
+    "id": "KSA",
+    "name": "Saudi Arabia",
+    "confederation": "AFC",
+    "fifa_rank": 56,
+    "default_formation": "4-2-3-1",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Georgios Donis",
+      "press_intensity": 58,
+      "possession_style": 48,
+      "defensive_line_height": 46
+    }
+  },
+  {
+    "id": "URU",
+    "name": "Uruguay",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 14,
+    "default_formation": "4-3-3",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Marcelo Bielsa",
+      "press_intensity": 88,
+      "possession_style": 54,
+      "defensive_line_height": 74
+    }
+  },
+  {
+    "id": "SEN",
+    "name": "Senegal",
+    "confederation": "CAF",
+    "fifa_rank": 18,
+    "default_formation": "4-3-3",
+    "group_id": "I",
+    "tactical_profile": {
+      "manager_name": "Pape Thiaw",
+      "press_intensity": 74,
+      "possession_style": 48,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "IRQ",
+    "name": "Iraq",
+    "confederation": "AFC",
+    "fifa_rank": 58,
+    "default_formation": "4-2-3-1",
+    "group_id": "I",
+    "tactical_profile": {
+      "manager_name": "Graham Arnold",
+      "press_intensity": 48,
+      "possession_style": 40,
+      "defensive_line_height": 38
+    }
+  },
+  {
+    "id": "NOR",
+    "name": "Norway",
+    "confederation": "UEFA",
+    "fifa_rank": 25,
+    "default_formation": "4-3-3",
+    "group_id": "I",
+    "tactical_profile": {
+      "manager_name": "Stale Solbakken",
+      "press_intensity": 56,
+      "possession_style": 50,
+      "defensive_line_height": 48
+    }
+  },
+  {
+    "id": "ALG",
+    "name": "Algeria",
+    "confederation": "CAF",
+    "fifa_rank": 28,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Vladimir Petkovic",
+      "press_intensity": 56,
+      "possession_style": 54,
+      "defensive_line_height": 48
+    }
+  },
+  {
+    "id": "AUT",
+    "name": "Austria",
+    "confederation": "UEFA",
+    "fifa_rank": 24,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Ralf Rangnick",
+      "press_intensity": 84,
+      "possession_style": 56,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "JOR",
+    "name": "Jordan",
+    "confederation": "AFC",
+    "fifa_rank": 63,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Jamal Sellami",
+      "press_intensity": 40,
+      "possession_style": 36,
+      "defensive_line_height": 34
+    }
+  },
+  {
+    "id": "POR",
+    "name": "Portugal",
+    "confederation": "UEFA",
+    "fifa_rank": 5,
+    "default_formation": "4-3-3",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Roberto Martinez",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 60
+    }
+  },
+  {
+    "id": "COD",
+    "name": "DR Congo",
+    "confederation": "CAF",
+    "fifa_rank": 58,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Sebastien Desabre",
+      "press_intensity": 48,
+      "possession_style": 38,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "UZB",
+    "name": "Uzbekistan",
+    "confederation": "AFC",
+    "fifa_rank": 56,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Fabio Cannavaro",
+      "press_intensity": 44,
+      "possession_style": 40,
+      "defensive_line_height": 36
+    }
+  },
+  {
+    "id": "COL",
+    "name": "Colombia",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 14,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Nestor Lorenzo",
+      "press_intensity": 70,
+      "possession_style": 60,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "CRO",
+    "name": "Croatia",
+    "confederation": "UEFA",
+    "fifa_rank": 10,
+    "default_formation": "4-3-3",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Zlatko Dalic",
+      "press_intensity": 48,
+      "possession_style": 68,
+      "defensive_line_height": 50
+    }
+  },
+  {
+    "id": "GHA",
+    "name": "Ghana",
+    "confederation": "CAF",
+    "fifa_rank": 72,
+    "default_formation": "4-3-3",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Carlos Queiroz",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "PAN",
+    "name": "Panama",
+    "confederation": "CONCACAF",
+    "fifa_rank": 30,
+    "default_formation": "4-2-3-1",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Thomas Christiansen",
+      "press_intensity": 55,
+      "possession_style": 56,
+      "defensive_line_height": 45
+    }
+  }
+]

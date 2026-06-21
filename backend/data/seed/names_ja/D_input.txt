@@ -1,0 +1,55 @@
+AUS_BEHICH	Aziz Behich	Australia
+AUS_DEGENEK	Milos Degenek	Australia
+AUS_DUKE	Mitchell Duke	Australia
+AUS_GOODWIN	Craig Goodwin	Australia
+AUS_HATCH	Harry Souttar	Australia
+AUS_IRVINE	Jackson Irvine	Australia
+AUS_KARACIC	Nathaniel Atkinson	Australia
+AUS_MABIL	Awer Mabil	Australia
+AUS_MAGGS	Nestory Irankunda	Australia
+AUS_MCGREE	Riley McGree	Australia
+AUS_REDMAYNE	Joe Redmayne	Australia
+AUS_SOUQUET	Kye Rowles	Australia
+AUS_VUKOVIC	Mathew Ryan	Australia
+PAR_ALDERETE	Gustavo Gomez	Paraguay
+PAR_ALDERETE_J	Junior Alonso	Paraguay
+PAR_ALMIRON	Miguel Almiron	Paraguay
+PAR_BALBUENA	Fabian Balbuena	Paraguay
+PAR_ENCISO	Julio Enciso	Paraguay
+PAR_ESCOBAR	Gustavo Velazquez	Paraguay
+PAR_FERNANDEZ_R	Roberto Fernandez	Paraguay
+PAR_GATITO	Carlos Coronel	Paraguay
+PAR_GOMEZ_M	Mathias Villasanti	Paraguay
+PAR_GONZALEZ_D	Diego Gonzalez	Paraguay
+PAR_LOPEZ_A	Adam Bareiro	Paraguay
+PAR_ROJAS_A	Alberto Espinola	Paraguay
+PAR_ROJAS_D	Damian Bobadilla	Paraguay
+PAR_SANABRIA	Antonio Sanabria	Paraguay
+TUR_AKTURKOGLU	Kerem Akturkoglu	Turkey
+TUR_AYHAN	Abdulkerim Bardakci	Turkey
+TUR_BAYINDIR	Altay Bayindir	Turkey
+TUR_DEMIRAL	Merih Demiral	Turkey
+TUR_GULER	Arda Guler	Turkey
+TUR_GUNOK	Ugurcan Cakir	Turkey
+TUR_KOKCU	Ferdi Kadioglu	Turkey
+TUR_KOKCU_E	Orkun Kokcu	Turkey
+TUR_MULDUR	Zeki Celik	Turkey
+TUR_OZCAN	Salih Ozcan	Turkey
+TUR_TOSUN	Yusuf Yazici	Turkey
+TUR_YALCIN	Cengiz Under	Turkey
+TUR_YILDIZ	Kenan Yildiz	Turkey
+USA_ADAMS	Tyler Adams	United States
+USA_BALOGUN	Folarin Balogun	United States
+USA_DEST	Sergino Dest	United States
+USA_FREEMAN	Alex Freeman	United States
+USA_FREESE	Matt Freese	United States
+USA_MCKENNIE	Weston McKennie	United States
+USA_MUSAH	Yunus Musah	United States
+USA_PEPI	Ricardo Pepi	United States
+USA_PULISIC	Christian Pulisic	United States
+USA_REAM	Tim Ream	United States
+USA_RICHARDS	Chris Richards	United States
+USA_ROBINSON	Antonee Robinson	United States
+USA_TILLMAN	Malik Tillman	United States
+USA_TURNER	Matt Turner	United States
+USA_WEAH	Timothy Weah	United States

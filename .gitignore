@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+backend/venv/
+backend/.venv/
+backend/wc2026.db
+
+# Logs
+logs/
+*.log
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Env
+.env
+.env.local

@@ -1,0 +1,53 @@
+COD_BAKAMBU	Cedric Bakambu	DR Congo
+COD_BONGONDA	Theo Bongonda	DR Congo
+COD_ELIA	Meshack Elia	DR Congo
+COD_FAYULU	Timothy Fayulu	DR Congo
+COD_KAYEMBE_J	Joris Kayembe	DR Congo
+COD_MASUAKU	Arthur Masuaku	DR Congo
+COD_MBEMBA	Chancel Mbemba	DR Congo
+COD_MOUTOUSSAMY	Samuel Moutoussamy	DR Congo
+COD_MPASI	Lionel Mpasi	DR Congo
+COD_SADIKI	Noah Sadiki	DR Congo
+COD_TUANZEBE	Axel Tuanzebe	DR Congo
+COD_WANBISSAKA	Aaron Wan-Bissaka	DR Congo
+COD_WISSA	Yoane Wissa	DR Congo
+COL_DSANCHEZ	Davinson Sanchez	Colombia
+COL_JAMES	James Rodriguez	Colombia
+COL_JARIAS	Jhon Arias	Colombia
+COL_JCORDOBA	Jhon Cordoba	Colombia
+COL_LDIAZ	Luis Diaz	Colombia
+COL_LERMA	Jefferson Lerma	Colombia
+COL_LSUAREZ	Luis Suarez	Colombia
+COL_MOJICA	Johan Mojica	Colombia
+COL_MUNOZ	Daniel Munoz	Colombia
+COL_OSPINA	David Ospina	Colombia
+COL_RRIOS	Richard Rios	Colombia
+COL_VARGAS	Camilo Vargas	Colombia
+COL_YMINA	Yerry Mina	Colombia
+POR_BERNARDOSILVA	Bernardo Silva	Portugal
+POR_BRUNOFERNANDES	Bruno Fernandes	Portugal
+POR_DALOT	Diogo Dalot	Portugal
+POR_DCOSTA	Diogo Costa	Portugal
+POR_GRAMOS	Goncalo Ramos	Portugal
+POR_INACIO	Goncalo Inacio	Portugal
+POR_JNEVES	Joao Neves	Portugal
+POR_NMENDES	Nuno Mendes	Portugal
+POR_PEDRONETO	Pedro Neto	Portugal
+POR_RAFAELLEAO	Rafael Leao	Portugal
+POR_RDIAS	Ruben Dias	Portugal
+POR_RONALDO	Cristiano Ronaldo	Portugal
+POR_RUISILVA	Rui Silva	Portugal
+POR_VITINHA	Vitinha	Portugal
+UZB_ASHURMATOV	Rustam Ashurmatov	Uzbekistan
+UZB_ERGASHEV	Botirali Ergashev	Uzbekistan
+UZB_FAYZULLAEV	Abbosbek Fayzullaev	Uzbekistan
+UZB_GANIEV	Azizjon Ganiev	Uzbekistan
+UZB_HAMROBEKOV	Odiljon Hamrobekov	Uzbekistan
+UZB_KHAMDAMOV	Dostonbek Khamdamov	Uzbekistan
+UZB_KHUSANOV	Abdukodir Khusanov	Uzbekistan
+UZB_MASHARIPOV	Jaloliddin Masharipov	Uzbekistan
+UZB_NASRULLAEV	Sherzod Nasrullaev	Uzbekistan
+UZB_NEMATOV	Abduvohid Nematov	Uzbekistan
+UZB_SAYFIEV	Farrukh Sayfiev	Uzbekistan
+UZB_SERGEEV	Igor Sergeev	Uzbekistan
+UZB_SHOMURODOV	Eldor Shomurodov	Uzbekistan

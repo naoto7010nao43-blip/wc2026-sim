@@ -1,0 +1,51 @@
+CPV_DAILONLIVRAMENTO	Dailon Livramento	Cape Verde
+CPV_DEROYDUARTE	Deroy Duarte	Cape Verde
+CPV_DINEY	Diney	Cape Verde
+CPV_GARRYRODRIGUES	Garry Mendes Rodrigues	Cape Verde
+CPV_JAMIROMONTEIRO	Jamiro Monteiro	Cape Verde
+CPV_JONASANTUNES	Jonas Antunes	Cape Verde
+CPV_KEVINPINA	Kevin Pina	Cape Verde
+CPV_LOGANCOSTA	Logan Costa	Cape Verde
+CPV_PATRICKANDRADE	Patrick Andrade	Cape Verde
+CPV_ROBERTOLOPES	Roberto Lopes	Cape Verde
+CPV_RYANMENDES	Ryan Mendes	Cape Verde
+CPV_STOPIRA	Stopira	Cape Verde
+CPV_VOZINHA	Vozinha	Cape Verde
+ESP_CUBARSI	Pau Cubarsi	Spain
+ESP_CUCURELLA	Marc Cucurella	Spain
+ESP_DANIOLMO	Dani Olmo	Spain
+ESP_GAVI	Gavi	Spain
+ESP_LAMINEYAMAL	Lamine Yamal	Spain
+ESP_LAPORTE	Aymeric Laporte	Spain
+ESP_NICOWILLIAMS	Nico Williams	Spain
+ESP_OYARZABAL	Mikel Oyarzabal	Spain
+ESP_PEDRI	Pedri	Spain
+ESP_PORRO	Pedro Porro	Spain
+ESP_RAYA	David Raya	Spain
+ESP_RODRI	Rodri	Spain
+ESP_UNAISIMON	Unai Simon	Spain
+ESP_ZUBIMENDI	Martin Zubimendi	Spain
+KSA_ABDULELAHALAMRI	Abdulelah Al-Amri	Saudi Arabia
+KSA_ABDULLAHALHAMDAN	Abdullah Al-Hamdan	Saudi Arabia
+KSA_ALAQIDI	Nawaf Al Aqidi	Saudi Arabia
+KSA_ALBULAIHI	Ali Al-Bulaihi	Saudi Arabia
+KSA_ALOWAIS	Mohammed Al Owais	Saudi Arabia
+KSA_FIRASALBURAIKAN	Firas Al-Buraikan	Saudi Arabia
+KSA_HASSANTAMBAKTI	Hassan Tambakti	Saudi Arabia
+KSA_MOHAMEDKANNO	Mohamed Kanno	Saudi Arabia
+KSA_MUSABALJUWAYR	Musab Al Juwayr	Saudi Arabia
+KSA_SALEMALDAWSARI	Salem Al-Dawsari	Saudi Arabia
+KSA_SAUDABDULHAMID	Saud Abdulhamid	Saudi Arabia
+KSA_YASSERALSHAHRANI	Yasser Al-Shahrani	Saudi Arabia
+URU_ARAUJO	Ronald Araujo	Uruguay
+URU_BENTANCUR	Rodrigo Bentancur	Uruguay
+URU_DARWINNUNEZ	Darwin Nunez	Uruguay
+URU_DEARRASCAETA	Giorgian de Arrascaeta	Uruguay
+URU_GIMENEZ	Jose Maria Gimenez	Uruguay
+URU_MUSLERA	Fernando Muslera	Uruguay
+URU_OLIVERA	Mathias Olivera	Uruguay
+URU_PELLISTRI	Facundo Pellistri	Uruguay
+URU_ROCHET	Sergio Rochet	Uruguay
+URU_UGARTE	Manuel Ugarte	Uruguay
+URU_VALVERDE	Federico Valverde	Uruguay
+URU_VARELA	Guillermo Varela	Uruguay

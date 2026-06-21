@@ -1,0 +1,256 @@
+[
+  {
+    "id": "SEN_MENDY", "team_id": "SEN", "name": "Edouard Mendy", "age": 34, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 0, "assists": 0, "minutes_played": 3950, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.15, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 78.0, "save_pct": 69.0, "goals_conceded_per90": 1.1},
+    "market_value_eur": 4000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Ahli (Saudi Pro League) 2025-26 stats", "EA Sports FC 26 rating (minor signal only)"], "stamina_max": 79
+  },
+  {
+    "id": "SEN_DIAW", "team_id": "SEN", "name": "Mory Diaw", "age": 30, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 0, "assists": 0, "minutes_played": 4400, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 75.0, "save_pct": 67.5, "goals_conceded_per90": 1.3},
+    "market_value_eur": 2000000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Le Havre AC Ligue 1 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "SEN_KOULIBALY", "team_id": "SEN", "name": "Kalidou Koulibaly", "age": 35, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 60, "goals": 3, "assists": 1, "minutes_played": 5100, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.3, "tackles_per90": 1.7, "interceptions_per90": 1.6, "aerial_duels_won_pct": 70.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"defending": 2, "pace": -2, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Hilal Saudi Pro League 2025-26 stats", "Senegal captain"], "stamina_max": 78
+  },
+  {
+    "id": "SEN_DIALLO_A", "team_id": "SEN", "name": "Abdou Diallo", "age": 30, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 42, "goals": 1, "assists": 1, "minutes_played": 3500, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.5, "tackles_per90": 1.6, "interceptions_per90": 1.5, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Arabi SC stats 2025-26"], "stamina_max": 82
+  },
+  {
+    "id": "SEN_DIATTA_F", "team_id": "SEN", "name": "Formose Mendy", "age": 24, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 30, "goals": 1, "assists": 0, "minutes_played": 2400, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.8, "interceptions_per90": 1.4, "aerial_duels_won_pct": 66.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Lorient Ligue 1 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "SEN_NDIAYE_E", "team_id": "SEN", "name": "El Hadji Malick Diouf", "age": 21, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 38, "goals": 2, "assists": 5, "minutes_played": 3100, "key_passes_per90": 1.3, "successful_dribbles_per90": 1.9, "tackles_per90": 1.9, "interceptions_per90": 1.2, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 28000000, "qualitative_adjustments": {"pace": 2, "dribbling": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "West Ham United 2025-26 PL stats"], "stamina_max": 90
+  },
+  {
+    "id": "SEN_JACKSON_K", "team_id": "SEN", "name": "Krepin Diatta", "age": 27, "primary_position": "RB", "secondary_positions": ["RM", "RW"],
+    "career_stats": {"appearances": 44, "goals": 4, "assists": 4, "minutes_played": 3300, "key_passes_per90": 1.2, "successful_dribbles_per90": 1.8, "tackles_per90": 1.6, "interceptions_per90": 1.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"pace": 2},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Monaco Ligue 1 stats (loan spells)"], "stamina_max": 87
+  },
+  {
+    "id": "SEN_GUEYE_I", "team_id": "SEN", "name": "Idrissa Gana Gueye", "age": 36, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 2, "minutes_played": 3900, "key_passes_per90": 0.9, "successful_dribbles_per90": 0.6, "tackles_per90": 2.3, "interceptions_per90": 1.8, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 2500000, "qualitative_adjustments": {"defending": 1, "pace": -2},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Everton 2025-26 PL stats", "Age 36 - veteran legs discounted"], "stamina_max": 74
+  },
+  {
+    "id": "SEN_CAMARA_L", "team_id": "SEN", "name": "Lamine Camara", "age": 22, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 50, "goals": 6, "assists": 5, "minutes_played": 3900, "key_passes_per90": 1.6, "successful_dribbles_per90": 1.8, "tackles_per90": 2.0, "interceptions_per90": 1.3, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 35000000, "qualitative_adjustments": {"passing": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Monaco Ligue 1 2025-26 stats"], "stamina_max": 89
+  },
+  {
+    "id": "SEN_SARR_PM", "team_id": "SEN", "name": "Pape Matar Sarr", "age": 23, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 58, "goals": 8, "assists": 7, "minutes_played": 4700, "key_passes_per90": 1.7, "successful_dribbles_per90": 1.9, "tackles_per90": 1.8, "interceptions_per90": 1.1, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 87.5},
+    "market_value_eur": 55000000, "qualitative_adjustments": {"passing": 1, "dribbling": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Tottenham Hotspur 2025-26 PL stats", "EA Sports FC 26 rating (minor signal only)"], "stamina_max": 90
+  },
+  {
+    "id": "SEN_SARR_I", "team_id": "SEN", "name": "Ismaila Sarr", "age": 28, "primary_position": "RW", "secondary_positions": ["ST", "RM"],
+    "career_stats": {"appearances": 50, "goals": 16, "assists": 6, "minutes_played": 3900, "key_passes_per90": 1.6, "successful_dribbles_per90": 2.6, "tackles_per90": 0.8, "interceptions_per90": 0.5, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 22000000, "qualitative_adjustments": {"pace": 2, "shooting": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Crystal Palace 2025-26 PL stats"], "stamina_max": 88
+  },
+  {
+    "id": "SEN_MANE_S", "team_id": "SEN", "name": "Sadio Mane", "age": 34, "primary_position": "LW", "secondary_positions": ["ST", "CAM"],
+    "career_stats": {"appearances": 42, "goals": 26, "assists": 9, "minutes_played": 3300, "key_passes_per90": 1.6, "successful_dribbles_per90": 2.7, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"shooting": 2, "dribbling": 1, "pace": -1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Nassr Saudi Pro League 2025-26 stats", "Senegal all-time top scorer, captain leadership"], "stamina_max": 84
+  },
+  {
+    "id": "SEN_JACKSON_N", "team_id": "SEN", "name": "Nicolas Jackson", "age": 24, "primary_position": "ST", "secondary_positions": ["LW"],
+    "career_stats": {"appearances": 48, "goals": 22, "assists": 6, "minutes_played": 3700, "key_passes_per90": 1.0, "successful_dribbles_per90": 2.0, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 50000000, "qualitative_adjustments": {"pace": 2, "shooting": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Bayern Munich 2025-26 Bundesliga stats (loan from Chelsea)"], "stamina_max": 89
+  },
+  {
+    "id": "SEN_DIATTA_K", "team_id": "SEN", "name": "Habib Diarra", "age": 22, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 40, "goals": 7, "assists": 5, "minutes_played": 3300, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.6, "tackles_per90": 1.7, "interceptions_per90": 1.0, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 26000000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Sunderland 2025-26 PL stats"], "stamina_max": 88
+  },
+
+  {
+    "id": "IRQ_HASSAN_J", "team_id": "IRQ", "name": "Jalal Hassan", "age": 35, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 100, "goals": 0, "assists": 0, "minutes_played": 8800, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 72.0, "save_pct": 68.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 500000, "qualitative_adjustments": {"defending": 1, "pace": -2},
+    "source_citations": ["Tribuna/Transfermarkt 2025-26", "Al-Talaba SC (Iraq Stars League)", "Iraq captain, 100+ caps, age 35"], "stamina_max": 70
+  },
+  {
+    "id": "IRQ_FADHIL_A", "team_id": "IRQ", "name": "Ahmed Basil", "age": 26, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 0, "minutes_played": 3500, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 70.0, "save_pct": 65.0, "goals_conceded_per90": 1.4},
+    "market_value_eur": 350000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Shorta SC (Iraq Stars League) 2025-26"], "stamina_max": 76
+  },
+  {
+    "id": "IRQ_TAHSEEN", "team_id": "IRQ", "name": "Rebin Sulaka", "age": 26, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 38, "goals": 2, "assists": 1, "minutes_played": 3200, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.4, "tackles_per90": 1.6, "interceptions_per90": 1.5, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 600000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Wakrah SC (Qatar Stars League)"], "stamina_max": 80
+  },
+  {
+    "id": "IRQ_ALI_M", "team_id": "IRQ", "name": "Manaf Younis", "age": 24, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 35, "goals": 1, "assists": 0, "minutes_played": 2900, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.7, "interceptions_per90": 1.6, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 700000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Quwa Al-Jawiya (Iraq Stars League)"], "stamina_max": 82
+  },
+  {
+    "id": "IRQ_RAHMAN", "team_id": "IRQ", "name": "Ahmad Yasin", "age": 25, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 36, "goals": 1, "assists": 4, "minutes_played": 2900, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.1, "tackles_per90": 1.7, "interceptions_per90": 1.2, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 500000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Zawraa SC (Iraq Stars League)"], "stamina_max": 84
+  },
+  {
+    "id": "IRQ_DOSKI", "team_id": "IRQ", "name": "Frans Putros", "age": 27, "primary_position": "LB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 32, "goals": 0, "assists": 2, "minutes_played": 2600, "key_passes_per90": 0.6, "successful_dribbles_per90": 0.7, "tackles_per90": 1.8, "interceptions_per90": 1.4, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 450000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Shorta SC (Iraq Stars League)"], "stamina_max": 81
+  },
+  {
+    "id": "IRQ_AMMARI", "team_id": "IRQ", "name": "Amir Al-Ammari", "age": 26, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 34, "goals": 2, "assists": 3, "minutes_played": 2700, "key_passes_per90": 1.2, "successful_dribbles_per90": 0.8, "tackles_per90": 2.0, "interceptions_per90": 1.5, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 1500000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "GAIS (Swedish Allsvenskan) 2025-26 stats", "midfield string-puller for Iraq"], "stamina_max": 85
+  },
+  {
+    "id": "IRQ_IQBAL_Z", "team_id": "IRQ", "name": "Zidane Iqbal", "age": 23, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 36, "goals": 2, "assists": 4, "minutes_played": 2700, "key_passes_per90": 1.4, "successful_dribbles_per90": 1.3, "tackles_per90": 1.7, "interceptions_per90": 1.1, "aerial_duels_won_pct": 45.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 1800000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "FC Utrecht (Eredivisie) 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "IRQ_BAYESH", "team_id": "IRQ", "name": "Mohanad Ali", "age": 24, "primary_position": "CM", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 30, "goals": 3, "assists": 3, "minutes_played": 2400, "key_passes_per90": 1.1, "successful_dribbles_per90": 1.2, "tackles_per90": 1.5, "interceptions_per90": 1.0, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 600000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Quwa Al-Jawiya (Iraq Stars League)"], "stamina_max": 83
+  },
+  {
+    "id": "IRQ_SAADOON", "team_id": "IRQ", "name": "Mustafa Saadoon", "age": 27, "primary_position": "RW", "secondary_positions": ["RM", "CAM"],
+    "career_stats": {"appearances": 34, "goals": 6, "assists": 5, "minutes_played": 2700, "key_passes_per90": 1.6, "successful_dribbles_per90": 1.9, "tackles_per90": 0.8, "interceptions_per90": 0.5, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 900000, "qualitative_adjustments": {"dribbling": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Quwa Al-Jawiya (Iraq Stars League)"], "stamina_max": 85
+  },
+  {
+    "id": "IRQ_JASIM_A", "team_id": "IRQ", "name": "Ali Jasim", "age": 28, "primary_position": "LW", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 36, "goals": 9, "assists": 7, "minutes_played": 2900, "key_passes_per90": 1.9, "successful_dribbles_per90": 2.2, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 1200000, "qualitative_adjustments": {"dribbling": 1, "passing": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Wahda (UAE Pro League) 2025-26 stats", "creative winger for Iraq"], "stamina_max": 86
+  },
+  {
+    "id": "IRQ_ALHAMADI", "team_id": "IRQ", "name": "Ali Al-Hamadi", "age": 24, "primary_position": "ST", "secondary_positions": ["LW"],
+    "career_stats": {"appearances": 38, "goals": 13, "assists": 4, "minutes_played": 2900, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.5, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 76.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"shooting": 1, "pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Ipswich Town/EFL Championship stats", "first Iraqi to play in the Premier League era; scored qualification-clinching goal vs Bolivia"], "stamina_max": 87
+  },
+  {
+    "id": "IRQ_HUSSEIN_A", "team_id": "IRQ", "name": "Aymen Hussein", "age": 30, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 18, "assists": 3, "minutes_played": 3100, "key_passes_per90": 0.7, "successful_dribbles_per90": 1.0, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 74.0},
+    "market_value_eur": 1000000, "qualitative_adjustments": {"shooting": 2},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Al-Naft SC (Iraq Stars League) 2025-26 stats", "scored decisive winner vs Bolivia in playoff"], "stamina_max": 82
+  },
+
+  {
+    "id": "NOR_NYLAND", "team_id": "NOR", "name": "Orjan Nyland", "age": 35, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 0, "minutes_played": 3500, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 77.0, "save_pct": 68.0, "goals_conceded_per90": 1.15},
+    "market_value_eur": 1200000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Sevilla FC (La Liga, backup) 2025-26"], "stamina_max": 78
+  },
+  {
+    "id": "NOR_HEIN", "team_id": "NOR", "name": "Andre Hansen", "age": 26, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 36, "goals": 0, "assists": 0, "minutes_played": 3200, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 53.0, "pass_completion_pct": 80.0, "save_pct": 70.0, "goals_conceded_per90": 1.05},
+    "market_value_eur": 4000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Liverpool/loan stats 2025-26"], "stamina_max": 83
+  },
+  {
+    "id": "NOR_OSTIGARD", "team_id": "NOR", "name": "Leo Skiri Ostigard", "age": 26, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 1, "minutes_played": 4300, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.9, "interceptions_per90": 1.7, "aerial_duels_won_pct": 66.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Genoa Serie A 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "NOR_HEGGEM", "team_id": "NOR", "name": "Torbjorn Heggem", "age": 26, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 44, "goals": 1, "assists": 1, "minutes_played": 3700, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.7, "interceptions_per90": 1.5, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Bologna Serie A 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "NOR_AJER", "team_id": "NOR", "name": "Kristoffer Ajer", "age": 28, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 2, "minutes_played": 4700, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.5, "tackles_per90": 1.6, "interceptions_per90": 1.4, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 14000000, "qualitative_adjustments": {"defending": 1, "pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Brentford 2025-26 PL stats"], "stamina_max": 87
+  },
+  {
+    "id": "NOR_RYERSON", "team_id": "NOR", "name": "Julian Ryerson", "age": 28, "primary_position": "RB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 56, "goals": 3, "assists": 6, "minutes_played": 4500, "key_passes_per90": 1.1, "successful_dribbles_per90": 0.9, "tackles_per90": 1.8, "interceptions_per90": 1.3, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 16000000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Borussia Dortmund 2025-26 Bundesliga stats"], "stamina_max": 88
+  },
+  {
+    "id": "NOR_WOLFE", "team_id": "NOR", "name": "David Moller Wolfe", "age": 24, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 42, "goals": 2, "assists": 5, "minutes_played": 3400, "key_passes_per90": 1.2, "successful_dribbles_per90": 1.4, "tackles_per90": 1.7, "interceptions_per90": 1.2, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Wolverhampton Wanderers 2025-26 PL stats"], "stamina_max": 89
+  },
+  {
+    "id": "NOR_BERG_P", "team_id": "NOR", "name": "Patrick Berg", "age": 28, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 48, "goals": 3, "assists": 4, "minutes_played": 4000, "key_passes_per90": 1.0, "successful_dribbles_per90": 0.7, "tackles_per90": 2.1, "interceptions_per90": 1.6, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 89.0},
+    "market_value_eur": 7000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Bodo/Glimt Eliteserien 2025-26 stats"], "stamina_max": 87
+  },
+  {
+    "id": "NOR_BERGE_S", "team_id": "NOR", "name": "Sander Berge", "age": 28, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 52, "goals": 6, "assists": 5, "minutes_played": 4300, "key_passes_per90": 1.3, "successful_dribbles_per90": 0.9, "tackles_per90": 1.9, "interceptions_per90": 1.3, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 16000000, "qualitative_adjustments": {"physical": 1, "passing": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Fulham 2025-26 PL stats"], "stamina_max": 86
+  },
+  {
+    "id": "NOR_THORSTVEDT", "team_id": "NOR", "name": "Morten Thorsby", "age": 28, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 45, "goals": 4, "assists": 4, "minutes_played": 3600, "key_passes_per90": 1.1, "successful_dribbles_per90": 0.8, "tackles_per90": 1.8, "interceptions_per90": 1.2, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Union Berlin Bundesliga 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "NOR_ODEGAARD", "team_id": "NOR", "name": "Martin Odegaard", "age": 27, "primary_position": "CAM", "secondary_positions": ["CM", "RW"],
+    "career_stats": {"appearances": 62, "goals": 16, "assists": 22, "minutes_played": 5100, "key_passes_per90": 3.1, "successful_dribbles_per90": 2.0, "tackles_per90": 1.0, "interceptions_per90": 0.7, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 89.0},
+    "market_value_eur": 90000000, "qualitative_adjustments": {"passing": 3, "dribbling": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Arsenal 2025-26 PL stats", "Norway captain", "EA Sports FC 26 rating (minor signal only)"], "stamina_max": 89
+  },
+  {
+    "id": "NOR_BOBB", "team_id": "NOR", "name": "Oscar Bobb", "age": 22, "primary_position": "RW", "secondary_positions": ["RM", "CAM"],
+    "career_stats": {"appearances": 40, "goals": 7, "assists": 8, "minutes_played": 3000, "key_passes_per90": 1.9, "successful_dribbles_per90": 2.7, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 32000000, "qualitative_adjustments": {"dribbling": 1, "pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Fulham 2025-26 PL stats (transfer from Man City)"], "stamina_max": 89
+  },
+  {
+    "id": "NOR_SORLOTH", "team_id": "NOR", "name": "Alexander Sorloth", "age": 30, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 58, "goals": 30, "assists": 8, "minutes_played": 4500, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.1, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 32000000, "qualitative_adjustments": {"shooting": 2, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Atletico Madrid 2025-26 La Liga stats", "in spectacular goalscoring form per qualifying reports"], "stamina_max": 86
+  },
+  {
+    "id": "NOR_HAALAND", "team_id": "NOR", "name": "Erling Haaland", "age": 25, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 58, "assists": 9, "minutes_played": 4500, "key_passes_per90": 0.6, "successful_dribbles_per90": 1.3, "tackles_per90": 0.3, "interceptions_per90": 0.2, "aerial_duels_won_pct": 68.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 180000000, "qualitative_adjustments": {"shooting": 3, "physical": 2, "pace": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Manchester City 2025-26 PL stats", "16 goals in WC qualifying, Norway all-time top scorer", "EA Sports FC 26 rating (minor signal only)"], "stamina_max": 88
+  },
+  {
+    "id": "NOR_LARSEN_J", "team_id": "NOR", "name": "Jorgen Strand Larsen", "age": 26, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 18, "assists": 6, "minutes_played": 3900, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.0, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 77.0},
+    "market_value_eur": 35000000, "qualitative_adjustments": {"shooting": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2025-26 profile", "Crystal Palace 2025-26 PL stats"], "stamina_max": 87
+  }
+]

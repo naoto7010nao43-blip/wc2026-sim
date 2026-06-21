@@ -1,0 +1,57 @@
+FRA_CHERKI	Rayan Cherki	France
+FRA_DEMBELE	Ousmane Dembele	France
+FRA_DIGNE	Lucas Digne	France
+FRA_DOUE	Desire Doue	France
+FRA_GUSTO	Malo Gusto	France
+FRA_KOUNDE	Jules Kounde	France
+FRA_MAIGNAN	Mike Maignan	France
+FRA_MBAPPE	Kylian Mbappe	France
+FRA_OLISE	Michael Olise	France
+FRA_RABIOT	Adrien Rabiot	France
+FRA_SALIBA	William Saliba	France
+FRA_SAMBA	Brice Samba	France
+FRA_TCHOUAMENI	Aurelien Tchouameni	France
+FRA_UPAMECANO	Dayot Upamecano	France
+FRA_ZAIREEMERY	Warren Zaire-Emery	France
+IRQ_ALHAMADI	Ali Al-Hamadi	Iraq
+IRQ_ALI_M	Manaf Younis	Iraq
+IRQ_AMMARI	Amir Al-Ammari	Iraq
+IRQ_BAYESH	Mohanad Ali	Iraq
+IRQ_DOSKI	Frans Putros	Iraq
+IRQ_FADHIL_A	Ahmed Basil	Iraq
+IRQ_HASSAN_J	Jalal Hassan	Iraq
+IRQ_HUSSEIN_A	Aymen Hussein	Iraq
+IRQ_IQBAL_Z	Zidane Iqbal	Iraq
+IRQ_JASIM_A	Ali Jasim	Iraq
+IRQ_RAHMAN	Ahmad Yasin	Iraq
+IRQ_SAADOON	Mustafa Saadoon	Iraq
+IRQ_TAHSEEN	Rebin Sulaka	Iraq
+NOR_AJER	Kristoffer Ajer	Norway
+NOR_BERGE_S	Sander Berge	Norway
+NOR_BERG_P	Patrick Berg	Norway
+NOR_BOBB	Oscar Bobb	Norway
+NOR_HAALAND	Erling Haaland	Norway
+NOR_HEGGEM	Torbjorn Heggem	Norway
+NOR_HEIN	Andre Hansen	Norway
+NOR_LARSEN_J	Jorgen Strand Larsen	Norway
+NOR_NYLAND	Orjan Nyland	Norway
+NOR_ODEGAARD	Martin Odegaard	Norway
+NOR_OSTIGARD	Leo Skiri Ostigard	Norway
+NOR_RYERSON	Julian Ryerson	Norway
+NOR_SORLOTH	Alexander Sorloth	Norway
+NOR_THORSTVEDT	Morten Thorsby	Norway
+NOR_WOLFE	David Moller Wolfe	Norway
+SEN_CAMARA_L	Lamine Camara	Senegal
+SEN_DIALLO_A	Abdou Diallo	Senegal
+SEN_DIATTA_F	Formose Mendy	Senegal
+SEN_DIATTA_K	Habib Diarra	Senegal
+SEN_DIAW	Mory Diaw	Senegal
+SEN_GUEYE_I	Idrissa Gana Gueye	Senegal
+SEN_JACKSON_K	Krepin Diatta	Senegal
+SEN_JACKSON_N	Nicolas Jackson	Senegal
+SEN_KOULIBALY	Kalidou Koulibaly	Senegal
+SEN_MANE_S	Sadio Mane	Senegal
+SEN_MENDY	Edouard Mendy	Senegal
+SEN_NDIAYE_E	El Hadji Malick Diouf	Senegal
+SEN_SARR_I	Ismaila Sarr	Senegal
+SEN_SARR_PM	Pape Matar Sarr	Senegal

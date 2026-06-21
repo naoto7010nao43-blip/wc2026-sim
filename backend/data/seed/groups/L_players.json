@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CRO_LIVAKOVIC", "team_id": "CRO", "name": "Dominik Livakovic", "age": 30, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 70, "goals": 0, "assists": 0, "minutes_played": 6100, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 78.0, "save_pct": 70.5, "goals_conceded_per90": 1.15},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"defending": 2},
+    "source_citations": ["Transfermarkt profile 2025-26", "Dinamo Zagreb HNL stats", "WC2022 penalty-shootout pedigree (EA FC26 high reflexes rating used as minor signal)"], "stamina_max": 82
+  },
+  {
+    "id": "CRO_KOTARSKI", "team_id": "CRO", "name": "Dominik Kotarski", "age": 24, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 0, "assists": 0, "minutes_played": 3950, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 76.0, "save_pct": 69.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 4000000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 2025-26", "FC Copenhagen Superliga stats"], "stamina_max": 80
+  },
+  {
+    "id": "CRO_GVARDIOL", "team_id": "CRO", "name": "Josko Gvardiol", "age": 24, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 62, "goals": 6, "assists": 4, "minutes_played": 5300, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.1, "tackles_per90": 1.9, "interceptions_per90": 1.6, "aerial_duels_won_pct": 70.0, "pass_completion_pct": 90.0},
+    "market_value_eur": 70000000, "qualitative_adjustments": {"defending": 2, "pace": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06 (e70m)", "Manchester City 2025-26 PL stats", "Returning from broken-leg injury (Apr 2026) - minor caution applied"], "stamina_max": 88
+  },
+  {
+    "id": "CRO_SUTALO", "team_id": "CRO", "name": "Josip Sutalo", "age": 25, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 1, "minutes_played": 4700, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.5, "tackles_per90": 1.7, "interceptions_per90": 1.8, "aerial_duels_won_pct": 66.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 24000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Ajax Eredivisie 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "CRO_STANISIC", "team_id": "CRO", "name": "Josip Stanisic", "age": 26, "primary_position": "RB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 58, "goals": 1, "assists": 4, "minutes_played": 4500, "key_passes_per90": 0.9, "successful_dribbles_per90": 0.8, "tackles_per90": 1.8, "interceptions_per90": 1.4, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 20000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Bayern Munich 2025-26 Bundesliga stats"], "stamina_max": 86
+  },
+  {
+    "id": "CRO_CALETACAR", "team_id": "CRO", "name": "Duje Caleta-Car", "age": 29, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 1, "minutes_played": 4100, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.6, "interceptions_per90": 1.6, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Real Sociedad La Liga 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "CRO_MODRIC", "team_id": "CRO", "name": "Luka Modric", "age": 40, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 60, "goals": 5, "assists": 11, "minutes_played": 4300, "key_passes_per90": 2.6, "successful_dribbles_per90": 1.2, "tackles_per90": 1.4, "interceptions_per90": 1.1, "aerial_duels_won_pct": 40.0, "pass_completion_pct": 91.0},
+    "market_value_eur": 3500000, "qualitative_adjustments": {"passing": 3, "pace": -3, "physical": -2},
+    "source_citations": ["Transfermarkt 2026-06 (e3.5m)", "AC Milan Serie A 2025-26 stats", "Age 40 - elite vision/passing retained, pace heavily declined (EA FC26 passing/vision rating used as minor signal)"], "stamina_max": 62
+  },
+  {
+    "id": "CRO_KOVACIC", "team_id": "CRO", "name": "Mateo Kovacic", "age": 31, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 60, "goals": 4, "assists": 6, "minutes_played": 4900, "key_passes_per90": 1.6, "successful_dribbles_per90": 1.9, "tackles_per90": 1.6, "interceptions_per90": 1.1, "aerial_duels_won_pct": 45.0, "pass_completion_pct": 90.0},
+    "market_value_eur": 18000000, "qualitative_adjustments": {"dribbling": 2, "passing": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Manchester City 2025-26 PL stats"], "stamina_max": 85
+  },
+  {
+    "id": "CRO_PASALIC", "team_id": "CRO", "name": "Mario Pasalic", "age": 31, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 58, "goals": 9, "assists": 5, "minutes_played": 4500, "key_passes_per90": 1.3, "successful_dribbles_per90": 1.0, "tackles_per90": 1.5, "interceptions_per90": 1.0, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Atalanta Serie A 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "CRO_SUCIC_L", "team_id": "CRO", "name": "Luka Sucic", "age": 23, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 45, "goals": 7, "assists": 6, "minutes_played": 3600, "key_passes_per90": 1.7, "successful_dribbles_per90": 1.6, "tackles_per90": 1.2, "interceptions_per90": 0.8, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 30000000, "qualitative_adjustments": {"passing": 1, "dribbling": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Real Sociedad La Liga 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "CRO_BATURINA", "team_id": "CRO", "name": "Martin Baturina", "age": 23, "primary_position": "CAM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 50, "goals": 12, "assists": 8, "minutes_played": 4000, "key_passes_per90": 2.4, "successful_dribbles_per90": 1.8, "tackles_per90": 0.9, "interceptions_per90": 0.6, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 32000000, "qualitative_adjustments": {"passing": 2, "shooting": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Como Serie A 2025-26 stats", "Breakout 2025-26 season form (EA FC26 rising-star rating used as minor signal)"], "stamina_max": 87
+  },
+  {
+    "id": "CRO_PERISIC", "team_id": "CRO", "name": "Ivan Perisic", "age": 37, "primary_position": "LW", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 48, "goals": 10, "assists": 9, "minutes_played": 3500, "key_passes_per90": 1.9, "successful_dribbles_per90": 1.5, "tackles_per90": 1.0, "interceptions_per90": 0.6, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 2000000, "qualitative_adjustments": {"physical": -2, "passing": 1, "pace": -2},
+    "source_citations": ["Transfermarkt 2026-06", "PSV Eindhoven Eredivisie 2025-26 stats", "Age 37 - veteran experience, declining pace"], "stamina_max": 68
+  },
+  {
+    "id": "CRO_KRAMARIC", "team_id": "CRO", "name": "Andrej Kramaric", "age": 35, "primary_position": "ST", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 55, "goals": 18, "assists": 7, "minutes_played": 4200, "key_passes_per90": 1.4, "successful_dribbles_per90": 1.1, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 3000000, "qualitative_adjustments": {"shooting": 1, "pace": -2},
+    "source_citations": ["Transfermarkt 2026-06", "Hoffenheim Bundesliga 2025-26 stats"], "stamina_max": 74
+  },
+  {
+    "id": "CRO_BUDIMIR", "team_id": "CRO", "name": "Ante Budimir", "age": 34, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 52, "goals": 24, "assists": 5, "minutes_played": 4300, "key_passes_per90": 0.8, "successful_dribbles_per90": 0.6, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {"shooting": 2, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Osasuna La Liga 2025-26 top scorer stats"], "stamina_max": 80
+  },
+  {
+    "id": "GHA_ATIZIGI", "team_id": "GHA", "name": "Lawrence Ati-Zigi", "age": 30, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 60, "goals": 0, "assists": 0, "minutes_played": 5300, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 74.0, "save_pct": 71.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 3500000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2026-06", "St. Gallen Swiss Super League 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "GHA_ASARE", "team_id": "GHA", "name": "Benjamin Asare", "age": 27, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 0, "minutes_played": 3500, "key_passes_per90": 0.03, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.05, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 70.0, "save_pct": 68.0, "goals_conceded_per90": 1.3},
+    "market_value_eur": 500000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Ghana Premier League stats"], "stamina_max": 76
+  },
+  {
+    "id": "GHA_SALISU", "team_id": "GHA", "name": "Mohammed Salisu", "age": 27, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 1, "minutes_played": 4600, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.9, "interceptions_per90": 1.8, "aerial_duels_won_pct": 65.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 18000000, "qualitative_adjustments": {"defending": 2, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "AS Monaco Ligue 1 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "GHA_MUMIN", "team_id": "GHA", "name": "Abdul Mumin", "age": 28, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 48, "goals": 1, "assists": 1, "minutes_played": 3900, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.7, "interceptions_per90": 1.6, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Rayo Vallecano La Liga 2025-26 stats", "Returning from serious ligament injury - minor caution applied"], "stamina_max": 80
+  },
+  {
+    "id": "GHA_RAHMAN", "team_id": "GHA", "name": "Baba Abdul Rahman", "age": 31, "primary_position": "LB", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 38, "goals": 0, "assists": 3, "minutes_played": 2900, "key_passes_per90": 0.6, "successful_dribbles_per90": 0.6, "tackles_per90": 1.6, "interceptions_per90": 1.3, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 1500000, "qualitative_adjustments": {"pace": -1},
+    "source_citations": ["Transfermarkt 2026-06", "Reading EFL 2025-26 stats", "Returning to squad after long absence since Sept 2023"], "stamina_max": 76
+  },
+  {
+    "id": "GHA_MENSAH_G", "team_id": "GHA", "name": "Gideon Mensah", "age": 28, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 50, "goals": 1, "assists": 4, "minutes_played": 4100, "key_passes_per90": 0.7, "successful_dribbles_per90": 0.8, "tackles_per90": 1.8, "interceptions_per90": 1.4, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 2500000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Montpellier Ligue 1 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "GHA_PARTEY", "team_id": "GHA", "name": "Thomas Partey", "age": 32, "primary_position": "CDM", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 58, "goals": 3, "assists": 4, "minutes_played": 4700, "key_passes_per90": 1.0, "successful_dribbles_per90": 0.6, "tackles_per90": 2.2, "interceptions_per90": 1.9, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 5000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Villarreal La Liga 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "GHA_SEIDU", "team_id": "GHA", "name": "Alidu Seidu", "age": 25, "primary_position": "RB", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 45, "goals": 1, "assists": 3, "minutes_played": 3700, "key_passes_per90": 0.7, "successful_dribbles_per90": 0.9, "tackles_per90": 2.0, "interceptions_per90": 1.5, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Stade Rennais Ligue 1 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "GHA_KUDUS", "team_id": "GHA", "name": "Mohammed Kudus", "age": 25, "primary_position": "RW", "secondary_positions": ["CAM", "ST"],
+    "career_stats": {"appearances": 60, "goals": 18, "assists": 11, "minutes_played": 4700, "key_passes_per90": 2.1, "successful_dribbles_per90": 3.1, "tackles_per90": 0.8, "interceptions_per90": 0.5, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 55000000, "qualitative_adjustments": {"dribbling": 2, "pace": 1},
+    "source_citations": ["Transfermarkt 2026-06 (e55m)", "Tottenham Hotspur PL 2025-26 stats", "Quadriceps injury curtailed 2025-26 season - minor caution applied"], "stamina_max": 88
+  },
+  {
+    "id": "GHA_SEMENYO", "team_id": "GHA", "name": "Antoine Semenyo", "age": 26, "primary_position": "RW", "secondary_positions": ["ST", "CAM"],
+    "career_stats": {"appearances": 62, "goals": 22, "assists": 12, "minutes_played": 5100, "key_passes_per90": 1.7, "successful_dribbles_per90": 2.4, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 60000000, "qualitative_adjustments": {"shooting": 2, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Manchester City PL 2025-26 stats (e65m transfer)"], "stamina_max": 90
+  },
+  {
+    "id": "GHA_WILLIAMS_I", "team_id": "GHA", "name": "Inaki Williams", "age": 31, "primary_position": "ST", "secondary_positions": ["RW"],
+    "career_stats": {"appearances": 58, "goals": 16, "assists": 6, "minutes_played": 4600, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.8, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 77.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"pace": 2},
+    "source_citations": ["Transfermarkt 2026-06", "Athletic Bilbao La Liga 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "GHA_AYEW_J", "team_id": "GHA", "name": "Jordan Ayew", "age": 33, "primary_position": "ST", "secondary_positions": ["RW", "CAM"],
+    "career_stats": {"appearances": 50, "goals": 9, "assists": 5, "minutes_played": 3700, "key_passes_per90": 1.1, "successful_dribbles_per90": 1.3, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 1800000, "qualitative_adjustments": {"physical": -1},
+    "source_citations": ["Transfermarkt 2026-06", "Leicester City Championship 2025-26 stats", "Captain - veteran leadership"], "stamina_max": 78
+  },
+  {
+    "id": "GHA_SULEMANA", "team_id": "GHA", "name": "Kamaldeen Sulemana", "age": 23, "primary_position": "LW", "secondary_positions": ["RW"],
+    "career_stats": {"appearances": 48, "goals": 10, "assists": 7, "minutes_played": 3600, "key_passes_per90": 1.5, "successful_dribbles_per90": 2.9, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 14000000, "qualitative_adjustments": {"dribbling": 2, "pace": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Southampton/loan spell PL & Championship 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "PAN_MEJIA", "team_id": "PAN", "name": "Luis Mejia", "age": 38, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 65, "goals": 0, "assists": 0, "minutes_played": 5700, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 68.0, "save_pct": 69.5, "goals_conceded_per90": 1.3},
+    "market_value_eur": 350000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Tauro FC Panama LPF stats", "Veteran returning from Russia 2018 World Cup squad"], "stamina_max": 76
+  },
+  {
+    "id": "PAN_MOSQUERA", "team_id": "PAN", "name": "Orlando Mosquera", "age": 29, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 0, "assists": 0, "minutes_played": 3950, "key_passes_per90": 0.03, "successful_dribbles_per90": 0.0, "tackles_per90": 0.0, "interceptions_per90": 0.08, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 66.0, "save_pct": 67.0, "goals_conceded_per90": 1.4},
+    "market_value_eur": 300000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Panama LPF stats"], "stamina_max": 78
+  },
+  {
+    "id": "PAN_MURILLO_A", "team_id": "PAN", "name": "Amir Murillo", "age": 28, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 5, "minutes_played": 4500, "key_passes_per90": 0.9, "successful_dribbles_per90": 1.0, "tackles_per90": 1.9, "interceptions_per90": 1.4, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 1500000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Inter Miami MLS 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "PAN_ESCOBAR", "team_id": "PAN", "name": "Fidel Escobar", "age": 30, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 52, "goals": 2, "assists": 1, "minutes_played": 4400, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.8, "interceptions_per90": 1.7, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 1200000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt 2026-06", "New York Red Bulls MLS 2025-26 stats"], "stamina_max": 82
+  },
+  {
+    "id": "PAN_DAVIS_E", "team_id": "PAN", "name": "Eric Davis", "age": 26, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 42, "goals": 1, "assists": 1, "minutes_played": 3500, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.7, "interceptions_per90": 1.6, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 900000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Plaza Amador Panama LPF stats"], "stamina_max": 84
+  },
+  {
+    "id": "PAN_CORDOBA_J", "team_id": "PAN", "name": "Jose Cordoba", "age": 31, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 0, "minutes_played": 4100, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.3, "tackles_per90": 1.9, "interceptions_per90": 1.8, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 1000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt 2026-06", "Al-Fayha Saudi League 2025-26 stats"], "stamina_max": 80
+  },
+  {
+    "id": "PAN_ANDRADE", "team_id": "PAN", "name": "Andres Andrade", "age": 28, "primary_position": "LB", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 48, "goals": 2, "assists": 4, "minutes_played": 3900, "key_passes_per90": 0.8, "successful_dribbles_per90": 0.9, "tackles_per90": 1.7, "interceptions_per90": 1.3, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 1300000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Independiente Medellin Categoria Primera A stats"], "stamina_max": 83
+  },
+  {
+    "id": "PAN_GODOY", "team_id": "PAN", "name": "Anibal Godoy", "age": 35, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 3, "minutes_played": 3900, "key_passes_per90": 1.0, "successful_dribbles_per90": 0.5, "tackles_per90": 2.0, "interceptions_per90": 1.6, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 150000, "qualitative_adjustments": {"passing": 1, "pace": -2},
+    "source_citations": ["Transfermarkt 2026-06", "San Diego FC MLS 2025-26 stats", "National-record cap holder, captain leadership"], "stamina_max": 74
+  },
+  {
+    "id": "PAN_CARRASQUILLA", "team_id": "PAN", "name": "Adalberto Carrasquilla", "age": 26, "primary_position": "CM", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 55, "goals": 8, "assists": 9, "minutes_played": 4400, "key_passes_per90": 2.0, "successful_dribbles_per90": 1.7, "tackles_per90": 1.4, "interceptions_per90": 1.0, "aerial_duels_won_pct": 46.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 4000000, "qualitative_adjustments": {"passing": 2, "dribbling": 1},
+    "source_citations": ["Transfermarkt 2026-06 (e4m)", "UNAM Pumas Liga MX 2025-26 stats", "Key midfield connector per scouting reports - first World Cup"], "stamina_max": 87
+  },
+  {
+    "id": "PAN_BARCENAS", "team_id": "PAN", "name": "Yoel Barcenas", "age": 31, "primary_position": "CM", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 50, "goals": 6, "assists": 7, "minutes_played": 4000, "key_passes_per90": 1.4, "successful_dribbles_per90": 1.1, "tackles_per90": 1.5, "interceptions_per90": 1.0, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 800000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Universitas Costa Rica stats"], "stamina_max": 81
+  },
+  {
+    "id": "PAN_FAJARDO", "team_id": "PAN", "name": "Jose Fajardo", "age": 25, "primary_position": "RW", "secondary_positions": ["ST"],
+    "career_stats": {"appearances": 45, "goals": 12, "assists": 5, "minutes_played": 3600, "key_passes_per90": 1.2, "successful_dribbles_per90": 1.9, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 46.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 1800000, "qualitative_adjustments": {"pace": 1, "shooting": 1},
+    "source_citations": ["Transfermarkt 2026-06 (e1.8m)", "Universidad Catolica Ecuador stats"], "stamina_max": 85
+  },
+  {
+    "id": "PAN_YANIS", "team_id": "PAN", "name": "Cesar Yanis", "age": 25, "primary_position": "ST", "secondary_positions": ["LW"],
+    "career_stats": {"appearances": 40, "goals": 14, "assists": 4, "minutes_played": 3200, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.6, "tackles_per90": 0.5, "interceptions_per90": 0.2, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 75.0},
+    "market_value_eur": 350000, "qualitative_adjustments": {"shooting": 1},
+    "source_citations": ["Transfermarkt 2026-06 (e338k)", "San Carlos Costa Rica stats"], "stamina_max": 84
+  },
+  {
+    "id": "PAN_MILLER_R", "team_id": "PAN", "name": "Roderick Miller", "age": 26, "primary_position": "ST", "secondary_positions": ["RW"],
+    "career_stats": {"appearances": 42, "goals": 11, "assists": 5, "minutes_played": 3300, "key_passes_per90": 1.0, "successful_dribbles_per90": 1.5, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 76.0},
+    "market_value_eur": 600000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt 2026-06", "Panama LPF stats"], "stamina_max": 83
+  }
+]

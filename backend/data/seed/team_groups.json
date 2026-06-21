@@ -1,0 +1,26 @@
+{
+  "_source_notes": "2026 FIFA World Cup final draw (2025-12-05) plus resolved playoff winners (UEFA path finals + FIFA inter-confederation playoff, both concluded March 2026). Confirmed via WebSearch on 2026-06-20 against ESPN/FIFA.com/Olympics.com/NBC Sports playoff results coverage.",
+  "groups": {
+    "A": ["Mexico", "South Africa", "South Korea", "Czechia"],
+    "B": ["Canada", "Bosnia and Herzegovina", "Qatar", "Switzerland"],
+    "C": ["Brazil", "Morocco", "Haiti", "Scotland"],
+    "D": ["United States", "Paraguay", "Australia", "Turkey"],
+    "E": ["Germany", "Curacao", "Ivory Coast", "Ecuador"],
+    "F": ["Netherlands", "Japan", "Sweden", "Tunisia"],
+    "G": ["Belgium", "Egypt", "Iran", "New Zealand"],
+    "H": ["Spain", "Cape Verde", "Saudi Arabia", "Uruguay"],
+    "I": ["France", "Senegal", "Iraq", "Norway"],
+    "J": ["Argentina", "Algeria", "Austria", "Jordan"],
+    "K": ["Portugal", "DR Congo", "Uzbekistan", "Colombia"],
+    "L": ["England", "Croatia", "Ghana", "Panama"]
+  },
+  "hosts": ["Mexico", "Canada", "United States"],
+  "playoff_winners_resolved": {
+    "uefa_path_a": "Bosnia and Herzegovina",
+    "uefa_path_b": "Sweden",
+    "uefa_path_c": "Turkey",
+    "uefa_path_d": "Czechia",
+    "fifa_interconfederation_playoff_1": "DR Congo",
+    "fifa_interconfederation_playoff_2": "Iraq"
+  }
+}

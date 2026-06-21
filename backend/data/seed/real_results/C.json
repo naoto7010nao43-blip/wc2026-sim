@@ -1,0 +1,45 @@
+[
+  {
+    "home_team_id": "BRA",
+    "away_team_id": "MAR",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-13",
+    "goals": [
+      {"minute": 21, "team_id": "MAR", "scorer_name": "Ismael Saibari"},
+      {"minute": 32, "team_id": "BRA", "scorer_name": "Vinicius Junior"}
+    ]
+  },
+  {
+    "home_team_id": "HAI",
+    "away_team_id": "SCO",
+    "home_score": 0,
+    "away_score": 1,
+    "date": "2026-06-13",
+    "goals": [
+      {"minute": 28, "team_id": "SCO", "scorer_name": "John McGinn"}
+    ]
+  },
+  {
+    "home_team_id": "SCO",
+    "away_team_id": "MAR",
+    "home_score": 0,
+    "away_score": 1,
+    "date": "2026-06-19",
+    "goals": [
+      {"minute": 2, "team_id": "MAR", "scorer_name": "Ismael Saibari"}
+    ]
+  },
+  {
+    "home_team_id": "BRA",
+    "away_team_id": "HAI",
+    "home_score": 3,
+    "away_score": 0,
+    "date": "2026-06-19",
+    "goals": [
+      {"minute": 23, "team_id": "BRA", "scorer_name": "Matheus Cunha"},
+      {"minute": 36, "team_id": "BRA", "scorer_name": "Matheus Cunha"},
+      {"minute": 45, "team_id": "BRA", "scorer_name": "Vinicius Junior"}
+    ]
+  }
+]

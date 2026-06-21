@@ -1,0 +1,29 @@
+[
+  {
+    "home_team_id": "FRA",
+    "away_team_id": "SEN",
+    "home_score": 3,
+    "away_score": 1,
+    "date": "2026-06-16",
+    "goals": [
+      { "minute": 66, "team_id": "FRA", "scorer_name": "Kylian Mbappe" },
+      { "minute": 82, "team_id": "FRA", "scorer_name": "Bradley Barcola" },
+      { "minute": 90, "team_id": "SEN", "scorer_name": "Ibrahim Mbaye" },
+      { "minute": 96, "team_id": "FRA", "scorer_name": "Kylian Mbappe" }
+    ]
+  },
+  {
+    "home_team_id": "IRQ",
+    "away_team_id": "NOR",
+    "home_score": 1,
+    "away_score": 4,
+    "date": "2026-06-16",
+    "goals": [
+      { "minute": 29, "team_id": "NOR", "scorer_name": "Erling Haaland" },
+      { "minute": 39, "team_id": "IRQ", "scorer_name": "Aymen Hussein" },
+      { "minute": 43, "team_id": "NOR", "scorer_name": "Erling Haaland" },
+      { "minute": 76, "team_id": "NOR", "scorer_name": "Leo Ostigard" },
+      { "minute": 96, "team_id": "IRQ", "scorer_name": "Aymen Hussein (own goal)" }
+    ]
+  }
+]

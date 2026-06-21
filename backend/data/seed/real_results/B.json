@@ -1,0 +1,53 @@
+[
+  {
+    "home_team_id": "CAN",
+    "away_team_id": "BIH",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-12",
+    "goals": [
+      {"minute": 21, "team_id": "BIH", "scorer_name": "Jovo Lukic"},
+      {"minute": 78, "team_id": "CAN", "scorer_name": "Cyle Larin"}
+    ]
+  },
+  {
+    "home_team_id": "QAT",
+    "away_team_id": "SUI",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-13",
+    "goals": [
+      {"minute": 17, "team_id": "SUI", "scorer_name": "Breel Embolo"},
+      {"minute": 90, "team_id": "QAT", "scorer_name": "Miro Muheim (own goal)"}
+    ]
+  },
+  {
+    "home_team_id": "SUI",
+    "away_team_id": "BIH",
+    "home_score": 4,
+    "away_score": 1,
+    "date": "2026-06-18",
+    "goals": [
+      {"minute": 74, "team_id": "SUI", "scorer_name": "Johan Manzambi"},
+      {"minute": 84, "team_id": "SUI", "scorer_name": "Ruben Vargas"},
+      {"minute": 90, "team_id": "BIH", "scorer_name": "Ermin Mahmic"},
+      {"minute": 90, "team_id": "SUI", "scorer_name": "Johan Manzambi"},
+      {"minute": 90, "team_id": "SUI", "scorer_name": "Granit Xhaka"}
+    ]
+  },
+  {
+    "home_team_id": "CAN",
+    "away_team_id": "QAT",
+    "home_score": 6,
+    "away_score": 0,
+    "date": "2026-06-18",
+    "goals": [
+      {"minute": 16, "team_id": "CAN", "scorer_name": "Cyle Larin"},
+      {"minute": 29, "team_id": "CAN", "scorer_name": "Jonathan David"},
+      {"minute": 45, "team_id": "CAN", "scorer_name": "Jonathan David"},
+      {"minute": 64, "team_id": "CAN", "scorer_name": "Nathan Saliba"},
+      {"minute": 75, "team_id": "CAN", "scorer_name": "Mohamed Manai (own goal)"},
+      {"minute": 90, "team_id": "CAN", "scorer_name": "Jonathan David"}
+    ]
+  }
+]

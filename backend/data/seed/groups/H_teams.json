@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ESP",
+    "name": "Spain",
+    "confederation": "UEFA",
+    "fifa_rank": 2,
+    "default_formation": "4-3-3",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Luis de la Fuente",
+      "press_intensity": 76,
+      "possession_style": 88,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "CPV",
+    "name": "Cape Verde",
+    "confederation": "CAF",
+    "fifa_rank": 70,
+    "default_formation": "4-4-2",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Pedro \"Bubista\" Brito",
+      "press_intensity": 46,
+      "possession_style": 34,
+      "defensive_line_height": 36
+    }
+  },
+  {
+    "id": "KSA",
+    "name": "Saudi Arabia",
+    "confederation": "AFC",
+    "fifa_rank": 56,
+    "default_formation": "4-2-3-1",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Georgios Donis",
+      "press_intensity": 58,
+      "possession_style": 48,
+      "defensive_line_height": 46
+    }
+  },
+  {
+    "id": "URU",
+    "name": "Uruguay",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 14,
+    "default_formation": "4-3-3",
+    "group_id": "H",
+    "tactical_profile": {
+      "manager_name": "Marcelo Bielsa",
+      "press_intensity": 88,
+      "possession_style": 54,
+      "defensive_line_height": 74
+    }
+  }
+]

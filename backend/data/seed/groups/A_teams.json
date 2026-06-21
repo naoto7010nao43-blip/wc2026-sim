@@ -1,0 +1,46 @@
+[
+  {
+    "id": "MEX", "name": "Mexico", "confederation": "CONCACAF", "fifa_rank": 14,
+    "default_formation": "4-3-3", "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Javier Aguirre",
+      "press_intensity": 58,
+      "possession_style": 60,
+      "defensive_line_height": 52
+    },
+    "_tactical_profile_basis": "Aguirre (in his third spell as Mexico coach) favors a pragmatic, structured 4-3-3 built on patient short-passing buildup through midfield (Alvarez/Lozano-type carriers) rather than extreme gegenpress; as co-hosts Mexico have prepared with a long uninterrupted camp and friendlies emphasizing possession control and a mid-to-moderately-high block rather than all-out pressing (sources: Transfermarkt Mexico national team profile 2026, ESPN/Marca Aguirre tactics analysis for Copa Oro/WC2026 buildup, FMF official squad and friendlies coverage 2025-26)."
+  },
+  {
+    "id": "RSA", "name": "South Africa", "confederation": "CAF", "fifa_rank": 60,
+    "default_formation": "4-2-3-1", "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Hugo Broos",
+      "press_intensity": 48,
+      "possession_style": 45,
+      "defensive_line_height": 45
+    },
+    "_tactical_profile_basis": "Broos (Belgian, also won AFCON 2023 with Cameroon) runs a disciplined, compact 4-2-3-1/4-4-2 mid-block prioritizing defensive organization and direct transitions through pacey wide players (Mokoena, Foster) over sustained possession; Bafana Bafana qualified for their first WC since 2010 largely on the back of a low-goals-conceded CAF qualifying campaign (sources: CAF Online South Africa WC2026 qualifying review 2025, SAFA official Hugo Broos squad/tactics statements 2025-26, KickOff.com Bafana Bafana tactical preview 2026)."
+  },
+  {
+    "id": "KOR", "name": "South Korea", "confederation": "AFC", "fifa_rank": 23,
+    "default_formation": "4-2-3-1", "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Hong Myung-bo",
+      "press_intensity": 62,
+      "possession_style": 56,
+      "defensive_line_height": 58
+    },
+    "_tactical_profile_basis": "Hong Myung-bo (former Korea captain/Olympic coach, appointed senior team head coach 2024) deploys an attacking 4-2-3-1 built around Son Heung-min's movement and Lee Kang-in's creativity, with an organized counter-press to win the ball back high given Korea's pace in transition; Korea topped their AFC final-round qualifying group with the best defensive record in the group (sources: KFA official Hong Myung-bo tactical statements 2025-26, Korea JoongAng Daily WC2026 qualifying tactical review, Yonhap squad/formation reporting 2026)."
+  },
+  {
+    "id": "CZE", "name": "Czechia", "confederation": "UEFA", "fifa_rank": 41,
+    "default_formation": "4-2-3-1", "group_id": "A",
+    "tactical_profile": {
+      "manager_name": "Ivan Hasek",
+      "press_intensity": 50,
+      "possession_style": 42,
+      "defensive_line_height": 44
+    },
+    "_tactical_profile_basis": "Hasek (former Czech international, appointed 2023) favors a pragmatic, compact 4-2-3-1/4-4-2 mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil, reflecting a squad short on elite ball-progressing midfielders; Czechia reached WC2026 via the UEFA playoffs Path D, beating Denmark in the final (March 2026) on the back of disciplined defending rather than control of possession (sources: UEFA.com WC2026 playoff Path D final report March 2026, FACR official Ivan Hasek squad/tactics statements 2025-26, iDNES.cz tactical preview of playoff final)."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "GER", "group_id": "E",
+    "tactical_profile": {"manager_name": "Julian Nagelsmann", "press_intensity": 78, "possession_style": 62, "defensive_line_height": 68}
+  },
+  {
+    "id": "CUW", "name": "Curacao", "confederation": "CONCACAF", "fifa_rank": 82, "default_formation": "4-2-3-1", "group_id": "E",
+    "tactical_profile": {"manager_name": "Dick Advocaat", "press_intensity": 38, "possession_style": 32, "defensive_line_height": 30}
+  },
+  {
+    "id": "CIV", "name": "Ivory Coast", "confederation": "CAF", "fifa_rank": 39, "default_formation": "4-3-3", "group_id": "E",
+    "tactical_profile": {"manager_name": "Emerse Fae", "press_intensity": 62, "possession_style": 50, "defensive_line_height": 52}
+  },
+  {
+    "id": "ECU", "name": "Ecuador", "confederation": "CONMEBOL", "fifa_rank": 22, "default_formation": "4-4-2", "group_id": "E",
+    "tactical_profile": {"manager_name": "Sebastian Beccacece", "press_intensity": 70, "possession_style": 40, "defensive_line_height": 35}
+  }
+]

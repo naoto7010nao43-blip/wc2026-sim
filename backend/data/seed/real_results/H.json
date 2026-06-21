@@ -1,0 +1,20 @@
+[
+  {
+    "home_team_id": "ESP",
+    "away_team_id": "CPV",
+    "home_score": 0,
+    "away_score": 0,
+    "date": "2026-06-15"
+  },
+  {
+    "home_team_id": "KSA",
+    "away_team_id": "URU",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-15",
+    "goals": [
+      {"minute": 41, "team_id": "KSA", "scorer_name": "Abdulelah Al-Amri"},
+      {"minute": 80, "team_id": "URU", "scorer_name": "Maximiliano Araujo"}
+    ]
+  }
+]

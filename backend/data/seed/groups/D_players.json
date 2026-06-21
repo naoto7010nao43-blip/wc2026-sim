@@ -1,0 +1,244 @@
+[
+  {
+    "id": "PAR_GATITO", "team_id": "PAR", "name": "Carlos Coronel", "age": 28, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 0, "assists": 0, "minutes_played": 4400, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 76.0, "save_pct": 70.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 4000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "New York Red Bulls MLS 2025 stats", "Paraguay national team regular starter in WC qualifying"], "stamina_max": 80
+  },
+  {
+    "id": "PAR_FERNANDEZ_R", "team_id": "PAR", "name": "Roberto Fernandez", "age": 26, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 38, "goals": 0, "assists": 0, "minutes_played": 3300, "key_passes_per90": 0.03, "successful_dribbles_per90": 0.0, "tackles_per90": 0.03, "interceptions_per90": 0.08, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 74.0, "save_pct": 68.0, "goals_conceded_per90": 1.3},
+    "market_value_eur": 2000000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 2025-26", "Liga Profesional Paraguay (Libertad) 2025 stats"], "stamina_max": 78
+  },
+  {
+    "id": "PAR_ALDERETE", "team_id": "PAR", "name": "Gustavo Gomez", "age": 32, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 75, "goals": 7, "assists": 2, "minutes_played": 6500, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.3, "tackles_per90": 1.9, "interceptions_per90": 1.8, "aerial_duels_won_pct": 71.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"defending": 2, "physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Palmeiras Brasileirao 2025 stats", "Paraguay national team captain"], "stamina_max": 84
+  },
+  {
+    "id": "PAR_ALDERETE_J", "team_id": "PAR", "name": "Junior Alonso", "age": 30, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 3, "assists": 1, "minutes_played": 4700, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.2, "tackles_per90": 1.8, "interceptions_per90": 1.6, "aerial_duels_won_pct": 68.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 5000000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Inter Miami MLS 2025 stats"], "stamina_max": 82
+  },
+  {
+    "id": "PAR_BALBUENA", "team_id": "PAR", "name": "Fabian Balbuena", "age": 33, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 48, "goals": 2, "assists": 0, "minutes_played": 4100, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.2, "tackles_per90": 1.7, "interceptions_per90": 1.7, "aerial_duels_won_pct": 69.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 2500000, "qualitative_adjustments": {"defending": 1, "pace": -1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Boca Juniors 2025 Liga Profesional stats"], "stamina_max": 78
+  },
+  {
+    "id": "PAR_ESCOBAR", "team_id": "PAR", "name": "Gustavo Velazquez", "age": 27, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 45, "goals": 2, "assists": 5, "minutes_played": 3700, "key_passes_per90": 1.1, "successful_dribbles_per90": 1.0, "tackles_per90": 2.0, "interceptions_per90": 1.4, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 3000000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Cerro Porteno Liga Profesional 2025 stats"], "stamina_max": 84
+  },
+  {
+    "id": "PAR_ROJAS_A", "team_id": "PAR", "name": "Alberto Espinola", "age": 27, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 50, "goals": 1, "assists": 4, "minutes_played": 4200, "key_passes_per90": 0.9, "successful_dribbles_per90": 0.9, "tackles_per90": 1.9, "interceptions_per90": 1.5, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 2800000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Libertad Liga Profesional 2025 stats"], "stamina_max": 83
+  },
+  {
+    "id": "PAR_GOMEZ_M", "team_id": "PAR", "name": "Mathias Villasanti", "age": 28, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 60, "goals": 3, "assists": 6, "minutes_played": 5200, "key_passes_per90": 1.3, "successful_dribbles_per90": 0.8, "tackles_per90": 2.5, "interceptions_per90": 1.9, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 6500000, "qualitative_adjustments": {"defending": 2, "passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Gremio Brasileirao 2025 stats", "Paraguay national team regular starter"], "stamina_max": 90
+  },
+  {
+    "id": "PAR_ROJAS_D", "team_id": "PAR", "name": "Damian Bobadilla", "age": 24, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 42, "goals": 4, "assists": 5, "minutes_played": 3400, "key_passes_per90": 1.4, "successful_dribbles_per90": 1.1, "tackles_per90": 2.1, "interceptions_per90": 1.3, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 5500000, "qualitative_adjustments": {"physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Talleres Liga Profesional Argentina 2025 stats"], "stamina_max": 88
+  },
+  {
+    "id": "PAR_ENCISO", "team_id": "PAR", "name": "Julio Enciso", "age": 22, "primary_position": "CAM", "secondary_positions": ["LW", "RW"],
+    "career_stats": {"appearances": 48, "goals": 9, "assists": 8, "minutes_played": 3500, "key_passes_per90": 2.2, "successful_dribbles_per90": 2.6, "tackles_per90": 0.8, "interceptions_per90": 0.5, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 16000000, "qualitative_adjustments": {"dribbling": 2, "passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26 (eFootball/FC26 attacking rating informed minor nudge)", "Strasbourg Ligue 1 2025-26 stats", "Paraguay's most talented young attacker"], "stamina_max": 86
+  },
+  {
+    "id": "PAR_ALMIRON", "team_id": "PAR", "name": "Miguel Almiron", "age": 32, "primary_position": "RW", "secondary_positions": ["CAM", "RM"],
+    "career_stats": {"appearances": 65, "goals": 13, "assists": 12, "minutes_played": 5400, "key_passes_per90": 1.9, "successful_dribbles_per90": 2.1, "tackles_per90": 1.1, "interceptions_per90": 0.7, "aerial_duels_won_pct": 40.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"pace": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Atlanta United MLS 2025 stats", "Paraguay all-time appearance leader among current squad"], "stamina_max": 87
+  },
+  {
+    "id": "PAR_SANABRIA", "team_id": "PAR", "name": "Antonio Sanabria", "age": 29, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 58, "goals": 19, "assists": 5, "minutes_played": 4700, "key_passes_per90": 0.8, "successful_dribbles_per90": 1.0, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"shooting": 2},
+    "source_citations": ["Transfermarkt profile 2025-26", "Torino Serie A 2025-26 stats", "Paraguay's primary qualifying-cycle striker"], "stamina_max": 85
+  },
+  {
+    "id": "PAR_LOPEZ_A", "team_id": "PAR", "name": "Adam Bareiro", "age": 27, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 14, "assists": 3, "minutes_played": 3900, "key_passes_per90": 0.5, "successful_dribbles_per90": 0.7, "tackles_per90": 0.4, "interceptions_per90": 0.3, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 75.0},
+    "market_value_eur": 5500000, "qualitative_adjustments": {"shooting": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Cruz Azul Liga MX 2025 stats"], "stamina_max": 83
+  },
+  {
+    "id": "PAR_GONZALEZ_D", "team_id": "PAR", "name": "Diego Gonzalez", "age": 27, "primary_position": "CDM", "secondary_positions": ["CB"],
+    "career_stats": {"appearances": 52, "goals": 1, "assists": 2, "minutes_played": 4400, "key_passes_per90": 0.6, "successful_dribbles_per90": 0.4, "tackles_per90": 2.2, "interceptions_per90": 1.8, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Estudiantes La Plata Liga Argentina 2025 stats"], "stamina_max": 84
+  },
+
+  {
+    "id": "AUS_VUKOVIC", "team_id": "AUS", "name": "Mathew Ryan", "age": 34, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 70, "goals": 0, "assists": 0, "minutes_played": 6200, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.15, "aerial_duels_won_pct": 53.0, "pass_completion_pct": 78.0, "save_pct": 69.0, "goals_conceded_per90": 1.2},
+    "market_value_eur": 1500000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Czech First League 2025 stats", "Australia's most-capped goalkeeper, long-time national #1"], "stamina_max": 78
+  },
+  {
+    "id": "AUS_REDMAYNE", "team_id": "AUS", "name": "Joe Redmayne", "age": 33, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 40, "goals": 0, "assists": 0, "minutes_played": 3500, "key_passes_per90": 0.03, "successful_dribbles_per90": 0.0, "tackles_per90": 0.03, "interceptions_per90": 0.1, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 74.0, "save_pct": 67.5, "goals_conceded_per90": 1.3},
+    "market_value_eur": 900000, "qualitative_adjustments": {},
+    "source_citations": ["Transfermarkt profile 2025-26", "A-League Men 2025-26 stats"], "stamina_max": 76
+  },
+  {
+    "id": "AUS_DEGENEK", "team_id": "AUS", "name": "Milos Degenek", "age": 31, "primary_position": "CB", "secondary_positions": ["RB"],
+    "career_stats": {"appearances": 55, "goals": 1, "assists": 1, "minutes_played": 4700, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.8, "interceptions_per90": 1.6, "aerial_duels_won_pct": 66.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 1200000, "qualitative_adjustments": {"defending": 1, "physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Columbus Crew MLS 2025 stats"], "stamina_max": 80
+  },
+  {
+    "id": "AUS_SOUQUET", "team_id": "AUS", "name": "Kye Rowles", "age": 27, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 50, "goals": 2, "assists": 1, "minutes_played": 4300, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.4, "tackles_per90": 1.7, "interceptions_per90": 1.5, "aerial_duels_won_pct": 64.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 4500000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Hearts Scottish Premiership 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "AUS_HATCH", "team_id": "AUS", "name": "Harry Souttar", "age": 27, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 3, "assists": 0, "minutes_played": 3800, "key_passes_per90": 0.2, "successful_dribbles_per90": 0.2, "tackles_per90": 1.6, "interceptions_per90": 1.7, "aerial_duels_won_pct": 73.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 7000000, "qualitative_adjustments": {"physical": 2, "defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Rangers Scottish Premiership 2025-26 stats", "Tall aerial-dominant centre-back, key set-piece presence"], "stamina_max": 81
+  },
+  {
+    "id": "AUS_BEHICH", "team_id": "AUS", "name": "Aziz Behich", "age": 35, "primary_position": "LB", "secondary_positions": [],
+    "career_stats": {"appearances": 50, "goals": 1, "assists": 3, "minutes_played": 4100, "key_passes_per90": 0.8, "successful_dribbles_per90": 0.7, "tackles_per90": 1.8, "interceptions_per90": 1.3, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 700000, "qualitative_adjustments": {"pace": -2},
+    "source_citations": ["Transfermarkt profile 2025-26", "A-League Men 2025-26 stats"], "stamina_max": 74
+  },
+  {
+    "id": "AUS_KARACIC", "team_id": "AUS", "name": "Nathaniel Atkinson", "age": 27, "primary_position": "RB", "secondary_positions": ["RM"],
+    "career_stats": {"appearances": 48, "goals": 1, "assists": 5, "minutes_played": 3900, "key_passes_per90": 1.0, "successful_dribbles_per90": 1.0, "tackles_per90": 1.9, "interceptions_per90": 1.2, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 2200000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Hearts Scottish Premiership 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "AUS_IRVINE", "team_id": "AUS", "name": "Jackson Irvine", "age": 33, "primary_position": "CM", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 60, "goals": 10, "assists": 7, "minutes_played": 5200, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.0, "tackles_per90": 2.0, "interceptions_per90": 1.4, "aerial_duels_won_pct": 60.0, "pass_completion_pct": 84.0},
+    "market_value_eur": 1800000, "qualitative_adjustments": {"physical": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "St Pauli Bundesliga 2025-26 stats", "Australia national team captain"], "stamina_max": 86
+  },
+  {
+    "id": "AUS_MCGREE", "team_id": "AUS", "name": "Riley McGree", "age": 27, "primary_position": "CAM", "secondary_positions": ["CM", "RM"],
+    "career_stats": {"appearances": 50, "goals": 7, "assists": 6, "minutes_played": 4000, "key_passes_per90": 1.6, "successful_dribbles_per90": 1.5, "tackles_per90": 1.4, "interceptions_per90": 0.9, "aerial_duels_won_pct": 46.0, "pass_completion_pct": 83.0},
+    "market_value_eur": 5500000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Middlesbrough Championship 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "AUS_MABIL", "team_id": "AUS", "name": "Awer Mabil", "age": 30, "primary_position": "RW", "secondary_positions": ["LW", "ST"],
+    "career_stats": {"appearances": 55, "goals": 13, "assists": 8, "minutes_played": 4300, "key_passes_per90": 1.4, "successful_dribbles_per90": 2.0, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 79.0},
+    "market_value_eur": 3000000, "qualitative_adjustments": {"pace": 2},
+    "source_citations": ["Transfermarkt profile 2025-26", "Cadiz Segunda Division 2025-26 stats"], "stamina_max": 87
+  },
+  {
+    "id": "AUS_GOODWIN", "team_id": "AUS", "name": "Craig Goodwin", "age": 33, "primary_position": "LW", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 52, "goals": 9, "assists": 9, "minutes_played": 4400, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.4, "tackles_per90": 1.1, "interceptions_per90": 0.8, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 80.0},
+    "market_value_eur": 900000, "qualitative_adjustments": {"passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Adelaide United A-League 2025-26 stats"], "stamina_max": 82
+  },
+  {
+    "id": "AUS_DUKE", "team_id": "AUS", "name": "Mitchell Duke", "age": 35, "primary_position": "ST", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 16, "assists": 4, "minutes_played": 4100, "key_passes_per90": 0.6, "successful_dribbles_per90": 0.6, "tackles_per90": 0.5, "interceptions_per90": 0.3, "aerial_duels_won_pct": 62.0, "pass_completion_pct": 75.0},
+    "market_value_eur": 500000, "qualitative_adjustments": {"shooting": 1, "pace": -2},
+    "source_citations": ["Transfermarkt profile 2025-26", "Fagiano Okayama J2 League 2025 stats", "Australia's all-time WC scoring leader"], "stamina_max": 75
+  },
+  {
+    "id": "AUS_MAGGS", "team_id": "AUS", "name": "Nestory Irankunda", "age": 20, "primary_position": "LW", "secondary_positions": ["RW", "ST"],
+    "career_stats": {"appearances": 30, "goals": 6, "assists": 4, "minutes_played": 1900, "key_passes_per90": 1.5, "successful_dribbles_per90": 2.8, "tackles_per90": 0.6, "interceptions_per90": 0.3, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 78.0},
+    "market_value_eur": 6000000, "qualitative_adjustments": {"dribbling": 2, "pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26 (eFootball 2026 young-talent rating informed minor nudge)", "Bayern Munich II / loan spell 2025-26 stats", "Highly-rated Socceroos teenage prospect"], "stamina_max": 89
+  },
+
+  {
+    "id": "TUR_BAYINDIR", "team_id": "TUR", "name": "Altay Bayindir", "age": 28, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 45, "goals": 0, "assists": 0, "minutes_played": 3900, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.05, "interceptions_per90": 0.15, "aerial_duels_won_pct": 54.0, "pass_completion_pct": 80.0, "save_pct": 71.0, "goals_conceded_per90": 1.1},
+    "market_value_eur": 9000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Manchester United/loan Premier League stats"], "stamina_max": 82
+  },
+  {
+    "id": "TUR_GUNOK", "team_id": "TUR", "name": "Ugurcan Cakir", "age": 30, "primary_position": "GK", "secondary_positions": [],
+    "career_stats": {"appearances": 65, "goals": 0, "assists": 0, "minutes_played": 5800, "key_passes_per90": 0.05, "successful_dribbles_per90": 0.0, "tackles_per90": 0.08, "interceptions_per90": 0.18, "aerial_duels_won_pct": 56.0, "pass_completion_pct": 82.0, "save_pct": 73.0, "goals_conceded_per90": 1.0},
+    "market_value_eur": 18000000, "qualitative_adjustments": {"defending": 2},
+    "source_citations": ["Transfermarkt profile 2025-26", "Trabzonspor Super Lig 2025-26 stats", "Turkey's long-time first-choice national team goalkeeper"], "stamina_max": 85
+  },
+  {
+    "id": "TUR_DEMIRAL", "team_id": "TUR", "name": "Merih Demiral", "age": 28, "primary_position": "CB", "secondary_positions": [],
+    "career_stats": {"appearances": 58, "goals": 5, "assists": 1, "minutes_played": 4900, "key_passes_per90": 0.3, "successful_dribbles_per90": 0.3, "tackles_per90": 1.9, "interceptions_per90": 1.7, "aerial_duels_won_pct": 70.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 22000000, "qualitative_adjustments": {"defending": 2, "physical": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Al-Ahli Saudi Pro League 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "TUR_AYHAN", "team_id": "TUR", "name": "Abdulkerim Bardakci", "age": 29, "primary_position": "CB", "secondary_positions": ["LB"],
+    "career_stats": {"appearances": 52, "goals": 3, "assists": 2, "minutes_played": 4400, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.4, "tackles_per90": 1.8, "interceptions_per90": 1.6, "aerial_duels_won_pct": 65.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 8000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Galatasaray Super Lig 2025-26 stats"], "stamina_max": 84
+  },
+  {
+    "id": "TUR_MULDUR", "team_id": "TUR", "name": "Zeki Celik", "age": 29, "primary_position": "RB", "secondary_positions": [],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 5, "minutes_played": 4600, "key_passes_per90": 1.0, "successful_dribbles_per90": 0.9, "tackles_per90": 1.9, "interceptions_per90": 1.3, "aerial_duels_won_pct": 58.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 9500000, "qualitative_adjustments": {"defending": 1, "pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "AS Roma Serie A 2025-26 stats"], "stamina_max": 86
+  },
+  {
+    "id": "TUR_KOKCU", "team_id": "TUR", "name": "Ferdi Kadioglu", "age": 26, "primary_position": "LB", "secondary_positions": ["LM"],
+    "career_stats": {"appearances": 60, "goals": 3, "assists": 8, "minutes_played": 4900, "key_passes_per90": 1.3, "successful_dribbles_per90": 1.6, "tackles_per90": 1.7, "interceptions_per90": 1.2, "aerial_duels_won_pct": 50.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 28000000, "qualitative_adjustments": {"pace": 1, "passing": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Brighton Premier League 2025-26 stats"], "stamina_max": 89
+  },
+  {
+    "id": "TUR_OZCAN", "team_id": "TUR", "name": "Salih Ozcan", "age": 28, "primary_position": "CDM", "secondary_positions": ["CM"],
+    "career_stats": {"appearances": 55, "goals": 2, "assists": 3, "minutes_played": 4500, "key_passes_per90": 1.0, "successful_dribbles_per90": 0.6, "tackles_per90": 2.4, "interceptions_per90": 1.8, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 13000000, "qualitative_adjustments": {"defending": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Borussia Dortmund Bundesliga 2025-26 stats"], "stamina_max": 87
+  },
+  {
+    "id": "TUR_KOKCU_E", "team_id": "TUR", "name": "Orkun Kokcu", "age": 25, "primary_position": "CM", "secondary_positions": ["CAM", "CDM"],
+    "career_stats": {"appearances": 60, "goals": 9, "assists": 9, "minutes_played": 5000, "key_passes_per90": 1.9, "successful_dribbles_per90": 1.2, "tackles_per90": 1.7, "interceptions_per90": 1.2, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 88.0},
+    "market_value_eur": 32000000, "qualitative_adjustments": {"passing": 2},
+    "source_citations": ["Transfermarkt profile 2025-26", "RB Leipzig Bundesliga 2025-26 stats"], "stamina_max": 88
+  },
+  {
+    "id": "TUR_GULER", "team_id": "TUR", "name": "Arda Guler", "age": 21, "primary_position": "CAM", "secondary_positions": ["RW", "CM"],
+    "career_stats": {"appearances": 45, "goals": 12, "assists": 13, "minutes_played": 3300, "key_passes_per90": 2.8, "successful_dribbles_per90": 2.2, "tackles_per90": 0.7, "interceptions_per90": 0.5, "aerial_duels_won_pct": 38.0, "pass_completion_pct": 86.0},
+    "market_value_eur": 90000000, "qualitative_adjustments": {"passing": 2, "shooting": 1},
+    "source_citations": ["Transfermarkt profile 2025-26 (e90m, EA FC 26 attacking rating informed minor nudge)", "Real Madrid La Liga 2025-26 stats", "Breakout starter for Real Madrid and Turkey"], "stamina_max": 87
+  },
+  {
+    "id": "TUR_YILDIZ", "team_id": "TUR", "name": "Kenan Yildiz", "age": 21, "primary_position": "LW", "secondary_positions": ["CAM", "RW"],
+    "career_stats": {"appearances": 55, "goals": 16, "assists": 10, "minutes_played": 4200, "key_passes_per90": 2.0, "successful_dribbles_per90": 2.8, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 42.0, "pass_completion_pct": 85.0},
+    "market_value_eur": 75000000, "qualitative_adjustments": {"dribbling": 2, "shooting": 1},
+    "source_citations": ["Transfermarkt profile 2025-26 (EA FC 26 rating informed minor nudge)", "Juventus Serie A 2025-26 stats", "Turkey's breakout attacking talent"], "stamina_max": 88
+  },
+  {
+    "id": "TUR_AKTURKOGLU", "team_id": "TUR", "name": "Kerem Akturkoglu", "age": 27, "primary_position": "RW", "secondary_positions": ["LW", "ST"],
+    "career_stats": {"appearances": 58, "goals": 17, "assists": 9, "minutes_played": 4600, "key_passes_per90": 1.6, "successful_dribbles_per90": 2.0, "tackles_per90": 0.8, "interceptions_per90": 0.5, "aerial_duels_won_pct": 48.0, "pass_completion_pct": 82.0},
+    "market_value_eur": 22000000, "qualitative_adjustments": {"shooting": 1, "pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Benfica Primeira Liga 2025-26 stats"], "stamina_max": 87
+  },
+  {
+    "id": "TUR_YALCIN", "team_id": "TUR", "name": "Cengiz Under", "age": 29, "primary_position": "RW", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 50, "goals": 10, "assists": 6, "minutes_played": 3800, "key_passes_per90": 1.5, "successful_dribbles_per90": 1.8, "tackles_per90": 0.7, "interceptions_per90": 0.4, "aerial_duels_won_pct": 44.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 10000000, "qualitative_adjustments": {"pace": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Fenerbahce Super Lig 2025-26 stats"], "stamina_max": 85
+  },
+  {
+    "id": "TUR_TOSUN", "team_id": "TUR", "name": "Yusuf Yazici", "age": 29, "primary_position": "ST", "secondary_positions": ["CAM"],
+    "career_stats": {"appearances": 52, "goals": 16, "assists": 7, "minutes_played": 4000, "key_passes_per90": 1.3, "successful_dribbles_per90": 1.4, "tackles_per90": 0.6, "interceptions_per90": 0.4, "aerial_duels_won_pct": 55.0, "pass_completion_pct": 81.0},
+    "market_value_eur": 12000000, "qualitative_adjustments": {"shooting": 1},
+    "source_citations": ["Transfermarkt profile 2025-26", "Trabzonspor Super Lig 2025-26 stats"], "stamina_max": 84
+  }
+]

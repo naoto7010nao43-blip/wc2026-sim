@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ENG",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Thomas Tuchel",
+      "press_intensity": 78,
+      "possession_style": 62,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "CRO",
+    "name": "Croatia",
+    "confederation": "UEFA",
+    "fifa_rank": 10,
+    "default_formation": "4-3-3",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Zlatko Dalic",
+      "press_intensity": 48,
+      "possession_style": 68,
+      "defensive_line_height": 50
+    }
+  },
+  {
+    "id": "GHA",
+    "name": "Ghana",
+    "confederation": "CAF",
+    "fifa_rank": 72,
+    "default_formation": "4-3-3",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Carlos Queiroz",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "PAN",
+    "name": "Panama",
+    "confederation": "CONCACAF",
+    "fifa_rank": 30,
+    "default_formation": "4-2-3-1",
+    "group_id": "L",
+    "tactical_profile": {
+      "manager_name": "Thomas Christiansen",
+      "press_intensity": 55,
+      "possession_style": 56,
+      "defensive_line_height": 45
+    }
+  }
+]

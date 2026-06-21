@@ -1,0 +1,54 @@
+[
+  {
+    "id": "USA",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Mauricio Pochettino",
+      "press_intensity": 72,
+      "possession_style": 58,
+      "defensive_line_height": 62
+    }
+  },
+  {
+    "id": "PAR",
+    "name": "Paraguay",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 54,
+    "default_formation": "4-4-2",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Gustavo Alfaro",
+      "press_intensity": 38,
+      "possession_style": 32,
+      "defensive_line_height": 30
+    }
+  },
+  {
+    "id": "AUS",
+    "name": "Australia",
+    "confederation": "AFC",
+    "fifa_rank": 26,
+    "default_formation": "3-5-2",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Tony Popovic",
+      "press_intensity": 50,
+      "possession_style": 44,
+      "defensive_line_height": 45
+    }
+  },
+  {
+    "id": "TUR",
+    "name": "Turkey",
+    "confederation": "UEFA",
+    "fifa_rank": 22,
+    "default_formation": "4-2-3-1",
+    "group_id": "D",
+    "tactical_profile": {
+      "manager_name": "Vincenzo Montella",
+      "press_intensity": 64,
+      "possession_style": 56,
+      "defensive_line_height": 55
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ARG",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Lionel Scaloni",
+      "press_intensity": 62,
+      "possession_style": 64,
+      "defensive_line_height": 58
+    }
+  },
+  {
+    "id": "ALG",
+    "name": "Algeria",
+    "confederation": "CAF",
+    "fifa_rank": 28,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Vladimir Petkovic",
+      "press_intensity": 56,
+      "possession_style": 54,
+      "defensive_line_height": 48
+    }
+  },
+  {
+    "id": "AUT",
+    "name": "Austria",
+    "confederation": "UEFA",
+    "fifa_rank": 24,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Ralf Rangnick",
+      "press_intensity": 84,
+      "possession_style": 56,
+      "defensive_line_height": 68
+    }
+  },
+  {
+    "id": "JOR",
+    "name": "Jordan",
+    "confederation": "AFC",
+    "fifa_rank": 63,
+    "default_formation": "4-2-3-1",
+    "group_id": "J",
+    "tactical_profile": {
+      "manager_name": "Jamal Sellami",
+      "press_intensity": 40,
+      "possession_style": 36,
+      "defensive_line_height": 34
+    }
+  }
+]

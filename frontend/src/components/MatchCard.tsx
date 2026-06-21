@@ -1,0 +1,44 @@
+import { Link } from "react-router-dom";
+import type { MatchSummary } from "../types/domain";
+import { TeamBadge } from "./TeamBadge";
+
+interface Props {
+  match: MatchSummary;
+  className?: string;
+}
+
+export function MatchCard({ match, className = "" }: Props) {
+  const homeWon = match.home_score > match.away_score;
+  const awayWon = match.away_score > match.home_score;
+  const played = match.status === "completed";
+
+  return (
+    <Link
+      to={`/matches/${match.id}`}
+      className={`block rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm transition hover:border-emerald-500 hover:bg-slate-700 ${className}`}
+    >
+      <div className={`flex items-center justify-between gap-2 ${homeWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
+        <TeamBadge teamId={match.home_team_id} />
+        <span>{played ? match.home_score : "-"}</span>
+      </div>
+      <div className={`mt-1 flex items-center justify-between gap-2 ${awayWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
+        <TeamBadge teamId={match.away_team_id} />
+        <span>{played ? match.away_score : "-"}</span>
+      </div>
+      {match.went_to_penalties && (
+        <div className="mt-1 text-xs text-amber-400">
+          PK {match.penalty_home_score}-{match.penalty_away_score}
+        </div>
+      )}
+      {played && (
+        <div className="mt-1">
+          {match.is_real ? (
+            <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-400">実結果</span>
+          ) : (
+            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">シミュレーション</span>
+          )}
+        </div>
+      )}
+    </Link>
+  );
+}

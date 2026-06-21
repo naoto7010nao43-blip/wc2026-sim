@@ -1,0 +1,58 @@
+[
+  {
+    "id": "POR",
+    "name": "Portugal",
+    "confederation": "UEFA",
+    "fifa_rank": 5,
+    "default_formation": "4-3-3",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Roberto Martinez",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 60
+    }
+  },
+  {
+    "id": "COD",
+    "name": "DR Congo",
+    "confederation": "CAF",
+    "fifa_rank": 58,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Sebastien Desabre",
+      "press_intensity": 48,
+      "possession_style": 38,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "UZB",
+    "name": "Uzbekistan",
+    "confederation": "AFC",
+    "fifa_rank": 56,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Fabio Cannavaro",
+      "press_intensity": 44,
+      "possession_style": 40,
+      "defensive_line_height": 36
+    }
+  },
+  {
+    "id": "COL",
+    "name": "Colombia",
+    "confederation": "CONMEBOL",
+    "fifa_rank": 14,
+    "default_formation": "4-2-3-1",
+    "group_id": "K",
+    "tactical_profile": {
+      "manager_name": "Nestor Lorenzo",
+      "press_intensity": 70,
+      "possession_style": 60,
+      "defensive_line_height": 58
+    }
+  }
+]

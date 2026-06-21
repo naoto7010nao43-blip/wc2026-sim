@@ -1,0 +1,67 @@
+BEL_CASTAGNE	Timothy Castagne	Belgium
+BEL_COURTOIS	Thibaut Courtois	Belgium
+BEL_DEBAST	Zeno Debast	Belgium
+BEL_DEBRUYNE	Kevin De Bruyne	Belgium
+BEL_DECUYPER	Maxim De Cuyper	Belgium
+BEL_DEKETELAERE	Charles De Ketelaere	Belgium
+BEL_DEWINTER	Koni De Winter	Belgium
+BEL_DOKU	Jeremy Doku	Belgium
+BEL_LAMMENS	Senne Lammens	Belgium
+BEL_LUKAKU	Romelu Lukaku	Belgium
+BEL_LUKEBAKIO	Dodi Lukebakio	Belgium
+BEL_MEUNIER	Thomas Meunier	Belgium
+BEL_ONANA_A	Amadou Onana	Belgium
+BEL_PENDERS	Mike Penders	Belgium
+BEL_RASKIN	Nicolas Raskin	Belgium
+BEL_THEATE	Arthur Theate	Belgium
+BEL_TIELEMANS	Youri Tielemans	Belgium
+BEL_TROSSARD	Leandro Trossard	Belgium
+BEL_WITSEL	Axel Witsel	Belgium
+EGY_ABDELMONEM	Mohamed Abdelmonem	Egypt
+EGY_ASHOUR	Emam Ashour	Egypt
+EGY_ELSHENAWY	Mohamed El Shenawy	Egypt
+EGY_FATHY	Hamdy Fathy	Egypt
+EGY_FATOUH	Ahmed Fatouh	Egypt
+EGY_HAFEZ	Karim Hafez	Egypt
+EGY_HANY	Mohamed Hany	Egypt
+EGY_IBRAHIM_Y	Yasser Ibrahim	Egypt
+EGY_MARMOUSH	Omar Marmoush	Egypt
+EGY_RABIA	Ramy Rabia	Egypt
+EGY_SALAH	Mohamed Salah	Egypt
+EGY_SHOBEIR	Mostafa Shobeir	Egypt
+EGY_SOLIMAN	El Mahdy Soliman	Egypt
+EGY_TREZEGUET	Trezeguet	Egypt
+EGY_ZIZO	Zizo	Egypt
+IRN_ABARGHOUEI	Hossein Abarghouei	Iran
+IRN_BEIRANVAND	Alireza Beiranvand	Iran
+IRN_CHESHMI	Rouzbeh Cheshmi	Iran
+IRN_EZATOLAHI	Saeid Ezatolahi	Iran
+IRN_GHAEDI	Mehdi Ghaedi	Iran
+IRN_GHODDOS	Saman Ghoddos	Iran
+IRN_GHORBANI	Mohammad Ghorbani	Iran
+IRN_HAJSAFI	Ehsan Hajsafi	Iran
+IRN_HARDANI	Saleh Hardani	Iran
+IRN_HOSSEINI	Hossein Hosseini	Iran
+IRN_JAHANBAKHSH	Alireza Jahanbakhsh	Iran
+IRN_KANAANI	Hossein Kanaani	Iran
+IRN_KHALILZADEH	Shoja Khalilzadeh	Iran
+IRN_MOHAMMADI	Milad Mohammadi	Iran
+IRN_REZAEIAN	Ramin Rezaeian	Iran
+IRN_TAREMI	Mehdi Taremi	Iran
+IRN_TORABI	Mehdi Torabi	Iran
+NZL_BELL	Joe Bell	New Zealand
+NZL_BINDON	Tyler Bindon	New Zealand
+NZL_BOXALL	Michael Boxall	New Zealand
+NZL_CACACE	Liberato Cacace	New Zealand
+NZL_DEVRIES	Francis De Vries	New Zealand
+NZL_JUST	Eli Just	New Zealand
+NZL_MARTIN	Oliver Sail	New Zealand
+NZL_MOSS	Max Crocombe	New Zealand
+NZL_PAYNE	Tim Payne	New Zealand
+NZL_PIJNAKER	Nando Pijnaker	New Zealand
+NZL_RUFER	Alex Rufer	New Zealand
+NZL_SINGH	Sarpreet Singh	New Zealand
+NZL_STAMENIC	Marko Stamenic	New Zealand
+NZL_THOMAS	Ryan Thomas	New Zealand
+NZL_VICELICH	Nathaniel Vicelich	New Zealand
+NZL_WOOD	Chris Wood	New Zealand

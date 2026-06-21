@@ -1,0 +1,57 @@
+BRA_ALEXSANDRO	Alex Sandro	Brazil
+BRA_ALISSON	Alisson Becker	Brazil
+BRA_BREMER	Bremer	Brazil
+BRA_BRUNOGUIMARAES	Bruno Guimaraes	Brazil
+BRA_CASEMIRO	Casemiro	Brazil
+BRA_CUNHA	Matheus Cunha	Brazil
+BRA_EDERSON	Ederson Moraes	Brazil
+BRA_ENDRICK	Endrick	Brazil
+BRA_GABRIEL	Gabriel Magalhaes	Brazil
+BRA_MARQUINHOS	Marquinhos	Brazil
+BRA_NEYMAR	Neymar	Brazil
+BRA_PAQUETA	Lucas Paqueta	Brazil
+BRA_RAPHINHA	Raphinha	Brazil
+BRA_VINICIUSJR	Vinicius Junior	Brazil
+BRA_WESLEY	Wesley	Brazil
+HAI_ADE	Ricardo Ade	Haiti
+HAI_ARCUS	Carlens Arcus	Haiti
+HAI_BELLEGARDE	Jean-Ricner Bellegarde	Haiti
+HAI_DELCROIX	Hannes Delcroix	Haiti
+HAI_DUVERNE	Jean-Kevin Duverne	Haiti
+HAI_ETIENNE	Derrick Etienne Jr.	Haiti
+HAI_FORTUNE	Yassin Fortune	Haiti
+HAI_ISIDOR	Wilson Isidor	Haiti
+HAI_JEANJACQUES	Danley Jean Jacques	Haiti
+HAI_NAZON	Duckens Nazon	Haiti
+HAI_PIERROT	Frantzdy Pierrot	Haiti
+HAI_PLACIDE	Johny Placide	Haiti
+HAI_SIMON	Dominique Simon	Haiti
+MAR_AGUERD	Nayef Aguerd	Morocco
+MAR_AKHOMACH	Ilias Akhomach	Morocco
+MAR_AMRABAT	Sofyan Amrabat	Morocco
+MAR_BOUNOU	Yassine Bounou	Morocco
+MAR_DIAZ	Brahim Diaz	Morocco
+MAR_ELKAABI	Ayoub El Kaabi	Morocco
+MAR_ELKAJOUI	Munir El Kajoui	Morocco
+MAR_ELKHANNOUSS	Bilal El Khannouss	Morocco
+MAR_ENNESYRI	Youssef En-Nesyri	Morocco
+MAR_HAKIMI	Achraf Hakimi	Morocco
+MAR_MAZRAOUI	Noussair Mazraoui	Morocco
+MAR_MENDYL	Yahia Attiyat Allah	Morocco
+MAR_OUNAHI	Azzedine Ounahi	Morocco
+MAR_SAISS	Romain Saiss	Morocco
+MAR_ZIYECH	Hakim Ziyech	Morocco
+SCO_ADAMS	Che Adams	Scotland
+SCO_CHRISTIE	Ryan Christie	Scotland
+SCO_FERGUSON	Lewis Ferguson	Scotland
+SCO_GORDON	Craig Gordon	Scotland
+SCO_GUNN	Angus Gunn	Scotland
+SCO_HANLEY	Grant Hanley	Scotland
+SCO_HENDRY	Jack Hendry	Scotland
+SCO_MCGINN	John McGinn	Scotland
+SCO_MCKENNA	Scott McKenna	Scotland
+SCO_MCTOMINAY	Scott McTominay	Scotland
+SCO_PATTERSON	Nathan Patterson	Scotland
+SCO_ROBERTSON	Andy Robertson	Scotland
+SCO_SHANKLAND	Lawrence Shankland	Scotland
+SCO_TIERNEY	Kieran Tierney	Scotland

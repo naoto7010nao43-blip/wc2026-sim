@@ -1,0 +1,58 @@
+[
+  {
+    "id": "BEL",
+    "name": "Belgium",
+    "confederation": "UEFA",
+    "fifa_rank": 9,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Rudi Garcia",
+      "press_intensity": 68,
+      "possession_style": 64,
+      "defensive_line_height": 60
+    }
+  },
+  {
+    "id": "EGY",
+    "name": "Egypt",
+    "confederation": "CAF",
+    "fifa_rank": 29,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Hossam Hassan",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    }
+  },
+  {
+    "id": "IRN",
+    "name": "Iran",
+    "confederation": "AFC",
+    "fifa_rank": 20,
+    "default_formation": "4-2-3-1",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Amir Ghalenoei",
+      "press_intensity": 42,
+      "possession_style": 35,
+      "defensive_line_height": 28
+    }
+  },
+  {
+    "id": "NZL",
+    "name": "New Zealand",
+    "confederation": "OFC",
+    "fifa_rank": 85,
+    "default_formation": "4-4-2",
+    "group_id": "G",
+    "tactical_profile": {
+      "manager_name": "Darren Bazeley",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 25
+    }
+  }
+]

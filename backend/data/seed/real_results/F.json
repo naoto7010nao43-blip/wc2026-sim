@@ -1,0 +1,45 @@
+[
+  {
+    "home_team_id": "NED",
+    "away_team_id": "JPN",
+    "home_score": 2,
+    "away_score": 2,
+    "date": "2026-06-14",
+    "goals": [
+      {"minute": 51, "team_id": "NED", "scorer_name": "Virgil van Dijk"},
+      {"minute": 57, "team_id": "JPN", "scorer_name": "Keito Nakamura"},
+      {"minute": 64, "team_id": "NED", "scorer_name": "Crysencio Summerville"},
+      {"minute": 88, "team_id": "JPN", "scorer_name": "Daichi Kamada"}
+    ]
+  },
+  {
+    "home_team_id": "SWE",
+    "away_team_id": "TUN",
+    "home_score": 5,
+    "away_score": 1,
+    "date": "2026-06-14",
+    "goals": [
+      {"minute": 7, "team_id": "SWE", "scorer_name": "Yasin Ayari"},
+      {"minute": 30, "team_id": "SWE", "scorer_name": "Alexander Isak"},
+      {"minute": 43, "team_id": "TUN", "scorer_name": "Omar Rekik"},
+      {"minute": 59, "team_id": "SWE", "scorer_name": "Viktor Gyokeres"},
+      {"minute": 84, "team_id": "SWE", "scorer_name": "Mattias Svanberg"},
+      {"minute": 96, "team_id": "SWE", "scorer_name": "Yasin Ayari"}
+    ]
+  },
+  {
+    "home_team_id": "NED",
+    "away_team_id": "SWE",
+    "home_score": 5,
+    "away_score": 1,
+    "date": "2026-06-20",
+    "goals": [
+      {"minute": 5, "team_id": "NED", "scorer_name": "Brian Brobbey"},
+      {"minute": 17, "team_id": "NED", "scorer_name": "Brian Brobbey"},
+      {"minute": 47, "team_id": "NED", "scorer_name": "Cody Gakpo"},
+      {"minute": 54, "team_id": "NED", "scorer_name": "Cody Gakpo"},
+      {"minute": 59, "team_id": "SWE", "scorer_name": "Anthony Elanga"},
+      {"minute": 89, "team_id": "NED", "scorer_name": "Crysencio Summerville"}
+    ]
+  }
+]

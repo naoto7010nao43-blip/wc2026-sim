@@ -1,0 +1,27 @@
+[
+  {
+    "home_team_id": "ARG",
+    "away_team_id": "ALG",
+    "home_score": 3,
+    "away_score": 0,
+    "date": "2026-06-16",
+    "goals": [
+      {"minute": 17, "team_id": "ARG", "scorer_name": "Lionel Messi"},
+      {"minute": 60, "team_id": "ARG", "scorer_name": "Lionel Messi"},
+      {"minute": 76, "team_id": "ARG", "scorer_name": "Lionel Messi"}
+    ]
+  },
+  {
+    "home_team_id": "AUT",
+    "away_team_id": "JOR",
+    "home_score": 3,
+    "away_score": 1,
+    "date": "2026-06-16",
+    "goals": [
+      {"minute": 20, "team_id": "AUT", "scorer_name": "Romano Schmid"},
+      {"minute": 50, "team_id": "JOR", "scorer_name": "Ali Olwan"},
+      {"minute": 76, "team_id": "AUT", "scorer_name": "Yazan Al Arab (own goal)"},
+      {"minute": 102, "team_id": "AUT", "scorer_name": "Marko Arnautović (penalty)"}
+    ]
+  }
+]

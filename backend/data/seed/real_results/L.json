@@ -1,0 +1,27 @@
+[
+  {
+    "home_team_id": "ENG",
+    "away_team_id": "CRO",
+    "home_score": 4,
+    "away_score": 2,
+    "date": "2026-06-17",
+    "goals": [
+      {"minute": 12, "team_id": "ENG", "scorer_name": "Harry Kane"},
+      {"minute": 36, "team_id": "CRO", "scorer_name": "Martin Baturina"},
+      {"minute": 42, "team_id": "ENG", "scorer_name": "Harry Kane"},
+      {"minute": 45, "team_id": "CRO", "scorer_name": "Petar Musa"},
+      {"minute": 47, "team_id": "ENG", "scorer_name": "Jude Bellingham"},
+      {"minute": 85, "team_id": "ENG", "scorer_name": "Marcus Rashford"}
+    ]
+  },
+  {
+    "home_team_id": "GHA",
+    "away_team_id": "PAN",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-06-17",
+    "goals": [
+      {"minute": 95, "team_id": "GHA", "scorer_name": "Caleb Yirenkyi"}
+    ]
+  }
+]

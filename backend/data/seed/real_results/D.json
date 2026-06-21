@@ -1,0 +1,48 @@
+[
+  {
+    "home_team_id": "USA",
+    "away_team_id": "PAR",
+    "home_score": 4,
+    "away_score": 1,
+    "date": "2026-06-12",
+    "goals": [
+      {"minute": 7, "team_id": "USA", "scorer_name": "Bobadilla (own goal)"},
+      {"minute": 31, "team_id": "USA", "scorer_name": "Folarin Balogun"},
+      {"minute": 73, "team_id": "PAR", "scorer_name": "Mauricio"},
+      {"minute": 90, "team_id": "USA", "scorer_name": "Folarin Balogun"},
+      {"minute": 90, "team_id": "USA", "scorer_name": "Gio Reyna"}
+    ]
+  },
+  {
+    "home_team_id": "AUS",
+    "away_team_id": "TUR",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-06-13",
+    "goals": [
+      {"minute": 27, "team_id": "AUS", "scorer_name": "Nestory Irankunda"},
+      {"minute": 75, "team_id": "AUS", "scorer_name": "Connor Metcalfe"}
+    ]
+  },
+  {
+    "home_team_id": "USA",
+    "away_team_id": "AUS",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-06-19",
+    "goals": [
+      {"minute": 11, "team_id": "USA", "scorer_name": "Cameron Burgess (own goal)"},
+      {"minute": 43, "team_id": "USA", "scorer_name": "Alex Freeman"}
+    ]
+  },
+  {
+    "home_team_id": "TUR",
+    "away_team_id": "PAR",
+    "home_score": 0,
+    "away_score": 1,
+    "date": "2026-06-19",
+    "goals": [
+      {"minute": 2, "team_id": "PAR", "scorer_name": "M. Galarza"}
+    ]
+  }
+]

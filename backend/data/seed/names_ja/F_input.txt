@@ -1,0 +1,56 @@
+JPN_DOAN	Ritsu Doan	Japan
+JPN_ENDO	Wataru Endo	Japan
+JPN_HAYAKAWA	Tomoki Hayakawa	Japan
+JPN_ITAKURA	Ko Itakura	Japan
+JPN_ITO_T	Hiroki Ito	Japan
+JPN_KAMADA	Daichi Kamada	Japan
+JPN_KUBO	Takefusa Kubo	Japan
+JPN_MAEDA	Daizen Maeda	Japan
+JPN_NAGATOMO	Yuto Nagatomo	Japan
+JPN_OSAKO	Keisuke Osako	Japan
+JPN_SUGAWARA	Yukinari Sugawara	Japan
+JPN_TANAKA_A	Ao Tanaka	Japan
+JPN_TOMIYASU	Takehiro Tomiyasu	Japan
+JPN_UEDA	Ayase Ueda	Japan
+NED_AKE	Nathan Ake	Netherlands
+NED_DEJONG	Frenkie de Jong	Netherlands
+NED_DEPAY	Memphis Depay	Netherlands
+NED_DEVENTIMBER	Jurrien Timber	Netherlands
+NED_DUMFRIES	Denzel Dumfries	Netherlands
+NED_FLEKKEN	Mark Flekken	Netherlands
+NED_GAKPO	Cody Gakpo	Netherlands
+NED_GRAVENBERCH	Ryan Gravenberch	Netherlands
+NED_MALEN	Donyell Malen	Netherlands
+NED_REIJNDERS	Tijjani Reijnders	Netherlands
+NED_VANDEVEN	Micky van de Ven	Netherlands
+NED_VANDIJK	Virgil van Dijk	Netherlands
+NED_VERBRUGGEN	Bart Verbruggen	Netherlands
+NED_WEGHORST	Wout Weghorst	Netherlands
+SWE_BERGVALL	Lucas Bergvall	Sweden
+SWE_EKDAL	Hjalmar Ekdal	Sweden
+SWE_EKDAL_A	Albin Ekdal	Sweden
+SWE_ELANGA	Anthony Elanga	Sweden
+SWE_GUDMUNDSSON	Gabriel Gudmundsson	Sweden
+SWE_GYOKERES	Viktor Gyokeres	Sweden
+SWE_HIEN	Isak Hien	Sweden
+SWE_ISAK	Alexander Isak	Sweden
+SWE_JOHANSSON_V	Viktor Johansson	Sweden
+SWE_LINDELOF	Victor Lindelof	Sweden
+SWE_NORDFELDT	Kristoffer Nordfeldt	Sweden
+SWE_OLSSON_J	Jens Cajuste	Sweden
+SWE_STARFELT	Carl Starfelt	Sweden
+SWE_SVENSSON	Daniel Svensson	Sweden
+TUN_ABDI	Ali Abdi	Tunisia
+TUN_AYARI	Kais Ayari	Tunisia
+TUN_BENHESSEN	Sabri Ben Hessen	Tunisia
+TUN_BENSLIMANE	Anis Ben Slimane	Tunisia
+TUN_BRONN	Dylan Bronn	Tunisia
+TUN_CHAOUAT	Firas Chaouat	Tunisia
+TUN_DAHMEN	Aymen Dahmen	Tunisia
+TUN_KHEDIRA	Rani Khedira	Tunisia
+TUN_MEJBRI	Hannibal Mejbri	Tunisia
+TUN_REKIK	Omar Rekik	Tunisia
+TUN_SAAD	Elyes Saad	Tunisia
+TUN_SKHIRI	Ellyes Skhiri	Tunisia
+TUN_TALBI	Montassar Talbi	Tunisia
+TUN_VALERY	Yan Valery	Tunisia
