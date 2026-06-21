@@ -4,13 +4,23 @@
     "away_team_id": "EGY",
     "home_score": 1,
     "away_score": 1,
-    "date": "2026-06-15"
+    "date": "2026-06-15",
+    "goals": [
+      {"minute": 19, "team_id": "EGY", "scorer_name": "Emam Ashour"},
+      {"minute": 66, "team_id": "BEL", "scorer_name": "Mohamed Hany (own goal)"}
+    ]
   },
   {
     "home_team_id": "IRN",
     "away_team_id": "NZL",
     "home_score": 2,
     "away_score": 2,
-    "date": "2026-06-15"
+    "date": "2026-06-15",
+    "goals": [
+      {"minute": 7, "team_id": "NZL", "scorer_name": "Elijah Just"},
+      {"minute": 32, "team_id": "IRN", "scorer_name": "Ramin Rezaeian"},
+      {"minute": 54, "team_id": "NZL", "scorer_name": "Elijah Just"},
+      {"minute": 64, "team_id": "IRN", "scorer_name": "Mohammad Mohebi"}
+    ]
   }
 ]

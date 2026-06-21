@@ -37,5 +37,13 @@
       {"minute": 68, "team_id": "GER", "scorer_name": "Deniz Undav"},
       {"minute": 94, "team_id": "GER", "scorer_name": "Deniz Undav"}
     ]
+  },
+  {
+    "home_team_id": "ECU",
+    "away_team_id": "CUW",
+    "home_score": 0,
+    "away_score": 0,
+    "date": "2026-06-20",
+    "goals": []
   }
 ]

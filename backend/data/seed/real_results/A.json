@@ -17,7 +17,7 @@
     "away_score": 1,
     "date": "2026-06-11",
     "goals": [
-      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek"},
+      {"minute": 6, "team_id": "CZE", "scorer_name": "Ladislav Krejci"},
       {"minute": 67, "team_id": "KOR", "scorer_name": "Hwang In-beom"},
       {"minute": 80, "team_id": "KOR", "scorer_name": "Oh Hyeon-gyu"}
     ]

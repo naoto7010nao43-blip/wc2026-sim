@@ -86,7 +86,7 @@ export function TournamentPage() {
           </section>
           <section className="mt-8">
             <h3 className="mb-3 text-lg font-bold">グループステージ順位表</h3>
-            <GroupStandingsGrid groupStandings={result.group_standings} />
+            <GroupStandingsGrid groupStandings={result.group_standings} groupMatches={result.matches.group} />
           </section>
         </div>
       )}

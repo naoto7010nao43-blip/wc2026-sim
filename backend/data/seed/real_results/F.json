@@ -41,5 +41,18 @@
       {"minute": 59, "team_id": "SWE", "scorer_name": "Anthony Elanga"},
       {"minute": 89, "team_id": "NED", "scorer_name": "Crysencio Summerville"}
     ]
+  },
+  {
+    "home_team_id": "TUN",
+    "away_team_id": "JPN",
+    "home_score": 0,
+    "away_score": 4,
+    "date": "2026-06-20",
+    "goals": [
+      {"minute": 4, "team_id": "JPN", "scorer_name": "Daichi Kamada"},
+      {"minute": 31, "team_id": "JPN", "scorer_name": "Ayase Ueda"},
+      {"minute": 69, "team_id": "JPN", "scorer_name": "Junya Ito"},
+      {"minute": 83, "team_id": "JPN", "scorer_name": "Ayase Ueda"}
+    ]
   }
 ]
