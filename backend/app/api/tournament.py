@@ -1,7 +1,7 @@
 import uuid
 
 from fastapi import APIRouter, Depends
-from sqlalchemy import select
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.database import get_db
@@ -13,6 +13,11 @@ from app.services.tournament import GROUP_LETTERS, match_winner, run_full_tourna
 
 router = APIRouter(prefix="/api/tournament", tags=["tournament"])
 
+# A match is part of a tournament run (as opposed to an ad-hoc single match
+# from Mode 2's /api/matches/simulate, which leaves both of these null) if
+# it has a group_id (group stage) or a bracket_slot (knockout stage).
+_TOURNAMENT_MATCH_FILTER = or_(Match.group_id.isnot(None), Match.bracket_slot.isnot(None))
+
 
 def _group_standings(db: Session) -> dict:
     return {letter: compute_standings(db, letter) for letter in GROUP_LETTERS}
@@ -20,9 +25,11 @@ def _group_standings(db: Session) -> dict:
 
 @router.post("/run", response_model=TournamentResult)
 def run_tournament(req: RunTournamentRequest, db: Session = Depends(get_db)):
-    # Each run starts a fresh tournament: clear any matches left over from a
+    # Each run starts a fresh tournament: clear matches left over from a
     # previous run so /state always reflects exactly one tournament's worth.
-    db.query(Match).delete()
+    # Ad-hoc single matches from Mode 2 are left alone so their shareable
+    # /matches/:id links keep working.
+    db.query(Match).filter(_TOURNAMENT_MATCH_FILTER).delete(synchronize_session=False)
     db.commit()
 
     base_seed = req.seed if req.seed is not None else uuid.uuid4().int & 0xFFFFFFFF
@@ -42,7 +49,9 @@ def run_tournament(req: RunTournamentRequest, db: Session = Depends(get_db)):
 @router.get("/state", response_model=TournamentResult | None)
 def get_tournament_state(db: Session = Depends(get_db)):
     matches_by_round = {round_name: [] for round_name in ROUND_NAMES}
-    all_matches = db.scalars(select(Match).order_by(Match.played_at)).all()
+    all_matches = db.scalars(
+        select(Match).where(_TOURNAMENT_MATCH_FILTER).order_by(Match.played_at)
+    ).all()
     if not all_matches:
         return None
 
