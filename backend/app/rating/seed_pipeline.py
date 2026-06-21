@@ -81,7 +81,7 @@ def build_player_rows(players_raw: list[dict]) -> list[dict]:
 
         if group == "GK":
             gk_raw = stage_a_by_id[p["id"]]
-            gk_final = apply_pipeline(gk_raw, market_pct, qualitative_adjustments)
+            gk_final = apply_pipeline(gk_raw, market_pct, qualitative_adjustments, p["age"])
             # Outfield-style attrs default to modest values for GKs (rarely used in engine).
             attributes = {
                 "pace": 50, "shooting": 15, "passing": 55,
@@ -91,7 +91,7 @@ def build_player_rows(players_raw: list[dict]) -> list[dict]:
             }
         else:
             raw = stage_a_by_id[p["id"]]
-            final = apply_pipeline(raw, market_pct, qualitative_adjustments)
+            final = apply_pipeline(raw, market_pct, qualitative_adjustments, p["age"])
             attributes = {**final, "gk_reflexes": None, "gk_handling": None}
 
         overall = compute_overall(attributes, p["primary_position"])

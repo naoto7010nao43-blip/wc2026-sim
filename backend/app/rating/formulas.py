@@ -111,7 +111,7 @@ def stage_a_gk_attributes(inp: StageAInputs) -> dict[str, float]:
     }
 
 
-def stage_b_market_modifier(market_value_percentile: float) -> float:
+def stage_b_market_modifier(market_value_percentile: float, age: int = 27) -> float:
     """Map a 0-1 percentile within the position group to a +/-10 point shift.
 
     Market value is the strongest public signal of true ability gaps that
@@ -122,17 +122,30 @@ def stage_b_market_modifier(market_value_percentile: float) -> float:
     league strength, so widening this band (vs. the original +/-4) is the
     most direct fix for unrealistic upsets without re-deriving ratings from
     any game's database.
+
+    The downside is damped for players 32+: transfer/resale value collapses
+    much faster with age than actual on-pitch ability does, especially for
+    a veteran who took a lower-revenue-league move (MLS, Saudi Pro League,
+    etc.) -- applying the full penalty there would punish retained quality
+    as if per-90 stats had also shown a steep decline, which they often
+    haven't. The upside (a high market value boosting a young/peak player)
+    is left untouched since that direction isn't subject to the same bias.
     """
-    return (market_value_percentile - 0.5) * 20.0
+    raw = (market_value_percentile - 0.5) * 20.0
+    if raw < 0 and age >= 32:
+        damp = max(0.4, 1.0 - 0.05 * (age - 32))
+        raw *= damp
+    return raw
 
 
 def apply_pipeline(
     stage_a: dict[str, float],
     market_value_percentile: float,
     qualitative_adjustments: dict[str, int],
+    age: int = 27,
 ) -> dict[str, int]:
     """Combine Stage A + B (uniform market modifier across attrs) + C (per-attr human nudge)."""
-    b_mod = stage_b_market_modifier(market_value_percentile)
+    b_mod = stage_b_market_modifier(market_value_percentile, age)
     final: dict[str, int] = {}
     for attr, raw_value in stage_a.items():
         c_adj = qualitative_adjustments.get(attr, 0)
