@@ -5,12 +5,13 @@
     "home_score": 4,
     "away_score": 1,
     "date": "2026-06-12",
+    "stats": {"home_possession_pct": 65, "away_possession_pct": 35, "home_shots": 17, "away_shots": 8, "home_shots_on_target": 6, "away_shots_on_target": 1, "home_yellow_cards": 1, "away_yellow_cards": 5},
     "goals": [
-      {"minute": 7, "team_id": "USA", "scorer_name": "Bobadilla (own goal)"},
+      {"minute": 7, "team_id": "USA", "scorer_name": "Bobadilla (own goal)", "scorer_name_ja": "ボバディージャ(オウンゴール)"},
       {"minute": 31, "team_id": "USA", "scorer_name": "Folarin Balogun"},
-      {"minute": 73, "team_id": "PAR", "scorer_name": "Mauricio"},
+      {"minute": 73, "team_id": "PAR", "scorer_name": "Mauricio", "scorer_name_ja": "マウリシオ"},
       {"minute": 90, "team_id": "USA", "scorer_name": "Folarin Balogun"},
-      {"minute": 90, "team_id": "USA", "scorer_name": "Gio Reyna"}
+      {"minute": 90, "team_id": "USA", "scorer_name": "Gio Reyna", "scorer_name_ja": "ジオ・レイナ"}
     ]
   },
   {
@@ -19,9 +20,10 @@
     "home_score": 2,
     "away_score": 0,
     "date": "2026-06-13",
+    "stats": {"home_possession_pct": 28.3, "away_possession_pct": 71.7, "home_shots": 9, "away_shots": 30, "away_yellow_cards": 1},
     "goals": [
       {"minute": 27, "team_id": "AUS", "scorer_name": "Nestory Irankunda"},
-      {"minute": 75, "team_id": "AUS", "scorer_name": "Connor Metcalfe"}
+      {"minute": 75, "team_id": "AUS", "scorer_name": "Connor Metcalfe", "scorer_name_ja": "コナー・メトカーフ"}
     ]
   },
   {
@@ -30,8 +32,9 @@
     "home_score": 2,
     "away_score": 0,
     "date": "2026-06-19",
+    "stats": {"home_possession_pct": 61.9, "away_possession_pct": 38.1, "home_shots": 10, "away_shots": 5, "home_shots_on_target": 2, "away_shots_on_target": 2, "home_yellow_cards": 3, "away_yellow_cards": 4},
     "goals": [
-      {"minute": 11, "team_id": "USA", "scorer_name": "Cameron Burgess (own goal)"},
+      {"minute": 11, "team_id": "USA", "scorer_name": "Cameron Burgess (own goal)", "scorer_name_ja": "キャメロン・バージェス(オウンゴール)"},
       {"minute": 43, "team_id": "USA", "scorer_name": "Alex Freeman"}
     ]
   },
@@ -41,8 +44,9 @@
     "home_score": 0,
     "away_score": 1,
     "date": "2026-06-19",
+    "stats": {"home_possession_pct": 78, "away_possession_pct": 22, "home_shots": 32, "away_shots": 7, "home_yellow_cards": 3, "away_yellow_cards": 2},
     "goals": [
-      {"minute": 2, "team_id": "PAR", "scorer_name": "M. Galarza"}
+      {"minute": 2, "team_id": "PAR", "scorer_name": "M. Galarza", "scorer_name_ja": "M.ガラサ"}
     ]
   }
 ]

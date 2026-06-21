@@ -63,6 +63,7 @@ class PlayerRating(BaseModel):
     team_id: str
     rating: float
     is_mom: bool
+    is_estimated: bool = False
 
 
 class MatchResult(MatchSummary):

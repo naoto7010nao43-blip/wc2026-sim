@@ -5,11 +5,12 @@
     "home_score": 4,
     "away_score": 2,
     "date": "2026-06-17",
+    "stats": {"home_possession_pct": 52, "away_possession_pct": 48, "home_shots": 22, "away_shots": 10, "home_shots_on_target": 11, "away_shots_on_target": 5, "home_yellow_cards": 0, "away_yellow_cards": 0},
     "goals": [
       {"minute": 12, "team_id": "ENG", "scorer_name": "Harry Kane"},
       {"minute": 36, "team_id": "CRO", "scorer_name": "Martin Baturina"},
       {"minute": 42, "team_id": "ENG", "scorer_name": "Harry Kane"},
-      {"minute": 45, "team_id": "CRO", "scorer_name": "Petar Musa"},
+      {"minute": 45, "team_id": "CRO", "scorer_name": "Petar Musa", "scorer_name_ja": "ペタル・ムサ"},
       {"minute": 47, "team_id": "ENG", "scorer_name": "Jude Bellingham"},
       {"minute": 85, "team_id": "ENG", "scorer_name": "Marcus Rashford"}
     ]
@@ -20,8 +21,9 @@
     "home_score": 1,
     "away_score": 0,
     "date": "2026-06-17",
+    "stats": {"home_possession_pct": 38, "away_possession_pct": 62, "home_shots": 7, "away_shots": 11, "home_shots_on_target": 2, "away_shots_on_target": 4, "home_yellow_cards": 1, "away_yellow_cards": 3},
     "goals": [
-      {"minute": 95, "team_id": "GHA", "scorer_name": "Caleb Yirenkyi"}
+      {"minute": 95, "team_id": "GHA", "scorer_name": "Caleb Yirenkyi", "scorer_name_ja": "カレブ・イレンキー"}
     ]
   }
 ]

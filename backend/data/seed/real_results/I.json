@@ -7,8 +7,8 @@
     "date": "2026-06-16",
     "goals": [
       { "minute": 66, "team_id": "FRA", "scorer_name": "Kylian Mbappe" },
-      { "minute": 82, "team_id": "FRA", "scorer_name": "Bradley Barcola" },
-      { "minute": 90, "team_id": "SEN", "scorer_name": "Ibrahim Mbaye" },
+      { "minute": 82, "team_id": "FRA", "scorer_name": "Bradley Barcola", "scorer_name_ja": "ブラッドリー・バルコラ" },
+      { "minute": 90, "team_id": "SEN", "scorer_name": "Ibrahim Mbaye", "scorer_name_ja": "イブラヒマ・ンバイエ" },
       { "minute": 96, "team_id": "FRA", "scorer_name": "Kylian Mbappe" }
     ]
   },
@@ -23,7 +23,7 @@
       { "minute": 39, "team_id": "IRQ", "scorer_name": "Aymen Hussein" },
       { "minute": 43, "team_id": "NOR", "scorer_name": "Erling Haaland" },
       { "minute": 76, "team_id": "NOR", "scorer_name": "Leo Ostigard" },
-      { "minute": 96, "team_id": "IRQ", "scorer_name": "Aymen Hussein (own goal)" }
+      { "minute": 96, "team_id": "NOR", "scorer_name": "Aymen Hussein (own goal)", "scorer_name_ja": "アイメン・フセイン(オウンゴール)" }
     ]
   }
 ]

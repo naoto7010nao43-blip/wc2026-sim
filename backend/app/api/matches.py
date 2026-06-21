@@ -10,7 +10,7 @@ from app.models.match import Match, MatchEvent
 from app.models.player import Player
 from app.models.team import Team
 from app.schemas.match import MatchEventOut, MatchResult, SimulateMatchRequest
-from app.services.player_ratings import compute_player_ratings
+from app.services.player_ratings import compute_player_ratings, estimate_real_match_ratings
 
 router = APIRouter(prefix="/api/matches", tags=["matches"])
 
@@ -101,21 +101,26 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
     events = db.scalars(
         select(MatchEvent).where(MatchEvent.match_id == match.id).order_by(MatchEvent.id)
     ).all()
-    player_ratings = compute_player_ratings(
-        [
-            {
-                "event_type": e.event_type,
-                "player_id": e.player_id,
-                "secondary_player_id": e.secondary_player_id,
-                "event_metadata": e.event_metadata,
-            }
-            for e in events
-        ],
-        match.home_roster or {},
-        match.away_roster or {},
-        match.home_team_id,
-        match.away_team_id,
-    )
+    if match.is_real:
+        player_ratings = estimate_real_match_ratings(
+            [{"event_type": e.event_type, "team_id": e.team_id, "description": e.description} for e in events]
+        )
+    else:
+        player_ratings = compute_player_ratings(
+            [
+                {
+                    "event_type": e.event_type,
+                    "player_id": e.player_id,
+                    "secondary_player_id": e.secondary_player_id,
+                    "event_metadata": e.event_metadata,
+                }
+                for e in events
+            ],
+            match.home_roster or {},
+            match.away_roster or {},
+            match.home_team_id,
+            match.away_team_id,
+        )
     return MatchResult(
         id=match.id,
         group_id=match.group_id,

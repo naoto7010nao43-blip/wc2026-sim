@@ -5,13 +5,14 @@
     "home_score": 7,
     "away_score": 1,
     "date": "2026-06-14",
+    "stats": {"home_possession_pct": 65, "away_possession_pct": 35, "home_shots": 26, "away_shots": 8, "home_shots_on_target": 12, "away_shots_on_target": 2},
     "goals": [
-      {"minute": 6, "team_id": "GER", "scorer_name": "Felix Nmecha"},
-      {"minute": 21, "team_id": "CUW", "scorer_name": "Livano Comenencia"},
+      {"minute": 6, "team_id": "GER", "scorer_name": "Felix Nmecha", "scorer_name_ja": "フェリックス・ンメチャ"},
+      {"minute": 21, "team_id": "CUW", "scorer_name": "Livano Comenencia", "scorer_name_ja": "リバノ・コメネンシア"},
       {"minute": 38, "team_id": "GER", "scorer_name": "Nico Schlotterbeck"},
       {"minute": 46, "team_id": "GER", "scorer_name": "Kai Havertz"},
       {"minute": 47, "team_id": "GER", "scorer_name": "Jamal Musiala"},
-      {"minute": 68, "team_id": "GER", "scorer_name": "Nathaniel Brown"},
+      {"minute": 68, "team_id": "GER", "scorer_name": "Nathaniel Brown", "scorer_name_ja": "ナタナエル・ブラウン"},
       {"minute": 78, "team_id": "GER", "scorer_name": "Deniz Undav"},
       {"minute": 88, "team_id": "GER", "scorer_name": "Kai Havertz"}
     ]
@@ -22,6 +23,7 @@
     "home_score": 1,
     "away_score": 0,
     "date": "2026-06-14",
+    "stats": {"home_possession_pct": 48.4, "away_possession_pct": 51.6, "home_shots": 15, "away_shots": 12, "home_shots_on_target": 4, "away_shots_on_target": 1, "home_yellow_cards": 3, "away_yellow_cards": 1},
     "goals": [
       {"minute": 90, "team_id": "CIV", "scorer_name": "Amad Diallo"}
     ]
@@ -32,6 +34,7 @@
     "home_score": 2,
     "away_score": 1,
     "date": "2026-06-20",
+    "stats": {"home_possession_pct": 60, "away_possession_pct": 40, "home_shots": 16, "away_shots": 9},
     "goals": [
       {"minute": 30, "team_id": "CIV", "scorer_name": "Franck Kessie"},
       {"minute": 68, "team_id": "GER", "scorer_name": "Deniz Undav"},
@@ -44,6 +47,7 @@
     "home_score": 0,
     "away_score": 0,
     "date": "2026-06-20",
+    "stats": {"home_possession_pct": 65, "away_possession_pct": 35, "home_shots": 27, "away_shots": 10, "home_shots_on_target": 15, "away_shots_on_target": 3, "home_yellow_cards": 1, "away_yellow_cards": 4},
     "goals": []
   }
 ]

@@ -74,6 +74,7 @@ export interface PlayerRating {
   team_id: string;
   rating: number;
   is_mom: boolean;
+  is_estimated: boolean;
 }
 
 export interface MatchResult extends MatchSummary {

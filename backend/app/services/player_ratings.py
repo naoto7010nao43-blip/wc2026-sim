@@ -87,3 +87,43 @@ def compute_player_ratings(
         del r["goals"]
 
     return ratings
+
+
+def estimate_real_match_ratings(events: list[dict]) -> list[dict]:
+    """Real-world matches have no full lineup data (see real_results.py), so
+    a full-squad rating like compute_player_ratings would be fabricated. This
+    instead rates only the confirmed goal scorers from the persisted events,
+    clearly flagged is_estimated, using the same baseline+bonus shape as the
+    simulated formula. Own goals are excluded since the scoring event's
+    player belongs to the *other* team and can't be cleanly credited."""
+    goal_counts: dict[tuple[str, str], int] = {}
+    for e in events:
+        if e["event_type"] != "goal":
+            continue
+        name = e["description"]
+        if name.endswith(" がゴール!"):
+            name = name[: -len(" がゴール!")]
+        if "own goal" in name.lower() or "オウンゴール" in name:
+            continue
+        key = (e["team_id"], name)
+        goal_counts[key] = goal_counts.get(key, 0) + 1
+
+    if not goal_counts:
+        return []
+
+    ratings = [
+        {
+            "player_id": f"real:{team_id}:{name}",
+            "name": name,
+            "team_id": team_id,
+            "rating": round(min(9.5, BASE_RATING + 1.0 + 0.6 * (goals - 1)), 1),
+            "goals": goals,
+            "is_estimated": True,
+        }
+        for (team_id, name), goals in goal_counts.items()
+    ]
+    ratings.sort(key=lambda r: (-r["rating"], -r["goals"]))
+    for i, r in enumerate(ratings):
+        r["is_mom"] = i == 0
+        del r["goals"]
+    return ratings

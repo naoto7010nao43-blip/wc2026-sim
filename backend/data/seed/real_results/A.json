@@ -5,8 +5,9 @@
     "home_score": 2,
     "away_score": 0,
     "date": "2026-06-11",
+    "stats": {"home_possession_pct": 60, "away_possession_pct": 40, "home_shots": 16, "away_shots": 3, "home_yellow_cards": 1, "away_yellow_cards": 2},
     "goals": [
-      {"minute": 9, "team_id": "MEX", "scorer_name": "Julian Quinones"},
+      {"minute": 9, "team_id": "MEX", "scorer_name": "Julian Quinones", "scorer_name_ja": "フリアン・キニョネス"},
       {"minute": 67, "team_id": "MEX", "scorer_name": "Raul Jimenez"}
     ]
   },
@@ -16,8 +17,9 @@
     "home_score": 2,
     "away_score": 1,
     "date": "2026-06-11",
+    "stats": {"home_possession_pct": 62, "away_possession_pct": 38, "home_shots": 15, "away_shots": 7},
     "goals": [
-      {"minute": 6, "team_id": "CZE", "scorer_name": "Ladislav Krejci"},
+      {"minute": 6, "team_id": "CZE", "scorer_name": "Ladislav Krejci", "scorer_name_ja": "ラディスラフ・クレイチー"},
       {"minute": 67, "team_id": "KOR", "scorer_name": "Hwang In-beom"},
       {"minute": 80, "team_id": "KOR", "scorer_name": "Oh Hyeon-gyu"}
     ]
@@ -28,8 +30,9 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-18",
+    "stats": {"home_possession_pct": 38, "away_possession_pct": 62, "home_shots": 14, "away_shots": 17, "home_yellow_cards": 2, "away_yellow_cards": 1},
     "goals": [
-      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek"},
+      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek", "scorer_name_ja": "ミハル・サディーレク"},
       {"minute": 83, "team_id": "RSA", "scorer_name": "Teboho Mokoena"}
     ]
   },
@@ -39,8 +42,9 @@
     "home_score": 1,
     "away_score": 0,
     "date": "2026-06-18",
+    "stats": {"home_possession_pct": 42, "away_possession_pct": 58, "home_shots": 8, "away_shots": 9, "away_shots_on_target": 2},
     "goals": [
-      {"minute": 50, "team_id": "MEX", "scorer_name": "Luis Romo"}
+      {"minute": 50, "team_id": "MEX", "scorer_name": "Luis Romo", "scorer_name_ja": "ルイス・ロモ"}
     ]
   }
 ]

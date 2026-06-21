@@ -42,16 +42,20 @@ def load_real_results() -> dict[str, dict[frozenset, dict]]:
     return by_group
 
 
-def _find_scorer_id(db: Session, team_id: str, scorer_name: str) -> tuple[str | None, str | None]:
+def _find_scorer_id(
+    db: Session, team_id: str, scorer_name: str, scorer_name_ja: str | None
+) -> tuple[str | None, str | None]:
     """Best-effort match of a researched scorer name to a roster Player.
-    Returns (player_id, display_name); falls back to (None, scorer_name)."""
+    Many real-world scorers aren't in our trimmed ~15-man squads, so falls
+    back to a researched scorer_name_ja (if supplied) and finally to the
+    raw English name."""
     players = db.scalars(select(Player).where(Player.team_id == team_id)).all()
     needle = scorer_name.lower().replace("-", " ")
     for p in players:
         haystack = p.name.lower().replace("-", " ")
         if needle == haystack or needle in haystack or haystack.split()[-1] in needle:
             return p.id, (p.name_ja or p.name)
-    return None, scorer_name
+    return None, (scorer_name_ja or scorer_name)
 
 
 def persist_real_match(
@@ -72,7 +76,9 @@ def persist_real_match(
     events: list[dict] = [make_event(0, "kickoff", home_team_id, "キックオフ。", x=50, y=50)]
     for goal in result.get("goals", []):
         scorer_team_id = goal["team_id"]
-        player_id, display_name = _find_scorer_id(db, scorer_team_id, goal["scorer_name"])
+        player_id, display_name = _find_scorer_id(
+            db, scorer_team_id, goal["scorer_name"], goal.get("scorer_name_ja")
+        )
         events.append(make_event(
             min(goal["minute"], 90), "goal", scorer_team_id,
             f"{display_name} がゴール!",
@@ -83,6 +89,7 @@ def persist_real_match(
     }))
 
     played_at = datetime.fromisoformat(result["date"]) if result.get("date") else datetime.utcnow()
+    stats = result.get("stats") or {}
 
     match = Match(
         id=str(uuid.uuid4()),
@@ -99,6 +106,14 @@ def persist_real_match(
         played_at=played_at,
         is_real=True,
         data_source=DATA_SOURCE,
+        home_possession_pct=stats.get("home_possession_pct"),
+        away_possession_pct=stats.get("away_possession_pct"),
+        home_shots=stats.get("home_shots"),
+        away_shots=stats.get("away_shots"),
+        home_shots_on_target=stats.get("home_shots_on_target"),
+        away_shots_on_target=stats.get("away_shots_on_target"),
+        home_yellow_cards=stats.get("home_yellow_cards"),
+        away_yellow_cards=stats.get("away_yellow_cards"),
     )
     db.add(match)
     for e in events:

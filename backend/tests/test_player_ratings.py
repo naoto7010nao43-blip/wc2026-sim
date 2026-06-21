@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.services.player_ratings import compute_player_ratings
+from app.services.player_ratings import compute_player_ratings, estimate_real_match_ratings
 
 
 def test_empty_roster_returns_no_ratings():
@@ -49,3 +49,35 @@ def test_ratings_are_clamped_to_valid_range():
     events = [{"event_type": "goal", "player_id": "H1", "secondary_player_id": None, "event_metadata": {}} for _ in range(20)]
     ratings = compute_player_ratings(events, home_roster, {}, "HOME", "AWAY")
     assert ratings[0]["rating"] <= 10.0
+
+
+def test_estimate_real_match_ratings_rates_only_scorers():
+    events = [
+        {"event_type": "kickoff", "team_id": "HOME", "description": "キックオフ。"},
+        {"event_type": "goal", "team_id": "HOME", "description": "ラウル・ヒメネス がゴール!"},
+        {"event_type": "fulltime", "team_id": "HOME", "description": "試合終了。"},
+    ]
+    ratings = estimate_real_match_ratings(events)
+    assert len(ratings) == 1
+    assert ratings[0]["name"] == "ラウル・ヒメネス"
+    assert ratings[0]["is_estimated"] is True
+    assert ratings[0]["is_mom"] is True
+    assert ratings[0]["rating"] > 6.0
+
+
+def test_estimate_real_match_ratings_excludes_own_goals():
+    events = [
+        {"event_type": "goal", "team_id": "HOME", "description": "Miro Muheim(オウンゴール) がゴール!"},
+    ]
+    assert estimate_real_match_ratings(events) == []
+
+
+def test_estimate_real_match_ratings_gives_hat_trick_higher_rating():
+    events = [{"event_type": "goal", "team_id": "HOME", "description": "ストライカー がゴール!"} for _ in range(3)]
+    ratings = estimate_real_match_ratings(events)
+    assert len(ratings) == 1
+    assert ratings[0]["rating"] > 8.0
+
+
+def test_estimate_real_match_ratings_empty_without_goals():
+    assert estimate_real_match_ratings([{"event_type": "kickoff", "team_id": "HOME", "description": "キックオフ。"}]) == []

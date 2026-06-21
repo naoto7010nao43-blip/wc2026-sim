@@ -5,9 +5,10 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-15",
+    "stats": {"home_possession_pct": 54, "away_possession_pct": 46, "home_shots": 15, "away_shots": 14, "home_shots_on_target": 3, "away_shots_on_target": 3, "home_yellow_cards": 2, "away_yellow_cards": 2},
     "goals": [
       {"minute": 19, "team_id": "EGY", "scorer_name": "Emam Ashour"},
-      {"minute": 66, "team_id": "BEL", "scorer_name": "Mohamed Hany (own goal)"}
+      {"minute": 66, "team_id": "BEL", "scorer_name": "Mohamed Hany (own goal)", "scorer_name_ja": "モハメド・ハニー(オウンゴール)"}
     ]
   },
   {
@@ -16,11 +17,12 @@
     "home_score": 2,
     "away_score": 2,
     "date": "2026-06-15",
+    "stats": {"home_possession_pct": 48, "away_possession_pct": 52, "home_shots": 17, "away_shots": 14},
     "goals": [
       {"minute": 7, "team_id": "NZL", "scorer_name": "Elijah Just"},
       {"minute": 32, "team_id": "IRN", "scorer_name": "Ramin Rezaeian"},
       {"minute": 54, "team_id": "NZL", "scorer_name": "Elijah Just"},
-      {"minute": 64, "team_id": "IRN", "scorer_name": "Mohammad Mohebi"}
+      {"minute": 64, "team_id": "IRN", "scorer_name": "Mohammad Mohebi", "scorer_name_ja": "モハマド・モヘビ"}
     ]
   }
 ]

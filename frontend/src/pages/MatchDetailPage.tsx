@@ -26,6 +26,10 @@ function ratio(home: number | null, away: number | null): number {
   return (100 * h) / (h + a);
 }
 
+function fmt(value: number | null): string {
+  return value == null ? "-" : String(value);
+}
+
 function StatRow({ label, home, away, homePct }: { label: string; home: string; away: string; homePct: number }) {
   return (
     <div>
@@ -117,9 +121,13 @@ export function MatchDetailPage() {
         {match.home_possession_pct != null && (
           <div className="mx-auto mt-3 max-w-md space-y-1.5 text-xs text-slate-300">
             <StatRow label="ボール保持率" home={`${match.home_possession_pct}%`} away={`${match.away_possession_pct}%`} homePct={match.home_possession_pct} />
-            <StatRow label="シュート" home={String(match.home_shots)} away={String(match.away_shots)} homePct={ratio(match.home_shots, match.away_shots)} />
-            <StatRow label="枠内シュート" home={String(match.home_shots_on_target)} away={String(match.away_shots_on_target)} homePct={ratio(match.home_shots_on_target, match.away_shots_on_target)} />
-            <StatRow label="イエローカード" home={String(match.home_yellow_cards)} away={String(match.away_yellow_cards)} homePct={ratio(match.home_yellow_cards, match.away_yellow_cards)} />
+            <StatRow label="シュート" home={fmt(match.home_shots)} away={fmt(match.away_shots)} homePct={ratio(match.home_shots, match.away_shots)} />
+            {(match.home_shots_on_target != null || match.away_shots_on_target != null) && (
+              <StatRow label="枠内シュート" home={fmt(match.home_shots_on_target)} away={fmt(match.away_shots_on_target)} homePct={ratio(match.home_shots_on_target, match.away_shots_on_target)} />
+            )}
+            {(match.home_yellow_cards != null || match.away_yellow_cards != null) && (
+              <StatRow label="イエローカード" home={fmt(match.home_yellow_cards)} away={fmt(match.away_yellow_cards)} homePct={ratio(match.home_yellow_cards, match.away_yellow_cards)} />
+            )}
           </div>
         )}
       </div>
