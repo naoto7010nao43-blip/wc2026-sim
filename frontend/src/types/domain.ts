@@ -92,6 +92,8 @@ export interface MatchResult extends MatchSummary {
   away_shots_on_target: number | null;
   home_yellow_cards: number | null;
   away_yellow_cards: number | null;
+  home_red_cards: number | null;
+  away_red_cards: number | null;
   player_ratings: PlayerRating[];
 }
 

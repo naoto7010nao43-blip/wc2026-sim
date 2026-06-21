@@ -128,6 +128,9 @@ export function MatchDetailPage() {
             {(match.home_yellow_cards != null || match.away_yellow_cards != null) && (
               <StatRow label="イエローカード" home={fmt(match.home_yellow_cards)} away={fmt(match.away_yellow_cards)} homePct={ratio(match.home_yellow_cards, match.away_yellow_cards)} />
             )}
+            {((match.home_red_cards ?? 0) > 0 || (match.away_red_cards ?? 0) > 0) && (
+              <StatRow label="レッドカード" home={fmt(match.home_red_cards)} away={fmt(match.away_red_cards)} homePct={ratio(match.home_red_cards, match.away_red_cards)} />
+            )}
           </div>
         )}
       </div>

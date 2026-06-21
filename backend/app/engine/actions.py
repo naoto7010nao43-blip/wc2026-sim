@@ -83,9 +83,20 @@ def compute_shot_xg(
     keeper_factor = 1.0 - (keeper.attributes.get("gk_reflexes") or 50) / 160.0
     pressure_penalty = pressure * 0.12 * (1 + (defensive_line_height - 50.0) / 150.0)
 
-    base = 0.05 + 0.45 * distance_factor * shooting_factor * keeper_factor
+    base = 0.05 + 0.50 * distance_factor * shooting_factor * keeper_factor
     base -= angle_penalty + pressure_penalty
     return clamp_prob(base, 0.02, 0.6)
+
+
+def maybe_foul_card(rng: random.Random, base_rate: float) -> str | None:
+    """Returns None, "yellow", or "red" for a defensive challenge that wins
+    the ball back. `base_rate` is the probability of any card at all; a
+    small fraction of those escalate to red (reckless/last-man fouls,
+    second yellows). Calibrated so a full match lands near real-world
+    averages of ~3-4 yellows and roughly 1 red every several matches."""
+    if rng.random() < base_rate:
+        return "red" if rng.random() < 0.05 else "yellow"
+    return None
 
 
 def choose_pass_target(team: TeamState, carrier: PlayerState, rng: random.Random) -> PlayerState:
@@ -111,7 +122,10 @@ def choose_action(carrier: PlayerState, ball_x: float, ball_y: float, attacking_
     tendency, and the attacking team's possession_style (0=direct/long-ball, 100=possession)."""
     dist_to_goal = distance_to_target_goal((ball_x, ball_y), attacking_direction)
 
-    if dist_to_goal < 22 and rng.random() < (0.15 + carrier.attributes["shooting"] / 300):
+    # Shooting-range radius and trigger probability widened from an earlier,
+    # too-conservative version that produced ~half the shots/match of real
+    # football (calibrated against scripts/analyze_simulation_quality.py).
+    if dist_to_goal < 30 and rng.random() < (0.22 + carrier.attributes["shooting"] / 250):
         return "SHOOT"
 
     style_shift = (possession_style - 50.0) * 0.004

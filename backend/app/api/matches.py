@@ -88,6 +88,8 @@ def run_and_persist_match(db: Session, req: SimulateMatchRequest) -> Match:
         away_shots_on_target=result["away_shots_on_target"],
         home_yellow_cards=result["home_yellow_cards"],
         away_yellow_cards=result["away_yellow_cards"],
+        home_red_cards=result["home_red_cards"],
+        away_red_cards=result["away_red_cards"],
     )
     db.add(match)
     for e in result["events"]:
@@ -154,6 +156,8 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
         away_shots_on_target=match.away_shots_on_target,
         home_yellow_cards=match.home_yellow_cards,
         away_yellow_cards=match.away_yellow_cards,
+        home_red_cards=match.home_red_cards,
+        away_red_cards=match.away_red_cards,
         player_ratings=player_ratings,
     )
 

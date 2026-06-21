@@ -81,6 +81,8 @@ class MatchResult(MatchSummary):
     away_shots_on_target: int | None = None
     home_yellow_cards: int | None = None
     away_yellow_cards: int | None = None
+    home_red_cards: int | None = None
+    away_red_cards: int | None = None
     player_ratings: list[PlayerRating] = []
 
 

@@ -11,6 +11,7 @@ from app.engine.actions import (
     compute_shot_xg,
     compute_tackle_success,
     decay_stamina,
+    maybe_foul_card,
     nearest_player,
     pick_ball_carrier,
     recover_stamina_halftime,
@@ -129,7 +130,10 @@ def simulate_match(
                 ball_x, ball_y = 50.0, 50.0
                 possession = defender
             else:
-                saved = rng.random() < 0.55
+                # Real-world shots-on-target rate is ~33% of all shots, not ~60% --
+                # a too-high "saved" chance here was inflating shots_on_target far
+                # past goals, suppressing the goals/SOT ratio well below reality.
+                saved = rng.random() < 0.28
                 outcome = "saved" if saved else "off target"
                 description = (
                     f"{carrier.display_name} のシュートは {keeper.display_name} にセーブされた。"
@@ -174,6 +178,15 @@ def simulate_match(
                     player_id=tackler.player_id, secondary_player_id=carrier.player_id,
                     x=ball_x, y=ball_y,
                 ))
+                # A clean interception is usually not a foul -- low card rate.
+                card = maybe_foul_card(rng, base_rate=0.03)
+                if card is not None:
+                    events.append(make_event(
+                        minute, f"{card}_card", defender.team_id,
+                        f"{tackler.display_name} に {carrier.display_name} へのファウルで{'レッド' if card == 'red' else 'イエロー'}カード。",
+                        player_id=tackler.player_id,
+                        x=ball_x, y=ball_y,
+                    ))
                 ball_x, ball_y = tackler.x, tackler.y
                 possession = defender
 
@@ -195,10 +208,14 @@ def simulate_match(
                     player_id=nearest_def.player_id, secondary_player_id=carrier.player_id,
                     x=ball_x, y=ball_y,
                 ))
-                if rng.random() < 0.05:
+                # Duels for the ball during a dribble are the main real-world
+                # foul source -- calibrated against analyze_simulation_quality.py
+                # to land near real-world ~3-4 yellows/match combined.
+                card = maybe_foul_card(rng, base_rate=0.16)
+                if card is not None:
                     events.append(make_event(
-                        minute, "yellow_card", defender.team_id,
-                        f"{nearest_def.display_name} に {carrier.display_name} へのファウルでイエローカード。",
+                        minute, f"{card}_card", defender.team_id,
+                        f"{nearest_def.display_name} に {carrier.display_name} へのファウルで{'レッド' if card == 'red' else 'イエロー'}カード。",
                         player_id=nearest_def.player_id,
                         x=ball_x, y=ball_y,
                     ))
@@ -255,6 +272,7 @@ def simulate_match(
             "shots": _count("goal", team.team_id) + _count("shot", team.team_id),
             "shots_on_target": shots_on_target,
             "yellow_cards": _count("yellow_card", team.team_id),
+            "red_cards": _count("red_card", team.team_id),
         }
 
     return {
@@ -276,5 +294,7 @@ def simulate_match(
         "away_shots_on_target": stats[away.team_id]["shots_on_target"],
         "home_yellow_cards": stats[home.team_id]["yellow_cards"],
         "away_yellow_cards": stats[away.team_id]["yellow_cards"],
+        "home_red_cards": stats[home.team_id]["red_cards"],
+        "away_red_cards": stats[away.team_id]["red_cards"],
         "events": events,
     }
