@@ -86,6 +86,44 @@ FORMATIONS: dict[str, Formation] = {
             FormationSlot("ST", 80, 62),
         ),
     ),
+    # Back-three with advanced wing-backs and a double pivot behind two
+    # attacking mids -- added when the real-formation research pass found
+    # several 2026 national teams (USA, AUS, CZE, etc.) actually playing
+    # this rather than any of the 4 templates above.
+    "3-4-2-1": Formation(
+        name="3-4-2-1",
+        slots=(
+            FormationSlot("GK", 5, 50),
+            FormationSlot("CB", 15, 30),
+            FormationSlot("CB", 12, 50),
+            FormationSlot("CB", 15, 70),
+            FormationSlot("LB", 45, 8),
+            FormationSlot("RB", 45, 92),
+            FormationSlot("CDM", 40, 40),
+            FormationSlot("CM", 45, 60),
+            FormationSlot("CAM", 68, 30),
+            FormationSlot("CAM", 68, 70),
+            FormationSlot("ST", 88, 50),
+        ),
+    ),
+    # Back-three with a flat four across midfield and a front three --
+    # added for the same reason as 3-4-2-1 (SWE, JOR, CUW, COD, etc.).
+    "3-4-3": Formation(
+        name="3-4-3",
+        slots=(
+            FormationSlot("GK", 5, 50),
+            FormationSlot("CB", 15, 30),
+            FormationSlot("CB", 12, 50),
+            FormationSlot("CB", 15, 70),
+            FormationSlot("LM", 50, 12),
+            FormationSlot("CM", 45, 38),
+            FormationSlot("CM", 45, 62),
+            FormationSlot("RM", 50, 88),
+            FormationSlot("LW", 78, 15),
+            FormationSlot("ST", 85, 50),
+            FormationSlot("RW", 78, 85),
+        ),
+    ),
 }
 
 # Maps a formation slot's generic position label to acceptable player

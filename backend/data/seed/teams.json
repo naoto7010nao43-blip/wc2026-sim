@@ -4,7 +4,7 @@
     "name": "Brazil",
     "confederation": "CONMEBOL",
     "fifa_rank": 6,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Carlo Ancelotti",
@@ -74,7 +74,7 @@
     "name": "United States",
     "confederation": "CONCACAF",
     "fifa_rank": 17,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "D",
     "tactical_profile": {
       "manager_name": "Mauricio Pochettino",
@@ -133,15 +133,15 @@
     "name": "Czechia",
     "confederation": "UEFA",
     "fifa_rank": 41,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "A",
     "tactical_profile": {
-      "manager_name": "Ivan Hasek",
+      "manager_name": "Miroslav Koubek",
       "press_intensity": 50,
       "possession_style": 42,
       "defensive_line_height": 44
     },
-    "_tactical_profile_basis": "Hasek (former Czech international, appointed 2023) favors a pragmatic, compact 4-2-3-1/4-4-2 mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil, reflecting a squad short on elite ball-progressing midfielders; Czechia reached WC2026 via the UEFA playoffs Path D, beating Denmark in the final (March 2026) on the back of disciplined defending rather than control of possession (sources: UEFA.com WC2026 playoff Path D final report March 2026, FACR official Ivan Hasek squad/tactics statements 2025-26, iDNES.cz tactical preview of playoff final)."
+    "_tactical_profile_basis": "Hasek was fired in October 2025 after a loss to the Faroe Islands; Miroslav Koubek (ex-Viktoria Plzen) was appointed December 19, 2025 ahead of the March 2026 playoffs, bringing his signature 3-4-2-1 system, a pragmatic mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil (sources: AP/Yahoo/KVUE Dec 19 2025 coaching-change report, koskingdom.com Koubek tactical profile)."
   },
   {
     "id": "CAN",
@@ -264,7 +264,7 @@
     "name": "Australia",
     "confederation": "AFC",
     "fifa_rank": 26,
-    "default_formation": "3-5-2",
+    "default_formation": "3-4-2-1",
     "group_id": "D",
     "tactical_profile": {
       "manager_name": "Tony Popovic",
@@ -292,7 +292,7 @@
     "name": "Curacao",
     "confederation": "CONCACAF",
     "fifa_rank": 82,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-3",
     "group_id": "E",
     "tactical_profile": {
       "manager_name": "Dick Advocaat",
@@ -362,7 +362,7 @@
     "name": "Sweden",
     "confederation": "UEFA",
     "fifa_rank": 25,
-    "default_formation": "4-4-2",
+    "default_formation": "3-4-3",
     "group_id": "F",
     "tactical_profile": {
       "manager_name": "Graham Potter",
@@ -379,7 +379,7 @@
     "default_formation": "4-2-3-1",
     "group_id": "F",
     "tactical_profile": {
-      "manager_name": "Sabri Lamouchi",
+      "manager_name": "Herve Renard",
       "press_intensity": 42,
       "possession_style": 38,
       "defensive_line_height": 36
@@ -474,7 +474,7 @@
     "name": "Saudi Arabia",
     "confederation": "AFC",
     "fifa_rank": 56,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-4-2",
     "group_id": "H",
     "tactical_profile": {
       "manager_name": "Georgios Donis",
@@ -572,7 +572,7 @@
     "name": "Jordan",
     "confederation": "AFC",
     "fifa_rank": 63,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-3",
     "group_id": "J",
     "tactical_profile": {
       "manager_name": "Jamal Sellami",
@@ -600,7 +600,7 @@
     "name": "DR Congo",
     "confederation": "CAF",
     "fifa_rank": 58,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-5-2",
     "group_id": "K",
     "tactical_profile": {
       "manager_name": "Sebastien Desabre",

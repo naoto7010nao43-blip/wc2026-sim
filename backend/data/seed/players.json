@@ -3002,37 +3002,34 @@
     "name_ja": "ギジェルモ・オチョア"
   },
   {
-    "id": "MEX_MALAGON",
+    "id": "MEX_RANGEL",
     "team_id": "MEX",
-    "name": "Luis Malagon",
-    "age": 28,
+    "name": "Raul Rangel",
+    "age": 26,
     "primary_position": "GK",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 70,
+      "appearances": 16,
       "goals": 0,
       "assists": 0,
-      "minutes_played": 6300,
-      "key_passes_per90": 0.05,
+      "minutes_played": 1440,
+      "key_passes_per90": 0.0,
       "successful_dribbles_per90": 0.0,
       "tackles_per90": 0.0,
       "interceptions_per90": 0.1,
-      "aerial_duels_won_pct": 53.0,
-      "pass_completion_pct": 78.0,
+      "aerial_duels_won_pct": 52.0,
+      "pass_completion_pct": 77.0,
       "save_pct": 70.0,
-      "goals_conceded_per90": 1.05
+      "goals_conceded_per90": 1.1
     },
     "market_value_eur": 6000000,
-    "qualitative_adjustments": {
-      "defending": 1
-    },
+    "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Club America Liga MX 2025-26 stats",
-      "FMF squad announcements 2025-26 (established starting GK)"
+      "Transfermarkt 2026-03 (EUR 6.00m)",
+      "FIFA.com -- Mexico's new starting goalkeeper, replaced injured Luis Malagon (Achilles rupture, ruled out of WC2026) ahead of the opener vs South Africa"
     ],
-    "stamina_max": 84,
-    "name_ja": "ルイス・マラゴン"
+    "stamina_max": 82,
+    "name_ja": "ラウル・ランヘル"
   },
   {
     "id": "MEX_VEGA",
@@ -4054,35 +4051,33 @@
     "name_ja": "キム・ミンジェ"
   },
   {
-    "id": "KOR_KIMYOUNGGWON",
+    "id": "KOR_KIMTAEHYEON",
     "team_id": "KOR",
-    "name": "Kim Young-gwon",
-    "age": 35,
+    "name": "Kim Tae-hyeon",
+    "age": 25,
     "primary_position": "CB",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 60,
-      "goals": 2,
-      "assists": 1,
-      "minutes_played": 5000,
-      "key_passes_per90": 0.3,
-      "successful_dribbles_per90": 0.3,
-      "tackles_per90": 1.7,
-      "interceptions_per90": 1.7,
-      "aerial_duels_won_pct": 64.0,
-      "pass_completion_pct": 85.0
+      "appearances": 30,
+      "goals": 1,
+      "assists": 0,
+      "minutes_played": 2700,
+      "key_passes_per90": 0.2,
+      "successful_dribbles_per90": 0.4,
+      "tackles_per90": 1.8,
+      "interceptions_per90": 1.5,
+      "aerial_duels_won_pct": 62.0,
+      "pass_completion_pct": 82.0
     },
-    "market_value_eur": 500000,
-    "qualitative_adjustments": {
-      "pace": -2,
-      "defending": 1
-    },
+    "market_value_eur": 3000000,
+    "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Ulsan HD K League 1 2025-26 stats, veteran centre-back"
+      "Transfermarkt 2026-06",
+      "Kashima Antlers J1 League 2025-26 stats; left-footed CB",
+      "worldcuppass.com -- confirmed in Hong Myung-bo's official 26-man squad; Kim Young-gwon not named"
     ],
-    "stamina_max": 75,
-    "name_ja": "キム・ヨングォン"
+    "stamina_max": 80,
+    "name_ja": "キム・テヒョン"
   },
   {
     "id": "KOR_KIMJINSU",
@@ -6792,37 +6787,37 @@
     "name_ja": "ブラヒム・ディアス"
   },
   {
-    "id": "MAR_ZIYECH",
+    "id": "MAR_RAHIMI",
     "team_id": "MAR",
-    "name": "Hakim Ziyech",
-    "age": 33,
-    "primary_position": "RW",
+    "name": "Soufiane Rahimi",
+    "age": 29,
+    "primary_position": "ST",
     "secondary_positions": [
-      "CAM"
+      "RW"
     ],
     "career_stats": {
-      "appearances": 38,
+      "appearances": 16,
       "goals": 9,
-      "assists": 8,
-      "minutes_played": 2900,
-      "key_passes_per90": 2.0,
-      "successful_dribbles_per90": 1.8,
-      "tackles_per90": 0.6,
-      "interceptions_per90": 0.4,
-      "aerial_duels_won_pct": 40.0,
-      "pass_completion_pct": 83.0
+      "assists": 3,
+      "minutes_played": 1440,
+      "key_passes_per90": 1.0,
+      "successful_dribbles_per90": 1.2,
+      "tackles_per90": 0.4,
+      "interceptions_per90": 0.3,
+      "aerial_duels_won_pct": 50.0,
+      "pass_completion_pct": 78.0
     },
-    "market_value_eur": 4000000,
+    "market_value_eur": 12000000,
     "qualitative_adjustments": {
-      "passing": 1,
-      "pace": -2
+      "shooting": 1
     },
     "source_citations": [
-      "Transfermarkt profile 25/26",
-      "Galatasaray Super Lig 2025-26 stats"
+      "Flashscore -- Al Ain UAE Pro League 2025-26 stats (9 goals/16 matches)",
+      "fifa.com -- AFCON 2025 winner with Morocco",
+      "hespress.com -- Hakim Ziyech confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
     ],
-    "stamina_max": 78,
-    "name_ja": "ハキム・ジエク"
+    "stamina_max": 80,
+    "name_ja": "スフィアン・ラヒミ"
   },
   {
     "id": "MAR_AKHOMACH",
@@ -6888,35 +6883,33 @@
     "name_ja": "アユーブ・エルカービ"
   },
   {
-    "id": "MAR_ENNESYRI",
+    "id": "MAR_DIOP",
     "team_id": "MAR",
-    "name": "Youssef En-Nesyri",
+    "name": "Issa Diop",
     "age": 29,
-    "primary_position": "ST",
+    "primary_position": "CB",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 50,
-      "goals": 19,
-      "assists": 3,
-      "minutes_played": 3900,
-      "key_passes_per90": 0.5,
-      "successful_dribbles_per90": 0.8,
-      "tackles_per90": 0.4,
-      "interceptions_per90": 0.3,
-      "aerial_duels_won_pct": 64.0,
-      "pass_completion_pct": 75.0
+      "appearances": 30,
+      "goals": 1,
+      "assists": 0,
+      "minutes_played": 2700,
+      "key_passes_per90": 0.2,
+      "successful_dribbles_per90": 0.3,
+      "tackles_per90": 1.8,
+      "interceptions_per90": 1.6,
+      "aerial_duels_won_pct": 68.0,
+      "pass_completion_pct": 83.0
     },
-    "market_value_eur": 12000000,
-    "qualitative_adjustments": {
-      "shooting": 1,
-      "physical": 1
-    },
+    "market_value_eur": 15000000,
+    "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 25/26",
-      "Fenerbahce Super Lig 2025-26 stats"
+      "Wikipedia -- Issa Diop; Premier League regular at Fulham",
+      "Morocco squad announcement -- FIFA-approved eligibility switch from France (March 26 2026), selected to 26-man squad (May 26 2026)",
+      "hespress.com -- Youssef En-Nesyri confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
     ],
-    "stamina_max": 85,
-    "name_ja": "ユセフ・エンネシリ"
+    "stamina_max": 83,
+    "name_ja": "イサ・ディオプ"
   },
   {
     "id": "HAI_PLACIDE",
@@ -9045,36 +9038,33 @@
     "name_ja": "ジェンギズ・ウンデル"
   },
   {
-    "id": "TUR_TOSUN",
+    "id": "TUR_DENIZGUL",
     "team_id": "TUR",
-    "name": "Yusuf Yazici",
-    "age": 29,
+    "name": "Deniz Gul",
+    "age": 21,
     "primary_position": "ST",
-    "secondary_positions": [
-      "CAM"
-    ],
+    "secondary_positions": [],
     "career_stats": {
-      "appearances": 52,
-      "goals": 16,
-      "assists": 7,
-      "minutes_played": 4000,
-      "key_passes_per90": 1.3,
-      "successful_dribbles_per90": 1.4,
-      "tackles_per90": 0.6,
-      "interceptions_per90": 0.4,
-      "aerial_duels_won_pct": 55.0,
-      "pass_completion_pct": 81.0
+      "appearances": 18,
+      "goals": 5,
+      "assists": 1,
+      "minutes_played": 1170,
+      "key_passes_per90": 0.6,
+      "successful_dribbles_per90": 1.0,
+      "tackles_per90": 0.3,
+      "interceptions_per90": 0.2,
+      "aerial_duels_won_pct": 48.0,
+      "pass_completion_pct": 76.0
     },
-    "market_value_eur": 12000000,
-    "qualitative_adjustments": {
-      "shooting": 1
-    },
+    "market_value_eur": 8000000,
+    "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 2025-26",
-      "Trabzonspor Super Lig 2025-26 stats"
+      "OneFootball -- 'Turkey gives Deniz Gul the No 9 for World Cup 2026' -- confirmed sole orthodox striker selected",
+      "FC Porto Liga Portugal 2025-26 stats",
+      "turkiyetoday.com -- Yusuf Yazici not named in Turkey's final 26-man WC2026 squad"
     ],
-    "stamina_max": 84,
-    "name_ja": "ユスフ・ヤズジュ"
+    "stamina_max": 85,
+    "name_ja": "デニズ・ギュル"
   },
   {
     "id": "CUW_ROOM",
@@ -16129,36 +16119,34 @@
     "name_ja": "カリドゥ・クリバリ"
   },
   {
-    "id": "SEN_DIALLO_A",
+    "id": "SEN_NIAKHATE",
     "team_id": "SEN",
-    "name": "Abdou Diallo",
+    "name": "Moussa Niakhate",
     "age": 30,
     "primary_position": "CB",
-    "secondary_positions": [
-      "LB"
-    ],
+    "secondary_positions": [],
     "career_stats": {
-      "appearances": 42,
-      "goals": 1,
-      "assists": 1,
-      "minutes_played": 3500,
-      "key_passes_per90": 0.4,
-      "successful_dribbles_per90": 0.5,
-      "tackles_per90": 1.6,
-      "interceptions_per90": 1.5,
-      "aerial_duels_won_pct": 64.0,
-      "pass_completion_pct": 88.0
+      "appearances": 32,
+      "goals": 0,
+      "assists": 2,
+      "minutes_played": 2758,
+      "key_passes_per90": 0.2,
+      "successful_dribbles_per90": 0.3,
+      "tackles_per90": 1.8,
+      "interceptions_per90": 1.6,
+      "aerial_duels_won_pct": 70.0,
+      "pass_completion_pct": 85.0
     },
-    "market_value_eur": 6000000,
+    "market_value_eur": 18000000,
     "qualitative_adjustments": {
       "defending": 1
     },
     "source_citations": [
-      "Transfermarkt 2025-26 profile",
-      "Al-Arabi SC stats 2025-26"
+      "fotmob.com -- Olympique Lyonnais Ligue 1 2025-26 stats",
+      "worldcuppass.com / heavy.com -- confirmed in Pape Thiaw's official Senegal 26-man WC2026 squad; Abdou Diallo not named"
     ],
-    "stamina_max": 82,
-    "name_ja": "アブドゥ・ディアロ"
+    "stamina_max": 83,
+    "name_ja": "ムーサ・ニアカテ"
   },
   {
     "id": "SEN_DIATTA_F",
@@ -20914,35 +20902,32 @@
     "name_ja": "ベンジャミン・アサレ"
   },
   {
-    "id": "GHA_SALISU",
+    "id": "GHA_OPOKU",
     "team_id": "GHA",
-    "name": "Mohammed Salisu",
+    "name": "Jerome Opoku",
     "age": 27,
     "primary_position": "CB",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 55,
-      "goals": 2,
+      "appearances": 36,
+      "goals": 0,
       "assists": 1,
-      "minutes_played": 4600,
-      "key_passes_per90": 0.3,
-      "successful_dribbles_per90": 0.4,
-      "tackles_per90": 1.9,
-      "interceptions_per90": 1.8,
-      "aerial_duels_won_pct": 65.0,
-      "pass_completion_pct": 84.0
+      "minutes_played": 2740,
+      "key_passes_per90": 0.2,
+      "successful_dribbles_per90": 0.3,
+      "tackles_per90": 1.7,
+      "interceptions_per90": 1.5,
+      "aerial_duels_won_pct": 62.0,
+      "pass_completion_pct": 80.0
     },
-    "market_value_eur": 18000000,
-    "qualitative_adjustments": {
-      "defending": 2,
-      "physical": 1
-    },
+    "market_value_eur": 3900000,
+    "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt 2026-06",
-      "AS Monaco Ligue 1 2025-26 stats"
+      "Transfermarkt -- Istanbul Basaksehir Super Lig 2025-26 stats",
+      "gbcghanaonline.com -- Mohammed Salisu ruled out of WC2026 with ACL injury (Jan 2026, ~9-month recovery)"
     ],
-    "stamina_max": 84,
-    "name_ja": "モハメド・サリス"
+    "stamina_max": 82,
+    "name_ja": "ジェローム・オポク"
   },
   {
     "id": "GHA_MUMIN",
@@ -21108,39 +21093,36 @@
     "name_ja": "アリドゥ・セイドゥ"
   },
   {
-    "id": "GHA_KUDUS",
+    "id": "GHA_FATAWU",
     "team_id": "GHA",
-    "name": "Mohammed Kudus",
-    "age": 25,
+    "name": "Abdul Fatawu Issahaku",
+    "age": 22,
     "primary_position": "RW",
     "secondary_positions": [
-      "CAM",
-      "ST"
+      "CAM"
     ],
     "career_stats": {
-      "appearances": 60,
-      "goals": 18,
-      "assists": 11,
-      "minutes_played": 4700,
-      "key_passes_per90": 2.1,
-      "successful_dribbles_per90": 3.1,
-      "tackles_per90": 0.8,
-      "interceptions_per90": 0.5,
-      "aerial_duels_won_pct": 44.0,
-      "pass_completion_pct": 80.0
+      "appearances": 44,
+      "goals": 9,
+      "assists": 7,
+      "minutes_played": 2712,
+      "key_passes_per90": 2.0,
+      "successful_dribbles_per90": 2.5,
+      "tackles_per90": 0.6,
+      "interceptions_per90": 0.4,
+      "aerial_duels_won_pct": 40.0,
+      "pass_completion_pct": 78.0
     },
-    "market_value_eur": 55000000,
+    "market_value_eur": 14000000,
     "qualitative_adjustments": {
-      "dribbling": 2,
-      "pace": 1
+      "dribbling": 1
     },
     "source_citations": [
-      "Transfermarkt 2026-06 (e55m)",
-      "Tottenham Hotspur PL 2025-26 stats",
-      "Quadriceps injury curtailed 2025-26 season - minor caution applied"
+      "Wikipedia/Transfermarkt -- Leicester City Championship 2025-26 stats",
+      "beinsports.com -- Mohammed Kudus ruled out of WC2026 (quadriceps/hamstring injuries)"
     ],
-    "stamina_max": 88,
-    "name_ja": "モハメド・クドゥス"
+    "stamina_max": 86,
+    "name_ja": "アブドール・ファタウ・イサハク"
   },
   {
     "id": "GHA_SEMENYO",
