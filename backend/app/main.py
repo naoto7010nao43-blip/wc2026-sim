@@ -1,6 +1,6 @@
 import os
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select
 
@@ -28,9 +28,23 @@ allowed_origins = os.environ.get("ALLOWED_ORIGINS", _default_origins).split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    # Only the methods/headers this API actually uses -- narrower than "*"
+    # so a misconfigured ALLOWED_ORIGINS doesn't also hand out an open-ended
+    # cross-origin surface for verbs/headers nothing here needs.
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
+
+
+@app.middleware("http")
+async def security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Permissions-Policy"] = "geolocation=(), camera=(), microphone=()"
+    return response
+
 
 app.include_router(teams.router)
 app.include_router(players.router)

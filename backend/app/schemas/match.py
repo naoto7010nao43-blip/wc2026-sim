@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class SimulateMatchRequest(BaseModel):
@@ -87,5 +87,8 @@ class MatchResult(MatchSummary):
 
 
 class SimulateRoundRobinRequest(BaseModel):
-    team_ids: list[str]
+    # Real groups have 4 teams; capped well above that (combinations grow
+    # O(n^2)) so a malicious request can't force the server into simulating
+    # an unbounded number of matches in one call.
+    team_ids: list[str] = Field(min_length=2, max_length=8)
     seed: int | None = None

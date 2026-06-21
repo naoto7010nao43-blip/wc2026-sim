@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.api.matches import run_and_persist_match, to_match_result
 from app.database import get_db
 from app.models.match import Match
+from app.rate_limit import rate_limit
 from app.schemas.match import MatchResult, MatchSummary, SimulateMatchRequest, SimulateRoundRobinRequest
 from app.schemas.standings import StandingsRow
 from app.services.standings import compute_standings
@@ -14,7 +15,7 @@ from app.services.standings import compute_standings
 router = APIRouter(prefix="/api/groups", tags=["groups"])
 
 
-@router.post("/{group_id}/simulate-round-robin", response_model=dict)
+@router.post("/{group_id}/simulate-round-robin", response_model=dict, dependencies=[Depends(rate_limit(10))])
 def simulate_round_robin(group_id: str, req: SimulateRoundRobinRequest, db: Session = Depends(get_db)):
     base_seed = req.seed if req.seed is not None else 0
     results: list[MatchResult] = []

@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app.models.match import Match
+from app.rate_limit import rate_limit
 from app.schemas.match import MatchSummary
 from app.schemas.tournament import ROUND_NAMES, RunTournamentRequest, TournamentResult
 from app.services.standings import compute_standings
@@ -23,7 +24,7 @@ def _group_standings(db: Session) -> dict:
     return {letter: compute_standings(db, letter) for letter in GROUP_LETTERS}
 
 
-@router.post("/run", response_model=TournamentResult)
+@router.post("/run", response_model=TournamentResult, dependencies=[Depends(rate_limit(6))])
 def run_tournament(req: RunTournamentRequest, db: Session = Depends(get_db)):
     # Each run starts a fresh tournament: clear matches left over from a
     # previous run so /state always reflects exactly one tournament's worth.

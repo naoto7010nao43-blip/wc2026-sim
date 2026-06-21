@@ -9,6 +9,7 @@ from app.engine.simulator import simulate_match
 from app.models.match import Match, MatchEvent
 from app.models.player import Player
 from app.models.team import Team
+from app.rate_limit import rate_limit
 from app.schemas.match import MatchEventOut, MatchResult, SimulateMatchRequest
 from app.services.player_ratings import compute_player_ratings, estimate_real_match_ratings
 
@@ -162,7 +163,7 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
     )
 
 
-@router.post("/simulate", response_model=MatchResult)
+@router.post("/simulate", response_model=MatchResult, dependencies=[Depends(rate_limit(20))])
 def simulate(req: SimulateMatchRequest, db: Session = Depends(get_db)):
     match = run_and_persist_match(db, req)
     return to_match_result(db, match)
