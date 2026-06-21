@@ -102,7 +102,10 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
         select(MatchEvent).where(MatchEvent.match_id == match.id).order_by(MatchEvent.id)
     ).all()
     if match.is_real:
-        player_ratings = estimate_real_match_ratings(
+        # Prefer real API-Football ratings persisted at sync time; only
+        # fall back to the goal-scorer heuristic if that match hasn't been
+        # synced from the API yet (older LLM-researched entries).
+        player_ratings = match.player_ratings or estimate_real_match_ratings(
             [{"event_type": e.event_type, "team_id": e.team_id, "description": e.description} for e in events]
         )
     else:

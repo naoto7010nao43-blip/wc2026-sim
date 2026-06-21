@@ -9,6 +9,9 @@ backend/wc2026.db
 logs/
 *.log
 
+# Cached external API responses (re-fetchable, not source data)
+backend/data/cache/
+
 # Node
 node_modules/
 dist/

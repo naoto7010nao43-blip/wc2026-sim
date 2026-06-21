@@ -47,6 +47,11 @@ class Match(Base):
     away_shots_on_target: Mapped[int | None] = mapped_column(Integer, nullable=True)
     home_yellow_cards: Mapped[int | None] = mapped_column(Integer, nullable=True)
     away_yellow_cards: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # Real-world matches only: list of {player_id, name, team_id, rating,
+    # is_mom, is_estimated} sourced directly from API-Football. Simulated
+    # matches compute this on read from MatchEvent rows instead (see
+    # player_ratings.compute_player_ratings).
+    player_ratings: Mapped[list | None] = mapped_column(JSON, nullable=True)
 
 
 class MatchEvent(Base):
