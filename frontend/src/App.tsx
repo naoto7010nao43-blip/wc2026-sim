@@ -3,6 +3,7 @@ import { TeamsProvider } from "./context/TeamsContext";
 import { HomePage } from "./pages/HomePage";
 import { MatchDetailPage } from "./pages/MatchDetailPage";
 import { SimulatorPage } from "./pages/SimulatorPage";
+import { TeamPage } from "./pages/TeamPage";
 import { TournamentPage } from "./pages/TournamentPage";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -36,6 +37,7 @@ function App() {
             <Route path="/tournament" element={<TournamentPage />} />
             <Route path="/simulate" element={<SimulatorPage />} />
             <Route path="/matches/:matchId" element={<MatchDetailPage />} />
+            <Route path="/teams/:teamId" element={<TeamPage />} />
           </Routes>
         </main>
       </div>

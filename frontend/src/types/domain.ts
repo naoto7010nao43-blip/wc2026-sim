@@ -28,6 +28,22 @@ export interface TeamOut extends TeamSummary {
   players: PlayerSummary[];
 }
 
+export interface LikelyLineupSlot {
+  slot_position: string;
+  player_id: string;
+  name: string;
+  name_ja: string | null;
+  primary_position: string;
+  starting_probability: number;
+}
+
+export interface LikelyLineupOut {
+  team_id: string;
+  formation: string;
+  lineup: LikelyLineupSlot[];
+  disclaimer: string;
+}
+
 export interface MatchEvent {
   minute: number;
   event_type: string;

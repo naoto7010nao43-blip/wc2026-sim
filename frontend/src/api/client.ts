@@ -1,4 +1,5 @@
 import type {
+  LikelyLineupOut,
   MatchResult,
   RoundRobinResult,
   StandingsRow,
@@ -28,6 +29,7 @@ async function postJson<T>(path: string, body: unknown): Promise<T> {
 export const api = {
   listTeams: () => getJson<TeamSummary[]>("/api/teams"),
   getTeam: (teamId: string) => getJson<TeamOut>(`/api/teams/${teamId}`),
+  getLikelyLineup: (teamId: string) => getJson<LikelyLineupOut>(`/api/teams/${teamId}/likely-lineup`),
   getMatch: (matchId: string) => getJson<MatchResult>(`/api/matches/${matchId}`),
   simulateMatch: (homeTeamId: string, awayTeamId: string, opts?: { seed?: number; allowDraw?: boolean }) =>
     postJson<MatchResult>("/api/matches/simulate", {

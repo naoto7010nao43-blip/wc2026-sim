@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
 import { countryNameJa } from "../data/countryNamesJa";
 import type { TeamSummary } from "../types/domain";
@@ -71,6 +71,11 @@ export function SimulatorPage() {
             <p className="mt-2 text-xs text-slate-500">
               監督: {homeTeam?.tactical_profile?.manager_name ?? "-"} / フォーメーション: {homeTeam?.default_formation ?? "-"}
             </p>
+            {homeTeamId && (
+              <Link to={`/teams/${homeTeamId}`} className="mt-1 inline-block text-xs text-emerald-400 hover:text-emerald-300">
+                予測スタメンを見る →
+              </Link>
+            )}
           </div>
 
           <div>
@@ -89,6 +94,11 @@ export function SimulatorPage() {
             <p className="mt-2 text-xs text-slate-500">
               監督: {awayTeam?.tactical_profile?.manager_name ?? "-"} / フォーメーション: {awayTeam?.default_formation ?? "-"}
             </p>
+            {awayTeamId && (
+              <Link to={`/teams/${awayTeamId}`} className="mt-1 inline-block text-xs text-emerald-400 hover:text-emerald-300">
+                予測スタメンを見る →
+              </Link>
+            )}
           </div>
         </div>
 
