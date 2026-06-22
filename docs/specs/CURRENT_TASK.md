@@ -8,7 +8,7 @@ Read first:
 
 Implement next:
 
-- `docs/specs/004-simulator-prediction-panel.md`
+- `docs/specs/005-tournament-odds-panel.md`
 
 Context only:
 
@@ -18,5 +18,6 @@ Completed:
 
 - `docs/specs/001-lint-fix.md`
 - `docs/specs/003-match-detail-trust-states.md`
+- `docs/specs/004-simulator-prediction-panel.md`
 
 Follow the autonomous sprint protocol. Commit when the spec passes its verification commands.

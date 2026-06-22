@@ -10,16 +10,17 @@
 
 ## Current Priority
 
-Expose prediction reasoning before single-match simulation so the site feels analytical instead of random.
+Expose tournament-level probability estimates so users can compare one generated bracket with broader simulation odds.
 
 Completed:
 
 - `docs/specs/001-lint-fix.md`
 - `docs/specs/003-match-detail-trust-states.md`
+- `docs/specs/004-simulator-prediction-panel.md`
 
 Primary task:
 
-- `docs/specs/004-simulator-prediction-panel.md`
+- `docs/specs/005-tournament-odds-panel.md`
 
 Direction-only context:
 
@@ -27,7 +28,7 @@ Direction-only context:
 
 ## Verification Baseline
 
-Last known baseline from Codex inspection after commit `1926887`:
+Last known baseline from Codex inspection after commit `0b86d15`:
 
 - Backend tests: `115 passed`
 - Frontend build: passed
@@ -38,18 +39,19 @@ Last known baseline from Codex inspection after commit `1926887`:
 
 ## Open Risks
 
-- Simulator prediction panel must not imply certainty; backend disclaimer and model version must remain visible.
+- Tournament odds panel must not imply certainty; backend disclaimer and iteration count must remain visible.
+- Monte Carlo requests are CPU-heavy and rate-limited, so they must be user-triggered rather than automatic on page load.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
-After the simulator prediction panel task is complete:
+After the tournament odds panel task is complete:
 
 1. Codex reviews Claude Code's changes.
 2. Codex reruns or checks `npm run lint` and `npm run build`.
 3. Codex decides the next spec, likely one of:
    - player/manager data confidence system
    - simulation calibration review
-   - tournament-level Monte Carlo odds UI
+   - Match Detail v2 follow-up
