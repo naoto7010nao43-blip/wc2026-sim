@@ -112,6 +112,29 @@ Cover at least these patterns:
 
 If you identify specific real false negatives from the current report, add 2-5 regression tests using those real strings.
 
+Useful real examples found during Codex-side read-only exploration:
+
+| teamCode | seed playerId | seed name | official name block |
+| --- | --- | --- | --- |
+| BRA | `BRA_EDERSON` | `Ederson Moraes` | `EDERSON Ederson SANTANA DE MORAESEDERSON` |
+| ARG | `ARG_ROMERO` | `Cristian Romero` | `ROMERO CristianCristian GabrielROMEROROMERO` |
+| ARG | `ARG_DEPAUL` | `Rodrigo De Paul` | `DE PAUL RodrigoRodrigo Javier DE PAUL DE PAUL` |
+| FRA | `FRA_SALIBA` | `William Saliba` | `SALIBA WilliamWilliam Alain André Gabriel SALIBA SALIBA` |
+| ENG | `ENG_BELLINGHAM` | `Jude Bellingham` | `BELLINGHAM JudeJude Victor William BELLINGHAM BELLINGHAM` |
+| USA | `USA_PULISIC` | `Christian Pulisic` | `PULISIC ChristianChristian MatePULISIC PULISIC` |
+| CAN | `CAN_DAVIES` | `Alphonso Davies` | `DAVIES AlphonsoAlphonso Boyle DAVIES DAVIES` |
+| NOR | `NOR_OSTIGARD` | `Leo Skiri Ostigard` | `OSTIGARD LeoLeo Skiri ØSTIGÅRDØSTIGÅRD` |
+| TUN | `TUN_BENHESSEN` | `Sabri Ben Hessen` | `BEN HESSEN SabriSabri BEN HSANBEN HESSEN` |
+| HAI | `HAI_ETIENNE` | `Derrick Etienne Jr.` | `ETIENNE DerrickDerrick Burckley ETIENNE JRETIENNE JR` |
+
+These examples are not a license for broad fuzzy matching. Use them to test deterministic candidate-key behavior only.
+
+Negative-match risks to preserve:
+
+- do not match on one token alone, especially `David`, `James`, `Williams`, `Silva`, `Miller`, `Cordoba`
+- do not infer nickname pairs such as `Matt/Matthew`, `Tim/Timothy`, `Ollie/Oliver`, `Nico/Nicholas`, `Ko/Kou` unless the official block itself contains the seed token sequence
+- do not rely on `playerId` surname text, because some IDs are stale or misleading; match using seed `name`, team, and official block
+
 ## Phase 4: Regenerate Read-Only Reports
 
 After matcher improvements, run:
