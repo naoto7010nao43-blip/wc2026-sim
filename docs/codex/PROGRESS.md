@@ -27,6 +27,7 @@ Primary task:
 Direction-only context:
 
 - `docs/specs/002-match-detail-v2-direction.md`
+- `docs/specs/007-official-squad-data-update-direction.md`
 
 ## Verification Baseline
 

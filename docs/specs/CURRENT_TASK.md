@@ -15,6 +15,7 @@ Spec 006 has been implemented and committed. Codex is preparing the next task fr
 Context only:
 
 - `docs/specs/002-match-detail-v2-direction.md`
+- `docs/specs/007-official-squad-data-update-direction.md`
 
 Completed:
 
