@@ -10,17 +10,18 @@
 
 ## Current Priority
 
-Expose tournament-level probability estimates so users can compare one generated bracket with broader simulation odds.
+Reduce user handoff work while Codex reviews completed implementation and prepares the next high-value task.
 
 Completed:
 
 - `docs/specs/001-lint-fix.md`
 - `docs/specs/003-match-detail-trust-states.md`
 - `docs/specs/004-simulator-prediction-panel.md`
+- `docs/specs/005-tournament-odds-panel.md`
 
 Primary task:
 
-- `docs/specs/005-tournament-odds-panel.md`
+- None active for Claude Code. Codex is reviewing and planning.
 
 Direction-only context:
 
@@ -28,7 +29,7 @@ Direction-only context:
 
 ## Verification Baseline
 
-Last known baseline from Codex inspection after commit `0b86d15`:
+Last known baseline from Codex inspection after commit `8b35778`:
 
 - Backend tests: `115 passed`
 - Frontend build: passed
@@ -39,19 +40,18 @@ Last known baseline from Codex inspection after commit `0b86d15`:
 
 ## Open Risks
 
-- Tournament odds panel must not imply certainty; backend disclaimer and iteration count must remain visible.
-- Monte Carlo requests are CPU-heavy and rate-limited, so they must be user-triggered rather than automatic on page load.
+- Do not ask the user for routine implementation or commit approval.
+- Use Claude Code only when Codex has prepared a clear Ready task.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
-After the tournament odds panel task is complete:
+Next Codex actions:
 
-1. Codex reviews Claude Code's changes.
-2. Codex reruns or checks `npm run lint` and `npm run build`.
-3. Codex decides the next spec, likely one of:
+1. Continue reducing user handoff overhead.
+2. Choose the next high-value spec, likely one of:
    - player/manager data confidence system
    - simulation calibration review
    - Match Detail v2 follow-up
