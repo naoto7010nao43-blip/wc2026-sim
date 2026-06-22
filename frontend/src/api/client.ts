@@ -7,6 +7,7 @@ import type {
   TeamOut,
   TeamSummary,
   TournamentResult,
+  TournamentSimulationOut,
 } from "../types/domain";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
@@ -47,4 +48,9 @@ export const api = {
     postJson<RoundRobinResult>(`/api/groups/${groupId}/simulate-round-robin`, { team_ids: teamIds, seed }),
   runTournament: () => postJson<TournamentResult>("/api/tournament/run", {}),
   getTournamentState: () => getJson<TournamentResult | null>("/api/tournament/state"),
+  simulateTournamentMonteCarlo: (opts?: { iterations?: number; seed?: number }) =>
+    postJson<TournamentSimulationOut>("/api/tournament/simulate-monte-carlo", {
+      iterations: opts?.iterations ?? 500,
+      seed: opts?.seed ?? 0,
+    }),
 };

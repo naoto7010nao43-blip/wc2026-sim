@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../api/client";
 import { BracketView } from "../components/BracketView";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
+import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
 import type { TournamentResult } from "../types/domain";
 
 export function TournamentPage() {
@@ -69,6 +70,8 @@ export function TournamentPage() {
         </div>
         {error && <p className="mt-3 text-sm text-rose-400">{error}</p>}
       </section>
+
+      <TournamentOddsPanel />
 
       {restoring && <p className="text-sm text-slate-400">読み込み中...</p>}
 

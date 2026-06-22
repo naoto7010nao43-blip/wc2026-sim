@@ -44,6 +44,18 @@ export interface LikelyLineupOut {
   disclaimer: string;
 }
 
+export interface TournamentSimulationOut {
+  iterations: number;
+  model_version: string;
+  round_of_32_pct: Record<string, number>;
+  round_of_16_pct: Record<string, number>;
+  quarterfinal_pct: Record<string, number>;
+  semifinal_pct: Record<string, number>;
+  final_pct: Record<string, number>;
+  champion_pct: Record<string, number>;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;
