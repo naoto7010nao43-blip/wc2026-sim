@@ -32,9 +32,10 @@ export function TournamentOddsPanel() {
 
   return (
     <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
-      <h3 className="text-lg font-bold">優勝確率(モンテカルロ推定)</h3>
+      <h3 className="text-lg font-bold">優勝確率・モンテカルロ推定</h3>
       <p className="mt-1 text-sm text-slate-400">
-        1回分のブラケットだけでなく、{ITERATIONS}回シミュレーションした際の確率分布を確認できます。計算負荷が高いため、ボタンを押したときのみ実行します。
+        1回分のブラケットだけでなく、{ITERATIONS}回シミュレーションした場合の確率分布を確認できます。
+        計算負荷が高いため、ボタンを押したときのみ実行します。
       </p>
 
       <button
@@ -50,7 +51,7 @@ export function TournamentOddsPanel() {
       {result && (
         <div className="mt-5 space-y-4">
           <div>
-            <p className="text-xs uppercase tracking-widest text-slate-500">優勝確率(上位{TOP_N})</p>
+            <p className="text-xs uppercase tracking-widest text-slate-500">優勝確率 上位{TOP_N}</p>
             <div className="mt-2 space-y-1.5">
               {topEntries(result.champion_pct, TOP_N).map(([teamId, pct]) => (
                 <div key={teamId} className="flex items-center justify-between gap-2 text-sm">
@@ -62,7 +63,7 @@ export function TournamentOddsPanel() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-widest text-slate-500">準決勝進出確率(上位{TOP_N})</p>
+            <p className="text-xs uppercase tracking-widest text-slate-500">準決勝進出確率 上位{TOP_N}</p>
             <div className="mt-2 space-y-1.5">
               {topEntries(result.semifinal_pct, TOP_N).map(([teamId, pct]) => (
                 <div key={teamId} className="flex items-center justify-between gap-2 text-sm">
