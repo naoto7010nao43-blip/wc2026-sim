@@ -31,14 +31,13 @@ REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 
 DEFAULT_PDF_URL = "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf"
 TEAM_HEADER_RE = re.compile(r"(?:SQUAD LIST)?(?P<team>.+?)\s+\((?P<code>[A-Z]{3})\)$")
-PLAYER_LINE_RE = re.compile(
-    r"^(?P<position>GK|DF|MF|FW)\s+"
-    r"(?P<name_block>.+?)\s+"
-    r"(?P<dob>\d{2}/\d{2}/\d{4})\s+"
-    r"(?P<club>.+?)\s+"
+PLAYER_LINE_RE = re.compile(r"^(?P<position>GK|DF|MF|FW)\s*(?P<body>.+)$")
+DOB_RE = re.compile(r"\d{2}/\d{2}/\d{4}")
+PLAYER_SUFFIX_RE = re.compile(
+    r"^(?P<club>.+?\([A-Z]{3}\))\s+"
     r"(?P<height_cm>\d{2,3})\s+"
-    r"(?P<caps>\d+)\s+"
-    r"(?P<goals>\d+)$"
+    r"(?P<caps>\d+)"
+    r"(?:\s+(?P<goals>\d+))?$"
 )
 COACH_RE = re.compile(r"^Head coach\s+(?P<name_block>.+)\s+(?P<nationality>[A-Za-z .'-]+)$")
 
@@ -105,6 +104,52 @@ def _candidate_team_header(line: str) -> tuple[str, str] | None:
     return name, code
 
 
+def _split_compact_caps_goals(value: str) -> tuple[int, int]:
+    """pypdf sometimes extracts caps/goals without a separating space, e.g.
+    `1208` for 120 caps and 8 goals or `200120` for 200 caps and 120 goals.
+    Prefer preserving explicit spaces when present; use this only for the
+    compact fallback."""
+    if len(value) <= 2:
+        return int(value), 0
+    if len(value) == 3:
+        return int(value[:2]), int(value[2:])
+    return int(value[:3]), int(value[3:])
+
+
+def parse_player_line(line: str) -> OfficialPlayer | None:
+    player_match = PLAYER_LINE_RE.match(line)
+    if not player_match:
+        return None
+
+    body = player_match.group("body")
+    dob_match = DOB_RE.search(body)
+    if not dob_match:
+        return None
+
+    name_block = body[:dob_match.start()].strip()
+    dob = dob_match.group(0)
+    suffix = body[dob_match.end():].strip()
+    suffix_match = PLAYER_SUFFIX_RE.match(suffix)
+    if not suffix_match:
+        return None
+
+    goals_text = suffix_match.group("goals")
+    if goals_text is None:
+        caps, goals = _split_compact_caps_goals(suffix_match.group("caps"))
+    else:
+        caps, goals = int(suffix_match.group("caps")), int(goals_text)
+
+    return OfficialPlayer(
+        position=player_match.group("position"),
+        name_block=name_block,
+        dob=dob,
+        club=suffix_match.group("club"),
+        height_cm=int(suffix_match.group("height_cm")),
+        caps=caps,
+        goals=goals,
+    )
+
+
 def parse_squad_text(text: str) -> dict[str, OfficialTeam]:
     teams: dict[str, OfficialTeam] = {}
     current_code: str | None = None
@@ -141,17 +186,9 @@ def parse_squad_text(text: str) -> dict[str, OfficialTeam]:
         if current_code is None:
             continue
 
-        player_match = PLAYER_LINE_RE.match(line)
-        if player_match:
-            current_players.append(OfficialPlayer(
-                position=player_match.group("position"),
-                name_block=player_match.group("name_block"),
-                dob=player_match.group("dob"),
-                club=player_match.group("club"),
-                height_cm=int(player_match.group("height_cm")),
-                caps=int(player_match.group("caps")),
-                goals=int(player_match.group("goals")),
-            ))
+        official_player = parse_player_line(line)
+        if official_player:
+            current_players.append(official_player)
             continue
 
         coach_match = COACH_RE.match(line)
