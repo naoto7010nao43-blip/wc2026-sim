@@ -163,6 +163,19 @@ was fixed (not just noted), verified, and committed separately:
   (390px) overflow check on `/`, `/tournament`, `/simulate` — all clean, no
   horizontal overflow, no console errors.
 
+## One more mobile check (no fix needed)
+
+Re-checked `/tournament` on a 390px viewport *after* a populated bracket
+existed (the earlier mobile sweep only saw the pre-simulation empty state).
+A `fullPage: false` screenshot first looked like the Round-of-16 column was
+clipped at the right edge. Investigated with `document.querySelector`:
+`BracketView.tsx` wraps the rounds in a `flex gap-4 overflow-x-auto` container
+(`scrollWidth: 964` vs `clientWidth: 358`) — i.e. the bracket is intentionally
+horizontally scrollable on narrow screens, and a programmatic
+`scrollLeft = 300` confirmed it actually scrolls and reveals the later rounds
+correctly. Not a bug, just flagging that this is what's happening in case
+it ever looks suspicious in a future check.
+
 ## Suggested next step for Codex
 
 The natural follow-up is deciding whether/how to spend a "Spec 007B" on:
