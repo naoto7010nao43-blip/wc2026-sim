@@ -77,6 +77,13 @@ class PlayerRatingV2:
     current_form: int
     availability: int
 
+    # 0-100: likelihood of starting the next match, estimated from this
+    # player's club minutes/appearances/market value *relative to other
+    # players in the same position group on the same team* (see
+    # compute_starting_probabilities in player_rating_model.py). Not a
+    # formation-slot assignment by itself -- see lineup_builder.py for that.
+    starting_probability: int
+
     uncertainty: float  # 0 (well-supported) - 1 (almost entirely guessed)
     data_confidence: DataConfidence
     source_breakdown: RatingSourceBreakdown
@@ -97,7 +104,8 @@ class PlayerRatingV2:
             decision_making=d["decisionMaking"], positioning=d["positioning"],
             goalkeeper_handling=d["goalkeeperHandling"], goalkeeper_reflexes=d["goalkeeperReflexes"],
             goalkeeper_distribution=d["goalkeeperDistribution"], current_form=d["currentForm"],
-            availability=d["availability"], uncertainty=d["uncertainty"], data_confidence=d["dataConfidence"],
+            availability=d["availability"], starting_probability=d.get("startingProbability", 50),
+            uncertainty=d["uncertainty"], data_confidence=d["dataConfidence"],
             source_breakdown=RatingSourceBreakdown(
                 official_roster=sb.get("officialRoster", True),
                 market_value_used=sb.get("marketValueUsed", False),
@@ -145,6 +153,7 @@ class PlayerRatingV2:
             "goalkeeperDistribution": self.goalkeeper_distribution,
             "currentForm": self.current_form,
             "availability": self.availability,
+            "startingProbability": self.starting_probability,
             "uncertainty": round(self.uncertainty, 3),
             "dataConfidence": self.data_confidence,
             "sourceBreakdown": {

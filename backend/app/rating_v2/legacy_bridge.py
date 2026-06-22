@@ -75,4 +75,5 @@ def v2_skill_attributes(rating: PlayerRatingV2) -> dict:
         "goalkeeperDistribution": rating.goalkeeper_distribution,
         "currentForm": rating.current_form,
         "availability": rating.availability,
+        "startingProbability": rating.starting_probability,
     }

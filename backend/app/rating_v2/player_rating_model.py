@@ -21,6 +21,7 @@ from app.rating.formulas import (
     StageAInputs,
     apply_pipeline,
     compute_overall,
+    percentile_rank,
     stage_a_gk_attributes,
     stage_a_raw_attributes,
 )
@@ -140,6 +141,7 @@ def compute_player_rating_v2(
         ),
         current_form=overall,  # no recent-form signal distinct from season aggregates yet -- see roadmap
         availability=100,  # no injury/suspension data wired in this pass -- see roadmap
+        starting_probability=50,  # placeholder -- needs team-roster context, set by compute_starting_probabilities()
         uncertainty=0.0,  # placeholder, set below
         data_confidence="estimated",  # placeholder, set below
         source_breakdown=RatingSourceBreakdown(
@@ -184,6 +186,47 @@ def compute_player_rating_v2(
             if snake_key in final_fields:
                 final_fields[snake_key] = value
     return PlayerRatingV2(**final_fields)
+
+
+def compute_starting_probabilities(
+    players: list[dict], ratings_by_id: dict[str, PlayerRatingV2]
+) -> dict[str, int]:
+    """0-100 per player: how likely they are to start, relative only to
+    *their own team's other players in the same coarse position group*
+    (GK/DEF/MID/FWD) -- not a league-wide or formation-slot estimate.
+    Blends three signals already present in the data, each compared
+    within that team+group cohort: club minutes (heaviest weight --
+    actual playing time is the strongest real signal of being a starter),
+    market value, and the computed overall rating. A cohort of size 1
+    (e.g. a team's only specialist at a position) gets the neutral 50
+    every percentile_rank gives a singleton population, rather than a
+    misleadingly confident 100.
+    """
+    cohorts: dict[tuple[str, str], list[dict]] = {}
+    for p in players:
+        group = POSITION_GROUPS.get(p["primaryPosition"], "MID")
+        cohorts.setdefault((p["teamId"], group), []).append(p)
+
+    result: dict[str, int] = {}
+    for cohort_players in cohorts.values():
+        minutes_pool = [
+            (p.get("careerStats") or {}).get("minutesPlayed", 0.0) for p in cohort_players
+        ]
+        market_pool = [p.get("marketValueEur") or 0.0 for p in cohort_players]
+        overall_pool = [ratings_by_id[p["playerId"]].overall for p in cohort_players]
+
+        for p in cohort_players:
+            minutes = (p.get("careerStats") or {}).get("minutesPlayed", 0.0)
+            market = p.get("marketValueEur") or 0.0
+            overall = ratings_by_id[p["playerId"]].overall
+
+            score = (
+                0.45 * percentile_rank(minutes, minutes_pool)
+                + 0.30 * percentile_rank(market, market_pool)
+                + 0.25 * percentile_rank(overall, overall_pool)
+            )
+            result[p["playerId"]] = int(round(max(1.0, min(99.0, score * 100.0))))
+    return result
 
 
 def _camel_to_snake(name: str) -> str:

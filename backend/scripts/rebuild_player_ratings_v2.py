@@ -14,6 +14,7 @@ Usage: ./venv/Scripts/python.exe scripts/rebuild_player_ratings_v2.py
 
 import json
 import sys
+from dataclasses import replace
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -21,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app.rating.formulas import POSITION_GROUPS
 from app.rating_v2.manager_rating_model import compute_manager_rating_v2
-from app.rating_v2.player_rating_model import compute_player_rating_v2
+from app.rating_v2.player_rating_model import compute_player_rating_v2, compute_starting_probabilities
 
 SEED_DIR = Path(__file__).resolve().parent.parent / "data" / "seed"
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
@@ -66,10 +67,16 @@ def main():
     if ratings_path.exists():
         previous_ratings_by_id = {r["playerId"]: r for r in json.loads(ratings_path.read_text(encoding="utf-8"))}
 
-    new_ratings = []
+    ratings_by_id: dict[str, object] = {}
     for p in players:
         group = POSITION_GROUPS.get(p["primaryPosition"], "MID")
         rating = compute_player_rating_v2(p, peer_values_by_group.get(group, []), overrides_by_id.get(p["playerId"]))
+        ratings_by_id[p["playerId"]] = rating
+
+    starting_prob_by_id = compute_starting_probabilities(players, ratings_by_id)
+    new_ratings = []
+    for p in players:
+        rating = replace(ratings_by_id[p["playerId"]], starting_probability=starting_prob_by_id[p["playerId"]])
         new_ratings.append(rating.to_json_dict())
 
     team_by_code = {t["teamCode"]: t for t in teams}
