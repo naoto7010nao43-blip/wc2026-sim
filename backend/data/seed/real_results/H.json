@@ -18,5 +18,33 @@
       {"minute": 41, "team_id": "KSA", "scorer_name": "Abdulelah Al-Amri"},
       {"minute": 80, "team_id": "URU", "scorer_name": "Maximiliano Araujo"}
     ]
+  },
+  {
+    "home_team_id": "ESP",
+    "away_team_id": "KSA",
+    "home_score": 4,
+    "away_score": 0,
+    "date": "2026-06-21",
+    "stats": {"home_possession_pct": 67, "away_possession_pct": 33, "home_shots": 22, "away_shots": 3, "home_shots_on_target": 8, "away_shots_on_target": 1, "home_yellow_cards": 0, "away_yellow_cards": 2},
+    "goals": [
+      {"minute": 10, "team_id": "ESP", "scorer_name": "Lamine Yamal", "scorer_name_ja": "ラミネ・ヤマル"},
+      {"minute": 21, "team_id": "ESP", "scorer_name": "Mikel Oyarzabal", "scorer_name_ja": "ミケル・オヤルサバル"},
+      {"minute": 24, "team_id": "ESP", "scorer_name": "Mikel Oyarzabal", "scorer_name_ja": "ミケル・オヤルサバル"},
+      {"minute": 49, "team_id": "ESP", "scorer_name": "Hassan Tambakti (own goal)", "scorer_name_ja": "ハッサン・タンバクティ(オウンゴール)"}
+    ]
+  },
+  {
+    "home_team_id": "URU",
+    "away_team_id": "CPV",
+    "home_score": 2,
+    "away_score": 2,
+    "date": "2026-06-21",
+    "stats": {"home_possession_pct": 65, "away_possession_pct": 35, "home_shots": 17, "away_shots": 12, "home_shots_on_target": 2, "away_shots_on_target": 4, "home_yellow_cards": 2, "away_yellow_cards": 2},
+    "goals": [
+      {"minute": 21, "team_id": "CPV", "scorer_name": "Kevin Pina", "scorer_name_ja": "ケヴィン・ピナ"},
+      {"minute": 44, "team_id": "URU", "scorer_name": "Maxi Araujo", "scorer_name_ja": "マキシ・アラウホ"},
+      {"minute": 45, "team_id": "URU", "scorer_name": "Agustin Canobbio", "scorer_name_ja": "アグスティン・カノビオ"},
+      {"minute": 61, "team_id": "CPV", "scorer_name": "Helio Varela", "scorer_name_ja": "エリオ・バレラ"}
+    ]
   }
 ]
