@@ -27,6 +27,8 @@ class TournamentSimulationOut(BaseModel):
     semifinal_pct: dict[str, float]
     final_pct: dict[str, float]
     champion_pct: dict[str, float]
+    data_confidence: str
+    explanation: list[str]
     disclaimer: str
 
     model_config = {"from_attributes": True}

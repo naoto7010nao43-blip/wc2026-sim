@@ -24,6 +24,7 @@ Completed:
 - `docs/specs/009-official-squad-match-quality.md`
 - Spec 009 follow-up: applied official-profile fields for newly matched players and cleaned PDF ligature artifacts.
 - Product polish: verified and cleaned Japanese copy across home, tournament, simulator, bracket, match cards, and match detail; expanded prediction API mojibake regression checks.
+- Tournament odds transparency: Monte Carlo API now exposes data confidence and method explanation; frontend displays it and remains compatible with older local API responses.
 
 Primary task:
 
@@ -45,6 +46,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Local frontend: responding on `localhost:5173`
 - Browser smoke check: `/teams/BRA` desktop and mobile width passed; official club/caps-goals fields visible; no full-page horizontal overflow detected.
 - Browser smoke check: `/`, `/tournament`, `/simulate`, and a generated match detail page passed; no replacement characters, no halfwidth-kana mojibake, and no full-page horizontal overflow detected.
+- Browser smoke check: tournament odds panel calculation renders without blank-page failure even when an older local backend response lacks the new explanation fields.
 - Production frontend/backend: responding with HTTP 200
 
 ## Open Risks

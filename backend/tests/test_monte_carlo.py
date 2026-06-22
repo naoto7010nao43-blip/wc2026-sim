@@ -57,6 +57,8 @@ def test_monte_carlo_is_deterministic_given_the_same_seed(db_session):
     result2 = simulate_tournament_outcomes(db_session, iterations=20, base_seed=7)
     assert result1.champion_pct == result2.champion_pct
     assert result1.round_of_32_pct == result2.round_of_32_pct
+    assert result1.data_confidence in {"official", "estimated"}
+    assert result1.explanation
 
 
 def test_monte_carlo_stage_percentages_sum_to_expected_slot_counts(db_session):
@@ -78,6 +80,8 @@ def test_monte_carlo_stage_percentages_sum_to_expected_slot_counts(db_session):
 def test_monte_carlo_disclaimer_present(db_session):
     result = simulate_tournament_outcomes(db_session, iterations=10, base_seed=0)
     assert "予測" in result.disclaimer
+    assert "縺" not in result.disclaimer
+    assert "繝" not in result.disclaimer
 
 
 def test_monte_carlo_performance_benchmark(db_session):

@@ -75,6 +75,8 @@ export interface TournamentSimulationOut {
   semifinal_pct: Record<string, number>;
   final_pct: Record<string, number>;
   champion_pct: Record<string, number>;
+  data_confidence?: string;
+  explanation?: string[];
   disclaimer: string;
 }
 

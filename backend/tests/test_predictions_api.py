@@ -92,6 +92,9 @@ def test_monte_carlo_endpoint_returns_stage_percentages(client):
     assert body["iterations"] == 100
     assert "予測" in body["disclaimer"]
     _assert_no_mojibake(body["disclaimer"])
+    assert body["data_confidence"] in {"official", "estimated"}
+    assert body["explanation"]
+    _assert_no_mojibake(" ".join(body["explanation"]))
     assert sum(body["champion_pct"].values()) > 0
 
 

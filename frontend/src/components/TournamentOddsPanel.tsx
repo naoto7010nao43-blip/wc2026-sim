@@ -75,8 +75,15 @@ export function TournamentOddsPanel() {
           </div>
 
           <p className="text-[11px] text-slate-500">
-            {result.iterations}回試行 / モデル: {result.model_version}
+            {result.iterations}回試行 / モデル: {result.model_version} / データ信頼度: {result.data_confidence ?? "不明"}
           </p>
+          {(result.explanation?.length ?? 0) > 0 && (
+            <ul className="space-y-1 text-[11px] text-slate-500">
+              {result.explanation?.map((line, idx) => (
+                <li key={idx}>・{line}</li>
+              ))}
+            </ul>
+          )}
           <p className="text-[11px] text-slate-500">{result.disclaimer}</p>
         </div>
       )}

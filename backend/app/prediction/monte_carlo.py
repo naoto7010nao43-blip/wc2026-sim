@@ -48,6 +48,8 @@ class TournamentSimulationResult:
     semifinal_pct: dict[str, float]
     final_pct: dict[str, float]
     champion_pct: dict[str, float]
+    data_confidence: str
+    explanation: list[str]
     disclaimer: str = "これは予測であり、実際の結果を保証するものではありません。"
 
 
@@ -90,6 +92,7 @@ def simulate_tournament_outcomes(
         defense = defense_rating(players)
         strength, confidence = team_strength_rating(t.fifa_rank, players)
         ratings[t.id] = (attack, defense, strength, confidence)
+    data_confidence = "estimated" if any(confidence == "estimated" for *_ratings, confidence in ratings.values()) else "official"
 
     def lambdas_for(home_id: str, away_id: str) -> tuple[float, float]:
         h_attack, h_defense, h_strength, h_conf = ratings[home_id]
@@ -190,4 +193,10 @@ def simulate_tournament_outcomes(
         semifinal_pct=to_pct(stage_counts["semifinal"]),
         final_pct=to_pct(stage_counts["final"]),
         champion_pct=to_pct(stage_counts["champion"]),
+        data_confidence=data_confidence,
+        explanation=[
+            "未実施試合は攻撃力・守備力・FIFAランク・監督戦術を反映したPoissonモデルで抽選しています。",
+            "実結果が登録済みの試合は再抽選せず、固定結果として扱います。",
+            "各試行でグループ順位、3位突破、決勝トーナメントを2026大会形式に沿って再計算します。",
+        ],
     )
