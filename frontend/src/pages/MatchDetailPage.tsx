@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { MatchEventTimeline } from "../components/MatchEventTimeline";
 import { PitchFormationView } from "../components/PitchFormationView";
@@ -109,7 +109,18 @@ export function MatchDetailPage() {
     };
   }, [isPlaying, match]);
 
-  if (error) return <p className="text-rose-400">{error}</p>;
+  if (error) {
+    return (
+      <div className="space-y-3">
+        <Link to="/" className="text-sm text-slate-400 hover:text-slate-200">
+          ← トップに戻る
+        </Link>
+        <p className="text-rose-400">
+          {error.includes("404") ? "指定された試合が見つかりませんでした。" : "試合データの読み込みに失敗しました。"}
+        </p>
+      </div>
+    );
+  }
   if (!match || match.id !== matchId) return <p className="text-slate-400">読み込み中...</p>;
 
   const isAtEnd = currentIndex >= match.events.length - 1;

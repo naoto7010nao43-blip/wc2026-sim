@@ -52,7 +52,18 @@ export function TeamPage() {
     api.getTeam(teamId).then(setTeam).catch((e) => setError(String(e)));
   }, [teamId]);
 
-  if (error) return <p className="text-rose-400">{error}</p>;
+  if (error) {
+    return (
+      <div className="space-y-3">
+        <Link to="/simulate" className="text-sm text-slate-400 hover:text-slate-200">
+          ← 試合シミュレーターに戻る
+        </Link>
+        <p className="text-rose-400">
+          {error.includes("404") ? "指定されたチームが見つかりませんでした。" : "チームデータの読み込みに失敗しました。"}
+        </p>
+      </div>
+    );
+  }
   if (!team || !teamId) return <p className="text-slate-400">読み込み中...</p>;
 
   const trust = summarizeTrust(team.players);
