@@ -1,4 +1,4 @@
-import { useTeam } from "../context/TeamsContext";
+import { useTeam } from "../context/useTeams";
 import { countryNameJa } from "../data/countryNamesJa";
 
 interface Props {

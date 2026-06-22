@@ -56,16 +56,22 @@ export function MatchDetailPage() {
 
   useEffect(() => {
     if (!matchId) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional reset of stale match data before refetching on matchId change
-    setMatch(null);
+    let cancelled = false;
     api
       .getMatch(matchId)
       .then((m) => {
+        if (cancelled) return;
         setMatch(m);
+        setError(null);
         setCurrentIndex(m.events.length - 1);
         setIsPlaying(false);
       })
-      .catch((e) => setError(String(e)));
+      .catch((e) => {
+        if (!cancelled) setError(String(e));
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [matchId]);
 
   useEffect(() => {
@@ -85,7 +91,7 @@ export function MatchDetailPage() {
   }, [isPlaying, match]);
 
   if (error) return <p className="text-rose-400">{error}</p>;
-  if (!match) return <p className="text-slate-400">読み込み中...</p>;
+  if (!match || match.id !== matchId) return <p className="text-slate-400">読み込み中...</p>;
 
   const isAtEnd = currentIndex >= match.events.length - 1;
 
