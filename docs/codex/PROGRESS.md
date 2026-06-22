@@ -32,7 +32,7 @@ Direction-only context:
 
 Last known baseline from Codex inspection after commit `bcb5f2b`:
 
-- Backend tests: `124 passed`
+- Backend tests: `125 passed`
 - Frontend build: passed
 - Frontend lint: passed
 - Local backend: responding on port 8000
@@ -46,7 +46,7 @@ Last known baseline from Codex inspection after commit `bcb5f2b`:
 - Claude Code should continue through the overnight sprint phases without routine user confirmation.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
-- FIFA Official Squad List diff report shows roster drift for all 48 teams and coach mismatches for 16 teams; seed updates need a separate reviewed import spec.
+- FIFA Official Squad List diff report parses 48 teams and 26 official players per team. Current seed has roster drift for all 48 teams and coach mismatches for 16 teams; seed updates need a separate reviewed import spec.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
