@@ -49,7 +49,8 @@ export function TournamentPage() {
       <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
         <h2 className="text-xl font-bold">大会モード</h2>
         <p className="mt-1 text-sm text-slate-400">
-          ボタン一つでグループステージから決勝までの全104試合をシミュレーションします。各試合カードをクリックすると詳細なリプレイとデータを確認できます。
+          ボタンひとつでグループステージから決勝までの全104試合をシミュレーションします。
+          各試合カードをクリックすると、詳細なリプレイとデータを確認できます。
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <button
@@ -81,7 +82,7 @@ export function TournamentPage() {
 
       {result && (
         // While a new run is in flight, the server briefly clears matches before
-        // rewriting them — disable interaction so stale match links can't 404.
+        // rewriting them; disable interaction so stale match links can't 404.
         <div className={loading ? "pointer-events-none opacity-40 transition-opacity" : "transition-opacity"}>
           <section>
             <h3 className="mb-3 text-lg font-bold">決勝トーナメント</h3>

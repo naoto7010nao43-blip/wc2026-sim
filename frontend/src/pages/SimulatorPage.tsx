@@ -53,7 +53,9 @@ export function SimulatorPage() {
     <div className="space-y-6">
       <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
         <h2 className="text-xl font-bold">試合シミュレーター</h2>
-        <p className="mt-1 text-sm text-slate-400">気になる対戦カードを選んで、その1試合だけを詳細にシミュレーションします。</p>
+        <p className="mt-1 text-sm text-slate-400">
+          気になる対戦カードを選んで、その1試合だけを詳細にシミュレーションします。
+        </p>
 
         <div className="mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div>
@@ -105,7 +107,7 @@ export function SimulatorPage() {
 
         <div className="mt-4 flex flex-wrap items-center gap-4">
           <label className="flex items-center gap-2 text-sm text-slate-400">
-            シード(任意):
+            シード任意:
             <input
               value={seed}
               onChange={(e) => setSeed(e.target.value)}
@@ -115,7 +117,7 @@ export function SimulatorPage() {
           </label>
           <label className="flex items-center gap-2 text-sm text-slate-400">
             <input type="checkbox" checked={decisive} onChange={(e) => setDecisive(e.target.checked)} />
-            引き分け無し(延長・PK)
+            引き分けなし（延長・PK）
           </label>
         </div>
 

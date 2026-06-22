@@ -15,6 +15,13 @@ from app.models.player import Player
 from app.models.team import Team
 from app.rating.seed_pipeline import build_player_rows, load_seed_data
 
+MOJIBAKE_MARKERS = ("縺", "繝", "莠", "蜆", "螟", "邇", "謗")
+
+
+def _assert_no_mojibake(text: str) -> None:
+    for marker in MOJIBAKE_MARKERS:
+        assert marker not in text
+
 
 @pytest.fixture()
 def client():
@@ -57,6 +64,7 @@ def test_match_prediction_endpoint_returns_disclaimer_and_probabilities(client):
     assert body["home_team_id"] == "BRA"
     assert body["away_team_id"] == "ARG"
     assert "予測" in body["disclaimer"]
+    _assert_no_mojibake(body["disclaimer"])
     total = body["home_win_pct"] + body["draw_pct"] + body["away_win_pct"]
     assert abs(total - 100.0) < 0.5
     assert len(body["most_likely_scores"]) == 3
@@ -68,8 +76,7 @@ def test_match_prediction_explanation_is_readable_japanese(client):
     body = resp.json()
     assert body["explanation"]
     joined = " ".join(body["explanation"])
-    assert "縺" not in joined
-    assert "繝" not in joined
+    _assert_no_mojibake(joined)
     assert any(keyword in joined for keyword in ("優位", "互角", "ホームアドバンテージ"))
 
 
@@ -84,6 +91,7 @@ def test_monte_carlo_endpoint_returns_stage_percentages(client):
     body = resp.json()
     assert body["iterations"] == 100
     assert "予測" in body["disclaimer"]
+    _assert_no_mojibake(body["disclaimer"])
     assert sum(body["champion_pct"].values()) > 0
 
 

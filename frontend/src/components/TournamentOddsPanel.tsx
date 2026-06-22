@@ -34,8 +34,8 @@ export function TournamentOddsPanel() {
     <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
       <h3 className="text-lg font-bold">優勝確率・モンテカルロ推定</h3>
       <p className="mt-1 text-sm text-slate-400">
-        1回分のブラケットだけでなく、{ITERATIONS}回シミュレーションした場合の確率分布を確認できます。
-        計算負荷が高いため、ボタンを押したときのみ実行します。
+        1回のトーナメント結果だけではなく、{ITERATIONS}回のシミュレーションから勝ち上がりやすさを確認できます。
+        計算負荷が高いため、ボタンを押したときだけ実行します。
       </p>
 
       <button

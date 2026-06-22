@@ -23,6 +23,7 @@ Completed:
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
 - Spec 009 follow-up: applied official-profile fields for newly matched players and cleaned PDF ligature artifacts.
+- Product polish: verified tournament/simulator copy, tightened Japanese wording, and expanded prediction API mojibake regression checks.
 
 Primary task:
 
@@ -56,6 +57,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Spec 009 improved conservative name matching and regenerated read-only official squad reports. After PDF ligature cleanup, remaining roster risk is now 652 official players and 73 seed players unmatched by the current heuristic, down from 776 and 197.
 - Spec 009 follow-up applied official-profile fields for newly matched players. Compared with the previous commit, 124 players gained official profile data; 624 official-profile field values changed in total, including cleanup of PDF `fi` ligature extraction artifacts. The regenerated merge proposal now has 0 matched-player field update candidates.
 - All backend JSON files currently scan clean for control characters.
+- Prediction API disclaimer/explanation tests now check a broader set of mojibake markers.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
