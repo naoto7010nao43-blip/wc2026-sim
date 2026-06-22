@@ -8,6 +8,8 @@ The user should not need to monitor Claude Code in detail.
 
 Codex writes task specs and reviews outcomes. Claude Code implements the current spec. The user mainly forwards short trigger messages when needed.
 
+For longer runs with fewer user interruptions, use `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`.
+
 ## What Codex Can Do
 
 Codex can:
@@ -30,6 +32,8 @@ docs/specs/CURRENT_TASK.md を読んで実装してください。完了後、�
 ```
 
 For review, the user can paste Claude Code's final report back to Codex, or simply tell Codex that Claude finished. Codex will inspect the repository directly.
+
+If Claude Code has committed changes locally, Codex can inspect the commit and working tree directly.
 
 ## User Requests
 

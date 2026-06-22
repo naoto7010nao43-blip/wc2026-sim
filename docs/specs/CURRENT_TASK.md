@@ -1,11 +1,21 @@
 # Current Task
 
-Read and implement:
+Read first:
+
+- `docs/codex/ROLE_SPLIT.md`
+- `docs/codex/HANDOFF_PROTOCOL.md`
+- `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`
+
+Implement next:
+
+- `docs/specs/003-match-detail-trust-states.md`
+
+Context only:
+
+- `docs/specs/002-match-detail-v2-direction.md`
+
+Completed:
 
 - `docs/specs/001-lint-fix.md`
 
-Also read:
-
-- `docs/codex/ROLE_SPLIT.md`
-
-Do not implement `docs/specs/002-match-detail-v2-direction.md` yet. It is direction only.
+Follow the autonomous sprint protocol. Commit when the spec passes its verification commands.
