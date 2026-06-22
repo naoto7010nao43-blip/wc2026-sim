@@ -56,19 +56,53 @@ def test_different_seeds_can_produce_different_results():
     assert len(results) > 1
 
 
+def _is_goal(e: dict) -> bool:
+    # A scored penalty kick is a goal too, just logged under its own event
+    # type (penalty_kick) rather than "goal", so it carries shot/PK-specific
+    # metadata (the taker, the keeper, scored True/False).
+    if e["event_type"] == "goal":
+        return True
+    return e["event_type"] == "penalty_kick" and (e.get("event_metadata") or {}).get("scored") is True
+
+
 def test_event_log_goal_count_matches_score():
     home = make_squad("HOME", 75)
     away = make_squad("AWAY", 55)
     result = simulate_match("HOME", "AWAY", home, away, "4-3-3", "4-3-3", seed=5)
 
-    home_goals = sum(1 for e in result["events"] if e["event_type"] == "goal" and e["team_id"] == "HOME")
-    away_goals = sum(1 for e in result["events"] if e["event_type"] == "goal" and e["team_id"] == "AWAY")
+    home_goals = sum(1 for e in result["events"] if _is_goal(e) and e["team_id"] == "HOME")
+    away_goals = sum(1 for e in result["events"] if _is_goal(e) and e["team_id"] == "AWAY")
 
     assert home_goals == result["home_score"]
     assert away_goals == result["away_score"]
     assert result["events"][0]["event_type"] == "kickoff"
     assert result["events"][-1]["event_type"] == "fulltime"
     assert any(e["event_type"] == "halftime" for e in result["events"])
+
+
+def test_penalty_kick_in_regular_play_is_reflected_in_score_and_shots():
+    home = make_squad("HOME", 75)
+    away = make_squad("AWAY", 55)
+    found_pk = False
+    for seed in range(60):
+        result = simulate_match("HOME", "AWAY", home, away, "4-3-3", "4-3-3", seed=seed)
+        pks = [e for e in result["events"] if e["event_type"] == "penalty_kick"]
+        if not pks:
+            continue
+        found_pk = True
+        home_goals = sum(1 for e in result["events"] if _is_goal(e) and e["team_id"] == "HOME")
+        away_goals = sum(1 for e in result["events"] if _is_goal(e) and e["team_id"] == "AWAY")
+        assert home_goals == result["home_score"]
+        assert away_goals == result["away_score"]
+        # Every PK attempt (scored or saved) must count as a shot and a
+        # shot-on-target for its team.
+        for pk in pks:
+            shots_key = "home_shots" if pk["team_id"] == "HOME" else "away_shots"
+            sot_key = "home_shots_on_target" if pk["team_id"] == "HOME" else "away_shots_on_target"
+            assert result[shots_key] >= 1
+            assert result[sot_key] >= 1
+        break
+    assert found_pk  # at least one of these seeds should produce an in-box foul
 
 
 def test_stronger_team_wins_more_often_but_not_always():

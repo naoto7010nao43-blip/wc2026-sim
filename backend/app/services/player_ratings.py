@@ -69,6 +69,16 @@ def compute_player_ratings(
             add(pid, 0.03 if outcome == "saved" else -0.03)
             if outcome == "saved" and secondary in deltas:
                 add(secondary, 0.15)  # goalkeeper credit for the save
+        elif event_type == "penalty_kick":
+            scored = (e.get("event_metadata") or {}).get("scored")
+            if scored:
+                add(pid, EVENT_DELTAS["goal"])
+                if pid in goals:
+                    goals[pid] += 1
+            else:
+                add(pid, -0.2)  # missed a big chance
+                if secondary in deltas:
+                    add(secondary, 0.15)  # goalkeeper credit for the save
 
     ratings = [
         {

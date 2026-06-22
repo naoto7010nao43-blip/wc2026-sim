@@ -43,7 +43,7 @@ export function MatchEventTimeline({ events, currentIndex, onSelectEvent }: Prop
             onClick={() => onSelectEvent?.(idx)}
             className={`flex items-baseline gap-2 rounded px-2 py-1 text-sm ${onSelectEvent ? "cursor-pointer" : ""} ${
               isActive ? "bg-emerald-700/40 text-slate-100" : isPast ? "text-slate-300" : "text-slate-500"
-            } ${e.event_type === "goal" ? "font-bold text-amber-400" : ""}`}
+            } ${e.event_type === "goal" || (e.event_type === "penalty_kick" && e.event_metadata?.scored) ? "font-bold text-amber-400" : ""}`}
           >
             <span className="w-9 shrink-0 font-mono text-xs text-slate-500">{e.minute}'</span>
             <span>{EVENT_ICONS[e.event_type] ?? "•"}</span>

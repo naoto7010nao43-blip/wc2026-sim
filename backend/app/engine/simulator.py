@@ -19,8 +19,8 @@ from app.engine.actions import (
 )
 from app.engine.events import make_event
 from app.engine.management import apply_game_plan, maybe_substitute, update_score_state_tactics
-from app.engine.penalties import resolve_shootout
-from app.engine.pitch import attacking_progress, distance, zone_for_progress
+from app.engine.penalties import compute_penalty_success, resolve_shootout
+from app.engine.pitch import attacking_progress, distance, is_in_penalty_box, zone_for_progress
 from app.engine.state import TeamState, build_team_state
 
 EVENT_DURATION_RANGE = (0.3, 0.6)
@@ -28,6 +28,27 @@ EVENT_DURATION_RANGE = (0.3, 0.6)
 
 def _other(team: TeamState, home: TeamState, away: TeamState) -> TeamState:
     return away if team is home else home
+
+
+def _resolve_penalty_kick(attacker: TeamState, defender: TeamState, minute: int, rng) -> dict:
+    """A foul committed inside the defending team's own box -- award and
+    resolve a penalty kick instead of just a turnover. Reuses the same
+    per-kick conversion model as shootouts (penalties.compute_penalty_success,
+    real-world-calibrated to ~75-80% average conversion) so a penalty is
+    worth roughly the same in regular play as it is in a shootout."""
+    taker = max(attacker.outfield(), key=lambda p: p.attributes.get("shooting", 0))
+    keeper = defender.goalkeeper()
+    scored = rng.random() < compute_penalty_success(taker, keeper)
+    description = (
+        f"PK: {taker.display_name} が決めた!" if scored
+        else f"PK: {taker.display_name} のキックは {keeper.display_name} に防がれた。"
+    )
+    event = make_event(
+        minute, "penalty_kick", attacker.team_id, description,
+        player_id=taker.player_id, secondary_player_id=keeper.player_id,
+        event_metadata={"scored": scored},
+    )
+    return {"scored": scored, "event": event}
 
 
 def simulate_match(
@@ -188,8 +209,16 @@ def simulate_match(
                         player_id=tackler.player_id,
                         x=ball_x, y=ball_y,
                     ))
-                ball_x, ball_y = tackler.x, tackler.y
-                possession = defender
+                if card is not None and is_in_penalty_box(ball_x, ball_y, attacker.attacking_direction):
+                    pk = _resolve_penalty_kick(attacker, defender, minute, rng)
+                    events.append(pk["event"])
+                    if pk["scored"]:
+                        attacker.score += 1
+                    ball_x, ball_y = 50.0, 50.0
+                    possession = defender
+                else:
+                    ball_x, ball_y = tackler.x, tackler.y
+                    possession = defender
 
         else:  # DRIBBLE
             new_pos = advance_position((ball_x, ball_y), attacker.attacking_direction, step=10.0, rng=rng)
@@ -220,8 +249,16 @@ def simulate_match(
                         player_id=nearest_def.player_id,
                         x=ball_x, y=ball_y,
                     ))
-                ball_x, ball_y = nearest_def.x, nearest_def.y
-                possession = defender
+                if card is not None and is_in_penalty_box(ball_x, ball_y, attacker.attacking_direction):
+                    pk = _resolve_penalty_kick(attacker, defender, minute, rng)
+                    events.append(pk["event"])
+                    if pk["scored"]:
+                        attacker.score += 1
+                    ball_x, ball_y = 50.0, 50.0
+                    possession = defender
+                else:
+                    ball_x, ball_y = nearest_def.x, nearest_def.y
+                    possession = defender
 
         apply_positional_gravity(attacker, exclude=carrier)
         apply_positional_gravity(defender, exclude=None)
@@ -268,12 +305,17 @@ def simulate_match(
 
     stats = {}
     for team in (home, away):
-        shots_on_target = _count("goal", team.team_id) + sum(
+        # Penalty kicks get their own event type (not "goal"/"shot"), but
+        # they're still shots -- and essentially always either scored or
+        # saved (a truly off-target PK is rare), so each one also counts
+        # toward shots_on_target.
+        penalty_kicks = _count("penalty_kick", team.team_id)
+        shots_on_target = penalty_kicks + _count("goal", team.team_id) + sum(
             1 for e in events
             if e["event_type"] == "shot" and e["team_id"] == team.team_id and e["event_metadata"].get("outcome") == "saved"
         )
         stats[team.team_id] = {
-            "shots": _count("goal", team.team_id) + _count("shot", team.team_id),
+            "shots": penalty_kicks + _count("goal", team.team_id) + _count("shot", team.team_id),
             "shots_on_target": shots_on_target,
             "yellow_cards": _count("yellow_card", team.team_id),
             "red_cards": _count("red_card", team.team_id),
