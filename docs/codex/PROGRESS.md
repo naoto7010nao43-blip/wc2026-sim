@@ -23,7 +23,7 @@ Completed:
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
 - Spec 009 follow-up: applied official-profile fields for newly matched players and cleaned PDF ligature artifacts.
-- Product polish: verified tournament/simulator copy, tightened Japanese wording, and expanded prediction API mojibake regression checks.
+- Product polish: verified and cleaned Japanese copy across home, tournament, simulator, bracket, match cards, and match detail; expanded prediction API mojibake regression checks.
 
 Primary task:
 
@@ -44,6 +44,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Local backend: responding on port 8000
 - Local frontend: responding on `localhost:5173`
 - Browser smoke check: `/teams/BRA` desktop and mobile width passed; official club/caps-goals fields visible; no full-page horizontal overflow detected.
+- Browser smoke check: `/`, `/tournament`, `/simulate`, and a generated match detail page passed; no replacement characters, no halfwidth-kana mojibake, and no full-page horizontal overflow detected.
 - Production frontend/backend: responding with HTTP 200
 
 ## Open Risks

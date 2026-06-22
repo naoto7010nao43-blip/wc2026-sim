@@ -40,7 +40,7 @@ export function MatchCard({ match, className = "" }: Props) {
         <div className="mt-1 flex items-center gap-1">
           {isReal ? (
             <span className="flex items-center gap-1 rounded bg-amber-500/25 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              ⚽ 実結果
+              実結果
             </span>
           ) : (
             <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">シミュレーション</span>

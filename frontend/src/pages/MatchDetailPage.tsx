@@ -40,11 +40,11 @@ function matchKindOf(match: MatchResult): MatchKind {
 const MATCH_KIND_DESCRIPTIONS: Record<MatchKind, string> = {
   real: "実際に行われた試合の結果です。",
   detailed_simulation: "選手データに基づく、イベント単位の詳細シミュレーション結果です。",
-  poisson: "得点分布モデルによるスコア予測です。イベント再現や選手採点はありません。",
+  poisson: "期待得点モデルによるスコア予測です。イベント再現や選手採点はありません。",
 };
 
 const NO_EVENTS_DESCRIPTIONS: Record<MatchKind, string> = {
-  real: "この試合は記録が結果データのみのため、イベント再現は利用できません。",
+  real: "この試合は結果データのみのため、イベント再現は利用できません。",
   detailed_simulation: "この試合はイベントデータが記録されていないため、イベント再現は利用できません。",
   poisson: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
 };
