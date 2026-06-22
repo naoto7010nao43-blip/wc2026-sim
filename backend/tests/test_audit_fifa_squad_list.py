@@ -55,3 +55,10 @@ def test_parse_player_line_handles_pypdf_compacted_columns():
     assert player.height_cm == 170
     assert player.caps == 200
     assert player.goals == 120
+
+
+def test_parse_player_line_cleans_pdf_ligature_artifacts():
+    player = parse_player_line("MFTEST Al\x00e Al\x00e TEST TEST 01/01/2000SL Ben\x00ca (POR) 180 10 1")
+    assert player is not None
+    assert player.name_block == "TEST Alfie Alfie TEST TEST"
+    assert player.club == "SL Benfica (POR)"

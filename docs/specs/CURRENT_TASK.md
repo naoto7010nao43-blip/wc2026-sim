@@ -12,6 +12,7 @@ None.
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
+Codex also applied the newly safe official-profile fields found by Spec 009 and regenerated reports.
 
 Context only:
 
@@ -28,5 +29,6 @@ Completed:
 - Spec 007A official squad merge proposal, implemented as commit `ebe4064`
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
+- Spec 009 follow-up safe field apply for newly matched players
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.

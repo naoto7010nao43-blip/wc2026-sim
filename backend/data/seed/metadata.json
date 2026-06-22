@@ -1,7 +1,7 @@
 {
   "dataVersion": "2026.2.0",
   "modelVersion": "player-rating-v2",
-  "lastUpdated": "2026-06-22T19:10:39.943786+00:00",
+  "lastUpdated": "2026-06-22T19:28:13.454960+00:00",
   "sources": [
     {
       "name": "Existing project seed data (career stats, market value, source citations)",
@@ -12,7 +12,7 @@
     {
       "name": "FIFA Official Squad feed",
       "tier": "S",
-      "lastChecked": "2026-06-22T17:44:43.489996+00:00",
+      "lastChecked": "2026-06-22T19:28:12.949160+00:00",
       "status": "active"
     },
     {

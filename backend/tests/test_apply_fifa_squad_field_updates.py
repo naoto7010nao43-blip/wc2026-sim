@@ -137,3 +137,32 @@ def test_write_outputs_persists_seed_metadata_and_report(tmp_path):
     assert saved_players[0]["caps"] == 80
     assert saved_metadata["sources"][0]["status"] == "active"
     assert saved_report["totalFieldsApplied"] == 5
+
+
+def test_apply_updates_cleans_existing_pdf_ligature_artifacts(tmp_path):
+    seed = _seed_dir(tmp_path)
+    players_path = seed / "players2026_official.json"
+    players = json.loads(players_path.read_text(encoding="utf-8"))
+    players[1]["clubName"] = "SL Ben\x00ca (POR)"
+    _write_json(players_path, players)
+
+    proposal = tmp_path / "proposal.json"
+    _write_json(proposal, {
+        "generatedAt": "2026-06-22T17:44:43+00:00",
+        "matchedPlayerFieldUpdates": [],
+    })
+
+    report, players, _metadata = apply_updates(
+        proposal_path=proposal,
+        seed_dir=seed,
+        reports_dir=tmp_path / "reports",
+        now="2026-06-23T00:00:00+00:00",
+    )
+
+    assert players[1]["clubName"] == "SL Benfica (POR)"
+    assert report["cleanedExistingFields"] == [{
+        "playerId": "BRA_EXISTING",
+        "field": "clubName",
+        "original": "SL Ben\\u0000ca (POR)",
+        "cleaned": "SL Benfica (POR)",
+    }]

@@ -56,6 +56,11 @@ NAME_PARTICLES = {
 }
 
 
+def clean_pdf_text_value(value: str) -> str:
+    """Clean small pypdf extraction artifacts without changing semantics."""
+    return value.replace("\x00", "fi").strip()
+
+
 @dataclass(frozen=True)
 class OfficialPlayer:
     position: str
@@ -163,7 +168,7 @@ def parse_player_line(line: str) -> OfficialPlayer | None:
     if not dob_match:
         return None
 
-    name_block = body[:dob_match.start()].strip()
+    name_block = clean_pdf_text_value(body[:dob_match.start()])
     dob = dob_match.group(0)
     suffix = body[dob_match.end():].strip()
     suffix_match = PLAYER_SUFFIX_RE.match(suffix)
@@ -180,7 +185,7 @@ def parse_player_line(line: str) -> OfficialPlayer | None:
         position=player_match.group("position"),
         name_block=name_block,
         dob=dob,
-        club=suffix_match.group("club"),
+        club=clean_pdf_text_value(suffix_match.group("club")),
         height_cm=int(suffix_match.group("height_cm")),
         caps=caps,
         goals=goals,

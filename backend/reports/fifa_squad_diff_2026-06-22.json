@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T19:22:46.490549+00:00",
+  "generatedAt": "2026-06-22T19:28:07.538214+00:00",
   "source": {
     "name": "FIFA World Cup 2026 Squad List",
     "url": "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf"
@@ -1020,7 +1020,7 @@
         },
         {
           "position": "DF",
-          "name_block": "MBOKAZI Mbekezeli Mbekezeli Mfanu\u0000kileMBOKAZIMBOKAZI",
+          "name_block": "MBOKAZI Mbekezeli Mbekezeli MfanufikileMBOKAZIMBOKAZI",
           "dob": "19/09/2005",
           "club": "Chicago Fire FC (USA)",
           "height_cm": 177,
@@ -1372,7 +1372,7 @@
       "unmatchedOfficialPlayers": [
         {
           "position": "DF",
-          "name_block": "JONES Al\u0000eAl\u0000e CharlesJONES JONES",
+          "name_block": "JONES AlfieAlfie CharlesJONES JONES",
           "dob": "07/10/1997",
           "club": "Middlesbrough FC (ENG)",
           "height_cm": 191,
@@ -1534,7 +1534,7 @@
           "position": "DF",
           "name_block": "DEDIC AmarAmar DEDI Ć DEDI Ć",
           "dob": "18/08/2002",
-          "club": "SL Ben\u0000ca (POR)",
+          "club": "SL Benfica (POR)",
           "height_cm": 180,
           "caps": 30,
           "goals": 1
@@ -1902,9 +1902,9 @@
       "status": "compared",
       "officialPlayerCount": 26,
       "seedPlayerCount": 15,
-      "matchedSeedPlayerCount": 10,
-      "unmatchedOfficialPlayerCount": 16,
-      "unmatchedSeedPlayerCount": 5,
+      "matchedSeedPlayerCount": 11,
+      "unmatchedOfficialPlayerCount": 15,
+      "unmatchedSeedPlayerCount": 4,
       "officialCoachNameBlock": "OUAHBI Mohamed Mohamed OUAHBI",
       "seedManagerName": "Mohamed Ouahbi",
       "coachMatches": true,
@@ -1935,15 +1935,6 @@
           "height_cm": 175,
           "caps": 7,
           "goals": 0
-        },
-        {
-          "position": "FW",
-          "name_block": "RAHIMI Sou\u0000aneSou\u0000ane RAHIMI RAHIMI",
-          "dob": "02/06/1996",
-          "club": "Al Ain FC (UAE)",
-          "height_cm": 180,
-          "caps": 39,
-          "goals": 12
         },
         {
           "position": "MF",
@@ -2016,6 +2007,15 @@
           "height_cm": 179,
           "caps": 4,
           "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "TAGNAOUTI Ahmed RedaAhmed Reda TAGNAOUTI TAGNAOUTI",
+          "dob": "05/04/1996",
+          "club": "ASFAR (MAR)",
+          "height_cm": 194,
+          "caps": 3,
+          "goals": 0
         }
       ],
       "unmatchedSeedPlayers": [
@@ -2033,11 +2033,6 @@
           "playerId": "MAR_MENDYL",
           "name": "Yahia Attiyat Allah",
           "primaryPosition": "LB"
-        },
-        {
-          "playerId": "MAR_RAHIMI",
-          "name": "Soufiane Rahimi",
-          "primaryPosition": "ST"
         },
         {
           "playerId": "MAR_AKHOMACH",
@@ -2773,7 +2768,7 @@
           "position": "FW",
           "name_block": "ANTONISSE Jeremy Jeremy Cornelis JacobusANTONISSEANTONISSE",
           "dob": "29/03/2002",
-          "club": "AE Ki\u0000sia FC (GRE)",
+          "club": "AE Kifisia FC (GRE)",
           "height_cm": 164,
           "caps": 28,
           "goals": 4
@@ -2818,7 +2813,7 @@
           "position": "MF",
           "name_block": "CHONG Tahith Tahith Jose Girigorio DjorkaefCHONGCHONG",
           "dob": "04/12/1999",
-          "club": "She\u0000eld United FC (ENG)",
+          "club": "Shefield United FC (ENG)",
           "height_cm": 185,
           "caps": 8,
           "goals": 3
@@ -4298,7 +4293,7 @@
           "position": "DF",
           "name_block": "SIDNY LOPES CABRALSidny LOPES CABRALLOPES CABRAL",
           "dob": "18/09/2002",
-          "club": "SL Ben\u0000ca (POR)",
+          "club": "SL Benfica (POR)",
           "height_cm": 176,
           "caps": 13,
           "goals": 3
@@ -4949,7 +4944,7 @@
           "position": "MF",
           "name_block": "AURSNES Fredrik Fredrik AURSNESAURSNES",
           "dob": "10/12/1995",
-          "club": "SL Ben\u0000ca (POR)",
+          "club": "SL Benfica (POR)",
           "height_cm": 181,
           "caps": 23,
           "goals": 1
@@ -5003,7 +4998,7 @@
           "position": "MF",
           "name_block": "SCHJELDERUP Andreas Andreas Rædergård SCHJELDERUPSCHJELDERUP",
           "dob": "01/06/2004",
-          "club": "SL Ben\u0000ca (POR)",
+          "club": "SL Benfica (POR)",
           "height_cm": 177,
           "caps": 13,
           "goals": 1
@@ -5122,7 +5117,7 @@
         },
         {
           "position": "DF",
-          "name_block": "BELGHALI Ra\u0000k Ra\u0000k BELGHALI BELGHALI",
+          "name_block": "BELGHALI Rafik Rafik BELGHALI BELGHALI",
           "dob": "07/06/2002",
           "club": "Hellas Verona FC (ITA)",
           "height_cm": 180,
@@ -5479,7 +5474,7 @@
           "position": "DF",
           "name_block": "TOMAS ARAUJO Tomás LEMOS ARAÚJO TOMÁS A.",
           "dob": "16/05/2002",
-          "club": "SL Ben\u0000ca (POR)",
+          "club": "SL Benfica (POR)",
           "height_cm": 187,
           "caps": 6,
           "goals": 0
@@ -5958,7 +5953,7 @@
           "position": "GK",
           "name_block": "MONTERO Alvaro Álvaro David MONTERO PERALESMONTERO",
           "dob": "29/03/1995",
-          "club": "CA Vélez Sars\u0000eld (ARG)",
+          "club": "CA Vélez Sarsfield (ARG)",
           "height_cm": 201,
           "caps": 12,
           "goals": 0

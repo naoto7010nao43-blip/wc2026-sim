@@ -44,6 +44,18 @@ def _write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def _clean_official_text_value(value: Any) -> Any:
+    if isinstance(value, str):
+        return value.replace("\x00", "fi").strip()
+    return value
+
+
+def _report_text_value(value: Any) -> Any:
+    if not isinstance(value, str):
+        return value
+    return "".join(ch if ord(ch) >= 32 else f"\\u{ord(ch):04x}" for ch in value)
+
+
 def _proposal_timestamp(proposal: dict, fallback: str) -> str:
     return proposal.get("generatedAt") or fallback
 
@@ -92,6 +104,20 @@ def apply_updates(
     skipped_conflicts: list[dict] = []
     missing_player_ids: list[str] = []
     ignored_unsafe_fields: list[dict] = []
+    cleaned_existing_fields: list[dict] = []
+
+    for player in players:
+        for field in SAFE_FIELDS:
+            current = player.get(field)
+            cleaned = _clean_official_text_value(current)
+            if cleaned != current:
+                player[field] = cleaned
+                cleaned_existing_fields.append({
+                    "playerId": player["playerId"],
+                    "field": field,
+                    "original": _report_text_value(current),
+                    "cleaned": cleaned,
+                })
 
     proposal_updates = proposal.get("matchedPlayerFieldUpdates", [])
     total_field_updates_read = 0
@@ -105,6 +131,7 @@ def apply_updates(
 
         for field, value in proposed.items():
             total_field_updates_read += 1
+            value = _clean_official_text_value(value)
             if field not in SAFE_FIELDS:
                 ignored_unsafe_fields.append({"playerId": player_id, "field": field, "value": value})
                 continue
@@ -137,6 +164,7 @@ def apply_updates(
         "skippedConflicts": skipped_conflicts,
         "missingPlayerIds": sorted(set(missing_player_ids)),
         "ignoredUnsafeFields": ignored_unsafe_fields,
+        "cleanedExistingFields": cleaned_existing_fields,
         "originalPlayerCount": len(original_player_ids),
         "updatedPlayerCount": len(updated_player_ids),
         "noPlayersAddedOrRemoved": no_players_added_or_removed,
