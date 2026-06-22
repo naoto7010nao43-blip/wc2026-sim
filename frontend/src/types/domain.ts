@@ -22,6 +22,11 @@ export interface PlayerSummary {
   source_breakdown: SourceBreakdown | null;
   low_confidence_attributes: string[];
   rating_last_updated: string | null;
+  date_of_birth: string | null;
+  height_cm: number | null;
+  club_name: string | null;
+  caps: number | null;
+  national_team_goals: number | null;
 }
 
 export interface TacticalProfile {

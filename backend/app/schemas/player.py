@@ -44,6 +44,11 @@ class PlayerSummary(BaseModel):
     source_breakdown: dict | None = None
     low_confidence_attributes: list[str] = []
     rating_last_updated: str | None = None
+    date_of_birth: str | None = None
+    height_cm: int | None = None
+    club_name: str | None = None
+    caps: int | None = None
+    national_team_goals: int | None = None
 
     model_config = {"from_attributes": True}
 
@@ -66,5 +71,10 @@ class PlayerOut(BaseModel):
     source_breakdown: dict | None = None
     low_confidence_attributes: list[str] = []
     rating_last_updated: str | None = None
+    date_of_birth: str | None = None
+    height_cm: int | None = None
+    club_name: str | None = None
+    caps: int | None = None
+    national_team_goals: int | None = None
 
     model_config = {"from_attributes": True}

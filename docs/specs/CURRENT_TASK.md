@@ -8,9 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/008-official-squad-safe-field-apply.md`
+None.
 
-This is a long unattended sprint task. The user will not touch the computer until around noon. Claude Code should implement the full Ready spec without routine confirmation, commit after verification passes, and report final state.
+Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 
 Context only:
 
@@ -25,5 +25,6 @@ Completed:
 - `docs/specs/005-tournament-odds-panel.md`
 - `docs/specs/006-overnight-data-trust-sprint.md`
 - Spec 007A official squad merge proposal, implemented as commit `ebe4064`
+- `docs/specs/008-official-squad-safe-field-apply.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.

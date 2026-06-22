@@ -23,6 +23,16 @@ def _load(name: str) -> list[dict]:
     return json.loads((SEED_DIR / name).read_text(encoding="utf-8"))
 
 
+def official_profile_attributes(player: dict) -> dict:
+    return {
+        "dateOfBirth": player.get("dateOfBirth"),
+        "heightCm": player.get("heightCm"),
+        "clubName": player.get("clubName"),
+        "caps": player.get("caps"),
+        "nationalTeamGoals": player.get("nationalTeamGoals"),
+    }
+
+
 def load_v2_seed_data() -> tuple[list[dict], list[dict]]:
     """Returns (teams, player_rows) in the same shapes
     app.rating.seed_pipeline.load_seed_data()/build_player_rows() produce,
@@ -59,6 +69,7 @@ def load_v2_seed_data() -> tuple[list[dict], list[dict]]:
             **derive_legacy_attributes(rating),
             **v2_skill_attributes(rating),
             **rating_trust_metadata(rating),
+            **official_profile_attributes(p),
         }
         player_rows.append({
             "id": p["playerId"],

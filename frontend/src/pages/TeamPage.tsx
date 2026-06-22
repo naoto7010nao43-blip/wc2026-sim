@@ -39,6 +39,13 @@ function summarizeTrust(players: PlayerSummary[]) {
   };
 }
 
+function capsGoals(player: PlayerSummary): string {
+  if (player.caps == null && player.national_team_goals == null) return "-";
+  const caps = player.caps ?? 0;
+  const goals = player.national_team_goals ?? 0;
+  return `${caps}試合/${goals}得点`;
+}
+
 export function TeamPage() {
   const { teamId } = useParams<{ teamId: string }>();
   const [team, setTeam] = useState<TeamOut | null>(null);
@@ -129,19 +136,20 @@ export function TeamPage() {
         </div>
 
         <p className="mt-3 text-[11px] text-slate-500">
-          スタメン予測・選手能力値はFIFAが公式発表したものではなく、公開データから推定したものです。
+          スタメン予測・選手能力値はFIFAが公式発表したものではなく、公開データから推定したものです。クラブ・代表出場数などの公式プロフィール項目はFIFA Squad Listを基にしています。
         </p>
       </div>
 
       <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
         <p className="text-xs uppercase tracking-widest text-slate-500">選手一覧</p>
-        <div className="mt-2 max-h-[420px] overflow-y-auto">
-          <table className="w-full text-left text-xs">
+        <div className="mt-2 max-h-[420px] overflow-x-auto overflow-y-auto">
+          <table className="min-w-[680px] w-full text-left text-xs">
             <thead className="sticky top-0 bg-slate-800/95 text-slate-500">
               <tr>
-                <th className="py-1 pr-2 font-normal">選手名</th>
+                <th className="py-1 pr-3 font-normal">選手名</th>
                 <th className="py-1 pr-2 font-normal">位置</th>
                 <th className="py-1 pr-2 text-right font-normal">能力値</th>
+                <th className="py-1 pr-2 text-right font-normal">代表成績</th>
                 <th className="py-1 pr-2 text-right font-normal">先発確率</th>
                 <th className="py-1 text-right font-normal">信頼度</th>
               </tr>
@@ -149,13 +157,17 @@ export function TeamPage() {
             <tbody>
               {sortedPlayers.map((p) => (
                 <tr key={p.id} className="border-t border-slate-700/60 text-slate-200">
-                  <td className="py-1 pr-2">{p.name_ja ?? p.name}</td>
-                  <td className="py-1 pr-2 text-slate-400">{p.primary_position}</td>
-                  <td className="py-1 pr-2 text-right font-semibold">{p.overall}</td>
-                  <td className="py-1 pr-2 text-right text-slate-300">
+                  <td className="py-1.5 pr-3">
+                    <div className="font-medium">{p.name_ja ?? p.name}</div>
+                    <div className="max-w-[14rem] truncate text-[10px] text-slate-500">{p.club_name ?? "クラブ未取得"}</div>
+                  </td>
+                  <td className="py-1.5 pr-2 text-slate-400">{p.primary_position}</td>
+                  <td className="py-1.5 pr-2 text-right font-semibold">{p.overall}</td>
+                  <td className="py-1.5 pr-2 text-right text-slate-300">{capsGoals(p)}</td>
+                  <td className="py-1.5 pr-2 text-right text-slate-300">
                     {p.starting_probability != null ? `${Math.round(p.starting_probability)}%` : "-"}
                   </td>
-                  <td className="py-1 text-right text-slate-400">
+                  <td className="py-1.5 text-right text-slate-400">
                     {p.data_confidence ? confidenceLabel(p.data_confidence) : "-"}
                   </td>
                 </tr>

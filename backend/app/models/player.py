@@ -49,3 +49,23 @@ class Player(Base):
     @property
     def rating_last_updated(self) -> str | None:
         return self.attributes.get("lastUpdated")
+
+    @property
+    def date_of_birth(self) -> str | None:
+        return self.attributes.get("dateOfBirth")
+
+    @property
+    def height_cm(self) -> int | None:
+        return self.attributes.get("heightCm")
+
+    @property
+    def club_name(self) -> str | None:
+        return self.attributes.get("clubName")
+
+    @property
+    def caps(self) -> int | None:
+        return self.attributes.get("caps")
+
+    @property
+    def national_team_goals(self) -> int | None:
+        return self.attributes.get("nationalTeamGoals")

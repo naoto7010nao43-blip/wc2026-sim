@@ -4,6 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app.rating_v2.legacy_bridge import derive_legacy_attributes
+from app.rating_v2.seed_pipeline_v2 import official_profile_attributes
 from app.rating_v2.player_rating_model import compute_player_rating_v2
 
 
@@ -51,3 +52,20 @@ def test_bridge_round_trips_direct_copy_fields_exactly():
     assert attrs["passing"] == rating.passing
     assert attrs["dribbling"] == rating.dribbling
     assert attrs["physical"] == rating.physical
+
+
+def test_official_profile_attributes_are_preserved_for_runtime_api():
+    attrs = official_profile_attributes({
+        "dateOfBirth": "02/10/1992",
+        "heightCm": 193,
+        "clubName": "Liverpool FC (ENG)",
+        "caps": 80,
+        "nationalTeamGoals": 0,
+    })
+    assert attrs == {
+        "dateOfBirth": "02/10/1992",
+        "heightCm": 193,
+        "clubName": "Liverpool FC (ENG)",
+        "caps": 80,
+        "nationalTeamGoals": 0,
+    }

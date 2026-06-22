@@ -34,6 +34,11 @@ def test_trust_properties_return_values_when_attributes_contain_them():
                              "nationalTeamMinutesUsed": False, "injuryDataUsed": False, "manualOverrideUsed": False},
         "lowConfidenceAttributes": ["mentality", "composure"],
         "lastUpdated": "2026-06-22T00:00:00+00:00",
+        "dateOfBirth": "02/10/1992",
+        "heightCm": 193,
+        "clubName": "Liverpool FC (ENG)",
+        "caps": 80,
+        "nationalTeamGoals": 0,
     })
     assert player.starting_probability == 73
     assert player.data_confidence == "estimated"
@@ -44,6 +49,11 @@ def test_trust_properties_return_values_when_attributes_contain_them():
     }
     assert player.low_confidence_attributes == ["mentality", "composure"]
     assert player.rating_last_updated == "2026-06-22T00:00:00+00:00"
+    assert player.date_of_birth == "02/10/1992"
+    assert player.height_cm == 193
+    assert player.club_name == "Liverpool FC (ENG)"
+    assert player.caps == 80
+    assert player.national_team_goals == 0
 
 
 def test_trust_properties_return_safe_defaults_for_legacy_data_without_crashing():
@@ -57,6 +67,11 @@ def test_trust_properties_return_safe_defaults_for_legacy_data_without_crashing(
     assert player.source_breakdown is None
     assert player.low_confidence_attributes == []
     assert player.rating_last_updated is None
+    assert player.date_of_birth is None
+    assert player.height_cm is None
+    assert player.club_name is None
+    assert player.caps is None
+    assert player.national_team_goals is None
 
 
 @pytest.fixture()
@@ -77,6 +92,8 @@ def client():
         "sourceBreakdown": {"officialRoster": True, "marketValueUsed": True, "clubMinutesUsed": True,
                              "nationalTeamMinutesUsed": False, "injuryDataUsed": False, "manualOverrideUsed": False},
         "lowConfidenceAttributes": ["mentality"], "lastUpdated": "2026-06-22T00:00:00+00:00",
+        "dateOfBirth": "02/10/1992", "heightCm": 193, "clubName": "Liverpool FC (ENG)",
+        "caps": 80, "nationalTeamGoals": 0,
     }))
     seed_session.add(_make_player(id="TST_LEGACY", attributes={
         "pace": 60, "shooting": 60, "passing": 60, "dribbling": 60, "defending": 60, "physical": 60,
@@ -107,6 +124,11 @@ def test_player_endpoint_exposes_trust_metadata_when_present(client):
     assert body["source_breakdown"]["officialRoster"] is True
     assert body["low_confidence_attributes"] == ["mentality"]
     assert body["rating_last_updated"] == "2026-06-22T00:00:00+00:00"
+    assert body["date_of_birth"] == "02/10/1992"
+    assert body["height_cm"] == 193
+    assert body["club_name"] == "Liverpool FC (ENG)"
+    assert body["caps"] == 80
+    assert body["national_team_goals"] == 0
 
 
 def test_player_endpoint_serializes_legacy_player_without_crashing(client):
@@ -117,6 +139,11 @@ def test_player_endpoint_serializes_legacy_player_without_crashing(client):
     assert body["data_confidence"] is None
     assert body["source_breakdown"] is None
     assert body["low_confidence_attributes"] == []
+    assert body["date_of_birth"] is None
+    assert body["height_cm"] is None
+    assert body["club_name"] is None
+    assert body["caps"] is None
+    assert body["national_team_goals"] is None
 
 
 def test_team_endpoint_players_include_trust_metadata(client):
@@ -125,4 +152,7 @@ def test_team_endpoint_players_include_trust_metadata(client):
     body = resp.json()
     by_id = {p["id"]: p for p in body["players"]}
     assert by_id["TST_PLAYER"]["data_confidence"] == "estimated"
+    assert by_id["TST_PLAYER"]["club_name"] == "Liverpool FC (ENG)"
+    assert by_id["TST_PLAYER"]["caps"] == 80
     assert by_id["TST_LEGACY"]["data_confidence"] is None
+    assert by_id["TST_LEGACY"]["club_name"] is None
