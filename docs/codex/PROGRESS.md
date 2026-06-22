@@ -9,15 +9,16 @@
 
 ## Current Priority
 
-Improve the match detail page as the core "watchable football simulation" screen while preserving simulation behavior.
+Expose prediction reasoning before single-match simulation so the site feels analytical instead of random.
 
 Completed:
 
 - `docs/specs/001-lint-fix.md`
+- `docs/specs/003-match-detail-trust-states.md`
 
 Primary task:
 
-- `docs/specs/003-match-detail-trust-states.md`
+- `docs/specs/004-simulator-prediction-panel.md`
 
 Direction-only context:
 
@@ -25,7 +26,7 @@ Direction-only context:
 
 ## Verification Baseline
 
-Last known baseline from Codex inspection after commit `62dd339`:
+Last known baseline from Codex inspection after commit `1926887`:
 
 - Backend tests: `115 passed`
 - Frontend build: passed
@@ -36,18 +37,18 @@ Last known baseline from Codex inspection after commit `62dd339`:
 
 ## Open Risks
 
-- Match Detail trust-state improvements must not imply missing simulated event/player data is a bug.
+- Simulator prediction panel must not imply certainty; backend disclaimer and model version must remain visible.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
-After the match-detail trust-state task is complete:
+After the simulator prediction panel task is complete:
 
 1. Codex reviews Claude Code's changes.
 2. Codex reruns or checks `npm run lint` and `npm run build`.
 3. Codex decides the next spec, likely one of:
-   - prediction explainability panel
    - player/manager data confidence system
    - simulation calibration review
+   - tournament-level Monte Carlo odds UI

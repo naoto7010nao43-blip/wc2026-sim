@@ -8,7 +8,7 @@ Read first:
 
 Implement next:
 
-- `docs/specs/003-match-detail-trust-states.md`
+- `docs/specs/004-simulator-prediction-panel.md`
 
 Context only:
 
@@ -17,5 +17,6 @@ Context only:
 Completed:
 
 - `docs/specs/001-lint-fix.md`
+- `docs/specs/003-match-detail-trust-states.md`
 
 Follow the autonomous sprint protocol. Commit when the spec passes its verification commands.
