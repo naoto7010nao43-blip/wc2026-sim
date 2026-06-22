@@ -4,7 +4,8 @@
 
 - Codex owns product direction, data policy, simulation-quality review, and implementation specs.
 - Claude Code owns implementation and test execution.
-- The user forwards short trigger messages to Claude Code only when needed.
+- The user should not be asked for routine implementation approvals.
+- Claude Code should commit Ready-task work after passing verification, then report.
 - For longer implementation runs, Claude Code should follow `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`.
 
 ## Current Priority

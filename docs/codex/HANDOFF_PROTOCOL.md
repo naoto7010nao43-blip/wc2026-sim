@@ -6,7 +6,7 @@ This document defines how Codex, the user, and Claude Code coordinate work.
 
 The user should not need to monitor Claude Code in detail.
 
-Codex writes task specs and reviews outcomes. Claude Code implements the current spec. The user mainly forwards short trigger messages when needed.
+Codex writes task specs and reviews outcomes. Claude Code implements the current spec. The user should mainly review finished product behavior, not routine intermediate approvals.
 
 For longer runs with fewer user interruptions, use `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`.
 
@@ -19,7 +19,7 @@ Codex can:
 - update `docs/specs/CURRENT_TASK.md`
 - update progress notes in `docs/codex/PROGRESS.md`
 - review code changes after Claude Code finishes
-- write the next Claude Code prompt for the user to paste
+- write the next Claude Code prompt for the user to paste when needed
 
 Codex cannot directly operate Claude Code's chat session unless the user forwards the trigger message.
 
@@ -28,7 +28,8 @@ Codex cannot directly operate Claude Code's chat session unless the user forward
 When Codex says a task is ready, the user can paste a short message to Claude Code:
 
 ```text
-docs/specs/CURRENT_TASK.md を読んで実装してください。完了後、変更ファイル・検証結果・リスクを報告してください。
+Read docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md and docs/specs/CURRENT_TASK.md from disk.
+Implement, verify, and commit the Ready task. Ask the user only if a protocol Stop condition applies.
 ```
 
 For review, the user can paste Claude Code's final report back to Codex, or simply tell Codex that Claude finished. Codex will inspect the repository directly.
@@ -51,14 +52,18 @@ Codex will decide whether to:
 
 After each task, Claude Code should report:
 
+- commit hash
 - changed files
 - summary of changes
 - commands run
 - results
 - risks or follow-up suggestions
 
+Claude Code should not ask "is this okay to commit?" when the autonomous commit policy is satisfied.
+
 ## Current Source Of Truth
 
 - Current implementation task: `docs/specs/CURRENT_TASK.md`
 - Progress log: `docs/codex/PROGRESS.md`
 - Role split: `docs/codex/ROLE_SPLIT.md`
+- Autonomous rules: `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`
