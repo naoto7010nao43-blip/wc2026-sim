@@ -30,6 +30,25 @@ function fmt(value: number | null): string {
   return value == null ? "-" : String(value);
 }
 
+type MatchKind = "real" | "detailed_simulation" | "poisson";
+
+function matchKindOf(match: MatchResult): MatchKind {
+  if (match.is_real) return "real";
+  return match.events.length > 0 ? "detailed_simulation" : "poisson";
+}
+
+const MATCH_KIND_DESCRIPTIONS: Record<MatchKind, string> = {
+  real: "実際に行われた試合の結果です。",
+  detailed_simulation: "選手データに基づく、イベント単位の詳細シミュレーション結果です。",
+  poisson: "得点分布モデルによるスコア予測です。イベント再現や選手採点はありません。",
+};
+
+const NO_EVENTS_DESCRIPTIONS: Record<MatchKind, string> = {
+  real: "この試合は記録が結果データのみのため、イベント再現は利用できません。",
+  detailed_simulation: "この試合はイベントデータが記録されていないため、イベント再現は利用できません。",
+  poisson: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
+};
+
 function StatRow({ label, home, away, homePct }: { label: string; home: string; away: string; homePct: number }) {
   return (
     <div>
@@ -94,18 +113,24 @@ export function MatchDetailPage() {
   if (!match || match.id !== matchId) return <p className="text-slate-400">読み込み中...</p>;
 
   const isAtEnd = currentIndex >= match.events.length - 1;
+  const matchKind = matchKindOf(match);
+  const hasEvents = match.events.length > 0;
+  const showRatingsSection = match.is_real || hasEvents;
 
   return (
     <div className="space-y-4">
       <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
         <div className="flex items-center justify-center gap-2">
           <p className="text-xs uppercase tracking-widest text-emerald-400">{ROUND_LABELS[match.round]}</p>
-          {match.is_real ? (
+          {matchKind === "real" ? (
             <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-400">実結果</span>
+          ) : matchKind === "detailed_simulation" ? (
+            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">詳細シミュレーション</span>
           ) : (
-            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">シミュレーション予測</span>
+            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">スコア予測モデル</span>
           )}
         </div>
+        <p className="mt-0.5 text-center text-[11px] text-slate-500">{MATCH_KIND_DESCRIPTIONS[matchKind]}</p>
         <div className="mt-1 flex items-center justify-center gap-4 text-2xl font-bold">
           <TeamBadge teamId={match.home_team_id} />
           <span>
@@ -142,65 +167,75 @@ export function MatchDetailPage() {
         )}
       </div>
 
-      <div className="flex flex-wrap items-center gap-3 rounded-xl border border-slate-700 bg-slate-800/40 p-3">
-        <button
-          onClick={() => {
-            if (isAtEnd) setCurrentIndex(0);
-            setIsPlaying((p) => !p || isAtEnd);
-          }}
-          className="rounded-md bg-emerald-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-emerald-500"
-        >
-          {isPlaying ? "一時停止" : isAtEnd ? "最初から再生" : "再生"}
-        </button>
-        <button
-          onClick={() => {
-            setIsPlaying(false);
-            setCurrentIndex(0);
-          }}
-          className="rounded-md border border-slate-600 px-3 py-1.5 text-sm text-slate-300 hover:bg-slate-700"
-        >
-          最初に戻る
-        </button>
-        <input
-          type="range"
-          min={0}
-          max={Math.max(match.events.length - 1, 0)}
-          value={currentIndex}
-          onChange={(e) => {
-            setIsPlaying(false);
-            setCurrentIndex(Number(e.target.value));
-          }}
-          className="min-w-[160px] flex-1"
-        />
-        <span className="w-16 shrink-0 text-right text-sm text-slate-400">{match.events[currentIndex]?.minute ?? 0}'</span>
-      </div>
-
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[380px_1fr]">
-        {match.home_lineup.length > 0 ? (
-          <PitchFormationView
-            events={match.events}
-            homeTeamId={match.home_team_id}
-            awayTeamId={match.away_team_id}
-            homeLineup={match.home_lineup}
-            awayLineup={match.away_lineup}
-            upToIndex={currentIndex}
-          />
-        ) : (
-          <div className="flex items-center justify-center rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-xs text-slate-500">
-            実際の試合のため、フォーメーション情報は表示されません。
+      {hasEvents ? (
+        <>
+          <div className="flex flex-wrap items-center gap-3 rounded-xl border border-slate-700 bg-slate-800/40 p-3">
+            <button
+              onClick={() => {
+                if (isAtEnd) setCurrentIndex(0);
+                setIsPlaying((p) => !p || isAtEnd);
+              }}
+              className="rounded-md bg-emerald-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-emerald-500"
+            >
+              {isPlaying ? "一時停止" : isAtEnd ? "最初から再生" : "再生"}
+            </button>
+            <button
+              onClick={() => {
+                setIsPlaying(false);
+                setCurrentIndex(0);
+              }}
+              className="rounded-md border border-slate-600 px-3 py-1.5 text-sm text-slate-300 hover:bg-slate-700"
+            >
+              最初に戻る
+            </button>
+            <input
+              type="range"
+              min={0}
+              max={Math.max(match.events.length - 1, 0)}
+              value={currentIndex}
+              onChange={(e) => {
+                setIsPlaying(false);
+                setCurrentIndex(Number(e.target.value));
+              }}
+              className="min-w-[160px] flex-1"
+            />
+            <span className="w-16 shrink-0 text-right text-sm text-slate-400">{match.events[currentIndex]?.minute ?? 0}'</span>
           </div>
-        )}
-        <MatchEventTimeline
-          events={match.events}
-          currentIndex={currentIndex}
-          onSelectEvent={(idx) => {
-            setIsPlaying(false);
-            setCurrentIndex(idx);
-          }}
-        />
-      </div>
 
-      <PlayerRatingsPanel ratings={match.player_ratings} homeTeamId={match.home_team_id} awayTeamId={match.away_team_id} />
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[380px_1fr]">
+            {match.home_lineup.length > 0 ? (
+              <PitchFormationView
+                events={match.events}
+                homeTeamId={match.home_team_id}
+                awayTeamId={match.away_team_id}
+                homeLineup={match.home_lineup}
+                awayLineup={match.away_lineup}
+                upToIndex={currentIndex}
+              />
+            ) : (
+              <div className="flex items-center justify-center rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-xs text-slate-500">
+                フォーメーション情報はこの試合では利用できません。
+              </div>
+            )}
+            <MatchEventTimeline
+              events={match.events}
+              currentIndex={currentIndex}
+              onSelectEvent={(idx) => {
+                setIsPlaying(false);
+                setCurrentIndex(idx);
+              }}
+            />
+          </div>
+        </>
+      ) : (
+        <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-slate-400">
+          {NO_EVENTS_DESCRIPTIONS[matchKind]}
+        </div>
+      )}
+
+      {showRatingsSection && (
+        <PlayerRatingsPanel ratings={match.player_ratings} homeTeamId={match.home_team_id} awayTeamId={match.away_team_id} />
+      )}
     </div>
   );
 }

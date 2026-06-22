@@ -32,7 +32,13 @@ function RatingRow({ rating }: { rating: PlayerRating }) {
 }
 
 export function PlayerRatingsPanel({ ratings, homeTeamId, awayTeamId }: Props) {
-  if (ratings.length === 0) return null;
+  if (ratings.length === 0) {
+    return (
+      <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-slate-400">
+        この試合の選手採点は利用できません。
+      </div>
+    );
+  }
 
   const mom = ratings.find((r) => r.is_mom);
   const home = ratings.filter((r) => r.team_id === homeTeamId).sort((a, b) => b.rating - a.rating);

@@ -31,6 +31,14 @@ export function MatchEventTimeline({ events, currentIndex, onSelectEvent }: Prop
     activeRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }, [currentIndex]);
 
+  if (events.length === 0) {
+    return (
+      <div className="flex max-h-[480px] items-center justify-center rounded-lg border border-slate-700 bg-slate-800/60 p-4 text-center text-xs text-slate-500">
+        この試合のイベント再現は利用できません。
+      </div>
+    );
+  }
+
   return (
     <ol className="max-h-[480px] list-none space-y-0.5 overflow-y-auto rounded-lg border border-slate-700 bg-slate-800/60 p-2">
       {events.map((e, idx) => {
