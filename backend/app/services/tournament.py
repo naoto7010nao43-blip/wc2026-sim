@@ -1,7 +1,10 @@
 """Orchestrates a full 48-team World Cup tournament end to end: 12-group
 round robin, third-place ranking, Round of 32 bracket construction (via
-app.engine.bracket), and the R32->Final knockout tree — persisting every
-match through the same simulate+persist path used by the single-match API.
+app.engine.bracket), and the R32->Final knockout tree.
+
+Fixtures with no real-world result yet are resolved via the Poisson
+statistical prediction model (app.prediction.poisson_model), not the old
+minute-by-minute micro-simulator -- see app.services.predicted_match.
 """
 
 import itertools
@@ -9,12 +12,12 @@ import itertools
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.api.matches import run_and_persist_match
 from app.engine.bracket import R32_TEMPLATE, assign_third_place_slots, next_round_pairs
 from app.models.match import Match
 from app.models.team import Team
 from app.schemas.match import SimulateMatchRequest
 from app.schemas.standings import StandingsRow
+from app.services.predicted_match import run_and_persist_predicted_match
 from app.services.real_results import load_real_results, persist_real_match
 from app.services.standings import compute_standings
 from app.services.third_place import rank_third_place_teams
@@ -65,7 +68,7 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
             bracket_slot=bracket_slot,
             allow_draw=allow_draw,
         )
-        return run_and_persist_match(db, req)
+        return run_and_persist_predicted_match(db, req)
 
     # 1. Group stage: round robin within each of the 12 groups. Fixtures
     # that have already been played in the real 2026 World Cup use the

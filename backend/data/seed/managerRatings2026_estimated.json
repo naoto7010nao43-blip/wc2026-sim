@@ -1,0 +1,434 @@
+[
+  {
+    "managerId": "mgr_bra",
+    "teamCode": "BRA",
+    "pressIntensity": 60,
+    "possessionStyle": 68,
+    "defensiveLineHeight": 58,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572808+00:00"
+  },
+  {
+    "managerId": "mgr_arg",
+    "teamCode": "ARG",
+    "pressIntensity": 62,
+    "possessionStyle": 64,
+    "defensiveLineHeight": 58,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572817+00:00"
+  },
+  {
+    "managerId": "mgr_fra",
+    "teamCode": "FRA",
+    "pressIntensity": 58,
+    "possessionStyle": 54,
+    "defensiveLineHeight": 52,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572822+00:00"
+  },
+  {
+    "managerId": "mgr_eng",
+    "teamCode": "ENG",
+    "pressIntensity": 78,
+    "possessionStyle": 62,
+    "defensiveLineHeight": 68,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572825+00:00"
+  },
+  {
+    "managerId": "mgr_ger",
+    "teamCode": "GER",
+    "pressIntensity": 78,
+    "possessionStyle": 62,
+    "defensiveLineHeight": 68,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572829+00:00"
+  },
+  {
+    "managerId": "mgr_usa",
+    "teamCode": "USA",
+    "pressIntensity": 72,
+    "possessionStyle": 58,
+    "defensiveLineHeight": 62,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572832+00:00"
+  },
+  {
+    "managerId": "mgr_mex",
+    "teamCode": "MEX",
+    "pressIntensity": 58,
+    "possessionStyle": 60,
+    "defensiveLineHeight": 52,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572835+00:00"
+  },
+  {
+    "managerId": "mgr_rsa",
+    "teamCode": "RSA",
+    "pressIntensity": 48,
+    "possessionStyle": 45,
+    "defensiveLineHeight": 45,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572839+00:00"
+  },
+  {
+    "managerId": "mgr_kor",
+    "teamCode": "KOR",
+    "pressIntensity": 62,
+    "possessionStyle": 56,
+    "defensiveLineHeight": 58,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572842+00:00"
+  },
+  {
+    "managerId": "mgr_cze",
+    "teamCode": "CZE",
+    "pressIntensity": 50,
+    "possessionStyle": 42,
+    "defensiveLineHeight": 44,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572845+00:00"
+  },
+  {
+    "managerId": "mgr_can",
+    "teamCode": "CAN",
+    "pressIntensity": 88,
+    "possessionStyle": 38,
+    "defensiveLineHeight": 72,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572848+00:00"
+  },
+  {
+    "managerId": "mgr_bih",
+    "teamCode": "BIH",
+    "pressIntensity": 42,
+    "possessionStyle": 28,
+    "defensiveLineHeight": 38,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572851+00:00"
+  },
+  {
+    "managerId": "mgr_qat",
+    "teamCode": "QAT",
+    "pressIntensity": 55,
+    "possessionStyle": 58,
+    "defensiveLineHeight": 50,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572853+00:00"
+  },
+  {
+    "managerId": "mgr_sui",
+    "teamCode": "SUI",
+    "pressIntensity": 60,
+    "possessionStyle": 66,
+    "defensiveLineHeight": 55,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572856+00:00"
+  },
+  {
+    "managerId": "mgr_mar",
+    "teamCode": "MAR",
+    "pressIntensity": 78,
+    "possessionStyle": 56,
+    "defensiveLineHeight": 64,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572859+00:00"
+  },
+  {
+    "managerId": "mgr_hai",
+    "teamCode": "HAI",
+    "pressIntensity": 38,
+    "possessionStyle": 28,
+    "defensiveLineHeight": 24,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572862+00:00"
+  },
+  {
+    "managerId": "mgr_sco",
+    "teamCode": "SCO",
+    "pressIntensity": 52,
+    "possessionStyle": 42,
+    "defensiveLineHeight": 40,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572865+00:00"
+  },
+  {
+    "managerId": "mgr_par",
+    "teamCode": "PAR",
+    "pressIntensity": 38,
+    "possessionStyle": 32,
+    "defensiveLineHeight": 30,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572867+00:00"
+  },
+  {
+    "managerId": "mgr_aus",
+    "teamCode": "AUS",
+    "pressIntensity": 50,
+    "possessionStyle": 44,
+    "defensiveLineHeight": 45,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572870+00:00"
+  },
+  {
+    "managerId": "mgr_tur",
+    "teamCode": "TUR",
+    "pressIntensity": 64,
+    "possessionStyle": 56,
+    "defensiveLineHeight": 55,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572873+00:00"
+  },
+  {
+    "managerId": "mgr_cuw",
+    "teamCode": "CUW",
+    "pressIntensity": 38,
+    "possessionStyle": 32,
+    "defensiveLineHeight": 30,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572875+00:00"
+  },
+  {
+    "managerId": "mgr_civ",
+    "teamCode": "CIV",
+    "pressIntensity": 62,
+    "possessionStyle": 50,
+    "defensiveLineHeight": 52,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572879+00:00"
+  },
+  {
+    "managerId": "mgr_ecu",
+    "teamCode": "ECU",
+    "pressIntensity": 70,
+    "possessionStyle": 40,
+    "defensiveLineHeight": 35,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572881+00:00"
+  },
+  {
+    "managerId": "mgr_ned",
+    "teamCode": "NED",
+    "pressIntensity": 68,
+    "possessionStyle": 66,
+    "defensiveLineHeight": 64,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572884+00:00"
+  },
+  {
+    "managerId": "mgr_jpn",
+    "teamCode": "JPN",
+    "pressIntensity": 60,
+    "possessionStyle": 61,
+    "defensiveLineHeight": 52,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572887+00:00"
+  },
+  {
+    "managerId": "mgr_swe",
+    "teamCode": "SWE",
+    "pressIntensity": 55,
+    "possessionStyle": 53,
+    "defensiveLineHeight": 48,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572890+00:00"
+  },
+  {
+    "managerId": "mgr_tun",
+    "teamCode": "TUN",
+    "pressIntensity": 42,
+    "possessionStyle": 38,
+    "defensiveLineHeight": 36,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572893+00:00"
+  },
+  {
+    "managerId": "mgr_bel",
+    "teamCode": "BEL",
+    "pressIntensity": 68,
+    "possessionStyle": 64,
+    "defensiveLineHeight": 60,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572895+00:00"
+  },
+  {
+    "managerId": "mgr_egy",
+    "teamCode": "EGY",
+    "pressIntensity": 58,
+    "possessionStyle": 42,
+    "defensiveLineHeight": 40,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572898+00:00"
+  },
+  {
+    "managerId": "mgr_irn",
+    "teamCode": "IRN",
+    "pressIntensity": 42,
+    "possessionStyle": 35,
+    "defensiveLineHeight": 28,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572901+00:00"
+  },
+  {
+    "managerId": "mgr_nzl",
+    "teamCode": "NZL",
+    "pressIntensity": 38,
+    "possessionStyle": 28,
+    "defensiveLineHeight": 25,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572903+00:00"
+  },
+  {
+    "managerId": "mgr_esp",
+    "teamCode": "ESP",
+    "pressIntensity": 76,
+    "possessionStyle": 88,
+    "defensiveLineHeight": 68,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572905+00:00"
+  },
+  {
+    "managerId": "mgr_cpv",
+    "teamCode": "CPV",
+    "pressIntensity": 46,
+    "possessionStyle": 34,
+    "defensiveLineHeight": 36,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572908+00:00"
+  },
+  {
+    "managerId": "mgr_ksa",
+    "teamCode": "KSA",
+    "pressIntensity": 58,
+    "possessionStyle": 48,
+    "defensiveLineHeight": 46,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572910+00:00"
+  },
+  {
+    "managerId": "mgr_uru",
+    "teamCode": "URU",
+    "pressIntensity": 88,
+    "possessionStyle": 54,
+    "defensiveLineHeight": 74,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572913+00:00"
+  },
+  {
+    "managerId": "mgr_sen",
+    "teamCode": "SEN",
+    "pressIntensity": 74,
+    "possessionStyle": 48,
+    "defensiveLineHeight": 58,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572915+00:00"
+  },
+  {
+    "managerId": "mgr_irq",
+    "teamCode": "IRQ",
+    "pressIntensity": 48,
+    "possessionStyle": 40,
+    "defensiveLineHeight": 38,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572918+00:00"
+  },
+  {
+    "managerId": "mgr_nor",
+    "teamCode": "NOR",
+    "pressIntensity": 56,
+    "possessionStyle": 50,
+    "defensiveLineHeight": 48,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572920+00:00"
+  },
+  {
+    "managerId": "mgr_alg",
+    "teamCode": "ALG",
+    "pressIntensity": 56,
+    "possessionStyle": 54,
+    "defensiveLineHeight": 48,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572923+00:00"
+  },
+  {
+    "managerId": "mgr_aut",
+    "teamCode": "AUT",
+    "pressIntensity": 84,
+    "possessionStyle": 56,
+    "defensiveLineHeight": 68,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572925+00:00"
+  },
+  {
+    "managerId": "mgr_jor",
+    "teamCode": "JOR",
+    "pressIntensity": 40,
+    "possessionStyle": 36,
+    "defensiveLineHeight": 34,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572928+00:00"
+  },
+  {
+    "managerId": "mgr_por",
+    "teamCode": "POR",
+    "pressIntensity": 68,
+    "possessionStyle": 66,
+    "defensiveLineHeight": 60,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572930+00:00"
+  },
+  {
+    "managerId": "mgr_cod",
+    "teamCode": "COD",
+    "pressIntensity": 48,
+    "possessionStyle": 38,
+    "defensiveLineHeight": 40,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572933+00:00"
+  },
+  {
+    "managerId": "mgr_uzb",
+    "teamCode": "UZB",
+    "pressIntensity": 44,
+    "possessionStyle": 40,
+    "defensiveLineHeight": 36,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572936+00:00"
+  },
+  {
+    "managerId": "mgr_col",
+    "teamCode": "COL",
+    "pressIntensity": 70,
+    "possessionStyle": 60,
+    "defensiveLineHeight": 58,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572939+00:00"
+  },
+  {
+    "managerId": "mgr_cro",
+    "teamCode": "CRO",
+    "pressIntensity": 48,
+    "possessionStyle": 68,
+    "defensiveLineHeight": 50,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572941+00:00"
+  },
+  {
+    "managerId": "mgr_gha",
+    "teamCode": "GHA",
+    "pressIntensity": 58,
+    "possessionStyle": 42,
+    "defensiveLineHeight": 40,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572944+00:00"
+  },
+  {
+    "managerId": "mgr_pan",
+    "teamCode": "PAN",
+    "pressIntensity": 55,
+    "possessionStyle": 56,
+    "defensiveLineHeight": 45,
+    "dataConfidence": "estimated",
+    "lastUpdated": "2026-06-22T13:55:18.572946+00:00"
+  }
+]

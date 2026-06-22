@@ -1,0 +1,47 @@
+{
+  "dataVersion": "2026.2.0",
+  "modelVersion": "player-rating-v2",
+  "lastUpdated": "2026-06-22T13:55:18.581336+00:00",
+  "sources": [
+    {
+      "name": "Existing project seed data (career stats, market value, source citations)",
+      "tier": "A",
+      "lastChecked": "2026-06-22T13:53:50.747375+00:00",
+      "status": "active"
+    },
+    {
+      "name": "FIFA Official Squad feed",
+      "tier": "S",
+      "lastChecked": null,
+      "status": "not_yet_integrated"
+    },
+    {
+      "name": "FIFA World Ranking (fifa_rank field)",
+      "tier": "S",
+      "lastChecked": "2026-06-22T13:53:50.747375+00:00",
+      "status": "active"
+    },
+    {
+      "name": "World Football Elo Ratings",
+      "tier": "A",
+      "lastChecked": null,
+      "status": "not_yet_integrated"
+    },
+    {
+      "name": "Transfermarkt-derived market values",
+      "tier": "A",
+      "lastChecked": "2026-06-22T13:53:50.747375+00:00",
+      "status": "active"
+    }
+  ],
+  "freshnessPolicy": {
+    "officialRosterMaxAgeHours": 24,
+    "injuryNewsMaxAgeHours": 12,
+    "matchResultMaxAgeHours": 1,
+    "fifaRankingMaxAgeDays": 30,
+    "eloMaxAgeDays": 7,
+    "marketValueMaxAgeDays": 14,
+    "clubMinutesMaxAgeDays": 7,
+    "playerRatingsMaxAgeDays": 3
+  }
+}

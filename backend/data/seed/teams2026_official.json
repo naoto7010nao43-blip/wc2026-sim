@@ -1,0 +1,818 @@
+[
+  {
+    "teamId": "BRA",
+    "teamCode": "BRA",
+    "name": "Brazil",
+    "confederation": "CONMEBOL",
+    "fifaRank": 6,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "C",
+    "tacticalProfile": {
+      "manager_name": "Carlo Ancelotti",
+      "press_intensity": 60,
+      "possession_style": 68,
+      "defensive_line_height": 58
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "ARG",
+    "teamCode": "ARG",
+    "name": "Argentina",
+    "confederation": "CONMEBOL",
+    "fifaRank": 1,
+    "defaultFormation": "4-3-3",
+    "groupId": "J",
+    "tacticalProfile": {
+      "manager_name": "Lionel Scaloni",
+      "press_intensity": 62,
+      "possession_style": 64,
+      "defensive_line_height": 58
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "FRA",
+    "teamCode": "FRA",
+    "name": "France",
+    "confederation": "UEFA",
+    "fifaRank": 3,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "I",
+    "tacticalProfile": {
+      "manager_name": "Didier Deschamps",
+      "press_intensity": 58,
+      "possession_style": 54,
+      "defensive_line_height": 52
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "ENG",
+    "teamCode": "ENG",
+    "name": "England",
+    "confederation": "UEFA",
+    "fifaRank": 4,
+    "defaultFormation": "4-3-3",
+    "groupId": "L",
+    "tacticalProfile": {
+      "manager_name": "Thomas Tuchel",
+      "press_intensity": 78,
+      "possession_style": 62,
+      "defensive_line_height": 68
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "GER",
+    "teamCode": "GER",
+    "name": "Germany",
+    "confederation": "UEFA",
+    "fifaRank": 10,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "E",
+    "tacticalProfile": {
+      "manager_name": "Julian Nagelsmann",
+      "press_intensity": 78,
+      "possession_style": 62,
+      "defensive_line_height": 68
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "USA",
+    "teamCode": "USA",
+    "name": "United States",
+    "confederation": "CONCACAF",
+    "fifaRank": 17,
+    "defaultFormation": "3-4-2-1",
+    "groupId": "D",
+    "tacticalProfile": {
+      "manager_name": "Mauricio Pochettino",
+      "press_intensity": 72,
+      "possession_style": 58,
+      "defensive_line_height": 62
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "MEX",
+    "teamCode": "MEX",
+    "name": "Mexico",
+    "confederation": "CONCACAF",
+    "fifaRank": 14,
+    "defaultFormation": "4-3-3",
+    "groupId": "A",
+    "tacticalProfile": {
+      "manager_name": "Javier Aguirre",
+      "press_intensity": 58,
+      "possession_style": 60,
+      "defensive_line_height": 52
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "RSA",
+    "teamCode": "RSA",
+    "name": "South Africa",
+    "confederation": "CAF",
+    "fifaRank": 60,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "A",
+    "tacticalProfile": {
+      "manager_name": "Hugo Broos",
+      "press_intensity": 48,
+      "possession_style": 45,
+      "defensive_line_height": 45
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "KOR",
+    "teamCode": "KOR",
+    "name": "South Korea",
+    "confederation": "AFC",
+    "fifaRank": 23,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "A",
+    "tacticalProfile": {
+      "manager_name": "Hong Myung-bo",
+      "press_intensity": 62,
+      "possession_style": 56,
+      "defensive_line_height": 58
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CZE",
+    "teamCode": "CZE",
+    "name": "Czechia",
+    "confederation": "UEFA",
+    "fifaRank": 41,
+    "defaultFormation": "3-4-2-1",
+    "groupId": "A",
+    "tacticalProfile": {
+      "manager_name": "Miroslav Koubek",
+      "press_intensity": 50,
+      "possession_style": 42,
+      "defensive_line_height": 44
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CAN",
+    "teamCode": "CAN",
+    "name": "Canada",
+    "confederation": "CONCACAF",
+    "fifaRank": 30,
+    "defaultFormation": "4-4-2",
+    "groupId": "B",
+    "tacticalProfile": {
+      "manager_name": "Jesse Marsch",
+      "press_intensity": 88,
+      "possession_style": 38,
+      "defensive_line_height": 72
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "BIH",
+    "teamCode": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "confederation": "UEFA",
+    "fifaRank": 64,
+    "defaultFormation": "4-4-2",
+    "groupId": "B",
+    "tacticalProfile": {
+      "manager_name": "Sergej Barbarez",
+      "press_intensity": 42,
+      "possession_style": 28,
+      "defensive_line_height": 38
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "QAT",
+    "teamCode": "QAT",
+    "name": "Qatar",
+    "confederation": "AFC",
+    "fifaRank": 56,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "B",
+    "tacticalProfile": {
+      "manager_name": "Julen Lopetegui",
+      "press_intensity": 55,
+      "possession_style": 58,
+      "defensive_line_height": 50
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "SUI",
+    "teamCode": "SUI",
+    "name": "Switzerland",
+    "confederation": "UEFA",
+    "fifaRank": 19,
+    "defaultFormation": "4-3-3",
+    "groupId": "B",
+    "tacticalProfile": {
+      "manager_name": "Murat Yakin",
+      "press_intensity": 60,
+      "possession_style": 66,
+      "defensive_line_height": 55
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "MAR",
+    "teamCode": "MAR",
+    "name": "Morocco",
+    "confederation": "CAF",
+    "fifaRank": 8,
+    "defaultFormation": "4-3-3",
+    "groupId": "C",
+    "tacticalProfile": {
+      "manager_name": "Mohamed Ouahbi",
+      "press_intensity": 78,
+      "possession_style": 56,
+      "defensive_line_height": 64
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "HAI",
+    "teamCode": "HAI",
+    "name": "Haiti",
+    "confederation": "CONCACAF",
+    "fifaRank": 83,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "C",
+    "tacticalProfile": {
+      "manager_name": "Sebastien Migne",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 24
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "SCO",
+    "teamCode": "SCO",
+    "name": "Scotland",
+    "confederation": "UEFA",
+    "fifaRank": 38,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "C",
+    "tacticalProfile": {
+      "manager_name": "Steve Clarke",
+      "press_intensity": 52,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "PAR",
+    "teamCode": "PAR",
+    "name": "Paraguay",
+    "confederation": "CONMEBOL",
+    "fifaRank": 54,
+    "defaultFormation": "4-4-2",
+    "groupId": "D",
+    "tacticalProfile": {
+      "manager_name": "Gustavo Alfaro",
+      "press_intensity": 38,
+      "possession_style": 32,
+      "defensive_line_height": 30
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "AUS",
+    "teamCode": "AUS",
+    "name": "Australia",
+    "confederation": "AFC",
+    "fifaRank": 26,
+    "defaultFormation": "3-4-2-1",
+    "groupId": "D",
+    "tacticalProfile": {
+      "manager_name": "Tony Popovic",
+      "press_intensity": 50,
+      "possession_style": 44,
+      "defensive_line_height": 45
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "TUR",
+    "teamCode": "TUR",
+    "name": "Turkey",
+    "confederation": "UEFA",
+    "fifaRank": 22,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "D",
+    "tacticalProfile": {
+      "manager_name": "Vincenzo Montella",
+      "press_intensity": 64,
+      "possession_style": 56,
+      "defensive_line_height": 55
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CUW",
+    "teamCode": "CUW",
+    "name": "Curacao",
+    "confederation": "CONCACAF",
+    "fifaRank": 82,
+    "defaultFormation": "3-4-3",
+    "groupId": "E",
+    "tacticalProfile": {
+      "manager_name": "Dick Advocaat",
+      "press_intensity": 38,
+      "possession_style": 32,
+      "defensive_line_height": 30
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CIV",
+    "teamCode": "CIV",
+    "name": "Ivory Coast",
+    "confederation": "CAF",
+    "fifaRank": 39,
+    "defaultFormation": "4-3-3",
+    "groupId": "E",
+    "tacticalProfile": {
+      "manager_name": "Emerse Fae",
+      "press_intensity": 62,
+      "possession_style": 50,
+      "defensive_line_height": 52
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "ECU",
+    "teamCode": "ECU",
+    "name": "Ecuador",
+    "confederation": "CONMEBOL",
+    "fifaRank": 22,
+    "defaultFormation": "4-4-2",
+    "groupId": "E",
+    "tacticalProfile": {
+      "manager_name": "Sebastian Beccacece",
+      "press_intensity": 70,
+      "possession_style": 40,
+      "defensive_line_height": 35
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "NED",
+    "teamCode": "NED",
+    "name": "Netherlands",
+    "confederation": "UEFA",
+    "fifaRank": 7,
+    "defaultFormation": "4-3-3",
+    "groupId": "F",
+    "tacticalProfile": {
+      "manager_name": "Ronald Koeman",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 64
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "JPN",
+    "teamCode": "JPN",
+    "name": "Japan",
+    "confederation": "AFC",
+    "fifaRank": 18,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "F",
+    "tacticalProfile": {
+      "manager_name": "Hajime Moriyasu",
+      "press_intensity": 60,
+      "possession_style": 61,
+      "defensive_line_height": 52
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "SWE",
+    "teamCode": "SWE",
+    "name": "Sweden",
+    "confederation": "UEFA",
+    "fifaRank": 25,
+    "defaultFormation": "3-4-3",
+    "groupId": "F",
+    "tacticalProfile": {
+      "manager_name": "Graham Potter",
+      "press_intensity": 55,
+      "possession_style": 53,
+      "defensive_line_height": 48
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "TUN",
+    "teamCode": "TUN",
+    "name": "Tunisia",
+    "confederation": "CAF",
+    "fifaRank": 38,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "F",
+    "tacticalProfile": {
+      "manager_name": "Herve Renard",
+      "press_intensity": 42,
+      "possession_style": 38,
+      "defensive_line_height": 36
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "BEL",
+    "teamCode": "BEL",
+    "name": "Belgium",
+    "confederation": "UEFA",
+    "fifaRank": 9,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "G",
+    "tacticalProfile": {
+      "manager_name": "Rudi Garcia",
+      "press_intensity": 68,
+      "possession_style": 64,
+      "defensive_line_height": 60
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "EGY",
+    "teamCode": "EGY",
+    "name": "Egypt",
+    "confederation": "CAF",
+    "fifaRank": 29,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "G",
+    "tacticalProfile": {
+      "manager_name": "Hossam Hassan",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "IRN",
+    "teamCode": "IRN",
+    "name": "Iran",
+    "confederation": "AFC",
+    "fifaRank": 20,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "G",
+    "tacticalProfile": {
+      "manager_name": "Amir Ghalenoei",
+      "press_intensity": 42,
+      "possession_style": 35,
+      "defensive_line_height": 28
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "NZL",
+    "teamCode": "NZL",
+    "name": "New Zealand",
+    "confederation": "OFC",
+    "fifaRank": 85,
+    "defaultFormation": "4-4-2",
+    "groupId": "G",
+    "tacticalProfile": {
+      "manager_name": "Darren Bazeley",
+      "press_intensity": 38,
+      "possession_style": 28,
+      "defensive_line_height": 25
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "ESP",
+    "teamCode": "ESP",
+    "name": "Spain",
+    "confederation": "UEFA",
+    "fifaRank": 2,
+    "defaultFormation": "4-3-3",
+    "groupId": "H",
+    "tacticalProfile": {
+      "manager_name": "Luis de la Fuente",
+      "press_intensity": 76,
+      "possession_style": 88,
+      "defensive_line_height": 68
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CPV",
+    "teamCode": "CPV",
+    "name": "Cape Verde",
+    "confederation": "CAF",
+    "fifaRank": 70,
+    "defaultFormation": "4-4-2",
+    "groupId": "H",
+    "tacticalProfile": {
+      "manager_name": "Pedro \"Bubista\" Brito",
+      "press_intensity": 46,
+      "possession_style": 34,
+      "defensive_line_height": 36
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "KSA",
+    "teamCode": "KSA",
+    "name": "Saudi Arabia",
+    "confederation": "AFC",
+    "fifaRank": 56,
+    "defaultFormation": "4-4-2",
+    "groupId": "H",
+    "tacticalProfile": {
+      "manager_name": "Georgios Donis",
+      "press_intensity": 58,
+      "possession_style": 48,
+      "defensive_line_height": 46
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "URU",
+    "teamCode": "URU",
+    "name": "Uruguay",
+    "confederation": "CONMEBOL",
+    "fifaRank": 14,
+    "defaultFormation": "4-3-3",
+    "groupId": "H",
+    "tacticalProfile": {
+      "manager_name": "Marcelo Bielsa",
+      "press_intensity": 88,
+      "possession_style": 54,
+      "defensive_line_height": 74
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "SEN",
+    "teamCode": "SEN",
+    "name": "Senegal",
+    "confederation": "CAF",
+    "fifaRank": 18,
+    "defaultFormation": "4-3-3",
+    "groupId": "I",
+    "tacticalProfile": {
+      "manager_name": "Pape Thiaw",
+      "press_intensity": 74,
+      "possession_style": 48,
+      "defensive_line_height": 58
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "IRQ",
+    "teamCode": "IRQ",
+    "name": "Iraq",
+    "confederation": "AFC",
+    "fifaRank": 58,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "I",
+    "tacticalProfile": {
+      "manager_name": "Graham Arnold",
+      "press_intensity": 48,
+      "possession_style": 40,
+      "defensive_line_height": 38
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "NOR",
+    "teamCode": "NOR",
+    "name": "Norway",
+    "confederation": "UEFA",
+    "fifaRank": 25,
+    "defaultFormation": "4-3-3",
+    "groupId": "I",
+    "tacticalProfile": {
+      "manager_name": "Stale Solbakken",
+      "press_intensity": 56,
+      "possession_style": 50,
+      "defensive_line_height": 48
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "ALG",
+    "teamCode": "ALG",
+    "name": "Algeria",
+    "confederation": "CAF",
+    "fifaRank": 28,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "J",
+    "tacticalProfile": {
+      "manager_name": "Vladimir Petkovic",
+      "press_intensity": 56,
+      "possession_style": 54,
+      "defensive_line_height": 48
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "AUT",
+    "teamCode": "AUT",
+    "name": "Austria",
+    "confederation": "UEFA",
+    "fifaRank": 24,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "J",
+    "tacticalProfile": {
+      "manager_name": "Ralf Rangnick",
+      "press_intensity": 84,
+      "possession_style": 56,
+      "defensive_line_height": 68
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "JOR",
+    "teamCode": "JOR",
+    "name": "Jordan",
+    "confederation": "AFC",
+    "fifaRank": 63,
+    "defaultFormation": "3-4-3",
+    "groupId": "J",
+    "tacticalProfile": {
+      "manager_name": "Jamal Sellami",
+      "press_intensity": 40,
+      "possession_style": 36,
+      "defensive_line_height": 34
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "POR",
+    "teamCode": "POR",
+    "name": "Portugal",
+    "confederation": "UEFA",
+    "fifaRank": 5,
+    "defaultFormation": "4-3-3",
+    "groupId": "K",
+    "tacticalProfile": {
+      "manager_name": "Roberto Martinez",
+      "press_intensity": 68,
+      "possession_style": 66,
+      "defensive_line_height": 60
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "COD",
+    "teamCode": "COD",
+    "name": "DR Congo",
+    "confederation": "CAF",
+    "fifaRank": 58,
+    "defaultFormation": "3-5-2",
+    "groupId": "K",
+    "tacticalProfile": {
+      "manager_name": "Sebastien Desabre",
+      "press_intensity": 48,
+      "possession_style": 38,
+      "defensive_line_height": 40
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "UZB",
+    "teamCode": "UZB",
+    "name": "Uzbekistan",
+    "confederation": "AFC",
+    "fifaRank": 56,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "K",
+    "tacticalProfile": {
+      "manager_name": "Fabio Cannavaro",
+      "press_intensity": 44,
+      "possession_style": 40,
+      "defensive_line_height": 36
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "COL",
+    "teamCode": "COL",
+    "name": "Colombia",
+    "confederation": "CONMEBOL",
+    "fifaRank": 14,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "K",
+    "tacticalProfile": {
+      "manager_name": "Nestor Lorenzo",
+      "press_intensity": 70,
+      "possession_style": 60,
+      "defensive_line_height": 58
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "CRO",
+    "teamCode": "CRO",
+    "name": "Croatia",
+    "confederation": "UEFA",
+    "fifaRank": 10,
+    "defaultFormation": "4-3-3",
+    "groupId": "L",
+    "tacticalProfile": {
+      "manager_name": "Zlatko Dalic",
+      "press_intensity": 48,
+      "possession_style": 68,
+      "defensive_line_height": 50
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "GHA",
+    "teamCode": "GHA",
+    "name": "Ghana",
+    "confederation": "CAF",
+    "fifaRank": 72,
+    "defaultFormation": "4-3-3",
+    "groupId": "L",
+    "tacticalProfile": {
+      "manager_name": "Carlos Queiroz",
+      "press_intensity": 58,
+      "possession_style": 42,
+      "defensive_line_height": 40
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "teamId": "PAN",
+    "teamCode": "PAN",
+    "name": "Panama",
+    "confederation": "CONCACAF",
+    "fifaRank": 30,
+    "defaultFormation": "4-2-3-1",
+    "groupId": "L",
+    "tacticalProfile": {
+      "manager_name": "Thomas Christiansen",
+      "press_intensity": 55,
+      "possession_style": 56,
+      "defensive_line_height": 45
+    },
+    "dataConfidence": "official",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  }
+]

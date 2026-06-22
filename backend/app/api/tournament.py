@@ -6,8 +6,10 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app.models.match import Match
+from app.prediction.monte_carlo import simulate_tournament_outcomes
 from app.rate_limit import rate_limit
 from app.schemas.match import MatchSummary
+from app.schemas.prediction import SimulateMonteCarloRequest, TournamentSimulationOut
 from app.schemas.tournament import ROUND_NAMES, RunTournamentRequest, TournamentResult
 from app.services.standings import compute_standings
 from app.services.tournament import GROUP_LETTERS, match_winner, run_full_tournament
@@ -45,6 +47,11 @@ def run_tournament(req: RunTournamentRequest, db: Session = Depends(get_db)):
         },
         group_standings=result["group_standings"],
     )
+
+
+@router.post("/simulate-monte-carlo", response_model=TournamentSimulationOut, dependencies=[Depends(rate_limit(3))])
+def simulate_monte_carlo(req: SimulateMonteCarloRequest, db: Session = Depends(get_db)):
+    return simulate_tournament_outcomes(db, iterations=req.iterations, base_seed=req.seed)
 
 
 @router.get("/state", response_model=TournamentResult | None)

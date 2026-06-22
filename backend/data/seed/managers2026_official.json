@@ -1,0 +1,338 @@
+[
+  {
+    "managerId": "mgr_bra",
+    "teamCode": "BRA",
+    "name": "Carlo Ancelotti",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_arg",
+    "teamCode": "ARG",
+    "name": "Lionel Scaloni",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_fra",
+    "teamCode": "FRA",
+    "name": "Didier Deschamps",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_eng",
+    "teamCode": "ENG",
+    "name": "Thomas Tuchel",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_ger",
+    "teamCode": "GER",
+    "name": "Julian Nagelsmann",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_usa",
+    "teamCode": "USA",
+    "name": "Mauricio Pochettino",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_mex",
+    "teamCode": "MEX",
+    "name": "Javier Aguirre",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_rsa",
+    "teamCode": "RSA",
+    "name": "Hugo Broos",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_kor",
+    "teamCode": "KOR",
+    "name": "Hong Myung-bo",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_cze",
+    "teamCode": "CZE",
+    "name": "Miroslav Koubek",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_can",
+    "teamCode": "CAN",
+    "name": "Jesse Marsch",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_bih",
+    "teamCode": "BIH",
+    "name": "Sergej Barbarez",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_qat",
+    "teamCode": "QAT",
+    "name": "Julen Lopetegui",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_sui",
+    "teamCode": "SUI",
+    "name": "Murat Yakin",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_mar",
+    "teamCode": "MAR",
+    "name": "Mohamed Ouahbi",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_hai",
+    "teamCode": "HAI",
+    "name": "Sebastien Migne",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_sco",
+    "teamCode": "SCO",
+    "name": "Steve Clarke",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_par",
+    "teamCode": "PAR",
+    "name": "Gustavo Alfaro",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_aus",
+    "teamCode": "AUS",
+    "name": "Tony Popovic",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_tur",
+    "teamCode": "TUR",
+    "name": "Vincenzo Montella",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_cuw",
+    "teamCode": "CUW",
+    "name": "Dick Advocaat",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_civ",
+    "teamCode": "CIV",
+    "name": "Emerse Fae",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_ecu",
+    "teamCode": "ECU",
+    "name": "Sebastian Beccacece",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_ned",
+    "teamCode": "NED",
+    "name": "Ronald Koeman",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_jpn",
+    "teamCode": "JPN",
+    "name": "Hajime Moriyasu",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_swe",
+    "teamCode": "SWE",
+    "name": "Graham Potter",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_tun",
+    "teamCode": "TUN",
+    "name": "Herve Renard",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_bel",
+    "teamCode": "BEL",
+    "name": "Rudi Garcia",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_egy",
+    "teamCode": "EGY",
+    "name": "Hossam Hassan",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_irn",
+    "teamCode": "IRN",
+    "name": "Amir Ghalenoei",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_nzl",
+    "teamCode": "NZL",
+    "name": "Darren Bazeley",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_esp",
+    "teamCode": "ESP",
+    "name": "Luis de la Fuente",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_cpv",
+    "teamCode": "CPV",
+    "name": "Pedro \"Bubista\" Brito",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_ksa",
+    "teamCode": "KSA",
+    "name": "Georgios Donis",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_uru",
+    "teamCode": "URU",
+    "name": "Marcelo Bielsa",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_sen",
+    "teamCode": "SEN",
+    "name": "Pape Thiaw",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_irq",
+    "teamCode": "IRQ",
+    "name": "Graham Arnold",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_nor",
+    "teamCode": "NOR",
+    "name": "Stale Solbakken",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_alg",
+    "teamCode": "ALG",
+    "name": "Vladimir Petkovic",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_aut",
+    "teamCode": "AUT",
+    "name": "Ralf Rangnick",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_jor",
+    "teamCode": "JOR",
+    "name": "Jamal Sellami",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_por",
+    "teamCode": "POR",
+    "name": "Roberto Martinez",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_cod",
+    "teamCode": "COD",
+    "name": "Sebastien Desabre",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_uzb",
+    "teamCode": "UZB",
+    "name": "Fabio Cannavaro",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_col",
+    "teamCode": "COL",
+    "name": "Nestor Lorenzo",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_cro",
+    "teamCode": "CRO",
+    "name": "Zlatko Dalic",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_gha",
+    "teamCode": "GHA",
+    "name": "Carlos Queiroz",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "managerId": "mgr_pan",
+    "teamCode": "PAN",
+    "name": "Thomas Christiansen",
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  }
+]

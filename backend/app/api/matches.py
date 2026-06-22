@@ -16,7 +16,7 @@ from app.services.player_ratings import compute_player_ratings, estimate_real_ma
 router = APIRouter(prefix="/api/matches", tags=["matches"])
 
 
-def _team_players_as_dicts(db: Session, team_id: str) -> list[dict]:
+def team_players_as_dicts(db: Session, team_id: str) -> list[dict]:
     players = db.scalars(select(Player).where(Player.team_id == team_id)).all()
     return [
         {
@@ -43,8 +43,8 @@ def run_and_persist_match(db: Session, req: SimulateMatchRequest) -> Match:
     away_formation = req.away_formation or away_team.default_formation
     seed = req.seed if req.seed is not None else uuid.uuid4().int & 0xFFFFFFFF
 
-    home_players = _team_players_as_dicts(db, req.home_team_id)
-    away_players = _team_players_as_dicts(db, req.away_team_id)
+    home_players = team_players_as_dicts(db, req.home_team_id)
+    away_players = team_players_as_dicts(db, req.away_team_id)
     if len(home_players) < 11 or len(away_players) < 11:
         raise HTTPException(status_code=400, detail="Both teams need at least 11 players")
 

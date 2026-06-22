@@ -1,5 +1,11 @@
 """Reads data/seed/*.json, runs the rating pipeline, and (re)populates the
 SQLite database. Safe to re-run after editing seed JSON or rating formulas.
+
+Prefers the v2 official/estimated data layer (players2026_official.json +
+playerRatings2026_estimated.json, see app/rating_v2/) when present, falling
+back to the original Stage A/B/C pipeline (app/rating/) otherwise -- the
+v2 files are produced by scripts/migrate_to_player_data_v2.py +
+scripts/rebuild_player_ratings_v2.py, which must be run first.
 """
 
 import sys
@@ -11,14 +17,19 @@ from app.database import Base, SessionLocal, engine
 from app.models.player import Player
 from app.models.team import Team
 from app.rating.seed_pipeline import build_player_rows, load_seed_data
+from app.rating_v2.seed_pipeline_v2 import load_v2_seed_data, v2_files_present
 
 
 def main():
     Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
 
-    teams_raw, players_raw = load_seed_data()
-    player_rows = build_player_rows(players_raw)
+    if v2_files_present():
+        teams_raw, player_rows = load_v2_seed_data()
+        print("Seeding from v2 official/estimated data layer.")
+    else:
+        teams_raw, players_raw = load_seed_data()
+        player_rows = build_player_rows(players_raw)
 
     db = SessionLocal()
     try:
