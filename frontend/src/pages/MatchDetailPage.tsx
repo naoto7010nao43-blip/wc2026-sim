@@ -56,6 +56,7 @@ export function MatchDetailPage() {
 
   useEffect(() => {
     if (!matchId) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional reset of stale match data before refetching on matchId change
     setMatch(null);
     api
       .getMatch(matchId)
