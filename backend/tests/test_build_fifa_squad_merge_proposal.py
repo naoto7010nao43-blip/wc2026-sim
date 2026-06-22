@@ -73,6 +73,30 @@ def test_build_merge_proposal_matches_unmatches_and_flags_coach_mismatch(monkeyp
     assert report["coachMismatches"][0]["teamCode"] == "BRA"
 
 
+def test_build_merge_proposal_flags_team_missing_from_official_pdf(monkeypatch):
+    def fake_load_seed_json(name: str) -> list[dict]:
+        if name == "players2026_official.json":
+            return []
+        if name == "managers2026_official.json":
+            return []
+        if name == "teams2026_official.json":
+            return [{"teamCode": "BRA", "name": "Brazil"}, {"teamCode": "ARG", "name": "Argentina"}]
+        raise AssertionError(f"unexpected seed file requested: {name}")
+
+    import scripts.build_fifa_squad_merge_proposal as module
+    monkeypatch.setattr(module.audit, "load_seed_json", fake_load_seed_json)
+
+    # Only BRA is present in the parsed official PDF data; ARG is missing entirely.
+    official_teams = {"BRA": OfficialTeam(team_name="Brazil", team_code="BRA", players=[], coach_name_block=None, coach_nationality=None)}
+
+    report = build_merge_proposal(official_teams)
+
+    assert report["teamsMissingInOfficialPdf"] == ["ARG"]
+    # A team missing from the official PDF should not also be reported as a coach mismatch --
+    # there is nothing to compare against, so it is only surfaced once, in the dedicated list.
+    assert all(c["teamCode"] != "ARG" for c in report["coachMismatches"])
+
+
 def test_build_merge_proposal_never_touches_seed_files(monkeypatch, tmp_path):
     """Spec 007A's acceptance criteria require this script to be read-only."""
     calls: list[str] = []
