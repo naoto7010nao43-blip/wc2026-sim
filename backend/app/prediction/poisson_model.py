@@ -184,16 +184,16 @@ def _explain(features: MatchFeatures, home_team_id: str, away_team_id: str, host
     lines = []
     if abs(features.attack_diff) >= 3:
         leader = home_team_id if features.attack_diff > 0 else away_team_id
-        lines.append(f"{leader} の攻撃力評価が優位です。")
+        lines.append(f"{leader} の攻撃評価が優位です。")
     if abs(features.defense_diff) >= 3:
         leader = home_team_id if features.defense_diff > 0 else away_team_id
-        lines.append(f"{leader} は相手の守備陣に対して優位と評価されています。")
+        lines.append(f"{leader} は相手の守備に対して優位と評価されています。")
     if abs(features.strength_diff) >= 3:
         leader = home_team_id if features.strength_diff > 0 else away_team_id
-        lines.append(f"{leader} はFIFAランキング・スカッド総合力で優位です。")
+        lines.append(f"{leader} はFIFAランキングとスカッド総合力で優位です。")
     if abs(features.tactical_modifier) >= 0.05:
         leader = home_team_id if features.tactical_modifier > 0 else away_team_id
-        lines.append(f"{leader} はプレス強度・守備ラインの噛み合いでやや優位です。")
+        lines.append(f"{leader} はプレス強度と守備ラインの噛み合わせでやや優位です。")
     if host_team_id is not None:
         lines.append(f"{host_team_id} は開催国としてのホームアドバンテージを得ています。")
     if not lines:

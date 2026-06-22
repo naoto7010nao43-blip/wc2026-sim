@@ -62,6 +62,17 @@ def test_match_prediction_endpoint_returns_disclaimer_and_probabilities(client):
     assert len(body["most_likely_scores"]) == 3
 
 
+def test_match_prediction_explanation_is_readable_japanese(client):
+    resp = client.get("/api/predictions/BRA/ARG")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["explanation"]
+    joined = " ".join(body["explanation"])
+    assert "縺" not in joined
+    assert "繝" not in joined
+    assert any(keyword in joined for keyword in ("優位", "互角", "ホームアドバンテージ"))
+
+
 def test_match_prediction_endpoint_404s_for_unknown_team(client):
     resp = client.get("/api/predictions/BRA/NOPE")
     assert resp.status_code == 404
