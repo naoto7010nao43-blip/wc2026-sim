@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
+import { MatchPredictionPanel } from "../components/MatchPredictionPanel";
 import { countryNameJa } from "../data/countryNamesJa";
 import type { TeamSummary } from "../types/domain";
 
@@ -128,6 +129,10 @@ export function SimulatorPage() {
           {loading ? "シミュレーション中..." : "シミュレーション開始"}
         </button>
       </section>
+
+      {homeTeamId && awayTeamId && homeTeamId !== awayTeamId && (
+        <MatchPredictionPanel homeTeamId={homeTeamId} awayTeamId={awayTeamId} />
+      )}
     </div>
   );
 }

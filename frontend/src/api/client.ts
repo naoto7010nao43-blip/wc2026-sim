@@ -1,5 +1,6 @@
 import type {
   LikelyLineupOut,
+  MatchPredictionOut,
   MatchResult,
   RoundRobinResult,
   StandingsRow,
@@ -30,6 +31,8 @@ export const api = {
   listTeams: () => getJson<TeamSummary[]>("/api/teams"),
   getTeam: (teamId: string) => getJson<TeamOut>(`/api/teams/${teamId}`),
   getLikelyLineup: (teamId: string) => getJson<LikelyLineupOut>(`/api/teams/${teamId}/likely-lineup`),
+  getMatchPrediction: (homeTeamId: string, awayTeamId: string) =>
+    getJson<MatchPredictionOut>(`/api/predictions/${homeTeamId}/${awayTeamId}`),
   getMatch: (matchId: string) => getJson<MatchResult>(`/api/matches/${matchId}`),
   simulateMatch: (homeTeamId: string, awayTeamId: string, opts?: { seed?: number; allowDraw?: boolean }) =>
     postJson<MatchResult>("/api/matches/simulate", {

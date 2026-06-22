@@ -44,6 +44,21 @@ export interface LikelyLineupOut {
   disclaimer: string;
 }
 
+export interface MatchPredictionOut {
+  home_team_id: string;
+  away_team_id: string;
+  home_win_pct: number;
+  draw_pct: number;
+  away_win_pct: number;
+  home_expected_goals: number;
+  away_expected_goals: number;
+  most_likely_scores: [number, number, number][];
+  data_confidence: string;
+  explanation: string[];
+  model_version: string;
+  disclaimer: string;
+}
+
 export interface MatchEvent {
   minute: number;
   event_type: string;
