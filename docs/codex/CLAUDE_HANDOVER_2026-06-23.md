@@ -85,6 +85,55 @@ report are likely real matches the heuristic missed, not actually new/extra
 players. This was already a known, documented limitation before this task;
 it was not introduced or fixed here.
 
+## Additional verification performed (browser smoke check)
+
+`docs/codex/PROGRESS.md`'s "Next Codex actions" listed "Review TeamPage
+data-trust UX after local visual smoke checks" as still open. With remaining
+time before Codex's recovery, Claude Code ran a full browser-driven smoke
+check (headless Playwright via `npx playwright`, both backend `:8000` and
+frontend `:5173` dev servers already running) across every route, to give
+Codex concrete visual evidence to review rather than just code. No code was
+changed for this — verification only.
+
+Checked, all clean (no console errors, no failed requests, no layout
+overflow):
+
+- `/teams/BRA` — desktop (1280px) and mobile (390px) viewports. Data-trust
+  panel (3-axis tactical bars + 選手数/推定/平均不確実性/低信頼度属性あり
+  summary), roster table sorted by overall, predicted lineup with starting
+  probability badges — all rendered correctly at both widths, no horizontal
+  overflow on mobile.
+- `/tournament` — ran the full 104-match batch simulation
+  (`大会を一括シミュレーション`) and the Monte Carlo title-odds panel
+  (`優勝確率を計算する`). Bracket, group standings, and odds list all
+  rendered. Re-visiting the page after a run correctly showed persisted
+  server-side tournament state (button label changed to
+  `もう一度シミュレーション` + a `リセット` button appeared) — confirms
+  `/api/tournament/state` round-trips correctly.
+- A knockout-round match from that batch run (`/matches/8bf5602b-...`,
+  Round of 32, GER vs CZE) and a group-stage match
+  (`/matches/f926b2a5-...`, CRO vs PAN) both opened correctly with the
+  `スコア予測モデル` trust badge and the spec-003 explanation
+  ("この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。").
+  Worth noting for Codex: the bulk tournament-simulation endpoint appears to
+  use the Stage B Poisson model for every match, including group stage — not
+  just knockout rounds. The micro-simulator with full event replay is only
+  reachable through the dedicated single-match `試合シミュレーター`
+  (`/simulate`) flow. This matches the two modes' own descriptions on the
+  homepage, so it reads as intentional design rather than a bug, but it's
+  worth Codex explicitly confirming that's the intended behavior.
+- `/simulate` — spec 004's prediction panel rendered correctly (win/draw/win
+  probability bars, expected goals, top scorelines with probabilities, model
+  name `poisson-v1`, data confidence `estimated`, disclaimer text). Running
+  an actual simulation (CZE vs MEX) navigated to a match detail page with the
+  `詳細シミュレーション` badge, full event timeline, pitch visualization,
+  possession/shots/cards stats, Man of the Match, and a complete player
+  ratings table for both teams — all rendered correctly with no errors.
+
+No bugs found. This is evidence for Codex's pending UX review, not a
+substitute for it — Codex should still make the actual call on whether the
+data-trust panel's wording/layout meets product bar.
+
 ## Suggested next step for Codex
 
 The natural follow-up is deciding whether/how to spend a "Spec 007B" on:
