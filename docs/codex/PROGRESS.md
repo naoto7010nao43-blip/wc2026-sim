@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Continue unattended progress after reducing official squad matching false negatives and applying newly safe fields.
+Continue unattended progress with a larger Claude Code task focused on data quality visibility, encoding guardrails, and UI trust polish.
 
 Completed:
 
@@ -28,7 +28,8 @@ Completed:
 
 Primary task:
 
-- None active for Claude Code. Codex is preparing the next task.
+- `docs/specs/010-unattended-site-quality-sprint.md`
+- This is intentionally larger than prior tasks so Claude Code can keep working without asking for frequent new specs.
 
 Direction-only context:
 

@@ -8,7 +8,7 @@ Read first:
 
 ## Active Claude Code Task
 
-None.
+`docs/specs/010-unattended-site-quality-sprint.md`
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
@@ -30,5 +30,6 @@ Completed:
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
 - Spec 009 follow-up safe field apply for newly matched players
+- `docs/specs/010-unattended-site-quality-sprint.md` is active
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
