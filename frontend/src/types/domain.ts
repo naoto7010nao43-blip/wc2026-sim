@@ -1,3 +1,12 @@
+export interface SourceBreakdown {
+  officialRoster: boolean;
+  marketValueUsed: boolean;
+  clubMinutesUsed: boolean;
+  nationalTeamMinutesUsed: boolean;
+  injuryDataUsed: boolean;
+  manualOverrideUsed: boolean;
+}
+
 export interface PlayerSummary {
   id: string;
   name: string;
@@ -5,6 +14,14 @@ export interface PlayerSummary {
   age: number;
   primary_position: string;
   overall: number;
+  // Rating trust/provenance metadata -- absent (null/[]) for players
+  // seeded before this metadata existed, never fabricated client-side.
+  starting_probability: number | null;
+  data_confidence: string | null;
+  uncertainty: number | null;
+  source_breakdown: SourceBreakdown | null;
+  low_confidence_attributes: string[];
+  rating_last_updated: string | null;
 }
 
 export interface TacticalProfile {

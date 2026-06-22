@@ -77,3 +77,23 @@ def v2_skill_attributes(rating: PlayerRatingV2) -> dict:
         "availability": rating.availability,
         "startingProbability": rating.starting_probability,
     }
+
+
+def rating_trust_metadata(rating: PlayerRatingV2) -> dict:
+    """Confidence/provenance metadata (not a gameplay attribute) merged
+    into Player.attributes alongside the skill values above, so the API
+    can explain *why* a rating looks the way it does -- see spec 006."""
+    return {
+        "dataConfidence": rating.data_confidence,
+        "uncertainty": rating.uncertainty,
+        "sourceBreakdown": {
+            "officialRoster": rating.source_breakdown.official_roster,
+            "marketValueUsed": rating.source_breakdown.market_value_used,
+            "clubMinutesUsed": rating.source_breakdown.club_minutes_used,
+            "nationalTeamMinutesUsed": rating.source_breakdown.national_team_minutes_used,
+            "injuryDataUsed": rating.source_breakdown.injury_data_used,
+            "manualOverrideUsed": rating.source_breakdown.manual_override_used,
+        },
+        "lowConfidenceAttributes": rating.low_confidence_attributes,
+        "lastUpdated": rating.last_updated,
+    }

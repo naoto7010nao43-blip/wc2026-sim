@@ -36,6 +36,14 @@ class PlayerSummary(BaseModel):
     age: int
     primary_position: str
     overall: int
+    # Rating trust/provenance metadata (v2 rating model) -- None/[] for
+    # players seeded before this metadata existed, never fabricated.
+    starting_probability: float | None = None
+    data_confidence: str | None = None
+    uncertainty: float | None = None
+    source_breakdown: dict | None = None
+    low_confidence_attributes: list[str] = []
+    rating_last_updated: str | None = None
 
     model_config = {"from_attributes": True}
 
@@ -52,5 +60,11 @@ class PlayerOut(BaseModel):
     attributes: PlayerAttributes
     stamina_max: int
     source_notes: str | None = None
+    starting_probability: float | None = None
+    data_confidence: str | None = None
+    uncertainty: float | None = None
+    source_breakdown: dict | None = None
+    low_confidence_attributes: list[str] = []
+    rating_last_updated: str | None = None
 
     model_config = {"from_attributes": True}

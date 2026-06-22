@@ -7,7 +7,7 @@ construction and the rest of the app are completely unaware v2 exists.
 import json
 from pathlib import Path
 
-from app.rating_v2.legacy_bridge import derive_legacy_attributes, v2_skill_attributes
+from app.rating_v2.legacy_bridge import derive_legacy_attributes, rating_trust_metadata, v2_skill_attributes
 from app.rating_v2.types import PlayerRatingV2
 
 SEED_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "seed"
@@ -51,10 +51,15 @@ def load_v2_seed_data() -> tuple[list[dict], list[dict]]:
         if rating_dict is None:
             continue  # no estimated rating yet for this roster entry -- skip rather than fabricate one
         rating = PlayerRatingV2.from_json_dict(rating_dict)
-        # Legacy 6+2 keys for app/engine/* (the micro-simulator) plus the
+        # Legacy 6+2 keys for app/engine/* (the micro-simulator), the
         # finer-grained v2 keys for app/prediction/ratings.py (the Poisson
-        # model) -- both read the same Player.attributes JSON column.
-        attributes = {**derive_legacy_attributes(rating), **v2_skill_attributes(rating)}
+        # model), and trust/provenance metadata for the API/UI -- all three
+        # read the same Player.attributes JSON column.
+        attributes = {
+            **derive_legacy_attributes(rating),
+            **v2_skill_attributes(rating),
+            **rating_trust_metadata(rating),
+        }
         player_rows.append({
             "id": p["playerId"],
             "team_id": p["teamId"],

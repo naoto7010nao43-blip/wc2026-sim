@@ -20,3 +20,32 @@ class Player(Base):
     source_notes: Mapped[str | None] = mapped_column(String, nullable=True)
 
     team: Mapped["Team"] = relationship(back_populates="players")
+
+    # Computed (not persisted) -- read v2 rating trust/provenance metadata
+    # back out of the existing `attributes` JSON column rather than adding
+    # new mapped columns, so legacy/pre-v2 seed data (which simply lacks
+    # these keys) still loads without error; every property below returns
+    # a safe default (None/[]) instead of raising when the key is absent.
+    @property
+    def starting_probability(self) -> float | None:
+        return self.attributes.get("startingProbability")
+
+    @property
+    def data_confidence(self) -> str | None:
+        return self.attributes.get("dataConfidence")
+
+    @property
+    def uncertainty(self) -> float | None:
+        return self.attributes.get("uncertainty")
+
+    @property
+    def source_breakdown(self) -> dict | None:
+        return self.attributes.get("sourceBreakdown")
+
+    @property
+    def low_confidence_attributes(self) -> list[str]:
+        return self.attributes.get("lowConfidenceAttributes") or []
+
+    @property
+    def rating_last_updated(self) -> str | None:
+        return self.attributes.get("lastUpdated")
