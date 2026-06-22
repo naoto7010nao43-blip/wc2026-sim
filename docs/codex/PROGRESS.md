@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Review completed overnight sprint work and prepare the next accuracy-focused task.
+Run a long unattended official squad data sprint.
 
 Completed:
 
@@ -19,10 +19,11 @@ Completed:
 - `docs/specs/004-simulator-prediction-panel.md`
 - `docs/specs/005-tournament-odds-panel.md`
 - `docs/specs/006-overnight-data-trust-sprint.md`
+- Spec 007A official squad merge proposal, commit `ebe4064`
 
 Primary task:
 
-- None active for Claude Code.
+- `docs/specs/008-official-squad-safe-field-apply.md`
 
 Direction-only context:
 
@@ -31,9 +32,9 @@ Direction-only context:
 
 ## Verification Baseline
 
-Last known baseline from Codex inspection after commit `bcb5f2b`:
+Last known baseline from Claude/Codex inspection after commit `ef40525`:
 
-- Backend tests: `125 passed`
+- Backend tests: `130 passed`
 - Frontend build: passed
 - Frontend lint: passed
 - Local backend: responding on port 8000
@@ -48,12 +49,14 @@ Last known baseline from Codex inspection after commit `bcb5f2b`:
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
 - FIFA Official Squad List diff report parses 48 teams and 26 official players per team. Current seed has roster drift for all 48 teams and coach mismatches for 16 teams; seed updates need a separate reviewed import spec.
+- Spec 008 is allowed to apply only existing matched-player null-field updates from the official proposal; it must not add or remove players.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
 Next Codex actions:
 
-1. Prepare a separate official squad import/update spec from `backend/reports/fifa_squad_diff_2026-06-22.json`.
-2. Keep formula changes frozen until an explicit calibration spec exists.
-3. Review TeamPage data-trust UX after local visual smoke checks.
+1. Let Claude Code implement Spec 008.
+2. Codex reviews the resulting applied field report and TeamPage UI.
+3. Decide later whether to improve matching for the 776 unmatched official players and 197 unmatched seed players.
+4. Keep formula changes frozen until an explicit calibration spec exists.
