@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Reduce user handoff work while Codex reviews completed implementation and prepares the next high-value task.
+Run an overnight parallel sprint with minimal user involvement.
 
 Completed:
 
@@ -21,7 +21,7 @@ Completed:
 
 Primary task:
 
-- None active for Claude Code. Codex is reviewing and planning.
+- `docs/specs/006-overnight-data-trust-sprint.md`
 
 Direction-only context:
 
@@ -41,17 +41,15 @@ Last known baseline from Codex inspection after commit `8b35778`:
 ## Open Risks
 
 - Do not ask the user for routine implementation or commit approval.
-- Use Claude Code only when Codex has prepared a clear Ready task.
+- Claude Code should continue through the overnight sprint phases without routine user confirmation.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
-Next Codex actions:
+Next Codex actions while Claude Code implements Spec 006:
 
-1. Continue reducing user handoff overhead.
-2. Choose the next high-value spec, likely one of:
-   - player/manager data confidence system
-   - simulation calibration review
-   - Match Detail v2 follow-up
+1. Review and fix low-risk user-facing copy/encoding issues outside Claude's active scope.
+2. Audit simulation and data-quality risks.
+3. Prepare the next spec only after Spec 006 is complete or clearly blocked.

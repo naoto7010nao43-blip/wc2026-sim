@@ -56,7 +56,8 @@ def test_likely_lineup_endpoint_returns_11_slots_with_disclaimer(client):
     body = resp.json()
     assert body["team_id"] == "BRA"
     assert len(body["lineup"]) == 11
-    assert "予測" in body["disclaimer"]
+    assert "公式発表" in body["disclaimer"]
+    assert "推定" in body["disclaimer"]
     player_ids = [slot["player_id"] for slot in body["lineup"]]
     assert len(player_ids) == len(set(player_ids))
 

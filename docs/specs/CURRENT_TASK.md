@@ -8,9 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-None.
+- `docs/specs/006-overnight-data-trust-sprint.md`
 
-Codex is reviewing progress and preparing the next task. Claude Code should not ask the user for routine action while this file has no active Ready task.
+This is an overnight sprint. Claude Code should work through the full spec without routine user confirmation. If one phase is blocked, document it, skip only that phase, and continue with later phases when possible.
 
 Context only:
 
