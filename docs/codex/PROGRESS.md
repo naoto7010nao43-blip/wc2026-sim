@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Run an overnight parallel sprint with minimal user involvement.
+Review completed overnight sprint work and prepare the next accuracy-focused task.
 
 Completed:
 
@@ -18,10 +18,11 @@ Completed:
 - `docs/specs/003-match-detail-trust-states.md`
 - `docs/specs/004-simulator-prediction-panel.md`
 - `docs/specs/005-tournament-odds-panel.md`
+- `docs/specs/006-overnight-data-trust-sprint.md`
 
 Primary task:
 
-- `docs/specs/006-overnight-data-trust-sprint.md`
+- None active for Claude Code.
 
 Direction-only context:
 
@@ -29,9 +30,9 @@ Direction-only context:
 
 ## Verification Baseline
 
-Last known baseline from Codex inspection after commit `8b35778`:
+Last known baseline from Codex inspection after commit `bcb5f2b`:
 
-- Backend tests: `115 passed`
+- Backend tests: `124 passed`
 - Frontend build: passed
 - Frontend lint: passed
 - Local backend: responding on port 8000
@@ -44,12 +45,13 @@ Last known baseline from Codex inspection after commit `8b35778`:
 - Claude Code should continue through the overnight sprint phases without routine user confirmation.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
+- FIFA Official Squad List diff report shows roster drift for all 48 teams and coach mismatches for 16 teams; seed updates need a separate reviewed import spec.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
 
-Next Codex actions while Claude Code implements Spec 006:
+Next Codex actions:
 
-1. Review and fix low-risk user-facing copy/encoding issues outside Claude's active scope.
-2. Audit simulation and data-quality risks.
-3. Prepare the next spec only after Spec 006 is complete or clearly blocked.
+1. Prepare a separate official squad import/update spec from `backend/reports/fifa_squad_diff_2026-06-22.json`.
+2. Keep formula changes frozen until an explicit calibration spec exists.
+3. Review TeamPage data-trust UX after local visual smoke checks.

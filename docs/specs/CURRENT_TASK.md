@@ -8,9 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-- `docs/specs/006-overnight-data-trust-sprint.md`
+None.
 
-This is an overnight sprint. Claude Code should work through the full spec without routine user confirmation. If one phase is blocked, document it, skip only that phase, and continue with later phases when possible.
+Spec 006 has been implemented and committed. Codex is preparing the next task from the latest audit findings.
 
 Context only:
 
@@ -22,5 +22,6 @@ Completed:
 - `docs/specs/003-match-detail-trust-states.md`
 - `docs/specs/004-simulator-prediction-panel.md`
 - `docs/specs/005-tournament-odds-panel.md`
+- `docs/specs/006-overnight-data-trust-sprint.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
