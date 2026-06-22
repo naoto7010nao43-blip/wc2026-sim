@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Continue unattended progress after applying safe official squad fields.
+Continue unattended progress by reducing official squad matching false negatives.
 
 Completed:
 
@@ -24,7 +24,8 @@ Completed:
 
 Primary task:
 
-- None active for Claude Code. Codex is preparing the next task.
+- `docs/specs/009-official-squad-match-quality.md`
+- Goal: improve conservative official-squad name matching and regenerate read-only reports before any future roster add/delete decision.
 
 Direction-only context:
 
@@ -58,6 +59,6 @@ Last known baseline from Codex inspection during Spec 008:
 
 Next Codex actions:
 
-1. Prepare the next unattended task, likely matching-quality improvement before adding/removing official squad players.
-2. Decide later whether/how to resolve the 776 unmatched official players and 197 unmatched seed players.
+1. Review Spec 009 completion and before/after unmatched counts.
+2. Decide later whether/how to resolve remaining unmatched official/seed players.
 3. Keep formula changes frozen until an explicit calibration spec exists.

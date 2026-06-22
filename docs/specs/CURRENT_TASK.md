@@ -8,7 +8,7 @@ Read first:
 
 ## Active Claude Code Task
 
-None.
+`docs/specs/009-official-squad-match-quality.md`
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 
