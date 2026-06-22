@@ -40,6 +40,20 @@ PLAYER_SUFFIX_RE = re.compile(
     r"(?:\s+(?P<goals>\d+))?$"
 )
 COACH_RE = re.compile(r"^Head coach\s+(?P<name_block>.+)\s+(?P<nationality>[A-Za-z .'-]+)$")
+NAME_PARTICLES = {
+    "al",
+    "bin",
+    "da",
+    "das",
+    "de",
+    "del",
+    "di",
+    "do",
+    "dos",
+    "el",
+    "van",
+    "von",
+}
 
 
 @dataclass(frozen=True)
@@ -76,6 +90,29 @@ def normalized_tokens(value: str | None) -> list[str]:
     decomposed = unicodedata.normalize("NFKD", value)
     asciiish = "".join(ch for ch in decomposed if not unicodedata.combining(ch))
     return [token for token in re.split(r"[^a-z0-9]+", asciiish.casefold()) if len(token) > 1]
+
+
+def meaningful_name_tokens(value: str | None) -> list[str]:
+    """Return de-duplicated name tokens useful for conservative matching."""
+    tokens = []
+    seen = set()
+    for token in normalized_tokens(value):
+        if token in NAME_PARTICLES or token in seen:
+            continue
+        tokens.append(token)
+        seen.add(token)
+    return tokens
+
+
+def compact_name_candidates(value: str | None) -> set[str]:
+    tokens = meaningful_name_tokens(value)
+    candidates = {normalize_name(value)}
+    if len(tokens) >= 2:
+        first = tokens[0]
+        last = tokens[-1]
+        candidates.add(first + last)
+        candidates.add(last + first)
+    return {candidate for candidate in candidates if candidate}
 
 
 def load_pdf_bytes(input_arg: str) -> bytes:
@@ -212,7 +249,24 @@ def official_matches_seed(seed_name: str, official_name_block: str) -> bool:
         return True
     seed_tokens = normalized_tokens(seed_name)
     official_tokens = normalized_tokens(official_name_block)
-    return bool(seed_tokens and all(token in official_tokens for token in seed_tokens))
+    if seed_tokens and all(token in official_tokens for token in seed_tokens):
+        return True
+
+    meaningful_seed_tokens = meaningful_name_tokens(seed_name)
+    if len(meaningful_seed_tokens) < 2:
+        return False
+
+    for candidate in compact_name_candidates(seed_name):
+        if len(candidate) >= 5 and candidate in official_norm:
+            return True
+
+    final_token = meaningful_seed_tokens[-1]
+    matched_tokens = {
+        token
+        for token in meaningful_seed_tokens
+        if token in official_tokens or (len(token) >= 3 and token in official_norm)
+    }
+    return final_token in matched_tokens and len(matched_tokens) >= 2
 
 
 def build_diff_report(official_teams: dict[str, OfficialTeam]) -> dict:

@@ -8,9 +8,10 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/009-official-squad-match-quality.md`
+None.
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
+Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
 
 Context only:
 
@@ -26,5 +27,6 @@ Completed:
 - `docs/specs/006-overnight-data-trust-sprint.md`
 - Spec 007A official squad merge proposal, implemented as commit `ebe4064`
 - `docs/specs/008-official-squad-safe-field-apply.md`
+- `docs/specs/009-official-squad-match-quality.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
