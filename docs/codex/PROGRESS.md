@@ -37,6 +37,7 @@ Last known baseline from Codex inspection after commit `bcb5f2b`:
 - Frontend lint: passed
 - Local backend: responding on port 8000
 - Local frontend: responding on `localhost:5173`
+- Browser smoke check: `/teams/BRA` desktop and mobile width passed, no horizontal overflow detected.
 - Production frontend/backend: responding with HTTP 200
 
 ## Open Risks
