@@ -17,6 +17,7 @@ from app.schemas.match import SimulateMatchRequest
 from app.schemas.standings import StandingsRow
 from app.services.real_results import load_real_results, persist_real_match
 from app.services.standings import compute_standings
+from app.services.third_place import rank_third_place_teams
 
 GROUP_LETTERS = list("ABCDEFGHIJKL")
 
@@ -87,11 +88,13 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
 
     group_standings: dict[str, list[StandingsRow]] = {letter: compute_standings(db, letter) for letter in GROUP_LETTERS}
 
-    # 2. Best 8 third-placed teams across all 12 groups (points -> GD -> GF).
-    third_placed = [(letter, standings[2]) for letter, standings in group_standings.items()]
-    third_placed.sort(key=lambda lt: (lt[1].points, lt[1].goal_diff, lt[1].goals_for), reverse=True)
-    qualifying_third_groups = [letter for letter, _ in third_placed[:8]]
-    third_place_team_by_group = {letter: row.team_id for letter, row in third_placed[:8]}
+    # 2. Best 8 third-placed teams across all 12 groups, per FIFA's official
+    # third-place ranking cascade (points -> GD -> GF -> conduct -> FIFA rank).
+    third_place_rows = {letter: standings[2] for letter, standings in group_standings.items()}
+    third_place_rankings = rank_third_place_teams(third_place_rows)
+    qualifying_rankings = [r for r in third_place_rankings if r.qualified]
+    qualifying_third_groups = [r.group_id for r in qualifying_rankings]
+    third_place_team_by_group = {r.group_id: r.team_id for r in qualifying_rankings}
     third_place_assignment = assign_third_place_slots(qualifying_third_groups)
 
     # 3. Round of 32.

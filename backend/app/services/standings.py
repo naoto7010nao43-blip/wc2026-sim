@@ -4,13 +4,19 @@ from sqlalchemy.orm import Session
 from app.models.match import Match
 from app.models.team import Team
 from app.schemas.standings import StandingsRow
+from app.services.tiebreakers import TeamAggregate, break_ties, compute_conduct_scores
 
 
-def compute_standings(db: Session, group_id: str) -> list[StandingsRow]:
-    matches = db.scalars(
-        select(Match).where(Match.group_id == group_id, Match.status == "completed")
-    ).all()
-
+def calculate_standings(
+    matches: list[Match],
+    team_names: dict[str, str],
+    fifa_ranks: dict[str, int | None],
+) -> list[StandingsRow]:
+    """Pure: computes group standings (played/won/drawn/lost/gf/ga/points)
+    plus FIFA's official tiebreaker cascade (see tiebreakers.py), without
+    touching the database. `matches` must include every completed match in
+    the group; `team_names`/`fifa_ranks` must have an entry for every team
+    that appears in `matches`."""
     team_ids: set[str] = set()
     for m in matches:
         team_ids.add(m.home_team_id)
@@ -40,13 +46,16 @@ def compute_standings(db: Session, group_id: str) -> list[StandingsRow]:
             h["drawn"] += 1
             a["drawn"] += 1
 
-    team_names = {
-        t.id: t.name
-        for t in db.scalars(select(Team).where(Team.id.in_(team_ids))).all()
+    aggregates = {
+        tid: TeamAggregate(tid, s["won"] * 3 + s["drawn"], s["gf"] - s["ga"], s["gf"])
+        for tid, s in stats.items()
     }
+    conduct_scores = compute_conduct_scores(matches)
+    ordered = break_ties(sorted(team_ids), matches, aggregates, conduct_scores, fifa_ranks)
 
     rows = []
-    for tid, s in stats.items():
+    for tid, reason in ordered:
+        s = stats[tid]
         points = s["won"] * 3 + s["drawn"]
         rows.append(StandingsRow(
             team_id=tid,
@@ -59,7 +68,25 @@ def compute_standings(db: Session, group_id: str) -> list[StandingsRow]:
             goals_against=s["ga"],
             goal_diff=s["gf"] - s["ga"],
             points=points,
+            conduct_score=conduct_scores.get(tid, 0),
+            fifa_rank=fifa_ranks.get(tid),
+            tiebreak_reason=reason,
         ))
-
-    rows.sort(key=lambda r: (-r.points, -r.goal_diff, -r.goals_for, r.team_id))
     return rows
+
+
+def compute_standings(db: Session, group_id: str) -> list[StandingsRow]:
+    matches = db.scalars(
+        select(Match).where(Match.group_id == group_id, Match.status == "completed")
+    ).all()
+
+    team_ids: set[str] = set()
+    for m in matches:
+        team_ids.add(m.home_team_id)
+        team_ids.add(m.away_team_id)
+
+    teams = db.scalars(select(Team).where(Team.id.in_(team_ids))).all()
+    team_names = {t.id: t.name for t in teams}
+    fifa_ranks = {t.id: t.fifa_rank for t in teams}
+
+    return calculate_standings(list(matches), team_names, fifa_ranks)

@@ -12,3 +12,6 @@ class StandingsRow(BaseModel):
     goals_against: int
     goal_diff: int
     points: int
+    conduct_score: int
+    fifa_rank: int | None
+    tiebreak_reason: str
