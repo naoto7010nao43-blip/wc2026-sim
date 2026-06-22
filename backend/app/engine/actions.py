@@ -166,9 +166,16 @@ def advance_position(pos: tuple[float, float], attacking_direction: int, step: f
     return (max(0.0, min(100.0, pos[0] + dx)), max(0.0, min(100.0, pos[1] + dy)))
 
 
-def choose_action(carrier: PlayerState, ball_x: float, ball_y: float, attacking_direction: int, rng: random.Random, possession_style: float = 50.0) -> str:
+def choose_action(
+    carrier: PlayerState, ball_x: float, ball_y: float, attacking_direction: int, rng: random.Random,
+    possession_style: float = 50.0, chasing_intensity: float = 0.0,
+) -> str:
     """Choose among SHOOT, PASS, DRIBBLE, LONG_BALL based on zone, dribbling/shooting
-    tendency, and the attacking team's possession_style (0=direct/long-ball, 100=possession)."""
+    tendency, and the attacking team's possession_style (0=direct/long-ball, 100=possession).
+    chasing_intensity (0-1, see TeamState.chasing_intensity) is a small extra
+    nudge toward shooting for a team genuinely chasing a late deficit --
+    without this, raising press_intensity/possession_style when trailing
+    changed the pass/dribble mix but never actually produced more shots."""
     dist_to_goal = distance_to_target_goal((ball_x, ball_y), attacking_direction)
 
     # Shooting-range radius and trigger probability widened from an earlier,
@@ -178,7 +185,8 @@ def choose_action(carrier: PlayerState, ball_x: float, ball_y: float, attacking_
     # sqrt-damped distance weighting + role-aware gravity) added more
     # friction to reaching the box at all, which had pulled shot/goal volume
     # back down below benchmark.
-    if dist_to_goal < 34 and rng.random() < (0.27 + carrier.attributes["shooting"] / 220):
+    shoot_probability = 0.27 + carrier.attributes["shooting"] / 220 + chasing_intensity * 0.22
+    if dist_to_goal < 34 and rng.random() < shoot_probability:
         return "SHOOT"
 
     style_shift = (possession_style - 50.0) * 0.004

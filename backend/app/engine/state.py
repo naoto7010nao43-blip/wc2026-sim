@@ -68,6 +68,18 @@ class TeamState:
     def defensive_line_height(self) -> float:
         return self.tactical_profile.get("defensive_line_height", 50.0)
 
+    def chasing_intensity(self) -> float:
+        """0-1: how much management.update_score_state_tactics has pushed
+        this team's press_intensity *above* its pre-match game-plan
+        baseline -- i.e. genuinely chasing a deficit late on, not just
+        having a naturally high-press game plan. Protecting a lead pushes
+        press_intensity the other way and correctly yields 0 here, not a
+        negative value that would otherwise need clamping everywhere this
+        is used."""
+        current = self.tactical_profile.get("press_intensity", 50.0)
+        base = self.base_tactical_profile.get("press_intensity", 50.0)
+        return max(0.0, min(1.0, (current - base) / 15.0))
+
 
 def _mirror_x(x: float) -> float:
     return 100.0 - x

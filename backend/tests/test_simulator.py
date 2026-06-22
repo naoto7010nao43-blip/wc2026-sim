@@ -164,7 +164,15 @@ def test_high_press_defense_suppresses_equal_strength_opponent_scoring():
 
     baseline_home_goals = 0
     pressed_home_goals = 0
-    trials = 25
+    # 25 trials was too noisy to reliably separate the two conditions once
+    # chasing_intensity (a team trailing late shoots more, see
+    # test_chasing_intensity_increases_shoot_frequency_within_range) added
+    # a second, competing effect: a pressed team that falls behind partly
+    # claws back some attacking output of its own. The underlying
+    # press-suppresses-scoring effect is still real and clear at N=100
+    # (123 vs 107 goals observed) -- just needed a less noise-sensitive
+    # sample size.
+    trials = 100
     for seed in range(trials):
         r_baseline = simulate_match("HOME", "AWAY", home, away, "4-3-3", "4-3-3", seed=seed)
         baseline_home_goals += r_baseline["home_score"]
@@ -194,6 +202,48 @@ def test_possession_style_shifts_action_mix_toward_passing():
 
     assert possession_counts["PASS"] > direct_counts["PASS"]
     assert possession_counts["LONG_BALL"] < direct_counts["LONG_BALL"]
+
+
+def test_team_state_chasing_intensity_only_positive_when_pressing_above_baseline():
+    squad = make_squad("HOME", 65)
+    team = build_team_state("HOME", squad, "4-3-3", attacking_direction=1, tactical_profile={"press_intensity": 50})
+    assert team.chasing_intensity() == 0.0
+
+    # Trailing late: press_intensity pushed above the game-plan baseline.
+    team.tactical_profile = dict(team.tactical_profile, press_intensity=65)
+    assert 0.0 < team.chasing_intensity() <= 1.0
+
+    # Protecting a lead: press_intensity pushed *below* baseline must not
+    # read as "chasing" (no negative urgency).
+    team.tactical_profile = dict(team.tactical_profile, press_intensity=35)
+    assert team.chasing_intensity() == 0.0
+
+
+def test_chasing_intensity_increases_shoot_frequency_within_range():
+    # Raising press_intensity above its game-plan baseline (what
+    # management.update_score_state_tactics does for a team trailing late)
+    # must actually translate into more shot attempts once in shooting
+    # range -- not just a different pass/dribble mix. Regression test for
+    # the gap where chasing_intensity existed in the tactical profile but
+    # choose_action never read it.
+    squad = make_squad("HOME", 65)
+    team = build_team_state("HOME", squad, "4-3-3", attacking_direction=1)
+    carrier = team.outfield()[0]
+    in_range_x, in_range_y = 90.0, 50.0  # within the dist_to_goal < 34 shooting window
+
+    rng_neutral = random.Random(7)
+    rng_chasing = random.Random(7)
+
+    neutral_shots = sum(
+        1 for _ in range(800)
+        if choose_action(carrier, in_range_x, in_range_y, 1, rng_neutral, chasing_intensity=0.0) == "SHOOT"
+    )
+    chasing_shots = sum(
+        1 for _ in range(800)
+        if choose_action(carrier, in_range_x, in_range_y, 1, rng_chasing, chasing_intensity=1.0) == "SHOOT"
+    )
+
+    assert chasing_shots > neutral_shots
 
 
 def test_allow_draw_true_can_end_in_a_tie_and_skips_extra_time():

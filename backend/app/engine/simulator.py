@@ -130,7 +130,10 @@ def simulate_match(
         decay_stamina(carrier, 1.0 + (defender.press_intensity() - 50.0) / 200.0)
         decay_stamina(nearest_def, 0.8 * (1 + (defender.press_intensity() - 50.0) / 100.0))
 
-        action = choose_action(carrier, ball_x, ball_y, attacker.attacking_direction, rng, possession_style=attacker.possession_style())
+        action = choose_action(
+            carrier, ball_x, ball_y, attacker.attacking_direction, rng,
+            possession_style=attacker.possession_style(), chasing_intensity=attacker.chasing_intensity(),
+        )
 
         if action == "SHOOT":
             keeper = defender.goalkeeper()
