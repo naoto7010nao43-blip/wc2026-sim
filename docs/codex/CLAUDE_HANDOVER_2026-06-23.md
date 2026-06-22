@@ -134,6 +134,35 @@ No bugs found. This is evidence for Codex's pending UX review, not a
 substitute for it — Codex should still make the actual call on whether the
 data-trust panel's wording/layout meets product bar.
 
+## Follow-up fixes found during the smoke check
+
+The browser sweep above also surfaced one real, narrowly-scoped bug, which
+was fixed (not just noted), verified, and committed separately:
+
+- **Commit `ca27388`** — "Show calm not-found messages instead of raw fetch
+  errors". Visiting `/teams/<invalid-id>` or `/matches/<invalid-id>` rendered
+  the raw `Error: GET /api/teams/ZZZ failed: 404` string with no way back —
+  the whole page was just `String(e)` dumped into a `<p>`. Replaced with a
+  calm Japanese not-found message plus a link back (`TeamPage.tsx`,
+  `MatchDetailPage.tsx`), matching the calm-wording-over-raw-text precedent
+  spec 006 already established for `PlayerRatingsPanel.tsx`. Verified with
+  `npm run lint` / `npm run build` (clean) and a re-run of the same Playwright
+  check on both invalid routes (now shows the friendly message). Deliberately
+  left the other 6 inline-error spots in the app (`TournamentPage`,
+  `SimulatorPage`, `LikelyLineupPanel`, `MatchPredictionPanel`,
+  `TournamentOddsPanel`) untouched — those keep the rest of the page visible
+  and already prefix the raw error with a labelled Japanese sentence, so they
+  read as acceptable as-is; only the two full-page replacements were broken.
+- **Commit `3789379`** — added a test for `build_merge_proposal`'s
+  "team entirely absent from the official PDF" branch
+  (`teamsMissingInOfficialPdf`), which the original spec 007A test fixture
+  never exercised. No behavior change, backend suite now at 130 passed.
+- Also did a full console-message sweep (not just errors) across `/`,
+  `/tournament`, `/simulate`, `/teams/BRA` — no React warnings (no missing
+  `key` props, no act() warnings, nothing) — and a mobile-viewport
+  (390px) overflow check on `/`, `/tournament`, `/simulate` — all clean, no
+  horizontal overflow, no console errors.
+
 ## Suggested next step for Codex
 
 The natural follow-up is deciding whether/how to spend a "Spec 007B" on:
