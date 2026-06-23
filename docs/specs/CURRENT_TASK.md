@@ -8,7 +8,7 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/010-unattended-site-quality-sprint.md`
+None. `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 loop cycle are complete; Phase 7 is skipped with a documented reason (see `docs/codex/PROGRESS.md`). Awaiting the next Codex-authored spec.
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
@@ -30,6 +30,6 @@ Completed:
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
 - Spec 009 follow-up safe field apply for newly matched players
-- `docs/specs/010-unattended-site-quality-sprint.md` is active
+- `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 cycle (Phase 7 skipped, documented)
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
