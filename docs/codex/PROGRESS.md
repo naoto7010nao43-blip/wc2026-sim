@@ -10,9 +10,13 @@
 
 ## Current Priority
 
-Spec 014 is complete. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`.
+Spec 015 is Ready in `docs/specs/CURRENT_TASK.md`: `docs/specs/015-rating-readiness-data-review.md`.
+
+Claude Code should implement Spec 015 autonomously and commit locally after verification. Codex has continued the accuracy-review track in parallel with read-only audits only; no seed data, ratings, formulas, or prediction behavior were changed.
 
 Completed:
+
+- Codex post-Spec-014 accuracy governance sprint: `475f170` added the rating decision audit (80 workbench candidates narrowed to 9 possible later-proposal candidates, 8 source-review-first candidates, 42 blocked-for-upgrade candidates, and 21 monitor-only candidates); `93a1127` added the source provenance audit and `GET /api/model-diagnostics/source-provenance-audit` (59/669 seed players carry source-risk markers); `7cb073a` authored Ready Spec 015 for `/data-review` rating-readiness panels; `030f810` added rating probe sensitivity (a +2 hypothetical bump to the 9 clean candidates reduced watchlist implausibility by 0); `767e7ae` added team rating component audit (stronger signal: top teams' seed/rating layer is compressed, with 7 watchlist teams having too few 70+ seed players and 2 watchlist teams with low best-XI averages). Latest Codex verification: backend `pytest` -> 305 passed, 1 warning; `audit_text_encoding.py` -> passed.
 
 - `docs/specs/014-rating-review-workbench.md`: added `backend/scripts/build_rating_review_workbench.py` (read-only, deterministic; combines the latest `squad_rating_gap_review_*.json`, `team_data_review_plan_*.json`, and `roster_reconciliation_candidates_*.json` with `players.json`/`players2026_official.json`/`playerRatings2026_estimated.json` into per-player rating-review candidates for the top 8 squad-gap teams; writes `backend/reports/rating_review_workbench_2026-06-23.json`), a read-only `GET /api/model-diagnostics/rating-review-workbench` endpoint (extends `model_diagnostics.py`/`schemas/model_diagnostics.py`/`api/model_diagnostics.py`), and a new "能力値レビュー作業台" section on `/data-review` (`RatingReviewWorkbenchPanel.tsx`) placed after the manager/tactical trust section per the spec. Player-level signals: market value vs. current overall, caps vs. current overall (both directions -- upgrade and downgrade candidates), high starting probability with below-position-median overall, many low-confidence attributes, and shallow-roster top-contributor status. Per the spec's explicit rule, `team_rank_underperformance` alone is weighted (8 pts) so it can never alone reach even the medium band (15 pts) -- a real player-level signal must also be present; verified this holds against the live data (every "team flag alone" case lands in `low`, never `medium`/`high`).
 
