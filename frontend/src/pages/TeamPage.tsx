@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { LikelyLineupPanel } from "../components/LikelyLineupPanel";
+import { SquadDepthPanel } from "../components/SquadDepthPanel";
 import { TacticalProfilePanel } from "../components/TacticalProfilePanel";
 import { countryNameJa } from "../data/countryNamesJa";
 import type { PlayerSummary, TeamOut } from "../types/domain";
@@ -93,6 +94,8 @@ export function TeamPage() {
       </div>
 
       <TacticalProfilePanel profile={team.tactical_profile} formation={team.default_formation} />
+
+      <SquadDepthPanel players={team.players} />
 
       <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
         <p className="text-xs uppercase tracking-widest text-slate-500">データ信頼性</p>
