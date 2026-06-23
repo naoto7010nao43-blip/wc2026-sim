@@ -10,7 +10,10 @@
 
 ## Current Priority
 
-Spec 016 is complete. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`.
+Spec 016 is complete. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`. Codex hit a usage limit again; the user granted Claude Code full autonomy for the rest of 2026-06-23, explicitly within Codex's existing policy direction (no new spec invention, no data/rating/formula changes). Working solo on verification/diagnostics-only follow-up; see the entry below and the end-of-day handover note for details.
+
+- Ran the final local release gate Codex's own `RELEASE_CANDIDATE_NOTES_2026-06-23.md` specified for after Spec 016: `.\scripts\pre_release_check.ps1` (git status clean, backend pytest 330 passed, frontend lint/build clean, encoding audit passed) followed by `backend/scripts/build_release_readiness_report.py`. Result: `readyForManualPush=true`, zero blockers, rank75 benchmark status `pass`, all 9 required reports present. Wrote `backend/reports/release_readiness_2026-06-23.json` as evidence.
+- Independently double-checked the rank75 diagnostics refresh (`207f99c`) for cross-report consistency: `squad_rating_gap_review`, `rating_review_workbench`, and `rating_decision_audit` all resolve to the identical 8-team set (`CRO, NED, POR, MEX, JOR, BIH, AUS, PAR`); `source_provenance_audit` contains the same 8 teams, only sorted by its own `source_risk_candidate_count` key. No inconsistency. Confirms the calibration genuinely narrowed the rank-underperformance watchlist from 8 teams to 4 (CRO/NED/POR/MEX keep nonzero `rank_underperformance_flags`; MAR/URU/ESP/ARG dropped to 0 and were replaced by JOR/BIH/AUS/PAR, which are flagged for roster-reconciliation reasons unrelated to the formula change) -- good independent evidence the rank75 change is working as Codex's benchmark predicted, not just on the benchmark sample but in the live diagnostic pipeline teams actually see.
 
 Completed:
 

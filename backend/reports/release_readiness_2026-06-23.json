@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-06-23T11:54:42.199344+00:00",
+  "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
+  "readyForManualPush": true,
+  "blockers": [],
+  "currentTask": {
+    "hasActiveReadyTask": false,
+    "awaitingNextSpec": true,
+    "latestCompletedSpecText": "Spec 016 is complete (see below)"
+  },
+  "gitStatusShort": [],
+  "modelVersions": {
+    "baselineModelVersion": "poisson-v1",
+    "currentModelVersion": "poisson-v2-rank75"
+  },
+  "rank75Benchmark": {
+    "present": true,
+    "path": "backend\\reports\\prediction_benchmark_comparison_rank75_2026-06-23.json",
+    "status": "pass",
+    "watchlistImplausibleReduction": 5.0,
+    "overallImplausibleFavoriteCountDelta": -6.0,
+    "averageFavoriteWinPctDelta": 0.7
+  },
+  "requiredReports": [
+    {
+      "pattern": "prediction_benchmark_baseline_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_baseline_2026-06-23.json"
+    },
+    {
+      "pattern": "prediction_benchmark_rank75_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_rank75_2026-06-23.json"
+    },
+    {
+      "pattern": "prediction_benchmark_comparison_rank75_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_2026-06-23.json"
+    },
+    {
+      "pattern": "simulation_accuracy_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\simulation_accuracy_audit_2026-06-23.json"
+    },
+    {
+      "pattern": "team_data_review_plan_*.json",
+      "present": true,
+      "path": "backend\\reports\\team_data_review_plan_2026-06-23.json"
+    },
+    {
+      "pattern": "squad_rating_gap_review_*.json",
+      "present": true,
+      "path": "backend\\reports\\squad_rating_gap_review_2026-06-23.json"
+    },
+    {
+      "pattern": "rating_review_workbench_*.json",
+      "present": true,
+      "path": "backend\\reports\\rating_review_workbench_2026-06-23.json"
+    },
+    {
+      "pattern": "rating_decision_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\rating_decision_audit_2026-06-23.json"
+    },
+    {
+      "pattern": "source_provenance_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\source_provenance_audit_2026-06-23.json"
+    }
+  ],
+  "requiredCommands": [
+    ".\\scripts\\pre_release_check.ps1",
+    ".\\scripts\\post_deploy_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\" -BackendBaseUrl \"<production-backend-url>\""
+  ]
+}
