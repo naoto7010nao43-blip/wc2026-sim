@@ -29,8 +29,11 @@ CURRENT_TASK_PATH = REPO_ROOT / "docs" / "specs" / "CURRENT_TASK.md"
 
 REQUIRED_REPORT_PATTERNS = (
     "prediction_benchmark_baseline_*.json",
+    "prediction_benchmark_v1_order_neutral_*.json",
     "prediction_benchmark_rank75_*.json",
+    "prediction_benchmark_rank75_order_neutral_*.json",
     "prediction_benchmark_comparison_rank75_*.json",
+    "prediction_benchmark_comparison_rank75_order_neutral_*.json",
     "simulation_accuracy_audit_*.json",
     "team_data_review_plan_*.json",
     "squad_rating_gap_review_*.json",
@@ -98,11 +101,14 @@ def required_report_status(reports_dir: Path = REPORTS_DIR) -> list[dict]:
 
 
 def benchmark_summary(reports_dir: Path = REPORTS_DIR) -> dict:
-    comparison_path = latest_report("prediction_benchmark_comparison_rank75_*.json", reports_dir)
+    comparison_path = latest_report("prediction_benchmark_comparison_rank75_order_neutral_*.json", reports_dir)
+    if comparison_path is None:
+        comparison_path = latest_report("prediction_benchmark_comparison_rank75_*.json", reports_dir)
     if comparison_path is None:
         return {
             "present": False,
             "status": "missing",
+            "benchmarkMethod": None,
             "watchlistImplausibleReduction": None,
             "overallImplausibleFavoriteCountDelta": None,
             "averageFavoriteWinPctDelta": None,
@@ -114,6 +120,7 @@ def benchmark_summary(reports_dir: Path = REPORTS_DIR) -> dict:
         "present": True,
         "path": display_path(comparison_path),
         "status": evaluation.get("status"),
+        "benchmarkMethod": comparison.get("benchmarkMethod"),
         "watchlistImplausibleReduction": evaluation.get("watchlist_implausible_reduction"),
         "overallImplausibleFavoriteCountDelta": overall.get("implausible_favorite_count_delta"),
         "averageFavoriteWinPctDelta": overall.get("average_favorite_win_pct_delta"),
@@ -121,8 +128,12 @@ def benchmark_summary(reports_dir: Path = REPORTS_DIR) -> dict:
 
 
 def model_version_summary(reports_dir: Path = REPORTS_DIR) -> dict:
-    rank75_path = latest_report("prediction_benchmark_rank75_*.json", reports_dir)
-    baseline_path = latest_report("prediction_benchmark_baseline_*.json", reports_dir)
+    rank75_path = latest_report("prediction_benchmark_rank75_order_neutral_*.json", reports_dir)
+    if rank75_path is None:
+        rank75_path = latest_report("prediction_benchmark_rank75_*.json", reports_dir)
+    baseline_path = latest_report("prediction_benchmark_v1_order_neutral_*.json", reports_dir)
+    if baseline_path is None:
+        baseline_path = latest_report("prediction_benchmark_baseline_*.json", reports_dir)
     return {
         "baselineModelVersion": None if baseline_path is None else load_json(baseline_path).get("modelVersion"),
         "currentModelVersion": None if rank75_path is None else load_json(rank75_path).get("modelVersion"),

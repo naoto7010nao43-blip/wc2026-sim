@@ -8,6 +8,7 @@ from build_release_readiness_report import (
     benchmark_summary,
     build_report,
     current_task_state,
+    model_version_summary,
     release_blockers,
     required_report_status,
 )
@@ -41,10 +42,13 @@ def test_current_task_state_detects_awaiting_state():
 
 def test_required_report_status_marks_missing_and_present(tmp_path):
     write_json(tmp_path / "prediction_benchmark_baseline_2026-06-23.json", {"modelVersion": "poisson-v1"})
+    write_json(tmp_path / "prediction_benchmark_v1_order_neutral_2026-06-23.json", {"modelVersion": "poisson-v1-order-neutral"})
     rows = required_report_status(tmp_path)
     baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_baseline_*.json")
+    neutral_baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_v1_order_neutral_*.json")
     comparison = next(row for row in rows if row["pattern"] == "prediction_benchmark_comparison_rank75_*.json")
     assert baseline["present"] is True
+    assert neutral_baseline["present"] is True
     assert comparison["present"] is False
 
 
@@ -60,6 +64,42 @@ def test_benchmark_summary_reads_rank75_comparison(tmp_path):
     assert summary["present"] is True
     assert summary["status"] == "pass"
     assert summary["watchlistImplausibleReduction"] == 5
+
+
+def test_benchmark_summary_prefers_order_neutral_comparison(tmp_path):
+    write_json(
+        tmp_path / "prediction_benchmark_comparison_rank75_2026-06-23.json",
+        {
+            "evaluation": {"status": "review", "watchlist_implausible_reduction": 1},
+            "overall": {"implausible_favorite_count_delta": 0, "average_favorite_win_pct_delta": 0.0},
+        },
+    )
+    write_json(
+        tmp_path / "prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json",
+        {
+            "benchmarkMethod": "dual_order_average",
+            "evaluation": {"status": "pass", "watchlist_implausible_reduction": 5},
+            "overall": {"implausible_favorite_count_delta": -6, "average_favorite_win_pct_delta": 0.7},
+        },
+    )
+
+    summary = benchmark_summary(tmp_path)
+
+    assert summary["status"] == "pass"
+    assert summary["benchmarkMethod"] == "dual_order_average"
+    assert summary["path"].endswith("prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json")
+
+
+def test_model_version_summary_prefers_order_neutral_versions(tmp_path):
+    write_json(tmp_path / "prediction_benchmark_baseline_2026-06-23.json", {"modelVersion": "poisson-v2-rank75"})
+    write_json(tmp_path / "prediction_benchmark_v1_order_neutral_2026-06-23.json", {"modelVersion": "poisson-v1-rank60-order-neutral"})
+    write_json(tmp_path / "prediction_benchmark_rank75_2026-06-23.json", {"modelVersion": "poisson-v2-rank75"})
+    write_json(tmp_path / "prediction_benchmark_rank75_order_neutral_2026-06-23.json", {"modelVersion": "poisson-v2-rank75-order-neutral"})
+
+    summary = model_version_summary(tmp_path)
+
+    assert summary["baselineModelVersion"] == "poisson-v1-rank60-order-neutral"
+    assert summary["currentModelVersion"] == "poisson-v2-rank75-order-neutral"
 
 
 def test_release_blockers_include_active_task_dirty_status_missing_report_and_failed_benchmark():
