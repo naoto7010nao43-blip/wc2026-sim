@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import type { DataQualitySummary } from "../types/domain";
 
@@ -74,6 +75,10 @@ export function DataQualityPanel() {
           ))}
         </ul>
       )}
+
+      <Link to="/data-review" className="mt-3 inline-block text-[11px] font-semibold text-emerald-400 hover:text-emerald-300">
+        チームごとのデータレビュー優先度を見る →
+      </Link>
     </section>
   );
 }

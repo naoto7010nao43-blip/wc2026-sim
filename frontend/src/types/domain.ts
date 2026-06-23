@@ -219,6 +219,38 @@ export interface TournamentResult {
   group_standings: Record<string, StandingsRow[]>;
 }
 
+export interface SourceReportRef {
+  name: string;
+  generatedAt: string | null;
+}
+
+export interface TeamReviewRow {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  seed_roster_size: number | null;
+  attack_rating: number | null;
+  defense_rating: number | null;
+  strength_rating: number | null;
+  rank_underperformance_flags: number;
+  high_confidence_add_candidate_count: number;
+  other_add_candidate_count: number;
+  ambiguous_pair_count: number;
+  likely_stale_seed_player_count: number;
+  priority_score: number;
+  priority_band: "high" | "medium" | "low";
+  review_reasons: string[];
+  recommended_next_action: string;
+}
+
+export interface TeamReviewSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  teams: TeamReviewRow[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

@@ -1,5 +1,6 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { TeamsProvider } from "./context/TeamsContext";
+import { DataReviewPage } from "./pages/DataReviewPage";
 import { HomePage } from "./pages/HomePage";
 import { MatchDetailPage } from "./pages/MatchDetailPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
@@ -44,6 +45,7 @@ function App() {
             <Route path="/teams" element={<TeamsPage />} />
             <Route path="/matches/:matchId" element={<MatchDetailPage />} />
             <Route path="/teams/:teamId" element={<TeamPage />} />
+            <Route path="/data-review" element={<DataReviewPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

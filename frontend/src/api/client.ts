@@ -6,6 +6,7 @@ import type {
   RoundRobinResult,
   StandingsRow,
   TeamOut,
+  TeamReviewSummary,
   TeamSummary,
   TournamentResult,
   TournamentSimulationOut,
@@ -55,4 +56,5 @@ export const api = {
       seed: opts?.seed ?? 0,
     }),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
+  getTeamDataReview: () => getJson<TeamReviewSummary>("/api/model-diagnostics/team-review"),
 };

@@ -10,9 +10,11 @@
 
 ## Current Priority
 
-Spec 011 is active: turn Spec 010's simulation-audit and roster-reconciliation findings into a read-only team data review diagnostic layer. The goal is to prioritize squad/rating data review without mutating seed players, ratings, formulas, or simulation behavior.
+Spec 011 is complete (see entry below). Awaiting the next Codex-authored spec.
 
 Completed:
+
+- `docs/specs/011-team-data-review-diagnostics.md`: added `backend/scripts/build_team_data_review_plan.py` (combines the latest `simulation_accuracy_audit_*.json` and `roster_reconciliation_candidates_*.json` into one per-team priority ranking; writes `backend/reports/team_data_review_plan_2026-06-23.json`), a read-only `GET /api/model-diagnostics/team-review` endpoint (`app/services/model_diagnostics.py`, `app/schemas/model_diagnostics.py`, `app/api/model_diagnostics.py`, wired into `app/main.py`), and a new `/data-review` page (`DataReviewPage.tsx` + `TeamDataReviewPanel.tsx`) linked from the home page's `DataQualityPanel` (not added to the top nav, to avoid mobile crowding per the spec). Priority scoring weights rank-underperformance (15/flag) and ambiguous-pair/stale-seed counts (5/3 each) far above raw add-candidate counts (0.5/0.1 each) so a team's official roster simply having more players than this project's intentionally shallow seed roster never alone pushes it into "high" -- verified against the live data: of 15 "high" teams, the 7 with zero rank-underperformance flags all reach "high" via ambiguous-pair/stale-seed counts, never via add-candidate noise alone. Top 5 by priority: CRO (141.0), NED (129.5), POR (96.0), MEX (73.4), MAR (58.5) -- consistent with Spec 010 Phase 6's findings. 16 new backend tests (priority scoring/banding, review-reason/action text, latest-report lookup, missing-report fallback, full API shape). No seed players, ratings, formulas, or simulation behavior changed. Backend `pytest`: 196 passed. Frontend `tsc`/`lint`/`build`: all clean. Text encoding audit: passed (now also covers `backend/data/seed` and `backend/reports`, from the Spec 010 Phase 10 extension). Playwright smoke (desktop 1280px + mobile 390px) across `/`, `/data-review`, `/teams`, `/tournament`: 8/8 clean, no mojibake/overflow/console errors; visually confirmed `/data-review` renders correctly at both widths via screenshots.
 
 - `docs/specs/001-lint-fix.md`
 - `docs/specs/003-match-detail-trust-states.md`

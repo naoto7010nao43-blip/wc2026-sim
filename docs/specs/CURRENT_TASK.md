@@ -8,9 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/011-team-data-review-diagnostics.md`
+None. `docs/specs/011-team-data-review-diagnostics.md` is complete (see `docs/codex/PROGRESS.md`). Awaiting the next Codex-authored spec.
 
-Spec 010 is complete. Spec 011 is the next Ready task and should be implemented under the autonomous sprint protocol.
+Spec 010 is complete.
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
