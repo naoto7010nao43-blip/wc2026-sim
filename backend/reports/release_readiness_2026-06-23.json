@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T11:54:42.199344+00:00",
+  "generatedAt": "2026-06-23T15:25:54.717788+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": true,
   "blockers": [],
@@ -10,16 +10,16 @@
   },
   "gitStatusShort": [],
   "modelVersions": {
-    "baselineModelVersion": "poisson-v1",
-    "currentModelVersion": "poisson-v2-rank75"
+    "baselineModelVersion": "poisson-v2-rank75",
+    "currentModelVersion": "poisson-v2-rank75-order-neutral"
   },
   "rank75Benchmark": {
     "present": true,
-    "path": "backend\\reports\\prediction_benchmark_comparison_rank75_2026-06-23.json",
+    "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json",
     "status": "pass",
-    "watchlistImplausibleReduction": 5.0,
-    "overallImplausibleFavoriteCountDelta": -6.0,
-    "averageFavoriteWinPctDelta": 0.7
+    "watchlistImplausibleReduction": 3.0,
+    "overallImplausibleFavoriteCountDelta": -9.0,
+    "averageFavoriteWinPctDelta": 0.8
   },
   "requiredReports": [
     {
@@ -30,12 +30,12 @@
     {
       "pattern": "prediction_benchmark_rank75_*.json",
       "present": true,
-      "path": "backend\\reports\\prediction_benchmark_rank75_2026-06-23.json"
+      "path": "backend\\reports\\prediction_benchmark_rank75_order_neutral_2026-06-23.json"
     },
     {
       "pattern": "prediction_benchmark_comparison_rank75_*.json",
       "present": true,
-      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_2026-06-23.json"
+      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json"
     },
     {
       "pattern": "simulation_accuracy_audit_*.json",

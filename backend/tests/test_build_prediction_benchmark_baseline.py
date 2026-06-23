@@ -1,9 +1,13 @@
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
+import build_prediction_benchmark_baseline as benchmark
+
 from build_prediction_benchmark_baseline import (
+    BENCHMARK_ORDERING_METHOD,
     build_player_lookup,
     is_implausible_favorite,
     minimum_expected_favorite_win_pct,
@@ -14,6 +18,10 @@ from build_prediction_benchmark_baseline import (
     top_ranked_teams,
     watchlist_team_ids,
 )
+
+
+def players(count=11):
+    return [{"id": f"P{i}", "overall": 60, "attributes": {}} for i in range(count)]
 
 
 def test_rank_gap_bucket_boundaries():
@@ -61,6 +69,51 @@ def test_build_player_lookup_joins_seed_players_to_rating_rows():
     assert lookup["AAA"][0]["overall"] == 70
     assert lookup["AAA"][0]["attributes"]["finishing"] == 71
     assert lookup["AAA"][0]["stamina_max"] == 80
+
+
+def test_build_matchup_row_averages_favorite_home_and_away_orders(monkeypatch):
+    calls = []
+
+    def fake_predict_match(home_id, away_id, *args):
+        calls.append((home_id, away_id))
+        if home_id == "FAV":
+            return SimpleNamespace(
+                home_win_pct=60.0,
+                draw_pct=20.0,
+                away_win_pct=20.0,
+                home_expected_goals=2.0,
+                away_expected_goals=1.0,
+                most_likely_scores=[(2, 1, 12.3)],
+                data_confidence="estimated",
+            )
+        return SimpleNamespace(
+            home_win_pct=30.0,
+            draw_pct=25.0,
+            away_win_pct=45.0,
+            home_expected_goals=1.1,
+            away_expected_goals=1.8,
+            most_likely_scores=[(1, 2, 10.0)],
+            data_confidence="estimated",
+        )
+
+    monkeypatch.setattr(benchmark, "predict_match", fake_predict_match)
+
+    row = benchmark.build_matchup_row(
+        {"id": "FAV", "name": "Favorite", "fifa_rank": 1},
+        {"id": "DOG", "name": "Opponent", "fifa_rank": 11},
+        {"FAV": players(), "DOG": players()},
+    )
+
+    assert calls == [("FAV", "DOG"), ("DOG", "FAV")]
+    assert row["benchmark_ordering_method"] == BENCHMARK_ORDERING_METHOD
+    assert row["favorite_win_pct"] == 52.5
+    assert row["home_win_pct"] == 52.5
+    assert row["away_win_pct"] == 25.0
+    assert row["draw_pct"] == 22.5
+    assert row["favorite_home_win_pct"] == 60.0
+    assert row["favorite_away_win_pct"] == 45.0
+    assert row["home_expected_goals"] == 1.9
+    assert row["away_expected_goals"] == 1.05
 
 
 def test_summarize_matchups_handles_empty_and_nonempty():

@@ -377,7 +377,7 @@ def test_model_calibration_endpoint_returns_200_with_expected_top_level_fields(c
     body = response.json()
     for field in (
         "generatedAt", "sourceReports", "modelVersionBefore", "modelVersionAfter",
-        "status", "overall", "watchlist", "bestSandboxVariantId", "note", "recommendations_ja",
+        "status", "benchmarkMethod", "overall", "watchlist", "bestSandboxVariantId", "note", "recommendations_ja",
     ):
         assert field in body
 
@@ -385,7 +385,7 @@ def test_model_calibration_endpoint_returns_200_with_expected_top_level_fields(c
 def test_model_calibration_endpoint_has_expected_overall_and_watchlist_shape(client):
     response = client.get("/api/model-diagnostics/model-calibration")
     body = response.json()
-    assert body["modelVersionAfter"] == "poisson-v2-rank75"
+    assert body["modelVersionAfter"].startswith("poisson-v2-rank75")
     assert body["status"] == "pass"
     for field in (
         "before_matchup_count", "after_matchup_count", "average_favorite_win_pct_delta",
@@ -403,6 +403,7 @@ def test_model_calibration_missing_report_falls_back_to_calm_empty_state(tmp_pat
     assert summary["generatedAt"] is None
     assert summary["overall"] is None
     assert summary["watchlist"] is None
+    assert summary["benchmarkMethod"] is None
     assert summary["note"]
     assert summary["recommendations_ja"] == []
 
@@ -413,6 +414,7 @@ def test_get_model_calibration_summary_is_read_only(tmp_path):
         "afterGeneratedAt": "2026-01-02T00:00:00+00:00",
         "modelVersionBefore": "poisson-v1",
         "modelVersionAfter": "poisson-v2-rank75",
+        "benchmarkMethod": "dual_order_average",
         "overall": {
             "before_matchup_count": 1, "after_matchup_count": 1,
             "average_favorite_win_pct_delta": 0.1, "implausible_favorite_count_delta": 0.0,
@@ -429,3 +431,38 @@ def test_get_model_calibration_summary_is_read_only(tmp_path):
     get_model_calibration_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_model_calibration_summary_prefers_order_neutral_report(tmp_path):
+    old_report = {
+        "beforeGeneratedAt": "2026-01-01T00:00:00+00:00",
+        "afterGeneratedAt": "2026-01-02T00:00:00+00:00",
+        "modelVersionBefore": "poisson-v1",
+        "modelVersionAfter": "poisson-v2-rank75",
+        "overall": {
+            "before_matchup_count": 1, "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": 0.1, "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.1, "maximum_favorite_win_pct_delta": 0.1,
+        },
+        "rankGapBuckets": [],
+        "watchlistTeams": [],
+        "evaluation": {"status": "pass", "watchlist_implausible_reduction": 0.0, "warnings": []},
+    }
+    neutral_report = {
+        **old_report,
+        "generatedAt": "2026-01-03T00:00:00+00:00",
+        "modelVersionAfter": "poisson-v2-rank75-order-neutral",
+        "benchmarkMethod": "dual_order_average",
+    }
+    (tmp_path / "prediction_benchmark_comparison_rank75_2026-01-02.json").write_text(
+        json.dumps(old_report), encoding="utf-8"
+    )
+    (tmp_path / "prediction_benchmark_comparison_rank75_order_neutral_2026-01-03.json").write_text(
+        json.dumps(neutral_report), encoding="utf-8"
+    )
+
+    summary = get_model_calibration_summary(reports_dir=tmp_path)
+
+    assert summary["modelVersionAfter"] == "poisson-v2-rank75-order-neutral"
+    assert summary["benchmarkMethod"] == "dual_order_average"
+    assert summary["sourceReports"][0]["name"] == "prediction_benchmark_comparison_rank75_order_neutral"

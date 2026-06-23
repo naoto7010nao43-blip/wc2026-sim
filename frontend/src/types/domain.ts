@@ -493,9 +493,9 @@ export interface ModelCalibrationOverall {
 
 export interface ModelCalibrationWatchlistTeam {
   team_id: string;
-  average_favorite_win_pct_delta: number;
-  implausible_favorite_count_delta: number;
-  minimum_favorite_win_pct_delta: number;
+  average_favorite_win_pct_delta: number | null;
+  implausible_favorite_count_delta: number | null;
+  minimum_favorite_win_pct_delta: number | null;
 }
 
 export interface ModelCalibrationWatchlist {
@@ -509,6 +509,7 @@ export interface ModelCalibrationSummary {
   modelVersionBefore: string | null;
   modelVersionAfter: string | null;
   status: string | null;
+  benchmarkMethod: string | null;
   overall: ModelCalibrationOverall | null;
   watchlist: ModelCalibrationWatchlist | null;
   bestSandboxVariantId: string | null;

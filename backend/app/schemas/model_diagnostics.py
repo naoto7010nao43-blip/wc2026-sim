@@ -217,9 +217,9 @@ class ModelCalibrationOverall(BaseModel):
 
 class ModelCalibrationWatchlistTeam(BaseModel):
     team_id: str
-    average_favorite_win_pct_delta: float
-    implausible_favorite_count_delta: float
-    minimum_favorite_win_pct_delta: float
+    average_favorite_win_pct_delta: float | None
+    implausible_favorite_count_delta: float | None
+    minimum_favorite_win_pct_delta: float | None
 
 
 class ModelCalibrationWatchlist(BaseModel):
@@ -233,6 +233,7 @@ class ModelCalibrationSummary(BaseModel):
     modelVersionBefore: str | None
     modelVersionAfter: str | None
     status: str | None
+    benchmarkMethod: str | None
     overall: ModelCalibrationOverall | None
     watchlist: ModelCalibrationWatchlist | None
     bestSandboxVariantId: str | None

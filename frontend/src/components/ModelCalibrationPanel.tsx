@@ -10,6 +10,10 @@ const STATUS_LABELS: Record<string, string> = {
   review: "要レビュー",
 };
 
+const BENCHMARK_METHOD_LABELS: Record<string, string> = {
+  dual_order_average: "ホーム/アウェイ平均",
+};
+
 function formatSigned(value: number, unit: string): string {
   const sign = value > 0 ? "+" : "";
   return `${sign}${value}${unit}`;
@@ -20,8 +24,8 @@ function WatchlistRow({ team }: { team: ModelCalibrationWatchlistTeam }) {
     <div className="flex items-center justify-between gap-2 rounded bg-slate-800/50 px-2 py-1 text-[11px]">
       <TeamBadge teamId={team.team_id} />
       <span className="text-slate-400">
-        不自然判定 {formatSigned(team.implausible_favorite_count_delta, "件")} / 平均勝率{" "}
-        {formatSigned(team.average_favorite_win_pct_delta, "pt")}
+        不自然判定 {formatSigned(team.implausible_favorite_count_delta ?? 0, "件")} / 平均勝率{" "}
+        {formatSigned(team.average_favorite_win_pct_delta ?? 0, "pt")}
       </span>
     </div>
   );
@@ -34,7 +38,9 @@ export function ModelCalibrationPanel({ summary }: Props) {
     );
   }
 
-  const improvedTeams = summary.watchlist.teams.filter((team) => team.implausible_favorite_count_delta < 0);
+  const improvedTeams = summary.watchlist.teams.filter(
+    (team) => typeof team.implausible_favorite_count_delta === "number" && team.implausible_favorite_count_delta < 0,
+  );
 
   return (
     <section className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
@@ -47,6 +53,11 @@ export function ModelCalibrationPanel({ summary }: Props) {
           <span className="rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] text-emerald-300">
             {(summary.status && STATUS_LABELS[summary.status]) ?? summary.status ?? "-"}
           </span>
+          {summary.benchmarkMethod && (
+            <span className="rounded bg-sky-500/15 px-1.5 py-0.5 text-[10px] text-sky-300">
+              測定: {BENCHMARK_METHOD_LABELS[summary.benchmarkMethod] ?? summary.benchmarkMethod}
+            </span>
+          )}
         </div>
       </div>
 

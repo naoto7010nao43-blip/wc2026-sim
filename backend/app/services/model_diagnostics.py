@@ -90,7 +90,11 @@ def get_rating_decision_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
 
 
 def get_model_calibration_summary(reports_dir: Path = REPORTS_DIR) -> dict:
-    comparison = _latest_report(reports_dir, "prediction_benchmark_comparison_rank75_*.json")
+    comparison = _latest_report(reports_dir, "prediction_benchmark_comparison_rank75_order_neutral_*.json")
+    comparison_report_name = "prediction_benchmark_comparison_rank75_order_neutral"
+    if comparison is None:
+        comparison = _latest_report(reports_dir, "prediction_benchmark_comparison_rank75_*.json")
+        comparison_report_name = "prediction_benchmark_comparison_rank75"
     if comparison is None:
         return {
             "generatedAt": None,
@@ -98,6 +102,7 @@ def get_model_calibration_summary(reports_dir: Path = REPORTS_DIR) -> dict:
             "modelVersionBefore": None,
             "modelVersionAfter": None,
             "status": None,
+            "benchmarkMethod": None,
             "overall": None,
             "watchlist": None,
             "bestSandboxVariantId": None,
@@ -105,24 +110,30 @@ def get_model_calibration_summary(reports_dir: Path = REPORTS_DIR) -> dict:
             "recommendations_ja": [],
         }
 
-    after_report = _latest_report(reports_dir, "prediction_benchmark_rank75_*.json")
+    after_report = _latest_report(reports_dir, "prediction_benchmark_rank75_order_neutral_*.json")
+    after_report_name = "prediction_benchmark_rank75_order_neutral"
+    if after_report is None:
+        after_report = _latest_report(reports_dir, "prediction_benchmark_rank75_*.json")
+        after_report_name = "prediction_benchmark_rank75"
     sandbox = _latest_report(reports_dir, "aggregation_calibration_sandbox_*.json")
     evaluation = comparison.get("evaluation") or {}
+    benchmark_method = comparison.get("benchmarkMethod")
 
     source_reports = [
-        {"name": "prediction_benchmark_comparison_rank75", "generatedAt": comparison.get("afterGeneratedAt")},
+        {"name": comparison_report_name, "generatedAt": comparison.get("generatedAt") or comparison.get("afterGeneratedAt")},
     ]
     if after_report:
-        source_reports.append({"name": "prediction_benchmark_rank75", "generatedAt": after_report.get("generatedAt")})
+        source_reports.append({"name": after_report_name, "generatedAt": after_report.get("generatedAt")})
     if sandbox:
         source_reports.append({"name": "aggregation_calibration_sandbox", "generatedAt": sandbox.get("generatedAt")})
 
     return {
-        "generatedAt": comparison.get("afterGeneratedAt"),
+        "generatedAt": comparison.get("generatedAt") or comparison.get("afterGeneratedAt"),
         "sourceReports": source_reports,
         "modelVersionBefore": comparison.get("modelVersionBefore"),
         "modelVersionAfter": comparison.get("modelVersionAfter"),
         "status": evaluation.get("status"),
+        "benchmarkMethod": benchmark_method,
         "overall": comparison.get("overall"),
         "watchlist": {
             "watchlist_implausible_reduction": evaluation.get("watchlist_implausible_reduction"),

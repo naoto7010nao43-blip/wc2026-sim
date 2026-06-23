@@ -26,6 +26,7 @@ from app.prediction.ratings import attack_rating, defense_rating, team_strength_
 
 SEED_DIR = Path(__file__).resolve().parent.parent / "data" / "seed"
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
+BENCHMARK_ORDERING_METHOD = "dual_order_average"
 
 
 def load_json(path: Path):
@@ -117,13 +118,17 @@ def compute_team_rating_row(team: dict, players: list[dict]) -> dict:
     }
 
 
+def average_pair(a: float | int, b: float | int, digits: int = 1) -> float:
+    return round((float(a) + float(b)) / 2, digits)
+
+
 def build_matchup_row(home: dict, away: dict, players_by_team: dict[str, list[dict]]) -> dict | None:
     home_players = players_by_team.get(home["id"], [])
     away_players = players_by_team.get(away["id"], [])
     if len(home_players) < 11 or len(away_players) < 11:
         return None
 
-    prediction = predict_match(
+    favorite_home_prediction = predict_match(
         home["id"],
         away["id"],
         home_players,
@@ -133,30 +138,61 @@ def build_matchup_row(home: dict, away: dict, players_by_team: dict[str, list[di
         home.get("tactical_profile"),
         away.get("tactical_profile"),
     )
+    favorite_away_prediction = predict_match(
+        away["id"],
+        home["id"],
+        away_players,
+        home_players,
+        away.get("fifa_rank"),
+        home.get("fifa_rank"),
+        away.get("tactical_profile"),
+        home.get("tactical_profile"),
+    )
     rank_gap = (away.get("fifa_rank") or 0) - (home.get("fifa_rank") or 0)
-    favorite_win_pct = prediction.home_win_pct
+    favorite_win_pct = average_pair(
+        favorite_home_prediction.home_win_pct,
+        favorite_away_prediction.away_win_pct,
+    )
+    draw_pct = average_pair(favorite_home_prediction.draw_pct, favorite_away_prediction.draw_pct)
+    opponent_win_pct = average_pair(
+        favorite_home_prediction.away_win_pct,
+        favorite_away_prediction.home_win_pct,
+    )
     expected_floor = minimum_expected_favorite_win_pct(rank_gap)
     return {
+        "benchmark_ordering_method": BENCHMARK_ORDERING_METHOD,
         "home_team_id": home["id"],
         "away_team_id": away["id"],
         "home_fifa_rank": home.get("fifa_rank"),
         "away_fifa_rank": away.get("fifa_rank"),
         "rank_gap": rank_gap,
         "rank_gap_bucket": rank_gap_bucket(rank_gap),
-        "home_win_pct": prediction.home_win_pct,
-        "draw_pct": prediction.draw_pct,
-        "away_win_pct": prediction.away_win_pct,
-        "home_expected_goals": prediction.home_expected_goals,
-        "away_expected_goals": prediction.away_expected_goals,
+        "home_win_pct": favorite_win_pct,
+        "draw_pct": draw_pct,
+        "away_win_pct": opponent_win_pct,
+        "home_expected_goals": average_pair(
+            favorite_home_prediction.home_expected_goals,
+            favorite_away_prediction.away_expected_goals,
+            digits=2,
+        ),
+        "away_expected_goals": average_pair(
+            favorite_home_prediction.away_expected_goals,
+            favorite_away_prediction.home_expected_goals,
+            digits=2,
+        ),
         "favorite_team_id": home["id"],
+        "opponent_team_id": away["id"],
         "favorite_win_pct": favorite_win_pct,
+        "favorite_home_win_pct": favorite_home_prediction.home_win_pct,
+        "favorite_away_win_pct": favorite_away_prediction.away_win_pct,
         "minimum_expected_favorite_win_pct": expected_floor,
         "implausible_favorite": is_implausible_favorite(favorite_win_pct, rank_gap),
         "most_likely_scores": [
             {"home_goals": h, "away_goals": a, "probability_pct": pct}
-            for h, a, pct in prediction.most_likely_scores
+            for h, a, pct in favorite_home_prediction.most_likely_scores
         ],
-        "data_confidence": prediction.data_confidence,
+        "score_ordering_note": "most_likely_scores keep the favorite-home order for readability; probability fields are dual-order averages.",
+        "data_confidence": favorite_home_prediction.data_confidence,
     }
 
 
@@ -240,7 +276,9 @@ def build_report(top_team_limit: int = 20, watchlist_limit: int = 8) -> dict:
         "note": (
             "Future rating changes should be compared against this read-only baseline before approval. "
             "The report freezes current prediction outputs for a deterministic top-ranked-team sample; "
-            "it does not change seed data, ratings, formulas, or prediction behavior."
+            "each matchup averages favorite-home and favorite-away orderings so the synthetic benchmark "
+            "does not give stronger FIFA teams a correlated home-advantage bonus. It does not change seed "
+            "data, ratings, formulas, or prediction behavior."
         ),
         "sourceReports": [
             {"name": "squad_rating_gap_review", "generatedAt": (squad_gap_report or {}).get("generatedAt")}
@@ -250,6 +288,7 @@ def build_report(top_team_limit: int = 20, watchlist_limit: int = 8) -> dict:
             "watchlistLimit": watchlist_limit,
             "rankedTeamCount": len(ranked),
             "matchupCount": len(matchups),
+            "benchmarkOrderingMethod": BENCHMARK_ORDERING_METHOD,
         },
         "teamRatings": team_ratings,
         "overallSummary": summarize_matchups(matchups),

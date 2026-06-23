@@ -145,6 +145,10 @@ def compare_reports(before: dict, after: dict) -> dict:
         "afterGeneratedAt": after.get("generatedAt"),
         "modelVersionBefore": before.get("modelVersion"),
         "modelVersionAfter": after.get("modelVersion"),
+        "benchmarkMethod": after.get("benchmarkMethod")
+        or after.get("scope", {}).get("benchmarkOrderingMethod")
+        or before.get("benchmarkMethod")
+        or before.get("scope", {}).get("benchmarkOrderingMethod"),
         "overall": compare_overall(before, after),
         "rankGapBuckets": compare_rank_gap_buckets(before, after),
         "watchlistTeams": compare_watchlist(before, after),

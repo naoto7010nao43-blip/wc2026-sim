@@ -29,6 +29,7 @@ from app.prediction.ratings import attack_rating, defense_rating, squad_strength
 from build_prediction_benchmark_baseline import (  # noqa: E402
     SEED_DIR,
     build_player_lookup,
+    BENCHMARK_ORDERING_METHOD,
     is_implausible_favorite,
     latest_report,
     load_json,
@@ -143,10 +144,14 @@ def matchup_probabilities(lambda_home: float, lambda_away: float) -> tuple[float
     return round(home_win * 100, 1), round(draw * 100, 1), round(away_win * 100, 1), top_scores
 
 
+def average_pair(a: float | int, b: float | int, digits: int = 1) -> float:
+    return round((float(a) + float(b)) / 2, digits)
+
+
 def build_variant_matchup_row(home: dict, away: dict, team_ratings: dict[str, dict]) -> dict:
     home_rating = team_ratings[home["id"]]
     away_rating = team_ratings[away["id"]]
-    lambda_home, lambda_away = lambdas_from_ratings(
+    favorite_home_lambda, opponent_away_lambda = lambdas_from_ratings(
         home_rating["attack"],
         home_rating["defense"],
         home_rating["strength"],
@@ -158,26 +163,53 @@ def build_variant_matchup_row(home: dict, away: dict, team_ratings: dict[str, di
         home.get("tactical_profile"),
         away.get("tactical_profile"),
     )
-    home_win_pct, draw_pct, away_win_pct, top_scores = matchup_probabilities(lambda_home, lambda_away)
+    opponent_home_lambda, favorite_away_lambda = lambdas_from_ratings(
+        away_rating["attack"],
+        away_rating["defense"],
+        away_rating["strength"],
+        away_rating["data_confidence"],
+        home_rating["attack"],
+        home_rating["defense"],
+        home_rating["strength"],
+        home_rating["data_confidence"],
+        away.get("tactical_profile"),
+        home.get("tactical_profile"),
+    )
+    favorite_home_win_pct, favorite_home_draw_pct, opponent_away_win_pct, top_scores = matchup_probabilities(
+        favorite_home_lambda,
+        opponent_away_lambda,
+    )
+    opponent_home_win_pct, favorite_away_draw_pct, favorite_away_win_pct, _ = matchup_probabilities(
+        opponent_home_lambda,
+        favorite_away_lambda,
+    )
+    favorite_win_pct = average_pair(favorite_home_win_pct, favorite_away_win_pct)
+    draw_pct = average_pair(favorite_home_draw_pct, favorite_away_draw_pct)
+    opponent_win_pct = average_pair(opponent_away_win_pct, opponent_home_win_pct)
     gap = (away.get("fifa_rank") or 0) - (home.get("fifa_rank") or 0)
     expected_floor = minimum_expected_favorite_win_pct(gap)
     return {
+        "benchmark_ordering_method": BENCHMARK_ORDERING_METHOD,
         "home_team_id": home["id"],
         "away_team_id": away["id"],
         "home_fifa_rank": home.get("fifa_rank"),
         "away_fifa_rank": away.get("fifa_rank"),
         "rank_gap": gap,
         "rank_gap_bucket": rank_gap_bucket(gap),
-        "home_win_pct": home_win_pct,
+        "home_win_pct": favorite_win_pct,
         "draw_pct": draw_pct,
-        "away_win_pct": away_win_pct,
-        "home_expected_goals": round(lambda_home, 2),
-        "away_expected_goals": round(lambda_away, 2),
+        "away_win_pct": opponent_win_pct,
+        "home_expected_goals": average_pair(favorite_home_lambda, favorite_away_lambda, digits=2),
+        "away_expected_goals": average_pair(opponent_away_lambda, opponent_home_lambda, digits=2),
         "favorite_team_id": home["id"],
-        "favorite_win_pct": home_win_pct,
+        "opponent_team_id": away["id"],
+        "favorite_win_pct": favorite_win_pct,
+        "favorite_home_win_pct": favorite_home_win_pct,
+        "favorite_away_win_pct": favorite_away_win_pct,
         "minimum_expected_favorite_win_pct": expected_floor,
-        "implausible_favorite": is_implausible_favorite(home_win_pct, gap),
+        "implausible_favorite": is_implausible_favorite(favorite_win_pct, gap),
         "most_likely_scores": top_scores,
+        "score_ordering_note": "most_likely_scores keep the favorite-home order for readability; probability fields are dual-order averages.",
         "data_confidence": "estimated",
     }
 
@@ -215,6 +247,7 @@ def build_variant_benchmark(variant: dict, top_team_limit: int, watchlist_limit:
             "watchlistLimit": watchlist_limit,
             "rankedTeamCount": len(ranked),
             "matchupCount": len(matchups),
+            "benchmarkOrderingMethod": BENCHMARK_ORDERING_METHOD,
         },
         "teamRatings": list(team_ratings.values()),
         "overallSummary": summarize_matchups(matchups),
