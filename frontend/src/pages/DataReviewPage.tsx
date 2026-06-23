@@ -7,6 +7,7 @@ import { RatingReviewWorkbenchPanel } from "../components/RatingReviewWorkbenchP
 import { SimulationStabilityPanel } from "../components/SimulationStabilityPanel";
 import { SourceProvenanceAuditPanel } from "../components/SourceProvenanceAuditPanel";
 import { SquadGapPanel } from "../components/SquadGapPanel";
+import { SubstitutionModelGapPanel } from "../components/SubstitutionModelGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
   ManagerTacticalTrustSummary,
@@ -16,6 +17,7 @@ import type {
   SimulationStabilitySummary,
   SourceProvenanceAuditSummary,
   SquadGapSummary,
+  SubstitutionModelGapSummary,
   TeamReviewSummary,
 } from "../types/domain";
 
@@ -36,6 +38,8 @@ export function DataReviewPage() {
   const [modelCalibrationError, setModelCalibrationError] = useState<string | null>(null);
   const [simulationStability, setSimulationStability] = useState<SimulationStabilitySummary | null>(null);
   const [simulationStabilityError, setSimulationStabilityError] = useState<string | null>(null);
+  const [substitutionModelGap, setSubstitutionModelGap] = useState<SubstitutionModelGapSummary | null>(null);
+  const [substitutionModelGapError, setSubstitutionModelGapError] = useState<string | null>(null);
 
   useEffect(() => {
     api
@@ -70,6 +74,10 @@ export function DataReviewPage() {
       .getSimulationStabilitySummary()
       .then(setSimulationStability)
       .catch(() => setSimulationStabilityError("モンテカルロ安定性監査の読み込みに失敗しました。"));
+    api
+      .getSubstitutionModelGapSummary()
+      .then(setSubstitutionModelGap)
+      .catch(() => setSubstitutionModelGapError("選手交代モデルのギャップ監査の読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -100,6 +108,14 @@ export function DataReviewPage() {
       )}
       {!simulationStability && !simulationStabilityError && <p className="text-sm text-slate-400">読み込み中...</p>}
       {simulationStability && <SimulationStabilityPanel summary={simulationStability} />}
+
+      {substitutionModelGapError && (
+        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+          {substitutionModelGapError}
+        </div>
+      )}
+      {!substitutionModelGap && !substitutionModelGapError && <p className="text-sm text-slate-400">読み込み中...</p>}
+      {substitutionModelGap && <SubstitutionModelGapPanel summary={substitutionModelGap} />}
 
       {error && (
         <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">{error}</div>

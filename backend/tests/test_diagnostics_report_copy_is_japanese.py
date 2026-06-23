@@ -16,11 +16,24 @@ from app.services.model_diagnostics import (
     get_simulation_stability_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
+    get_substitution_model_gap_summary,
     get_team_review_summary,
 )
 
 JAPANESE_CHAR = re.compile(r"[぀-ヿ一-鿿]")
-COPY_FIELDS = {"note", "review_reasons", "review_summary_ja", "reason_ja", "recommendations_ja"}
+COPY_FIELDS = {
+    "note",
+    "review_reasons",
+    "review_summary_ja",
+    "reason_ja",
+    "recommendations_ja",
+    "recommendationsJa",
+    "label",
+    "currentBehavior",
+    "precisionRiskJa",
+    "evidenceNeededJa",
+    "recommendedNextAction",
+}
 
 
 def _assert_japanese_copy(value, path):
@@ -73,3 +86,7 @@ def test_model_calibration_summary_copy_is_japanese():
 
 def test_simulation_stability_summary_copy_is_japanese():
     _walk(get_simulation_stability_summary())
+
+
+def test_substitution_model_gap_summary_copy_is_japanese():
+    _walk(get_substitution_model_gap_summary())

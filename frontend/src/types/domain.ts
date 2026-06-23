@@ -575,6 +575,46 @@ export interface SimulationStabilitySummary {
   summary: SimulationStabilityResult | null;
 }
 
+export interface SubstitutionEngineCapabilities {
+  hasSubstitutionEvents: boolean;
+  hasManagerSpecificSubstitutionParameters: boolean;
+  hasScoreStateSubstitutionBias: boolean;
+  hasPositionSpecificSubstitutionPreferences: boolean;
+  maxSubs: number;
+  subWindow: { startMinute: number; endMinute: number };
+  subChancePerMinute: number;
+  subFatigueGap: number;
+  selectionRule: string;
+}
+
+export interface SubstitutionModelGap {
+  gapId: string;
+  label: string;
+  currentBehavior: string;
+  precisionRiskJa: string;
+  futureFieldCandidates: string[];
+  evidenceNeededJa: string;
+  recommendedNextAction: string;
+}
+
+export interface SubstitutionModelGapSummaryState {
+  currentModelHasManagerSpecificSubstitutions: boolean;
+  dataResearchCanBeStored: boolean;
+  safeCurrentAction: string;
+  recommendedNextSpec: string;
+}
+
+export interface SubstitutionModelGapSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  engineCapabilities: SubstitutionEngineCapabilities | null;
+  gapCount: number;
+  gaps: SubstitutionModelGap[];
+  recommendationsJa: string[];
+  summary: SubstitutionModelGapSummaryState | null;
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

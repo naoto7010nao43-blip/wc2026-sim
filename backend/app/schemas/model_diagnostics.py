@@ -299,6 +299,46 @@ class SimulationStabilitySummary(BaseModel):
     summary: SimulationStabilityResult | None
 
 
+class SubstitutionEngineCapabilities(BaseModel):
+    hasSubstitutionEvents: bool
+    hasManagerSpecificSubstitutionParameters: bool
+    hasScoreStateSubstitutionBias: bool
+    hasPositionSpecificSubstitutionPreferences: bool
+    maxSubs: int
+    subWindow: dict
+    subChancePerMinute: float
+    subFatigueGap: float
+    selectionRule: str
+
+
+class SubstitutionModelGap(BaseModel):
+    gapId: str
+    label: str
+    currentBehavior: str
+    precisionRiskJa: str
+    futureFieldCandidates: list[str]
+    evidenceNeededJa: str
+    recommendedNextAction: str
+
+
+class SubstitutionModelGapSummaryState(BaseModel):
+    currentModelHasManagerSpecificSubstitutions: bool
+    dataResearchCanBeStored: bool
+    safeCurrentAction: str
+    recommendedNextSpec: str
+
+
+class SubstitutionModelGapSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    engineCapabilities: SubstitutionEngineCapabilities | None
+    gapCount: int
+    gaps: list[SubstitutionModelGap]
+    recommendationsJa: list[str]
+    summary: SubstitutionModelGapSummaryState | None
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

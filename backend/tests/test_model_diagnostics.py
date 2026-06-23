@@ -21,6 +21,7 @@ from app.services.model_diagnostics import (
     get_simulation_stability_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
+    get_substitution_model_gap_summary,
     get_team_review_summary,
 )
 
@@ -521,5 +522,70 @@ def test_get_simulation_stability_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_simulation_stability_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_substitution_model_gap_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/substitution-model-gap")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "note", "engineCapabilities",
+        "gapCount", "gaps", "recommendationsJa", "summary",
+    ):
+        assert field in body
+    assert body["gapCount"] == len(body["gaps"])
+
+
+def test_substitution_model_gap_endpoint_exposes_current_engine_limits(client):
+    response = client.get("/api/model-diagnostics/substitution-model-gap")
+    body = response.json()
+    assert body["engineCapabilities"]["hasSubstitutionEvents"] is True
+    assert body["engineCapabilities"]["hasManagerSpecificSubstitutionParameters"] is False
+    assert body["summary"]["safeCurrentAction"] == "read_only_candidate_collection"
+    assert len(body["gaps"]) >= 4
+
+
+def test_substitution_model_gap_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_substitution_model_gap_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["engineCapabilities"] is None
+    assert summary["gapCount"] == 0
+    assert summary["gaps"] == []
+    assert summary["note"]
+
+
+def test_get_substitution_model_gap_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "engineCapabilities": {
+            "hasSubstitutionEvents": True,
+            "hasManagerSpecificSubstitutionParameters": False,
+            "hasScoreStateSubstitutionBias": False,
+            "hasPositionSpecificSubstitutionPreferences": False,
+            "maxSubs": 3,
+            "subWindow": {"startMinute": 55, "endMinute": 88},
+            "subChancePerMinute": 0.1,
+            "subFatigueGap": 0.02,
+            "selectionRule": "generic",
+        },
+        "gapCount": 0,
+        "gaps": [],
+        "recommendationsJa": ["test"],
+        "summary": {
+            "currentModelHasManagerSpecificSubstitutions": False,
+            "dataResearchCanBeStored": True,
+            "safeCurrentAction": "read_only_candidate_collection",
+            "recommendedNextSpec": "manager_substitution_tendency_model",
+        },
+    }
+    report_path = tmp_path / "substitution_model_gap_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_substitution_model_gap_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

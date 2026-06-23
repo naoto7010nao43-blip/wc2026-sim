@@ -11,6 +11,7 @@ import type {
   RoundRobinResult,
   SourceProvenanceAuditSummary,
   SquadGapSummary,
+  SubstitutionModelGapSummary,
   StandingsRow,
   TeamOut,
   TeamReviewSummary,
@@ -71,4 +72,5 @@ export const api = {
   getSourceProvenanceAudit: () => getJson<SourceProvenanceAuditSummary>("/api/model-diagnostics/source-provenance-audit"),
   getModelCalibrationSummary: () => getJson<ModelCalibrationSummary>("/api/model-diagnostics/model-calibration"),
   getSimulationStabilitySummary: () => getJson<SimulationStabilitySummary>("/api/model-diagnostics/simulation-stability"),
+  getSubstitutionModelGapSummary: () => getJson<SubstitutionModelGapSummary>("/api/model-diagnostics/substitution-model-gap"),
 };

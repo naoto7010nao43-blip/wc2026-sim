@@ -8,6 +8,7 @@ from app.schemas.model_diagnostics import (
     SimulationStabilitySummary,
     SourceProvenanceAuditSummary,
     SquadGapSummary,
+    SubstitutionModelGapSummary,
     TeamReviewSummary,
 )
 from app.services.model_diagnostics import (
@@ -18,6 +19,7 @@ from app.services.model_diagnostics import (
     get_simulation_stability_summary,
     get_source_provenance_audit_summary,
     get_squad_gap_summary,
+    get_substitution_model_gap_summary,
     get_team_review_summary,
 )
 
@@ -62,3 +64,8 @@ def get_model_calibration():
 @router.get("/simulation-stability", response_model=SimulationStabilitySummary)
 def get_simulation_stability():
     return get_simulation_stability_summary()
+
+
+@router.get("/substitution-model-gap", response_model=SubstitutionModelGapSummary)
+def get_substitution_model_gap():
+    return get_substitution_model_gap_summary()

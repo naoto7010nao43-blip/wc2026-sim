@@ -169,6 +169,22 @@ def get_simulation_stability_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     return report
 
 
+def get_substitution_model_gap_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "substitution_model_gap_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "選手交代モデルのギャップ監査レポートがまだ生成されていません。",
+            "engineCapabilities": None,
+            "gapCount": 0,
+            "gaps": [],
+            "recommendationsJa": [],
+            "summary": None,
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:
