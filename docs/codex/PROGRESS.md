@@ -49,6 +49,8 @@ Completed:
 - Codex parallel team-profile polish: added TeamPage player search, position filtering, and sort modes for overall, starting probability, caps, and age without changing team/player data.
 - Codex parallel lineup polish: improved the likely-lineup panel with average certainty, strong-slot count, probability bars, and confidence labels without changing lineup generation logic or API shape.
 - Codex parallel match-card polish: added compact winner badges and tabular score styling to match cards for easier scanning in bracket/group views.
+- Codex parallel tournament-odds polish: expanded the Monte Carlo odds panel with top-three concentration, nonzero candidate counts, final/semifinal/quarterfinal lists, and explanatory readouts.
+- Codex parallel simulator tactics polish: added a pre-match tactical readout and pressure-matchup bars to the simulator's tactical matchup panel.
 
 Primary task:
 
@@ -103,6 +105,9 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - TeamPage player-list verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 report-generation files were present but unstaged.
 - Likely-lineup polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 diagnostics API files were present but unstaged.
 - Match-card polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 diagnostics API files were present but unstaged.
+- Tournament odds polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
+- Tactical matchup polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
+- Post-Spec 011 integration verification: backend `..\backend\venv\Scripts\python.exe -m pytest` passed with `196 passed, 1 warning`; frontend `npm run lint` passed; frontend `npm run build` passed; `python backend\scripts\audit_text_encoding.py` passed. Spec 011 top review priorities are CRO, NED, POR, MEX, and MAR.
 
 ## Next After Current Task
 
