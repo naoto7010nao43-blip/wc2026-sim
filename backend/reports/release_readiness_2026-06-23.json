@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T15:59:42.242577+00:00",
+  "generatedAt": "2026-06-23T16:10:41.373835+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": false,
   "blockers": [
@@ -73,6 +73,11 @@
       "pattern": "simulation_stability_audit_*.json",
       "present": true,
       "path": "backend\\reports\\simulation_stability_audit_2026-06-23.json"
+    },
+    {
+      "pattern": "substitution_model_gap_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\substitution_model_gap_audit_2026-06-23.json"
     }
   ],
   "requiredCommands": [
