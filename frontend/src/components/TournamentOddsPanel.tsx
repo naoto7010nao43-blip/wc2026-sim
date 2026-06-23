@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import { TeamBadge } from "./TeamBadge";
-import type { TournamentSimulationOut } from "../types/domain";
+import type { SimulationStabilitySummary, TournamentSimulationOut } from "../types/domain";
 
 const ITERATIONS = 500;
 const TOP_N = 5;
@@ -22,8 +22,24 @@ function sumTopEntries(pct: Record<string, number>, n: number): number {
 
 export function TournamentOddsPanel() {
   const [result, setResult] = useState<TournamentSimulationOut | null>(null);
+  const [stability, setStability] = useState<SimulationStabilitySummary | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .getSimulationStabilitySummary()
+      .then((data) => {
+        if (!cancelled) setStability(data);
+      })
+      .catch(() => {
+        if (!cancelled) setStability(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function run() {
     setLoading(true);
@@ -63,6 +79,15 @@ export function TournamentOddsPanel() {
             <SummaryMetric label="優勝可能性あり" value={`${nonZeroCount(result.champion_pct)}チーム`} />
             <SummaryMetric label="決勝進出候補" value={`${nonZeroCount(result.final_pct)}チーム`} />
           </div>
+
+          {stability?.summary && (
+            <div className="border-l-2 border-sky-500/60 pl-3 text-xs text-slate-400">
+              <p className="font-semibold text-slate-300">確率の読み方: {stability.summary.recommendation_ja}</p>
+              <p className="mt-1">
+                監査上の最大ぶれは{stability.summary.maxAbsChampionPctDelta.toFixed(1)}ptです。近い確率差のチームは順位より候補帯として見てください。
+              </p>
+            </div>
+          )}
 
           <div>
             <p className="text-xs uppercase tracking-widest text-slate-500">優勝確率 上位{TOP_N}</p>
