@@ -144,6 +144,35 @@ export interface PlayerRating {
   is_estimated: boolean;
 }
 
+export interface TurningPoint {
+  minute: number;
+  team_id: string;
+  description: string;
+}
+
+export interface MomentumSegment {
+  start_minute: number;
+  end_minute: number;
+  home_actions: number;
+  away_actions: number;
+  dominant_team_id: string | null;
+}
+
+export interface KeyPlayerContribution {
+  player_id: string;
+  name: string;
+  team_id: string;
+  rating: number;
+  is_mom: boolean;
+}
+
+export interface MatchAnalysis {
+  turning_point: TurningPoint | null;
+  momentum_segments: MomentumSegment[];
+  key_players: KeyPlayerContribution[];
+  tactical_note: string;
+}
+
 export interface MatchResult extends MatchSummary {
   home_formation: string;
   away_formation: string;
@@ -162,6 +191,7 @@ export interface MatchResult extends MatchSummary {
   home_red_cards: number | null;
   away_red_cards: number | null;
   player_ratings: PlayerRating[];
+  analysis: MatchAnalysis | null;
 }
 
 export interface StandingsRow {

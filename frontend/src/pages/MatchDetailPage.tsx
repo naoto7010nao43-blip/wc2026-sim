@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
+import { MatchAnalysisPanel } from "../components/MatchAnalysisPanel";
 import { MatchEventTimeline } from "../components/MatchEventTimeline";
 import { PitchFormationView } from "../components/PitchFormationView";
 import { PlayerRatingsPanel } from "../components/PlayerRatingsPanel";
@@ -247,6 +248,8 @@ export function MatchDetailPage() {
       {showRatingsSection && (
         <PlayerRatingsPanel ratings={match.player_ratings} homeTeamId={match.home_team_id} awayTeamId={match.away_team_id} />
       )}
+
+      {showRatingsSection && <MatchAnalysisPanel analysis={match.analysis} />}
     </div>
   );
 }

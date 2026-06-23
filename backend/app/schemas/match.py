@@ -66,6 +66,35 @@ class PlayerRating(BaseModel):
     is_estimated: bool = False
 
 
+class TurningPoint(BaseModel):
+    minute: int
+    team_id: str
+    description: str
+
+
+class MomentumSegment(BaseModel):
+    start_minute: int
+    end_minute: int
+    home_actions: int
+    away_actions: int
+    dominant_team_id: str | None
+
+
+class KeyPlayerContribution(BaseModel):
+    player_id: str
+    name: str
+    team_id: str
+    rating: float
+    is_mom: bool
+
+
+class MatchAnalysis(BaseModel):
+    turning_point: TurningPoint | None
+    momentum_segments: list[MomentumSegment]
+    key_players: list[KeyPlayerContribution]
+    tactical_note: str
+
+
 class MatchResult(MatchSummary):
     home_formation: str
     away_formation: str
@@ -84,6 +113,7 @@ class MatchResult(MatchSummary):
     home_red_cards: int | None = None
     away_red_cards: int | None = None
     player_ratings: list[PlayerRating] = []
+    analysis: MatchAnalysis | None = None
 
 
 class SimulateRoundRobinRequest(BaseModel):

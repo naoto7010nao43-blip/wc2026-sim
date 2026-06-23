@@ -11,6 +11,7 @@ from app.models.player import Player
 from app.models.team import Team
 from app.rate_limit import rate_limit
 from app.schemas.match import MatchEventOut, MatchResult, SimulateMatchRequest
+from app.services.match_analysis import build_match_analysis
 from app.services.player_ratings import compute_player_ratings, estimate_real_match_ratings
 
 router = APIRouter(prefix="/api/matches", tags=["matches"])
@@ -127,6 +128,31 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
             match.home_team_id,
             match.away_team_id,
         )
+
+    analysis = None
+    if not match.is_real and events:
+        home_team = db.get(Team, match.home_team_id)
+        away_team = db.get(Team, match.away_team_id)
+        analysis = build_match_analysis(
+            [
+                {
+                    "minute": e.minute,
+                    "event_type": e.event_type,
+                    "team_id": e.team_id,
+                    "description": e.description,
+                    "event_metadata": e.event_metadata,
+                }
+                for e in events
+            ],
+            player_ratings,
+            match.home_team_id,
+            match.away_team_id,
+            match.home_formation,
+            match.away_formation,
+            home_team.tactical_profile if home_team else None,
+            away_team.tactical_profile if away_team else None,
+        )
+
     return MatchResult(
         id=match.id,
         group_id=match.group_id,
@@ -160,6 +186,7 @@ def to_match_result(db: Session, match: Match) -> MatchResult:
         home_red_cards=match.home_red_cards,
         away_red_cards=match.away_red_cards,
         player_ratings=player_ratings,
+        analysis=analysis,
     )
 
 
