@@ -10,9 +10,17 @@
 
 ## Current Priority
 
-Spec 013 is complete. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`. Codex hit a usage limit during this window, so this work proceeded autonomously under the existing `docs/codex/DATA_GOVERNANCE_POLICY.md` limits (read-only diagnostics only; no data/formula changes) per explicit user instruction.
+Spec 014 is active: build a player-level rating review workbench for the top squad/rating gap teams (CRO, NED, POR, MEX, MAR, URU, ESP, ARG). This remains read-only: no seed data, rating values, formulas, or prediction behavior changes.
 
-While waiting for the next Ready spec, ran `docs/codex/PRODUCTION_RELEASE_CHECKLIST.md`'s full local gate (this is read-only verification Codex already specified, not a new product decision) and added a permanent regression guardrail (commit pending below) for the recurring English-copy-in-Japanese-UI bug class. See the entry below for details.
+Codex reviewed the Spec 013 and production-gate follow-up commits after resuming. The report matched the commits: Spec 013 is committed as `b08ed51`, and the release checklist / Japanese-copy regression guardrail follow-up is committed as `934df98`. Codex independently verified the relevant diagnostic tests plus frontend lint/build; all passed.
+
+Next direction: do not deploy immediately just because the release gate is clean. The user's stated priority is simulation accuracy, so continue one more major data-quality step by moving from team-level diagnosis to player-level rating review candidates. A later Codex-authored spec can decide whether any actual rating updates are justified.
+
+Active task details:
+
+- `docs/specs/014-rating-review-workbench.md` asks for a read-only report/API/UI that explains which players within the top flagged teams deserve rating review and why.
+- It must not output numeric rating changes or apply any data updates.
+- It must use only local repository data; external evidence collection remains a later Codex-controlled step.
 
 Completed:
 

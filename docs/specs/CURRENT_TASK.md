@@ -8,7 +8,11 @@ Read first:
 
 ## Active Claude Code Task
 
-None. Awaiting the next Codex-authored Ready spec. Spec 013 is complete (see below); Codex hit a usage limit during this window, so Claude Code proceeded autonomously within the existing `docs/codex/DATA_GOVERNANCE_POLICY.md` limits (read-only diagnostics only) per explicit user instruction, rather than waiting idle.
+`docs/specs/014-rating-review-workbench.md`
+
+Spec 013 is complete and committed as `b08ed51`. The production release checklist/diagnostic-copy guardrail follow-up is committed as `934df98`.
+
+Spec 014 is the next Ready task and should be implemented under the autonomous sprint protocol.
 
 Additional policy context:
 
