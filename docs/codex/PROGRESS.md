@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Spec 011 is complete (see entry below). Awaiting the next Codex-authored spec.
+Spec 012 is active: explain the squad/rating gaps behind the highest-priority Spec 011 teams before authorizing any seed roster, player rating, or formula change. The task remains read-only and diagnostic.
 
 Completed:
 
@@ -51,12 +51,13 @@ Completed:
 - Codex parallel match-card polish: added compact winner badges and tabular score styling to match cards for easier scanning in bracket/group views.
 - Codex parallel tournament-odds polish: expanded the Monte Carlo odds panel with top-three concentration, nonzero candidate counts, final/semifinal/quarterfinal lists, and explanatory readouts.
 - Codex parallel simulator tactics polish: added a pre-match tactical readout and pressure-matchup bars to the simulator's tactical matchup panel.
+- Spec 012 authored by Codex: `docs/specs/012-squad-rating-gap-review.md` is ready for Claude Code. It asks for a read-only squad-rating gap report/API/UI section focused on CRO/NED/POR and other top-priority teams, without changing seed data, formulas, or prediction behavior.
 
 Primary task:
 
-- `docs/specs/011-team-data-review-diagnostics.md`
-- This task is intentionally read-only because the next accuracy step requires review prioritization before any seed roster/rating import.
-- Spec 010 remains completed context.
+- `docs/specs/012-squad-rating-gap-review.md`
+- This task is intentionally read-only because the next accuracy step requires explaining squad/rating gaps before any seed roster/rating import.
+- Spec 011 remains completed context.
 
 Direction-only context:
 
@@ -113,6 +114,6 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 
 Next Codex actions:
 
-1. Review Spec 011 output and decide whether any team data update/import spec is justified.
+1. Review Spec 012 output and decide whether a narrow CRO/NED/POR data update/import spec is justified.
 2. Keep formula changes frozen until an explicit calibration spec exists.
-3. Use the diagnostic output to prioritize CRO/NED/POR and ambiguous roster/name-pair review.
+3. Use the diagnostic output to separate rating-data review from roster/name-pair review.
