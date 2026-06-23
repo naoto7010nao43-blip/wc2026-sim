@@ -70,3 +70,12 @@ Confirm the current release does not silently change prediction behavior unless 
 - The frontend must point at the production backend API through its deployment environment variable.
 - Push is still manual and should happen only after Codex says the release gate is clean.
 
+## Post-Deploy Smoke
+
+After production deploy finishes, run:
+
+```powershell
+.\scripts\post_deploy_smoke.ps1 -FrontendBaseUrl "https://wc2026-sim-ten.vercel.app" -BackendBaseUrl "<production-backend-url>"
+```
+
+This checks the public frontend routes plus the core backend API endpoints used by the release gate.
