@@ -37,6 +37,11 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend data quality" "$backend/api/data-quality/summary"
     Invoke-UrlCheck "Backend team review diagnostics" "$backend/api/model-diagnostics/team-review"
     Invoke-UrlCheck "Backend squad gap diagnostics" "$backend/api/model-diagnostics/squad-gaps"
+    Invoke-UrlCheck "Backend manager tactical diagnostics" "$backend/api/model-diagnostics/manager-tactical-trust"
+    Invoke-UrlCheck "Backend rating workbench diagnostics" "$backend/api/model-diagnostics/rating-review-workbench"
+    Invoke-UrlCheck "Backend rating decision diagnostics" "$backend/api/model-diagnostics/rating-decision-audit"
+    Invoke-UrlCheck "Backend source provenance diagnostics" "$backend/api/model-diagnostics/source-provenance-audit"
+    Invoke-UrlCheck "Backend sample prediction" "$backend/api/predictions/BRA/ARG"
 } else {
     Write-Host ""
     Write-Host "BackendBaseUrl not provided; skipped backend checks." -ForegroundColor Yellow
@@ -44,4 +49,3 @@ if ($backend -ne "") {
 
 Write-Host ""
 Write-Host "Post-deploy smoke completed." -ForegroundColor Green
-
