@@ -31,6 +31,7 @@ Completed:
 - Codex parallel tournament UX sprint: added TournamentPage highlights and group-card summary cues derived from existing tournament results.
 - Codex parallel navigation sprint: added a searchable Teams index page and top-nav entry so users can reach every team profile directly.
 - Codex parallel standings UX sprint: added direct-qualification and third-place-candidate labels to group standings tables.
+- Codex parallel navigation polish: added a 404 fallback page with direct recovery links to tournament, simulator, and teams.
 
 Primary task:
 
@@ -77,6 +78,8 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Tournament UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding tournament highlights and group summary cues; all passed.
 - Teams index verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding `/teams`; all passed while Claude's data-quality frontend changes were also present in the worktree.
 - Standings UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding qualification labels; all passed.
+- 404 page verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
+- Independent Claude data-quality check: `cd backend && ..\backend\venv\Scripts\python.exe -m pytest` passed with `151 passed, 1 warning` while Claude's uncommitted data-quality implementation was present.
 
 ## Next After Current Task
 
