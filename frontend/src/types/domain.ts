@@ -335,6 +335,59 @@ export interface ManagerTacticalTrustSummary {
   teams: ManagerTacticalTrustRow[];
 }
 
+export interface PositionGroupReviewSummary {
+  count: number;
+  avg_overall: number | null;
+  top_player: { name: string; overall: number } | null;
+  is_weak_group: boolean;
+  review_candidate_count: number;
+}
+
+export interface RatingReviewCandidate {
+  player_id: string;
+  name: string;
+  name_ja: string | null;
+  primary_position: string;
+  age: number | null;
+  club_name: string | null;
+  caps: number | null;
+  national_team_goals: number | null;
+  market_value_eur: number | null;
+  source_citations: string[];
+  current_overall: number | null;
+  position_overall: number | null;
+  starting_probability: number | null;
+  uncertainty: number | null;
+  data_confidence: string | null;
+  source_breakdown: Record<string, boolean>;
+  low_confidence_attributes: string[];
+  qualitative_adjustments: Record<string, number>;
+  review_score: number;
+  review_band: "high" | "medium" | "low";
+  review_flags: string[];
+  review_summary_ja: string[];
+  suggested_codex_action: string;
+}
+
+export interface RatingReviewTeamRow {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  squad_gap_priority_score: number | null;
+  rank_underperformance_flags: number;
+  recommended_next_action: string | null;
+  position_group_summary: Record<string, PositionGroupReviewSummary>;
+  rating_review_candidates: RatingReviewCandidate[];
+}
+
+export interface RatingReviewWorkbenchSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  teams: RatingReviewTeamRow[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

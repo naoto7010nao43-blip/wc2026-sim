@@ -10,6 +10,7 @@ import re
 
 from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
+    get_rating_review_workbench_summary,
     get_squad_gap_summary,
     get_team_review_summary,
 )
@@ -48,3 +49,7 @@ def test_squad_gap_summary_copy_is_japanese():
 
 def test_manager_tactical_trust_summary_copy_is_japanese():
     _walk(get_manager_tactical_trust_summary())
+
+
+def test_rating_review_workbench_summary_copy_is_japanese():
+    _walk(get_rating_review_workbench_summary())

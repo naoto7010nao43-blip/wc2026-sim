@@ -4,6 +4,7 @@ import type {
   ManagerTacticalTrustSummary,
   MatchPredictionOut,
   MatchResult,
+  RatingReviewWorkbenchSummary,
   RoundRobinResult,
   SquadGapSummary,
   StandingsRow,
@@ -61,4 +62,5 @@ export const api = {
   getTeamDataReview: () => getJson<TeamReviewSummary>("/api/model-diagnostics/team-review"),
   getSquadGapReview: () => getJson<SquadGapSummary>("/api/model-diagnostics/squad-gaps"),
   getManagerTacticalTrust: () => getJson<ManagerTacticalTrustSummary>("/api/model-diagnostics/manager-tactical-trust"),
+  getRatingReviewWorkbench: () => getJson<RatingReviewWorkbenchSummary>("/api/model-diagnostics/rating-review-workbench"),
 };

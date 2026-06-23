@@ -8,17 +8,15 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/014-rating-review-workbench.md`
-
-Spec 013 is complete and committed as `b08ed51`. The production release checklist/diagnostic-copy guardrail follow-up is committed as `934df98`.
-
-Spec 014 is the next Ready task and should be implemented under the autonomous sprint protocol.
+None. Awaiting the next Codex-authored Ready spec. Spec 014 is complete (see below).
 
 Additional policy context:
 
 - `docs/codex/DATA_GOVERNANCE_POLICY.md`
 
-Spec 013 is complete.
+Spec 014 is complete.
+
+Spec 013 is complete and committed as `b08ed51`. The production release checklist/diagnostic-copy guardrail follow-up is committed as `934df98`.
 
 Spec 012 is complete and committed as `10a3f84`.
 
@@ -50,5 +48,6 @@ Completed:
 - `docs/specs/011-team-data-review-diagnostics.md`
 - `docs/specs/012-squad-rating-gap-review.md`
 - `docs/specs/013-manager-tactical-trust-review.md`
+- `docs/specs/014-rating-review-workbench.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
