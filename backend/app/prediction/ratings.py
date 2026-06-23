@@ -17,6 +17,8 @@ from app.rating.formulas import POSITION_GROUPS
 
 _BENCH_CUTOFF = 8  # only the strongest contributors per unit move the rating; deep bench depth matters less for a single match
 _DEFAULT_SCORE = 50.0
+_FIFA_RANK_WEIGHT = 0.75
+_SQUAD_STRENGTH_WEIGHT = 0.25
 
 
 def _position_group(player: dict) -> str:
@@ -125,5 +127,5 @@ def team_strength_rating(fifa_rank: int | None, players: list[dict]) -> tuple[fl
     # rank 1 maps near 95, decaying with diminishing returns for lower-
     # ranked teams.
     rank_score = max(35.0, 95.0 - 8.0 * ((fifa_rank ** 0.5) - 1))
-    blended = rank_score * 0.6 + squad * 0.4
+    blended = rank_score * _FIFA_RANK_WEIGHT + squad * _SQUAD_STRENGTH_WEIGHT
     return blended, "estimated"

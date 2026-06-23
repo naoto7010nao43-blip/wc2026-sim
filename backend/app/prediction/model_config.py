@@ -23,7 +23,7 @@ class ModelConfig:
 
 
 DEFAULT_MODEL_CONFIG = ModelConfig(
-    model_version="poisson-v1",
+    model_version="poisson-v2-rank75",
     base_goals=1.35,
     attack_diff_weight=0.022,
     defense_diff_weight=0.022,

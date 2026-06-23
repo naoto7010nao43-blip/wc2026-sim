@@ -1,0 +1,106 @@
+{
+  "beforeGeneratedAt": "2026-06-23T10:04:59.003380+00:00",
+  "afterGeneratedAt": "2026-06-23T11:15:49.165492+00:00",
+  "modelVersionBefore": "poisson-v1",
+  "modelVersionAfter": "poisson-v2-rank75",
+  "overall": {
+    "before_matchup_count": 190,
+    "after_matchup_count": 190,
+    "average_favorite_win_pct_delta": 0.7,
+    "implausible_favorite_count_delta": -6.0,
+    "minimum_favorite_win_pct_delta": 0.6,
+    "maximum_favorite_win_pct_delta": 1.2
+  },
+  "rankGapBuckets": [
+    {
+      "rank_gap_bucket": "00-02",
+      "before_matchup_count": 33,
+      "after_matchup_count": 33,
+      "average_favorite_win_pct_delta": 0.1,
+      "implausible_favorite_count_delta": -1.0
+    },
+    {
+      "rank_gap_bucket": "03-05",
+      "before_matchup_count": 47,
+      "after_matchup_count": 47,
+      "average_favorite_win_pct_delta": 0.4,
+      "implausible_favorite_count_delta": 0.0
+    },
+    {
+      "rank_gap_bucket": "06-10",
+      "before_matchup_count": 53,
+      "after_matchup_count": 53,
+      "average_favorite_win_pct_delta": 0.7,
+      "implausible_favorite_count_delta": -1.0
+    },
+    {
+      "rank_gap_bucket": "11-20",
+      "before_matchup_count": 56,
+      "after_matchup_count": 56,
+      "average_favorite_win_pct_delta": 1.2,
+      "implausible_favorite_count_delta": -4.0
+    },
+    {
+      "rank_gap_bucket": "21+",
+      "before_matchup_count": 1,
+      "after_matchup_count": 1,
+      "average_favorite_win_pct_delta": 2.7,
+      "implausible_favorite_count_delta": 0.0
+    }
+  ],
+  "watchlistTeams": [
+    {
+      "team_id": "ARG",
+      "average_favorite_win_pct_delta": 2.1,
+      "implausible_favorite_count_delta": -2.0,
+      "minimum_favorite_win_pct_delta": 1.4
+    },
+    {
+      "team_id": "CRO",
+      "average_favorite_win_pct_delta": 0.8,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 0.6
+    },
+    {
+      "team_id": "ESP",
+      "average_favorite_win_pct_delta": 1.2,
+      "implausible_favorite_count_delta": -1.0,
+      "minimum_favorite_win_pct_delta": 0.6
+    },
+    {
+      "team_id": "MAR",
+      "average_favorite_win_pct_delta": 0.6,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 0.6
+    },
+    {
+      "team_id": "MEX",
+      "average_favorite_win_pct_delta": 0.5,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 1.0
+    },
+    {
+      "team_id": "NED",
+      "average_favorite_win_pct_delta": 0.5,
+      "implausible_favorite_count_delta": -1.0,
+      "minimum_favorite_win_pct_delta": 0.5
+    },
+    {
+      "team_id": "POR",
+      "average_favorite_win_pct_delta": 0.7,
+      "implausible_favorite_count_delta": -1.0,
+      "minimum_favorite_win_pct_delta": 0.4
+    },
+    {
+      "team_id": "URU",
+      "average_favorite_win_pct_delta": 0.2,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 0.6
+    }
+  ],
+  "evaluation": {
+    "status": "pass",
+    "watchlist_implausible_reduction": 5.0,
+    "warnings": []
+  }
+}
