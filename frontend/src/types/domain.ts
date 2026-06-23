@@ -188,3 +188,18 @@ export interface TournamentResult {
   matches: Record<RoundName, MatchSummary[]>;
   group_standings: Record<string, StandingsRow[]>;
 }
+
+export interface DataQualitySummary {
+  seed_player_count: number;
+  seed_team_count: number;
+  official_profile_players: number;
+  official_profile_coverage_pct: number;
+  remaining_unmatched_official_players: number | null;
+  remaining_unmatched_seed_players: number | null;
+  coach_mismatch_count: number | null;
+  matched_player_field_update_candidates: number | null;
+  last_seed_update: string | null;
+  last_report_update: string | null;
+  control_character_issues: number;
+  notes: string[];
+}

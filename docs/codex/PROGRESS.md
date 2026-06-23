@@ -32,6 +32,11 @@ Completed:
 - Codex parallel navigation sprint: added a searchable Teams index page and top-nav entry so users can reach every team profile directly.
 - Codex parallel standings UX sprint: added direct-qualification and third-place-candidate labels to group standings tables.
 - Codex parallel navigation polish: added a 404 fallback page with direct recovery links to tournament, simulator, and teams.
+- Spec 010 Phase 1: confirmed `audit_text_encoding.py` scan scope/markers already match the spec; no changes needed.
+- Spec 010 Phase 2: added read-only `GET /api/data-quality/summary` (`app/services/data_quality.py`, `app/schemas/data_quality.py`, `app/api/data_quality.py`), wired into `app/main.py`. Computes seed/official-profile counts and reads the latest `fifa_squad_merge_proposal_*.json` report; never mutates seed/report files. 4 new tests (`tests/test_data_quality.py`) cover the live report numbers and a missing-report fallback.
+- Spec 010 Phase 3: added a compact `DataQualityPanel` to the home page (`frontend/src/components/DataQualityPanel.tsx`), consuming the new API with a calm fallback message on fetch failure or while loading. Notes returned by the API are Japanese to match the rest of the UI.
+- Spec 010 Phase 4: reviewed match detail trust states against the spec's acceptance criteria -- Spec 003 already implemented distinct real/detailed-simulation/score-prediction labels, a compact description line near the score, calm empty states per match kind, a conditional ratings panel, and a responsive grid layout. No further changes were required.
+- Spec 010 Phase 5: ran Playwright smoke checks (desktop 1280px and mobile 390px) across `/`, `/simulate`, `/tournament`, `/teams/BRA`, and a freshly simulated match detail page -- 10/10 checks passed with zero mojibake/replacement-character findings, zero horizontal overflow, and zero console errors.
 
 Primary task:
 
@@ -80,6 +85,8 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Standings UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding qualification labels; all passed.
 - 404 page verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
 - Independent Claude data-quality check: `cd backend && ..\backend\venv\Scripts\python.exe -m pytest` passed with `151 passed, 1 warning` while Claude's uncommitted data-quality implementation was present.
+- Spec 010 Phases 1-5 verification: backend `pytest -q` -> `151 passed`; frontend `npx tsc --noEmit` clean; frontend `npm run lint` clean; frontend `npm run build` succeeded (dist output ~300KB JS / ~30KB CSS); `audit_text_encoding.py` passed. Dev servers were stale (no `--reload`) after backend edits, so they were restarted (`Stop-Process -Force` + relaunch `uvicorn`) per the daily-maintenance runbook; `/api/health` and the new `/api/data-quality/summary` both responded after restart.
+- Spec 010 Phase 5 browser smoke detail: Playwright (chromium, already installed under a temp dir from a prior session) checked `/`, `/simulate`, `/tournament`, `/teams/BRA`, `/matches/{id}` at 1280px and 390px widths. All 10 checks: 0 mojibake findings, 0 page-overflow, 0 console errors. Screenshots of `/` (desktop + mobile) confirm the new data-quality panel renders correctly and is mobile-safe with no nested-card visual noise.
 
 ## Next After Current Task
 

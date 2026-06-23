@@ -1,4 +1,5 @@
 import type {
+  DataQualitySummary,
   LikelyLineupOut,
   MatchPredictionOut,
   MatchResult,
@@ -53,4 +54,5 @@ export const api = {
       iterations: opts?.iterations ?? 500,
       seed: opts?.seed ?? 0,
     }),
+  getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
 };

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { DataQualityPanel } from "../components/DataQualityPanel";
 
 export function HomePage() {
   return (
@@ -34,6 +35,10 @@ export function HomePage() {
             気になる2チームを選んで、その1試合だけを詳細にシミュレーション。事前予測とリプレイで戦況を確認できます。
           </p>
         </Link>
+      </div>
+
+      <div className="w-full max-w-3xl">
+        <DataQualityPanel />
       </div>
     </div>
   );

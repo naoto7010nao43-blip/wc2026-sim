@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select
 
-from app.api import groups, matches, players, predictions, teams, tournament
+from app.api import data_quality, groups, matches, players, predictions, teams, tournament
 from app.database import Base, SessionLocal, engine
 from app.models.team import Team
 
@@ -52,6 +52,7 @@ app.include_router(matches.router)
 app.include_router(groups.router)
 app.include_router(tournament.router)
 app.include_router(predictions.router)
+app.include_router(data_quality.router)
 
 
 @app.get("/api/health")
