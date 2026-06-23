@@ -45,6 +45,7 @@ Completed:
 - Spec 011 authored by Codex: `docs/specs/011-team-data-review-diagnostics.md` is ready for Claude Code. It asks for a deterministic team data review plan report, read-only diagnostics API, and `/data-review` UI page derived only from existing local reports/seed files.
 - Codex parallel match-detail polish: improved `MatchAnalysisPanel` readability by showing turning-point descriptions, momentum dominance labels, team badges for key players, and a text MOM badge without changing match-analysis logic or API shape.
 - Codex parallel team-profile polish: added TeamPage player search, position filtering, and sort modes for overall, starting probability, caps, and age without changing team/player data.
+- Codex parallel lineup polish: improved the likely-lineup panel with average certainty, strong-slot count, probability bars, and confidence labels without changing lineup generation logic or API shape.
 
 Primary task:
 
@@ -97,6 +98,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Spec 010 Phase 5 browser smoke detail: Playwright (chromium, already installed under a temp dir from a prior session) checked `/`, `/simulate`, `/tournament`, `/teams/BRA`, `/matches/{id}` at 1280px and 390px widths. All 10 checks: 0 mojibake findings, 0 page-overflow, 0 console errors. Screenshots of `/` (desktop + mobile) confirm the new data-quality panel renders correctly and is mobile-safe with no nested-card visual noise.
 - Match analysis polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
 - TeamPage player-list verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 report-generation files were present but unstaged.
+- Likely-lineup polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 diagnostics API files were present but unstaged.
 
 ## Next After Current Task
 
