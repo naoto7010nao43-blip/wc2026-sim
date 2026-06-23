@@ -170,6 +170,42 @@ class RatingReviewWorkbenchSummary(BaseModel):
     teams: list[RatingReviewTeamRow]
 
 
+class RatingDecisionCandidate(BaseModel):
+    player_id: str
+    name: str
+    primary_position: str | None
+    current_overall: int | None
+    review_score: float | None
+    review_band: str | None
+    suggested_codex_action: str | None
+    review_flags: list[str]
+    source_risk_flags: list[str]
+    driver_alignment: bool
+    counterproductive_for_team_underperformance: bool
+    decision_bucket: str
+
+
+class RatingDecisionTeamRow(BaseModel):
+    team_id: str
+    team_name: str
+    dominant_negative_driver: str
+    rank_underperformance_flags: int | None
+    bucketCounts: dict[str, int]
+    candidate_for_later_proposal: list[RatingDecisionCandidate]
+    source_review_first: list[RatingDecisionCandidate]
+    do_not_use_for_upgrade_proposal: list[RatingDecisionCandidate]
+    monitor_only: list[RatingDecisionCandidate]
+
+
+class RatingDecisionAuditSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    teamCount: int
+    bucketCounts: dict[str, int]
+    teams: list[RatingDecisionTeamRow]
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

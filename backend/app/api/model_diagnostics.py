@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.schemas.model_diagnostics import (
     ManagerTacticalTrustSummary,
+    RatingDecisionAuditSummary,
     RatingReviewWorkbenchSummary,
     SourceProvenanceAuditSummary,
     SquadGapSummary,
@@ -9,6 +10,7 @@ from app.schemas.model_diagnostics import (
 )
 from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
+    get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_source_provenance_audit_summary,
     get_squad_gap_summary,
@@ -41,3 +43,8 @@ def get_rating_review_workbench():
 @router.get("/source-provenance-audit", response_model=SourceProvenanceAuditSummary)
 def get_source_provenance_audit():
     return get_source_provenance_audit_summary()
+
+
+@router.get("/rating-decision-audit", response_model=RatingDecisionAuditSummary)
+def get_rating_decision_audit():
+    return get_rating_decision_audit_summary()

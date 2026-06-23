@@ -10,9 +10,11 @@
 
 ## Current Priority
 
-Spec 015 is Ready in `docs/specs/CURRENT_TASK.md`: `docs/specs/015-rating-readiness-data-review.md`.
+Spec 015 is complete. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`.
 
-Claude Code should implement Spec 015 autonomously and commit locally after verification. Codex has continued the accuracy-review track in parallel with read-only audits only; no seed data, ratings, formulas, or prediction behavior were changed.
+Completed:
+
+- `docs/specs/015-rating-readiness-data-review.md`: exposed Codex's two new read-only audit layers (`backend/scripts/build_rating_decision_audit.py` / `rating_decision_audit_2026-06-23.json` from commit `475f170`, and `backend/scripts/build_source_provenance_audit.py` / `source_provenance_audit_2026-06-23.json` / its already-wired `GET /api/model-diagnostics/source-provenance-audit` endpoint from commit `93a1127`) on `/data-review`. Added the one missing backend piece -- `GET /api/model-diagnostics/rating-decision-audit` (extends `model_diagnostics.py`/`schemas/model_diagnostics.py`/`api/model_diagnostics.py`, same calm-empty-state/read-only pattern as Specs 011-014) -- plus the full frontend layer for both audits: TypeScript types, `api.getRatingDecisionAudit()`/`api.getSourceProvenanceAudit()` client methods, and two new `/data-review` panels (`RatingDecisionAuditPanel.tsx` showing per-team dominant negative driver and later-proposal/source-review/blocked counts with a short later-proposal candidate list; `SourceProvenanceAuditPanel.tsx` showing the seed-wide source-risk count (59/669), risk marker counts, per-team source-review candidates with marker/severity/Japanese reason, and the Japanese recommendations). Both panels use calm wording ("変更候補から除外", "出典確認が先") rather than asserting any player's rating is wrong, and keep cards flat (no cards nested inside cards) per the spec's design constraints. 13 new backend tests (4 endpoint/service tests for the new rating-decision-audit route, 1 added to the Spec-013 Japanese-copy regression guardrail, plus pre-existing Codex-authored tests for source-provenance-audit already covered it). Full backend suite: 319 passed. Frontend `tsc`/`lint`/`build`: all clean. Text encoding audit: passed. Playwright smoke (desktop 1280px + mobile 390px) on `/data-review`: 0 console errors, 0 failed requests, no mojibake, no horizontal overflow; visually confirmed via screenshots that both new sections render dense, calm, correctly-encoded Japanese content. No seed player data, ratings, manager data, formulas, or prediction behavior changed -- this spec only exposed and visualized audits Codex had already generated as read-only reports.
 
 Completed:
 

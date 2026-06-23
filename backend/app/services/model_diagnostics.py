@@ -75,6 +75,20 @@ def get_rating_review_workbench_summary(reports_dir: Path = REPORTS_DIR) -> dict
     return report
 
 
+def get_rating_decision_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "rating_decision_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "能力値レビュー判断監査のレポートがまだ生成されていません。",
+            "teamCount": 0,
+            "bucketCounts": {},
+            "teams": [],
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:

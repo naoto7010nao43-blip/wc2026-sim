@@ -15,6 +15,7 @@ from app.main import app
 from app.services.model_diagnostics import (
     REPORTS_DIR,
     get_manager_tactical_trust_summary,
+    get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
@@ -312,5 +313,58 @@ def test_get_source_provenance_audit_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_source_provenance_audit_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_rating_decision_audit_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/rating-decision-audit")
+    assert response.status_code == 200
+    body = response.json()
+    assert "generatedAt" in body
+    assert "sourceReports" in body
+    assert "note" in body
+    assert "teamCount" in body
+    assert "bucketCounts" in body
+    assert "teams" in body
+    assert body["teamCount"] == len(body["teams"])
+
+
+def test_rating_decision_audit_endpoint_top_team_has_expected_shape(client):
+    response = client.get("/api/model-diagnostics/rating-decision-audit")
+    body = response.json()
+    assert body["teamCount"] > 0
+    row = body["teams"][0]
+    for field in (
+        "team_id", "team_name", "dominant_negative_driver", "rank_underperformance_flags",
+        "bucketCounts", "candidate_for_later_proposal", "source_review_first",
+        "do_not_use_for_upgrade_proposal", "monitor_only",
+    ):
+        assert field in row
+
+
+def test_rating_decision_audit_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_rating_decision_audit_summary(reports_dir=tmp_path)
+    assert summary["teamCount"] == 0
+    assert summary["teams"] == []
+    assert summary["generatedAt"] is None
+    assert summary["bucketCounts"] == {}
+    assert summary["note"]
+
+
+def test_get_rating_decision_audit_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "teamCount": 1,
+        "bucketCounts": {"monitor_only": 1},
+        "teams": [{"team_id": "AAA"}],
+    }
+    report_path = tmp_path / "rating_decision_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_rating_decision_audit_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

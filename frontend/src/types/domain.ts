@@ -388,6 +388,100 @@ export interface RatingReviewWorkbenchSummary {
   teams: RatingReviewTeamRow[];
 }
 
+export interface RatingDecisionCandidate {
+  player_id: string;
+  name: string;
+  primary_position: string | null;
+  current_overall: number | null;
+  review_score: number | null;
+  review_band: string | null;
+  suggested_codex_action: string | null;
+  review_flags: string[];
+  source_risk_flags: string[];
+  driver_alignment: boolean;
+  counterproductive_for_team_underperformance: boolean;
+  decision_bucket: string;
+}
+
+export interface RatingDecisionTeamRow {
+  team_id: string;
+  team_name: string;
+  dominant_negative_driver: string;
+  rank_underperformance_flags: number | null;
+  bucketCounts: Record<string, number>;
+  candidate_for_later_proposal: RatingDecisionCandidate[];
+  source_review_first: RatingDecisionCandidate[];
+  do_not_use_for_upgrade_proposal: RatingDecisionCandidate[];
+  monitor_only: RatingDecisionCandidate[];
+}
+
+export interface RatingDecisionAuditSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  bucketCounts: Record<string, number>;
+  teams: RatingDecisionTeamRow[];
+}
+
+export interface SourceRiskFlag {
+  marker: string;
+  severity: string;
+  reason_ja: string;
+}
+
+export interface SourceRiskPlayer {
+  team_id: string | null;
+  player_id: string | null;
+  name: string | null;
+  risk_score: number;
+  risk_flags: SourceRiskFlag[];
+  source_citations: string[];
+}
+
+export interface SeedSourceSummary {
+  seed_player_count: number;
+  players_with_source_risk: number;
+  marker_counts: Record<string, number>;
+  severity_counts: Record<string, number>;
+  top_risky_seed_players: SourceRiskPlayer[];
+}
+
+export interface SourceProvenanceCandidate {
+  player_id: string;
+  name: string;
+  primary_position: string | null;
+  current_overall: number | null;
+  decision_bucket: string;
+  suggested_codex_action: string | null;
+  risk_score: number;
+  risk_flags: SourceRiskFlag[];
+  source_citations: string[];
+}
+
+export interface SourceProvenanceTeamRow {
+  team_id: string;
+  team_name: string;
+  candidate_count: number;
+  source_risk_candidate_count: number;
+  decision_bucket_counts: Record<string, number>;
+  clear_later_proposal_candidates: SourceProvenanceCandidate[];
+  source_review_candidates: SourceProvenanceCandidate[];
+}
+
+export interface SourceProvenanceAuditSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  seedSourceSummary: SeedSourceSummary;
+  decisionCandidateCount: number;
+  clearLaterProposalCandidateCount: number;
+  sourceReviewCandidateCount: number;
+  teamCount: number;
+  teams: SourceProvenanceTeamRow[];
+  recommendations_ja: string[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;
