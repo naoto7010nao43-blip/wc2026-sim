@@ -153,6 +153,22 @@ def get_model_calibration_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     }
 
 
+def get_simulation_stability_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "simulation_stability_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "modelVersion": None,
+            "note": "モンテカルロ安定性監査のレポートがまだ生成されていません。",
+            "scope": None,
+            "samples": [],
+            "comparisons": [],
+            "summary": None,
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:

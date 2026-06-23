@@ -18,6 +18,7 @@ from app.services.model_diagnostics import (
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
+    get_simulation_stability_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
     get_team_review_summary,
@@ -466,3 +467,59 @@ def test_model_calibration_summary_prefers_order_neutral_report(tmp_path):
     assert summary["modelVersionAfter"] == "poisson-v2-rank75-order-neutral"
     assert summary["benchmarkMethod"] == "dual_order_average"
     assert summary["sourceReports"][0]["name"] == "prediction_benchmark_comparison_rank75_order_neutral"
+
+
+def test_simulation_stability_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/simulation-stability")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "modelVersion", "note", "scope",
+        "samples", "comparisons", "summary",
+    ):
+        assert field in body
+
+
+def test_simulation_stability_endpoint_has_summary_when_report_exists(client):
+    response = client.get("/api/model-diagnostics/simulation-stability")
+    body = response.json()
+    assert body["summary"]["stabilityBand"] in {"stable", "usable", "volatile"}
+    assert body["summary"]["maxAbsChampionPctDelta"] >= 0
+    assert len(body["samples"]) >= 1
+    assert "topChampionCandidates" in body["samples"][-1]
+
+
+def test_simulation_stability_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_simulation_stability_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["scope"] is None
+    assert summary["samples"] == []
+    assert summary["comparisons"] == []
+    assert summary["summary"] is None
+    assert summary["note"]
+
+
+def test_get_simulation_stability_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "modelVersion": "poisson-test",
+        "note": "test",
+        "scope": {"iterationCounts": [100], "baseSeed": 1, "sampleCount": 1},
+        "samples": [],
+        "comparisons": [],
+        "summary": {
+            "stabilityBand": "stable",
+            "maxAbsChampionPctDelta": 0.0,
+            "averageAbsChampionPctDelta": 0.0,
+            "recommendation": "current_default_stable",
+            "recommendation_ja": "安定しています。",
+        },
+    }
+    report_path = tmp_path / "simulation_stability_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_simulation_stability_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before

@@ -4,6 +4,7 @@ import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPan
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
 import { RatingReviewWorkbenchPanel } from "../components/RatingReviewWorkbenchPanel";
+import { SimulationStabilityPanel } from "../components/SimulationStabilityPanel";
 import { SourceProvenanceAuditPanel } from "../components/SourceProvenanceAuditPanel";
 import { SquadGapPanel } from "../components/SquadGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
@@ -12,6 +13,7 @@ import type {
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
+  SimulationStabilitySummary,
   SourceProvenanceAuditSummary,
   SquadGapSummary,
   TeamReviewSummary,
@@ -32,6 +34,8 @@ export function DataReviewPage() {
   const [sourceProvenanceAuditError, setSourceProvenanceAuditError] = useState<string | null>(null);
   const [modelCalibration, setModelCalibration] = useState<ModelCalibrationSummary | null>(null);
   const [modelCalibrationError, setModelCalibrationError] = useState<string | null>(null);
+  const [simulationStability, setSimulationStability] = useState<SimulationStabilitySummary | null>(null);
+  const [simulationStabilityError, setSimulationStabilityError] = useState<string | null>(null);
 
   useEffect(() => {
     api
@@ -62,6 +66,10 @@ export function DataReviewPage() {
       .getModelCalibrationSummary()
       .then(setModelCalibration)
       .catch(() => setModelCalibrationError("モデルキャリブレーションの読み込みに失敗しました。"));
+    api
+      .getSimulationStabilitySummary()
+      .then(setSimulationStability)
+      .catch(() => setSimulationStabilityError("モンテカルロ安定性監査の読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -84,6 +92,14 @@ export function DataReviewPage() {
       )}
       {!modelCalibration && !modelCalibrationError && <p className="text-sm text-slate-400">読み込み中...</p>}
       {modelCalibration && <ModelCalibrationPanel summary={modelCalibration} />}
+
+      {simulationStabilityError && (
+        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+          {simulationStabilityError}
+        </div>
+      )}
+      {!simulationStability && !simulationStabilityError && <p className="text-sm text-slate-400">読み込み中...</p>}
+      {simulationStability && <SimulationStabilityPanel summary={simulationStability} />}
 
       {error && (
         <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">{error}</div>

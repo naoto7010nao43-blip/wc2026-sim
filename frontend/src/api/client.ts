@@ -7,6 +7,7 @@ import type {
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
+  SimulationStabilitySummary,
   RoundRobinResult,
   SourceProvenanceAuditSummary,
   SquadGapSummary,
@@ -69,4 +70,5 @@ export const api = {
   getRatingDecisionAudit: () => getJson<RatingDecisionAuditSummary>("/api/model-diagnostics/rating-decision-audit"),
   getSourceProvenanceAudit: () => getJson<SourceProvenanceAuditSummary>("/api/model-diagnostics/source-provenance-audit"),
   getModelCalibrationSummary: () => getJson<ModelCalibrationSummary>("/api/model-diagnostics/model-calibration"),
+  getSimulationStabilitySummary: () => getJson<SimulationStabilitySummary>("/api/model-diagnostics/simulation-stability"),
 };

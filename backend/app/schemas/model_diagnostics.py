@@ -241,6 +241,64 @@ class ModelCalibrationSummary(BaseModel):
     recommendations_ja: list[str]
 
 
+class SimulationStabilityChampionCandidate(BaseModel):
+    team_id: str
+    pct: float
+
+
+class SimulationStabilitySample(BaseModel):
+    iterations: int
+    modelVersion: str | None
+    dataConfidence: str | None
+    championCandidateCount: int
+    topChampionCandidates: list[SimulationStabilityChampionCandidate]
+    topChampionTeamId: str | None
+    topChampionPct: float | None
+    topThreeChampionPct: float
+
+
+class SimulationStabilityMover(BaseModel):
+    team_id: str
+    previous_pct: float
+    current_pct: float
+    delta_pct: float
+    abs_delta_pct: float
+
+
+class SimulationStabilityComparison(BaseModel):
+    fromIterations: int
+    toIterations: int
+    stabilityBand: str
+    max_abs_delta_pct: float
+    average_abs_delta_pct: float
+    largest_movers: list[SimulationStabilityMover]
+
+
+class SimulationStabilityResult(BaseModel):
+    stabilityBand: str
+    maxAbsChampionPctDelta: float
+    averageAbsChampionPctDelta: float
+    recommendation: str
+    recommendation_ja: str
+
+
+class SimulationStabilityScope(BaseModel):
+    iterationCounts: list[int]
+    baseSeed: int
+    sampleCount: int
+
+
+class SimulationStabilitySummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    modelVersion: str | None
+    note: str
+    scope: SimulationStabilityScope | None
+    samples: list[SimulationStabilitySample]
+    comparisons: list[SimulationStabilityComparison]
+    summary: SimulationStabilityResult | None
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

@@ -1,0 +1,333 @@
+{
+  "generatedAt": "2026-06-23T15:54:50.077828+00:00",
+  "modelVersion": "poisson-v2-rank75",
+  "note": "モンテカルロ優勝確率はサンプルに基づく推定値です。この監査は複数の試行回数を同じ基準シードで比較し、上位候補の確率が表示用の目安として十分に安定しているかを確認します。予測ロジックや試合結果は変更しません。",
+  "scope": {
+    "iterationCounts": [
+      200,
+      500,
+      1000
+    ],
+    "baseSeed": 20260624,
+    "sampleCount": 3
+  },
+  "samples": [
+    {
+      "iterations": 200,
+      "modelVersion": "poisson-v2-rank75",
+      "dataConfidence": "estimated",
+      "championCandidateCount": 25,
+      "topChampionCandidates": [
+        {
+          "team_id": "FRA",
+          "pct": 24.0
+        },
+        {
+          "team_id": "ESP",
+          "pct": 13.0
+        },
+        {
+          "team_id": "ARG",
+          "pct": 10.5
+        },
+        {
+          "team_id": "ENG",
+          "pct": 9.5
+        },
+        {
+          "team_id": "BRA",
+          "pct": 7.5
+        },
+        {
+          "team_id": "GER",
+          "pct": 5.0
+        },
+        {
+          "team_id": "BEL",
+          "pct": 3.5
+        },
+        {
+          "team_id": "CAN",
+          "pct": 2.5
+        },
+        {
+          "team_id": "COL",
+          "pct": 2.5
+        },
+        {
+          "team_id": "NOR",
+          "pct": 2.5
+        },
+        {
+          "team_id": "POR",
+          "pct": 2.5
+        },
+        {
+          "team_id": "USA",
+          "pct": 2.5
+        }
+      ],
+      "topChampionTeamId": "FRA",
+      "topChampionPct": 24.0,
+      "topThreeChampionPct": 47.5
+    },
+    {
+      "iterations": 500,
+      "modelVersion": "poisson-v2-rank75",
+      "dataConfidence": "estimated",
+      "championCandidateCount": 27,
+      "topChampionCandidates": [
+        {
+          "team_id": "FRA",
+          "pct": 23.4
+        },
+        {
+          "team_id": "ARG",
+          "pct": 11.0
+        },
+        {
+          "team_id": "ESP",
+          "pct": 10.2
+        },
+        {
+          "team_id": "ENG",
+          "pct": 8.2
+        },
+        {
+          "team_id": "GER",
+          "pct": 7.8
+        },
+        {
+          "team_id": "BRA",
+          "pct": 6.8
+        },
+        {
+          "team_id": "POR",
+          "pct": 4.0
+        },
+        {
+          "team_id": "BEL",
+          "pct": 3.6
+        },
+        {
+          "team_id": "USA",
+          "pct": 2.8
+        },
+        {
+          "team_id": "COL",
+          "pct": 2.4
+        },
+        {
+          "team_id": "SEN",
+          "pct": 2.0
+        },
+        {
+          "team_id": "EGY",
+          "pct": 1.8
+        }
+      ],
+      "topChampionTeamId": "FRA",
+      "topChampionPct": 23.4,
+      "topThreeChampionPct": 44.6
+    },
+    {
+      "iterations": 1000,
+      "modelVersion": "poisson-v2-rank75",
+      "dataConfidence": "estimated",
+      "championCandidateCount": 28,
+      "topChampionCandidates": [
+        {
+          "team_id": "FRA",
+          "pct": 20.2
+        },
+        {
+          "team_id": "ARG",
+          "pct": 11.6
+        },
+        {
+          "team_id": "ESP",
+          "pct": 11.5
+        },
+        {
+          "team_id": "ENG",
+          "pct": 8.9
+        },
+        {
+          "team_id": "GER",
+          "pct": 8.5
+        },
+        {
+          "team_id": "BRA",
+          "pct": 7.4
+        },
+        {
+          "team_id": "POR",
+          "pct": 3.7
+        },
+        {
+          "team_id": "BEL",
+          "pct": 3.1
+        },
+        {
+          "team_id": "COL",
+          "pct": 3.0
+        },
+        {
+          "team_id": "USA",
+          "pct": 3.0
+        },
+        {
+          "team_id": "MEX",
+          "pct": 2.7
+        },
+        {
+          "team_id": "MAR",
+          "pct": 2.6
+        }
+      ],
+      "topChampionTeamId": "FRA",
+      "topChampionPct": 20.2,
+      "topThreeChampionPct": 43.3
+    }
+  ],
+  "comparisons": [
+    {
+      "max_abs_delta_pct": 2.8,
+      "average_abs_delta_pct": 1.4,
+      "largest_movers": [
+        {
+          "team_id": "ESP",
+          "previous_pct": 13.0,
+          "current_pct": 10.2,
+          "delta_pct": -2.8,
+          "abs_delta_pct": 2.8
+        },
+        {
+          "team_id": "GER",
+          "previous_pct": 5.0,
+          "current_pct": 7.8,
+          "delta_pct": 2.8,
+          "abs_delta_pct": 2.8
+        },
+        {
+          "team_id": "CAN",
+          "previous_pct": 2.5,
+          "current_pct": 0.0,
+          "delta_pct": -2.5,
+          "abs_delta_pct": 2.5
+        },
+        {
+          "team_id": "NOR",
+          "previous_pct": 2.5,
+          "current_pct": 0.0,
+          "delta_pct": -2.5,
+          "abs_delta_pct": 2.5
+        },
+        {
+          "team_id": "SEN",
+          "previous_pct": 0.0,
+          "current_pct": 2.0,
+          "delta_pct": 2.0,
+          "abs_delta_pct": 2.0
+        },
+        {
+          "team_id": "EGY",
+          "previous_pct": 0.0,
+          "current_pct": 1.8,
+          "delta_pct": 1.8,
+          "abs_delta_pct": 1.8
+        },
+        {
+          "team_id": "POR",
+          "previous_pct": 2.5,
+          "current_pct": 4.0,
+          "delta_pct": 1.5,
+          "abs_delta_pct": 1.5
+        },
+        {
+          "team_id": "ENG",
+          "previous_pct": 9.5,
+          "current_pct": 8.2,
+          "delta_pct": -1.3,
+          "abs_delta_pct": 1.3
+        }
+      ],
+      "fromIterations": 200,
+      "toIterations": 500,
+      "stabilityBand": "usable"
+    },
+    {
+      "max_abs_delta_pct": 3.2,
+      "average_abs_delta_pct": 1.3,
+      "largest_movers": [
+        {
+          "team_id": "FRA",
+          "previous_pct": 23.4,
+          "current_pct": 20.2,
+          "delta_pct": -3.2,
+          "abs_delta_pct": 3.2
+        },
+        {
+          "team_id": "MEX",
+          "previous_pct": 0.0,
+          "current_pct": 2.7,
+          "delta_pct": 2.7,
+          "abs_delta_pct": 2.7
+        },
+        {
+          "team_id": "MAR",
+          "previous_pct": 0.0,
+          "current_pct": 2.6,
+          "delta_pct": 2.6,
+          "abs_delta_pct": 2.6
+        },
+        {
+          "team_id": "SEN",
+          "previous_pct": 2.0,
+          "current_pct": 0.0,
+          "delta_pct": -2.0,
+          "abs_delta_pct": 2.0
+        },
+        {
+          "team_id": "EGY",
+          "previous_pct": 1.8,
+          "current_pct": 0.0,
+          "delta_pct": -1.8,
+          "abs_delta_pct": 1.8
+        },
+        {
+          "team_id": "ESP",
+          "previous_pct": 10.2,
+          "current_pct": 11.5,
+          "delta_pct": 1.3,
+          "abs_delta_pct": 1.3
+        },
+        {
+          "team_id": "ENG",
+          "previous_pct": 8.2,
+          "current_pct": 8.9,
+          "delta_pct": 0.7,
+          "abs_delta_pct": 0.7
+        },
+        {
+          "team_id": "GER",
+          "previous_pct": 7.8,
+          "current_pct": 8.5,
+          "delta_pct": 0.7,
+          "abs_delta_pct": 0.7
+        }
+      ],
+      "fromIterations": 500,
+      "toIterations": 1000,
+      "stabilityBand": "usable"
+    }
+  ],
+  "summary": {
+    "stabilityBand": "usable",
+    "maxAbsChampionPctDelta": 3.2,
+    "averageAbsChampionPctDelta": 1.3,
+    "recommendation": "current_default_usable",
+    "recommendation_ja": "現在の試行回数は表示用の目安として使えますが、上位候補の細かな差は幅を持って解釈してください。"
+  },
+  "sourceReports": []
+}

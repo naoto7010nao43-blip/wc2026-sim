@@ -517,6 +517,64 @@ export interface ModelCalibrationSummary {
   recommendations_ja: string[];
 }
 
+export interface SimulationStabilityChampionCandidate {
+  team_id: string;
+  pct: number;
+}
+
+export interface SimulationStabilitySample {
+  iterations: number;
+  modelVersion: string | null;
+  dataConfidence: string | null;
+  championCandidateCount: number;
+  topChampionCandidates: SimulationStabilityChampionCandidate[];
+  topChampionTeamId: string | null;
+  topChampionPct: number | null;
+  topThreeChampionPct: number;
+}
+
+export interface SimulationStabilityMover {
+  team_id: string;
+  previous_pct: number;
+  current_pct: number;
+  delta_pct: number;
+  abs_delta_pct: number;
+}
+
+export interface SimulationStabilityComparison {
+  fromIterations: number;
+  toIterations: number;
+  stabilityBand: "stable" | "usable" | "volatile";
+  max_abs_delta_pct: number;
+  average_abs_delta_pct: number;
+  largest_movers: SimulationStabilityMover[];
+}
+
+export interface SimulationStabilityResult {
+  stabilityBand: "stable" | "usable" | "volatile";
+  maxAbsChampionPctDelta: number;
+  averageAbsChampionPctDelta: number;
+  recommendation: string;
+  recommendation_ja: string;
+}
+
+export interface SimulationStabilityScope {
+  iterationCounts: number[];
+  baseSeed: number;
+  sampleCount: number;
+}
+
+export interface SimulationStabilitySummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  modelVersion: string | null;
+  note: string;
+  scope: SimulationStabilityScope | null;
+  samples: SimulationStabilitySample[];
+  comparisons: SimulationStabilityComparison[];
+  summary: SimulationStabilityResult | null;
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

@@ -5,6 +5,7 @@ from app.schemas.model_diagnostics import (
     ModelCalibrationSummary,
     RatingDecisionAuditSummary,
     RatingReviewWorkbenchSummary,
+    SimulationStabilitySummary,
     SourceProvenanceAuditSummary,
     SquadGapSummary,
     TeamReviewSummary,
@@ -14,6 +15,7 @@ from app.services.model_diagnostics import (
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
+    get_simulation_stability_summary,
     get_source_provenance_audit_summary,
     get_squad_gap_summary,
     get_team_review_summary,
@@ -55,3 +57,8 @@ def get_rating_decision_audit():
 @router.get("/model-calibration", response_model=ModelCalibrationSummary)
 def get_model_calibration():
     return get_model_calibration_summary()
+
+
+@router.get("/simulation-stability", response_model=SimulationStabilitySummary)
+def get_simulation_stability():
+    return get_simulation_stability_summary()

@@ -37,6 +37,7 @@ REQUIRED_REPORT_PATTERNS = (
     "rating_review_workbench_*.json",
     "rating_decision_audit_*.json",
     "source_provenance_audit_*.json",
+    "simulation_stability_audit_*.json",
 )
 
 
