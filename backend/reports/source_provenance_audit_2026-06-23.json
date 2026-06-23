@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T10:55:23.871502+00:00",
+  "generatedAt": "2026-06-23T11:23:55.736655+00:00",
   "note": "能力値レビュー候補の出典リスクを確認する読み取り専用監査です。ゲーム内評価、二次情報、未来・直近大会記述を直接の能力値変更根拠にしないためのゲートです。",
   "sourceReports": [
     {
       "name": "rating_decision_audit",
-      "generatedAt": "2026-06-23T10:50:48.479192+00:00"
+      "generatedAt": "2026-06-23T11:23:55.569442+00:00"
     }
   ],
   "seedSourceSummary": {
@@ -447,11 +447,124 @@
       }
     ]
   },
-  "decisionCandidateCount": 80,
-  "clearLaterProposalCandidateCount": 9,
-  "sourceReviewCandidateCount": 8,
+  "decisionCandidateCount": 64,
+  "clearLaterProposalCandidateCount": 4,
+  "sourceReviewCandidateCount": 13,
   "teamCount": 8,
   "teams": [
+    {
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "candidate_count": 7,
+      "source_risk_candidate_count": 5,
+      "decision_bucket_counts": {
+        "monitor_only": 2,
+        "source_review_first": 5
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": [
+        {
+          "player_id": "JOR_NASIB",
+          "name": "Abdallah Nasib",
+          "primary_position": "RB",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Iraqi Premier League 2025-26 stats (Al-Zawraa)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_BANAWI",
+          "name": "Anas Banawi",
+          "primary_position": "CB",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "monitor_only",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Jordan Pro League 2025-26 stats (Al-Faisaly)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_ABUTAHA",
+          "name": "Mohannad Abu Taha",
+          "primary_position": "LB",
+          "current_overall": 45,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Iraqi Premier League 2025-26 stats (Al-Quwa Al-Jawiya)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_RAWABDEH",
+          "name": "Noor Al-Rawabdeh",
+          "primary_position": "CDM",
+          "current_overall": 42,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Malaysia Super League 2025-26 stats (Selangor)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_ABULAILA",
+          "name": "Yazeed Abulaila",
+          "primary_position": "GK",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Jordan Pro League 2025-26 stats (Al-Hussein)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        }
+      ]
+    },
     {
       "team_id": "MEX",
       "team_name": "Mexico",
@@ -561,6 +674,61 @@
       ]
     },
     {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "candidate_count": 5,
+      "source_risk_candidate_count": 2,
+      "decision_bucket_counts": {
+        "monitor_only": 3,
+        "source_review_first": 2
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": [
+        {
+          "player_id": "BIH_DZEKO",
+          "name": "Edin Dzeko",
+          "primary_position": "ST",
+          "current_overall": 50,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt 2026-06 (e1.5m, age 40)",
+            "Schalke 04 2. Bundesliga 2025-26 stats (6 goals in 11 apps per Transfermarkt)",
+            "Bosnia's all-time record scorer (73 international goals), led WC2026 qualifying campaign"
+          ]
+        },
+        {
+          "player_id": "BIH_BAJRAKTAREVIC",
+          "name": "Esmir Bajraktarevic",
+          "primary_position": "RW",
+          "current_overall": 54,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "Fotmob",
+              "severity": "medium",
+              "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "PSV Eindhoven Eredivisie 2025-26 stats (won league/Super Cup per Fotmob bio)",
+            "Born in Wisconsin, capped by USA youth before switching to Bosnia"
+          ]
+        }
+      ]
+    },
+    {
       "team_id": "CRO",
       "team_name": "Croatia",
       "candidate_count": 10,
@@ -657,177 +825,46 @@
       ]
     },
     {
-      "team_id": "MAR",
-      "team_name": "Morocco",
-      "candidate_count": 10,
-      "source_risk_candidate_count": 2,
-      "decision_bucket_counts": {
-        "candidate_for_later_proposal": 1,
-        "do_not_use_for_upgrade_proposal": 2,
-        "monitor_only": 5,
-        "source_review_first": 2
-      },
-      "clear_later_proposal_candidates": [
-        {
-          "player_id": "MAR_AMRABAT",
-          "name": "Sofyan Amrabat",
-          "primary_position": "CDM",
-          "current_overall": 52,
-          "decision_bucket": "candidate_for_later_proposal",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 0,
-          "risk_flags": [],
-          "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Real Betis La Liga loan 2025-26 stats"
-          ]
-        }
-      ],
-      "source_review_candidates": [
-        {
-          "player_id": "MAR_DIOP",
-          "name": "Issa Diop",
-          "primary_position": "CB",
-          "current_overall": 61,
-          "decision_bucket": "source_review_first",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "risk_score": 6,
-          "risk_flags": [
-            {
-              "marker": "WC2026",
-              "severity": "medium",
-              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
-            },
-            {
-              "marker": "Wikipedia",
-              "severity": "medium",
-              "reason_ja": "Wikipediaは入口情報としては使えますが、能力値変更には一次情報での確認が必要です。"
-            }
-          ],
-          "source_citations": [
-            "Wikipedia -- Issa Diop; Premier League regular at Fulham",
-            "Morocco squad announcement -- FIFA-approved eligibility switch from France (March 26 2026), selected to 26-man squad (May 26 2026)",
-            "hespress.com -- Youssef En-Nesyri confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
-          ]
-        },
-        {
-          "player_id": "MAR_RAHIMI",
-          "name": "Soufiane Rahimi",
-          "primary_position": "ST",
-          "current_overall": 60,
-          "decision_bucket": "source_review_first",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "risk_score": 3,
-          "risk_flags": [
-            {
-              "marker": "WC2026",
-              "severity": "medium",
-              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
-            }
-          ],
-          "source_citations": [
-            "Flashscore -- Al Ain UAE Pro League 2025-26 stats (9 goals/16 matches)",
-            "fifa.com -- AFCON 2025 winner with Morocco",
-            "hespress.com -- Hakim Ziyech confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
-          ]
-        }
-      ]
-    },
-    {
-      "team_id": "ARG",
-      "team_name": "Argentina",
-      "candidate_count": 10,
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "candidate_count": 6,
       "source_risk_candidate_count": 1,
       "decision_bucket_counts": {
-        "candidate_for_later_proposal": 3,
-        "do_not_use_for_upgrade_proposal": 6,
+        "monitor_only": 5,
         "source_review_first": 1
       },
-      "clear_later_proposal_candidates": [
-        {
-          "player_id": "ARG_PAREDES",
-          "name": "Leandro Paredes",
-          "primary_position": "CDM",
-          "current_overall": 45,
-          "decision_bucket": "candidate_for_later_proposal",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 0,
-          "risk_flags": [],
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Boca Juniors 2024-25 season"
-          ]
-        },
-        {
-          "player_id": "ARG_OTAMENDI",
-          "name": "Nicolas Otamendi",
-          "primary_position": "CB",
-          "current_overall": 51,
-          "decision_bucket": "candidate_for_later_proposal",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 0,
-          "risk_flags": [],
-          "source_citations": [
-            "Transfermarkt 2026-06 (age 38)",
-            "Benfica 2025-26 season"
-          ]
-        },
-        {
-          "player_id": "ARG_DEPAUL",
-          "name": "Rodrigo De Paul",
-          "primary_position": "CM",
-          "current_overall": 53,
-          "decision_bucket": "candidate_for_later_proposal",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 0,
-          "risk_flags": [],
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Inter Miami MLS (moved Jan 2026)"
-          ]
-        }
-      ],
+      "clear_later_proposal_candidates": [],
       "source_review_candidates": [
         {
-          "player_id": "ARG_MESSI",
-          "name": "Lionel Messi",
-          "primary_position": "RW",
-          "current_overall": 64,
+          "player_id": "PAR_ENCISO",
+          "name": "Julio Enciso",
+          "primary_position": "CAM",
+          "current_overall": 58,
           "decision_bucket": "source_review_first",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 11,
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 5,
           "risk_flags": [
             {
-              "marker": "Fotmob",
-              "severity": "medium",
-              "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
-            },
-            {
-              "marker": "hat trick",
+              "marker": "FC26",
               "severity": "high",
-              "reason_ja": "単発イベントの記述は能力値更新の根拠として過大評価しやすく、事実確認が必要です。"
-            },
-            {
-              "marker": "WC2026",
-              "severity": "medium",
-              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
             }
           ],
           "source_citations": [
-            "Transfermarkt/Fotmob 2026-06",
-            "Inter Miami 2025 MLS season + WC2026 hat trick vs Algeria",
-            "Age 38 - pace declined, vision/finishing retained"
+            "Transfermarkt profile 2025-26 (eFootball/FC26 attacking rating informed minor nudge)",
+            "Strasbourg Ligue 1 2025-26 stats",
+            "Paraguay's most talented young attacker"
           ]
         }
       ]
     },
     {
-      "team_id": "ESP",
-      "team_name": "Spain",
-      "candidate_count": 10,
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "candidate_count": 6,
       "source_risk_candidate_count": 0,
       "decision_bucket_counts": {
-        "do_not_use_for_upgrade_proposal": 10
+        "monitor_only": 6
       },
       "clear_later_proposal_candidates": [],
       "source_review_candidates": []
@@ -854,35 +891,6 @@
         "monitor_only": 1
       },
       "clear_later_proposal_candidates": [],
-      "source_review_candidates": []
-    },
-    {
-      "team_id": "URU",
-      "team_name": "Uruguay",
-      "candidate_count": 10,
-      "source_risk_candidate_count": 0,
-      "decision_bucket_counts": {
-        "candidate_for_later_proposal": 1,
-        "do_not_use_for_upgrade_proposal": 5,
-        "monitor_only": 4
-      },
-      "clear_later_proposal_candidates": [
-        {
-          "player_id": "URU_MUSLERA",
-          "name": "Fernando Muslera",
-          "primary_position": "GK",
-          "current_overall": 48,
-          "decision_bucket": "candidate_for_later_proposal",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "risk_score": 0,
-          "risk_flags": [],
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Estudiantes Argentine league 2025-26 stats",
-            "Came back from international retirement at 39 for a fifth World Cup"
-          ]
-        }
-      ],
       "source_review_candidates": []
     }
   ],

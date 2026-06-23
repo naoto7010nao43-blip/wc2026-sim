@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-23T07:12:07.050851+00:00",
+  "generatedAt": "2026-06-23T11:23:54.221434+00:00",
   "source": {
     "name": "Simulation Accuracy Audit",
-    "modelVersion": "poisson-v1"
+    "modelVersion": "poisson-v2-rank75"
   },
   "note": "Read-only audit derived from local seed/team data and the current Poisson prediction model. Does not change any simulation behavior or seed data.",
   "baseSeed": 42,
@@ -103,45 +103,45 @@
       "highest": [
         {
           "team_id": "ARG",
-          "strength": 81.4
+          "strength": 86.5
         },
         {
           "team_id": "ESP",
-          "strength": 81.4
+          "strength": 85.3
         },
         {
           "team_id": "FRA",
-          "strength": 80.8
+          "strength": 83.9
         },
         {
           "team_id": "ENG",
-          "strength": 78.0
+          "strength": 81.4
         },
         {
           "team_id": "POR",
-          "strength": 77.0
+          "strength": 80.0
         }
       ],
       "lowest": [
         {
           "team_id": "NZL",
-          "strength": 39.9
+          "strength": 38.1
         },
         {
           "team_id": "CUW",
-          "strength": 39.9
+          "strength": 38.1
         },
         {
           "team_id": "HAI",
-          "strength": 41.1
+          "strength": 38.8
         },
         {
           "team_id": "CPV",
-          "strength": 41.2
+          "strength": 39.3
         },
         {
-          "team_id": "JOR",
-          "strength": 42.5
+          "team_id": "GHA",
+          "strength": 40.0
         }
       ]
     }
@@ -153,11 +153,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 2,
       "rank_gap": 1,
-      "home_win_pct": 39.5,
+      "home_win_pct": 40.4,
       "draw_pct": 25.4,
-      "away_win_pct": 35.1,
-      "home_expected_goals": 1.43,
-      "away_expected_goals": 1.34
+      "away_win_pct": 34.2,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32
     },
     {
       "home_team_id": "ARG",
@@ -165,11 +165,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 3,
       "rank_gap": 2,
-      "home_win_pct": 32.2,
-      "draw_pct": 25.2,
-      "away_win_pct": 42.6,
-      "home_expected_goals": 1.27,
-      "away_expected_goals": 1.5
+      "home_win_pct": 33.6,
+      "draw_pct": 25.3,
+      "away_win_pct": 41.0,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.47
     },
     {
       "home_team_id": "ARG",
@@ -177,11 +177,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 4,
       "rank_gap": 3,
-      "home_win_pct": 40.6,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.1,
-      "home_expected_goals": 1.46,
-      "away_expected_goals": 1.31
+      "home_win_pct": 41.9,
+      "draw_pct": 25.3,
+      "away_win_pct": 32.8,
+      "home_expected_goals": 1.49,
+      "away_expected_goals": 1.29
     },
     {
       "home_team_id": "ARG",
@@ -189,11 +189,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 5,
       "rank_gap": 4,
-      "home_win_pct": 46.1,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.1,
-      "home_expected_goals": 1.58,
-      "away_expected_goals": 1.21
+      "home_win_pct": 47.7,
+      "draw_pct": 24.6,
+      "away_win_pct": 27.7,
+      "home_expected_goals": 1.62,
+      "away_expected_goals": 1.18
     },
     {
       "home_team_id": "ARG",
@@ -201,11 +201,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 6,
       "rank_gap": 5,
-      "home_win_pct": 40.2,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.4,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32
+      "home_win_pct": 42.3,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.5,
+      "home_expected_goals": 1.5,
+      "away_expected_goals": 1.28
     },
     {
       "home_team_id": "ARG",
@@ -213,11 +213,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 7,
       "rank_gap": 6,
-      "home_win_pct": 51.6,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.6,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11
+      "home_win_pct": 53.4,
+      "draw_pct": 23.4,
+      "away_win_pct": 23.2,
+      "home_expected_goals": 1.77,
+      "away_expected_goals": 1.08
     },
     {
       "home_team_id": "ARG",
@@ -225,11 +225,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 8,
       "rank_gap": 7,
-      "home_win_pct": 48.3,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.2,
-      "home_expected_goals": 1.64,
-      "away_expected_goals": 1.17
+      "home_win_pct": 50.0,
+      "draw_pct": 24.1,
+      "away_win_pct": 25.8,
+      "home_expected_goals": 1.68,
+      "away_expected_goals": 1.14
     },
     {
       "home_team_id": "ARG",
@@ -237,11 +237,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 9,
       "rank_gap": 8,
-      "home_win_pct": 48.6,
-      "draw_pct": 24.4,
-      "away_win_pct": 27.0,
-      "home_expected_goals": 1.65,
-      "away_expected_goals": 1.16
+      "home_win_pct": 50.5,
+      "draw_pct": 24.0,
+      "away_win_pct": 25.4,
+      "home_expected_goals": 1.69,
+      "away_expected_goals": 1.13
     },
     {
       "home_team_id": "ARG",
@@ -249,11 +249,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 10,
       "rank_gap": 9,
-      "home_win_pct": 43.0,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.8,
-      "home_expected_goals": 1.51,
-      "away_expected_goals": 1.27
+      "home_win_pct": 45.4,
+      "draw_pct": 24.9,
+      "away_win_pct": 29.7,
+      "home_expected_goals": 1.57,
+      "away_expected_goals": 1.22
     },
     {
       "home_team_id": "ARG",
@@ -261,11 +261,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 10,
       "rank_gap": 9,
-      "home_win_pct": 59.9,
-      "draw_pct": 21.6,
-      "away_win_pct": 18.5,
-      "home_expected_goals": 1.95,
-      "away_expected_goals": 0.98
+      "home_win_pct": 61.5,
+      "draw_pct": 21.1,
+      "away_win_pct": 17.4,
+      "home_expected_goals": 2.0,
+      "away_expected_goals": 0.96
     },
     {
       "home_team_id": "ARG",
@@ -273,11 +273,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 14,
       "rank_gap": 13,
-      "home_win_pct": 57.7,
-      "draw_pct": 22.3,
-      "away_win_pct": 20.1,
-      "home_expected_goals": 1.88,
-      "away_expected_goals": 1.02
+      "home_win_pct": 59.7,
+      "draw_pct": 21.7,
+      "away_win_pct": 18.6,
+      "home_expected_goals": 1.94,
+      "away_expected_goals": 0.99
     },
     {
       "home_team_id": "ARG",
@@ -285,11 +285,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 14,
       "rank_gap": 13,
-      "home_win_pct": 56.0,
-      "draw_pct": 22.8,
-      "away_win_pct": 21.3,
-      "home_expected_goals": 1.84,
-      "away_expected_goals": 1.04
+      "home_win_pct": 58.4,
+      "draw_pct": 22.1,
+      "away_win_pct": 19.5,
+      "home_expected_goals": 1.91,
+      "away_expected_goals": 1.01
     },
     {
       "home_team_id": "ARG",
@@ -297,11 +297,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 14,
       "rank_gap": 13,
-      "home_win_pct": 49.9,
-      "draw_pct": 24.2,
-      "away_win_pct": 25.9,
-      "home_expected_goals": 1.68,
-      "away_expected_goals": 1.14
+      "home_win_pct": 52.0,
+      "draw_pct": 23.7,
+      "away_win_pct": 24.3,
+      "home_expected_goals": 1.73,
+      "away_expected_goals": 1.11
     },
     {
       "home_team_id": "ARG",
@@ -309,15 +309,27 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 17,
       "rank_gap": 16,
-      "home_win_pct": 56.0,
-      "draw_pct": 22.8,
-      "away_win_pct": 21.3,
-      "home_expected_goals": 1.84,
-      "away_expected_goals": 1.04
+      "home_win_pct": 58.8,
+      "draw_pct": 21.9,
+      "away_win_pct": 19.2,
+      "home_expected_goals": 1.92,
+      "away_expected_goals": 1.0
     },
     {
       "home_team_id": "ARG",
       "away_team_id": "JPN",
+      "home_fifa_rank": 1,
+      "away_fifa_rank": 18,
+      "rank_gap": 17,
+      "home_win_pct": 57.3,
+      "draw_pct": 22.4,
+      "away_win_pct": 20.3,
+      "home_expected_goals": 1.88,
+      "away_expected_goals": 1.02
+    },
+    {
+      "home_team_id": "ARG",
+      "away_team_id": "SEN",
       "home_fifa_rank": 1,
       "away_fifa_rank": 18,
       "rank_gap": 17,
@@ -329,27 +341,15 @@
     },
     {
       "home_team_id": "ARG",
-      "away_team_id": "SEN",
-      "home_fifa_rank": 1,
-      "away_fifa_rank": 18,
-      "rank_gap": 17,
-      "home_win_pct": 51.5,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.6,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11
-    },
-    {
-      "home_team_id": "ARG",
       "away_team_id": "SUI",
       "home_fifa_rank": 1,
       "away_fifa_rank": 19,
       "rank_gap": 18,
-      "home_win_pct": 59.0,
-      "draw_pct": 21.9,
-      "away_win_pct": 19.1,
-      "home_expected_goals": 1.92,
-      "away_expected_goals": 1.0
+      "home_win_pct": 61.8,
+      "draw_pct": 21.0,
+      "away_win_pct": 17.2,
+      "home_expected_goals": 2.01,
+      "away_expected_goals": 0.95
     },
     {
       "home_team_id": "ARG",
@@ -357,11 +357,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 20,
       "rank_gap": 19,
-      "home_win_pct": 61.0,
-      "draw_pct": 21.3,
-      "away_win_pct": 17.8,
-      "home_expected_goals": 1.98,
-      "away_expected_goals": 0.97
+      "home_win_pct": 62.7,
+      "draw_pct": 20.7,
+      "away_win_pct": 16.6,
+      "home_expected_goals": 2.04,
+      "away_expected_goals": 0.94
     },
     {
       "home_team_id": "ARG",
@@ -369,11 +369,11 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 22,
       "rank_gap": 21,
-      "home_win_pct": 59.1,
-      "draw_pct": 21.9,
-      "away_win_pct": 19.1,
-      "home_expected_goals": 1.93,
-      "away_expected_goals": 1.0
+      "home_win_pct": 62.4,
+      "draw_pct": 20.8,
+      "away_win_pct": 16.8,
+      "home_expected_goals": 2.03,
+      "away_expected_goals": 0.95
     },
     {
       "home_team_id": "ESP",
@@ -381,11 +381,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 3,
       "rank_gap": 1,
-      "home_win_pct": 31.6,
+      "home_win_pct": 32.2,
       "draw_pct": 25.2,
-      "away_win_pct": 43.2,
-      "home_expected_goals": 1.26,
-      "away_expected_goals": 1.52
+      "away_win_pct": 42.6,
+      "home_expected_goals": 1.27,
+      "away_expected_goals": 1.5
     },
     {
       "home_team_id": "ESP",
@@ -393,11 +393,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 4,
       "rank_gap": 2,
-      "home_win_pct": 39.9,
+      "home_win_pct": 40.3,
       "draw_pct": 25.4,
-      "away_win_pct": 34.7,
-      "home_expected_goals": 1.44,
-      "away_expected_goals": 1.33
+      "away_win_pct": 34.3,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32
     },
     {
       "home_team_id": "ESP",
@@ -405,11 +405,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 5,
       "rank_gap": 3,
-      "home_win_pct": 45.4,
-      "draw_pct": 24.9,
-      "away_win_pct": 29.7,
-      "home_expected_goals": 1.57,
-      "away_expected_goals": 1.22
+      "home_win_pct": 46.1,
+      "draw_pct": 24.8,
+      "away_win_pct": 29.1,
+      "home_expected_goals": 1.58,
+      "away_expected_goals": 1.21
     },
     {
       "home_team_id": "ESP",
@@ -417,11 +417,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 6,
       "rank_gap": 4,
-      "home_win_pct": 39.6,
-      "draw_pct": 25.4,
-      "away_win_pct": 35.0,
-      "home_expected_goals": 1.44,
-      "away_expected_goals": 1.33
+      "home_win_pct": 40.7,
+      "draw_pct": 25.3,
+      "away_win_pct": 34.0,
+      "home_expected_goals": 1.46,
+      "away_expected_goals": 1.31
     },
     {
       "home_team_id": "ESP",
@@ -429,11 +429,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 7,
       "rank_gap": 5,
-      "home_win_pct": 50.9,
-      "draw_pct": 24.0,
-      "away_win_pct": 25.1,
-      "home_expected_goals": 1.7,
-      "away_expected_goals": 1.12
+      "home_win_pct": 51.7,
+      "draw_pct": 23.8,
+      "away_win_pct": 24.5,
+      "home_expected_goals": 1.72,
+      "away_expected_goals": 1.11
     },
     {
       "home_team_id": "ESP",
@@ -441,11 +441,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 8,
       "rank_gap": 6,
-      "home_win_pct": 47.7,
-      "draw_pct": 24.6,
-      "away_win_pct": 27.8,
-      "home_expected_goals": 1.62,
-      "away_expected_goals": 1.18
+      "home_win_pct": 48.4,
+      "draw_pct": 24.4,
+      "away_win_pct": 27.2,
+      "home_expected_goals": 1.64,
+      "away_expected_goals": 1.17
     },
     {
       "home_team_id": "ESP",
@@ -453,11 +453,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 9,
       "rank_gap": 7,
-      "home_win_pct": 48.0,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.5,
-      "home_expected_goals": 1.63,
-      "away_expected_goals": 1.17
+      "home_win_pct": 48.9,
+      "draw_pct": 24.4,
+      "away_win_pct": 26.8,
+      "home_expected_goals": 1.65,
+      "away_expected_goals": 1.16
     },
     {
       "home_team_id": "ESP",
@@ -465,11 +465,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 10,
       "rank_gap": 8,
-      "home_win_pct": 42.4,
-      "draw_pct": 25.2,
-      "away_win_pct": 32.4,
-      "home_expected_goals": 1.5,
-      "away_expected_goals": 1.28
+      "home_win_pct": 43.8,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.1,
+      "home_expected_goals": 1.53,
+      "away_expected_goals": 1.25
     },
     {
       "home_team_id": "ESP",
@@ -477,11 +477,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 10,
       "rank_gap": 8,
-      "home_win_pct": 59.3,
-      "draw_pct": 21.8,
-      "away_win_pct": 18.9,
-      "home_expected_goals": 1.93,
-      "away_expected_goals": 0.99
+      "home_win_pct": 59.9,
+      "draw_pct": 21.6,
+      "away_win_pct": 18.5,
+      "home_expected_goals": 1.95,
+      "away_expected_goals": 0.98
     },
     {
       "home_team_id": "ESP",
@@ -489,11 +489,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 14,
       "rank_gap": 12,
-      "home_win_pct": 57.0,
-      "draw_pct": 22.5,
-      "away_win_pct": 20.5,
-      "home_expected_goals": 1.87,
-      "away_expected_goals": 1.03
+      "home_win_pct": 58.1,
+      "draw_pct": 22.2,
+      "away_win_pct": 19.7,
+      "home_expected_goals": 1.9,
+      "away_expected_goals": 1.01
     },
     {
       "home_team_id": "ESP",
@@ -501,11 +501,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 14,
       "rank_gap": 12,
-      "home_win_pct": 55.3,
-      "draw_pct": 22.9,
-      "away_win_pct": 21.8,
-      "home_expected_goals": 1.82,
-      "away_expected_goals": 1.05
+      "home_win_pct": 56.8,
+      "draw_pct": 22.5,
+      "away_win_pct": 20.7,
+      "home_expected_goals": 1.86,
+      "away_expected_goals": 1.03
     },
     {
       "home_team_id": "ESP",
@@ -513,11 +513,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 14,
       "rank_gap": 12,
-      "home_win_pct": 49.2,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.5,
-      "home_expected_goals": 1.66,
-      "away_expected_goals": 1.15
+      "home_win_pct": 50.4,
+      "draw_pct": 24.1,
+      "away_win_pct": 25.6,
+      "home_expected_goals": 1.69,
+      "away_expected_goals": 1.13
     },
     {
       "home_team_id": "ESP",
@@ -525,11 +525,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 17,
       "rank_gap": 15,
-      "home_win_pct": 55.3,
-      "draw_pct": 22.9,
-      "away_win_pct": 21.8,
-      "home_expected_goals": 1.82,
-      "away_expected_goals": 1.05
+      "home_win_pct": 57.2,
+      "draw_pct": 22.4,
+      "away_win_pct": 20.4,
+      "home_expected_goals": 1.87,
+      "away_expected_goals": 1.02
     },
     {
       "home_team_id": "ESP",
@@ -537,11 +537,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 18,
       "rank_gap": 16,
-      "home_win_pct": 54.0,
-      "draw_pct": 23.3,
-      "away_win_pct": 22.7,
-      "home_expected_goals": 1.79,
-      "away_expected_goals": 1.07
+      "home_win_pct": 55.7,
+      "draw_pct": 22.8,
+      "away_win_pct": 21.5,
+      "home_expected_goals": 1.83,
+      "away_expected_goals": 1.05
     },
     {
       "home_team_id": "ESP",
@@ -549,11 +549,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 18,
       "rank_gap": 16,
-      "home_win_pct": 50.9,
-      "draw_pct": 24.0,
-      "away_win_pct": 25.1,
-      "home_expected_goals": 1.7,
-      "away_expected_goals": 1.13
+      "home_win_pct": 53.0,
+      "draw_pct": 23.5,
+      "away_win_pct": 23.5,
+      "home_expected_goals": 1.76,
+      "away_expected_goals": 1.09
     },
     {
       "home_team_id": "ESP",
@@ -561,11 +561,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 19,
       "rank_gap": 17,
-      "home_win_pct": 58.4,
-      "draw_pct": 22.1,
-      "away_win_pct": 19.5,
-      "home_expected_goals": 1.91,
-      "away_expected_goals": 1.01
+      "home_win_pct": 60.2,
+      "draw_pct": 21.5,
+      "away_win_pct": 18.3,
+      "home_expected_goals": 1.96,
+      "away_expected_goals": 0.98
     },
     {
       "home_team_id": "ESP",
@@ -573,11 +573,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 20,
       "rank_gap": 18,
-      "home_win_pct": 60.3,
-      "draw_pct": 21.5,
-      "away_win_pct": 18.2,
-      "home_expected_goals": 1.96,
-      "away_expected_goals": 0.98
+      "home_win_pct": 61.1,
+      "draw_pct": 21.2,
+      "away_win_pct": 17.7,
+      "home_expected_goals": 1.99,
+      "away_expected_goals": 0.96
     },
     {
       "home_team_id": "ESP",
@@ -585,11 +585,11 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 22,
       "rank_gap": 20,
-      "home_win_pct": 58.4,
-      "draw_pct": 22.1,
-      "away_win_pct": 19.5,
-      "home_expected_goals": 1.91,
-      "away_expected_goals": 1.01
+      "home_win_pct": 60.8,
+      "draw_pct": 21.3,
+      "away_win_pct": 17.9,
+      "home_expected_goals": 1.98,
+      "away_expected_goals": 0.97
     },
     {
       "home_team_id": "FRA",
@@ -597,9 +597,9 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 4,
       "rank_gap": 1,
-      "home_win_pct": 47.6,
+      "home_win_pct": 47.4,
       "draw_pct": 24.6,
-      "away_win_pct": 27.8,
+      "away_win_pct": 28.0,
       "home_expected_goals": 1.62,
       "away_expected_goals": 1.18
     },
@@ -609,10 +609,10 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 5,
       "rank_gap": 2,
-      "home_win_pct": 53.2,
-      "draw_pct": 23.5,
+      "home_win_pct": 53.3,
+      "draw_pct": 23.4,
       "away_win_pct": 23.3,
-      "home_expected_goals": 1.76,
+      "home_expected_goals": 1.77,
       "away_expected_goals": 1.09
     },
     {
@@ -621,11 +621,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 6,
       "rank_gap": 3,
-      "home_win_pct": 47.3,
-      "draw_pct": 24.6,
-      "away_win_pct": 28.1,
-      "home_expected_goals": 1.61,
-      "away_expected_goals": 1.19
+      "home_win_pct": 47.8,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.7,
+      "home_expected_goals": 1.63,
+      "away_expected_goals": 1.18
     },
     {
       "home_team_id": "FRA",
@@ -633,10 +633,10 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 7,
       "rank_gap": 4,
-      "home_win_pct": 58.7,
-      "draw_pct": 22.0,
-      "away_win_pct": 19.3,
-      "home_expected_goals": 1.91,
+      "home_win_pct": 58.9,
+      "draw_pct": 21.9,
+      "away_win_pct": 19.2,
+      "home_expected_goals": 1.92,
       "away_expected_goals": 1.0
     },
     {
@@ -645,10 +645,10 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 8,
       "rank_gap": 5,
-      "home_win_pct": 55.5,
-      "draw_pct": 22.9,
-      "away_win_pct": 21.6,
-      "home_expected_goals": 1.82,
+      "home_win_pct": 55.6,
+      "draw_pct": 22.8,
+      "away_win_pct": 21.5,
+      "home_expected_goals": 1.83,
       "away_expected_goals": 1.05
     },
     {
@@ -657,10 +657,10 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 9,
       "rank_gap": 6,
-      "home_win_pct": 55.8,
-      "draw_pct": 22.8,
-      "away_win_pct": 21.4,
-      "home_expected_goals": 1.83,
+      "home_win_pct": 56.1,
+      "draw_pct": 22.7,
+      "away_win_pct": 21.2,
+      "home_expected_goals": 1.84,
       "away_expected_goals": 1.04
     },
     {
@@ -669,11 +669,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 10,
       "rank_gap": 7,
-      "home_win_pct": 50.2,
-      "draw_pct": 24.1,
-      "away_win_pct": 25.7,
-      "home_expected_goals": 1.69,
-      "away_expected_goals": 1.14
+      "home_win_pct": 51.0,
+      "draw_pct": 23.9,
+      "away_win_pct": 25.0,
+      "home_expected_goals": 1.71,
+      "away_expected_goals": 1.12
     },
     {
       "home_team_id": "FRA",
@@ -682,8 +682,8 @@
       "away_fifa_rank": 10,
       "rank_gap": 7,
       "home_win_pct": 66.8,
-      "draw_pct": 19.2,
-      "away_win_pct": 14.1,
+      "draw_pct": 19.1,
+      "away_win_pct": 14.0,
       "home_expected_goals": 2.17,
       "away_expected_goals": 0.88
     },
@@ -693,10 +693,10 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 14,
       "rank_gap": 11,
-      "home_win_pct": 64.6,
-      "draw_pct": 20.0,
-      "away_win_pct": 15.4,
-      "home_expected_goals": 2.1,
+      "home_win_pct": 65.1,
+      "draw_pct": 19.8,
+      "away_win_pct": 15.1,
+      "home_expected_goals": 2.11,
       "away_expected_goals": 0.91
     },
     {
@@ -705,11 +705,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 14,
       "rank_gap": 11,
-      "home_win_pct": 63.0,
-      "draw_pct": 20.6,
-      "away_win_pct": 16.4,
-      "home_expected_goals": 2.05,
-      "away_expected_goals": 0.94
+      "home_win_pct": 63.9,
+      "draw_pct": 20.3,
+      "away_win_pct": 15.9,
+      "home_expected_goals": 2.07,
+      "away_expected_goals": 0.92
     },
     {
       "home_team_id": "FRA",
@@ -717,11 +717,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 14,
       "rank_gap": 11,
-      "home_win_pct": 57.1,
-      "draw_pct": 22.5,
-      "away_win_pct": 20.5,
-      "home_expected_goals": 1.87,
-      "away_expected_goals": 1.03
+      "home_win_pct": 57.6,
+      "draw_pct": 22.3,
+      "away_win_pct": 20.1,
+      "home_expected_goals": 1.88,
+      "away_expected_goals": 1.02
     },
     {
       "home_team_id": "FRA",
@@ -729,11 +729,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 17,
       "rank_gap": 14,
-      "home_win_pct": 63.0,
-      "draw_pct": 20.6,
-      "away_win_pct": 16.4,
-      "home_expected_goals": 2.04,
-      "away_expected_goals": 0.94
+      "home_win_pct": 64.3,
+      "draw_pct": 20.1,
+      "away_win_pct": 15.6,
+      "home_expected_goals": 2.09,
+      "away_expected_goals": 0.92
     },
     {
       "home_team_id": "FRA",
@@ -741,11 +741,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 18,
       "rank_gap": 15,
-      "home_win_pct": 61.8,
-      "draw_pct": 21.0,
-      "away_win_pct": 17.2,
-      "home_expected_goals": 2.01,
-      "away_expected_goals": 0.95
+      "home_win_pct": 62.8,
+      "draw_pct": 20.6,
+      "away_win_pct": 16.5,
+      "home_expected_goals": 2.04,
+      "away_expected_goals": 0.94
     },
     {
       "home_team_id": "FRA",
@@ -753,11 +753,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 18,
       "rank_gap": 15,
-      "home_win_pct": 58.7,
-      "draw_pct": 22.0,
-      "away_win_pct": 19.3,
-      "home_expected_goals": 1.91,
-      "away_expected_goals": 1.0
+      "home_win_pct": 60.2,
+      "draw_pct": 21.5,
+      "away_win_pct": 18.3,
+      "home_expected_goals": 1.96,
+      "away_expected_goals": 0.98
     },
     {
       "home_team_id": "FRA",
@@ -765,11 +765,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 19,
       "rank_gap": 16,
-      "home_win_pct": 66.0,
-      "draw_pct": 19.5,
-      "away_win_pct": 14.6,
-      "home_expected_goals": 2.14,
-      "away_expected_goals": 0.89
+      "home_win_pct": 67.1,
+      "draw_pct": 19.0,
+      "away_win_pct": 13.9,
+      "home_expected_goals": 2.18,
+      "away_expected_goals": 0.88
     },
     {
       "home_team_id": "FRA",
@@ -777,9 +777,9 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 20,
       "rank_gap": 17,
-      "home_win_pct": 67.8,
+      "home_win_pct": 68.0,
       "draw_pct": 18.7,
-      "away_win_pct": 13.5,
+      "away_win_pct": 13.3,
       "home_expected_goals": 2.21,
       "away_expected_goals": 0.87
     },
@@ -789,11 +789,11 @@
       "home_fifa_rank": 3,
       "away_fifa_rank": 22,
       "rank_gap": 19,
-      "home_win_pct": 66.0,
-      "draw_pct": 19.5,
-      "away_win_pct": 14.5,
-      "home_expected_goals": 2.14,
-      "away_expected_goals": 0.89
+      "home_win_pct": 67.7,
+      "draw_pct": 18.8,
+      "away_win_pct": 13.5,
+      "home_expected_goals": 2.2,
+      "away_expected_goals": 0.87
     },
     {
       "home_team_id": "ENG",
@@ -801,10 +801,10 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 5,
       "rank_gap": 1,
-      "home_win_pct": 44.3,
+      "home_win_pct": 44.6,
       "draw_pct": 25.0,
-      "away_win_pct": 30.6,
-      "home_expected_goals": 1.54,
+      "away_win_pct": 30.4,
+      "home_expected_goals": 1.55,
       "away_expected_goals": 1.24
     },
     {
@@ -813,11 +813,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 6,
       "rank_gap": 2,
-      "home_win_pct": 38.6,
+      "home_win_pct": 39.2,
       "draw_pct": 25.4,
-      "away_win_pct": 36.0,
-      "home_expected_goals": 1.41,
-      "away_expected_goals": 1.36
+      "away_win_pct": 35.4,
+      "home_expected_goals": 1.43,
+      "away_expected_goals": 1.34
     },
     {
       "home_team_id": "ENG",
@@ -825,10 +825,10 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 7,
       "rank_gap": 3,
-      "home_win_pct": 49.8,
-      "draw_pct": 24.2,
-      "away_win_pct": 26.0,
-      "home_expected_goals": 1.68,
+      "home_win_pct": 50.2,
+      "draw_pct": 24.1,
+      "away_win_pct": 25.7,
+      "home_expected_goals": 1.69,
       "away_expected_goals": 1.14
     },
     {
@@ -837,18 +837,6 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 8,
       "rank_gap": 4,
-      "home_win_pct": 46.6,
-      "draw_pct": 24.7,
-      "away_win_pct": 28.7,
-      "home_expected_goals": 1.6,
-      "away_expected_goals": 1.2
-    },
-    {
-      "home_team_id": "ENG",
-      "away_team_id": "BEL",
-      "home_fifa_rank": 4,
-      "away_fifa_rank": 9,
-      "rank_gap": 5,
       "home_win_pct": 46.9,
       "draw_pct": 24.7,
       "away_win_pct": 28.4,
@@ -857,15 +845,27 @@
     },
     {
       "home_team_id": "ENG",
+      "away_team_id": "BEL",
+      "home_fifa_rank": 4,
+      "away_fifa_rank": 9,
+      "rank_gap": 5,
+      "home_win_pct": 47.4,
+      "draw_pct": 24.6,
+      "away_win_pct": 28.0,
+      "home_expected_goals": 1.62,
+      "away_expected_goals": 1.19
+    },
+    {
+      "home_team_id": "ENG",
       "away_team_id": "GER",
       "home_fifa_rank": 4,
       "away_fifa_rank": 10,
       "rank_gap": 6,
-      "home_win_pct": 41.3,
-      "draw_pct": 25.3,
-      "away_win_pct": 33.4,
-      "home_expected_goals": 1.47,
-      "away_expected_goals": 1.3
+      "home_win_pct": 42.3,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.4,
+      "home_expected_goals": 1.5,
+      "away_expected_goals": 1.28
     },
     {
       "home_team_id": "ENG",
@@ -873,10 +873,10 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 10,
       "rank_gap": 6,
-      "home_win_pct": 58.2,
+      "home_win_pct": 58.4,
       "draw_pct": 22.1,
-      "away_win_pct": 19.7,
-      "home_expected_goals": 1.9,
+      "away_win_pct": 19.5,
+      "home_expected_goals": 1.91,
       "away_expected_goals": 1.01
     },
     {
@@ -885,11 +885,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 14,
       "rank_gap": 10,
-      "home_win_pct": 55.9,
-      "draw_pct": 22.8,
-      "away_win_pct": 21.3,
-      "home_expected_goals": 1.84,
-      "away_expected_goals": 1.04
+      "home_win_pct": 56.6,
+      "draw_pct": 22.6,
+      "away_win_pct": 20.8,
+      "home_expected_goals": 1.86,
+      "away_expected_goals": 1.03
     },
     {
       "home_team_id": "ENG",
@@ -897,11 +897,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 14,
       "rank_gap": 10,
-      "home_win_pct": 54.2,
-      "draw_pct": 23.2,
-      "away_win_pct": 22.6,
-      "home_expected_goals": 1.79,
-      "away_expected_goals": 1.07
+      "home_win_pct": 55.3,
+      "draw_pct": 22.9,
+      "away_win_pct": 21.8,
+      "home_expected_goals": 1.82,
+      "away_expected_goals": 1.05
     },
     {
       "home_team_id": "ENG",
@@ -909,11 +909,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 14,
       "rank_gap": 10,
-      "home_win_pct": 48.1,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.4,
-      "home_expected_goals": 1.63,
-      "away_expected_goals": 1.17
+      "home_win_pct": 48.9,
+      "draw_pct": 24.4,
+      "away_win_pct": 26.8,
+      "home_expected_goals": 1.65,
+      "away_expected_goals": 1.16
     },
     {
       "home_team_id": "ENG",
@@ -921,6 +921,18 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 17,
       "rank_gap": 13,
+      "home_win_pct": 55.7,
+      "draw_pct": 22.8,
+      "away_win_pct": 21.5,
+      "home_expected_goals": 1.83,
+      "away_expected_goals": 1.05
+    },
+    {
+      "home_team_id": "ENG",
+      "away_team_id": "JPN",
+      "home_fifa_rank": 4,
+      "away_fifa_rank": 18,
+      "rank_gap": 14,
       "home_win_pct": 54.2,
       "draw_pct": 23.2,
       "away_win_pct": 22.6,
@@ -929,27 +941,15 @@
     },
     {
       "home_team_id": "ENG",
-      "away_team_id": "JPN",
-      "home_fifa_rank": 4,
-      "away_fifa_rank": 18,
-      "rank_gap": 14,
-      "home_win_pct": 52.9,
-      "draw_pct": 23.5,
-      "away_win_pct": 23.5,
-      "home_expected_goals": 1.76,
-      "away_expected_goals": 1.09
-    },
-    {
-      "home_team_id": "ENG",
       "away_team_id": "SEN",
       "home_fifa_rank": 4,
       "away_fifa_rank": 18,
       "rank_gap": 14,
-      "home_win_pct": 49.8,
-      "draw_pct": 24.2,
-      "away_win_pct": 26.0,
-      "home_expected_goals": 1.67,
-      "away_expected_goals": 1.14
+      "home_win_pct": 51.5,
+      "draw_pct": 23.8,
+      "away_win_pct": 24.6,
+      "home_expected_goals": 1.72,
+      "away_expected_goals": 1.11
     },
     {
       "home_team_id": "ENG",
@@ -957,11 +957,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 19,
       "rank_gap": 15,
-      "home_win_pct": 57.3,
-      "draw_pct": 22.4,
-      "away_win_pct": 20.3,
-      "home_expected_goals": 1.87,
-      "away_expected_goals": 1.02
+      "home_win_pct": 58.7,
+      "draw_pct": 22.0,
+      "away_win_pct": 19.3,
+      "home_expected_goals": 1.91,
+      "away_expected_goals": 1.0
     },
     {
       "home_team_id": "ENG",
@@ -969,10 +969,10 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 20,
       "rank_gap": 16,
-      "home_win_pct": 59.2,
-      "draw_pct": 21.8,
-      "away_win_pct": 19.0,
-      "home_expected_goals": 1.93,
+      "home_win_pct": 59.7,
+      "draw_pct": 21.7,
+      "away_win_pct": 18.7,
+      "home_expected_goals": 1.94,
       "away_expected_goals": 0.99
     },
     {
@@ -981,11 +981,11 @@
       "home_fifa_rank": 4,
       "away_fifa_rank": 22,
       "rank_gap": 18,
-      "home_win_pct": 57.3,
-      "draw_pct": 22.4,
-      "away_win_pct": 20.3,
-      "home_expected_goals": 1.88,
-      "away_expected_goals": 1.02
+      "home_win_pct": 59.3,
+      "draw_pct": 21.8,
+      "away_win_pct": 18.9,
+      "home_expected_goals": 1.93,
+      "away_expected_goals": 0.99
     },
     {
       "home_team_id": "POR",
@@ -993,11 +993,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 6,
       "rank_gap": 1,
-      "home_win_pct": 33.3,
+      "home_win_pct": 33.7,
       "draw_pct": 25.3,
-      "away_win_pct": 41.4,
-      "home_expected_goals": 1.3,
-      "away_expected_goals": 1.48
+      "away_win_pct": 40.9,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.47
     },
     {
       "home_team_id": "POR",
@@ -1005,9 +1005,9 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 7,
       "rank_gap": 2,
-      "home_win_pct": 44.2,
+      "home_win_pct": 44.4,
       "draw_pct": 25.0,
-      "away_win_pct": 30.8,
+      "away_win_pct": 30.6,
       "home_expected_goals": 1.54,
       "away_expected_goals": 1.24
     },
@@ -1017,7 +1017,7 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 8,
       "rank_gap": 3,
-      "home_win_pct": 41.0,
+      "home_win_pct": 41.1,
       "draw_pct": 25.3,
       "away_win_pct": 33.6,
       "home_expected_goals": 1.47,
@@ -1029,11 +1029,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 9,
       "rank_gap": 4,
-      "home_win_pct": 41.4,
+      "home_win_pct": 41.6,
       "draw_pct": 25.3,
-      "away_win_pct": 33.3,
+      "away_win_pct": 33.1,
       "home_expected_goals": 1.48,
-      "away_expected_goals": 1.3
+      "away_expected_goals": 1.29
     },
     {
       "home_team_id": "POR",
@@ -1041,11 +1041,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 10,
       "rank_gap": 5,
-      "home_win_pct": 36.0,
+      "home_win_pct": 36.7,
       "draw_pct": 25.4,
-      "away_win_pct": 38.6,
-      "home_expected_goals": 1.36,
-      "away_expected_goals": 1.41
+      "away_win_pct": 37.9,
+      "home_expected_goals": 1.37,
+      "away_expected_goals": 1.4
     },
     {
       "home_team_id": "POR",
@@ -1065,11 +1065,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 14,
       "rank_gap": 9,
-      "home_win_pct": 50.3,
-      "draw_pct": 24.1,
-      "away_win_pct": 25.6,
-      "home_expected_goals": 1.69,
-      "away_expected_goals": 1.14
+      "home_win_pct": 50.7,
+      "draw_pct": 24.0,
+      "away_win_pct": 25.3,
+      "home_expected_goals": 1.7,
+      "away_expected_goals": 1.13
     },
     {
       "home_team_id": "POR",
@@ -1077,11 +1077,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 14,
       "rank_gap": 9,
-      "home_win_pct": 48.6,
-      "draw_pct": 24.4,
-      "away_win_pct": 27.0,
-      "home_expected_goals": 1.65,
-      "away_expected_goals": 1.16
+      "home_win_pct": 49.4,
+      "draw_pct": 24.3,
+      "away_win_pct": 26.3,
+      "home_expected_goals": 1.67,
+      "away_expected_goals": 1.15
     },
     {
       "home_team_id": "POR",
@@ -1089,10 +1089,10 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 14,
       "rank_gap": 9,
-      "home_win_pct": 42.6,
+      "home_win_pct": 43.0,
       "draw_pct": 25.2,
-      "away_win_pct": 32.2,
-      "home_expected_goals": 1.5,
+      "away_win_pct": 31.8,
+      "home_expected_goals": 1.51,
       "away_expected_goals": 1.27
     },
     {
@@ -1101,11 +1101,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 17,
       "rank_gap": 12,
-      "home_win_pct": 48.6,
-      "draw_pct": 24.4,
-      "away_win_pct": 27.0,
-      "home_expected_goals": 1.65,
-      "away_expected_goals": 1.16
+      "home_win_pct": 49.8,
+      "draw_pct": 24.2,
+      "away_win_pct": 26.0,
+      "home_expected_goals": 1.68,
+      "away_expected_goals": 1.14
     },
     {
       "home_team_id": "POR",
@@ -1113,11 +1113,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 18,
       "rank_gap": 13,
-      "home_win_pct": 47.3,
-      "draw_pct": 24.6,
-      "away_win_pct": 28.1,
-      "home_expected_goals": 1.61,
-      "away_expected_goals": 1.19
+      "home_win_pct": 48.3,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.2,
+      "home_expected_goals": 1.64,
+      "away_expected_goals": 1.17
     },
     {
       "home_team_id": "POR",
@@ -1125,11 +1125,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 18,
       "rank_gap": 13,
-      "home_win_pct": 44.2,
-      "draw_pct": 25.0,
-      "away_win_pct": 30.8,
-      "home_expected_goals": 1.54,
-      "away_expected_goals": 1.24
+      "home_win_pct": 45.6,
+      "draw_pct": 24.9,
+      "away_win_pct": 29.5,
+      "home_expected_goals": 1.57,
+      "away_expected_goals": 1.22
     },
     {
       "home_team_id": "POR",
@@ -1137,11 +1137,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 19,
       "rank_gap": 14,
-      "home_win_pct": 51.7,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.5,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11
+      "home_win_pct": 52.9,
+      "draw_pct": 23.5,
+      "away_win_pct": 23.6,
+      "home_expected_goals": 1.75,
+      "away_expected_goals": 1.09
     },
     {
       "home_team_id": "POR",
@@ -1149,10 +1149,10 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 20,
       "rank_gap": 15,
-      "home_win_pct": 53.6,
-      "draw_pct": 23.4,
-      "away_win_pct": 23.0,
-      "home_expected_goals": 1.77,
+      "home_win_pct": 53.8,
+      "draw_pct": 23.3,
+      "away_win_pct": 22.9,
+      "home_expected_goals": 1.78,
       "away_expected_goals": 1.08
     },
     {
@@ -1161,11 +1161,11 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 22,
       "rank_gap": 17,
-      "home_win_pct": 51.7,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.5,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11
+      "home_win_pct": 53.5,
+      "draw_pct": 23.4,
+      "away_win_pct": 23.1,
+      "home_expected_goals": 1.77,
+      "away_expected_goals": 1.08
     },
     {
       "home_team_id": "BRA",
@@ -1173,9 +1173,9 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 7,
       "rank_gap": 1,
-      "home_win_pct": 50.1,
-      "draw_pct": 24.1,
-      "away_win_pct": 25.8,
+      "home_win_pct": 49.8,
+      "draw_pct": 24.2,
+      "away_win_pct": 26.0,
       "home_expected_goals": 1.68,
       "away_expected_goals": 1.14
     },
@@ -1185,11 +1185,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 8,
       "rank_gap": 2,
-      "home_win_pct": 46.9,
+      "home_win_pct": 46.5,
       "draw_pct": 24.7,
-      "away_win_pct": 28.4,
+      "away_win_pct": 28.7,
       "home_expected_goals": 1.6,
-      "away_expected_goals": 1.19
+      "away_expected_goals": 1.2
     },
     {
       "home_team_id": "BRA",
@@ -1197,9 +1197,9 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 9,
       "rank_gap": 3,
-      "home_win_pct": 47.2,
-      "draw_pct": 24.6,
-      "away_win_pct": 28.2,
+      "home_win_pct": 47.0,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.3,
       "home_expected_goals": 1.61,
       "away_expected_goals": 1.19
     },
@@ -1209,10 +1209,10 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 10,
       "rank_gap": 4,
-      "home_win_pct": 41.6,
+      "home_win_pct": 42.0,
       "draw_pct": 25.3,
-      "away_win_pct": 33.1,
-      "home_expected_goals": 1.48,
+      "away_win_pct": 32.8,
+      "home_expected_goals": 1.49,
       "away_expected_goals": 1.29
     },
     {
@@ -1221,11 +1221,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 10,
       "rank_gap": 4,
-      "home_win_pct": 58.5,
-      "draw_pct": 22.0,
-      "away_win_pct": 19.5,
-      "home_expected_goals": 1.91,
-      "away_expected_goals": 1.0
+      "home_win_pct": 58.0,
+      "draw_pct": 22.2,
+      "away_win_pct": 19.8,
+      "home_expected_goals": 1.9,
+      "away_expected_goals": 1.01
     },
     {
       "home_team_id": "BRA",
@@ -1245,11 +1245,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 14,
       "rank_gap": 8,
-      "home_win_pct": 54.5,
-      "draw_pct": 23.1,
-      "away_win_pct": 22.3,
-      "home_expected_goals": 1.8,
-      "away_expected_goals": 1.07
+      "home_win_pct": 54.9,
+      "draw_pct": 23.0,
+      "away_win_pct": 22.1,
+      "home_expected_goals": 1.81,
+      "away_expected_goals": 1.06
     },
     {
       "home_team_id": "BRA",
@@ -1257,7 +1257,7 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 14,
       "rank_gap": 8,
-      "home_win_pct": 48.4,
+      "home_win_pct": 48.5,
       "draw_pct": 24.4,
       "away_win_pct": 27.1,
       "home_expected_goals": 1.64,
@@ -1269,11 +1269,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 17,
       "rank_gap": 11,
-      "home_win_pct": 54.5,
-      "draw_pct": 23.1,
-      "away_win_pct": 22.3,
-      "home_expected_goals": 1.8,
-      "away_expected_goals": 1.07
+      "home_win_pct": 55.3,
+      "draw_pct": 22.9,
+      "away_win_pct": 21.7,
+      "home_expected_goals": 1.82,
+      "away_expected_goals": 1.05
     },
     {
       "home_team_id": "BRA",
@@ -1281,11 +1281,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 18,
       "rank_gap": 12,
-      "home_win_pct": 53.2,
-      "draw_pct": 23.4,
-      "away_win_pct": 23.3,
-      "home_expected_goals": 1.76,
-      "away_expected_goals": 1.09
+      "home_win_pct": 53.9,
+      "draw_pct": 23.3,
+      "away_win_pct": 22.8,
+      "home_expected_goals": 1.78,
+      "away_expected_goals": 1.08
     },
     {
       "home_team_id": "BRA",
@@ -1293,11 +1293,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 18,
       "rank_gap": 12,
-      "home_win_pct": 50.1,
-      "draw_pct": 24.1,
-      "away_win_pct": 25.8,
-      "home_expected_goals": 1.68,
-      "away_expected_goals": 1.14
+      "home_win_pct": 51.1,
+      "draw_pct": 23.9,
+      "away_win_pct": 24.9,
+      "home_expected_goals": 1.71,
+      "away_expected_goals": 1.12
     },
     {
       "home_team_id": "BRA",
@@ -1305,11 +1305,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 19,
       "rank_gap": 13,
-      "home_win_pct": 57.6,
-      "draw_pct": 22.3,
-      "away_win_pct": 20.1,
-      "home_expected_goals": 1.88,
-      "away_expected_goals": 1.02
+      "home_win_pct": 58.3,
+      "draw_pct": 22.1,
+      "away_win_pct": 19.6,
+      "home_expected_goals": 1.9,
+      "away_expected_goals": 1.01
     },
     {
       "home_team_id": "BRA",
@@ -1317,10 +1317,10 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 20,
       "rank_gap": 14,
-      "home_win_pct": 59.5,
-      "draw_pct": 21.7,
-      "away_win_pct": 18.7,
-      "home_expected_goals": 1.94,
+      "home_win_pct": 59.3,
+      "draw_pct": 21.8,
+      "away_win_pct": 18.9,
+      "home_expected_goals": 1.93,
       "away_expected_goals": 0.99
     },
     {
@@ -1329,11 +1329,11 @@
       "home_fifa_rank": 6,
       "away_fifa_rank": 22,
       "rank_gap": 16,
-      "home_win_pct": 57.6,
-      "draw_pct": 22.3,
-      "away_win_pct": 20.1,
-      "home_expected_goals": 1.88,
-      "away_expected_goals": 1.02
+      "home_win_pct": 59.0,
+      "draw_pct": 21.9,
+      "away_win_pct": 19.1,
+      "home_expected_goals": 1.92,
+      "away_expected_goals": 1.0
     },
     {
       "home_team_id": "NED",
@@ -1341,9 +1341,9 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 8,
       "rank_gap": 1,
-      "home_win_pct": 35.8,
+      "home_win_pct": 35.7,
       "draw_pct": 25.4,
-      "away_win_pct": 38.7,
+      "away_win_pct": 38.8,
       "home_expected_goals": 1.35,
       "away_expected_goals": 1.42
     },
@@ -1353,7 +1353,7 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 9,
       "rank_gap": 2,
-      "home_win_pct": 36.1,
+      "home_win_pct": 36.2,
       "draw_pct": 25.4,
       "away_win_pct": 38.4,
       "home_expected_goals": 1.36,
@@ -1365,11 +1365,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 10,
       "rank_gap": 3,
-      "home_win_pct": 31.0,
+      "home_win_pct": 31.5,
       "draw_pct": 25.1,
-      "away_win_pct": 43.9,
-      "home_expected_goals": 1.25,
-      "away_expected_goals": 1.53
+      "away_win_pct": 43.3,
+      "home_expected_goals": 1.26,
+      "away_expected_goals": 1.52
     },
     {
       "home_team_id": "NED",
@@ -1377,10 +1377,10 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 10,
       "rank_gap": 3,
-      "home_win_pct": 47.1,
+      "home_win_pct": 46.9,
       "draw_pct": 24.7,
-      "away_win_pct": 28.3,
-      "home_expected_goals": 1.61,
+      "away_win_pct": 28.4,
+      "home_expected_goals": 1.6,
       "away_expected_goals": 1.19
     },
     {
@@ -1389,9 +1389,9 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 14,
       "rank_gap": 7,
-      "home_win_pct": 44.8,
-      "draw_pct": 25.0,
-      "away_win_pct": 30.2,
+      "home_win_pct": 45.1,
+      "draw_pct": 24.9,
+      "away_win_pct": 30.0,
       "home_expected_goals": 1.56,
       "away_expected_goals": 1.23
     },
@@ -1401,11 +1401,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 14,
       "rank_gap": 7,
-      "home_win_pct": 43.1,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.7,
-      "home_expected_goals": 1.52,
-      "away_expected_goals": 1.26
+      "home_win_pct": 43.8,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.1,
+      "home_expected_goals": 1.53,
+      "away_expected_goals": 1.25
     },
     {
       "home_team_id": "NED",
@@ -1413,10 +1413,10 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 14,
       "rank_gap": 7,
-      "home_win_pct": 37.3,
+      "home_win_pct": 37.6,
       "draw_pct": 25.4,
-      "away_win_pct": 37.3,
-      "home_expected_goals": 1.38,
+      "away_win_pct": 37.0,
+      "home_expected_goals": 1.39,
       "away_expected_goals": 1.38
     },
     {
@@ -1425,11 +1425,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 17,
       "rank_gap": 10,
-      "home_win_pct": 43.1,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.7,
-      "home_expected_goals": 1.52,
-      "away_expected_goals": 1.26
+      "home_win_pct": 44.2,
+      "draw_pct": 25.0,
+      "away_win_pct": 30.8,
+      "home_expected_goals": 1.54,
+      "away_expected_goals": 1.24
     },
     {
       "home_team_id": "NED",
@@ -1437,11 +1437,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 18,
       "rank_gap": 11,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29
+      "home_win_pct": 42.7,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.1,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27
     },
     {
       "home_team_id": "NED",
@@ -1449,11 +1449,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 18,
       "rank_gap": 11,
-      "home_win_pct": 38.8,
+      "home_win_pct": 40.1,
       "draw_pct": 25.4,
-      "away_win_pct": 35.7,
-      "home_expected_goals": 1.42,
-      "away_expected_goals": 1.35
+      "away_win_pct": 34.5,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32
     },
     {
       "home_team_id": "NED",
@@ -1461,11 +1461,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 19,
       "rank_gap": 12,
-      "home_win_pct": 46.2,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.21
+      "home_win_pct": 47.2,
+      "draw_pct": 24.6,
+      "away_win_pct": 28.2,
+      "home_expected_goals": 1.61,
+      "away_expected_goals": 1.19
     },
     {
       "home_team_id": "NED",
@@ -1473,10 +1473,10 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 20,
       "rank_gap": 13,
-      "home_win_pct": 48.1,
+      "home_win_pct": 48.2,
       "draw_pct": 24.5,
       "away_win_pct": 27.4,
-      "home_expected_goals": 1.63,
+      "home_expected_goals": 1.64,
       "away_expected_goals": 1.17
     },
     {
@@ -1485,11 +1485,11 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 22,
       "rank_gap": 15,
-      "home_win_pct": 46.2,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.21
+      "home_win_pct": 47.8,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.6,
+      "home_expected_goals": 1.63,
+      "away_expected_goals": 1.18
     },
     {
       "home_team_id": "MAR",
@@ -1497,9 +1497,9 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 9,
       "rank_gap": 1,
-      "home_win_pct": 39.2,
+      "home_win_pct": 39.3,
       "draw_pct": 25.4,
-      "away_win_pct": 35.4,
+      "away_win_pct": 35.3,
       "home_expected_goals": 1.43,
       "away_expected_goals": 1.34
     },
@@ -1509,11 +1509,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 10,
       "rank_gap": 2,
-      "home_win_pct": 33.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 40.8,
-      "home_expected_goals": 1.31,
-      "away_expected_goals": 1.46
+      "home_win_pct": 34.5,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.1,
+      "home_expected_goals": 1.32,
+      "away_expected_goals": 1.45
     },
     {
       "home_team_id": "MAR",
@@ -1521,9 +1521,9 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 10,
       "rank_gap": 2,
-      "home_win_pct": 50.3,
+      "home_win_pct": 50.2,
       "draw_pct": 24.1,
-      "away_win_pct": 25.6,
+      "away_win_pct": 25.7,
       "home_expected_goals": 1.69,
       "away_expected_goals": 1.14
     },
@@ -1533,10 +1533,10 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 14,
       "rank_gap": 6,
-      "home_win_pct": 48.0,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.5,
-      "home_expected_goals": 1.63,
+      "home_win_pct": 48.4,
+      "draw_pct": 24.4,
+      "away_win_pct": 27.2,
+      "home_expected_goals": 1.64,
       "away_expected_goals": 1.17
     },
     {
@@ -1545,11 +1545,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 14,
       "rank_gap": 6,
-      "home_win_pct": 46.3,
-      "draw_pct": 24.8,
-      "away_win_pct": 28.9,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.2
+      "home_win_pct": 47.1,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.3,
+      "home_expected_goals": 1.61,
+      "away_expected_goals": 1.19
     },
     {
       "home_team_id": "MAR",
@@ -1557,11 +1557,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 14,
       "rank_gap": 6,
-      "home_win_pct": 40.4,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.3,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32
+      "home_win_pct": 40.8,
+      "draw_pct": 25.3,
+      "away_win_pct": 33.9,
+      "home_expected_goals": 1.46,
+      "away_expected_goals": 1.31
     },
     {
       "home_team_id": "MAR",
@@ -1569,11 +1569,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 17,
       "rank_gap": 9,
-      "home_win_pct": 46.3,
-      "draw_pct": 24.8,
-      "away_win_pct": 28.9,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.2
+      "home_win_pct": 47.5,
+      "draw_pct": 24.6,
+      "away_win_pct": 27.9,
+      "home_expected_goals": 1.62,
+      "away_expected_goals": 1.18
     },
     {
       "home_team_id": "MAR",
@@ -1581,11 +1581,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 18,
       "rank_gap": 10,
-      "home_win_pct": 45.1,
-      "draw_pct": 24.9,
-      "away_win_pct": 30.0,
-      "home_expected_goals": 1.56,
-      "away_expected_goals": 1.23
+      "home_win_pct": 46.0,
+      "draw_pct": 24.8,
+      "away_win_pct": 29.2,
+      "home_expected_goals": 1.58,
+      "away_expected_goals": 1.21
     },
     {
       "home_team_id": "MAR",
@@ -1593,11 +1593,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 18,
       "rank_gap": 10,
-      "home_win_pct": 42.0,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29
+      "home_win_pct": 43.3,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.5,
+      "home_expected_goals": 1.52,
+      "away_expected_goals": 1.26
     },
     {
       "home_team_id": "MAR",
@@ -1605,11 +1605,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 19,
       "rank_gap": 11,
-      "home_win_pct": 49.4,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.3,
-      "home_expected_goals": 1.67,
-      "away_expected_goals": 1.15
+      "home_win_pct": 50.5,
+      "draw_pct": 24.1,
+      "away_win_pct": 25.4,
+      "home_expected_goals": 1.69,
+      "away_expected_goals": 1.13
     },
     {
       "home_team_id": "MAR",
@@ -1617,9 +1617,9 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 20,
       "rank_gap": 12,
-      "home_win_pct": 51.4,
+      "home_win_pct": 51.5,
       "draw_pct": 23.9,
-      "away_win_pct": 24.8,
+      "away_win_pct": 24.7,
       "home_expected_goals": 1.72,
       "away_expected_goals": 1.12
     },
@@ -1629,11 +1629,11 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 22,
       "rank_gap": 14,
-      "home_win_pct": 49.4,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.3,
-      "home_expected_goals": 1.67,
-      "away_expected_goals": 1.15
+      "home_win_pct": 51.2,
+      "draw_pct": 23.9,
+      "away_win_pct": 24.9,
+      "home_expected_goals": 1.71,
+      "away_expected_goals": 1.12
     },
     {
       "home_team_id": "BEL",
@@ -1641,11 +1641,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 10,
       "rank_gap": 1,
-      "home_win_pct": 33.6,
-      "draw_pct": 25.3,
-      "away_win_pct": 41.1,
-      "home_expected_goals": 1.3,
-      "away_expected_goals": 1.47
+      "home_win_pct": 34.1,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.6,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.46
     },
     {
       "home_team_id": "BEL",
@@ -1653,10 +1653,10 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 10,
       "rank_gap": 1,
-      "home_win_pct": 50.0,
+      "home_win_pct": 49.7,
       "draw_pct": 24.2,
-      "away_win_pct": 25.9,
-      "home_expected_goals": 1.68,
+      "away_win_pct": 26.1,
+      "home_expected_goals": 1.67,
       "away_expected_goals": 1.14
     },
     {
@@ -1665,10 +1665,10 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 14,
       "rank_gap": 5,
-      "home_win_pct": 47.7,
-      "draw_pct": 24.6,
-      "away_win_pct": 27.7,
-      "home_expected_goals": 1.62,
+      "home_win_pct": 47.9,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.6,
+      "home_expected_goals": 1.63,
       "away_expected_goals": 1.18
     },
     {
@@ -1677,11 +1677,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 14,
       "rank_gap": 5,
-      "home_win_pct": 46.0,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.2,
-      "home_expected_goals": 1.58,
-      "away_expected_goals": 1.21
+      "home_win_pct": 46.6,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.7,
+      "home_expected_goals": 1.6,
+      "away_expected_goals": 1.2
     },
     {
       "home_team_id": "BEL",
@@ -1689,11 +1689,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 14,
       "rank_gap": 5,
-      "home_win_pct": 40.1,
+      "home_win_pct": 40.3,
       "draw_pct": 25.4,
-      "away_win_pct": 34.6,
+      "away_win_pct": 34.3,
       "home_expected_goals": 1.45,
-      "away_expected_goals": 1.33
+      "away_expected_goals": 1.32
     },
     {
       "home_team_id": "BEL",
@@ -1701,11 +1701,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 17,
       "rank_gap": 8,
-      "home_win_pct": 46.0,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.2,
-      "home_expected_goals": 1.58,
-      "away_expected_goals": 1.21
+      "home_win_pct": 47.0,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.3,
+      "home_expected_goals": 1.61,
+      "away_expected_goals": 1.19
     },
     {
       "home_team_id": "BEL",
@@ -1713,11 +1713,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 18,
       "rank_gap": 9,
-      "home_win_pct": 44.7,
-      "draw_pct": 25.0,
-      "away_win_pct": 30.3,
-      "home_expected_goals": 1.55,
-      "away_expected_goals": 1.23
+      "home_win_pct": 45.5,
+      "draw_pct": 24.9,
+      "away_win_pct": 29.6,
+      "home_expected_goals": 1.57,
+      "away_expected_goals": 1.22
     },
     {
       "home_team_id": "BEL",
@@ -1725,11 +1725,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 18,
       "rank_gap": 9,
-      "home_win_pct": 41.6,
-      "draw_pct": 25.3,
-      "away_win_pct": 33.1,
-      "home_expected_goals": 1.48,
-      "away_expected_goals": 1.29
+      "home_win_pct": 42.9,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.0,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27
     },
     {
       "home_team_id": "BEL",
@@ -1737,11 +1737,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 19,
       "rank_gap": 10,
-      "home_win_pct": 49.1,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.6,
-      "home_expected_goals": 1.66,
-      "away_expected_goals": 1.16
+      "home_win_pct": 50.0,
+      "draw_pct": 24.1,
+      "away_win_pct": 25.8,
+      "home_expected_goals": 1.68,
+      "away_expected_goals": 1.14
     },
     {
       "home_team_id": "BEL",
@@ -1749,9 +1749,9 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 20,
       "rank_gap": 11,
-      "home_win_pct": 51.1,
-      "draw_pct": 23.9,
-      "away_win_pct": 25.0,
+      "home_win_pct": 51.0,
+      "draw_pct": 24.0,
+      "away_win_pct": 25.1,
       "home_expected_goals": 1.71,
       "away_expected_goals": 1.12
     },
@@ -1761,11 +1761,11 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 22,
       "rank_gap": 13,
-      "home_win_pct": 49.1,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.6,
-      "home_expected_goals": 1.66,
-      "away_expected_goals": 1.16
+      "home_win_pct": 50.7,
+      "draw_pct": 24.0,
+      "away_win_pct": 25.3,
+      "home_expected_goals": 1.7,
+      "away_expected_goals": 1.13
     },
     {
       "home_team_id": "GER",
@@ -1773,11 +1773,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 10,
       "rank_gap": 0,
-      "home_win_pct": 55.6,
-      "draw_pct": 22.9,
-      "away_win_pct": 21.5,
-      "home_expected_goals": 1.83,
-      "away_expected_goals": 1.05
+      "home_win_pct": 54.8,
+      "draw_pct": 23.1,
+      "away_win_pct": 22.1,
+      "home_expected_goals": 1.81,
+      "away_expected_goals": 1.06
     },
     {
       "home_team_id": "GER",
@@ -1785,11 +1785,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 53.4,
-      "draw_pct": 23.4,
-      "away_win_pct": 23.2,
-      "home_expected_goals": 1.77,
-      "away_expected_goals": 1.08
+      "home_win_pct": 53.0,
+      "draw_pct": 23.5,
+      "away_win_pct": 23.5,
+      "home_expected_goals": 1.76,
+      "away_expected_goals": 1.09
     },
     {
       "home_team_id": "GER",
@@ -1797,7 +1797,7 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 51.6,
+      "home_win_pct": 51.7,
       "draw_pct": 23.8,
       "away_win_pct": 24.5,
       "home_expected_goals": 1.72,
@@ -1809,9 +1809,9 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 45.6,
+      "home_win_pct": 45.3,
       "draw_pct": 24.9,
-      "away_win_pct": 29.5,
+      "away_win_pct": 29.8,
       "home_expected_goals": 1.57,
       "away_expected_goals": 1.22
     },
@@ -1821,11 +1821,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 17,
       "rank_gap": 7,
-      "home_win_pct": 51.6,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.6,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11
+      "home_win_pct": 52.1,
+      "draw_pct": 23.7,
+      "away_win_pct": 24.2,
+      "home_expected_goals": 1.73,
+      "away_expected_goals": 1.1
     },
     {
       "home_team_id": "GER",
@@ -1833,10 +1833,10 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 50.4,
-      "draw_pct": 24.1,
-      "away_win_pct": 25.6,
-      "home_expected_goals": 1.69,
+      "home_win_pct": 50.6,
+      "draw_pct": 24.0,
+      "away_win_pct": 25.3,
+      "home_expected_goals": 1.7,
       "away_expected_goals": 1.13
     },
     {
@@ -1845,11 +1845,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 47.2,
-      "draw_pct": 24.6,
-      "away_win_pct": 28.1,
-      "home_expected_goals": 1.61,
-      "away_expected_goals": 1.19
+      "home_win_pct": 47.9,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.6,
+      "home_expected_goals": 1.63,
+      "away_expected_goals": 1.18
     },
     {
       "home_team_id": "GER",
@@ -1857,10 +1857,10 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 19,
       "rank_gap": 9,
-      "home_win_pct": 54.8,
-      "draw_pct": 23.1,
-      "away_win_pct": 22.2,
-      "home_expected_goals": 1.8,
+      "home_win_pct": 55.1,
+      "draw_pct": 23.0,
+      "away_win_pct": 21.9,
+      "home_expected_goals": 1.81,
       "away_expected_goals": 1.06
     },
     {
@@ -1869,11 +1869,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 20,
       "rank_gap": 10,
-      "home_win_pct": 56.7,
-      "draw_pct": 22.6,
-      "away_win_pct": 20.7,
-      "home_expected_goals": 1.86,
-      "away_expected_goals": 1.03
+      "home_win_pct": 56.1,
+      "draw_pct": 22.7,
+      "away_win_pct": 21.2,
+      "home_expected_goals": 1.84,
+      "away_expected_goals": 1.04
     },
     {
       "home_team_id": "GER",
@@ -1881,11 +1881,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 22,
       "rank_gap": 12,
-      "home_win_pct": 54.8,
-      "draw_pct": 23.1,
-      "away_win_pct": 22.2,
-      "home_expected_goals": 1.8,
-      "away_expected_goals": 1.06
+      "home_win_pct": 55.8,
+      "draw_pct": 22.8,
+      "away_win_pct": 21.4,
+      "home_expected_goals": 1.83,
+      "away_expected_goals": 1.05
     },
     {
       "home_team_id": "CRO",
@@ -1893,11 +1893,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 36.7,
+      "home_win_pct": 37.1,
       "draw_pct": 25.4,
-      "away_win_pct": 37.8,
-      "home_expected_goals": 1.37,
-      "away_expected_goals": 1.4
+      "away_win_pct": 37.4,
+      "home_expected_goals": 1.38,
+      "away_expected_goals": 1.39
     },
     {
       "home_team_id": "CRO",
@@ -1905,11 +1905,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 35.1,
+      "home_win_pct": 35.9,
       "draw_pct": 25.4,
-      "away_win_pct": 39.5,
-      "home_expected_goals": 1.34,
-      "away_expected_goals": 1.43
+      "away_win_pct": 38.7,
+      "home_expected_goals": 1.35,
+      "away_expected_goals": 1.42
     },
     {
       "home_team_id": "CRO",
@@ -1917,11 +1917,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 29.7,
-      "draw_pct": 24.9,
-      "away_win_pct": 45.4,
-      "home_expected_goals": 1.22,
-      "away_expected_goals": 1.57
+      "home_win_pct": 30.1,
+      "draw_pct": 25.0,
+      "away_win_pct": 44.9,
+      "home_expected_goals": 1.23,
+      "away_expected_goals": 1.56
     },
     {
       "home_team_id": "CRO",
@@ -1929,11 +1929,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 17,
       "rank_gap": 7,
-      "home_win_pct": 35.1,
+      "home_win_pct": 36.3,
       "draw_pct": 25.4,
-      "away_win_pct": 39.5,
-      "home_expected_goals": 1.34,
-      "away_expected_goals": 1.43
+      "away_win_pct": 38.3,
+      "home_expected_goals": 1.36,
+      "away_expected_goals": 1.41
     },
     {
       "home_team_id": "CRO",
@@ -1941,11 +1941,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 34.0,
-      "draw_pct": 25.3,
-      "away_win_pct": 40.7,
-      "home_expected_goals": 1.31,
-      "away_expected_goals": 1.46
+      "home_win_pct": 34.9,
+      "draw_pct": 25.4,
+      "away_win_pct": 39.7,
+      "home_expected_goals": 1.33,
+      "away_expected_goals": 1.44
     },
     {
       "home_team_id": "CRO",
@@ -1953,11 +1953,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 31.1,
-      "draw_pct": 25.1,
-      "away_win_pct": 43.8,
-      "home_expected_goals": 1.25,
-      "away_expected_goals": 1.53
+      "home_win_pct": 32.5,
+      "draw_pct": 25.2,
+      "away_win_pct": 42.3,
+      "home_expected_goals": 1.28,
+      "away_expected_goals": 1.5
     },
     {
       "home_team_id": "CRO",
@@ -1965,11 +1965,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 19,
       "rank_gap": 9,
-      "home_win_pct": 38.0,
+      "home_win_pct": 39.2,
       "draw_pct": 25.4,
-      "away_win_pct": 36.5,
-      "home_expected_goals": 1.4,
-      "away_expected_goals": 1.37
+      "away_win_pct": 35.4,
+      "home_expected_goals": 1.43,
+      "away_expected_goals": 1.34
     },
     {
       "home_team_id": "CRO",
@@ -1977,11 +1977,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 20,
       "rank_gap": 10,
-      "home_win_pct": 39.9,
+      "home_win_pct": 40.1,
       "draw_pct": 25.4,
-      "away_win_pct": 34.7,
-      "home_expected_goals": 1.44,
-      "away_expected_goals": 1.33
+      "away_win_pct": 34.5,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32
     },
     {
       "home_team_id": "CRO",
@@ -1989,11 +1989,11 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 22,
       "rank_gap": 12,
-      "home_win_pct": 38.1,
+      "home_win_pct": 39.8,
       "draw_pct": 25.4,
-      "away_win_pct": 36.5,
-      "home_expected_goals": 1.4,
-      "away_expected_goals": 1.37
+      "away_win_pct": 34.8,
+      "home_expected_goals": 1.44,
+      "away_expected_goals": 1.33
     },
     {
       "home_team_id": "MEX",
@@ -2001,10 +2001,10 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 14,
       "rank_gap": 0,
-      "home_win_pct": 37.2,
+      "home_win_pct": 37.6,
       "draw_pct": 25.4,
-      "away_win_pct": 37.3,
-      "home_expected_goals": 1.38,
+      "away_win_pct": 37.0,
+      "home_expected_goals": 1.39,
       "away_expected_goals": 1.38
     },
     {
@@ -2015,7 +2015,7 @@
       "rank_gap": 0,
       "home_win_pct": 31.7,
       "draw_pct": 25.2,
-      "away_win_pct": 43.2,
+      "away_win_pct": 43.1,
       "home_expected_goals": 1.26,
       "away_expected_goals": 1.52
     },
@@ -2025,11 +2025,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 17,
       "rank_gap": 3,
-      "home_win_pct": 37.2,
+      "home_win_pct": 38.0,
       "draw_pct": 25.4,
-      "away_win_pct": 37.3,
-      "home_expected_goals": 1.38,
-      "away_expected_goals": 1.39
+      "away_win_pct": 36.6,
+      "home_expected_goals": 1.4,
+      "away_expected_goals": 1.37
     },
     {
       "home_team_id": "MEX",
@@ -2037,11 +2037,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 36.1,
+      "home_win_pct": 36.6,
       "draw_pct": 25.4,
-      "away_win_pct": 38.5,
-      "home_expected_goals": 1.36,
-      "away_expected_goals": 1.41
+      "away_win_pct": 38.0,
+      "home_expected_goals": 1.37,
+      "away_expected_goals": 1.4
     },
     {
       "home_team_id": "MEX",
@@ -2049,11 +2049,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 33.2,
-      "draw_pct": 25.3,
-      "away_win_pct": 41.6,
-      "home_expected_goals": 1.29,
-      "away_expected_goals": 1.48
+      "home_win_pct": 34.1,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.5,
+      "home_expected_goals": 1.32,
+      "away_expected_goals": 1.46
     },
     {
       "home_team_id": "MEX",
@@ -2061,11 +2061,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 19,
       "rank_gap": 5,
-      "home_win_pct": 40.2,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.4,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32
+      "home_win_pct": 40.9,
+      "draw_pct": 25.3,
+      "away_win_pct": 33.8,
+      "home_expected_goals": 1.46,
+      "away_expected_goals": 1.31
     },
     {
       "home_team_id": "MEX",
@@ -2073,11 +2073,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 20,
       "rank_gap": 6,
-      "home_win_pct": 42.1,
+      "home_win_pct": 41.8,
       "draw_pct": 25.3,
-      "away_win_pct": 32.6,
+      "away_win_pct": 32.9,
       "home_expected_goals": 1.49,
-      "away_expected_goals": 1.28
+      "away_expected_goals": 1.29
     },
     {
       "home_team_id": "MEX",
@@ -2085,11 +2085,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 22,
       "rank_gap": 8,
-      "home_win_pct": 40.2,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.4,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32
+      "home_win_pct": 41.5,
+      "draw_pct": 25.3,
+      "away_win_pct": 33.2,
+      "home_expected_goals": 1.48,
+      "away_expected_goals": 1.3
     },
     {
       "home_team_id": "URU",
@@ -2097,11 +2097,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 14,
       "rank_gap": 0,
-      "home_win_pct": 33.2,
+      "home_win_pct": 32.9,
       "draw_pct": 25.3,
-      "away_win_pct": 41.5,
-      "home_expected_goals": 1.3,
-      "away_expected_goals": 1.48
+      "away_win_pct": 41.8,
+      "home_expected_goals": 1.29,
+      "away_expected_goals": 1.49
     },
     {
       "home_team_id": "URU",
@@ -2109,11 +2109,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 17,
       "rank_gap": 3,
-      "home_win_pct": 38.9,
+      "home_win_pct": 39.3,
       "draw_pct": 25.4,
-      "away_win_pct": 35.7,
-      "home_expected_goals": 1.42,
-      "away_expected_goals": 1.35
+      "away_win_pct": 35.3,
+      "home_expected_goals": 1.43,
+      "away_expected_goals": 1.34
     },
     {
       "home_team_id": "URU",
@@ -2121,11 +2121,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 37.7,
+      "home_win_pct": 37.9,
       "draw_pct": 25.4,
-      "away_win_pct": 36.9,
-      "home_expected_goals": 1.39,
-      "away_expected_goals": 1.38
+      "away_win_pct": 36.7,
+      "home_expected_goals": 1.4,
+      "away_expected_goals": 1.37
     },
     {
       "home_team_id": "URU",
@@ -2133,11 +2133,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 34.7,
+      "home_win_pct": 35.3,
       "draw_pct": 25.4,
-      "away_win_pct": 39.9,
-      "home_expected_goals": 1.33,
-      "away_expected_goals": 1.44
+      "away_win_pct": 39.3,
+      "home_expected_goals": 1.34,
+      "away_expected_goals": 1.43
     },
     {
       "home_team_id": "URU",
@@ -2145,11 +2145,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 19,
       "rank_gap": 5,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.9,
+      "home_win_pct": 42.2,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.6,
       "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29
+      "away_expected_goals": 1.28
     },
     {
       "home_team_id": "URU",
@@ -2157,59 +2157,59 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 20,
       "rank_gap": 6,
-      "home_win_pct": 43.8,
-      "draw_pct": 25.1,
-      "away_win_pct": 31.1,
-      "home_expected_goals": 1.53,
-      "away_expected_goals": 1.25
-    },
-    {
-      "home_team_id": "URU",
-      "away_team_id": "TUR",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 22,
-      "rank_gap": 8,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29
-    },
-    {
-      "home_team_id": "COL",
-      "away_team_id": "USA",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 17,
-      "rank_gap": 3,
-      "home_win_pct": 44.8,
-      "draw_pct": 25.0,
-      "away_win_pct": 30.3,
-      "home_expected_goals": 1.55,
-      "away_expected_goals": 1.23
-    },
-    {
-      "home_team_id": "COL",
-      "away_team_id": "JPN",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 18,
-      "rank_gap": 4,
-      "home_win_pct": 43.5,
-      "draw_pct": 25.1,
-      "away_win_pct": 31.4,
+      "home_win_pct": 43.1,
+      "draw_pct": 25.2,
+      "away_win_pct": 31.7,
       "home_expected_goals": 1.52,
       "away_expected_goals": 1.26
     },
     {
+      "home_team_id": "URU",
+      "away_team_id": "TUR",
+      "home_fifa_rank": 14,
+      "away_fifa_rank": 22,
+      "rank_gap": 8,
+      "home_win_pct": 42.8,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.0,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27
+    },
+    {
+      "home_team_id": "COL",
+      "away_team_id": "USA",
+      "home_fifa_rank": 14,
+      "away_fifa_rank": 17,
+      "rank_gap": 3,
+      "home_win_pct": 45.5,
+      "draw_pct": 24.9,
+      "away_win_pct": 29.6,
+      "home_expected_goals": 1.57,
+      "away_expected_goals": 1.22
+    },
+    {
+      "home_team_id": "COL",
+      "away_team_id": "JPN",
+      "home_fifa_rank": 14,
+      "away_fifa_rank": 18,
+      "rank_gap": 4,
+      "home_win_pct": 44.1,
+      "draw_pct": 25.1,
+      "away_win_pct": 30.9,
+      "home_expected_goals": 1.54,
+      "away_expected_goals": 1.25
+    },
+    {
       "home_team_id": "COL",
       "away_team_id": "SEN",
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 40.4,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.2,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32
+      "home_win_pct": 41.4,
+      "draw_pct": 25.3,
+      "away_win_pct": 33.3,
+      "home_expected_goals": 1.48,
+      "away_expected_goals": 1.3
     },
     {
       "home_team_id": "COL",
@@ -2217,11 +2217,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 19,
       "rank_gap": 5,
-      "home_win_pct": 47.9,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.6,
-      "home_expected_goals": 1.63,
-      "away_expected_goals": 1.18
+      "home_win_pct": 48.5,
+      "draw_pct": 24.4,
+      "away_win_pct": 27.0,
+      "home_expected_goals": 1.64,
+      "away_expected_goals": 1.17
     },
     {
       "home_team_id": "COL",
@@ -2229,11 +2229,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 20,
       "rank_gap": 6,
-      "home_win_pct": 49.8,
+      "home_win_pct": 49.5,
       "draw_pct": 24.2,
-      "away_win_pct": 26.0,
-      "home_expected_goals": 1.68,
-      "away_expected_goals": 1.14
+      "away_win_pct": 26.3,
+      "home_expected_goals": 1.67,
+      "away_expected_goals": 1.15
     },
     {
       "home_team_id": "COL",
@@ -2241,11 +2241,11 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 22,
       "rank_gap": 8,
-      "home_win_pct": 47.9,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.6,
-      "home_expected_goals": 1.63,
-      "away_expected_goals": 1.18
+      "home_win_pct": 49.2,
+      "draw_pct": 24.3,
+      "away_win_pct": 26.5,
+      "home_expected_goals": 1.66,
+      "away_expected_goals": 1.15
     },
     {
       "home_team_id": "USA",
@@ -2253,9 +2253,9 @@
       "home_fifa_rank": 17,
       "away_fifa_rank": 18,
       "rank_gap": 1,
-      "home_win_pct": 37.7,
+      "home_win_pct": 37.5,
       "draw_pct": 25.4,
-      "away_win_pct": 36.9,
+      "away_win_pct": 37.1,
       "home_expected_goals": 1.39,
       "away_expected_goals": 1.38
     },
@@ -2265,9 +2265,9 @@
       "home_fifa_rank": 17,
       "away_fifa_rank": 18,
       "rank_gap": 1,
-      "home_win_pct": 34.7,
+      "home_win_pct": 34.9,
       "draw_pct": 25.4,
-      "away_win_pct": 39.9,
+      "away_win_pct": 39.7,
       "home_expected_goals": 1.33,
       "away_expected_goals": 1.44
     },
@@ -2277,10 +2277,10 @@
       "home_fifa_rank": 17,
       "away_fifa_rank": 19,
       "rank_gap": 2,
-      "home_win_pct": 41.9,
+      "home_win_pct": 41.8,
       "draw_pct": 25.3,
       "away_win_pct": 32.9,
-      "home_expected_goals": 1.49,
+      "home_expected_goals": 1.48,
       "away_expected_goals": 1.29
     },
     {
@@ -2289,11 +2289,11 @@
       "home_fifa_rank": 17,
       "away_fifa_rank": 20,
       "rank_gap": 3,
-      "home_win_pct": 43.8,
-      "draw_pct": 25.1,
-      "away_win_pct": 31.1,
-      "home_expected_goals": 1.53,
-      "away_expected_goals": 1.25
+      "home_win_pct": 42.7,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.1,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27
     },
     {
       "home_team_id": "USA",
@@ -2301,11 +2301,11 @@
       "home_fifa_rank": 17,
       "away_fifa_rank": 22,
       "rank_gap": 5,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29
+      "home_win_pct": 42.4,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.4,
+      "home_expected_goals": 1.5,
+      "away_expected_goals": 1.28
     },
     {
       "home_team_id": "JPN",
@@ -2313,11 +2313,11 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 18,
       "rank_gap": 0,
-      "home_win_pct": 35.9,
+      "home_win_pct": 36.3,
       "draw_pct": 25.4,
-      "away_win_pct": 38.7,
-      "home_expected_goals": 1.35,
-      "away_expected_goals": 1.42
+      "away_win_pct": 38.2,
+      "home_expected_goals": 1.36,
+      "away_expected_goals": 1.41
     },
     {
       "home_team_id": "JPN",
@@ -2325,9 +2325,9 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 19,
       "rank_gap": 1,
-      "home_win_pct": 43.1,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.7,
+      "home_win_pct": 43.2,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.6,
       "home_expected_goals": 1.52,
       "away_expected_goals": 1.26
     },
@@ -2337,11 +2337,11 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 20,
       "rank_gap": 2,
-      "home_win_pct": 45.0,
-      "draw_pct": 24.9,
-      "away_win_pct": 30.0,
-      "home_expected_goals": 1.56,
-      "away_expected_goals": 1.23
+      "home_win_pct": 44.2,
+      "draw_pct": 25.0,
+      "away_win_pct": 30.8,
+      "home_expected_goals": 1.54,
+      "away_expected_goals": 1.24
     },
     {
       "home_team_id": "JPN",
@@ -2349,11 +2349,11 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 22,
       "rank_gap": 4,
-      "home_win_pct": 43.1,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.7,
-      "home_expected_goals": 1.52,
-      "away_expected_goals": 1.26
+      "home_win_pct": 43.9,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.0,
+      "home_expected_goals": 1.53,
+      "away_expected_goals": 1.25
     },
     {
       "home_team_id": "SEN",
@@ -2361,10 +2361,10 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 19,
       "rank_gap": 1,
-      "home_win_pct": 46.2,
+      "home_win_pct": 45.9,
       "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
+      "away_win_pct": 29.3,
+      "home_expected_goals": 1.58,
       "away_expected_goals": 1.21
     },
     {
@@ -2373,11 +2373,11 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 20,
       "rank_gap": 2,
-      "home_win_pct": 48.2,
-      "draw_pct": 24.5,
-      "away_win_pct": 27.3,
-      "home_expected_goals": 1.64,
-      "away_expected_goals": 1.17
+      "home_win_pct": 46.9,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.4,
+      "home_expected_goals": 1.6,
+      "away_expected_goals": 1.19
     },
     {
       "home_team_id": "SEN",
@@ -2385,11 +2385,11 @@
       "home_fifa_rank": 18,
       "away_fifa_rank": 22,
       "rank_gap": 4,
-      "home_win_pct": 46.2,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.21
+      "home_win_pct": 46.5,
+      "draw_pct": 24.7,
+      "away_win_pct": 28.7,
+      "home_expected_goals": 1.6,
+      "away_expected_goals": 1.2
     },
     {
       "home_team_id": "SUI",
@@ -2397,11 +2397,11 @@
       "home_fifa_rank": 19,
       "away_fifa_rank": 20,
       "rank_gap": 1,
-      "home_win_pct": 40.7,
-      "draw_pct": 25.3,
-      "away_win_pct": 33.9,
-      "home_expected_goals": 1.46,
-      "away_expected_goals": 1.31
+      "home_win_pct": 39.8,
+      "draw_pct": 25.4,
+      "away_win_pct": 34.8,
+      "home_expected_goals": 1.44,
+      "away_expected_goals": 1.33
     },
     {
       "home_team_id": "SUI",
@@ -2409,11 +2409,11 @@
       "home_fifa_rank": 19,
       "away_fifa_rank": 22,
       "rank_gap": 3,
-      "home_win_pct": 38.9,
+      "home_win_pct": 39.5,
       "draw_pct": 25.4,
-      "away_win_pct": 35.7,
-      "home_expected_goals": 1.42,
-      "away_expected_goals": 1.35
+      "away_win_pct": 35.1,
+      "home_expected_goals": 1.43,
+      "away_expected_goals": 1.34
     },
     {
       "home_team_id": "IRN",
@@ -2421,11 +2421,11 @@
       "home_fifa_rank": 20,
       "away_fifa_rank": 22,
       "rank_gap": 2,
-      "home_win_pct": 37.0,
+      "home_win_pct": 38.6,
       "draw_pct": 25.4,
-      "away_win_pct": 37.5,
-      "home_expected_goals": 1.38,
-      "away_expected_goals": 1.39
+      "away_win_pct": 36.0,
+      "home_expected_goals": 1.41,
+      "away_expected_goals": 1.36
     }
   ],
   "implausibleMatchupWarnings": [
@@ -2435,38 +2435,12 @@
       "home_fifa_rank": 1,
       "away_fifa_rank": 3,
       "rank_gap": 2,
-      "home_win_pct": 32.2,
-      "draw_pct": 25.2,
-      "away_win_pct": 42.6,
-      "home_expected_goals": 1.27,
-      "away_expected_goals": 1.5,
-      "warning": "ARG (FIFA #1) is given only 32.2% to beat FRA (FIFA #3), a 2-rank gap."
-    },
-    {
-      "home_team_id": "ARG",
-      "away_team_id": "GER",
-      "home_fifa_rank": 1,
-      "away_fifa_rank": 10,
-      "rank_gap": 9,
-      "home_win_pct": 43.0,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.8,
-      "home_expected_goals": 1.51,
-      "away_expected_goals": 1.27,
-      "warning": "ARG (FIFA #1) is given only 43.0% to beat GER (FIFA #10), a 9-rank gap."
-    },
-    {
-      "home_team_id": "ARG",
-      "away_team_id": "SEN",
-      "home_fifa_rank": 1,
-      "away_fifa_rank": 18,
-      "rank_gap": 17,
-      "home_win_pct": 51.5,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.6,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11,
-      "warning": "ARG (FIFA #1) is given only 51.5% to beat SEN (FIFA #18), a 17-rank gap."
+      "home_win_pct": 33.6,
+      "draw_pct": 25.3,
+      "away_win_pct": 41.0,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.47,
+      "warning": "ARG (FIFA #1) is given only 33.6% to beat FRA (FIFA #3), a 2-rank gap."
     },
     {
       "home_team_id": "ESP",
@@ -2474,38 +2448,12 @@
       "home_fifa_rank": 2,
       "away_fifa_rank": 3,
       "rank_gap": 1,
-      "home_win_pct": 31.6,
+      "home_win_pct": 32.2,
       "draw_pct": 25.2,
-      "away_win_pct": 43.2,
-      "home_expected_goals": 1.26,
-      "away_expected_goals": 1.52,
-      "warning": "ESP (FIFA #2) is given only 31.6% to beat FRA (FIFA #3), a 1-rank gap."
-    },
-    {
-      "home_team_id": "ESP",
-      "away_team_id": "GER",
-      "home_fifa_rank": 2,
-      "away_fifa_rank": 10,
-      "rank_gap": 8,
-      "home_win_pct": 42.4,
-      "draw_pct": 25.2,
-      "away_win_pct": 32.4,
-      "home_expected_goals": 1.5,
-      "away_expected_goals": 1.28,
-      "warning": "ESP (FIFA #2) is given only 42.4% to beat GER (FIFA #10), a 8-rank gap."
-    },
-    {
-      "home_team_id": "ESP",
-      "away_team_id": "SEN",
-      "home_fifa_rank": 2,
-      "away_fifa_rank": 18,
-      "rank_gap": 16,
-      "home_win_pct": 50.9,
-      "draw_pct": 24.0,
-      "away_win_pct": 25.1,
-      "home_expected_goals": 1.7,
-      "away_expected_goals": 1.13,
-      "warning": "ESP (FIFA #2) is given only 50.9% to beat SEN (FIFA #18), a 16-rank gap."
+      "away_win_pct": 42.6,
+      "home_expected_goals": 1.27,
+      "away_expected_goals": 1.5,
+      "warning": "ESP (FIFA #2) is given only 32.2% to beat FRA (FIFA #3), a 1-rank gap."
     },
     {
       "home_team_id": "POR",
@@ -2513,12 +2461,12 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 6,
       "rank_gap": 1,
-      "home_win_pct": 33.3,
+      "home_win_pct": 33.7,
       "draw_pct": 25.3,
-      "away_win_pct": 41.4,
-      "home_expected_goals": 1.3,
-      "away_expected_goals": 1.48,
-      "warning": "POR (FIFA #5) is given only 33.3% to beat BRA (FIFA #6), a 1-rank gap."
+      "away_win_pct": 40.9,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.47,
+      "warning": "POR (FIFA #5) is given only 33.7% to beat BRA (FIFA #6), a 1-rank gap."
     },
     {
       "home_team_id": "POR",
@@ -2526,12 +2474,12 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 10,
       "rank_gap": 5,
-      "home_win_pct": 36.0,
+      "home_win_pct": 36.7,
       "draw_pct": 25.4,
-      "away_win_pct": 38.6,
-      "home_expected_goals": 1.36,
-      "away_expected_goals": 1.41,
-      "warning": "POR (FIFA #5) is given only 36.0% to beat GER (FIFA #10), a 5-rank gap."
+      "away_win_pct": 37.9,
+      "home_expected_goals": 1.37,
+      "away_expected_goals": 1.4,
+      "warning": "POR (FIFA #5) is given only 36.7% to beat GER (FIFA #10), a 5-rank gap."
     },
     {
       "home_team_id": "POR",
@@ -2539,12 +2487,12 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 14,
       "rank_gap": 9,
-      "home_win_pct": 42.6,
+      "home_win_pct": 43.0,
       "draw_pct": 25.2,
-      "away_win_pct": 32.2,
-      "home_expected_goals": 1.5,
+      "away_win_pct": 31.8,
+      "home_expected_goals": 1.51,
       "away_expected_goals": 1.27,
-      "warning": "POR (FIFA #5) is given only 42.6% to beat COL (FIFA #14), a 9-rank gap."
+      "warning": "POR (FIFA #5) is given only 43.0% to beat COL (FIFA #14), a 9-rank gap."
     },
     {
       "home_team_id": "POR",
@@ -2552,12 +2500,12 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 18,
       "rank_gap": 13,
-      "home_win_pct": 47.3,
-      "draw_pct": 24.6,
-      "away_win_pct": 28.1,
-      "home_expected_goals": 1.61,
-      "away_expected_goals": 1.19,
-      "warning": "POR (FIFA #5) is given only 47.3% to beat JPN (FIFA #18), a 13-rank gap."
+      "home_win_pct": 48.3,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.2,
+      "home_expected_goals": 1.64,
+      "away_expected_goals": 1.17,
+      "warning": "POR (FIFA #5) is given only 48.3% to beat JPN (FIFA #18), a 13-rank gap."
     },
     {
       "home_team_id": "POR",
@@ -2565,25 +2513,12 @@
       "home_fifa_rank": 5,
       "away_fifa_rank": 18,
       "rank_gap": 13,
-      "home_win_pct": 44.2,
-      "draw_pct": 25.0,
-      "away_win_pct": 30.8,
-      "home_expected_goals": 1.54,
-      "away_expected_goals": 1.24,
-      "warning": "POR (FIFA #5) is given only 44.2% to beat SEN (FIFA #18), a 13-rank gap."
-    },
-    {
-      "home_team_id": "POR",
-      "away_team_id": "TUR",
-      "home_fifa_rank": 5,
-      "away_fifa_rank": 22,
-      "rank_gap": 17,
-      "home_win_pct": 51.7,
-      "draw_pct": 23.8,
-      "away_win_pct": 24.5,
-      "home_expected_goals": 1.72,
-      "away_expected_goals": 1.11,
-      "warning": "POR (FIFA #5) is given only 51.7% to beat TUR (FIFA #22), a 17-rank gap."
+      "home_win_pct": 45.6,
+      "draw_pct": 24.9,
+      "away_win_pct": 29.5,
+      "home_expected_goals": 1.57,
+      "away_expected_goals": 1.22,
+      "warning": "POR (FIFA #5) is given only 45.6% to beat SEN (FIFA #18), a 13-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2591,12 +2526,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 10,
       "rank_gap": 3,
-      "home_win_pct": 31.0,
+      "home_win_pct": 31.5,
       "draw_pct": 25.1,
-      "away_win_pct": 43.9,
-      "home_expected_goals": 1.25,
-      "away_expected_goals": 1.53,
-      "warning": "NED (FIFA #7) is given only 31.0% to beat GER (FIFA #10), a 3-rank gap."
+      "away_win_pct": 43.3,
+      "home_expected_goals": 1.26,
+      "away_expected_goals": 1.52,
+      "warning": "NED (FIFA #7) is given only 31.5% to beat GER (FIFA #10), a 3-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2604,12 +2539,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 14,
       "rank_gap": 7,
-      "home_win_pct": 37.3,
+      "home_win_pct": 37.6,
       "draw_pct": 25.4,
-      "away_win_pct": 37.3,
-      "home_expected_goals": 1.38,
+      "away_win_pct": 37.0,
+      "home_expected_goals": 1.39,
       "away_expected_goals": 1.38,
-      "warning": "NED (FIFA #7) is given only 37.3% to beat COL (FIFA #14), a 7-rank gap."
+      "warning": "NED (FIFA #7) is given only 37.6% to beat COL (FIFA #14), a 7-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2617,12 +2552,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 17,
       "rank_gap": 10,
-      "home_win_pct": 43.1,
-      "draw_pct": 25.2,
-      "away_win_pct": 31.7,
-      "home_expected_goals": 1.52,
-      "away_expected_goals": 1.26,
-      "warning": "NED (FIFA #7) is given only 43.1% to beat USA (FIFA #17), a 10-rank gap."
+      "home_win_pct": 44.2,
+      "draw_pct": 25.0,
+      "away_win_pct": 30.8,
+      "home_expected_goals": 1.54,
+      "away_expected_goals": 1.24,
+      "warning": "NED (FIFA #7) is given only 44.2% to beat USA (FIFA #17), a 10-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2630,12 +2565,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 18,
       "rank_gap": 11,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29,
-      "warning": "NED (FIFA #7) is given only 41.9% to beat JPN (FIFA #18), a 11-rank gap."
+      "home_win_pct": 42.7,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.1,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27,
+      "warning": "NED (FIFA #7) is given only 42.7% to beat JPN (FIFA #18), a 11-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2643,12 +2578,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 18,
       "rank_gap": 11,
-      "home_win_pct": 38.8,
+      "home_win_pct": 40.1,
       "draw_pct": 25.4,
-      "away_win_pct": 35.7,
-      "home_expected_goals": 1.42,
-      "away_expected_goals": 1.35,
-      "warning": "NED (FIFA #7) is given only 38.8% to beat SEN (FIFA #18), a 11-rank gap."
+      "away_win_pct": 34.5,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32,
+      "warning": "NED (FIFA #7) is given only 40.1% to beat SEN (FIFA #18), a 11-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2656,12 +2591,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 19,
       "rank_gap": 12,
-      "home_win_pct": 46.2,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.21,
-      "warning": "NED (FIFA #7) is given only 46.2% to beat SUI (FIFA #19), a 12-rank gap."
+      "home_win_pct": 47.2,
+      "draw_pct": 24.6,
+      "away_win_pct": 28.2,
+      "home_expected_goals": 1.61,
+      "away_expected_goals": 1.19,
+      "warning": "NED (FIFA #7) is given only 47.2% to beat SUI (FIFA #19), a 12-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2669,12 +2604,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 20,
       "rank_gap": 13,
-      "home_win_pct": 48.1,
+      "home_win_pct": 48.2,
       "draw_pct": 24.5,
       "away_win_pct": 27.4,
-      "home_expected_goals": 1.63,
+      "home_expected_goals": 1.64,
       "away_expected_goals": 1.17,
-      "warning": "NED (FIFA #7) is given only 48.1% to beat IRN (FIFA #20), a 13-rank gap."
+      "warning": "NED (FIFA #7) is given only 48.2% to beat IRN (FIFA #20), a 13-rank gap."
     },
     {
       "home_team_id": "NED",
@@ -2682,12 +2617,12 @@
       "home_fifa_rank": 7,
       "away_fifa_rank": 22,
       "rank_gap": 15,
-      "home_win_pct": 46.2,
-      "draw_pct": 24.8,
-      "away_win_pct": 29.0,
-      "home_expected_goals": 1.59,
-      "away_expected_goals": 1.21,
-      "warning": "NED (FIFA #7) is given only 46.2% to beat TUR (FIFA #22), a 15-rank gap."
+      "home_win_pct": 47.8,
+      "draw_pct": 24.5,
+      "away_win_pct": 27.6,
+      "home_expected_goals": 1.63,
+      "away_expected_goals": 1.18,
+      "warning": "NED (FIFA #7) is given only 47.8% to beat TUR (FIFA #22), a 15-rank gap."
     },
     {
       "home_team_id": "MAR",
@@ -2695,12 +2630,12 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 10,
       "rank_gap": 2,
-      "home_win_pct": 33.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 40.8,
-      "home_expected_goals": 1.31,
-      "away_expected_goals": 1.46,
-      "warning": "MAR (FIFA #8) is given only 33.9% to beat GER (FIFA #10), a 2-rank gap."
+      "home_win_pct": 34.5,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.1,
+      "home_expected_goals": 1.32,
+      "away_expected_goals": 1.45,
+      "warning": "MAR (FIFA #8) is given only 34.5% to beat GER (FIFA #10), a 2-rank gap."
     },
     {
       "home_team_id": "MAR",
@@ -2708,25 +2643,12 @@
       "home_fifa_rank": 8,
       "away_fifa_rank": 18,
       "rank_gap": 10,
-      "home_win_pct": 42.0,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29,
-      "warning": "MAR (FIFA #8) is given only 42.0% to beat SEN (FIFA #18), a 10-rank gap."
-    },
-    {
-      "home_team_id": "MAR",
-      "away_team_id": "TUR",
-      "home_fifa_rank": 8,
-      "away_fifa_rank": 22,
-      "rank_gap": 14,
-      "home_win_pct": 49.4,
-      "draw_pct": 24.3,
-      "away_win_pct": 26.3,
-      "home_expected_goals": 1.67,
-      "away_expected_goals": 1.15,
-      "warning": "MAR (FIFA #8) is given only 49.4% to beat TUR (FIFA #22), a 14-rank gap."
+      "home_win_pct": 43.3,
+      "draw_pct": 25.1,
+      "away_win_pct": 31.5,
+      "home_expected_goals": 1.52,
+      "away_expected_goals": 1.26,
+      "warning": "MAR (FIFA #8) is given only 43.3% to beat SEN (FIFA #18), a 10-rank gap."
     },
     {
       "home_team_id": "BEL",
@@ -2734,12 +2656,12 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 10,
       "rank_gap": 1,
-      "home_win_pct": 33.6,
-      "draw_pct": 25.3,
-      "away_win_pct": 41.1,
-      "home_expected_goals": 1.3,
-      "away_expected_goals": 1.47,
-      "warning": "BEL (FIFA #9) is given only 33.6% to beat GER (FIFA #10), a 1-rank gap."
+      "home_win_pct": 34.1,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.6,
+      "home_expected_goals": 1.31,
+      "away_expected_goals": 1.46,
+      "warning": "BEL (FIFA #9) is given only 34.1% to beat GER (FIFA #10), a 1-rank gap."
     },
     {
       "home_team_id": "BEL",
@@ -2747,12 +2669,12 @@
       "home_fifa_rank": 9,
       "away_fifa_rank": 18,
       "rank_gap": 9,
-      "home_win_pct": 41.6,
-      "draw_pct": 25.3,
-      "away_win_pct": 33.1,
-      "home_expected_goals": 1.48,
-      "away_expected_goals": 1.29,
-      "warning": "BEL (FIFA #9) is given only 41.6% to beat SEN (FIFA #18), a 9-rank gap."
+      "home_win_pct": 42.9,
+      "draw_pct": 25.2,
+      "away_win_pct": 32.0,
+      "home_expected_goals": 1.51,
+      "away_expected_goals": 1.27,
+      "warning": "BEL (FIFA #9) is given only 42.9% to beat SEN (FIFA #18), a 9-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2760,12 +2682,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 36.7,
+      "home_win_pct": 37.1,
       "draw_pct": 25.4,
-      "away_win_pct": 37.8,
-      "home_expected_goals": 1.37,
-      "away_expected_goals": 1.4,
-      "warning": "CRO (FIFA #10) is given only 36.7% to beat MEX (FIFA #14), a 4-rank gap."
+      "away_win_pct": 37.4,
+      "home_expected_goals": 1.38,
+      "away_expected_goals": 1.39,
+      "warning": "CRO (FIFA #10) is given only 37.1% to beat MEX (FIFA #14), a 4-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2773,12 +2695,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 35.1,
+      "home_win_pct": 35.9,
       "draw_pct": 25.4,
-      "away_win_pct": 39.5,
-      "home_expected_goals": 1.34,
-      "away_expected_goals": 1.43,
-      "warning": "CRO (FIFA #10) is given only 35.1% to beat URU (FIFA #14), a 4-rank gap."
+      "away_win_pct": 38.7,
+      "home_expected_goals": 1.35,
+      "away_expected_goals": 1.42,
+      "warning": "CRO (FIFA #10) is given only 35.9% to beat URU (FIFA #14), a 4-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2786,12 +2708,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 14,
       "rank_gap": 4,
-      "home_win_pct": 29.7,
-      "draw_pct": 24.9,
-      "away_win_pct": 45.4,
-      "home_expected_goals": 1.22,
-      "away_expected_goals": 1.57,
-      "warning": "CRO (FIFA #10) is given only 29.7% to beat COL (FIFA #14), a 4-rank gap."
+      "home_win_pct": 30.1,
+      "draw_pct": 25.0,
+      "away_win_pct": 44.9,
+      "home_expected_goals": 1.23,
+      "away_expected_goals": 1.56,
+      "warning": "CRO (FIFA #10) is given only 30.1% to beat COL (FIFA #14), a 4-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2799,12 +2721,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 17,
       "rank_gap": 7,
-      "home_win_pct": 35.1,
+      "home_win_pct": 36.3,
       "draw_pct": 25.4,
-      "away_win_pct": 39.5,
-      "home_expected_goals": 1.34,
-      "away_expected_goals": 1.43,
-      "warning": "CRO (FIFA #10) is given only 35.1% to beat USA (FIFA #17), a 7-rank gap."
+      "away_win_pct": 38.3,
+      "home_expected_goals": 1.36,
+      "away_expected_goals": 1.41,
+      "warning": "CRO (FIFA #10) is given only 36.3% to beat USA (FIFA #17), a 7-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2812,12 +2734,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 34.0,
-      "draw_pct": 25.3,
-      "away_win_pct": 40.7,
-      "home_expected_goals": 1.31,
-      "away_expected_goals": 1.46,
-      "warning": "CRO (FIFA #10) is given only 34.0% to beat JPN (FIFA #18), a 8-rank gap."
+      "home_win_pct": 34.9,
+      "draw_pct": 25.4,
+      "away_win_pct": 39.7,
+      "home_expected_goals": 1.33,
+      "away_expected_goals": 1.44,
+      "warning": "CRO (FIFA #10) is given only 34.9% to beat JPN (FIFA #18), a 8-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2825,12 +2747,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 18,
       "rank_gap": 8,
-      "home_win_pct": 31.1,
-      "draw_pct": 25.1,
-      "away_win_pct": 43.8,
-      "home_expected_goals": 1.25,
-      "away_expected_goals": 1.53,
-      "warning": "CRO (FIFA #10) is given only 31.1% to beat SEN (FIFA #18), a 8-rank gap."
+      "home_win_pct": 32.5,
+      "draw_pct": 25.2,
+      "away_win_pct": 42.3,
+      "home_expected_goals": 1.28,
+      "away_expected_goals": 1.5,
+      "warning": "CRO (FIFA #10) is given only 32.5% to beat SEN (FIFA #18), a 8-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2838,12 +2760,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 19,
       "rank_gap": 9,
-      "home_win_pct": 38.0,
+      "home_win_pct": 39.2,
       "draw_pct": 25.4,
-      "away_win_pct": 36.5,
-      "home_expected_goals": 1.4,
-      "away_expected_goals": 1.37,
-      "warning": "CRO (FIFA #10) is given only 38.0% to beat SUI (FIFA #19), a 9-rank gap."
+      "away_win_pct": 35.4,
+      "home_expected_goals": 1.43,
+      "away_expected_goals": 1.34,
+      "warning": "CRO (FIFA #10) is given only 39.2% to beat SUI (FIFA #19), a 9-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2851,12 +2773,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 20,
       "rank_gap": 10,
-      "home_win_pct": 39.9,
+      "home_win_pct": 40.1,
       "draw_pct": 25.4,
-      "away_win_pct": 34.7,
-      "home_expected_goals": 1.44,
-      "away_expected_goals": 1.33,
-      "warning": "CRO (FIFA #10) is given only 39.9% to beat IRN (FIFA #20), a 10-rank gap."
+      "away_win_pct": 34.5,
+      "home_expected_goals": 1.45,
+      "away_expected_goals": 1.32,
+      "warning": "CRO (FIFA #10) is given only 40.1% to beat IRN (FIFA #20), a 10-rank gap."
     },
     {
       "home_team_id": "CRO",
@@ -2864,12 +2786,12 @@
       "home_fifa_rank": 10,
       "away_fifa_rank": 22,
       "rank_gap": 12,
-      "home_win_pct": 38.1,
+      "home_win_pct": 39.8,
       "draw_pct": 25.4,
-      "away_win_pct": 36.5,
-      "home_expected_goals": 1.4,
-      "away_expected_goals": 1.37,
-      "warning": "CRO (FIFA #10) is given only 38.1% to beat TUR (FIFA #22), a 12-rank gap."
+      "away_win_pct": 34.8,
+      "home_expected_goals": 1.44,
+      "away_expected_goals": 1.33,
+      "warning": "CRO (FIFA #10) is given only 39.8% to beat TUR (FIFA #22), a 12-rank gap."
     },
     {
       "home_team_id": "MEX",
@@ -2879,7 +2801,7 @@
       "rank_gap": 0,
       "home_win_pct": 31.7,
       "draw_pct": 25.2,
-      "away_win_pct": 43.2,
+      "away_win_pct": 43.1,
       "home_expected_goals": 1.26,
       "away_expected_goals": 1.52,
       "warning": "MEX (FIFA #14) is given only 31.7% to beat COL (FIFA #14), a 0-rank gap."
@@ -2890,12 +2812,12 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 36.1,
+      "home_win_pct": 36.6,
       "draw_pct": 25.4,
-      "away_win_pct": 38.5,
-      "home_expected_goals": 1.36,
-      "away_expected_goals": 1.41,
-      "warning": "MEX (FIFA #14) is given only 36.1% to beat JPN (FIFA #18), a 4-rank gap."
+      "away_win_pct": 38.0,
+      "home_expected_goals": 1.37,
+      "away_expected_goals": 1.4,
+      "warning": "MEX (FIFA #14) is given only 36.6% to beat JPN (FIFA #18), a 4-rank gap."
     },
     {
       "home_team_id": "MEX",
@@ -2903,38 +2825,38 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 33.2,
+      "home_win_pct": 34.1,
+      "draw_pct": 25.4,
+      "away_win_pct": 40.5,
+      "home_expected_goals": 1.32,
+      "away_expected_goals": 1.46,
+      "warning": "MEX (FIFA #14) is given only 34.1% to beat SEN (FIFA #18), a 4-rank gap."
+    },
+    {
+      "home_team_id": "MEX",
+      "away_team_id": "TUR",
+      "home_fifa_rank": 14,
+      "away_fifa_rank": 22,
+      "rank_gap": 8,
+      "home_win_pct": 41.5,
       "draw_pct": 25.3,
-      "away_win_pct": 41.6,
+      "away_win_pct": 33.2,
+      "home_expected_goals": 1.48,
+      "away_expected_goals": 1.3,
+      "warning": "MEX (FIFA #14) is given only 41.5% to beat TUR (FIFA #22), a 8-rank gap."
+    },
+    {
+      "home_team_id": "URU",
+      "away_team_id": "COL",
+      "home_fifa_rank": 14,
+      "away_fifa_rank": 14,
+      "rank_gap": 0,
+      "home_win_pct": 32.9,
+      "draw_pct": 25.3,
+      "away_win_pct": 41.8,
       "home_expected_goals": 1.29,
-      "away_expected_goals": 1.48,
-      "warning": "MEX (FIFA #14) is given only 33.2% to beat SEN (FIFA #18), a 4-rank gap."
-    },
-    {
-      "home_team_id": "MEX",
-      "away_team_id": "TUR",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 22,
-      "rank_gap": 8,
-      "home_win_pct": 40.2,
-      "draw_pct": 25.4,
-      "away_win_pct": 34.4,
-      "home_expected_goals": 1.45,
-      "away_expected_goals": 1.32,
-      "warning": "MEX (FIFA #14) is given only 40.2% to beat TUR (FIFA #22), a 8-rank gap."
-    },
-    {
-      "home_team_id": "URU",
-      "away_team_id": "JPN",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 18,
-      "rank_gap": 4,
-      "home_win_pct": 37.7,
-      "draw_pct": 25.4,
-      "away_win_pct": 36.9,
-      "home_expected_goals": 1.39,
-      "away_expected_goals": 1.38,
-      "warning": "URU (FIFA #14) is given only 37.7% to beat JPN (FIFA #18), a 4-rank gap."
+      "away_expected_goals": 1.49,
+      "warning": "URU (FIFA #14) is given only 32.9% to beat COL (FIFA #14), a 0-rank gap."
     },
     {
       "home_team_id": "URU",
@@ -2942,25 +2864,12 @@
       "home_fifa_rank": 14,
       "away_fifa_rank": 18,
       "rank_gap": 4,
-      "home_win_pct": 34.7,
+      "home_win_pct": 35.3,
       "draw_pct": 25.4,
-      "away_win_pct": 39.9,
-      "home_expected_goals": 1.33,
-      "away_expected_goals": 1.44,
-      "warning": "URU (FIFA #14) is given only 34.7% to beat SEN (FIFA #18), a 4-rank gap."
-    },
-    {
-      "home_team_id": "URU",
-      "away_team_id": "TUR",
-      "home_fifa_rank": 14,
-      "away_fifa_rank": 22,
-      "rank_gap": 8,
-      "home_win_pct": 41.9,
-      "draw_pct": 25.3,
-      "away_win_pct": 32.8,
-      "home_expected_goals": 1.49,
-      "away_expected_goals": 1.29,
-      "warning": "URU (FIFA #14) is given only 41.9% to beat TUR (FIFA #22), a 8-rank gap."
+      "away_win_pct": 39.3,
+      "home_expected_goals": 1.34,
+      "away_expected_goals": 1.43,
+      "warning": "URU (FIFA #14) is given only 35.3% to beat SEN (FIFA #18), a 4-rank gap."
     }
   ],
   "frequentRankUnderperformers": [
@@ -2974,50 +2883,34 @@
     },
     {
       "team_id": "POR",
-      "implausible_matchup_count": 6
+      "implausible_matchup_count": 5
     },
     {
       "team_id": "MEX",
       "implausible_matchup_count": 4
-    },
-    {
-      "team_id": "ARG",
-      "implausible_matchup_count": 3
-    },
-    {
-      "team_id": "ESP",
-      "implausible_matchup_count": 3
-    },
-    {
-      "team_id": "MAR",
-      "implausible_matchup_count": 3
-    },
-    {
-      "team_id": "URU",
-      "implausible_matchup_count": 3
     }
   ],
   "hostAdvantageCheck": [
     {
       "host_team_id": "CAN",
-      "reference_opponent_id": "ALG",
-      "home_win_pct_with_host_bump": 39.4,
-      "home_win_pct_without_host_bump": 33.1,
-      "delta_pp": 6.3
+      "reference_opponent_id": "SWE",
+      "home_win_pct_with_host_bump": 36.8,
+      "home_win_pct_without_host_bump": 30.8,
+      "delta_pp": 6.0
     },
     {
       "host_team_id": "MEX",
-      "reference_opponent_id": "ALG",
-      "home_win_pct_with_host_bump": 47.0,
-      "home_win_pct_without_host_bump": 40.0,
-      "delta_pp": 7.0
+      "reference_opponent_id": "SWE",
+      "home_win_pct_with_host_bump": 46.2,
+      "home_win_pct_without_host_bump": 39.3,
+      "delta_pp": 6.9
     },
     {
       "host_team_id": "USA",
-      "reference_opponent_id": "ALG",
-      "home_win_pct_with_host_bump": 48.8,
-      "home_win_pct_without_host_bump": 41.7,
-      "delta_pp": 7.1
+      "reference_opponent_id": "SWE",
+      "home_win_pct_with_host_bump": 47.1,
+      "home_win_pct_without_host_bump": 40.2,
+      "delta_pp": 6.9
     }
   ],
   "tacticalModifierCheck": {
@@ -3033,108 +2926,99 @@
     "underdog_team_count": 24,
     "by_sample_size": {
       "100": {
-        "underdog_champion_pct_sum": 7.0,
-        "underdog_round_of_16_pct_sum": 406.0
+        "underdog_champion_pct_sum": 8.0,
+        "underdog_round_of_16_pct_sum": 385.0
       },
       "500": {
-        "underdog_champion_pct_sum": 6.4,
-        "underdog_round_of_16_pct_sum": 429.6
+        "underdog_champion_pct_sum": 5.4,
+        "underdog_round_of_16_pct_sum": 406.4
       }
     },
     "champion_pct_at_500_iterations": {
-      "BRA": 8.4,
-      "ARG": 13.0,
-      "FRA": 18.8,
-      "ENG": 8.4,
-      "GER": 7.2,
+      "BRA": 6.6,
+      "ARG": 14.8,
+      "FRA": 20.2,
+      "ENG": 8.0,
+      "GER": 5.4,
       "USA": 3.4,
-      "MEX": 3.0,
-      "RSA": 0.2,
+      "MEX": 2.6,
       "KOR": 0.8,
-      "CAN": 1.2,
-      "SUI": 1.4,
-      "MAR": 3.4,
+      "CZE": 0.4,
+      "CAN": 0.6,
+      "QAT": 0.2,
+      "SUI": 1.0,
+      "MAR": 4.0,
       "SCO": 0.2,
       "AUS": 0.4,
       "CIV": 0.2,
-      "NED": 1.2,
-      "JPN": 1.2,
-      "SWE": 0.4,
-      "BEL": 2.2,
+      "ECU": 0.2,
+      "NED": 2.6,
+      "JPN": 0.6,
+      "SWE": 0.8,
+      "BEL": 3.0,
       "EGY": 1.4,
-      "IRN": 0.2,
-      "ESP": 10.8,
+      "IRN": 0.8,
+      "ESP": 12.0,
       "KSA": 0.2,
-      "URU": 0.4,
-      "SEN": 2.0,
-      "NOR": 1.8,
-      "ALG": 0.6,
-      "POR": 4.0,
+      "URU": 1.0,
+      "SEN": 1.2,
+      "NOR": 1.2,
+      "ALG": 0.4,
+      "POR": 3.0,
       "UZB": 0.2,
-      "COL": 3.2,
-      "CRO": 0.2
+      "COL": 2.0,
+      "CRO": 0.6
     }
   },
   "championOddsConcentration": {
     "uniform_pct_if_equal_chance": 2.08,
-    "top1_champion_pct": 18.8,
-    "top3_champion_pct_sum": 42.6,
-    "top5_champion_pct_sum": 59.4,
-    "teams_with_nonzero_champion_pct": 31,
+    "top1_champion_pct": 20.2,
+    "top3_champion_pct_sum": 47.0,
+    "top5_champion_pct_sum": 61.6,
+    "teams_with_nonzero_champion_pct": 33,
     "assessment": "reasonable"
   },
   "warnings": [
-    "ARG (FIFA #1) is given only 32.2% to beat FRA (FIFA #3), a 2-rank gap.",
-    "ARG (FIFA #1) is given only 43.0% to beat GER (FIFA #10), a 9-rank gap.",
-    "ARG (FIFA #1) is given only 51.5% to beat SEN (FIFA #18), a 17-rank gap.",
-    "ESP (FIFA #2) is given only 31.6% to beat FRA (FIFA #3), a 1-rank gap.",
-    "ESP (FIFA #2) is given only 42.4% to beat GER (FIFA #10), a 8-rank gap.",
-    "ESP (FIFA #2) is given only 50.9% to beat SEN (FIFA #18), a 16-rank gap.",
-    "POR (FIFA #5) is given only 33.3% to beat BRA (FIFA #6), a 1-rank gap.",
-    "POR (FIFA #5) is given only 36.0% to beat GER (FIFA #10), a 5-rank gap.",
-    "POR (FIFA #5) is given only 42.6% to beat COL (FIFA #14), a 9-rank gap.",
-    "POR (FIFA #5) is given only 47.3% to beat JPN (FIFA #18), a 13-rank gap.",
-    "POR (FIFA #5) is given only 44.2% to beat SEN (FIFA #18), a 13-rank gap.",
-    "POR (FIFA #5) is given only 51.7% to beat TUR (FIFA #22), a 17-rank gap.",
-    "NED (FIFA #7) is given only 31.0% to beat GER (FIFA #10), a 3-rank gap.",
-    "NED (FIFA #7) is given only 37.3% to beat COL (FIFA #14), a 7-rank gap.",
-    "NED (FIFA #7) is given only 43.1% to beat USA (FIFA #17), a 10-rank gap.",
-    "NED (FIFA #7) is given only 41.9% to beat JPN (FIFA #18), a 11-rank gap.",
-    "NED (FIFA #7) is given only 38.8% to beat SEN (FIFA #18), a 11-rank gap.",
-    "NED (FIFA #7) is given only 46.2% to beat SUI (FIFA #19), a 12-rank gap.",
-    "NED (FIFA #7) is given only 48.1% to beat IRN (FIFA #20), a 13-rank gap.",
-    "NED (FIFA #7) is given only 46.2% to beat TUR (FIFA #22), a 15-rank gap.",
-    "MAR (FIFA #8) is given only 33.9% to beat GER (FIFA #10), a 2-rank gap.",
-    "MAR (FIFA #8) is given only 42.0% to beat SEN (FIFA #18), a 10-rank gap.",
-    "MAR (FIFA #8) is given only 49.4% to beat TUR (FIFA #22), a 14-rank gap.",
-    "BEL (FIFA #9) is given only 33.6% to beat GER (FIFA #10), a 1-rank gap.",
-    "BEL (FIFA #9) is given only 41.6% to beat SEN (FIFA #18), a 9-rank gap.",
-    "CRO (FIFA #10) is given only 36.7% to beat MEX (FIFA #14), a 4-rank gap.",
-    "CRO (FIFA #10) is given only 35.1% to beat URU (FIFA #14), a 4-rank gap.",
-    "CRO (FIFA #10) is given only 29.7% to beat COL (FIFA #14), a 4-rank gap.",
-    "CRO (FIFA #10) is given only 35.1% to beat USA (FIFA #17), a 7-rank gap.",
-    "CRO (FIFA #10) is given only 34.0% to beat JPN (FIFA #18), a 8-rank gap.",
-    "CRO (FIFA #10) is given only 31.1% to beat SEN (FIFA #18), a 8-rank gap.",
-    "CRO (FIFA #10) is given only 38.0% to beat SUI (FIFA #19), a 9-rank gap.",
-    "CRO (FIFA #10) is given only 39.9% to beat IRN (FIFA #20), a 10-rank gap.",
-    "CRO (FIFA #10) is given only 38.1% to beat TUR (FIFA #22), a 12-rank gap.",
+    "ARG (FIFA #1) is given only 33.6% to beat FRA (FIFA #3), a 2-rank gap.",
+    "ESP (FIFA #2) is given only 32.2% to beat FRA (FIFA #3), a 1-rank gap.",
+    "POR (FIFA #5) is given only 33.7% to beat BRA (FIFA #6), a 1-rank gap.",
+    "POR (FIFA #5) is given only 36.7% to beat GER (FIFA #10), a 5-rank gap.",
+    "POR (FIFA #5) is given only 43.0% to beat COL (FIFA #14), a 9-rank gap.",
+    "POR (FIFA #5) is given only 48.3% to beat JPN (FIFA #18), a 13-rank gap.",
+    "POR (FIFA #5) is given only 45.6% to beat SEN (FIFA #18), a 13-rank gap.",
+    "NED (FIFA #7) is given only 31.5% to beat GER (FIFA #10), a 3-rank gap.",
+    "NED (FIFA #7) is given only 37.6% to beat COL (FIFA #14), a 7-rank gap.",
+    "NED (FIFA #7) is given only 44.2% to beat USA (FIFA #17), a 10-rank gap.",
+    "NED (FIFA #7) is given only 42.7% to beat JPN (FIFA #18), a 11-rank gap.",
+    "NED (FIFA #7) is given only 40.1% to beat SEN (FIFA #18), a 11-rank gap.",
+    "NED (FIFA #7) is given only 47.2% to beat SUI (FIFA #19), a 12-rank gap.",
+    "NED (FIFA #7) is given only 48.2% to beat IRN (FIFA #20), a 13-rank gap.",
+    "NED (FIFA #7) is given only 47.8% to beat TUR (FIFA #22), a 15-rank gap.",
+    "MAR (FIFA #8) is given only 34.5% to beat GER (FIFA #10), a 2-rank gap.",
+    "MAR (FIFA #8) is given only 43.3% to beat SEN (FIFA #18), a 10-rank gap.",
+    "BEL (FIFA #9) is given only 34.1% to beat GER (FIFA #10), a 1-rank gap.",
+    "BEL (FIFA #9) is given only 42.9% to beat SEN (FIFA #18), a 9-rank gap.",
+    "CRO (FIFA #10) is given only 37.1% to beat MEX (FIFA #14), a 4-rank gap.",
+    "CRO (FIFA #10) is given only 35.9% to beat URU (FIFA #14), a 4-rank gap.",
+    "CRO (FIFA #10) is given only 30.1% to beat COL (FIFA #14), a 4-rank gap.",
+    "CRO (FIFA #10) is given only 36.3% to beat USA (FIFA #17), a 7-rank gap.",
+    "CRO (FIFA #10) is given only 34.9% to beat JPN (FIFA #18), a 8-rank gap.",
+    "CRO (FIFA #10) is given only 32.5% to beat SEN (FIFA #18), a 8-rank gap.",
+    "CRO (FIFA #10) is given only 39.2% to beat SUI (FIFA #19), a 9-rank gap.",
+    "CRO (FIFA #10) is given only 40.1% to beat IRN (FIFA #20), a 10-rank gap.",
+    "CRO (FIFA #10) is given only 39.8% to beat TUR (FIFA #22), a 12-rank gap.",
     "MEX (FIFA #14) is given only 31.7% to beat COL (FIFA #14), a 0-rank gap.",
-    "MEX (FIFA #14) is given only 36.1% to beat JPN (FIFA #18), a 4-rank gap.",
-    "MEX (FIFA #14) is given only 33.2% to beat SEN (FIFA #18), a 4-rank gap.",
-    "MEX (FIFA #14) is given only 40.2% to beat TUR (FIFA #22), a 8-rank gap.",
-    "URU (FIFA #14) is given only 37.7% to beat JPN (FIFA #18), a 4-rank gap.",
-    "URU (FIFA #14) is given only 34.7% to beat SEN (FIFA #18), a 4-rank gap.",
-    "URU (FIFA #14) is given only 41.9% to beat TUR (FIFA #22), a 8-rank gap.",
+    "MEX (FIFA #14) is given only 36.6% to beat JPN (FIFA #18), a 4-rank gap.",
+    "MEX (FIFA #14) is given only 34.1% to beat SEN (FIFA #18), a 4-rank gap.",
+    "MEX (FIFA #14) is given only 41.5% to beat TUR (FIFA #22), a 8-rank gap.",
+    "URU (FIFA #14) is given only 32.9% to beat COL (FIFA #14), a 0-rank gap.",
+    "URU (FIFA #14) is given only 35.3% to beat SEN (FIFA #18), a 4-rank gap.",
     "CRO is the better-FIFA-ranked side in 9 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
     "NED is the better-FIFA-ranked side in 8 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "POR is the better-FIFA-ranked side in 6 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "MEX is the better-FIFA-ranked side in 4 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "ARG is the better-FIFA-ranked side in 3 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "ESP is the better-FIFA-ranked side in 3 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "MAR is the better-FIFA-ranked side in 3 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
-    "URU is the better-FIFA-ranked side in 3 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank."
+    "POR is the better-FIFA-ranked side in 5 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank.",
+    "MEX is the better-FIFA-ranked side in 4 matchups where the model still doesn't clearly favor it -- its squad-derived rating may undershoot its FIFA rank."
   ],
   "recommendedChanges": [
-    "Squad-rating review (not a formula change): CRO (9 matchups), NED (8 matchups), POR (6 matchups), MEX (4 matchups), ARG (3 matchups), ESP (3 matchups), MAR (3 matchups), URU (3 matchups) consistently underperform their FIFA rank in this model. Worth a Codex review of these teams' player attributes/qualitative_adjustments rather than a global ModelConfig change."
+    "Squad-rating review (not a formula change): CRO (9 matchups), NED (8 matchups), POR (5 matchups), MEX (4 matchups) consistently underperform their FIFA rank in this model. Worth a Codex review of these teams' player attributes/qualitative_adjustments rather than a global ModelConfig change."
   ]
 }

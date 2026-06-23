@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-23T10:22:41.032858+00:00",
+  "generatedAt": "2026-06-23T11:23:55.360231+00:00",
   "sourceReports": [
     {
       "name": "squad_rating_gap_review",
-      "generatedAt": "2026-06-23T08:21:24.750211+00:00"
+      "generatedAt": "2026-06-23T11:23:55.101299+00:00"
     },
     {
       "name": "team_data_review_plan",
-      "generatedAt": "2026-06-23T08:21:24.488489+00:00"
+      "generatedAt": "2026-06-23T11:23:54.823070+00:00"
     },
     {
       "name": "roster_reconciliation_candidates",
@@ -1234,8 +1234,8 @@
       "team_id": "POR",
       "team_name": "Portugal",
       "fifa_rank": 5,
-      "squad_gap_priority_score": 96.0,
-      "rank_underperformance_flags": 6,
+      "squad_gap_priority_score": 81.0,
+      "rank_underperformance_flags": 5,
       "recommended_next_action": "rating_data_review",
       "position_group_summary": {
         "GK": {
@@ -2434,240 +2434,72 @@
       ]
     },
     {
-      "team_id": "MAR",
-      "team_name": "Morocco",
-      "fifa_rank": 8,
-      "squad_gap_priority_score": 58.5,
-      "rank_underperformance_flags": 3,
-      "recommended_next_action": "rating_data_review",
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "fifa_rank": 63,
+      "squad_gap_priority_score": 35.0,
+      "rank_underperformance_flags": 0,
+      "recommended_next_action": "name_matching_review",
       "position_group_summary": {
         "GK": {
           "count": 2,
-          "avg_overall": 49.0,
+          "avg_overall": 46.5,
           "top_player": {
-            "name": "Yassine Bounou",
-            "overall": 50
+            "name": "Yazeed Abulaila",
+            "overall": 47
           },
           "is_weak_group": false,
-          "review_candidate_count": 2
+          "review_candidate_count": 1
         },
         "DF": {
-          "count": 6,
-          "avg_overall": 60.5,
+          "count": 3,
+          "avg_overall": 46.3,
           "top_player": {
-            "name": "Achraf Hakimi",
-            "overall": 68
+            "name": "Anas Banawi",
+            "overall": 47
+          },
+          "is_weak_group": true,
+          "review_candidate_count": 3
+        },
+        "MF": {
+          "count": 3,
+          "avg_overall": 42.3,
+          "top_player": {
+            "name": "Ibrahim Saadeh",
+            "overall": 43
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 1
+        },
+        "FW": {
+          "count": 5,
+          "avg_overall": 48.6,
+          "top_player": {
+            "name": "Mousa Al-Tamari",
+            "overall": 61
           },
           "is_weak_group": false,
           "review_candidate_count": 2
-        },
-        "MF": {
-          "count": 4,
-          "avg_overall": 57.8,
-          "top_player": {
-            "name": "Brahim Diaz",
-            "overall": 66
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 3
-        },
-        "FW": {
-          "count": 3,
-          "avg_overall": 59.0,
-          "top_player": {
-            "name": "Soufiane Rahimi",
-            "overall": 60
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 3
         }
       },
       "rating_review_candidates": [
         {
-          "player_id": "MAR_AMRABAT",
-          "name": "Sofyan Amrabat",
-          "name_ja": "ソフィアン・アムラバト",
-          "primary_position": "CDM",
-          "age": 29,
-          "club_name": "Real Betis (ESP)",
-          "caps": 75,
-          "national_team_goals": 0,
-          "market_value_eur": 12000000,
+          "player_id": "JOR_ABUTAHA",
+          "name": "Mohannad Abu Taha",
+          "name_ja": "モハンナド・アブタハ",
+          "primary_position": "LB",
+          "age": 27,
+          "club_name": "Al-Quwa Al-Jawiya (IRQ)",
+          "caps": 31,
+          "national_team_goals": 1,
+          "market_value_eur": 350000,
           "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Real Betis La Liga loan 2025-26 stats"
+            "Iraqi Premier League 2025-26 stats (Al-Quwa Al-Jawiya)",
+            "FIFA.com Jordan WC2026 squad announcement"
           ],
-          "current_overall": 52,
-          "position_overall": 52,
-          "starting_probability": 42,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2,
-            "physical": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "MAR_BOUNOU",
-          "name": "Yassine Bounou",
-          "name_ja": "ヤシン・ブヌ",
-          "primary_position": "GK",
-          "age": 35,
-          "club_name": "Al Hilal SC (KSA)",
-          "caps": 92,
-          "national_team_goals": 0,
-          "market_value_eur": 2400000,
-          "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Al-Hilal Saudi Pro League 2025-26 stats",
-            "EA Sports FC 26 headline rating (minor signal)"
-          ],
-          "current_overall": 50,
-          "position_overall": 50,
-          "starting_probability": 75,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2,
-            "passing": 0
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "MAR_DIAZ",
-          "name": "Brahim Diaz",
-          "name_ja": "ブラヒム・ディアス",
-          "primary_position": "CAM",
-          "age": 26,
-          "club_name": "Real Madrid C. F. (ESP)",
-          "caps": 28,
-          "national_team_goals": 15,
-          "market_value_eur": 60000000,
-          "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Real Madrid La Liga/UCL 2025-26 stats",
-            "EA Sports FC 26 headline rating (minor signal)"
-          ],
-          "current_overall": 66,
-          "position_overall": 66,
-          "starting_probability": 88,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "dribbling": 2,
-            "passing": 2
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "MAR_DIOP",
-          "name": "Issa Diop",
-          "name_ja": "イサ・ディオプ",
-          "primary_position": "CB",
-          "age": 29,
-          "club_name": "Fulham FC (ENG)",
-          "caps": 6,
-          "national_team_goals": 0,
-          "market_value_eur": 15000000,
-          "source_citations": [
-            "Wikipedia -- Issa Diop; Premier League regular at Fulham",
-            "Morocco squad announcement -- FIFA-approved eligibility switch from France (March 26 2026), selected to 26-man squad (May 26 2026)",
-            "hespress.com -- Youssef En-Nesyri confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
-          ],
-          "current_overall": 61,
-          "position_overall": 61,
-          "starting_probability": 27,
+          "current_overall": 45,
+          "position_overall": 45,
+          "starting_probability": 17,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -2691,90 +2523,35 @@
             "currentForm"
           ],
           "qualitative_adjustments": {},
-          "review_score": 20.0,
+          "review_score": 24.0,
           "review_band": "medium",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "MAR_ELKAJOUI",
-          "name": "Munir El Kajoui",
-          "name_ja": "ムニル・エルカジュイ",
-          "primary_position": "GK",
-          "age": 33,
-          "club_name": "RS Berkane (MAR)",
-          "caps": 52,
-          "national_team_goals": 0,
-          "market_value_eur": 800000,
-          "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Botola Pro 2025-26 stats"
-          ],
-          "current_overall": 48,
-          "position_overall": 48,
-          "starting_probability": 25,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 0
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
+            "weak_position_group",
             "caps_outpace_rating"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
+            "手薄なポジショングループに所属しています。",
             "代表キャップ数が現在の能力値評価に対して多めです。"
           ],
           "suggested_codex_action": "inspect_for_possible_upgrade"
         },
         {
-          "player_id": "MAR_ELKHANNOUSS",
-          "name": "Bilal El Khannouss",
-          "name_ja": "ビラル・エルカヌース",
-          "primary_position": "CAM",
-          "age": 21,
-          "club_name": "VfB Stuttgart (GER)",
-          "caps": 39,
-          "national_team_goals": 3,
-          "market_value_eur": 28000000,
+          "player_id": "JOR_NASIB",
+          "name": "Abdallah Nasib",
+          "name_ja": "アブダラー・ナシブ",
+          "primary_position": "RB",
+          "age": 28,
+          "club_name": "Al Zawra'a SC (IRQ)",
+          "caps": 66,
+          "national_team_goals": 2,
+          "market_value_eur": 450000,
           "source_citations": [
-            "Transfermarkt profile 25/26",
-            "VfB Stuttgart Bundesliga 2025-26 stats",
-            "EA Sports FC 26 headline rating (minor signal)"
+            "Iraqi Premier League 2025-26 stats (Al-Zawraa)",
+            "FIFA.com Jordan WC2026 squad announcement"
           ],
-          "current_overall": 60,
-          "position_overall": 60,
-          "starting_probability": 40,
+          "current_overall": 47,
+          "position_overall": 47,
+          "starting_probability": 54,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -2797,93 +2574,35 @@
             "goalkeeperDistribution",
             "currentForm"
           ],
-          "qualitative_adjustments": {
-            "passing": 2,
-            "dribbling": 1
-          },
-          "review_score": 20.0,
+          "qualitative_adjustments": {},
+          "review_score": 24.0,
           "review_band": "medium",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
+            "weak_position_group",
+            "caps_outpace_rating"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
+            "手薄なポジショングループに所属しています。",
+            "代表キャップ数が現在の能力値評価に対して多めです。"
           ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
+          "suggested_codex_action": "inspect_for_possible_upgrade"
         },
         {
-          "player_id": "MAR_RAHIMI",
-          "name": "Soufiane Rahimi",
-          "name_ja": "スフィアン・ラヒミ",
-          "primary_position": "ST",
+          "player_id": "JOR_ABULAILA",
+          "name": "Yazeed Abulaila",
+          "name_ja": "ヤジード・アブ・レイラ",
+          "primary_position": "GK",
           "age": 29,
-          "club_name": "Al Ain FC (UAE)",
-          "caps": 39,
-          "national_team_goals": 12,
-          "market_value_eur": 12000000,
+          "club_name": "Al Hussein SC (JOR)",
+          "caps": 77,
+          "national_team_goals": 0,
+          "market_value_eur": 400000,
           "source_citations": [
-            "Flashscore -- Al Ain UAE Pro League 2025-26 stats (9 goals/16 matches)",
-            "fifa.com -- AFCON 2025 winner with Morocco",
-            "hespress.com -- Hakim Ziyech confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
+            "Jordan Pro League 2025-26 stats (Al-Hussein)",
+            "FIFA.com Jordan WC2026 squad announcement"
           ],
-          "current_overall": 60,
-          "position_overall": 60,
-          "starting_probability": 39,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "shooting": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "MAR_AGUERD",
-          "name": "Nayef Aguerd",
-          "name_ja": "ナイエフ・アゲルド",
-          "primary_position": "CB",
-          "age": 29,
-          "club_name": null,
-          "caps": null,
-          "national_team_goals": null,
-          "market_value_eur": 20000000,
-          "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Marseille Ligue 1 2025-26 stats"
-          ],
-          "current_overall": 65,
-          "position_overall": 65,
+          "current_overall": 47,
+          "position_overall": 47,
           "starting_probability": 75,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
@@ -2908,36 +2627,35 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "defending": 2,
-            "physical": 1
+            "defending": 1
           },
-          "review_score": 8.0,
+          "review_score": 12.0,
           "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance"
+            "caps_outpace_rating"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
+            "代表キャップ数が現在の能力値評価に対して多めです。"
           ],
-          "suggested_codex_action": "monitor_only"
+          "suggested_codex_action": "inspect_for_possible_upgrade"
         },
         {
-          "player_id": "MAR_AKHOMACH",
-          "name": "Ilias Akhomach",
-          "name_ja": "イリアス・アホマッチ",
-          "primary_position": "LW",
-          "age": 21,
+          "player_id": "JOR_BANAWI",
+          "name": "Anas Banawi",
+          "name_ja": "アナス・バダウィ",
+          "primary_position": "CB",
+          "age": 26,
           "club_name": null,
           "caps": null,
           "national_team_goals": null,
-          "market_value_eur": 15000000,
+          "market_value_eur": 500000,
           "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Villarreal La Liga 2025-26 stats"
+            "Jordan Pro League 2025-26 stats (Al-Faisaly)",
+            "FIFA.com Jordan WC2026 squad announcement"
           ],
-          "current_overall": 60,
-          "position_overall": 60,
-          "starting_probability": 64,
+          "current_overall": 47,
+          "position_overall": 47,
+          "starting_probability": 79,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -2961,36 +2679,36 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "pace": 1,
-            "dribbling": 1
+            "defending": 1
           },
-          "review_score": 8.0,
+          "review_score": 12.0,
           "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance"
+            "weak_position_group"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
+            "手薄なポジショングループに所属しています。"
           ],
           "suggested_codex_action": "monitor_only"
         },
         {
-          "player_id": "MAR_ELKAABI",
-          "name": "Ayoub El Kaabi",
-          "name_ja": "アユーブ・エルカービ",
+          "player_id": "JOR_OLWAN",
+          "name": "Ali Olwan",
+          "name_ja": "アリ・オルワン",
           "primary_position": "ST",
-          "age": 32,
-          "club_name": "Olympiacos FC (GRE)",
-          "caps": 71,
-          "national_team_goals": 36,
-          "market_value_eur": 9000000,
+          "age": 31,
+          "club_name": "Al Sailiya SC (QAT)",
+          "caps": 67,
+          "national_team_goals": 30,
+          "market_value_eur": 800000,
           "source_citations": [
-            "Transfermarkt profile 25/26",
-            "Olympiacos Super League Greece 2025-26 stats"
+            "Transfermarkt 2026-06 (e800k)",
+            "Al-Sailiya QSL 2025-26 stats",
+            "9 goals in AFC WC qualifying, 64 caps/29 goals for Jordan, scored Jordan's first-ever WC goal"
           ],
-          "current_overall": 57,
-          "position_overall": 57,
-          "starting_probability": 47,
+          "current_overall": 47,
+          "position_overall": 47,
+          "starting_probability": 79,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3016,62 +2734,169 @@
           "qualitative_adjustments": {
             "shooting": 2
           },
-          "review_score": 8.0,
+          "review_score": 12.0,
           "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance"
+            "caps_outpace_rating"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
+            "代表キャップ数が現在の能力値評価に対して多めです。"
           ],
-          "suggested_codex_action": "monitor_only"
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "JOR_RAWABDEH",
+          "name": "Noor Al-Rawabdeh",
+          "name_ja": "ヌール・アルラワブデフ",
+          "primary_position": "CDM",
+          "age": 26,
+          "club_name": "Selangor FC (MAS)",
+          "caps": 69,
+          "national_team_goals": 3,
+          "market_value_eur": 1200000,
+          "source_citations": [
+            "Malaysia Super League 2025-26 stats (Selangor)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ],
+          "current_overall": 42,
+          "position_overall": 42,
+          "starting_probability": 71,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "defending": 1
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "JOR_TAMARI",
+          "name": "Mousa Al-Tamari",
+          "name_ja": "ムサ・アルターマリ",
+          "primary_position": "RW",
+          "age": 28,
+          "club_name": "Stade Rennais FC (FRA)",
+          "caps": 93,
+          "national_team_goals": 24,
+          "market_value_eur": 10000000,
+          "source_citations": [
+            "Transfermarkt 2026-06 (e10m)",
+            "Stade Rennais Ligue 1 2025-26 stats",
+            "Jordan's all-time leading creative player, 76 caps/23 goals"
+          ],
+          "current_overall": 61,
+          "position_overall": 61,
+          "starting_probability": 81,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "dribbling": 2,
+            "pace": 2,
+            "passing": 1
+          },
+          "review_score": 10.0,
+          "review_band": "low",
+          "review_flags": [
+            "shallow_roster_top_contributor"
+          ],
+          "review_summary_ja": [
+            "シードロスターが浅いチームの主力級選手です。"
+          ],
+          "suggested_codex_action": "verify_roster_role_first"
         }
       ]
     },
     {
-      "team_id": "URU",
-      "team_name": "Uruguay",
-      "fifa_rank": 14,
-      "squad_gap_priority_score": 52.0,
-      "rank_underperformance_flags": 3,
-      "recommended_next_action": "rating_data_review",
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "fifa_rank": 64,
+      "squad_gap_priority_score": 27.5,
+      "rank_underperformance_flags": 0,
+      "recommended_next_action": "roster_reconciliation_review",
       "position_group_summary": {
         "GK": {
           "count": 2,
-          "avg_overall": 50.0,
+          "avg_overall": 49.0,
           "top_player": {
-            "name": "Sergio Rochet",
-            "overall": 52
+            "name": "Nikola Vasilj",
+            "overall": 50
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 0
+        },
+        "DF": {
+          "count": 4,
+          "avg_overall": 55.0,
+          "top_player": {
+            "name": "Anel Ahmedhodzic",
+            "overall": 61
           },
           "is_weak_group": false,
           "review_candidate_count": 2
         },
-        "DF": {
-          "count": 4,
-          "avg_overall": 61.5,
-          "top_player": {
-            "name": "Ronald Araujo",
-            "overall": 68
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 3
-        },
         "MF": {
           "count": 4,
-          "avg_overall": 58.2,
+          "avg_overall": 47.0,
           "top_player": {
-            "name": "Federico Valverde",
-            "overall": 63
+            "name": "Kerim Alajbegovic",
+            "overall": 50
           },
           "is_weak_group": false,
-          "review_candidate_count": 3
+          "review_candidate_count": 1
         },
         "FW": {
-          "count": 2,
-          "avg_overall": 62.0,
+          "count": 3,
+          "avg_overall": 54.0,
           "top_player": {
-            "name": "Darwin Nunez",
-            "overall": 67
+            "name": "Ermedin Demirovic",
+            "overall": 58
           },
           "is_weak_group": false,
           "review_candidate_count": 2
@@ -3079,360 +2904,22 @@
       },
       "rating_review_candidates": [
         {
-          "player_id": "URU_ARAUJO",
-          "name": "Ronald Araujo",
-          "name_ja": "ロナルド・アラウホ",
-          "primary_position": "CB",
-          "age": 27,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 27,
+          "player_id": "BIH_ALAJBEGOVIC",
+          "name": "Kerim Alajbegovic",
+          "name_ja": "ケリム・アライベゴヴィッチ",
+          "primary_position": "CAM",
+          "age": 21,
+          "club_name": "FC Red Bull Salzburg (AUT)",
+          "caps": 12,
           "national_team_goals": 1,
-          "market_value_eur": 50000000,
+          "market_value_eur": 7000000,
           "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Barcelona La Liga 2025-26 stats"
+            "Transfermarkt profile 2026-06",
+            "Young prospect, European league 2025-26 stats"
           ],
-          "current_overall": 68,
-          "position_overall": 68,
-          "starting_probability": 65,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2,
-            "physical": 2,
-            "pace": 1
-          },
-          "review_score": 30.0,
-          "review_band": "high",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
-            "shallow_roster_top_contributor"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。",
-            "シードロスターが浅いチームの主力級選手です。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "URU_DARWINNUNEZ",
-          "name": "Darwin Nunez",
-          "name_ja": "ダルウィン・ヌニェス",
-          "primary_position": "ST",
-          "age": 26,
-          "club_name": "Al Hilal SC (KSA)",
-          "caps": 40,
-          "national_team_goals": 13,
-          "market_value_eur": 55000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Al-Hilal Saudi Pro League 2025-26 stats",
-            "Topped Uruguay's CONMEBOL qualifying scoring chart",
-            "EA Sports FC 26 rating used only as a minor signal per Stage C policy"
-          ],
-          "current_overall": 67,
-          "position_overall": 67,
-          "starting_probability": 75,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "shooting": 1,
-            "physical": 1,
-            "pace": 2
-          },
-          "review_score": 30.0,
-          "review_band": "high",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
-            "shallow_roster_top_contributor"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。",
-            "シードロスターが浅いチームの主力級選手です。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "URU_MUSLERA",
-          "name": "Fernando Muslera",
-          "name_ja": "フェルナンド・ムスレラ",
-          "primary_position": "GK",
-          "age": 39,
-          "club_name": "Estudiantes LP (ARG)",
-          "caps": 136,
-          "national_team_goals": 0,
-          "market_value_eur": 600000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Estudiantes Argentine league 2025-26 stats",
-            "Came back from international retirement at 39 for a fifth World Cup"
-          ],
-          "current_overall": 48,
-          "position_overall": 48,
-          "starting_probability": 25,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "pace": -2,
-            "defending": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "URU_OLIVERA",
-          "name": "Mathias Olivera",
-          "name_ja": "マティアス・オリベラ",
-          "primary_position": "LB",
-          "age": 28,
-          "club_name": "SSC Napoli (ITA)",
-          "caps": 37,
-          "national_team_goals": 2,
-          "market_value_eur": 18000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Napoli Serie A 2025-26 stats"
-          ],
-          "current_overall": 63,
-          "position_overall": 63,
-          "starting_probability": 62,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 1,
-            "physical": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "URU_ROCHET",
-          "name": "Sergio Rochet",
-          "name_ja": "セルヒオ・ロチェット",
-          "primary_position": "GK",
-          "age": 29,
-          "club_name": "SC Internacional (BRA)",
-          "caps": 35,
-          "national_team_goals": 0,
-          "market_value_eur": 9000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Internacional Brasileirao 2025-26 stats",
-            "Uruguay first-choice goalkeeper"
-          ],
-          "current_overall": 52,
-          "position_overall": 52,
-          "starting_probability": 75,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "URU_UGARTE",
-          "name": "Manuel Ugarte",
-          "name_ja": "マヌエル・ウガルテ",
-          "primary_position": "CDM",
-          "age": 25,
-          "club_name": "Manchester United FC (ENG)",
-          "caps": 37,
-          "national_team_goals": 1,
-          "market_value_eur": 45000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Manchester United Premier League 2025-26 stats"
-          ],
-          "current_overall": 56,
-          "position_overall": 56,
-          "starting_probability": 39,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "URU_BENTANCUR",
-          "name": "Rodrigo Bentancur",
-          "name_ja": "ロドリゴ・ベンタンクール",
-          "primary_position": "CM",
-          "age": 28,
-          "club_name": "Tottenham Hotspur FC (ENG)",
-          "caps": 75,
-          "national_team_goals": 3,
-          "market_value_eur": 30000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Tottenham Hotspur Premier League 2025-26 stats"
-          ],
-          "current_overall": 57,
-          "position_overall": 57,
-          "starting_probability": 29,
+          "current_overall": 50,
+          "position_overall": 50,
+          "starting_probability": 54,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3457,142 +2944,36 @@
           ],
           "qualitative_adjustments": {
             "passing": 1,
-            "defending": 1
+            "dribbling": 1
           },
-          "review_score": 8.0,
+          "review_score": 12.0,
           "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance"
+            "rating_outpaces_caps"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
+            "現在の能力値評価が代表キャップ数に対して高めです。"
           ],
-          "suggested_codex_action": "monitor_only"
+          "suggested_codex_action": "inspect_for_possible_downgrade"
         },
         {
-          "player_id": "URU_DEARRASCAETA",
-          "name": "Giorgian de Arrascaeta",
-          "name_ja": "ジョルジアン・デアラスカエタ",
-          "primary_position": "CAM",
-          "age": 32,
-          "club_name": "CR Flamengo (BRA)",
-          "caps": 59,
-          "national_team_goals": 13,
-          "market_value_eur": 12000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Flamengo Brasileirao 2025-26 stats"
-          ],
-          "current_overall": 57,
-          "position_overall": 57,
-          "starting_probability": 44,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 2,
-            "shooting": 1
-          },
-          "review_score": 8.0,
-          "review_band": "low",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
-          ],
-          "suggested_codex_action": "monitor_only"
-        },
-        {
-          "player_id": "URU_GIMENEZ",
-          "name": "Jose Maria Gimenez",
-          "name_ja": "ホセ・マリア・ヒメネス",
-          "primary_position": "CB",
-          "age": 31,
-          "club_name": "Atlético De Madrid (ESP)",
-          "caps": 99,
-          "national_team_goals": 8,
-          "market_value_eur": 11000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Atletico Madrid La Liga 2025-26 stats",
-            "Uruguay captain"
-          ],
-          "current_overall": 62,
-          "position_overall": 62,
-          "starting_probability": 60,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2,
-            "physical": 1
-          },
-          "review_score": 8.0,
-          "review_band": "low",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
-          ],
-          "suggested_codex_action": "monitor_only"
-        },
-        {
-          "player_id": "URU_PELLISTRI",
-          "name": "Facundo Pellistri",
-          "name_ja": "ファクンド・ペリストリ",
+          "player_id": "BIH_BAJRAKTAREVIC",
+          "name": "Esmir Bajraktarevic",
+          "name_ja": "エスミル・バイラクタレヴィッチ",
           "primary_position": "RW",
-          "age": 24,
-          "club_name": "Panathinaikos FC (GRE)",
-          "caps": 39,
-          "national_team_goals": 2,
-          "market_value_eur": 15000000,
+          "age": 21,
+          "club_name": "PSV Eindhoven (NED)",
+          "caps": 18,
+          "national_team_goals": 1,
+          "market_value_eur": 9000000,
           "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Panathinaikos Greek Super League 2025-26 stats"
+            "Transfermarkt profile 2026-06",
+            "PSV Eindhoven Eredivisie 2025-26 stats (won league/Super Cup per Fotmob bio)",
+            "Born in Wisconsin, capped by USA youth before switching to Bosnia"
           ],
-          "current_overall": 57,
-          "position_overall": 57,
-          "starting_probability": 25,
+          "current_overall": 54,
+          "position_overall": 54,
+          "starting_probability": 35,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3619,86 +3000,34 @@
             "pace": 1,
             "dribbling": 1
           },
-          "review_score": 8.0,
+          "review_score": 12.0,
           "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance"
+            "rating_outpaces_caps"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。"
+            "現在の能力値評価が代表キャップ数に対して高めです。"
           ],
-          "suggested_codex_action": "monitor_only"
-        }
-      ]
-    },
-    {
-      "team_id": "ESP",
-      "team_name": "Spain",
-      "fifa_rank": 2,
-      "squad_gap_priority_score": 51.0,
-      "rank_underperformance_flags": 3,
-      "recommended_next_action": "rating_data_review",
-      "position_group_summary": {
-        "GK": {
-          "count": 2,
-          "avg_overall": 52.0,
-          "top_player": {
-            "name": "Unai Simon",
-            "overall": 52
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 1
+          "suggested_codex_action": "inspect_for_possible_downgrade"
         },
-        "DF": {
-          "count": 4,
-          "avg_overall": 66.2,
-          "top_player": {
-            "name": "Marc Cucurella",
-            "overall": 70
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 3
-        },
-        "MF": {
-          "count": 5,
-          "avg_overall": 62.4,
-          "top_player": {
-            "name": "Pedri",
-            "overall": 66
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 4
-        },
-        "FW": {
-          "count": 3,
-          "avg_overall": 69.3,
-          "top_player": {
-            "name": "Lamine Yamal",
-            "overall": 75
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 2
-        }
-      },
-      "rating_review_candidates": [
         {
-          "player_id": "ESP_LAMINEYAMAL",
-          "name": "Lamine Yamal",
-          "name_ja": "ラミン・ヤマル",
-          "primary_position": "RW",
-          "age": 18,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 27,
-          "national_team_goals": 7,
-          "market_value_eur": 200000000,
+          "player_id": "BIH_DZEKO",
+          "name": "Edin Dzeko",
+          "name_ja": "エディン・ジェコ",
+          "primary_position": "ST",
+          "age": 40,
+          "club_name": "FC Schalke 04 (GER)",
+          "caps": 149,
+          "national_team_goals": 73,
+          "market_value_eur": 1500000,
           "source_citations": [
-            "Transfermarkt 2026-06 (e200m)",
-            "Barcelona La Liga 2025-26 stats",
-            "EA Sports FC 26 / eFootball 2026 headline ratings used only as a minor signal per Stage C policy"
+            "Transfermarkt 2026-06 (e1.5m, age 40)",
+            "Schalke 04 2. Bundesliga 2025-26 stats (6 goals in 11 apps per Transfermarkt)",
+            "Bosnia's all-time record scorer (73 international goals), led WC2026 qualifying campaign"
           ],
-          "current_overall": 75,
-          "position_overall": 75,
-          "starting_probability": 83,
+          "current_overall": 50,
+          "position_overall": 50,
+          "starting_probability": 32,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3722,41 +3051,301 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "dribbling": 3,
-            "passing": 2,
+            "pace": -3,
+            "physical": -1,
             "shooting": 1
           },
-          "review_score": 30.0,
-          "review_band": "high",
+          "review_score": 12.0,
+          "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "BIH_KOLASINAC",
+          "name": "Sead Kolasinac",
+          "name_ja": "セアド・コラシナツ",
+          "primary_position": "LB",
+          "age": 32,
+          "club_name": "Atalanta Bergamo (ITA)",
+          "caps": 67,
+          "national_team_goals": 0,
+          "market_value_eur": 3000000,
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "Atalanta Serie A 2025-26 stats (19 apps per Playmaker Stats)",
+            "Only other survivor from Bosnia's 2014 WC squad"
+          ],
+          "current_overall": 54,
+          "position_overall": 54,
+          "starting_probability": 60,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "physical": 2,
+            "pace": -1
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "BIH_TURKES",
+          "name": "Anel Ahmedhodzic",
+          "name_ja": "アネル・アフメドホジッチ",
+          "primary_position": "CB",
+          "age": 26,
+          "club_name": null,
+          "caps": null,
+          "national_team_goals": null,
+          "market_value_eur": 11000000,
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "Sheffield United/Championship 2025-26 stats"
+          ],
+          "current_overall": 61,
+          "position_overall": 61,
+          "starting_probability": 71,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "physical": 1,
+            "defending": 1
+          },
+          "review_score": 10.0,
+          "review_band": "low",
+          "review_flags": [
             "shallow_roster_top_contributor"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。",
             "シードロスターが浅いチームの主力級選手です。"
           ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
+          "suggested_codex_action": "verify_roster_role_first"
+        }
+      ]
+    },
+    {
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "fifa_rank": 26,
+      "squad_gap_priority_score": 27.5,
+      "rank_underperformance_flags": 0,
+      "recommended_next_action": "roster_reconciliation_review",
+      "position_group_summary": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 48.5,
+          "top_player": {
+            "name": "Mathew Ryan",
+            "overall": 49
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 1
         },
+        "DF": {
+          "count": 5,
+          "avg_overall": 52.8,
+          "top_player": {
+            "name": "Harry Souttar",
+            "overall": 58
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 3
+        },
+        "MF": {
+          "count": 2,
+          "avg_overall": 47.5,
+          "top_player": {
+            "name": "Riley McGree",
+            "overall": 49
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 1
+        },
+        "FW": {
+          "count": 4,
+          "avg_overall": 48.8,
+          "top_player": {
+            "name": "Nestory Irankunda",
+            "overall": 55
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 1
+        }
+      },
+      "rating_review_candidates": [
         {
-          "player_id": "ESP_CUBARSI",
-          "name": "Pau Cubarsi",
-          "name_ja": "パウ・クバルシ",
-          "primary_position": "CB",
-          "age": 19,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 14,
-          "national_team_goals": 0,
-          "market_value_eur": 90000000,
+          "player_id": "AUS_BEHICH",
+          "name": "Aziz Behich",
+          "name_ja": "アジズ・ベヒッチ",
+          "primary_position": "LB",
+          "age": 35,
+          "club_name": "Melbourne City FC (AUS)",
+          "caps": 85,
+          "national_team_goals": 3,
+          "market_value_eur": 700000,
           "source_citations": [
             "Transfermarkt profile 2025-26",
-            "Barcelona La Liga 2025-26 stats",
-            "EA Sports FC 26 rating used only as a minor signal per Stage C policy"
+            "A-League Men 2025-26 stats"
           ],
-          "current_overall": 69,
-          "position_overall": 69,
+          "current_overall": 48,
+          "position_overall": 48,
+          "starting_probability": 28,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "pace": -2
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "AUS_DEGENEK",
+          "name": "Milos Degenek",
+          "name_ja": "ミロス・デゲネク",
+          "primary_position": "CB",
+          "age": 31,
+          "club_name": "APOEL FC (CYP)",
+          "caps": 57,
+          "national_team_goals": 1,
+          "market_value_eur": 1200000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26",
+            "Columbus Crew MLS 2025 stats"
+          ],
+          "current_overall": 51,
+          "position_overall": 51,
+          "starting_probability": 57,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "defending": 1,
+            "physical": 1
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "AUS_IRVINE",
+          "name": "Jackson Irvine",
+          "name_ja": "ジャクソン・アーバイン",
+          "primary_position": "CM",
+          "age": 33,
+          "club_name": "FC St. Pauli (GER)",
+          "caps": 84,
+          "national_team_goals": 14,
+          "market_value_eur": 1800000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26",
+            "St Pauli Bundesliga 2025-26 stats",
+            "Australia national team captain"
+          ],
+          "current_overall": 46,
+          "position_overall": 46,
           "starting_probability": 48,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
@@ -3781,39 +3370,250 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "passing": 2,
-            "defending": 1,
+            "physical": 1,
+            "passing": 1
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "AUS_MAGGS",
+          "name": "Nestory Irankunda",
+          "name_ja": "ネストリー・イランクンダ",
+          "primary_position": "LW",
+          "age": 20,
+          "club_name": "Watford FC (ENG)",
+          "caps": 17,
+          "national_team_goals": 6,
+          "market_value_eur": 6000000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26 (eFootball 2026 young-talent rating informed minor nudge)",
+            "Bayern Munich II / loan spell 2025-26 stats",
+            "Highly-rated Socceroos teenage prospect"
+          ],
+          "current_overall": 55,
+          "position_overall": 55,
+          "starting_probability": 54,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "dribbling": 2,
             "pace": 1
           },
-          "review_score": 20.0,
-          "review_band": "medium",
+          "review_score": 12.0,
+          "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance",
             "rating_outpaces_caps"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
             "現在の能力値評価が代表キャップ数に対して高めです。"
           ],
           "suggested_codex_action": "inspect_for_possible_downgrade"
         },
         {
-          "player_id": "ESP_CUCURELLA",
-          "name": "Marc Cucurella",
-          "name_ja": "マルク・ククレジャ",
-          "primary_position": "LB",
-          "age": 27,
-          "club_name": "Chelsea FC (ENG)",
-          "caps": 26,
-          "national_team_goals": 1,
-          "market_value_eur": 45000000,
+          "player_id": "AUS_VUKOVIC",
+          "name": "Mathew Ryan",
+          "name_ja": "マシュー・ライアン",
+          "primary_position": "GK",
+          "age": 34,
+          "club_name": "Levante UD (ESP)",
+          "caps": 104,
+          "national_team_goals": 0,
+          "market_value_eur": 1500000,
           "source_citations": [
             "Transfermarkt profile 2025-26",
-            "Chelsea Premier League 2025-26 stats"
+            "Czech First League 2025 stats",
+            "Australia's most-capped goalkeeper, long-time national #1"
           ],
-          "current_overall": 70,
-          "position_overall": 70,
-          "starting_probability": 61,
+          "current_overall": 49,
+          "position_overall": 49,
+          "starting_probability": 75,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "defending": 1
+          },
+          "review_score": 12.0,
+          "review_band": "low",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "AUS_HATCH",
+          "name": "Harry Souttar",
+          "name_ja": "ハリー・スーター",
+          "primary_position": "CB",
+          "age": 27,
+          "club_name": "Leicester City FC (ENG)",
+          "caps": 40,
+          "national_team_goals": 11,
+          "market_value_eur": 7000000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26",
+            "Rangers Scottish Premiership 2025-26 stats",
+            "Tall aerial-dominant centre-back, key set-piece presence"
+          ],
+          "current_overall": 58,
+          "position_overall": 58,
+          "starting_probability": 54,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "physical": 2,
+            "defending": 1
+          },
+          "review_score": 10.0,
+          "review_band": "low",
+          "review_flags": [
+            "shallow_roster_top_contributor"
+          ],
+          "review_summary_ja": [
+            "シードロスターが浅いチームの主力級選手です。"
+          ],
+          "suggested_codex_action": "verify_roster_role_first"
+        }
+      ]
+    },
+    {
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "fifa_rank": 54,
+      "squad_gap_priority_score": 25.0,
+      "rank_underperformance_flags": 0,
+      "recommended_next_action": "name_matching_review",
+      "position_group_summary": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 50.0,
+          "top_player": {
+            "name": "Carlos Coronel",
+            "overall": 51
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 0
+        },
+        "DF": {
+          "count": 5,
+          "avg_overall": 55.0,
+          "top_player": {
+            "name": "Gustavo Gomez",
+            "overall": 58
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 3
+        },
+        "MF": {
+          "count": 4,
+          "avg_overall": 50.0,
+          "top_player": {
+            "name": "Julio Enciso",
+            "overall": 58
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 2
+        },
+        "FW": {
+          "count": 3,
+          "avg_overall": 52.7,
+          "top_player": {
+            "name": "Miguel Almiron",
+            "overall": 55
+          },
+          "is_weak_group": false,
+          "review_candidate_count": 1
+        }
+      },
+      "rating_review_candidates": [
+        {
+          "player_id": "PAR_ALDERETE",
+          "name": "Gustavo Gomez",
+          "name_ja": "グスタボ・ゴメス",
+          "primary_position": "CB",
+          "age": 32,
+          "club_name": "SE Palmeiras (BRA)",
+          "caps": 91,
+          "national_team_goals": 4,
+          "market_value_eur": 4500000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26",
+            "Palmeiras Brasileirao 2025 stats",
+            "Paraguay national team captain"
+          ],
+          "current_overall": 58,
+          "position_overall": 58,
+          "starting_probability": 84,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3840,36 +3640,91 @@
             "defending": 2,
             "physical": 1
           },
-          "review_score": 20.0,
+          "review_score": 22.0,
           "review_band": "medium",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
+            "caps_outpace_rating",
+            "shallow_roster_top_contributor"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
+            "代表キャップ数が現在の能力値評価に対して多めです。",
+            "シードロスターが浅いチームの主力級選手です。"
           ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
+          "suggested_codex_action": "inspect_for_possible_upgrade"
         },
         {
-          "player_id": "ESP_DANIOLMO",
-          "name": "Dani Olmo",
-          "name_ja": "ダニ・オルモ",
+          "player_id": "PAR_ALDERETE_J",
+          "name": "Junior Alonso",
+          "name_ja": "フニオール・アロンソ",
+          "primary_position": "CB",
+          "age": 30,
+          "club_name": "Atlético Mineiro (BRA)",
+          "caps": 73,
+          "national_team_goals": 3,
+          "market_value_eur": 5000000,
+          "source_citations": [
+            "Transfermarkt profile 2025-26",
+            "Inter Miami MLS 2025 stats"
+          ],
+          "current_overall": 57,
+          "position_overall": 57,
+          "starting_probability": 76,
+          "uncertainty": 0.2,
+          "data_confidence": "estimated",
+          "source_breakdown": {
+            "officialRoster": true,
+            "marketValueUsed": true,
+            "clubMinutesUsed": true,
+            "nationalTeamMinutesUsed": false,
+            "injuryDataUsed": false,
+            "manualOverrideUsed": false
+          },
+          "low_confidence_attributes": [
+            "mentality",
+            "composure",
+            "workRate",
+            "pressing",
+            "decisionMaking",
+            "positioning",
+            "setPiece",
+            "crossing",
+            "goalkeeperDistribution",
+            "currentForm"
+          ],
+          "qualitative_adjustments": {
+            "defending": 1,
+            "physical": 1
+          },
+          "review_score": 22.0,
+          "review_band": "medium",
+          "review_flags": [
+            "caps_outpace_rating",
+            "shallow_roster_top_contributor"
+          ],
+          "review_summary_ja": [
+            "代表キャップ数が現在の能力値評価に対して多めです。",
+            "シードロスターが浅いチームの主力級選手です。"
+          ],
+          "suggested_codex_action": "inspect_for_possible_upgrade"
+        },
+        {
+          "player_id": "PAR_ENCISO",
+          "name": "Julio Enciso",
+          "name_ja": "フリオ・エンシソ",
           "primary_position": "CAM",
-          "age": 27,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 52,
-          "national_team_goals": 12,
-          "market_value_eur": 55000000,
+          "age": 22,
+          "club_name": "RC Strasbourg (FRA)",
+          "caps": 34,
+          "national_team_goals": 4,
+          "market_value_eur": 16000000,
           "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Barcelona La Liga 2025-26 stats",
-            "Recurring muscular injuries discounted minutes"
+            "Transfermarkt profile 2025-26 (eFootball/FC26 attacking rating informed minor nudge)",
+            "Strasbourg Ligue 1 2025-26 stats",
+            "Paraguay's most talented young attacker"
           ],
-          "current_overall": 62,
-          "position_overall": 62,
-          "starting_probability": 30,
+          "current_overall": 58,
+          "position_overall": 58,
+          "starting_probability": 65,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -3893,206 +3748,39 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "passing": 2,
-            "shooting": 1
+            "dribbling": 2,
+            "passing": 1
           },
-          "review_score": 20.0,
+          "review_score": 22.0,
           "review_band": "medium",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
+            "rating_outpaces_caps",
+            "shallow_roster_top_contributor"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
+            "現在の能力値評価が代表キャップ数に対して高めです。",
+            "シードロスターが浅いチームの主力級選手です。"
           ],
           "suggested_codex_action": "inspect_for_possible_downgrade"
         },
         {
-          "player_id": "ESP_GAVI",
-          "name": "Gavi",
-          "name_ja": "ガビ",
-          "primary_position": "CM",
-          "age": 21,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 31,
-          "national_team_goals": 5,
-          "market_value_eur": 55000000,
+          "player_id": "PAR_ALMIRON",
+          "name": "Miguel Almiron",
+          "name_ja": "ミゲル・アルミロン",
+          "primary_position": "RW",
+          "age": 32,
+          "club_name": "Atlanta United FC (USA)",
+          "caps": 78,
+          "national_team_goals": 10,
+          "market_value_eur": 9000000,
           "source_citations": [
             "Transfermarkt profile 2025-26",
-            "Barcelona La Liga 2025-26 stats",
-            "Returning from long-term knee injury layoff, minutes discounted"
+            "Atlanta United MLS 2025 stats",
+            "Paraguay all-time appearance leader among current squad"
           ],
-          "current_overall": 62,
-          "position_overall": 62,
-          "starting_probability": 20,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "physical": 1,
-            "dribbling": 1,
-            "pace": -1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ESP_NICOWILLIAMS",
-          "name": "Nico Williams",
-          "name_ja": "ニコ・ウィリアムズ",
-          "primary_position": "LW",
-          "age": 23,
-          "club_name": "Athletic Club (ESP)",
-          "caps": 32,
-          "national_team_goals": 6,
-          "market_value_eur": 80000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Athletic Club La Liga 2025-26 stats"
-          ],
-          "current_overall": 70,
-          "position_overall": 70,
-          "starting_probability": 50,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "pace": 3,
-            "dribbling": 2
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ESP_PEDRI",
-          "name": "Pedri",
-          "name_ja": "ペドリ",
-          "primary_position": "CM",
-          "age": 23,
-          "club_name": "FC Barcelona (ESP)",
-          "caps": 43,
-          "national_team_goals": 6,
-          "market_value_eur": 100000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Barcelona La Liga 2025-26 stats",
-            "EA Sports FC 26 rating used only as a minor signal per Stage C policy"
-          ],
-          "current_overall": 66,
-          "position_overall": 66,
-          "starting_probability": 84,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 3,
-            "dribbling": 2
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ESP_PORRO",
-          "name": "Pedro Porro",
-          "name_ja": "ペドロ・ポロ",
-          "primary_position": "RB",
-          "age": 26,
-          "club_name": "Tottenham Hotspur FC (ENG)",
-          "caps": 19,
-          "national_team_goals": 0,
-          "market_value_eur": 50000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Tottenham Hotspur Premier League 2025-26 stats"
-          ],
-          "current_overall": 66,
-          "position_overall": 66,
-          "starting_probability": 68,
+          "current_overall": 55,
+          "position_overall": 55,
+          "starting_probability": 83,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -4119,417 +3807,33 @@
             "pace": 1,
             "passing": 1
           },
-          "review_score": 20.0,
-          "review_band": "medium",
+          "review_score": 12.0,
+          "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ESP_RAYA",
-          "name": "David Raya",
-          "name_ja": "ダビド・ラヤ",
-          "primary_position": "GK",
-          "age": 30,
-          "club_name": "Arsenal FC (ENG)",
-          "caps": 13,
-          "national_team_goals": 0,
-          "market_value_eur": 32000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Arsenal Premier League 2025-26 stats"
-          ],
-          "current_overall": 52,
-          "position_overall": 52,
-          "starting_probability": 46,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 2,
-            "defending": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ESP_RODRI",
-          "name": "Rodri",
-          "name_ja": "ロドリ",
-          "primary_position": "CDM",
-          "age": 30,
-          "club_name": "Atlético De Madrid (ESP)",
-          "caps": 18,
-          "national_team_goals": 2,
-          "market_value_eur": 110000000,
-          "source_citations": [
-            "Transfermarkt profile 2025-26",
-            "Manchester City Premier League 2025-26 stats",
-            "Ballon d'Or 2024 winner, captain of Spain"
-          ],
-          "current_overall": 63,
-          "position_overall": 63,
-          "starting_probability": 67,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 3,
-            "defending": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        }
-      ]
-    },
-    {
-      "team_id": "ARG",
-      "team_name": "Argentina",
-      "fifa_rank": 1,
-      "squad_gap_priority_score": 46.1,
-      "rank_underperformance_flags": 3,
-      "recommended_next_action": "rating_data_review",
-      "position_group_summary": {
-        "GK": {
-          "count": 2,
-          "avg_overall": 51.5,
-          "top_player": {
-            "name": "Emiliano Martinez",
-            "overall": 52
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 1
-        },
-        "DF": {
-          "count": 5,
-          "avg_overall": 58.2,
-          "top_player": {
-            "name": "Cristian Romero",
-            "overall": 66
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 3
-        },
-        "MF": {
-          "count": 5,
-          "avg_overall": 55.0,
-          "top_player": {
-            "name": "Alexis Mac Allister",
-            "overall": 61
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 4
-        },
-        "FW": {
-          "count": 3,
-          "avg_overall": 67.3,
-          "top_player": {
-            "name": "Lautaro Martinez",
-            "overall": 69
-          },
-          "is_weak_group": false,
-          "review_candidate_count": 2
-        }
-      },
-      "rating_review_candidates": [
-        {
-          "player_id": "ARG_ALVAREZ",
-          "name": "Julian Alvarez",
-          "name_ja": "フリアン・アルバレス",
-          "primary_position": "ST",
-          "age": 26,
-          "club_name": "Atlético De Madrid (ESP)",
-          "caps": 52,
-          "national_team_goals": 14,
-          "market_value_eur": 100000000,
-          "source_citations": [
-            "Transfermarkt/FootballTransfers 2026-06",
-            "Atletico Madrid 2025-26 La Liga"
-          ],
-          "current_overall": 69,
-          "position_overall": 69,
-          "starting_probability": 79,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "dribbling": 1,
-            "shooting": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ARG_DEPAUL",
-          "name": "Rodrigo De Paul",
-          "name_ja": "ロドリゴ・デパウル",
-          "primary_position": "CM",
-          "age": 32,
-          "club_name": "Inter Miami CF (USA)",
-          "caps": 88,
-          "national_team_goals": 2,
-          "market_value_eur": 14000000,
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Inter Miami MLS (moved Jan 2026)"
-          ],
-          "current_overall": 53,
-          "position_overall": 53,
-          "starting_probability": 39,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "physical": -1,
-            "passing": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
             "caps_outpace_rating"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
             "代表キャップ数が現在の能力値評価に対して多めです。"
           ],
           "suggested_codex_action": "inspect_for_possible_upgrade"
         },
         {
-          "player_id": "ARG_ENZO",
-          "name": "Enzo Fernandez",
-          "name_ja": "エンソ・フェルナンデス",
-          "primary_position": "CDM",
-          "age": 25,
-          "club_name": "Chelsea FC (ENG)",
-          "caps": 43,
-          "national_team_goals": 6,
-          "market_value_eur": 90000000,
-          "source_citations": [
-            "Transfermarkt/FootballTransfers 2026-06",
-            "Chelsea 2025-26 PL season"
-          ],
-          "current_overall": 61,
-          "position_overall": 61,
-          "starting_probability": 88,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ARG_LISANDRO",
-          "name": "Lisandro Martinez",
-          "name_ja": "リサンドロ・マルティネス",
-          "primary_position": "CB",
-          "age": 28,
-          "club_name": "Manchester United FC (ENG)",
-          "caps": 29,
-          "national_team_goals": 1,
-          "market_value_eur": 40000000,
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Man United 2025-26 stats"
-          ],
-          "current_overall": 62,
-          "position_overall": 62,
-          "starting_probability": 43,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "physical": -1,
-            "defending": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ARG_MACALLISTER",
-          "name": "Alexis Mac Allister",
-          "name_ja": "アレクシス・マクアリスター",
-          "primary_position": "CM",
+          "player_id": "PAR_ESCOBAR",
+          "name": "Gustavo Velazquez",
+          "name_ja": "グスタボ・ベラスケス",
+          "primary_position": "RB",
           "age": 27,
-          "club_name": "Liverpool FC (ENG)",
-          "caps": 47,
-          "national_team_goals": 6,
-          "market_value_eur": 85600000,
+          "club_name": "Cerro Porteño (PAR)",
+          "caps": 15,
+          "national_team_goals": 1,
+          "market_value_eur": 3000000,
           "source_citations": [
-            "Transfermarkt 2026-06",
-            "Liverpool 2025-26 PL season"
+            "Transfermarkt profile 2025-26",
+            "Cerro Porteno Liga Profesional 2025 stats"
           ],
-          "current_overall": 61,
-          "position_overall": 61,
-          "starting_probability": 73,
+          "current_overall": 54,
+          "position_overall": 54,
+          "starting_probability": 32,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -4553,38 +3857,35 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "passing": 2
+            "pace": 1
           },
-          "review_score": 20.0,
-          "review_band": "medium",
+          "review_score": 12.0,
+          "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance",
             "rating_outpaces_caps"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
             "現在の能力値評価が代表キャップ数に対して高めです。"
           ],
           "suggested_codex_action": "inspect_for_possible_downgrade"
         },
         {
-          "player_id": "ARG_MESSI",
-          "name": "Lionel Messi",
-          "name_ja": "リオネル・メッシ",
-          "primary_position": "RW",
-          "age": 38,
-          "club_name": "Inter Miami CF (USA)",
-          "caps": 200,
-          "national_team_goals": 120,
-          "market_value_eur": 15000000,
+          "player_id": "PAR_ROJAS_D",
+          "name": "Damian Bobadilla",
+          "name_ja": "ダミアン・ボバディージャ",
+          "primary_position": "CM",
+          "age": 24,
+          "club_name": "São Paulo FC (BRA)",
+          "caps": 21,
+          "national_team_goals": 1,
+          "market_value_eur": 5500000,
           "source_citations": [
-            "Transfermarkt/Fotmob 2026-06",
-            "Inter Miami 2025 MLS season + WC2026 hat trick vs Algeria",
-            "Age 38 - pace declined, vision/finishing retained"
+            "Transfermarkt profile 2025-26",
+            "Talleres Liga Profesional Argentina 2025 stats"
           ],
-          "current_overall": 64,
-          "position_overall": 64,
-          "starting_probability": 17,
+          "current_overall": 49,
+          "position_overall": 49,
+          "starting_probability": 29,
           "uncertainty": 0.2,
           "data_confidence": "estimated",
           "source_breakdown": {
@@ -4608,237 +3909,14 @@
             "currentForm"
           ],
           "qualitative_adjustments": {
-            "passing": 3,
-            "dribbling": 2,
-            "pace": -2,
-            "shooting": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "ARG_OTAMENDI",
-          "name": "Nicolas Otamendi",
-          "name_ja": "ニコラス・オタメンディ",
-          "primary_position": "CB",
-          "age": 38,
-          "club_name": "SL Benfica (POR)",
-          "caps": 133,
-          "national_team_goals": 8,
-          "market_value_eur": 1000000,
-          "source_citations": [
-            "Transfermarkt 2026-06 (age 38)",
-            "Benfica 2025-26 season"
-          ],
-          "current_overall": 51,
-          "position_overall": 51,
-          "starting_probability": 19,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "pace": -3,
-            "physical": -1,
-            "defending": 1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "ARG_PAREDES",
-          "name": "Leandro Paredes",
-          "name_ja": "レアンドロ・パレデス",
-          "primary_position": "CDM",
-          "age": 31,
-          "club_name": "CA Boca Juniors (ARG)",
-          "caps": 77,
-          "national_team_goals": 5,
-          "market_value_eur": 5100000,
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Boca Juniors 2024-25 season"
-          ],
-          "current_overall": 45,
-          "position_overall": 45,
-          "starting_probability": 10,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "passing": 1,
-            "pace": -1
-          },
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "代表キャップ数が現在の能力値評価に対して多めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_upgrade"
-        },
-        {
-          "player_id": "ARG_ROMERO",
-          "name": "Cristian Romero",
-          "name_ja": "クリスティアン・ロメロ",
-          "primary_position": "CB",
-          "age": 28,
-          "club_name": "Tottenham Hotspur FC (ENG)",
-          "caps": 52,
-          "national_team_goals": 3,
-          "market_value_eur": 57700000,
-          "source_citations": [
-            "Transfermarkt/FootballTransfers 2026-06",
-            "Tottenham 2025-26 PL season"
-          ],
-          "current_overall": 66,
-          "position_overall": 66,
-          "starting_probability": 90,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {
-            "defending": 2,
             "physical": 1
           },
-          "review_score": 20.0,
-          "review_band": "medium",
+          "review_score": 12.0,
+          "review_band": "low",
           "review_flags": [
-            "team_rank_underperformance",
             "rating_outpaces_caps"
           ],
           "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
-            "現在の能力値評価が代表キャップ数に対して高めです。"
-          ],
-          "suggested_codex_action": "inspect_for_possible_downgrade"
-        },
-        {
-          "player_id": "ARG_RULLI",
-          "name": "Geronimo Rulli",
-          "name_ja": "ヘロニモ・ルリ",
-          "primary_position": "GK",
-          "age": 33,
-          "club_name": "Olympique Marseille (FRA)",
-          "caps": 8,
-          "national_team_goals": 0,
-          "market_value_eur": 9000000,
-          "source_citations": [
-            "Transfermarkt 2026-06",
-            "Marseille Ligue 1 2025-26"
-          ],
-          "current_overall": 51,
-          "position_overall": 51,
-          "starting_probability": 25,
-          "uncertainty": 0.2,
-          "data_confidence": "estimated",
-          "source_breakdown": {
-            "officialRoster": true,
-            "marketValueUsed": true,
-            "clubMinutesUsed": true,
-            "nationalTeamMinutesUsed": false,
-            "injuryDataUsed": false,
-            "manualOverrideUsed": false
-          },
-          "low_confidence_attributes": [
-            "mentality",
-            "composure",
-            "workRate",
-            "pressing",
-            "decisionMaking",
-            "positioning",
-            "setPiece",
-            "crossing",
-            "goalkeeperDistribution",
-            "currentForm"
-          ],
-          "qualitative_adjustments": {},
-          "review_score": 20.0,
-          "review_band": "medium",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "review_summary_ja": [
-            "所属チームがFIFAランク比でモデル評価が見劣りしています。",
             "現在の能力値評価が代表キャップ数に対して高めです。"
           ],
           "suggested_codex_action": "inspect_for_possible_downgrade"

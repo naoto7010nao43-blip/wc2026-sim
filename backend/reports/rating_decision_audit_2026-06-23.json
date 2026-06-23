@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-23T10:50:48.479192+00:00",
+  "generatedAt": "2026-06-23T11:23:55.569442+00:00",
   "note": "能力値レビュー作業台に対するCodex側の読み取り専用判断監査です。マッチアップ要因と整合する候補、逆効果になりうる候補、出典確認を先に行う候補を分離します。数値の能力値変更は提案しません。",
   "sourceReports": [
     {
       "name": "rating_review_workbench",
-      "generatedAt": "2026-06-23T10:22:41.032858+00:00"
+      "generatedAt": "2026-06-23T11:23:55.360231+00:00"
     },
     {
       "name": "matchup_driver_audit",
-      "generatedAt": "2026-06-23T10:20:11.637276+00:00"
+      "generatedAt": "2026-06-23T11:23:54.676989+00:00"
     }
   ],
   "teamCount": 8,
   "bucketCounts": {
-    "candidate_for_later_proposal": 9,
-    "do_not_use_for_upgrade_proposal": 42,
-    "monitor_only": 21,
-    "source_review_first": 8
+    "candidate_for_later_proposal": 4,
+    "do_not_use_for_upgrade_proposal": 19,
+    "monitor_only": 28,
+    "source_review_first": 13
   },
   "teams": [
     {
@@ -406,7 +406,7 @@
       "team_id": "POR",
       "team_name": "Portugal",
       "dominant_negative_driver": "defense",
-      "rank_underperformance_flags": 6,
+      "rank_underperformance_flags": 5,
       "bucketCounts": {
         "do_not_use_for_upgrade_proposal": 9,
         "monitor_only": 1
@@ -784,374 +784,237 @@
       ]
     },
     {
-      "team_id": "MAR",
-      "team_name": "Morocco",
-      "dominant_negative_driver": "attack",
-      "rank_underperformance_flags": 3,
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "dominant_negative_driver": "unknown",
+      "rank_underperformance_flags": 0,
       "bucketCounts": {
-        "candidate_for_later_proposal": 1,
-        "do_not_use_for_upgrade_proposal": 2,
-        "monitor_only": 5,
-        "source_review_first": 2
+        "monitor_only": 2,
+        "source_review_first": 5
       },
-      "candidate_for_later_proposal": [
-        {
-          "player_id": "MAR_AMRABAT",
-          "name": "Sofyan Amrabat",
-          "primary_position": "CDM",
-          "current_overall": 52,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "candidate_for_later_proposal"
-        }
-      ],
+      "candidate_for_later_proposal": [],
       "source_review_first": [
         {
-          "player_id": "MAR_DIOP",
-          "name": "Issa Diop",
+          "player_id": "JOR_ABUTAHA",
+          "name": "Mohannad Abu Taha",
+          "primary_position": "LB",
+          "current_overall": 45,
+          "review_score": 24.0,
+          "review_band": "medium",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "weak_position_group",
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        },
+        {
+          "player_id": "JOR_NASIB",
+          "name": "Abdallah Nasib",
+          "primary_position": "RB",
+          "current_overall": 47,
+          "review_score": 24.0,
+          "review_band": "medium",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "weak_position_group",
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        },
+        {
+          "player_id": "JOR_ABULAILA",
+          "name": "Yazeed Abulaila",
+          "primary_position": "GK",
+          "current_overall": 47,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        },
+        {
+          "player_id": "JOR_BANAWI",
+          "name": "Anas Banawi",
+          "primary_position": "CB",
+          "current_overall": 47,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "monitor_only",
+          "review_flags": [
+            "weak_position_group"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        },
+        {
+          "player_id": "JOR_RAWABDEH",
+          "name": "Noor Al-Rawabdeh",
+          "primary_position": "CDM",
+          "current_overall": 42,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        }
+      ],
+      "do_not_use_for_upgrade_proposal": [],
+      "monitor_only": [
+        {
+          "player_id": "JOR_OLWAN",
+          "name": "Ali Olwan",
+          "primary_position": "ST",
+          "current_overall": 47,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "JOR_TAMARI",
+          "name": "Mousa Al-Tamari",
+          "primary_position": "RW",
+          "current_overall": 61,
+          "review_score": 10.0,
+          "review_band": "low",
+          "suggested_codex_action": "verify_roster_role_first",
+          "review_flags": [
+            "shallow_roster_top_contributor"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        }
+      ]
+    },
+    {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "dominant_negative_driver": "unknown",
+      "rank_underperformance_flags": 0,
+      "bucketCounts": {
+        "monitor_only": 3,
+        "source_review_first": 2
+      },
+      "candidate_for_later_proposal": [],
+      "source_review_first": [
+        {
+          "player_id": "BIH_BAJRAKTAREVIC",
+          "name": "Esmir Bajraktarevic",
+          "primary_position": "RW",
+          "current_overall": 54,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "review_flags": [
+            "rating_outpaces_caps"
+          ],
+          "source_risk_flags": [
+            "Fotmob"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        },
+        {
+          "player_id": "BIH_DZEKO",
+          "name": "Edin Dzeko",
+          "primary_position": "ST",
+          "current_overall": 50,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [
+            "WC2026"
+          ],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "source_review_first"
+        }
+      ],
+      "do_not_use_for_upgrade_proposal": [],
+      "monitor_only": [
+        {
+          "player_id": "BIH_ALAJBEGOVIC",
+          "name": "Kerim Alajbegovic",
+          "primary_position": "CAM",
+          "current_overall": 50,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "review_flags": [
+            "rating_outpaces_caps"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "BIH_KOLASINAC",
+          "name": "Sead Kolasinac",
+          "primary_position": "LB",
+          "current_overall": 54,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "BIH_TURKES",
+          "name": "Anel Ahmedhodzic",
           "primary_position": "CB",
           "current_overall": 61,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [
-            "WC2026"
-          ],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "source_review_first"
-        },
-        {
-          "player_id": "MAR_RAHIMI",
-          "name": "Soufiane Rahimi",
-          "primary_position": "ST",
-          "current_overall": 60,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [
-            "WC2026"
-          ],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "source_review_first"
-        }
-      ],
-      "do_not_use_for_upgrade_proposal": [
-        {
-          "player_id": "MAR_DIAZ",
-          "name": "Brahim Diaz",
-          "primary_position": "CAM",
-          "current_overall": 66,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "MAR_ELKHANNOUSS",
-          "name": "Bilal El Khannouss",
-          "primary_position": "CAM",
-          "current_overall": 60,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        }
-      ],
-      "monitor_only": [
-        {
-          "player_id": "MAR_BOUNOU",
-          "name": "Yassine Bounou",
-          "primary_position": "GK",
-          "current_overall": 50,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "MAR_ELKAJOUI",
-          "name": "Munir El Kajoui",
-          "primary_position": "GK",
-          "current_overall": 48,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "MAR_AGUERD",
-          "name": "Nayef Aguerd",
-          "primary_position": "CB",
-          "current_overall": 65,
-          "review_score": 8.0,
+          "review_score": 10.0,
           "review_band": "low",
-          "suggested_codex_action": "monitor_only",
+          "suggested_codex_action": "verify_roster_role_first",
           "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "MAR_AKHOMACH",
-          "name": "Ilias Akhomach",
-          "primary_position": "LW",
-          "current_overall": 60,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "MAR_ELKAABI",
-          "name": "Ayoub El Kaabi",
-          "primary_position": "ST",
-          "current_overall": 57,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        }
-      ]
-    },
-    {
-      "team_id": "URU",
-      "team_name": "Uruguay",
-      "dominant_negative_driver": "defense",
-      "rank_underperformance_flags": 3,
-      "bucketCounts": {
-        "candidate_for_later_proposal": 1,
-        "do_not_use_for_upgrade_proposal": 5,
-        "monitor_only": 4
-      },
-      "candidate_for_later_proposal": [
-        {
-          "player_id": "URU_MUSLERA",
-          "name": "Fernando Muslera",
-          "primary_position": "GK",
-          "current_overall": 48,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "candidate_for_later_proposal"
-        }
-      ],
-      "source_review_first": [],
-      "do_not_use_for_upgrade_proposal": [
-        {
-          "player_id": "URU_ARAUJO",
-          "name": "Ronald Araujo",
-          "primary_position": "CB",
-          "current_overall": 68,
-          "review_score": 30.0,
-          "review_band": "high",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
             "shallow_roster_top_contributor"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "URU_DARWINNUNEZ",
-          "name": "Darwin Nunez",
-          "primary_position": "ST",
-          "current_overall": 67,
-          "review_score": 30.0,
-          "review_band": "high",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
-            "shallow_roster_top_contributor"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "URU_OLIVERA",
-          "name": "Mathias Olivera",
-          "primary_position": "LB",
-          "current_overall": 63,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "URU_ROCHET",
-          "name": "Sergio Rochet",
-          "primary_position": "GK",
-          "current_overall": 52,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "URU_UGARTE",
-          "name": "Manuel Ugarte",
-          "primary_position": "CDM",
-          "current_overall": 56,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        }
-      ],
-      "monitor_only": [
-        {
-          "player_id": "URU_BENTANCUR",
-          "name": "Rodrigo Bentancur",
-          "primary_position": "CM",
-          "current_overall": 57,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "URU_DEARRASCAETA",
-          "name": "Giorgian de Arrascaeta",
-          "primary_position": "CAM",
-          "current_overall": 57,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "URU_GIMENEZ",
-          "name": "Jose Maria Gimenez",
-          "primary_position": "CB",
-          "current_overall": 62,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "monitor_only"
-        },
-        {
-          "player_id": "URU_PELLISTRI",
-          "name": "Facundo Pellistri",
-          "primary_position": "RW",
-          "current_overall": 57,
-          "review_score": 8.0,
-          "review_band": "low",
-          "suggested_codex_action": "monitor_only",
-          "review_flags": [
-            "team_rank_underperformance"
           ],
           "source_risk_flags": [],
           "driver_alignment": false,
@@ -1161,381 +1024,231 @@
       ]
     },
     {
-      "team_id": "ESP",
-      "team_name": "Spain",
-      "dominant_negative_driver": "defense",
-      "rank_underperformance_flags": 3,
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "dominant_negative_driver": "unknown",
+      "rank_underperformance_flags": 0,
       "bucketCounts": {
-        "do_not_use_for_upgrade_proposal": 10
+        "monitor_only": 6
       },
       "candidate_for_later_proposal": [],
       "source_review_first": [],
-      "do_not_use_for_upgrade_proposal": [
+      "do_not_use_for_upgrade_proposal": [],
+      "monitor_only": [
         {
-          "player_id": "ESP_LAMINEYAMAL",
-          "name": "Lamine Yamal",
-          "primary_position": "RW",
-          "current_overall": 75,
-          "review_score": 30.0,
-          "review_band": "high",
+          "player_id": "AUS_BEHICH",
+          "name": "Aziz Behich",
+          "primary_position": "LB",
+          "current_overall": 48,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "AUS_DEGENEK",
+          "name": "Milos Degenek",
+          "primary_position": "CB",
+          "current_overall": 51,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "AUS_IRVINE",
+          "name": "Jackson Irvine",
+          "primary_position": "CM",
+          "current_overall": 46,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "AUS_MAGGS",
+          "name": "Nestory Irankunda",
+          "primary_position": "LW",
+          "current_overall": 55,
+          "review_score": 12.0,
+          "review_band": "low",
           "suggested_codex_action": "inspect_for_possible_downgrade",
           "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps",
+            "rating_outpaces_caps"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "AUS_VUKOVIC",
+          "name": "Mathew Ryan",
+          "primary_position": "GK",
+          "current_overall": 49,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "AUS_HATCH",
+          "name": "Harry Souttar",
+          "primary_position": "CB",
+          "current_overall": 58,
+          "review_score": 10.0,
+          "review_band": "low",
+          "suggested_codex_action": "verify_roster_role_first",
+          "review_flags": [
             "shallow_roster_top_contributor"
           ],
           "source_risk_flags": [],
           "driver_alignment": false,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_CUBARSI",
-          "name": "Pau Cubarsi",
-          "primary_position": "CB",
-          "current_overall": 69,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_CUCURELLA",
-          "name": "Marc Cucurella",
-          "primary_position": "LB",
-          "current_overall": 70,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_DANIOLMO",
-          "name": "Dani Olmo",
-          "primary_position": "CAM",
-          "current_overall": 62,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_GAVI",
-          "name": "Gavi",
-          "primary_position": "CM",
-          "current_overall": 62,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_NICOWILLIAMS",
-          "name": "Nico Williams",
-          "primary_position": "LW",
-          "current_overall": 70,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": false,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_PEDRI",
-          "name": "Pedri",
-          "primary_position": "CM",
-          "current_overall": 66,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_PORRO",
-          "name": "Pedro Porro",
-          "primary_position": "RB",
-          "current_overall": 66,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_RAYA",
-          "name": "David Raya",
-          "primary_position": "GK",
-          "current_overall": 52,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ESP_RODRI",
-          "name": "Rodri",
-          "primary_position": "CDM",
-          "current_overall": 63,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
         }
-      ],
-      "monitor_only": []
+      ]
     },
     {
-      "team_id": "ARG",
-      "team_name": "Argentina",
-      "dominant_negative_driver": "defense",
-      "rank_underperformance_flags": 3,
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "dominant_negative_driver": "unknown",
+      "rank_underperformance_flags": 0,
       "bucketCounts": {
-        "candidate_for_later_proposal": 3,
-        "do_not_use_for_upgrade_proposal": 6,
+        "monitor_only": 5,
         "source_review_first": 1
       },
-      "candidate_for_later_proposal": [
-        {
-          "player_id": "ARG_DEPAUL",
-          "name": "Rodrigo De Paul",
-          "primary_position": "CM",
-          "current_overall": 53,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "candidate_for_later_proposal"
-        },
-        {
-          "player_id": "ARG_OTAMENDI",
-          "name": "Nicolas Otamendi",
-          "primary_position": "CB",
-          "current_overall": 51,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "candidate_for_later_proposal"
-        },
-        {
-          "player_id": "ARG_PAREDES",
-          "name": "Leandro Paredes",
-          "primary_position": "CDM",
-          "current_overall": 45,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": false,
-          "decision_bucket": "candidate_for_later_proposal"
-        }
-      ],
+      "candidate_for_later_proposal": [],
       "source_review_first": [
         {
-          "player_id": "ARG_MESSI",
-          "name": "Lionel Messi",
-          "primary_position": "RW",
-          "current_overall": 64,
-          "review_score": 20.0,
+          "player_id": "PAR_ENCISO",
+          "name": "Julio Enciso",
+          "primary_position": "CAM",
+          "current_overall": 58,
+          "review_score": 22.0,
           "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
           "review_flags": [
-            "team_rank_underperformance",
-            "caps_outpace_rating"
+            "rating_outpaces_caps",
+            "shallow_roster_top_contributor"
           ],
           "source_risk_flags": [
-            "Fotmob",
-            "hat trick",
-            "WC2026"
+            "FC26"
           ],
           "driver_alignment": false,
           "counterproductive_for_team_underperformance": false,
           "decision_bucket": "source_review_first"
         }
       ],
-      "do_not_use_for_upgrade_proposal": [
+      "do_not_use_for_upgrade_proposal": [],
+      "monitor_only": [
         {
-          "player_id": "ARG_ALVAREZ",
-          "name": "Julian Alvarez",
-          "primary_position": "ST",
-          "current_overall": 69,
-          "review_score": 20.0,
+          "player_id": "PAR_ALDERETE",
+          "name": "Gustavo Gomez",
+          "primary_position": "CB",
+          "current_overall": 58,
+          "review_score": 22.0,
           "review_band": "medium",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating",
+            "shallow_roster_top_contributor"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "PAR_ALDERETE_J",
+          "name": "Junior Alonso",
+          "primary_position": "CB",
+          "current_overall": 57,
+          "review_score": 22.0,
+          "review_band": "medium",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating",
+            "shallow_roster_top_contributor"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "PAR_ALMIRON",
+          "name": "Miguel Almiron",
+          "primary_position": "RW",
+          "current_overall": 55,
+          "review_score": 12.0,
+          "review_band": "low",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "review_flags": [
+            "caps_outpace_rating"
+          ],
+          "source_risk_flags": [],
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
+        },
+        {
+          "player_id": "PAR_ESCOBAR",
+          "name": "Gustavo Velazquez",
+          "primary_position": "RB",
+          "current_overall": 54,
+          "review_score": 12.0,
+          "review_band": "low",
           "suggested_codex_action": "inspect_for_possible_downgrade",
           "review_flags": [
-            "team_rank_underperformance",
             "rating_outpaces_caps"
           ],
           "source_risk_flags": [],
           "driver_alignment": false,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
         },
         {
-          "player_id": "ARG_ENZO",
-          "name": "Enzo Fernandez",
-          "primary_position": "CDM",
-          "current_overall": 61,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ARG_LISANDRO",
-          "name": "Lisandro Martinez",
-          "primary_position": "CB",
-          "current_overall": 62,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ARG_MACALLISTER",
-          "name": "Alexis Mac Allister",
+          "player_id": "PAR_ROJAS_D",
+          "name": "Damian Bobadilla",
           "primary_position": "CM",
-          "current_overall": 61,
-          "review_score": 20.0,
-          "review_band": "medium",
+          "current_overall": 49,
+          "review_score": 12.0,
+          "review_band": "low",
           "suggested_codex_action": "inspect_for_possible_downgrade",
           "review_flags": [
-            "team_rank_underperformance",
             "rating_outpaces_caps"
           ],
           "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ARG_ROMERO",
-          "name": "Cristian Romero",
-          "primary_position": "CB",
-          "current_overall": 66,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
-        },
-        {
-          "player_id": "ARG_RULLI",
-          "name": "Geronimo Rulli",
-          "primary_position": "GK",
-          "current_overall": 51,
-          "review_score": 20.0,
-          "review_band": "medium",
-          "suggested_codex_action": "inspect_for_possible_downgrade",
-          "review_flags": [
-            "team_rank_underperformance",
-            "rating_outpaces_caps"
-          ],
-          "source_risk_flags": [],
-          "driver_alignment": true,
-          "counterproductive_for_team_underperformance": true,
-          "decision_bucket": "do_not_use_for_upgrade_proposal"
+          "driver_alignment": false,
+          "counterproductive_for_team_underperformance": false,
+          "decision_bucket": "monitor_only"
         }
-      ],
-      "monitor_only": []
+      ]
     }
   ]
 }

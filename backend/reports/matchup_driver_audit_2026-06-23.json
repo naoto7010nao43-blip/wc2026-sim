@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-23T10:20:11.637276+00:00",
-  "modelVersion": "poisson-v1",
+  "generatedAt": "2026-06-23T11:23:54.676989+00:00",
+  "modelVersion": "poisson-v2-rank75",
   "note": "Read-only driver audit for watchlist matchups. It decomposes the current model's log-goal inputs into attack, defense, strength, tactical, and home-order contributions so future rating reviews can see which feature is dragging a better-ranked team down. It does not change predictions.",
   "sourceReports": [
     {
@@ -20,7 +20,7 @@
     "average_contributions": {
       "attack": 0.1058,
       "defense": -0.0621,
-      "strength": 0.0935,
+      "strength": 0.1044,
       "tactical": 0.0064,
       "home_order": 0.05
     },
@@ -39,7 +39,7 @@
         "average_contributions": {
           "attack": -0.0704,
           "defense": -0.0459,
-          "strength": 0.0496,
+          "strength": 0.063,
           "tactical": -0.0032,
           "home_order": 0.05
         },
@@ -55,23 +55,23 @@
           "favorite_fifa_rank": 10,
           "opponent_fifa_rank": 10,
           "rank_gap": 0,
-          "favorite_win_pct": 23.6,
+          "favorite_win_pct": 24.2,
           "minimum_expected_favorite_win_pct": 33.0,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.09,
-            "opponent": 1.75
+            "favorite": 1.11,
+            "opponent": 1.73
           },
           "feature_diffs": {
             "attack_diff": -10.02,
             "defense_diff": -0.07,
-            "strength_diff": -2.58,
+            "strength_diff": -1.61,
             "tactical_modifier": -0.085
           },
           "log_goal_contributions": {
             "attack": -0.2204,
             "defense": -0.0015,
-            "strength": -0.031,
+            "strength": -0.0194,
             "tactical": -0.0085,
             "home_order": 0.05
           },
@@ -83,23 +83,23 @@
           "favorite_fifa_rank": 10,
           "opponent_fifa_rank": 14,
           "rank_gap": 4,
-          "favorite_win_pct": 29.4,
+          "favorite_win_pct": 29.8,
           "minimum_expected_favorite_win_pct": 37.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.21,
-            "opponent": 1.58
+            "favorite": 1.22,
+            "opponent": 1.57
           },
           "feature_diffs": {
             "attack_diff": -3.94,
             "defense_diff": -4.53,
-            "strength_diff": 3.04,
+            "strength_diff": 3.64,
             "tactical_modifier": -0.055
           },
           "log_goal_contributions": {
             "attack": -0.0868,
             "defense": -0.0996,
-            "strength": 0.0364,
+            "strength": 0.0436,
             "tactical": -0.0055,
             "home_order": 0.05
           },
@@ -111,23 +111,23 @@
           "favorite_fifa_rank": 10,
           "opponent_fifa_rank": 18,
           "rank_gap": 8,
-          "favorite_win_pct": 31.0,
+          "favorite_win_pct": 32.3,
           "minimum_expected_favorite_win_pct": 42.6,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.25,
-            "opponent": 1.53
+            "favorite": 1.28,
+            "opponent": 1.5
           },
           "feature_diffs": {
             "attack_diff": -6.9,
             "defense_diff": -0.82,
-            "strength_diff": 3.69,
+            "strength_diff": 5.55,
             "tactical_modifier": -0.025
           },
           "log_goal_contributions": {
             "attack": -0.1518,
             "defense": -0.018,
-            "strength": 0.0443,
+            "strength": 0.0666,
             "tactical": -0.0025,
             "home_order": 0.05
           },
@@ -139,23 +139,23 @@
           "favorite_fifa_rank": 10,
           "opponent_fifa_rank": 18,
           "rank_gap": 8,
-          "favorite_win_pct": 33.7,
+          "favorite_win_pct": 34.6,
           "minimum_expected_favorite_win_pct": 42.6,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.31,
-            "opponent": 1.47
+            "favorite": 1.33,
+            "opponent": 1.44
           },
           "feature_diffs": {
             "attack_diff": -2.87,
             "defense_diff": -3.54,
-            "strength_diff": 5.22,
+            "strength_diff": 6.5,
             "tactical_modifier": -0.0425
           },
           "log_goal_contributions": {
             "attack": -0.0631,
             "defense": -0.0778,
-            "strength": 0.0627,
+            "strength": 0.0781,
             "tactical": -0.0043,
             "home_order": 0.05
           },
@@ -167,23 +167,23 @@
           "favorite_fifa_rank": 10,
           "opponent_fifa_rank": 14,
           "rank_gap": 4,
-          "favorite_win_pct": 34.6,
+          "favorite_win_pct": 35.4,
           "minimum_expected_favorite_win_pct": 37.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.33,
-            "opponent": 1.44
+            "favorite": 1.34,
+            "opponent": 1.43
           },
           "feature_diffs": {
             "attack_diff": -5.95,
             "defense_diff": 2.21,
-            "strength_diff": 1.91,
+            "strength_diff": 2.93,
             "tactical_modifier": -0.08
           },
           "log_goal_contributions": {
             "attack": -0.1309,
             "defense": 0.0486,
-            "strength": 0.0229,
+            "strength": 0.0352,
             "tactical": -0.008,
             "home_order": 0.05
           },
@@ -198,7 +198,7 @@
         "average_contributions": {
           "attack": 0.066,
           "defense": -0.1082,
-          "strength": 0.0899,
+          "strength": 0.098,
           "tactical": 0.0061,
           "home_order": 0.05
         },
@@ -214,23 +214,23 @@
           "favorite_fifa_rank": 7,
           "opponent_fifa_rank": 10,
           "rank_gap": 3,
-          "favorite_win_pct": 31.1,
+          "favorite_win_pct": 31.6,
           "minimum_expected_favorite_win_pct": 36.6,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.25,
-            "opponent": 1.53
+            "favorite": 1.26,
+            "opponent": 1.52
           },
           "feature_diffs": {
             "attack_diff": -3.64,
             "defense_diff": -3.32,
-            "strength_diff": 2.12,
+            "strength_diff": 2.87,
             "tactical_modifier": 0.015
           },
           "log_goal_contributions": {
             "attack": -0.0802,
             "defense": -0.073,
-            "strength": 0.0254,
+            "strength": 0.0345,
             "tactical": 0.0015,
             "home_order": 0.05
           },
@@ -242,23 +242,23 @@
           "favorite_fifa_rank": 7,
           "opponent_fifa_rank": 14,
           "rank_gap": 7,
-          "favorite_win_pct": 37.6,
+          "favorite_win_pct": 37.9,
           "minimum_expected_favorite_win_pct": 41.4,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.39,
-            "opponent": 1.38
+            "favorite": 1.4,
+            "opponent": 1.37
           },
           "feature_diffs": {
             "attack_diff": 2.43,
             "defense_diff": -7.77,
-            "strength_diff": 7.73,
+            "strength_diff": 8.12,
             "tactical_modifier": 0.045
           },
           "log_goal_contributions": {
             "attack": 0.0535,
             "defense": -0.171,
-            "strength": 0.0928,
+            "strength": 0.0975,
             "tactical": 0.0045,
             "home_order": 0.05
           },
@@ -270,23 +270,23 @@
           "favorite_fifa_rank": 7,
           "opponent_fifa_rank": 18,
           "rank_gap": 11,
-          "favorite_win_pct": 39.3,
+          "favorite_win_pct": 40.6,
           "minimum_expected_favorite_win_pct": 46.2,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.43,
-            "opponent": 1.34
+            "favorite": 1.46,
+            "opponent": 1.31
           },
           "feature_diffs": {
             "attack_diff": -0.53,
             "defense_diff": -4.07,
-            "strength_diff": 8.39,
+            "strength_diff": 10.04,
             "tactical_modifier": 0.075
           },
           "log_goal_contributions": {
             "attack": -0.0116,
             "defense": -0.0895,
-            "strength": 0.1007,
+            "strength": 0.1204,
             "tactical": 0.0075,
             "home_order": 0.05
           },
@@ -298,23 +298,23 @@
           "favorite_fifa_rank": 7,
           "opponent_fifa_rank": 18,
           "rank_gap": 11,
-          "favorite_win_pct": 42.3,
+          "favorite_win_pct": 43.1,
           "minimum_expected_favorite_win_pct": 46.2,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.5,
-            "opponent": 1.28
+            "favorite": 1.52,
+            "opponent": 1.26
           },
           "feature_diffs": {
             "attack_diff": 3.51,
             "defense_diff": -6.79,
-            "strength_diff": 9.92,
+            "strength_diff": 10.99,
             "tactical_modifier": 0.0575
           },
           "log_goal_contributions": {
             "attack": 0.0771,
             "defense": -0.1493,
-            "strength": 0.119,
+            "strength": 0.1319,
             "tactical": 0.0058,
             "home_order": 0.05
           },
@@ -326,23 +326,23 @@
           "favorite_fifa_rank": 7,
           "opponent_fifa_rank": 17,
           "rank_gap": 10,
-          "favorite_win_pct": 43.4,
+          "favorite_win_pct": 44.5,
           "minimum_expected_favorite_win_pct": 45.0,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.52,
-            "opponent": 1.26
+            "favorite": 1.55,
+            "opponent": 1.24
           },
           "feature_diffs": {
             "attack_diff": 1.07,
             "defense_diff": -2.56,
-            "strength_diff": 8.22,
+            "strength_diff": 9.57,
             "tactical_modifier": 0.04
           },
           "log_goal_contributions": {
             "attack": 0.0235,
             "defense": -0.0564,
-            "strength": 0.0986,
+            "strength": 0.1148,
             "tactical": 0.004,
             "home_order": 0.05
           },
@@ -357,7 +357,7 @@
         "average_contributions": {
           "attack": 0.1353,
           "defense": -0.132,
-          "strength": 0.1087,
+          "strength": 0.1185,
           "tactical": 0.0056,
           "home_order": 0.05
         },
@@ -372,23 +372,23 @@
           "favorite_fifa_rank": 5,
           "opponent_fifa_rank": 6,
           "rank_gap": 1,
-          "favorite_win_pct": 33.5,
+          "favorite_win_pct": 33.9,
           "minimum_expected_favorite_win_pct": 34.2,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.3,
-            "opponent": 1.47
+            "favorite": 1.31,
+            "opponent": 1.46
           },
           "feature_diffs": {
             "attack_diff": -2.05,
             "defense_diff": -2.14,
-            "strength_diff": 0.3,
+            "strength_diff": 0.83,
             "tactical_modifier": 0.025
           },
           "log_goal_contributions": {
             "attack": -0.0451,
             "defense": -0.0471,
-            "strength": 0.0036,
+            "strength": 0.0099,
             "tactical": 0.0025,
             "home_order": 0.05
           },
@@ -400,23 +400,23 @@
           "favorite_fifa_rank": 5,
           "opponent_fifa_rank": 10,
           "rank_gap": 5,
-          "favorite_win_pct": 36.1,
+          "favorite_win_pct": 36.8,
           "minimum_expected_favorite_win_pct": 39.0,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.36,
-            "opponent": 1.41
+            "favorite": 1.37,
+            "opponent": 1.39
           },
           "feature_diffs": {
             "attack_diff": 0.3,
             "defense_diff": -5.02,
-            "strength_diff": 4.85,
+            "strength_diff": 5.81,
             "tactical_modifier": 0.015
           },
           "log_goal_contributions": {
             "attack": 0.0067,
             "defense": -0.1105,
-            "strength": 0.0581,
+            "strength": 0.0697,
             "tactical": 0.0015,
             "home_order": 0.05
           },
@@ -428,23 +428,23 @@
           "favorite_fifa_rank": 5,
           "opponent_fifa_rank": 14,
           "rank_gap": 9,
-          "favorite_win_pct": 42.9,
+          "favorite_win_pct": 43.3,
           "minimum_expected_favorite_win_pct": 43.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.51,
-            "opponent": 1.27
+            "favorite": 1.52,
+            "opponent": 1.26
           },
           "feature_diffs": {
             "attack_diff": 6.38,
             "defense_diff": -9.48,
-            "strength_diff": 10.46,
+            "strength_diff": 11.06,
             "tactical_modifier": 0.045
           },
           "log_goal_contributions": {
             "attack": 0.1404,
             "defense": -0.2086,
-            "strength": 0.1256,
+            "strength": 0.1327,
             "tactical": 0.0045,
             "home_order": 0.05
           },
@@ -456,52 +456,24 @@
           "favorite_fifa_rank": 5,
           "opponent_fifa_rank": 18,
           "rank_gap": 13,
-          "favorite_win_pct": 44.7,
+          "favorite_win_pct": 46.1,
           "minimum_expected_favorite_win_pct": 48.6,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.55,
-            "opponent": 1.23
+            "favorite": 1.59,
+            "opponent": 1.21
           },
           "feature_diffs": {
             "attack_diff": 3.42,
             "defense_diff": -5.78,
-            "strength_diff": 11.12,
+            "strength_diff": 12.97,
             "tactical_modifier": 0.075
           },
           "log_goal_contributions": {
             "attack": 0.0753,
             "defense": -0.1271,
-            "strength": 0.1335,
+            "strength": 0.1557,
             "tactical": 0.0075,
-            "home_order": 0.05
-          },
-          "primary_negative_driver": "defense"
-        },
-        {
-          "favorite_team_id": "POR",
-          "opponent_team_id": "JPN",
-          "favorite_fifa_rank": 5,
-          "opponent_fifa_rank": 18,
-          "rank_gap": 13,
-          "favorite_win_pct": 47.7,
-          "minimum_expected_favorite_win_pct": 48.6,
-          "implausible_favorite": true,
-          "expected_goals": {
-            "favorite": 1.62,
-            "opponent": 1.18
-          },
-          "feature_diffs": {
-            "attack_diff": 7.45,
-            "defense_diff": -8.49,
-            "strength_diff": 12.65,
-            "tactical_modifier": 0.0575
-          },
-          "log_goal_contributions": {
-            "attack": 0.164,
-            "defense": -0.1869,
-            "strength": 0.1518,
-            "tactical": 0.0058,
             "home_order": 0.05
           },
           "primary_negative_driver": "defense"
@@ -515,7 +487,7 @@
         "average_contributions": {
           "attack": -0.0242,
           "defense": -0.0018,
-          "strength": 0.027,
+          "strength": 0.0358,
           "tactical": 0.0031,
           "home_order": 0.05
         },
@@ -532,23 +504,23 @@
           "favorite_fifa_rank": 14,
           "opponent_fifa_rank": 18,
           "rank_gap": 4,
-          "favorite_win_pct": 33.3,
+          "favorite_win_pct": 34.3,
           "minimum_expected_favorite_win_pct": 37.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.3,
-            "opponent": 1.48
+            "favorite": 1.32,
+            "opponent": 1.45
           },
           "feature_diffs": {
             "attack_diff": -5.61,
             "defense_diff": 1.14,
-            "strength_diff": 0.55,
+            "strength_diff": 1.85,
             "tactical_modifier": 0.025
           },
           "log_goal_contributions": {
             "attack": -0.1234,
             "defense": 0.0251,
-            "strength": 0.0066,
+            "strength": 0.0222,
             "tactical": 0.0025,
             "home_order": 0.05
           },
@@ -560,23 +532,23 @@
           "favorite_fifa_rank": 14,
           "opponent_fifa_rank": 18,
           "rank_gap": 4,
-          "favorite_win_pct": 36.1,
+          "favorite_win_pct": 36.6,
           "minimum_expected_favorite_win_pct": 37.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.36,
-            "opponent": 1.41
+            "favorite": 1.37,
+            "opponent": 1.4
           },
           "feature_diffs": {
             "attack_diff": -1.58,
             "defense_diff": -1.58,
-            "strength_diff": 2.08,
+            "strength_diff": 2.8,
             "tactical_modifier": 0.0075
           },
           "log_goal_contributions": {
             "attack": -0.0347,
             "defense": -0.0347,
-            "strength": 0.0249,
+            "strength": 0.0336,
             "tactical": 0.0008,
             "home_order": 0.05
           },
@@ -591,7 +563,7 @@
         "average_contributions": {
           "attack": 0.0403,
           "defense": -0.0111,
-          "strength": 0.0746,
+          "strength": 0.0849,
           "tactical": 0.0113,
           "home_order": 0.05
         },
@@ -608,23 +580,23 @@
           "favorite_fifa_rank": 8,
           "opponent_fifa_rank": 10,
           "rank_gap": 2,
-          "favorite_win_pct": 34.3,
+          "favorite_win_pct": 34.9,
           "minimum_expected_favorite_win_pct": 35.4,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.32,
-            "opponent": 1.45
+            "favorite": 1.33,
+            "opponent": 1.44
           },
           "feature_diffs": {
             "attack_diff": -4.95,
             "defense_diff": 1.14,
-            "strength_diff": 0.37,
+            "strength_diff": 1.23,
             "tactical_modifier": 0.065
           },
           "log_goal_contributions": {
             "attack": -0.109,
             "defense": 0.025,
-            "strength": 0.0044,
+            "strength": 0.0148,
             "tactical": 0.0065,
             "home_order": 0.05
           },
@@ -636,23 +608,23 @@
           "favorite_fifa_rank": 8,
           "opponent_fifa_rank": 18,
           "rank_gap": 10,
-          "favorite_win_pct": 42.8,
+          "favorite_win_pct": 44.2,
           "minimum_expected_favorite_win_pct": 45.0,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.51,
-            "opponent": 1.27
+            "favorite": 1.54,
+            "opponent": 1.24
           },
           "feature_diffs": {
             "attack_diff": -1.84,
             "defense_diff": 0.39,
-            "strength_diff": 6.64,
+            "strength_diff": 8.39,
             "tactical_modifier": 0.125
           },
           "log_goal_contributions": {
             "attack": -0.0404,
             "defense": 0.0085,
-            "strength": 0.0797,
+            "strength": 0.1007,
             "tactical": 0.0125,
             "home_order": 0.05
           },
@@ -667,7 +639,7 @@
         "average_contributions": {
           "attack": 0.0914,
           "defense": -0.1092,
-          "strength": 0.0488,
+          "strength": 0.0526,
           "tactical": 0.0191,
           "home_order": 0.05
         },
@@ -682,23 +654,23 @@
           "favorite_fifa_rank": 14,
           "opponent_fifa_rank": 18,
           "rank_gap": 4,
-          "favorite_win_pct": 35.8,
+          "favorite_win_pct": 36.4,
           "minimum_expected_favorite_win_pct": 37.8,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.35,
-            "opponent": 1.42
+            "favorite": 1.37,
+            "opponent": 1.4
           },
           "feature_diffs": {
             "attack_diff": -0.95,
             "defense_diff": -3.03,
-            "strength_diff": 1.79,
+            "strength_diff": 2.62,
             "tactical_modifier": 0.175
           },
           "log_goal_contributions": {
             "attack": -0.0209,
             "defense": -0.0667,
-            "strength": 0.0214,
+            "strength": 0.0314,
             "tactical": 0.0175,
             "home_order": 0.05
           },
@@ -713,7 +685,7 @@
         "average_contributions": {
           "attack": 0.1345,
           "defense": -0.0979,
-          "strength": 0.1404,
+          "strength": 0.158,
           "tactical": 0.0093,
           "home_order": 0.05
         },
@@ -730,55 +702,27 @@
           "favorite_fifa_rank": 2,
           "opponent_fifa_rank": 3,
           "rank_gap": 1,
-          "favorite_win_pct": 32.3,
+          "favorite_win_pct": 32.9,
           "minimum_expected_favorite_win_pct": 34.2,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.28,
-            "opponent": 1.5
+            "favorite": 1.29,
+            "opponent": 1.49
           },
           "feature_diffs": {
             "attack_diff": -5.04,
             "defense_diff": -0.59,
-            "strength_diff": 0.58,
+            "strength_diff": 1.32,
             "tactical_modifier": 0.115
           },
           "log_goal_contributions": {
             "attack": -0.1109,
             "defense": -0.013,
-            "strength": 0.007,
+            "strength": 0.0158,
             "tactical": 0.0115,
             "home_order": 0.05
           },
           "primary_negative_driver": "attack"
-        },
-        {
-          "favorite_team_id": "ESP",
-          "opponent_team_id": "SEN",
-          "favorite_fifa_rank": 2,
-          "opponent_fifa_rank": 18,
-          "rank_gap": 16,
-          "favorite_win_pct": 51.6,
-          "minimum_expected_favorite_win_pct": 52.2,
-          "implausible_favorite": true,
-          "expected_goals": {
-            "favorite": 1.72,
-            "opponent": 1.11
-          },
-          "feature_diffs": {
-            "attack_diff": 4.85,
-            "defense_diff": -5.05,
-            "strength_diff": 15.54,
-            "tactical_modifier": 0.115
-          },
-          "log_goal_contributions": {
-            "attack": 0.1067,
-            "defense": -0.111,
-            "strength": 0.1865,
-            "tactical": 0.0115,
-            "home_order": 0.05
-          },
-          "primary_negative_driver": "defense"
         }
       ]
     },
@@ -789,7 +733,7 @@
         "average_contributions": {
           "attack": 0.0447,
           "defense": -0.0005,
-          "strength": 0.1333,
+          "strength": 0.1647,
           "tactical": 0.0018,
           "home_order": 0.05
         },
@@ -807,83 +751,27 @@
           "favorite_fifa_rank": 1,
           "opponent_fifa_rank": 3,
           "rank_gap": 2,
-          "favorite_win_pct": 32.5,
+          "favorite_win_pct": 33.9,
           "minimum_expected_favorite_win_pct": 35.4,
           "implausible_favorite": true,
           "expected_goals": {
-            "favorite": 1.28,
-            "opponent": 1.5
+            "favorite": 1.31,
+            "opponent": 1.46
           },
           "feature_diffs": {
             "attack_diff": -8.81,
             "defense_diff": 3.6,
-            "strength_diff": 0.6,
+            "strength_diff": 2.57,
             "tactical_modifier": 0.045
           },
           "log_goal_contributions": {
             "attack": -0.1937,
             "defense": 0.0792,
-            "strength": 0.0073,
+            "strength": 0.0309,
             "tactical": 0.0045,
             "home_order": 0.05
           },
           "primary_negative_driver": "attack"
-        },
-        {
-          "favorite_team_id": "ARG",
-          "opponent_team_id": "GER",
-          "favorite_fifa_rank": 1,
-          "opponent_fifa_rank": 10,
-          "rank_gap": 9,
-          "favorite_win_pct": 42.9,
-          "minimum_expected_favorite_win_pct": 43.8,
-          "implausible_favorite": true,
-          "expected_goals": {
-            "favorite": 1.51,
-            "opponent": 1.27
-          },
-          "feature_diffs": {
-            "attack_diff": -2.03,
-            "defense_diff": -0.1,
-            "strength_diff": 9.29,
-            "tactical_modifier": -0.015
-          },
-          "log_goal_contributions": {
-            "attack": -0.0447,
-            "defense": -0.0022,
-            "strength": 0.1115,
-            "tactical": -0.0015,
-            "home_order": 0.05
-          },
-          "primary_negative_driver": "attack"
-        },
-        {
-          "favorite_team_id": "ARG",
-          "opponent_team_id": "SEN",
-          "favorite_fifa_rank": 1,
-          "opponent_fifa_rank": 18,
-          "rank_gap": 17,
-          "favorite_win_pct": 51.8,
-          "minimum_expected_favorite_win_pct": 53.4,
-          "implausible_favorite": true,
-          "expected_goals": {
-            "favorite": 1.73,
-            "opponent": 1.11
-          },
-          "feature_diffs": {
-            "attack_diff": 1.09,
-            "defense_diff": -0.85,
-            "strength_diff": 15.56,
-            "tactical_modifier": 0.045
-          },
-          "log_goal_contributions": {
-            "attack": 0.0239,
-            "defense": -0.0188,
-            "strength": 0.1868,
-            "tactical": 0.0045,
-            "home_order": 0.05
-          },
-          "primary_negative_driver": "defense"
         }
       ]
     }
