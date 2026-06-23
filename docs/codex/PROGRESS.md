@@ -30,6 +30,7 @@ Completed:
 - Codex parallel UI sprint follow-up: added TeamPage squad depth, age-band, profile-coverage, and key-player summary panels derived from existing team player data.
 - Codex parallel tournament UX sprint: added TournamentPage highlights and group-card summary cues derived from existing tournament results.
 - Codex parallel navigation sprint: added a searchable Teams index page and top-nav entry so users can reach every team profile directly.
+- Codex parallel standings UX sprint: added direct-qualification and third-place-candidate labels to group standings tables.
 
 Primary task:
 
@@ -75,6 +76,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Squad analysis verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding the TeamPage squad analysis panel; all passed.
 - Tournament UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding tournament highlights and group summary cues; all passed.
 - Teams index verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding `/teams`; all passed while Claude's data-quality frontend changes were also present in the worktree.
+- Standings UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding qualification labels; all passed.
 
 ## Next After Current Task
 
