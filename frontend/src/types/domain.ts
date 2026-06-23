@@ -306,6 +306,35 @@ export interface SquadGapSummary {
   teams: SquadGapTeamRow[];
 }
 
+export interface ManagerTacticalTrustRow {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  default_formation: string | null;
+  manager_name_seed: string | null;
+  manager_name_official: string | null;
+  manager_name_official_profile: string | null;
+  manager_name_mismatch: boolean;
+  manager_rating_confidence: string | null;
+  missing_manager_rating: boolean;
+  has_tactical_basis: boolean;
+  tactical_profile: { press_intensity: number | null; possession_style: number | null; defensive_line_height: number | null };
+  duplicate_profile_team_ids: string[];
+  team_review_priority_band: string | null;
+  review_score: number;
+  review_band: "high" | "medium" | "low";
+  review_reasons: string[];
+}
+
+export interface ManagerTacticalTrustSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  bandCounts: Record<string, number>;
+  teams: ManagerTacticalTrustRow[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

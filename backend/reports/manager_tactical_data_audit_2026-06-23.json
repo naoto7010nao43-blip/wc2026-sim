@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T08:20:19.143007+00:00",
-  "note": "Read-only manager/tactical data trust audit. It flags teams whose manager names, tactical basis notes, duplicate tactical values, or upstream team-review priority make them good candidates for human review. It does not change predictions.",
+  "generatedAt": "2026-06-23T08:39:08.692994+00:00",
+  "note": "監督名・戦術プロフィールデータの信頼性を示す読み取り専用の監査です。監督名の不一致、戦術プロフィールの根拠情報の欠如、戦術値の重複、上流のチームデータレビュー優先度などから、人によるレビューが望ましいチームを示します。試合予測そのものは変更しません。",
   "sourceReports": [
     {
       "name": "team_data_review_plan",
-      "generatedAt": "2026-06-23T07:47:27.847456+00:00"
+      "generatedAt": "2026-06-23T08:21:24.488489+00:00"
     }
   ],
   "teamCount": 48,
@@ -36,8 +36,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -62,8 +62,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -88,8 +88,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -114,8 +114,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -140,8 +140,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -166,8 +166,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -192,8 +192,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -218,8 +218,8 @@
       "review_score": 25.0,
       "review_band": "high",
       "review_reasons": [
-        "team data review priority is high",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -247,9 +247,9 @@
       "review_score": 24.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high",
-        "no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "チームデータレビューの優先度が高です",
+        "戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -274,8 +274,8 @@
       "review_score": 20.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -300,8 +300,8 @@
       "review_score": 20.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -326,8 +326,8 @@
       "review_score": 20.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が高です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -352,8 +352,8 @@
       "review_score": 17.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -378,8 +378,8 @@
       "review_score": 17.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -404,8 +404,8 @@
       "review_score": 17.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "top-20 FIFA team has no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -433,9 +433,9 @@
       "review_score": 16.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -463,9 +463,9 @@
       "review_score": 16.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -490,7 +490,7 @@
       "review_score": 15.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high"
+        "チームデータレビューの優先度が高です"
       ]
     },
     {
@@ -515,7 +515,7 @@
       "review_score": 15.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high"
+        "チームデータレビューの優先度が高です"
       ]
     },
     {
@@ -540,7 +540,7 @@
       "review_score": 15.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is high"
+        "チームデータレビューの優先度が高です"
       ]
     },
     {
@@ -568,8 +568,8 @@
       "review_score": 14.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -597,8 +597,8 @@
       "review_score": 14.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -623,8 +623,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -649,8 +649,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -675,8 +675,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -701,8 +701,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -727,8 +727,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -753,8 +753,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -779,8 +779,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -805,8 +805,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -831,8 +831,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -857,8 +857,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -883,8 +883,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -909,8 +909,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -935,8 +935,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -961,8 +961,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -987,8 +987,8 @@
       "review_score": 12.0,
       "review_band": "medium",
       "review_reasons": [
-        "team data review priority is medium",
-        "no tactical-profile basis note"
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -1013,7 +1013,7 @@
       "review_score": 10.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -1038,7 +1038,7 @@
       "review_score": 10.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -1063,7 +1063,7 @@
       "review_score": 10.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -1088,7 +1088,7 @@
       "review_score": 10.0,
       "review_band": "medium",
       "review_reasons": [
-        "top-20 FIFA team has no tactical-profile basis note"
+        "FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません"
       ]
     },
     {
@@ -1116,8 +1116,8 @@
       "review_score": 9.0,
       "review_band": "low",
       "review_reasons": [
-        "no tactical-profile basis note",
-        "shares the same tactical-value triple with 1 other team(s)"
+        "戦術プロフィールの根拠情報がありません",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
       ]
     },
     {
@@ -1142,7 +1142,7 @@
       "review_score": 7.0,
       "review_band": "low",
       "review_reasons": [
-        "team data review priority is medium"
+        "チームデータレビューの優先度が中です"
       ]
     },
     {
@@ -1167,7 +1167,7 @@
       "review_score": 7.0,
       "review_band": "low",
       "review_reasons": [
-        "team data review priority is medium"
+        "チームデータレビューの優先度が中です"
       ]
     },
     {
@@ -1192,7 +1192,7 @@
       "review_score": 7.0,
       "review_band": "low",
       "review_reasons": [
-        "team data review priority is medium"
+        "チームデータレビューの優先度が中です"
       ]
     },
     {
@@ -1217,7 +1217,7 @@
       "review_score": 7.0,
       "review_band": "low",
       "review_reasons": [
-        "team data review priority is medium"
+        "チームデータレビューの優先度が中です"
       ]
     },
     {
@@ -1242,7 +1242,7 @@
       "review_score": 7.0,
       "review_band": "low",
       "review_reasons": [
-        "team data review priority is medium"
+        "チームデータレビューの優先度が中です"
       ]
     },
     {
@@ -1267,7 +1267,7 @@
       "review_score": 5.0,
       "review_band": "low",
       "review_reasons": [
-        "no tactical-profile basis note"
+        "戦術プロフィールの根拠情報がありません"
       ]
     }
   ]

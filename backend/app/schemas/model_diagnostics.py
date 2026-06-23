@@ -86,3 +86,32 @@ class SquadGapSummary(BaseModel):
     sourceReports: list[SourceReportRef]
     note: str
     teams: list[SquadGapTeamRow]
+
+
+class ManagerTacticalTrustRow(BaseModel):
+    team_id: str
+    team_name: str
+    fifa_rank: int | None
+    default_formation: str | None
+    manager_name_seed: str | None
+    manager_name_official: str | None
+    manager_name_official_profile: str | None
+    manager_name_mismatch: bool
+    manager_rating_confidence: str | None
+    missing_manager_rating: bool
+    has_tactical_basis: bool
+    tactical_profile: dict
+    duplicate_profile_team_ids: list[str]
+    team_review_priority_band: str | None
+    review_score: float
+    review_band: str
+    review_reasons: list[str]
+
+
+class ManagerTacticalTrustSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    teamCount: int
+    bandCounts: dict[str, int]
+    teams: list[ManagerTacticalTrustRow]

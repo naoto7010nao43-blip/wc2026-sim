@@ -67,7 +67,7 @@ def test_build_team_row_compares_seed_and_official_manager_names():
     assert row["manager_rating_confidence"] == "estimated"
     assert row["has_tactical_basis"] is False
     assert row["review_band"] == "high"
-    assert "manager name differs" in row["review_reasons"][0]
+    assert "監督名" in row["review_reasons"][0]
 
 
 def test_build_report_sorts_by_review_score_and_counts_bands():

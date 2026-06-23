@@ -8,13 +8,15 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/013-manager-tactical-trust-review.md`
-
-Spec 012 is complete and committed as `10a3f84`. Spec 013 is the next Ready task and should be implemented under the autonomous sprint protocol.
+None. Awaiting the next Codex-authored Ready spec. Spec 013 is complete (see below); Codex hit a usage limit during this window, so Claude Code proceeded autonomously within the existing `docs/codex/DATA_GOVERNANCE_POLICY.md` limits (read-only diagnostics only) per explicit user instruction, rather than waiting idle.
 
 Additional policy context:
 
 - `docs/codex/DATA_GOVERNANCE_POLICY.md`
+
+Spec 013 is complete.
+
+Spec 012 is complete and committed as `10a3f84`.
 
 Spec 011 is complete.
 
@@ -43,5 +45,6 @@ Completed:
 - `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 cycle (Phase 7 skipped, documented)
 - `docs/specs/011-team-data-review-diagnostics.md`
 - `docs/specs/012-squad-rating-gap-review.md`
+- `docs/specs/013-manager-tactical-trust-review.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.

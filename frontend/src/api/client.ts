@@ -1,6 +1,7 @@
 import type {
   DataQualitySummary,
   LikelyLineupOut,
+  ManagerTacticalTrustSummary,
   MatchPredictionOut,
   MatchResult,
   RoundRobinResult,
@@ -59,4 +60,5 @@ export const api = {
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getTeamDataReview: () => getJson<TeamReviewSummary>("/api/model-diagnostics/team-review"),
   getSquadGapReview: () => getJson<SquadGapSummary>("/api/model-diagnostics/squad-gaps"),
+  getManagerTacticalTrust: () => getJson<ManagerTacticalTrustSummary>("/api/model-diagnostics/manager-tactical-trust"),
 };

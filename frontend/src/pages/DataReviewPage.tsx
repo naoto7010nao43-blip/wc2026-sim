@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
+import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { SquadGapPanel } from "../components/SquadGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
-import type { SquadGapSummary, TeamReviewSummary } from "../types/domain";
+import type { ManagerTacticalTrustSummary, SquadGapSummary, TeamReviewSummary } from "../types/domain";
 
 export function DataReviewPage() {
   const [summary, setSummary] = useState<TeamReviewSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [squadGaps, setSquadGaps] = useState<SquadGapSummary | null>(null);
   const [squadGapsError, setSquadGapsError] = useState<string | null>(null);
+  const [managerTrust, setManagerTrust] = useState<ManagerTacticalTrustSummary | null>(null);
+  const [managerTrustError, setManagerTrustError] = useState<string | null>(null);
 
   useEffect(() => {
     api
@@ -19,6 +22,10 @@ export function DataReviewPage() {
       .getSquadGapReview()
       .then(setSquadGaps)
       .catch(() => setSquadGapsError("スカッド評価ギャップの読み込みに失敗しました。"));
+    api
+      .getManagerTacticalTrust()
+      .then(setManagerTrust)
+      .catch(() => setManagerTrustError("監督・戦術データレビューの読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -62,6 +69,17 @@ export function DataReviewPage() {
         )}
         {!squadGaps && !squadGapsError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {squadGaps && <SquadGapPanel summary={squadGaps} />}
+      </section>
+
+      <section>
+        <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">監督・戦術データの信頼性</h3>
+        {managerTrustError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {managerTrustError}
+          </div>
+        )}
+        {!managerTrust && !managerTrustError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {managerTrust && <ManagerTacticalTrustPanel summary={managerTrust} />}
       </section>
     </div>
   );

@@ -114,19 +114,21 @@ def build_reasons(
 ) -> list[str]:
     reasons: list[str] = []
     if manager_name_mismatch:
-        reasons.append("manager name differs across seed/official sources")
+        reasons.append("監督名がシードデータと公式データで一致していません")
     if missing_manager_rating:
-        reasons.append("manager tactical rating row is missing")
-    if team_review_band in {"high", "medium"}:
-        reasons.append(f"team data review priority is {team_review_band}")
+        reasons.append("監督の戦術評価データが見つかりません")
+    if team_review_band == "high":
+        reasons.append("チームデータレビューの優先度が高です")
+    elif team_review_band == "medium":
+        reasons.append("チームデータレビューの優先度が中です")
     if missing_tactical_basis and top_twenty_fifa_rank:
-        reasons.append("top-20 FIFA team has no tactical-profile basis note")
+        reasons.append("FIFAランク20位以内のチームですが、戦術プロフィールの根拠情報がありません")
     elif missing_tactical_basis:
-        reasons.append("no tactical-profile basis note")
+        reasons.append("戦術プロフィールの根拠情報がありません")
     if duplicate_profile_team_count >= 2:
-        reasons.append(f"shares the same tactical-value triple with {duplicate_profile_team_count - 1} other team(s)")
+        reasons.append(f"他の{duplicate_profile_team_count - 1}チームと同じ戦術値の組み合わせを共有しています")
     if not reasons:
-        reasons.append("no immediate manager/tactical data trust issue detected")
+        reasons.append("現時点で監督・戦術データの信頼性に関する重大な指摘はありません")
     return reasons
 
 
@@ -229,9 +231,10 @@ def build_report(
     return {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "note": (
-            "Read-only manager/tactical data trust audit. It flags teams whose manager names, "
-            "tactical basis notes, duplicate tactical values, or upstream team-review priority make "
-            "them good candidates for human review. It does not change predictions."
+            "監督名・戦術プロフィールデータの信頼性を示す読み取り専用の監査です。"
+            "監督名の不一致、戦術プロフィールの根拠情報の欠如、戦術値の重複、"
+            "上流のチームデータレビュー優先度などから、人によるレビューが望ましいチームを示します。"
+            "試合予測そのものは変更しません。"
         ),
         "sourceReports": [
             {"name": "team_data_review_plan", "generatedAt": (team_review_report or {}).get("generatedAt")}
