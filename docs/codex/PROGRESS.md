@@ -46,6 +46,7 @@ Completed:
 - Codex parallel match-detail polish: improved `MatchAnalysisPanel` readability by showing turning-point descriptions, momentum dominance labels, team badges for key players, and a text MOM badge without changing match-analysis logic or API shape.
 - Codex parallel team-profile polish: added TeamPage player search, position filtering, and sort modes for overall, starting probability, caps, and age without changing team/player data.
 - Codex parallel lineup polish: improved the likely-lineup panel with average certainty, strong-slot count, probability bars, and confidence labels without changing lineup generation logic or API shape.
+- Codex parallel match-card polish: added compact winner badges and tabular score styling to match cards for easier scanning in bracket/group views.
 
 Primary task:
 
@@ -99,6 +100,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Match analysis polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed.
 - TeamPage player-list verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 report-generation files were present but unstaged.
 - Likely-lineup polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 diagnostics API files were present but unstaged.
+- Match-card polish verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py`; all passed while Claude's Spec 011 diagnostics API files were present but unstaged.
 
 ## Next After Current Task
 

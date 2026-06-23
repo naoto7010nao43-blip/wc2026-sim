@@ -24,12 +24,18 @@ export function MatchCard({ match, className = "" }: Props) {
       } ${className}`}
     >
       <div className={`flex items-center justify-between gap-2 ${homeWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
-        <TeamBadge teamId={match.home_team_id} />
-        <span>{played ? match.home_score : "-"}</span>
+        <span className="flex min-w-0 items-center gap-1.5">
+          <TeamBadge teamId={match.home_team_id} />
+          {played && homeWon && <WinnerBadge />}
+        </span>
+        <span className="shrink-0 tabular-nums">{played ? match.home_score : "-"}</span>
       </div>
       <div className={`mt-1 flex items-center justify-between gap-2 ${awayWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
-        <TeamBadge teamId={match.away_team_id} />
-        <span>{played ? match.away_score : "-"}</span>
+        <span className="flex min-w-0 items-center gap-1.5">
+          <TeamBadge teamId={match.away_team_id} />
+          {played && awayWon && <WinnerBadge />}
+        </span>
+        <span className="shrink-0 tabular-nums">{played ? match.away_score : "-"}</span>
       </div>
       {match.went_to_penalties && (
         <div className="mt-1 text-xs text-amber-400">
@@ -49,4 +55,8 @@ export function MatchCard({ match, className = "" }: Props) {
       )}
     </Link>
   );
+}
+
+function WinnerBadge() {
+  return <span className="rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-300">勝</span>;
 }
