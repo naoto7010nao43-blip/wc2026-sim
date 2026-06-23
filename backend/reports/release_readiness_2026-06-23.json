@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-06-23T15:25:54.717788+00:00",
+  "generatedAt": "2026-06-23T15:59:42.242577+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
-  "readyForManualPush": true,
-  "blockers": [],
+  "readyForManualPush": false,
+  "blockers": [
+    "CURRENT_TASK.md still lists an active Ready task."
+  ],
   "currentTask": {
-    "hasActiveReadyTask": false,
-    "awaitingNextSpec": true,
-    "latestCompletedSpecText": "Spec 016 is complete (see below)"
+    "hasActiveReadyTask": true,
+    "awaitingNextSpec": false,
+    "latestCompletedSpecText": "Spec 015 is complete"
   },
   "gitStatusShort": [],
   "modelVersions": {
@@ -66,6 +68,11 @@
       "pattern": "source_provenance_audit_*.json",
       "present": true,
       "path": "backend\\reports\\source_provenance_audit_2026-06-23.json"
+    },
+    {
+      "pattern": "simulation_stability_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\simulation_stability_audit_2026-06-23.json"
     }
   ],
   "requiredCommands": [
