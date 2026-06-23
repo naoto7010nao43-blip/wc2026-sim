@@ -168,3 +168,61 @@ class RatingReviewWorkbenchSummary(BaseModel):
     note: str
     teamCount: int
     teams: list[RatingReviewTeamRow]
+
+
+class SourceRiskFlag(BaseModel):
+    marker: str
+    severity: str
+    reason_ja: str
+
+
+class SourceRiskPlayer(BaseModel):
+    team_id: str | None
+    player_id: str | None
+    name: str | None
+    risk_score: int
+    risk_flags: list[SourceRiskFlag]
+    source_citations: list[str]
+
+
+class SeedSourceSummary(BaseModel):
+    seed_player_count: int
+    players_with_source_risk: int
+    marker_counts: dict[str, int]
+    severity_counts: dict[str, int]
+    top_risky_seed_players: list[SourceRiskPlayer]
+
+
+class SourceProvenanceCandidate(BaseModel):
+    player_id: str
+    name: str
+    primary_position: str | None
+    current_overall: int | None
+    decision_bucket: str
+    suggested_codex_action: str | None
+    risk_score: int
+    risk_flags: list[SourceRiskFlag]
+    source_citations: list[str]
+
+
+class SourceProvenanceTeamRow(BaseModel):
+    team_id: str
+    team_name: str
+    candidate_count: int
+    source_risk_candidate_count: int
+    decision_bucket_counts: dict[str, int]
+    clear_later_proposal_candidates: list[SourceProvenanceCandidate]
+    source_review_candidates: list[SourceProvenanceCandidate]
+
+
+class SourceProvenanceAuditSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    seedSourceSummary: SeedSourceSummary
+    decisionCandidateCount: int
+    clearLaterProposalCandidateCount: int
+    sourceReviewCandidateCount: int
+    teamCount: int
+    teams: list[SourceProvenanceTeamRow]
+    recommendations_ja: list[str]

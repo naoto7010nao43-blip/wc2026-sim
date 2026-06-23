@@ -73,3 +73,29 @@ def get_rating_review_workbench_summary(reports_dir: Path = REPORTS_DIR) -> dict
             "teams": [],
         }
     return report
+
+
+def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "source_provenance_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "能力値レビュー候補の出典監査レポートがまだ生成されていません。",
+            "seedSourceSummary": {
+                "seed_player_count": 0,
+                "players_with_source_risk": 0,
+                "marker_counts": {},
+                "severity_counts": {},
+                "top_risky_seed_players": [],
+            },
+            "decisionCandidateCount": 0,
+            "clearLaterProposalCandidateCount": 0,
+            "sourceReviewCandidateCount": 0,
+            "teamCount": 0,
+            "teams": [],
+            "recommendations_ja": [
+                "能力値を変更する前に、候補の出典監査レポートを生成してください。",
+            ],
+        }
+    return report

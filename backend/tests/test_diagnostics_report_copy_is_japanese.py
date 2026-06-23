@@ -12,11 +12,12 @@ from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
     get_rating_review_workbench_summary,
     get_squad_gap_summary,
+    get_source_provenance_audit_summary,
     get_team_review_summary,
 )
 
 JAPANESE_CHAR = re.compile(r"[぀-ヿ一-鿿]")
-COPY_FIELDS = {"note", "review_reasons", "review_summary_ja"}
+COPY_FIELDS = {"note", "review_reasons", "review_summary_ja", "reason_ja", "recommendations_ja"}
 
 
 def _assert_japanese_copy(value, path):
@@ -53,3 +54,7 @@ def test_manager_tactical_trust_summary_copy_is_japanese():
 
 def test_rating_review_workbench_summary_copy_is_japanese():
     _walk(get_rating_review_workbench_summary())
+
+
+def test_source_provenance_audit_summary_copy_is_japanese():
+    _walk(get_source_provenance_audit_summary())

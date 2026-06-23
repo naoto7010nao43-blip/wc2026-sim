@@ -17,6 +17,7 @@ from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
     get_rating_review_workbench_summary,
     get_squad_gap_summary,
+    get_source_provenance_audit_summary,
     get_team_review_summary,
 )
 
@@ -244,5 +245,72 @@ def test_get_rating_review_workbench_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_rating_review_workbench_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_source_provenance_audit_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/source-provenance-audit")
+    assert response.status_code == 200
+    body = response.json()
+    assert "generatedAt" in body
+    assert "sourceReports" in body
+    assert "note" in body
+    assert "seedSourceSummary" in body
+    assert "decisionCandidateCount" in body
+    assert "clearLaterProposalCandidateCount" in body
+    assert "sourceReviewCandidateCount" in body
+    assert "teamCount" in body
+    assert "teams" in body
+    assert "recommendations_ja" in body
+    assert body["teamCount"] == len(body["teams"])
+
+
+def test_source_provenance_audit_endpoint_top_team_has_expected_shape(client):
+    response = client.get("/api/model-diagnostics/source-provenance-audit")
+    body = response.json()
+    assert body["teamCount"] > 0
+    row = body["teams"][0]
+    for field in (
+        "team_id", "team_name", "candidate_count", "source_risk_candidate_count",
+        "decision_bucket_counts", "clear_later_proposal_candidates", "source_review_candidates",
+    ):
+        assert field in row
+    assert body["seedSourceSummary"]["seed_player_count"] > 0
+
+
+def test_source_provenance_audit_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_source_provenance_audit_summary(reports_dir=tmp_path)
+    assert summary["teamCount"] == 0
+    assert summary["teams"] == []
+    assert summary["generatedAt"] is None
+    assert summary["seedSourceSummary"]["seed_player_count"] == 0
+    assert summary["recommendations_ja"]
+
+
+def test_get_source_provenance_audit_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "seedSourceSummary": {
+            "seed_player_count": 1,
+            "players_with_source_risk": 0,
+            "marker_counts": {},
+            "severity_counts": {},
+            "top_risky_seed_players": [],
+        },
+        "decisionCandidateCount": 0,
+        "clearLaterProposalCandidateCount": 0,
+        "sourceReviewCandidateCount": 0,
+        "teamCount": 0,
+        "teams": [],
+        "recommendations_ja": ["test"],
+    }
+    report_path = tmp_path / "source_provenance_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_source_provenance_audit_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before
