@@ -177,6 +177,37 @@ def use_tier(category: str, candidate: dict, score: int) -> str:
     return "insufficient_detail"
 
 
+def team_signal_band(rows: list[dict]) -> str:
+    if not rows:
+        return "sparse"
+    if any(row["useTier"] == "ready_for_codex_review" for row in rows):
+        return "strong"
+    if any(row["useTier"] in {"provisional_context", "future_engine_candidate"} for row in rows):
+        return "usable"
+    return "sparse"
+
+
+def team_signal_profile(team_id: str, rows: list[dict]) -> dict:
+    categories = Counter(row["category"] for row in rows)
+    use_tiers = Counter(row["useTier"] for row in rows)
+    existing_field_count = sum(
+        1 for row in rows
+        if row["mapsTo"] and row["category"] in EXISTING_FIELD_CATEGORIES
+        and row["mapsTo"] in EXISTING_FIELD_CATEGORIES[row["category"]]
+    )
+    future_engine_count = sum(1 for row in rows if row["category"] in FUTURE_ONLY_CATEGORIES)
+    return {
+        "teamId": team_id,
+        "signalBand": team_signal_band(rows),
+        "candidateCount": len(rows),
+        "categoryCounts": dict(sorted(categories.items())),
+        "useTierCounts": dict(sorted(use_tiers.items())),
+        "existingFieldCandidateCount": existing_field_count,
+        "futureEngineCandidateCount": future_engine_count,
+        "preservedReviewQuestionCount": use_tiers.get("review_question", 0),
+    }
+
+
 def validate_candidate(category: str, candidate: Any, team_id: str, index: int) -> tuple[list[str], list[str], dict]:
     errors = []
     warnings = []
@@ -314,6 +345,8 @@ def validate_report(report: dict, known_team_ids: set[str] | None = None) -> dic
     by_team: dict[str, list[dict]] = defaultdict(list)
     for row in scored_candidates:
         by_team[row["teamId"]].append(row)
+    for team_id in seen_team_ids:
+        by_team.setdefault(team_id, [])
 
     team_priorities = []
     for team_id, rows in by_team.items():
@@ -329,6 +362,11 @@ def validate_report(report: dict, known_team_ids: set[str] | None = None) -> dic
             "futureEngineCandidateCount": future_count,
         })
     team_priorities.sort(key=lambda row: (-row["priorityScore"], row["teamId"]))
+    signal_profiles = sorted((team_signal_profile(team_id, rows) for team_id, rows in by_team.items()), key=lambda row: row["teamId"])
+    signal_band_counts = Counter(row["signalBand"] for row in signal_profiles)
+    sparse_team_ids = [row["teamId"] for row in signal_profiles if row["signalBand"] == "sparse"]
+    for team_id in sparse_team_ids:
+        warnings.append(f"teams[{team_id}] has sparse usable evidence; preserve low-confidence review questions if available")
 
     return {
         "valid": not errors,
@@ -341,6 +379,9 @@ def validate_report(report: dict, known_team_ids: set[str] | None = None) -> dic
         "useTierCounts": dict(sorted(use_tier_counts.items())),
         "existingFieldCandidateCount": existing_field_count,
         "futureEngineCandidateCount": future_engine_count,
+        "teamSignalBandCounts": dict(sorted(signal_band_counts.items())),
+        "teamSignalProfiles": signal_profiles,
+        "sparseTeamIds": sparse_team_ids,
         "topTeamPriorities": team_priorities[:12],
         "topCandidatePreviews": sorted(scored_candidates, key=lambda row: (-row["qualityScore"], row["teamId"]))[:20],
         "errors": errors,

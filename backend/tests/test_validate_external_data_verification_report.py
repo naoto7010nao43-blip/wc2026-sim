@@ -64,6 +64,8 @@ def test_validate_report_accepts_sourced_existing_field_candidate():
     assert result["impactCounts"]["high"] == 1
     assert result["useTierCounts"]["ready_for_codex_review"] == 1
     assert result["topTeamPriorities"][0]["teamId"] == "BRA"
+    assert result["teamSignalBandCounts"]["strong"] == 1
+    assert result["teamSignalProfiles"][0]["signalBand"] == "strong"
 
 
 def test_validate_report_rejects_unknown_team_id():
@@ -87,6 +89,31 @@ def test_validate_candidate_keeps_unsourced_claim_as_review_question():
     assert any("source reference" in warning for warning in warnings)
     assert score["impactBand"] == "low"
     assert score["useTier"] == "review_question"
+
+
+def test_validate_report_preserves_sparse_team_signal_without_failing():
+    payload = report(scope={"coveredTeams": ["BRA", "CAN"]})
+    payload["teams"].append({
+        "teamId": "CAN",
+        "teamName": "Canada",
+        "managerStatus": [],
+        "formationCandidates": [
+            {"claim": "Possible shape mentioned without enough evidence.", "mapsTo": "default_formation"}
+        ],
+        "tacticalProfileCandidates": [],
+        "keyPlayerStatusCandidates": [],
+        "nationalStrengthContext": [],
+        "substitutionTendencyCandidates": [],
+    })
+
+    result = validate_report(payload, known_team_ids={"BRA", "CAN"})
+
+    assert result["valid"] is True
+    can_profile = next(row for row in result["teamSignalProfiles"] if row["teamId"] == "CAN")
+    assert can_profile["signalBand"] == "sparse"
+    assert can_profile["preservedReviewQuestionCount"] == 1
+    assert "CAN" in result["sparseTeamIds"]
+    assert any("sparse usable evidence" in warning for warning in result["warnings"])
 
 
 def test_substitution_candidates_are_future_engine_candidates_not_current_fields():
