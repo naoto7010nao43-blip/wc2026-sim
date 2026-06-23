@@ -19,8 +19,13 @@ DEFAULT_ROOTS = (
     "backend/tests",
     "docs/codex",
     "docs/specs",
+    # Japanese name/copy data lives in these seed/report JSON files, and
+    # this project has had real mojibake bugs land in data before -- not
+    # just source code -- so the guardrail must cover them too.
+    "backend/data/seed",
+    "backend/reports",
 )
-TEXT_SUFFIXES = {".css", ".md", ".py", ".ts", ".tsx"}
+TEXT_SUFFIXES = {".css", ".md", ".py", ".ts", ".tsx", ".json"}
 MOJIBAKE_MARKERS = ("縺", "繝", "莠", "蜆", "螟", "邇", "謗")
 
 
