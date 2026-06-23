@@ -8,7 +8,18 @@ Read first:
 
 ## Active Claude Code Task
 
-None. Awaiting the next Codex-authored Ready spec. Spec 016 is complete (see below).
+Ready: `docs/specs/017-external-data-verification-expansion.md`
+
+Claude Code should continue without routine user confirmation. This is a read-only research/reporting task:
+
+- expand external verification from the first 8 priority teams to the remaining 40 teams;
+- add substitution-tendency research for all 48 teams where evidence exists;
+- write structured candidate reports only;
+- do not change seed data, ratings, manager/tactical values, formulas, simulation logic, or UI behavior;
+- commit locally when verification passes;
+- do not push.
+
+This task intentionally reduces user workload. Stop only on the hard stop conditions in the spec.
 
 Codex hit a usage limit on 2026-06-23; the user authorized Claude Code to work solo for the rest of that day, within Codex's existing policy direction (no new spec invention, no data/rating/formula changes). See `docs/codex/PROGRESS.md` "Current Priority" for the full list of verification/diagnostics-only work done.
 
