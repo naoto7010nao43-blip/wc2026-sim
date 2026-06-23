@@ -1,0 +1,1237 @@
+{
+  "generatedAt": "2026-06-23T11:01:57.148588+00:00",
+  "note": "チーム強度をFIFAランク信号、ベストXI平均、攻撃、守備、ロスター厚みに分解する読み取り専用監査です。選手能力値、seedデータ、予測式は変更しません。",
+  "sourceReports": [
+    {
+      "name": "squad_rating_gap_review",
+      "generatedAt": "2026-06-23T08:21:24.750211+00:00"
+    }
+  ],
+  "scope": {
+    "topTeamLimit": 20,
+    "watchlistLimit": 8,
+    "teamCount": 20,
+    "watchlistTeamCount": 8
+  },
+  "flagCounts": {
+    "attack_component_below_neutral": 1,
+    "best_xi_overall_low_for_top_ranked_team": 7,
+    "defense_component_below_neutral": 1,
+    "few_elite_seed_players_for_top_15_team": 11,
+    "rank_signal_far_above_squad_strength": 3,
+    "thin_attacking_seed_depth": 1
+  },
+  "watchlistFlagCounts": {
+    "best_xi_overall_low_for_top_ranked_team": 2,
+    "few_elite_seed_players_for_top_15_team": 7,
+    "rank_signal_far_above_squad_strength": 2,
+    "thin_attacking_seed_depth": 1
+  },
+  "teams": [
+    {
+      "team_id": "ARG",
+      "team_name": "Argentina",
+      "fifa_rank": 1,
+      "watchlist": true,
+      "player_count": 15,
+      "rank_score": 95.0,
+      "squad_strength": 61.1,
+      "team_strength": 81.4,
+      "attack": 59.3,
+      "defense": 61.3,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 68,
+      "top_5_avg_overall": 66,
+      "top_11_avg_overall": 61.1,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 6,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 5,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "ARG_LAUTARO",
+          "name": "Lautaro Martinez",
+          "primary_position": "ST",
+          "overall": 69
+        },
+        {
+          "player_id": "ARG_ALVAREZ",
+          "name": "Julian Alvarez",
+          "primary_position": "ST",
+          "overall": 69
+        },
+        {
+          "player_id": "ARG_ROMERO",
+          "name": "Cristian Romero",
+          "primary_position": "CB",
+          "overall": 66
+        },
+        {
+          "player_id": "ARG_MESSI",
+          "name": "Lionel Messi",
+          "primary_position": "RW",
+          "overall": 64
+        },
+        {
+          "player_id": "ARG_LISANDRO",
+          "name": "Lisandro Martinez",
+          "primary_position": "CB",
+          "overall": 62
+        }
+      ],
+      "diagnostic_flags": [
+        "rank_signal_far_above_squad_strength",
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "ESP",
+      "team_name": "Spain",
+      "fifa_rank": 2,
+      "watchlist": true,
+      "player_count": 14,
+      "rank_score": 91.7,
+      "squad_strength": 66.0,
+      "team_strength": 81.4,
+      "attack": 63.1,
+      "defense": 65.5,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 71.7,
+      "top_5_avg_overall": 70,
+      "top_11_avg_overall": 66,
+      "count_overall_gte_75": 1,
+      "count_overall_gte_70": 3,
+      "count_overall_lt_55": 2,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 5,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "ESP_LAMINEYAMAL",
+          "name": "Lamine Yamal",
+          "primary_position": "RW",
+          "overall": 75
+        },
+        {
+          "player_id": "ESP_CUCURELLA",
+          "name": "Marc Cucurella",
+          "primary_position": "LB",
+          "overall": 70
+        },
+        {
+          "player_id": "ESP_NICOWILLIAMS",
+          "name": "Nico Williams",
+          "primary_position": "LW",
+          "overall": 70
+        },
+        {
+          "player_id": "ESP_CUBARSI",
+          "name": "Pau Cubarsi",
+          "primary_position": "CB",
+          "overall": 69
+        },
+        {
+          "player_id": "ESP_PORRO",
+          "name": "Pedro Porro",
+          "primary_position": "RB",
+          "overall": 66
+        }
+      ],
+      "diagnostic_flags": [
+        "rank_signal_far_above_squad_strength"
+      ]
+    },
+    {
+      "team_id": "FRA",
+      "team_name": "France",
+      "fifa_rank": 3,
+      "watchlist": false,
+      "player_count": 15,
+      "rank_score": 89.1,
+      "squad_strength": 68.4,
+      "team_strength": 80.8,
+      "attack": 68.2,
+      "defense": 64.9,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 78,
+      "top_5_avg_overall": 74.4,
+      "top_11_avg_overall": 68.4,
+      "count_overall_gte_75": 3,
+      "count_overall_gte_70": 4,
+      "count_overall_lt_55": 3,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "FRA_MBAPPE",
+          "name": "Kylian Mbappe",
+          "primary_position": "ST",
+          "overall": 82
+        },
+        {
+          "player_id": "FRA_DEMBELE",
+          "name": "Ousmane Dembele",
+          "primary_position": "RW",
+          "overall": 77
+        },
+        {
+          "player_id": "FRA_OLISE",
+          "name": "Michael Olise",
+          "primary_position": "RW",
+          "overall": 75
+        },
+        {
+          "player_id": "FRA_DOUE",
+          "name": "Desire Doue",
+          "primary_position": "RW",
+          "overall": 70
+        },
+        {
+          "player_id": "FRA_SALIBA",
+          "name": "William Saliba",
+          "primary_position": "CB",
+          "overall": 68
+        }
+      ],
+      "diagnostic_flags": []
+    },
+    {
+      "team_id": "ENG",
+      "team_name": "England",
+      "fifa_rank": 4,
+      "watchlist": false,
+      "player_count": 15,
+      "rank_score": 87.0,
+      "squad_strength": 64.5,
+      "team_strength": 78.0,
+      "attack": 63.1,
+      "defense": 64.3,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 68.7,
+      "top_5_avg_overall": 67.4,
+      "top_11_avg_overall": 64.5,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 2,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 5,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "ENG_KANE",
+          "name": "Harry Kane",
+          "primary_position": "ST",
+          "overall": 70
+        },
+        {
+          "player_id": "ENG_GUEHI",
+          "name": "Marc Guehi",
+          "primary_position": "CB",
+          "overall": 68
+        },
+        {
+          "player_id": "ENG_SAKA",
+          "name": "Bukayo Saka",
+          "primary_position": "RW",
+          "overall": 68
+        },
+        {
+          "player_id": "ENG_JAMES_R",
+          "name": "Reece James",
+          "primary_position": "RB",
+          "overall": 66
+        },
+        {
+          "player_id": "ENG_OREILLY",
+          "name": "Nico OReilly",
+          "primary_position": "LB",
+          "overall": 65
+        }
+      ],
+      "diagnostic_flags": [
+        "rank_signal_far_above_squad_strength",
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "fifa_rank": 5,
+      "watchlist": true,
+      "player_count": 14,
+      "rank_score": 85.1,
+      "squad_strength": 64.8,
+      "team_strength": 77.0,
+      "attack": 61.7,
+      "defense": 66.2,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 69.3,
+      "top_5_avg_overall": 67.6,
+      "top_11_avg_overall": 64.8,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 2,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "POR_RAFAELLEAO",
+          "name": "Rafael Leao",
+          "primary_position": "LW",
+          "overall": 72
+        },
+        {
+          "player_id": "POR_RDIAS",
+          "name": "Ruben Dias",
+          "primary_position": "CB",
+          "overall": 68
+        },
+        {
+          "player_id": "POR_NMENDES",
+          "name": "Nuno Mendes",
+          "primary_position": "LB",
+          "overall": 68
+        },
+        {
+          "player_id": "POR_DALOT",
+          "name": "Diogo Dalot",
+          "primary_position": "RB",
+          "overall": 65
+        },
+        {
+          "player_id": "POR_VITINHA",
+          "name": "Vitinha",
+          "primary_position": "CM",
+          "overall": 65
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "BRA",
+      "team_name": "Brazil",
+      "fifa_rank": 6,
+      "watchlist": false,
+      "player_count": 15,
+      "rank_score": 83.4,
+      "squad_strength": 66.6,
+      "team_strength": 76.7,
+      "attack": 63.7,
+      "defense": 64.0,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 73,
+      "top_5_avg_overall": 71,
+      "top_11_avg_overall": 66.6,
+      "count_overall_gte_75": 1,
+      "count_overall_gte_70": 2,
+      "count_overall_lt_55": 4,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "BRA_VINICIUSJR",
+          "name": "Vinicius Junior",
+          "primary_position": "LW",
+          "overall": 77
+        },
+        {
+          "player_id": "BRA_RAPHINHA",
+          "name": "Raphinha",
+          "primary_position": "RW",
+          "overall": 73
+        },
+        {
+          "player_id": "BRA_CUNHA",
+          "name": "Matheus Cunha",
+          "primary_position": "ST",
+          "overall": 69
+        },
+        {
+          "player_id": "BRA_WESLEY",
+          "name": "Wesley",
+          "primary_position": "RB",
+          "overall": 68
+        },
+        {
+          "player_id": "BRA_GABRIEL",
+          "name": "Gabriel Magalhaes",
+          "primary_position": "CB",
+          "overall": 68
+        }
+      ],
+      "diagnostic_flags": []
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "fifa_rank": 7,
+      "watchlist": true,
+      "player_count": 14,
+      "rank_score": 81.8,
+      "squad_strength": 62.9,
+      "team_strength": 74.3,
+      "attack": 57.7,
+      "defense": 64.5,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 68,
+      "top_5_avg_overall": 66.4,
+      "top_11_avg_overall": 62.9,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 4,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 3,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "NED_GAKPO",
+          "name": "Cody Gakpo",
+          "primary_position": "LW",
+          "overall": 69
+        },
+        {
+          "player_id": "NED_DEVENTIMBER",
+          "name": "Jurrien Timber",
+          "primary_position": "RB",
+          "overall": 68
+        },
+        {
+          "player_id": "NED_VANDEVEN",
+          "name": "Micky van de Ven",
+          "primary_position": "CB",
+          "overall": 67
+        },
+        {
+          "player_id": "NED_DUMFRIES",
+          "name": "Denzel Dumfries",
+          "primary_position": "RB",
+          "overall": 65
+        },
+        {
+          "player_id": "NED_MALEN",
+          "name": "Donyell Malen",
+          "primary_position": "RW",
+          "overall": 63
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "MAR",
+      "team_name": "Morocco",
+      "fifa_rank": 8,
+      "watchlist": true,
+      "player_count": 15,
+      "rank_score": 80.4,
+      "squad_strength": 60.7,
+      "team_strength": 72.5,
+      "attack": 56.4,
+      "defense": 60.0,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 66.3,
+      "top_5_avg_overall": 64.4,
+      "top_11_avg_overall": 60.7,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 5,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 6,
+        "MID": 4,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "MAR_HAKIMI",
+          "name": "Achraf Hakimi",
+          "primary_position": "RB",
+          "overall": 68
+        },
+        {
+          "player_id": "MAR_DIAZ",
+          "name": "Brahim Diaz",
+          "primary_position": "CAM",
+          "overall": 66
+        },
+        {
+          "player_id": "MAR_AGUERD",
+          "name": "Nayef Aguerd",
+          "primary_position": "CB",
+          "overall": 65
+        },
+        {
+          "player_id": "MAR_MAZRAOUI",
+          "name": "Noussair Mazraoui",
+          "primary_position": "RB",
+          "overall": 62
+        },
+        {
+          "player_id": "MAR_DIOP",
+          "name": "Issa Diop",
+          "primary_position": "CB",
+          "overall": 61
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "BEL",
+      "team_name": "Belgium",
+      "fifa_rank": 9,
+      "watchlist": false,
+      "player_count": 19,
+      "rank_score": 79.0,
+      "squad_strength": 60.7,
+      "team_strength": 71.7,
+      "attack": 58.2,
+      "defense": 61.5,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 66.3,
+      "top_5_avg_overall": 63.8,
+      "top_11_avg_overall": 60.7,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 6,
+      "position_counts": {
+        "GK": 3,
+        "DEF": 6,
+        "MID": 6,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "BEL_DOKU",
+          "name": "Jeremy Doku",
+          "primary_position": "LW",
+          "overall": 70
+        },
+        {
+          "player_id": "BEL_DEWINTER",
+          "name": "Koni De Winter",
+          "primary_position": "CB",
+          "overall": 66
+        },
+        {
+          "player_id": "BEL_DEBAST",
+          "name": "Zeno Debast",
+          "primary_position": "CB",
+          "overall": 63
+        },
+        {
+          "player_id": "BEL_THEATE",
+          "name": "Arthur Theate",
+          "primary_position": "CB",
+          "overall": 60
+        },
+        {
+          "player_id": "BEL_DECUYPER",
+          "name": "Maxim De Cuyper",
+          "primary_position": "LB",
+          "overall": 60
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "fifa_rank": 10,
+      "watchlist": true,
+      "player_count": 14,
+      "rank_score": 77.7,
+      "squad_strength": 57.4,
+      "team_strength": 69.6,
+      "attack": 51.4,
+      "defense": 61.2,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 65.3,
+      "top_5_avg_overall": 62.8,
+      "top_11_avg_overall": 57.4,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 7,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 5,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "CRO_GVARDIOL",
+          "name": "Josko Gvardiol",
+          "primary_position": "CB",
+          "overall": 70
+        },
+        {
+          "player_id": "CRO_SUTALO",
+          "name": "Josip Sutalo",
+          "primary_position": "CB",
+          "overall": 64
+        },
+        {
+          "player_id": "CRO_STANISIC",
+          "name": "Josip Stanisic",
+          "primary_position": "RB",
+          "overall": 62
+        },
+        {
+          "player_id": "CRO_BATURINA",
+          "name": "Martin Baturina",
+          "primary_position": "CAM",
+          "overall": 60
+        },
+        {
+          "player_id": "CRO_SUCIC_L",
+          "name": "Luka Sucic",
+          "primary_position": "CM",
+          "overall": 58
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team",
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "GER",
+      "team_name": "Germany",
+      "fifa_rank": 10,
+      "watchlist": false,
+      "player_count": 15,
+      "rank_score": 77.7,
+      "squad_strength": 63.8,
+      "team_strength": 72.1,
+      "attack": 61.4,
+      "defense": 61.2,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 68,
+      "top_5_avg_overall": 66.4,
+      "top_11_avg_overall": 63.8,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 3,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 5,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "GER_WIRTZ",
+          "name": "Florian Wirtz",
+          "primary_position": "CAM",
+          "overall": 70
+        },
+        {
+          "player_id": "GER_MUSIALA",
+          "name": "Jamal Musiala",
+          "primary_position": "CAM",
+          "overall": 68
+        },
+        {
+          "player_id": "GER_SCHLOTTERBECK",
+          "name": "Nico Schlotterbeck",
+          "primary_position": "CB",
+          "overall": 66
+        },
+        {
+          "player_id": "GER_TAH",
+          "name": "Jonathan Tah",
+          "primary_position": "CB",
+          "overall": 65
+        },
+        {
+          "player_id": "GER_RAUM",
+          "name": "David Raum",
+          "primary_position": "LB",
+          "overall": 63
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "COL",
+      "team_name": "Colombia",
+      "fifa_rank": 14,
+      "watchlist": false,
+      "player_count": 13,
+      "rank_score": 73.1,
+      "squad_strength": 56.7,
+      "team_strength": 66.5,
+      "attack": 55.3,
+      "defense": 56.7,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 65.3,
+      "top_5_avg_overall": 62.4,
+      "top_11_avg_overall": 56.7,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 1,
+      "count_overall_lt_55": 6,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 3,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "COL_LDIAZ",
+          "name": "Luis Diaz",
+          "primary_position": "LW",
+          "overall": 73
+        },
+        {
+          "player_id": "COL_MUNOZ",
+          "name": "Daniel Munoz",
+          "primary_position": "RB",
+          "overall": 63
+        },
+        {
+          "player_id": "COL_DSANCHEZ",
+          "name": "Davinson Sanchez",
+          "primary_position": "CB",
+          "overall": 60
+        },
+        {
+          "player_id": "COL_JARIAS",
+          "name": "Jhon Arias",
+          "primary_position": "RW",
+          "overall": 58
+        },
+        {
+          "player_id": "COL_LSUAREZ",
+          "name": "Luis Suarez",
+          "primary_position": "ST",
+          "overall": 58
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team",
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "fifa_rank": 14,
+      "watchlist": true,
+      "player_count": 16,
+      "rank_score": 73.1,
+      "squad_strength": 56.5,
+      "team_strength": 66.4,
+      "attack": 52.6,
+      "defense": 59.3,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 60.3,
+      "top_5_avg_overall": 59.2,
+      "top_11_avg_overall": 56.5,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 9,
+      "position_counts": {
+        "GK": 3,
+        "DEF": 5,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "MEX_GIMENEZ",
+          "name": "Santiago Gimenez",
+          "primary_position": "ST",
+          "overall": 62
+        },
+        {
+          "player_id": "MEX_MONTES",
+          "name": "Cesar Montes",
+          "primary_position": "CB",
+          "overall": 60
+        },
+        {
+          "player_id": "MEX_VASQUEZ",
+          "name": "Johan Vasquez",
+          "primary_position": "CB",
+          "overall": 59
+        },
+        {
+          "player_id": "MEX_ARTEAGA",
+          "name": "Gerardo Arteaga",
+          "primary_position": "LB",
+          "overall": 58
+        },
+        {
+          "player_id": "MEX_SANCHEZ_J",
+          "name": "Jorge Sanchez",
+          "primary_position": "RB",
+          "overall": 57
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team",
+        "few_elite_seed_players_for_top_15_team"
+      ]
+    },
+    {
+      "team_id": "URU",
+      "team_name": "Uruguay",
+      "fifa_rank": 14,
+      "watchlist": true,
+      "player_count": 12,
+      "rank_score": 73.1,
+      "squad_strength": 59.5,
+      "team_strength": 67.7,
+      "attack": 57.3,
+      "defense": 63.4,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 66,
+      "top_5_avg_overall": 64.6,
+      "top_11_avg_overall": 59.5,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 3,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 4,
+        "FWD": 2
+      },
+      "top_players": [
+        {
+          "player_id": "URU_ARAUJO",
+          "name": "Ronald Araujo",
+          "primary_position": "CB",
+          "overall": 68
+        },
+        {
+          "player_id": "URU_DARWINNUNEZ",
+          "name": "Darwin Nunez",
+          "primary_position": "ST",
+          "overall": 67
+        },
+        {
+          "player_id": "URU_OLIVERA",
+          "name": "Mathias Olivera",
+          "primary_position": "LB",
+          "overall": 63
+        },
+        {
+          "player_id": "URU_VALVERDE",
+          "name": "Federico Valverde",
+          "primary_position": "CM",
+          "overall": 63
+        },
+        {
+          "player_id": "URU_GIMENEZ",
+          "name": "Jose Maria Gimenez",
+          "primary_position": "CB",
+          "overall": 62
+        }
+      ],
+      "diagnostic_flags": [
+        "few_elite_seed_players_for_top_15_team",
+        "thin_attacking_seed_depth"
+      ]
+    },
+    {
+      "team_id": "USA",
+      "team_name": "United States",
+      "fifa_rank": 17,
+      "watchlist": false,
+      "player_count": 15,
+      "rank_score": 70.0,
+      "squad_strength": 60.1,
+      "team_strength": 66.0,
+      "attack": 56.7,
+      "defense": 61.9,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 66,
+      "top_5_avg_overall": 64.8,
+      "top_11_avg_overall": 60.1,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 5,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "USA_PULISIC",
+          "name": "Christian Pulisic",
+          "primary_position": "RW",
+          "overall": 68
+        },
+        {
+          "player_id": "USA_RICHARDS",
+          "name": "Chris Richards",
+          "primary_position": "CB",
+          "overall": 65
+        },
+        {
+          "player_id": "USA_ROBINSON",
+          "name": "Antonee Robinson",
+          "primary_position": "LB",
+          "overall": 65
+        },
+        {
+          "player_id": "USA_BALOGUN",
+          "name": "Folarin Balogun",
+          "primary_position": "ST",
+          "overall": 64
+        },
+        {
+          "player_id": "USA_DEST",
+          "name": "Sergino Dest",
+          "primary_position": "RB",
+          "overall": 62
+        }
+      ],
+      "diagnostic_flags": []
+    },
+    {
+      "team_id": "JPN",
+      "team_name": "Japan",
+      "fifa_rank": 18,
+      "watchlist": false,
+      "player_count": 14,
+      "rank_score": 69.1,
+      "squad_strength": 57.3,
+      "team_strength": 64.3,
+      "attack": 54.2,
+      "defense": 57.7,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 62.3,
+      "top_5_avg_overall": 61.2,
+      "top_11_avg_overall": 57.3,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 7,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 3,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "JPN_KUBO",
+          "name": "Takefusa Kubo",
+          "primary_position": "RW",
+          "overall": 64
+        },
+        {
+          "player_id": "JPN_DOAN",
+          "name": "Ritsu Doan",
+          "primary_position": "RW",
+          "overall": 62
+        },
+        {
+          "player_id": "JPN_TOMIYASU",
+          "name": "Takehiro Tomiyasu",
+          "primary_position": "RB",
+          "overall": 61
+        },
+        {
+          "player_id": "JPN_ITO_T",
+          "name": "Hiroki Ito",
+          "primary_position": "CB",
+          "overall": 61
+        },
+        {
+          "player_id": "JPN_ITAKURA",
+          "name": "Ko Itakura",
+          "primary_position": "CB",
+          "overall": 58
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team"
+      ]
+    },
+    {
+      "team_id": "SEN",
+      "team_name": "Senegal",
+      "fifa_rank": 18,
+      "watchlist": false,
+      "player_count": 14,
+      "rank_score": 69.1,
+      "squad_strength": 61.1,
+      "team_strength": 65.9,
+      "attack": 58.3,
+      "defense": 60.4,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 65.3,
+      "top_5_avg_overall": 64.4,
+      "top_11_avg_overall": 61.1,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 3,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 5,
+        "MID": 4,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "SEN_JACKSON_N",
+          "name": "Nicolas Jackson",
+          "primary_position": "ST",
+          "overall": 67
+        },
+        {
+          "player_id": "SEN_NDIAYE_E",
+          "name": "El Hadji Malick Diouf",
+          "primary_position": "LB",
+          "overall": 65
+        },
+        {
+          "player_id": "SEN_SARR_I",
+          "name": "Ismaila Sarr",
+          "primary_position": "RW",
+          "overall": 64
+        },
+        {
+          "player_id": "SEN_MANE_S",
+          "name": "Sadio Mane",
+          "primary_position": "LW",
+          "overall": 64
+        },
+        {
+          "player_id": "SEN_NIAKHATE",
+          "name": "Moussa Niakhate",
+          "primary_position": "CB",
+          "overall": 62
+        }
+      ],
+      "diagnostic_flags": []
+    },
+    {
+      "team_id": "SUI",
+      "team_name": "Switzerland",
+      "fifa_rank": 19,
+      "watchlist": false,
+      "player_count": 13,
+      "rank_score": 68.1,
+      "squad_strength": 57.5,
+      "team_strength": 63.9,
+      "attack": 55.1,
+      "defense": 61.2,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 64.3,
+      "top_5_avg_overall": 61.8,
+      "top_11_avg_overall": 57.5,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 6,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 3,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "SUI_AKANJI",
+          "name": "Manuel Akanji",
+          "primary_position": "CB",
+          "overall": 66
+        },
+        {
+          "player_id": "SUI_NDOYE",
+          "name": "Dan Ndoye",
+          "primary_position": "RW",
+          "overall": 66
+        },
+        {
+          "player_id": "SUI_ELVEDI",
+          "name": "Nico Elvedi",
+          "primary_position": "CB",
+          "overall": 61
+        },
+        {
+          "player_id": "SUI_VARGAS",
+          "name": "Ruben Vargas",
+          "primary_position": "LW",
+          "overall": 59
+        },
+        {
+          "player_id": "SUI_EMBOLO",
+          "name": "Breel Embolo",
+          "primary_position": "ST",
+          "overall": 57
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team"
+      ]
+    },
+    {
+      "team_id": "IRN",
+      "team_name": "Iran",
+      "fifa_rank": 20,
+      "watchlist": false,
+      "player_count": 17,
+      "rank_score": 67.2,
+      "squad_strength": 48.4,
+      "team_strength": 59.7,
+      "attack": 44.2,
+      "defense": 49.4,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 52,
+      "top_5_avg_overall": 50.4,
+      "top_11_avg_overall": 48.4,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 17,
+      "position_counts": {
+        "GK": 3,
+        "DEF": 6,
+        "MID": 4,
+        "FWD": 4
+      },
+      "top_players": [
+        {
+          "player_id": "IRN_TAREMI",
+          "name": "Mehdi Taremi",
+          "primary_position": "ST",
+          "overall": 53
+        },
+        {
+          "player_id": "IRN_KANAANI",
+          "name": "Hossein Kanaani",
+          "primary_position": "CB",
+          "overall": 52
+        },
+        {
+          "player_id": "IRN_GHAEDI",
+          "name": "Mehdi Ghaedi",
+          "primary_position": "RW",
+          "overall": 51
+        },
+        {
+          "player_id": "IRN_HOSSEINI",
+          "name": "Hossein Hosseini",
+          "primary_position": "GK",
+          "overall": 48
+        },
+        {
+          "player_id": "IRN_KHALILZADEH",
+          "name": "Shoja Khalilzadeh",
+          "primary_position": "CB",
+          "overall": 48
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team",
+        "attack_component_below_neutral",
+        "defense_component_below_neutral"
+      ]
+    },
+    {
+      "team_id": "ECU",
+      "team_name": "Ecuador",
+      "fifa_rank": 22,
+      "watchlist": false,
+      "player_count": 12,
+      "rank_score": 65.5,
+      "squad_strength": 56.1,
+      "team_strength": 61.7,
+      "attack": 50.5,
+      "defense": 60.2,
+      "data_confidence": "estimated",
+      "top_3_avg_overall": 66,
+      "top_5_avg_overall": 62.6,
+      "top_11_avg_overall": 56.1,
+      "count_overall_gte_75": 0,
+      "count_overall_gte_70": 0,
+      "count_overall_lt_55": 7,
+      "position_counts": {
+        "GK": 2,
+        "DEF": 4,
+        "MID": 3,
+        "FWD": 3
+      },
+      "top_players": [
+        {
+          "player_id": "ECU_PACHO",
+          "name": "Willian Pacho",
+          "primary_position": "CB",
+          "overall": 69
+        },
+        {
+          "player_id": "ECU_HINCAPIE",
+          "name": "Piero Hincapie",
+          "primary_position": "CB",
+          "overall": 67
+        },
+        {
+          "player_id": "ECU_CAICEDO_M",
+          "name": "Moises Caicedo",
+          "primary_position": "CDM",
+          "overall": 62
+        },
+        {
+          "player_id": "ECU_ESTUPINAN",
+          "name": "Pervis Estupinan",
+          "primary_position": "LB",
+          "overall": 60
+        },
+        {
+          "player_id": "ECU_PLATA",
+          "name": "Gonzalo Plata",
+          "primary_position": "RW",
+          "overall": 55
+        }
+      ],
+      "diagnostic_flags": [
+        "best_xi_overall_low_for_top_ranked_team"
+      ]
+    }
+  ],
+  "recommendations_ja": [
+    "rank_signal_far_above_squad_strengthが多い場合、個別能力値よりロスター厚みと集約式を優先して確認する。",
+    "few_elite_seed_players_for_top_15_teamは、実在の主力級選手がseedに足りない可能性を示す。",
+    "attack/defense_component_below_neutralは、該当ポジション属性または集約重みの再監査候補です。"
+  ]
+}
