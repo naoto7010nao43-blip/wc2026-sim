@@ -21,6 +21,18 @@ import type {
   TeamReviewSummary,
 } from "../types/domain";
 
+const REVIEW_SECTIONS = [
+  { id: "model-calibration", label: "モデル" },
+  { id: "simulation-stability", label: "確率安定性" },
+  { id: "substitution-gap", label: "選手交代" },
+  { id: "team-review", label: "チーム優先度" },
+  { id: "squad-gaps", label: "スカッド" },
+  { id: "manager-trust", label: "監督・戦術" },
+  { id: "rating-workbench", label: "能力値候補" },
+  { id: "rating-decision", label: "判断監査" },
+  { id: "source-provenance", label: "出典" },
+];
+
 export function DataReviewPage() {
   const [summary, setSummary] = useState<TeamReviewSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -93,29 +105,47 @@ export function DataReviewPage() {
         </p>
       </section>
 
-      {modelCalibrationError && (
-        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
-          {modelCalibrationError}
-        </div>
-      )}
-      {!modelCalibration && !modelCalibrationError && <p className="text-sm text-slate-400">読み込み中...</p>}
-      {modelCalibration && <ModelCalibrationPanel summary={modelCalibration} />}
+      <nav className="flex flex-wrap gap-2" aria-label="データレビュー索引">
+        {REVIEW_SECTIONS.map((section) => (
+          <a
+            key={section.id}
+            href={`#${section.id}`}
+            className="rounded border border-slate-700 bg-slate-800/50 px-2 py-1 text-xs text-slate-300 transition hover:border-sky-500 hover:text-sky-200"
+          >
+            {section.label}
+          </a>
+        ))}
+      </nav>
 
-      {simulationStabilityError && (
-        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
-          {simulationStabilityError}
-        </div>
-      )}
-      {!simulationStability && !simulationStabilityError && <p className="text-sm text-slate-400">読み込み中...</p>}
-      {simulationStability && <SimulationStabilityPanel summary={simulationStability} />}
+      <section id="model-calibration" className="scroll-mt-4">
+        {modelCalibrationError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {modelCalibrationError}
+          </div>
+        )}
+        {!modelCalibration && !modelCalibrationError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {modelCalibration && <ModelCalibrationPanel summary={modelCalibration} />}
+      </section>
 
-      {substitutionModelGapError && (
-        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
-          {substitutionModelGapError}
-        </div>
-      )}
-      {!substitutionModelGap && !substitutionModelGapError && <p className="text-sm text-slate-400">読み込み中...</p>}
-      {substitutionModelGap && <SubstitutionModelGapPanel summary={substitutionModelGap} />}
+      <section id="simulation-stability" className="scroll-mt-4">
+        {simulationStabilityError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {simulationStabilityError}
+          </div>
+        )}
+        {!simulationStability && !simulationStabilityError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {simulationStability && <SimulationStabilityPanel summary={simulationStability} />}
+      </section>
+
+      <section id="substitution-gap" className="scroll-mt-4">
+        {substitutionModelGapError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {substitutionModelGapError}
+          </div>
+        )}
+        {!substitutionModelGap && !substitutionModelGapError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {substitutionModelGap && <SubstitutionModelGapPanel summary={substitutionModelGap} />}
+      </section>
 
       {error && (
         <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">{error}</div>
@@ -123,20 +153,22 @@ export function DataReviewPage() {
 
       {!summary && !error && <p className="text-sm text-slate-400">読み込み中...</p>}
 
-      {summary && summary.teamCount === 0 && (
-        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-slate-400">
-          {summary.note}
-        </div>
-      )}
+      <section id="team-review" className="scroll-mt-4">
+        {summary && summary.teamCount === 0 && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-slate-400">
+            {summary.note}
+          </div>
+        )}
 
-      {summary && summary.teamCount > 0 && (
-        <>
-          <TeamDataReviewPanel summary={summary} />
-          <p className="text-[11px] text-slate-500">{summary.note}</p>
-        </>
-      )}
+        {summary && summary.teamCount > 0 && (
+          <>
+            <TeamDataReviewPanel summary={summary} />
+            <p className="text-[11px] text-slate-500">{summary.note}</p>
+          </>
+        )}
+      </section>
 
-      <section>
+      <section id="squad-gaps" className="scroll-mt-4">
         <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">スカッド評価ギャップ</h3>
         {squadGapsError && (
           <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
@@ -147,7 +179,7 @@ export function DataReviewPage() {
         {squadGaps && <SquadGapPanel summary={squadGaps} />}
       </section>
 
-      <section>
+      <section id="manager-trust" className="scroll-mt-4">
         <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">監督・戦術データの信頼性</h3>
         {managerTrustError && (
           <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
@@ -158,7 +190,7 @@ export function DataReviewPage() {
         {managerTrust && <ManagerTacticalTrustPanel summary={managerTrust} />}
       </section>
 
-      <section>
+      <section id="rating-workbench" className="scroll-mt-4">
         <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">能力値レビュー作業台</h3>
         {ratingWorkbenchError && (
           <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
@@ -169,7 +201,7 @@ export function DataReviewPage() {
         {ratingWorkbench && <RatingReviewWorkbenchPanel summary={ratingWorkbench} />}
       </section>
 
-      <section>
+      <section id="rating-decision" className="scroll-mt-4">
         <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">能力値レビュー判断監査</h3>
         {ratingDecisionAuditError && (
           <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
@@ -180,7 +212,7 @@ export function DataReviewPage() {
         {ratingDecisionAudit && <RatingDecisionAuditPanel summary={ratingDecisionAudit} />}
       </section>
 
-      <section>
+      <section id="source-provenance" className="scroll-mt-4">
         <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">出典監査</h3>
         {sourceProvenanceAuditError && (
           <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
