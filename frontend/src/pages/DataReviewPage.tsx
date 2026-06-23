@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
+import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
@@ -104,6 +105,16 @@ export function DataReviewPage() {
           フォーミュラの調整は別途の検証スペックがない限り行いません。
         </p>
       </section>
+
+      <DataReviewOverviewPanel
+        teamReview={summary}
+        managerTrust={managerTrust}
+        ratingDecisionAudit={ratingDecisionAudit}
+        sourceProvenanceAudit={sourceProvenanceAudit}
+        modelCalibration={modelCalibration}
+        simulationStability={simulationStability}
+        substitutionModelGap={substitutionModelGap}
+      />
 
       <nav className="flex flex-wrap gap-2" aria-label="データレビュー索引">
         {REVIEW_SECTIONS.map((section) => (
