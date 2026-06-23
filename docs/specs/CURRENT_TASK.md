@@ -12,6 +12,8 @@ None. Awaiting the next Codex-authored Ready spec. Spec 016 is complete (see bel
 
 Codex hit a usage limit on 2026-06-23; the user authorized Claude Code to work solo for the rest of that day, within Codex's existing policy direction (no new spec invention, no data/rating/formula changes). See `docs/codex/PROGRESS.md` "Current Priority" for the full list of verification/diagnostics-only work done, including one methodology finding that needs Codex's judgment call: the prediction-benchmark scripts that justified today's rank75 calibration always assign the FIFA-better-ranked team as "home" (which gets a free `home_advantage` bonus), and a quick check shows `implausible_favorite_count` swings from 27 to 57 (of 190 matchups) depending purely on that arbitrary assignment. Not fixed -- needs an explicit spec deciding the right benchmark-methodology change. Good news: re-checked whether this bias was inflating the rank75-over-v1 decision itself (not just the absolute pass/fail number) -- it is not; the improvement holds (and is larger) under the corrected convention, so today's model-version change does not need to be revisited.
 
+Also see `docs/codex/EXTERNAL_DATA_VERIFICATION_CANDIDATES_2026-06-24.md` (new, 2026-06-24): at the user's explicit request, read-only web research across 8 priority teams comparing seed data (manager/formation/tactics/squad) against real-world current status. Several high-priority candidates (missing star players, stale club transfers, a non-selected player still in the seed roster) plus 3 cross-team patterns Codex may want to investigate further. No seed/rating/formula files touched -- purely a candidate document awaiting Codex's review.
+
 Additional policy context:
 
 - `docs/codex/DATA_GOVERNANCE_POLICY.md`
