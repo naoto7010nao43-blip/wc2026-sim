@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../api/client";
 import { BracketView } from "../components/BracketView";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
+import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
 import type { TournamentResult } from "../types/domain";
 
@@ -83,12 +84,13 @@ export function TournamentPage() {
       {result && (
         // While a new run is in flight, the server briefly clears matches before
         // rewriting them; disable interaction so stale match links can't 404.
-        <div className={loading ? "pointer-events-none opacity-40 transition-opacity" : "transition-opacity"}>
+        <div className={loading ? "pointer-events-none space-y-8 opacity-40 transition-opacity" : "space-y-8 transition-opacity"}>
+          <TournamentHighlightsPanel result={result} />
           <section>
             <h3 className="mb-3 text-lg font-bold">決勝トーナメント</h3>
             <BracketView result={result} />
           </section>
-          <section className="mt-8">
+          <section>
             <h3 className="mb-3 text-lg font-bold">グループステージ順位表</h3>
             <GroupStandingsGrid groupStandings={result.group_standings} groupMatches={result.matches.group} />
           </section>

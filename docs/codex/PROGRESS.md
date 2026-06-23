@@ -28,6 +28,7 @@ Completed:
 - Spec 010 Phase 1 base work: added deterministic text encoding audit script and tests.
 - Codex parallel UI sprint: added team-level manager/tactical model visibility and simulator matchup comparison without touching Claude's Spec 010 data-quality API work.
 - Codex parallel UI sprint follow-up: added TeamPage squad depth, age-band, profile-coverage, and key-player summary panels derived from existing team player data.
+- Codex parallel tournament UX sprint: added TournamentPage highlights and group-card summary cues derived from existing tournament results.
 
 Primary task:
 
@@ -71,6 +72,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 - Tactical UI verification: `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` pass after adding the tactical panels. Local API `/api/teams/BRA` returns tactical profile data and Vite `/simulate` responds with HTTP 200. Full browser pixel smoke was skipped because this environment has no Chrome/Edge executable and the Playwright browser binary is not installed.
 - Squad analysis verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding the TeamPage squad analysis panel; all passed.
+- Tournament UX verification: repeated `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` after adding tournament highlights and group summary cues; all passed.
 
 ## Next After Current Task
 
