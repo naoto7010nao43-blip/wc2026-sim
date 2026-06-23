@@ -8,7 +8,13 @@ Read first:
 
 ## Active Claude Code Task
 
-None. Awaiting the next Codex-authored Ready spec. Spec 015 is complete (see below).
+Ready:
+
+- `docs/specs/016-model-calibration-transparency.md`
+
+Implement this spec autonomously under `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`. Do not ask the user for routine confirmation. Stop only for the explicit Stop Conditions in the spec.
+
+Spec 015 is complete (see below).
 
 Additional policy context:
 
