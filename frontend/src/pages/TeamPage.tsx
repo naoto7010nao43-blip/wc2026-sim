@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { LikelyLineupPanel } from "../components/LikelyLineupPanel";
@@ -48,10 +48,33 @@ function capsGoals(player: PlayerSummary): string {
   return `${caps}試合/${goals}得点`;
 }
 
+type PlayerSortMode = "overall" | "starter" | "caps" | "age";
+type PositionFilter = "all" | "GK" | "DF" | "MF" | "FW";
+
+function positionGroup(position: string): PositionFilter {
+  const p = position.toUpperCase();
+  if (p.includes("GK")) return "GK";
+  if (p.includes("CB") || p.includes("LB") || p.includes("RB") || p.includes("DF")) return "DF";
+  if (p.includes("DM") || p.includes("CM") || p.includes("AM") || p.includes("MF")) return "MF";
+  return "FW";
+}
+
+function sortPlayers(players: PlayerSummary[], sortMode: PlayerSortMode): PlayerSummary[] {
+  return [...players].sort((a, b) => {
+    if (sortMode === "starter") return (b.starting_probability ?? -1) - (a.starting_probability ?? -1) || b.overall - a.overall;
+    if (sortMode === "caps") return (b.caps ?? -1) - (a.caps ?? -1) || b.overall - a.overall;
+    if (sortMode === "age") return b.age - a.age || b.overall - a.overall;
+    return b.overall - a.overall;
+  });
+}
+
 export function TeamPage() {
   const { teamId } = useParams<{ teamId: string }>();
   const [team, setTeam] = useState<TeamOut | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [playerQuery, setPlayerQuery] = useState("");
+  const [positionFilter, setPositionFilter] = useState<PositionFilter>("all");
+  const [playerSortMode, setPlayerSortMode] = useState<PlayerSortMode>("overall");
 
   useEffect(() => {
     if (!teamId) return;
@@ -60,6 +83,22 @@ export function TeamPage() {
     setError(null);
     api.getTeam(teamId).then(setTeam).catch((e) => setError(String(e)));
   }, [teamId]);
+
+  const visiblePlayers = useMemo(() => {
+    if (!team) return [];
+    const q = playerQuery.trim().toLowerCase();
+    const filtered = team.players.filter((p) => {
+      if (positionFilter !== "all" && positionGroup(p.primary_position) !== positionFilter) return false;
+      if (!q) return true;
+      return (
+        p.name.toLowerCase().includes(q) ||
+        (p.name_ja?.toLowerCase().includes(q) ?? false) ||
+        p.primary_position.toLowerCase().includes(q) ||
+        (p.club_name?.toLowerCase().includes(q) ?? false)
+      );
+    });
+    return sortPlayers(filtered, playerSortMode);
+  }, [playerQuery, playerSortMode, positionFilter, team]);
 
   if (error) {
     return (
@@ -76,7 +115,6 @@ export function TeamPage() {
   if (!team || !teamId) return <p className="text-slate-400">読み込み中...</p>;
 
   const trust = summarizeTrust(team.players);
-  const sortedPlayers = [...team.players].sort((a, b) => b.overall - a.overall);
 
   return (
     <div className="space-y-6">
@@ -127,7 +165,52 @@ export function TeamPage() {
       </div>
 
       <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
-        <p className="text-xs uppercase tracking-widest text-slate-500">選手一覧</p>
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-widest text-slate-500">選手一覧</p>
+            <p className="mt-1 text-xs text-slate-500">
+              表示中: {visiblePlayers.length}/{team.players.length}人
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+            <label>
+              <span className="text-[11px] text-slate-500">検索</span>
+              <input
+                value={playerQuery}
+                onChange={(e) => setPlayerQuery(e.target.value)}
+                placeholder="選手名・クラブ"
+                className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-xs text-slate-100 outline-none placeholder:text-slate-600 focus:border-emerald-500"
+              />
+            </label>
+            <label>
+              <span className="text-[11px] text-slate-500">位置</span>
+              <select
+                value={positionFilter}
+                onChange={(e) => setPositionFilter(e.target.value as PositionFilter)}
+                className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-xs text-slate-100 outline-none focus:border-emerald-500"
+              >
+                <option value="all">全ポジション</option>
+                <option value="GK">GK</option>
+                <option value="DF">守備</option>
+                <option value="MF">中盤</option>
+                <option value="FW">攻撃</option>
+              </select>
+            </label>
+            <label>
+              <span className="text-[11px] text-slate-500">並び替え</span>
+              <select
+                value={playerSortMode}
+                onChange={(e) => setPlayerSortMode(e.target.value as PlayerSortMode)}
+                className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-xs text-slate-100 outline-none focus:border-emerald-500"
+              >
+                <option value="overall">能力値</option>
+                <option value="starter">先発確率</option>
+                <option value="caps">代表経験</option>
+                <option value="age">年齢</option>
+              </select>
+            </label>
+          </div>
+        </div>
         <div className="mt-2 max-h-[420px] overflow-x-auto overflow-y-auto">
           <table className="min-w-[680px] w-full text-left text-xs">
             <thead className="sticky top-0 bg-slate-800/95 text-slate-500">
@@ -141,7 +224,7 @@ export function TeamPage() {
               </tr>
             </thead>
             <tbody>
-              {sortedPlayers.map((p) => (
+              {visiblePlayers.map((p) => (
                 <tr key={p.id} className="border-t border-slate-700/60 text-slate-200">
                   <td className="py-1.5 pr-3">
                     <div className="font-medium">{p.name_ja ?? p.name}</div>
@@ -160,6 +243,9 @@ export function TeamPage() {
               ))}
             </tbody>
           </table>
+          {visiblePlayers.length === 0 && (
+            <p className="py-6 text-center text-sm text-slate-500">条件に合う選手がいません。</p>
+          )}
         </div>
       </div>
 
