@@ -135,6 +135,12 @@ The goal is not to maximize automatic acceptance. The goal is to preserve useful
 signal while making uncertainty explicit enough that the simulator does not gain
 false confidence.
 
+The validation output now includes `teamSignalProfiles`, `teamSignalBandCounts`,
+and `sparseTeamIds`. Treat `sparse` as a routing signal, not a failure. A sparse
+team should keep low-confidence review questions when they are the best available
+evidence, because Codex may later use them as provisional context, UI uncertainty
+notes, or future research leads.
+
 ## Stop Conditions
 
 Stop and report only if:
