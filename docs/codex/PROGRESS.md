@@ -10,7 +10,7 @@
 
 ## Current Priority
 
-Continue unattended progress with a larger Claude Code task focused on data quality visibility, encoding guardrails, and UI trust polish.
+Spec 011 is active: turn Spec 010's simulation-audit and roster-reconciliation findings into a read-only team data review diagnostic layer. The goal is to prioritize squad/rating data review without mutating seed players, ratings, formulas, or simulation behavior.
 
 Completed:
 
@@ -42,12 +42,13 @@ Completed:
 - Spec 010 Phase 8: added `backend/scripts/build_roster_reconciliation_candidates.py` and `backend/reports/roster_reconciliation_candidates_2026-06-23.json` (read-only; no seed player added/removed/modified). For all 48 teams, classifies the 652 unmatched official players and 73 unmatched seed players into: 474 high-confidence add candidates (team's seed roster below this dataset's own 15-player shallow-half threshold -- note this dataset only carries 12-19 players/team, not a real 26-man squad, so the spec's literal "below 26" signal would have flagged every team and was replaced with a dataset-relative one), 162 lower-priority add candidates, 16 ambiguous seed/official pairs found via a looser name-token overlap than the strict matcher, and 57 likely-stale seed players with no token overlap at all. Counts reconcile exactly against the source report (636+16=652 official, 16+57=73 seed). Spot-checked the ambiguous pairs: e.g. EGY's seed "Mostafa Shobeir" vs official "MOSTAFA SHOUBIR..." and "Mohamed Abdelmonem" vs "MOHAMED ABDELMONEIM..." both look like the same player under a different Arabic-name transliteration -- good human-review candidates, not auto-applied. 8 new tests cover the classification/pairing helpers.
 - Spec 010 Phase 7: SKIPPED by design, not blocked. The Phase 6 audit found no formula-level issue clearing the spec's bar for a change -- host_advantage is already clearly visible (+6.3 to +7.1pp), the tactical matchup modifier already points the documented direction, and champion-odds concentration is "reasonable". The only finding (CRO/NED/POR/etc. underperforming their FIFA rank) is a squad-rating data question, not a ModelConfig/tactical-weight/host-advantage/shootout-bounds question, and Spec 010 explicitly forbids "arbitrary changes because one favorite team feels wrong." Tuning a formula constant with no audit evidence behind it would be exactly that. Recommendation for Codex: review CRO/NED/POR/MEX/ARG/ESP/MAR/URU's `qualitative_adjustments`/attributes in `players.json` against current club-season form before considering any rating-data change; no code change proposed here.
 - Spec 010 Phase 6: added `backend/scripts/audit_simulation_accuracy.py` (read-only; uses the existing Poisson model and ModelConfig, never mutates seed/report data) and `backend/reports/simulation_accuracy_audit_2026-06-23.json`. Findings: host_advantage is clearly visible (+6.3 to +7.1pp home-win swing for CAN/MEX/USA vs a fixed mid-table reference opponent); the tactical matchup modifier points the documented direction (high-press team at home gets a small positive nudge); champion-odds concentration looks reasonable (top1 18.8%, top3 42.6%, 31/48 teams with nonzero title odds); underdog (bottom-half-by-rank) combined champion-odds stayed low and stable between 100 and 500 Monte Carlo iterations (7.0% vs 6.4%). The most actionable finding: across all-pairs matchups within the top-20 FIFA-ranked teams, CRO (9), NED (8), POR (6), and to a lesser extent MEX/ARG/ESP/MAR/URU (3-4 each) are repeatedly given a less-than-expected win probability for their FIFA rank, suggesting their squad-derived attack/defense/strength ratings (not the formula) may be undershooting their FIFA rank -- flagged as a data-review candidate for Codex, not a formula change. 9 new tests cover the pure classification/aggregation helpers.
+- Spec 011 authored by Codex: `docs/specs/011-team-data-review-diagnostics.md` is ready for Claude Code. It asks for a deterministic team data review plan report, read-only diagnostics API, and `/data-review` UI page derived only from existing local reports/seed files.
 
 Primary task:
 
-- `docs/specs/010-unattended-site-quality-sprint.md`
-- This is intentionally much larger than prior tasks so Claude Code can keep working without asking for frequent new specs.
-- Spec 010 now permits bolder simulation/rating-adjacent experiments only when they include before/after reports, focused tests, and local commits for Codex review.
+- `docs/specs/011-team-data-review-diagnostics.md`
+- This task is intentionally read-only because the next accuracy step requires review prioritization before any seed roster/rating import.
+- Spec 010 remains completed context.
 
 Direction-only context:
 
@@ -97,6 +98,6 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 
 Next Codex actions:
 
-1. Decide later whether/how to resolve remaining unmatched official/seed players.
+1. Review Spec 011 output and decide whether any team data update/import spec is justified.
 2. Keep formula changes frozen until an explicit calibration spec exists.
-3. Prepare the next product-facing improvement after data trust, likely match detail v2 depth or tournament simulation explanation.
+3. Use the diagnostic output to prioritize CRO/NED/POR and ambiguous roster/name-pair review.

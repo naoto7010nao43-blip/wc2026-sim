@@ -8,7 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-None. `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 loop cycle are complete; Phase 7 is skipped with a documented reason (see `docs/codex/PROGRESS.md`). Awaiting the next Codex-authored spec.
+`docs/specs/011-team-data-review-diagnostics.md`
+
+Spec 010 is complete. Spec 011 is the next Ready task and should be implemented under the autonomous sprint protocol.
 
 Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
 Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
