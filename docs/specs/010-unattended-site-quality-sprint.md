@@ -37,7 +37,7 @@ Priorities:
 4. Compact, mobile-safe football UI.
 5. No simulation/rating formula changes unless explicitly requested.
 
-## Hard Boundaries
+## Hard Boundaries And Aggressive Work Policy
 
 Allowed:
 
@@ -46,13 +46,15 @@ Allowed:
 - improve copy, empty states, loading states, and responsive layout
 - add deterministic audit scripts/tests for text encoding and data quality
 - add browser smoke-check notes to `docs/codex/PROGRESS.md`
+- make simulation or rating-adjacent changes only when this spec explicitly calls for an isolated, test-covered, before/after-reported experiment
+- commit bold changes locally when verification passes, so Codex can review the exact diff afterward
 
 Not allowed:
 
 - add or delete seed players
 - overwrite player/manager ratings
-- change simulation formulas
-- change rating formulas
+- change simulation formulas without a before/after audit report and focused tests
+- change rating formulas without a before/after audit report and focused tests
 - change market values, career stats, or manual overrides
 - fetch or invent unverifiable player/manager data
 - broad refactors unrelated to the phases
@@ -195,6 +197,164 @@ At desktop width and at least one mobile-ish width, verify:
 
 Document results in `docs/codex/PROGRESS.md`.
 
+## Phase 6: Simulation Accuracy Audit Report
+
+This phase is intentionally more ambitious. Produce a concrete audit of current simulation behavior before making formula changes.
+
+Add a script, for example:
+
+- `backend/scripts/audit_simulation_accuracy.py`
+
+Use existing local data only.
+
+The report should answer:
+
+- Which teams have the highest/lowest attack, defense, and strength ratings?
+- Which top-20 team matchups look implausible by expected goals or win probability?
+- Are host-nation advantages visible for USA/MEX/CAN?
+- Are tactical profiles actually moving expected goals in realistic directions?
+- How often do underdogs win in Monte Carlo at 100/500 iteration samples?
+- Do current champion odds look too concentrated or too flat?
+
+Write:
+
+- `backend/reports/simulation_accuracy_audit_YYYY-MM-DD.json`
+
+Include:
+
+- model version
+- sample matchups
+- champion odds sample
+- warnings
+- recommended changes
+
+Acceptance:
+
+- This phase may produce warnings without changing formulas.
+- The report must be deterministic when given a seed.
+- Tests should cover at least one deterministic audit helper.
+
+## Phase 7: Formula Improvement Experiment
+
+This phase may change simulation behavior, but only with guardrails.
+
+Allowed changes:
+
+- tune existing `ModelConfig` constants
+- adjust how tactical matchup modifier is weighted
+- adjust host advantage if audit shows it is too weak/strong
+- improve penalty shootout probability bounds if clearly justified
+
+Not allowed:
+
+- introduce a new complex simulation engine
+- add new player attributes without evidence
+- make arbitrary changes because one favorite team "feels wrong"
+
+Required:
+
+1. Keep the change small and explainable.
+2. Add a before/after report under `backend/reports/`, e.g.
+   - `simulation_formula_experiment_YYYY-MM-DD.json`
+3. Include:
+   - before config
+   - after config
+   - 10 representative matchup deltas
+   - champion odds before/after for at least 200 Monte Carlo iterations
+   - risk notes
+4. Add focused tests for deterministic behavior and probability sanity.
+
+Acceptance:
+
+- Backend tests pass.
+- Changes are explainable from the audit, not arbitrary.
+- Codex can later revert the commit cleanly if the experiment is not good enough.
+
+## Phase 8: Roster Reconciliation Candidate Report
+
+Work on the remaining roster risk more aggressively, but still do not directly add/delete players.
+
+Current remaining risk after Codex work:
+
+- unmatched official players: 652
+- unmatched seed players: 73
+
+Create a candidate report:
+
+- `backend/reports/roster_reconciliation_candidates_YYYY-MM-DD.json`
+
+For each team, propose:
+
+- high-confidence add candidates from official list
+- likely stale seed players
+- ambiguous pairs requiring Codex/user review
+- candidate reason
+- risk level: `low`, `medium`, `high`
+
+Signals may include:
+
+- official player unmatched and seed roster below 26 players
+- seed player unmatched and official roster has same position group
+- team has clear stale 2022-style names
+- name similarity after conservative normalization
+
+Do not mutate seed files.
+
+Acceptance:
+
+- Report is useful enough for Codex to decide the next import spec.
+- Tests cover candidate classification helpers.
+
+## Phase 9: Match Detail Analysis Upgrade
+
+This phase may touch frontend and backend response shape if needed.
+
+Product goal:
+
+- make match detail feel like a serious football analysis page, not just a replay.
+
+Allowed:
+
+- add derived match insights from existing Match fields/events:
+  - turning point event
+  - xG-like expected pressure summary if already derivable from events or shots
+  - momentum segments
+  - key player contributions from existing player ratings/events
+  - tactical note using formations and manager/tactical profile
+- expose a small read-only `analysis` object on match detail API if clean
+- show it compactly on `MatchDetailPage`
+
+Not allowed:
+
+- fabricate event data for Poisson-only prediction matches
+- change event generation unless part of Phase 7 and covered by tests
+
+Acceptance:
+
+- Detailed simulation matches gain visible analysis.
+- Real/score-only matches show calm limited-data states.
+- Mobile layout remains readable.
+
+## Phase 10: Long-Run Autonomous Loop
+
+If all phases above complete before noon, do not stop immediately.
+
+Continue with this loop:
+
+1. Run the encoding audit.
+2. Run backend tests.
+3. Run frontend lint/build.
+4. Inspect `docs/codex/PROGRESS.md` open risks.
+5. Pick the highest-impact remaining risk that does not violate boundaries.
+6. Implement a focused fix with tests.
+7. Commit and report.
+
+Only stop if:
+
+- a Stop condition in `AUTONOMOUS_SPRINT_PROTOCOL.md` applies
+- tests fail and focused investigation cannot isolate the cause
+- the only remaining meaningful work requires unverifiable external player/manager facts
+
 ## Verification
 
 Run:
@@ -214,14 +374,19 @@ npm run build
 
 Run the new text/data-quality audit command if added.
 
+For Phase 6/7, also run the new simulation audit/experiment scripts and record report paths.
+
 ## Commit Policy
 
 Commit when required verification passes.
 
-Suggested commit message:
+Suggested commit messages:
 
 ```text
 Add data quality summary and UI guardrails
+Audit simulation accuracy and tune model
+Add roster reconciliation candidate report
+Upgrade match detail analysis
 ```
 
 Do not push.

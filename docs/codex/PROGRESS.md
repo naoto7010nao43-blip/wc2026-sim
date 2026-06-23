@@ -29,7 +29,8 @@ Completed:
 Primary task:
 
 - `docs/specs/010-unattended-site-quality-sprint.md`
-- This is intentionally larger than prior tasks so Claude Code can keep working without asking for frequent new specs.
+- This is intentionally much larger than prior tasks so Claude Code can keep working without asking for frequent new specs.
+- Spec 010 now permits bolder simulation/rating-adjacent experiments only when they include before/after reports, focused tests, and local commits for Codex review.
 
 Direction-only context:
 
@@ -56,6 +57,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Claude Code should continue through the overnight sprint phases without routine user confirmation.
 - Match Detail v2 beyond trust states should not be implemented until a concrete follow-up spec is written.
 - Player/manager data updates must be evidence-based and should not rely on unverifiable claims.
+- Formula changes are allowed only inside an explicit experiment phase with before/after reports and tests; arbitrary tuning remains prohibited.
 - FIFA Official Squad List diff report parses 48 teams and 26 official players per team. Current seed has roster drift for all 48 teams and coach mismatches for 16 teams; seed updates need a separate reviewed import spec.
 - Spec 008 applied 2,360 safe official-profile fields across 472 existing matched players, with no skipped conflicts, no missing IDs, and no players added or removed.
 - Spec 009 improved conservative name matching and regenerated read-only official squad reports. After PDF ligature cleanup, remaining roster risk is now 652 official players and 73 seed players unmatched by the current heuristic, down from 776 and 197.
