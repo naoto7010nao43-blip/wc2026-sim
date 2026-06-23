@@ -121,6 +121,20 @@ Separate these categories clearly:
 - roster/availability candidate
 - future-engine candidate
 
+Do not over-filter sparse teams. If evidence is weak but potentially useful,
+keep it as a low-confidence review question rather than deleting it. Codex will
+later decide whether it can be used as:
+
+- a direct data-change candidate,
+- provisional context for simulation tuning,
+- a UI uncertainty note,
+- a future-engine feature candidate,
+- or a discarded claim.
+
+The goal is not to maximize automatic acceptance. The goal is to preserve useful
+signal while making uncertainty explicit enough that the simulator does not gain
+false confidence.
+
 ## Stop Conditions
 
 Stop and report only if:
@@ -139,6 +153,8 @@ Required before commit:
 - `cd backend && .\venv\Scripts\python.exe scripts\audit_text_encoding.py`
 - Validate the JSON report can be parsed:
   - `cd backend && .\venv\Scripts\python.exe -c "import json, pathlib; json.loads(pathlib.Path('reports/external_data_verification_candidates_2026-06-24.json').read_text(encoding='utf-8')); print('json ok')"`
+- Run the Codex acceptance gate for research quality and simulator relevance:
+  - `cd backend && .\venv\Scripts\python.exe scripts\validate_external_data_verification_report.py reports\external_data_verification_candidates_2026-06-24.json --out reports\external_data_verification_validation_2026-06-24.json`
 - `git diff --check`
 
 No backend pytest or frontend build is required unless code is changed. Code should not be changed in this spec.
