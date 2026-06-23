@@ -25,6 +25,7 @@ Completed:
 - Spec 009 follow-up: applied official-profile fields for newly matched players and cleaned PDF ligature artifacts.
 - Product polish: verified and cleaned Japanese copy across home, tournament, simulator, bracket, match cards, and match detail; expanded prediction API mojibake regression checks.
 - Tournament odds transparency: Monte Carlo API now exposes data confidence and method explanation; frontend displays it and remains compatible with older local API responses.
+- Spec 010 Phase 1 base work: added deterministic text encoding audit script and tests.
 
 Primary task:
 
@@ -41,7 +42,7 @@ Direction-only context:
 
 Last known baseline from Codex inspection after Spec 009 follow-up:
 
-- Backend tests: `144 passed`
+- Backend tests: `147 passed`
 - Frontend build: passed
 - Frontend lint: passed
 - Local backend: responding on port 8000
@@ -64,6 +65,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Spec 009 follow-up applied official-profile fields for newly matched players. Compared with the previous commit, 124 players gained official profile data; 624 official-profile field values changed in total, including cleanup of PDF `fi` ligature extraction artifacts. The regenerated merge proposal now has 0 matched-player field update candidates.
 - All backend JSON files currently scan clean for control characters.
 - Prediction API disclaimer/explanation tests now check a broader set of mojibake markers.
+- Text encoding audit command passes: `cd backend && .\venv\Scripts\python.exe scripts\audit_text_encoding.py`.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
 
 ## Next After Current Task
