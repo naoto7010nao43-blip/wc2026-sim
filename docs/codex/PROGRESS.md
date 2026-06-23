@@ -26,6 +26,7 @@ Completed:
 - Product polish: verified and cleaned Japanese copy across home, tournament, simulator, bracket, match cards, and match detail; expanded prediction API mojibake regression checks.
 - Tournament odds transparency: Monte Carlo API now exposes data confidence and method explanation; frontend displays it and remains compatible with older local API responses.
 - Spec 010 Phase 1 base work: added deterministic text encoding audit script and tests.
+- Codex parallel UI sprint: added team-level manager/tactical model visibility and simulator matchup comparison without touching Claude's Spec 010 data-quality API work.
 
 Primary task:
 
@@ -67,6 +68,7 @@ Last known baseline from Codex inspection after Spec 009 follow-up:
 - Prediction API disclaimer/explanation tests now check a broader set of mojibake markers.
 - Text encoding audit command passes: `cd backend && .\venv\Scripts\python.exe scripts\audit_text_encoding.py`.
 - Round of 32 third-place assignment uses candidate-pool constraint solving, not the literal FIFA Annex C 495-row table.
+- Tactical UI verification: `cd frontend && npm run lint`, `cd frontend && npm run build`, and `python backend\scripts\audit_text_encoding.py` pass after adding the tactical panels. Local API `/api/teams/BRA` returns tactical profile data and Vite `/simulate` responds with HTTP 200. Full browser pixel smoke was skipped because this environment has no Chrome/Edge executable and the Playwright browser binary is not installed.
 
 ## Next After Current Task
 

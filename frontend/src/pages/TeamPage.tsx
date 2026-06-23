@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { LikelyLineupPanel } from "../components/LikelyLineupPanel";
+import { TacticalProfilePanel } from "../components/TacticalProfilePanel";
 import { countryNameJa } from "../data/countryNamesJa";
 import type { PlayerSummary, TeamOut } from "../types/domain";
 
@@ -91,30 +92,12 @@ export function TeamPage() {
         </p>
       </div>
 
+      <TacticalProfilePanel profile={team.tactical_profile} formation={team.default_formation} />
+
       <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
         <p className="text-xs uppercase tracking-widest text-slate-500">データ信頼性</p>
 
-        {team.tactical_profile && (
-          <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-            {([
-              ["プレス強度", team.tactical_profile.press_intensity],
-              ["ポゼッション志向", team.tactical_profile.possession_style],
-              ["最終ライン高さ", team.tactical_profile.defensive_line_height],
-            ] as const).map(([label, value]) => (
-              <div key={label}>
-                <div className="flex items-center justify-between text-[11px] text-slate-400">
-                  <span>{label}</span>
-                  <span className="font-semibold text-slate-200">{value}</span>
-                </div>
-                <div className="mt-0.5 h-1 overflow-hidden rounded-full bg-slate-700">
-                  <div className="h-full bg-emerald-500" style={{ width: `${value}%` }} />
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-slate-300">
+        <div className="mt-3 flex flex-wrap items-center gap-4 text-xs text-slate-300">
           <span>
             選手数: <span className="font-semibold text-slate-100">{team.players.length}</span>
           </span>
