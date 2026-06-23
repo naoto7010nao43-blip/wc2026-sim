@@ -12,6 +12,14 @@ function topEntries(pct: Record<string, number>, n: number): [string, number][] 
     .slice(0, n);
 }
 
+function nonZeroCount(pct: Record<string, number>): number {
+  return Object.values(pct).filter((value) => value > 0).length;
+}
+
+function sumTopEntries(pct: Record<string, number>, n: number): number {
+  return topEntries(pct, n).reduce((sum, [, value]) => sum + value, 0);
+}
+
 export function TournamentOddsPanel() {
   const [result, setResult] = useState<TournamentSimulationOut | null>(null);
   const [loading, setLoading] = useState(false);
@@ -50,27 +58,36 @@ export function TournamentOddsPanel() {
 
       {result && (
         <div className="mt-5 space-y-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <SummaryMetric label="優勝候補集中度" value={`${sumTopEntries(result.champion_pct, 3).toFixed(1)}%`} />
+            <SummaryMetric label="優勝可能性あり" value={`${nonZeroCount(result.champion_pct)}チーム`} />
+            <SummaryMetric label="決勝進出候補" value={`${nonZeroCount(result.final_pct)}チーム`} />
+          </div>
+
           <div>
             <p className="text-xs uppercase tracking-widest text-slate-500">優勝確率 上位{TOP_N}</p>
             <div className="mt-2 space-y-1.5">
               {topEntries(result.champion_pct, TOP_N).map(([teamId, pct]) => (
-                <div key={teamId} className="flex items-center justify-between gap-2 text-sm">
-                  <TeamBadge teamId={teamId} />
-                  <span className="font-semibold text-emerald-400">{pct.toFixed(1)}%</span>
-                </div>
+                <ProbabilityRow key={teamId} teamId={teamId} pct={pct} accent="emerald" />
               ))}
             </div>
           </div>
 
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <ProbabilityList title="決勝進出 上位" entries={topEntries(result.final_pct, TOP_N)} />
+            <ProbabilityList title="準決勝進出 上位" entries={topEntries(result.semifinal_pct, TOP_N)} />
+            <ProbabilityList title="準々決勝進出 上位" entries={topEntries(result.quarterfinal_pct, TOP_N)} />
+          </div>
+
           <div>
-            <p className="text-xs uppercase tracking-widest text-slate-500">準決勝進出確率 上位{TOP_N}</p>
-            <div className="mt-2 space-y-1.5">
-              {topEntries(result.semifinal_pct, TOP_N).map(([teamId, pct]) => (
-                <div key={teamId} className="flex items-center justify-between gap-2 text-sm">
-                  <TeamBadge teamId={teamId} />
-                  <span className="text-slate-300">{pct.toFixed(1)}%</span>
-                </div>
-              ))}
+            <p className="text-xs uppercase tracking-widest text-slate-500">ラウンド突破の見方</p>
+            <div className="mt-2 grid grid-cols-1 gap-2 text-xs text-slate-400 sm:grid-cols-2">
+              <p className="rounded-lg border border-slate-700/80 bg-slate-900/45 p-3">
+                優勝候補集中度は、上位3チームの優勝確率合計です。高いほど大会が少数候補に寄っています。
+              </p>
+              <p className="rounded-lg border border-slate-700/80 bg-slate-900/45 p-3">
+                各ラウンドの候補数は、{ITERATIONS}回の試行で1回以上その地点に到達したチーム数です。
+              </p>
             </div>
           </div>
 
@@ -88,5 +105,43 @@ export function TournamentOddsPanel() {
         </div>
       )}
     </section>
+  );
+}
+
+function SummaryMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg border border-slate-700/80 bg-slate-900/45 p-3">
+      <p className="text-[11px] text-slate-500">{label}</p>
+      <p className="mt-1 text-base font-bold text-slate-100">{value}</p>
+    </div>
+  );
+}
+
+function ProbabilityList({ title, entries }: { title: string; entries: [string, number][] }) {
+  return (
+    <div>
+      <p className="text-xs uppercase tracking-widest text-slate-500">{title}</p>
+      <div className="mt-2 space-y-1.5">
+        {entries.map(([teamId, pct]) => (
+          <ProbabilityRow key={teamId} teamId={teamId} pct={pct} accent="slate" />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProbabilityRow({ teamId, pct, accent }: { teamId: string; pct: number; accent: "emerald" | "slate" }) {
+  const barClass = accent === "emerald" ? "bg-emerald-500" : "bg-sky-500";
+  const textClass = accent === "emerald" ? "text-emerald-400" : "text-slate-300";
+  return (
+    <div className="text-sm">
+      <div className="flex items-center justify-between gap-2">
+        <TeamBadge teamId={teamId} />
+        <span className={`font-semibold ${textClass}`}>{pct.toFixed(1)}%</span>
+      </div>
+      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-700">
+        <div className={`h-full rounded-full ${barClass}`} style={{ width: `${Math.min(100, pct)}%` }} />
+      </div>
+    </div>
   );
 }
