@@ -4,6 +4,7 @@ import { HomePage } from "./pages/HomePage";
 import { MatchDetailPage } from "./pages/MatchDetailPage";
 import { SimulatorPage } from "./pages/SimulatorPage";
 import { TeamPage } from "./pages/TeamPage";
+import { TeamsPage } from "./pages/TeamsPage";
 import { TournamentPage } from "./pages/TournamentPage";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -17,16 +18,19 @@ function App() {
       <div className="min-h-screen bg-slate-900 text-slate-100">
         <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
-            <Link to="/" className="whitespace-nowrap text-base font-bold tracking-tight sm:text-lg">
+            <Link to="/" className="shrink-0 whitespace-nowrap text-base font-bold tracking-tight sm:text-lg">
               <span className="text-emerald-400">WC</span>2026
               <span className="hidden sm:inline"> シミュレーター</span>
             </Link>
-            <nav className="flex gap-1 sm:gap-2">
+            <nav className="flex min-w-0 gap-1 overflow-x-auto sm:gap-2">
               <NavLink to="/tournament" className={navLinkClass}>
                 大会モード
               </NavLink>
               <NavLink to="/simulate" className={navLinkClass}>
                 試合シミュレーター
+              </NavLink>
+              <NavLink to="/teams" className={navLinkClass}>
+                チーム一覧
               </NavLink>
             </nav>
           </div>
@@ -36,6 +40,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/tournament" element={<TournamentPage />} />
             <Route path="/simulate" element={<SimulatorPage />} />
+            <Route path="/teams" element={<TeamsPage />} />
             <Route path="/matches/:matchId" element={<MatchDetailPage />} />
             <Route path="/teams/:teamId" element={<TeamPage />} />
           </Routes>
