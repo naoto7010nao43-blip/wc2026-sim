@@ -8,17 +8,13 @@ Read first:
 
 ## Active Claude Code Task
 
-Ready:
-
-- `docs/specs/016-model-calibration-transparency.md`
-
-Implement this spec autonomously under `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`. Do not ask the user for routine confirmation. Stop only for the explicit Stop Conditions in the spec.
-
-Spec 015 is complete (see below).
+None. Awaiting the next Codex-authored Ready spec. Spec 016 is complete (see below).
 
 Additional policy context:
 
 - `docs/codex/DATA_GOVERNANCE_POLICY.md`
+
+Spec 016 is complete.
 
 Spec 015 is complete.
 
@@ -58,5 +54,6 @@ Completed:
 - `docs/specs/013-manager-tactical-trust-review.md`
 - `docs/specs/014-rating-review-workbench.md`
 - `docs/specs/015-rating-readiness-data-review.md`
+- `docs/specs/016-model-calibration-transparency.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.

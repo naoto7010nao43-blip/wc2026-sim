@@ -482,6 +482,40 @@ export interface SourceProvenanceAuditSummary {
   recommendations_ja: string[];
 }
 
+export interface ModelCalibrationOverall {
+  before_matchup_count: number;
+  after_matchup_count: number;
+  average_favorite_win_pct_delta: number;
+  implausible_favorite_count_delta: number;
+  minimum_favorite_win_pct_delta: number;
+  maximum_favorite_win_pct_delta: number;
+}
+
+export interface ModelCalibrationWatchlistTeam {
+  team_id: string;
+  average_favorite_win_pct_delta: number;
+  implausible_favorite_count_delta: number;
+  minimum_favorite_win_pct_delta: number;
+}
+
+export interface ModelCalibrationWatchlist {
+  watchlist_implausible_reduction: number | null;
+  teams: ModelCalibrationWatchlistTeam[];
+}
+
+export interface ModelCalibrationSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  modelVersionBefore: string | null;
+  modelVersionAfter: string | null;
+  status: string | null;
+  overall: ModelCalibrationOverall | null;
+  watchlist: ModelCalibrationWatchlist | null;
+  bestSandboxVariantId: string | null;
+  note: string;
+  recommendations_ja: string[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

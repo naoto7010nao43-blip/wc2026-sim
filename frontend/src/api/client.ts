@@ -4,6 +4,7 @@ import type {
   ManagerTacticalTrustSummary,
   MatchPredictionOut,
   MatchResult,
+  ModelCalibrationSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
   RoundRobinResult,
@@ -67,4 +68,5 @@ export const api = {
   getRatingReviewWorkbench: () => getJson<RatingReviewWorkbenchSummary>("/api/model-diagnostics/rating-review-workbench"),
   getRatingDecisionAudit: () => getJson<RatingDecisionAuditSummary>("/api/model-diagnostics/rating-decision-audit"),
   getSourceProvenanceAudit: () => getJson<SourceProvenanceAuditSummary>("/api/model-diagnostics/source-provenance-audit"),
+  getModelCalibrationSummary: () => getJson<ModelCalibrationSummary>("/api/model-diagnostics/model-calibration"),
 };

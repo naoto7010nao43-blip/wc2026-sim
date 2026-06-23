@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
+import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
 import { RatingReviewWorkbenchPanel } from "../components/RatingReviewWorkbenchPanel";
 import { SourceProvenanceAuditPanel } from "../components/SourceProvenanceAuditPanel";
@@ -8,6 +9,7 @@ import { SquadGapPanel } from "../components/SquadGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
   ManagerTacticalTrustSummary,
+  ModelCalibrationSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
   SourceProvenanceAuditSummary,
@@ -28,6 +30,8 @@ export function DataReviewPage() {
   const [ratingDecisionAuditError, setRatingDecisionAuditError] = useState<string | null>(null);
   const [sourceProvenanceAudit, setSourceProvenanceAudit] = useState<SourceProvenanceAuditSummary | null>(null);
   const [sourceProvenanceAuditError, setSourceProvenanceAuditError] = useState<string | null>(null);
+  const [modelCalibration, setModelCalibration] = useState<ModelCalibrationSummary | null>(null);
+  const [modelCalibrationError, setModelCalibrationError] = useState<string | null>(null);
 
   useEffect(() => {
     api
@@ -54,6 +58,10 @@ export function DataReviewPage() {
       .getSourceProvenanceAudit()
       .then(setSourceProvenanceAudit)
       .catch(() => setSourceProvenanceAuditError("出典監査の読み込みに失敗しました。"));
+    api
+      .getModelCalibrationSummary()
+      .then(setModelCalibration)
+      .catch(() => setModelCalibrationError("モデルキャリブレーションの読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -68,6 +76,14 @@ export function DataReviewPage() {
           フォーミュラの調整は別途の検証スペックがない限り行いません。
         </p>
       </section>
+
+      {modelCalibrationError && (
+        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+          {modelCalibrationError}
+        </div>
+      )}
+      {!modelCalibration && !modelCalibrationError && <p className="text-sm text-slate-400">読み込み中...</p>}
+      {modelCalibration && <ModelCalibrationPanel summary={modelCalibration} />}
 
       {error && (
         <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">{error}</div>

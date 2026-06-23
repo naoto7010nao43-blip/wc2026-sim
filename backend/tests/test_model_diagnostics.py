@@ -15,6 +15,7 @@ from app.main import app
 from app.services.model_diagnostics import (
     REPORTS_DIR,
     get_manager_tactical_trust_summary,
+    get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_squad_gap_summary,
@@ -366,5 +367,65 @@ def test_get_rating_decision_audit_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_rating_decision_audit_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_model_calibration_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/model-calibration")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "modelVersionBefore", "modelVersionAfter",
+        "status", "overall", "watchlist", "bestSandboxVariantId", "note", "recommendations_ja",
+    ):
+        assert field in body
+
+
+def test_model_calibration_endpoint_has_expected_overall_and_watchlist_shape(client):
+    response = client.get("/api/model-diagnostics/model-calibration")
+    body = response.json()
+    assert body["modelVersionAfter"] == "poisson-v2-rank75"
+    assert body["status"] == "pass"
+    for field in (
+        "before_matchup_count", "after_matchup_count", "average_favorite_win_pct_delta",
+        "implausible_favorite_count_delta", "minimum_favorite_win_pct_delta", "maximum_favorite_win_pct_delta",
+    ):
+        assert field in body["overall"]
+    assert "watchlist_implausible_reduction" in body["watchlist"]
+    assert len(body["watchlist"]["teams"]) > 0
+    for field in ("team_id", "average_favorite_win_pct_delta", "implausible_favorite_count_delta"):
+        assert field in body["watchlist"]["teams"][0]
+
+
+def test_model_calibration_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_model_calibration_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["overall"] is None
+    assert summary["watchlist"] is None
+    assert summary["note"]
+    assert summary["recommendations_ja"] == []
+
+
+def test_get_model_calibration_summary_is_read_only(tmp_path):
+    seed_report = {
+        "beforeGeneratedAt": "2026-01-01T00:00:00+00:00",
+        "afterGeneratedAt": "2026-01-02T00:00:00+00:00",
+        "modelVersionBefore": "poisson-v1",
+        "modelVersionAfter": "poisson-v2-rank75",
+        "overall": {
+            "before_matchup_count": 1, "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": 0.1, "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.1, "maximum_favorite_win_pct_delta": 0.1,
+        },
+        "rankGapBuckets": [],
+        "watchlistTeams": [],
+        "evaluation": {"status": "pass", "watchlist_implausible_reduction": 0.0, "warnings": []},
+    }
+    report_path = tmp_path / "prediction_benchmark_comparison_rank75_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_model_calibration_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

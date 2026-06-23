@@ -206,6 +206,40 @@ class RatingDecisionAuditSummary(BaseModel):
     teams: list[RatingDecisionTeamRow]
 
 
+class ModelCalibrationOverall(BaseModel):
+    before_matchup_count: int
+    after_matchup_count: int
+    average_favorite_win_pct_delta: float
+    implausible_favorite_count_delta: float
+    minimum_favorite_win_pct_delta: float
+    maximum_favorite_win_pct_delta: float
+
+
+class ModelCalibrationWatchlistTeam(BaseModel):
+    team_id: str
+    average_favorite_win_pct_delta: float
+    implausible_favorite_count_delta: float
+    minimum_favorite_win_pct_delta: float
+
+
+class ModelCalibrationWatchlist(BaseModel):
+    watchlist_implausible_reduction: float | None
+    teams: list[ModelCalibrationWatchlistTeam]
+
+
+class ModelCalibrationSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    modelVersionBefore: str | None
+    modelVersionAfter: str | None
+    status: str | None
+    overall: ModelCalibrationOverall | None
+    watchlist: ModelCalibrationWatchlist | None
+    bestSandboxVariantId: str | None
+    note: str
+    recommendations_ja: list[str]
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str
