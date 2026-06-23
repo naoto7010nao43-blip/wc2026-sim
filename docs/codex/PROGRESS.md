@@ -10,7 +10,12 @@
 
 ## Current Priority
 
-Spec 012 is complete (see entry below). Awaiting the next Codex-authored spec.
+Spec 013 is active: expose manager/tactical trust diagnostics from the new read-only audit without changing manager names, tactical values, formations, seed data, formulas, or prediction behavior.
+
+Active task details:
+
+- `docs/specs/013-manager-tactical-trust-review.md` asks for a read-only `GET /api/model-diagnostics/manager-tactical-trust` endpoint and a compact `/data-review` panel using `backend/reports/manager_tactical_data_audit_2026-06-23.json`.
+- The spec is explicitly visibility/workflow only: no manager/tactical data changes, no latest-data claims, and no prediction behavior changes.
 
 Completed:
 

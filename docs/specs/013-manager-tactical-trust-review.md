@@ -1,11 +1,11 @@
-# Spec 013 Draft: Manager Tactical Trust Review
+# Spec 013: Manager Tactical Trust Review
 
-Status: Draft, not Ready. Do not implement until Codex reviews Spec 012 and explicitly moves this into `CURRENT_TASK.md`.
+Status: Ready. Implement under the autonomous sprint protocol.
 
 ## Owner Split
 
 - Codex owns product/data/simulation judgment, verification, and activation.
-- Claude Code owns implementation only after this spec becomes Ready.
+- Claude Code owns implementation.
 
 ## Why This Matters
 
@@ -128,7 +128,6 @@ Pass criteria:
 
 Stop and report back to Codex if:
 
-- Spec 012 is still incomplete or conflicts with the same model-diagnostics files.
 - The manager audit report is missing and cannot be regenerated.
 - The implementation requires changing seed data or prediction behavior.
 - Tests fail for reasons outside this spec.

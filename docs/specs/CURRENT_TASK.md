@@ -8,7 +8,13 @@ Read first:
 
 ## Active Claude Code Task
 
-None. `docs/specs/012-squad-rating-gap-review.md` is complete (see `docs/codex/PROGRESS.md`). Awaiting the next Codex-authored spec.
+`docs/specs/013-manager-tactical-trust-review.md`
+
+Spec 012 is complete and committed as `10a3f84`. Spec 013 is the next Ready task and should be implemented under the autonomous sprint protocol.
+
+Additional policy context:
+
+- `docs/codex/DATA_GOVERNANCE_POLICY.md`
 
 Spec 011 is complete.
 
