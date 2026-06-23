@@ -1,17 +1,24 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
+import { SquadGapPanel } from "../components/SquadGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
-import type { TeamReviewSummary } from "../types/domain";
+import type { SquadGapSummary, TeamReviewSummary } from "../types/domain";
 
 export function DataReviewPage() {
   const [summary, setSummary] = useState<TeamReviewSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [squadGaps, setSquadGaps] = useState<SquadGapSummary | null>(null);
+  const [squadGapsError, setSquadGapsError] = useState<string | null>(null);
 
   useEffect(() => {
     api
       .getTeamDataReview()
       .then(setSummary)
       .catch(() => setError("チームデータレビューの読み込みに失敗しました。"));
+    api
+      .getSquadGapReview()
+      .then(setSquadGaps)
+      .catch(() => setSquadGapsError("スカッド評価ギャップの読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -45,6 +52,17 @@ export function DataReviewPage() {
           <p className="text-[11px] text-slate-500">{summary.note}</p>
         </>
       )}
+
+      <section>
+        <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">スカッド評価ギャップ</h3>
+        {squadGapsError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {squadGapsError}
+          </div>
+        )}
+        {!squadGaps && !squadGapsError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {squadGaps && <SquadGapPanel summary={squadGaps} />}
+      </section>
     </div>
   );
 }

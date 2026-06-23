@@ -1,0 +1,855 @@
+{
+  "generatedAt": "2026-06-23T08:21:24.750211+00:00",
+  "sourceReports": [
+    {
+      "name": "team_data_review_plan",
+      "generatedAt": "2026-06-23T08:21:24.488489+00:00"
+    },
+    {
+      "name": "roster_reconciliation_candidates",
+      "generatedAt": "2026-06-23T07:18:10.990508+00:00"
+    }
+  ],
+  "note": "優先度の高いチームについて、能力値データのどこに問題がありそうかを示す読み取り専用の診断です。ロスターが浅いことによる候補数の多さと、実際のモデル/順位差の問題を区別しています。シード選手・能力値・フォーミュラ・試合予測は変更しません。フォーミュラの調整は別途の検証スペックがない限り凍結されたままです。",
+  "teams": [
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "fifa_rank": 10,
+      "priority_score": 141.0,
+      "rank_underperformance_flags": 9,
+      "seed_roster_size": 14,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 51.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Dominik Livakovic",
+            "overall": 52
+          }
+        },
+        "DF": {
+          "count": 4,
+          "avg_overall": 62.8,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Josko Gvardiol",
+            "overall": 70
+          }
+        },
+        "MF": {
+          "count": 5,
+          "avg_overall": 54.8,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Martin Baturina",
+            "overall": 60
+          }
+        },
+        "FW": {
+          "count": 3,
+          "avg_overall": 50.3,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Ante Budimir",
+            "overall": 53
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 48,
+        "median_overall": 54.0,
+        "max_overall": 70,
+        "top_5_players": [
+          {
+            "name": "Josko Gvardiol",
+            "overall": 70
+          },
+          {
+            "name": "Josip Sutalo",
+            "overall": 64
+          },
+          {
+            "name": "Josip Stanisic",
+            "overall": 62
+          },
+          {
+            "name": "Martin Baturina",
+            "overall": 60
+          },
+          {
+            "name": "Luka Sucic",
+            "overall": 58
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 1,
+        "count_overall_lt_60": 10
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 14
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 140,
+        "official_profile_coverage": {
+          "club": 14,
+          "caps": 14,
+          "goals": 14,
+          "height": 14,
+          "dateOfBirth": 14
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 12,
+        "other_add_candidate_count": 0,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 0,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "shallow_seed_roster"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が9件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "シードロスターが14人と少なく、選手データの網羅性が低い可能性があります。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "fifa_rank": 7,
+      "priority_score": 129.5,
+      "rank_underperformance_flags": 8,
+      "seed_roster_size": 14,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 51.5,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Bart Verbruggen",
+            "overall": 52
+          }
+        },
+        "DF": {
+          "count": 5,
+          "avg_overall": 64.8,
+          "avg_starting_probability": 49.8,
+          "top_player": {
+            "name": "Jurrien Timber",
+            "overall": 68
+          }
+        },
+        "MF": {
+          "count": 3,
+          "avg_overall": 61.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Frenkie de Jong",
+            "overall": 62
+          }
+        },
+        "FW": {
+          "count": 4,
+          "avg_overall": 59.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Cody Gakpo",
+            "overall": 69
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 51,
+        "median_overall": 62.0,
+        "max_overall": 69,
+        "top_5_players": [
+          {
+            "name": "Cody Gakpo",
+            "overall": 69
+          },
+          {
+            "name": "Jurrien Timber",
+            "overall": 68
+          },
+          {
+            "name": "Micky van de Ven",
+            "overall": 67
+          },
+          {
+            "name": "Denzel Dumfries",
+            "overall": 65
+          },
+          {
+            "name": "Donyell Malen",
+            "overall": 63
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 0,
+        "count_overall_lt_60": 4
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 14
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 140,
+        "official_profile_coverage": {
+          "club": 13,
+          "caps": 13,
+          "goals": 13,
+          "height": 13,
+          "dateOfBirth": 13
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 13,
+        "other_add_candidate_count": 0,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 1,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "shallow_seed_roster",
+        "stale_seed_review_needed"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が8件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "シードロスターが14人と少なく、選手データの網羅性が低い可能性があります。",
+        "1人の古いシード選手の確認が必要です。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "fifa_rank": 5,
+      "priority_score": 96.0,
+      "rank_underperformance_flags": 6,
+      "seed_roster_size": 14,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 53.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Diogo Costa",
+            "overall": 54
+          }
+        },
+        "DF": {
+          "count": 4,
+          "avg_overall": 66.2,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Ruben Dias",
+            "overall": 68
+          }
+        },
+        "MF": {
+          "count": 4,
+          "avg_overall": 62.2,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Vitinha",
+            "overall": 65
+          }
+        },
+        "FW": {
+          "count": 4,
+          "avg_overall": 64.8,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Rafael Leao",
+            "overall": 72
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 52,
+        "median_overall": 63.0,
+        "max_overall": 72,
+        "top_5_players": [
+          {
+            "name": "Rafael Leao",
+            "overall": 72
+          },
+          {
+            "name": "Ruben Dias",
+            "overall": 68
+          },
+          {
+            "name": "Nuno Mendes",
+            "overall": 68
+          },
+          {
+            "name": "Diogo Dalot",
+            "overall": 65
+          },
+          {
+            "name": "Vitinha",
+            "overall": 65
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 1,
+        "count_overall_lt_60": 2
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 14
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 140,
+        "official_profile_coverage": {
+          "club": 14,
+          "caps": 14,
+          "goals": 14,
+          "height": 14,
+          "dateOfBirth": 14
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 12,
+        "other_add_candidate_count": 0,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 0,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "shallow_seed_roster"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が6件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "シードロスターが14人と少なく、選手データの網羅性が低い可能性があります。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "fifa_rank": 14,
+      "priority_score": 73.4,
+      "rank_underperformance_flags": 4,
+      "seed_roster_size": 16,
+      "position_groups": {
+        "GK": {
+          "count": 3,
+          "avg_overall": 49.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Raul Rangel",
+            "overall": 51
+          }
+        },
+        "DF": {
+          "count": 5,
+          "avg_overall": 57.4,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Cesar Montes",
+            "overall": 60
+          }
+        },
+        "MF": {
+          "count": 4,
+          "avg_overall": 51.2,
+          "avg_starting_probability": 50.2,
+          "top_player": {
+            "name": "Edson Alvarez",
+            "overall": 54
+          }
+        },
+        "FW": {
+          "count": 4,
+          "avg_overall": 56.8,
+          "avg_starting_probability": 49.8,
+          "top_player": {
+            "name": "Santiago Gimenez",
+            "overall": 62
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 47,
+        "median_overall": 53.5,
+        "max_overall": 62,
+        "top_5_players": [
+          {
+            "name": "Santiago Gimenez",
+            "overall": 62
+          },
+          {
+            "name": "Cesar Montes",
+            "overall": 60
+          },
+          {
+            "name": "Johan Vasquez",
+            "overall": 59
+          },
+          {
+            "name": "Gerardo Arteaga",
+            "overall": 58
+          },
+          {
+            "name": "Jorge Sanchez",
+            "overall": 57
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 0,
+        "count_overall_lt_60": 14
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 16
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 160,
+        "official_profile_coverage": {
+          "club": 12,
+          "caps": 12,
+          "goals": 12,
+          "height": 12,
+          "dateOfBirth": 12
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 0,
+        "other_add_candidate_count": 14,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 4,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "stale_seed_review_needed"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が4件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "4人の古いシード選手の確認が必要です。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "MAR",
+      "team_name": "Morocco",
+      "fifa_rank": 8,
+      "priority_score": 58.5,
+      "rank_underperformance_flags": 3,
+      "seed_roster_size": 15,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 49.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Yassine Bounou",
+            "overall": 50
+          }
+        },
+        "DF": {
+          "count": 6,
+          "avg_overall": 60.5,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Achraf Hakimi",
+            "overall": 68
+          }
+        },
+        "MF": {
+          "count": 4,
+          "avg_overall": 57.8,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Brahim Diaz",
+            "overall": 66
+          }
+        },
+        "FW": {
+          "count": 3,
+          "avg_overall": 59.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Soufiane Rahimi",
+            "overall": 60
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 48,
+        "median_overall": 60,
+        "max_overall": 68,
+        "top_5_players": [
+          {
+            "name": "Achraf Hakimi",
+            "overall": 68
+          },
+          {
+            "name": "Brahim Diaz",
+            "overall": 66
+          },
+          {
+            "name": "Nayef Aguerd",
+            "overall": 65
+          },
+          {
+            "name": "Noussair Mazraoui",
+            "overall": 62
+          },
+          {
+            "name": "Issa Diop",
+            "overall": 61
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 0,
+        "count_overall_lt_60": 7
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 15
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 150,
+        "official_profile_coverage": {
+          "club": 11,
+          "caps": 11,
+          "goals": 11,
+          "height": 11,
+          "dateOfBirth": 11
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 0,
+        "other_add_candidate_count": 15,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 4,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "stale_seed_review_needed"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が3件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "4人の古いシード選手の確認が必要です。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "URU",
+      "team_name": "Uruguay",
+      "fifa_rank": 14,
+      "priority_score": 52.0,
+      "rank_underperformance_flags": 3,
+      "seed_roster_size": 12,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 50.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Sergio Rochet",
+            "overall": 52
+          }
+        },
+        "DF": {
+          "count": 4,
+          "avg_overall": 61.5,
+          "avg_starting_probability": 49.8,
+          "top_player": {
+            "name": "Ronald Araujo",
+            "overall": 68
+          }
+        },
+        "MF": {
+          "count": 4,
+          "avg_overall": 58.2,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Federico Valverde",
+            "overall": 63
+          }
+        },
+        "FW": {
+          "count": 2,
+          "avg_overall": 62.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Darwin Nunez",
+            "overall": 67
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 48,
+        "median_overall": 57.0,
+        "max_overall": 68,
+        "top_5_players": [
+          {
+            "name": "Ronald Araujo",
+            "overall": 68
+          },
+          {
+            "name": "Darwin Nunez",
+            "overall": 67
+          },
+          {
+            "name": "Mathias Olivera",
+            "overall": 63
+          },
+          {
+            "name": "Federico Valverde",
+            "overall": 63
+          },
+          {
+            "name": "Jose Maria Gimenez",
+            "overall": 62
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 0,
+        "count_overall_lt_60": 7
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 12
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 120,
+        "official_profile_coverage": {
+          "club": 12,
+          "caps": 12,
+          "goals": 12,
+          "height": 12,
+          "dateOfBirth": 12
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 14,
+        "other_add_candidate_count": 0,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 0,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "shallow_seed_roster"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が3件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "シードロスターが12人と少なく、選手データの網羅性が低い可能性があります。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "ESP",
+      "team_name": "Spain",
+      "fifa_rank": 2,
+      "priority_score": 51.0,
+      "rank_underperformance_flags": 3,
+      "seed_roster_size": 14,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 52.0,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Unai Simon",
+            "overall": 52
+          }
+        },
+        "DF": {
+          "count": 4,
+          "avg_overall": 66.2,
+          "avg_starting_probability": 50.2,
+          "top_player": {
+            "name": "Marc Cucurella",
+            "overall": 70
+          }
+        },
+        "MF": {
+          "count": 5,
+          "avg_overall": 62.4,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Pedri",
+            "overall": 66
+          }
+        },
+        "FW": {
+          "count": 3,
+          "avg_overall": 69.3,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Lamine Yamal",
+            "overall": 75
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 52,
+        "median_overall": 63.0,
+        "max_overall": 75,
+        "top_5_players": [
+          {
+            "name": "Lamine Yamal",
+            "overall": 75
+          },
+          {
+            "name": "Marc Cucurella",
+            "overall": 70
+          },
+          {
+            "name": "Nico Williams",
+            "overall": 70
+          },
+          {
+            "name": "Pau Cubarsi",
+            "overall": 69
+          },
+          {
+            "name": "Pedro Porro",
+            "overall": 66
+          }
+        ],
+        "count_overall_gte_75": 1,
+        "count_overall_gte_70": 3,
+        "count_overall_lt_60": 3
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 14
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 140,
+        "official_profile_coverage": {
+          "club": 14,
+          "caps": 14,
+          "goals": 14,
+          "height": 14,
+          "dateOfBirth": 14
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 12,
+        "other_add_candidate_count": 0,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 0,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [
+        "shallow_seed_roster"
+      ],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が3件の対戦で見劣りしており、能力値データの精査が必要です。",
+        "シードロスターが14人と少なく、選手データの網羅性が低い可能性があります。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    },
+    {
+      "team_id": "ARG",
+      "team_name": "Argentina",
+      "fifa_rank": 1,
+      "priority_score": 46.1,
+      "rank_underperformance_flags": 3,
+      "seed_roster_size": 15,
+      "position_groups": {
+        "GK": {
+          "count": 2,
+          "avg_overall": 51.5,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Emiliano Martinez",
+            "overall": 52
+          }
+        },
+        "DF": {
+          "count": 5,
+          "avg_overall": 58.2,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Cristian Romero",
+            "overall": 66
+          }
+        },
+        "MF": {
+          "count": 5,
+          "avg_overall": 55.0,
+          "avg_starting_probability": 50.2,
+          "top_player": {
+            "name": "Alexis Mac Allister",
+            "overall": 61
+          }
+        },
+        "FW": {
+          "count": 3,
+          "avg_overall": 67.3,
+          "avg_starting_probability": 50.0,
+          "top_player": {
+            "name": "Lautaro Martinez",
+            "overall": 69
+          }
+        }
+      },
+      "rating_distribution": {
+        "min_overall": 45,
+        "median_overall": 59,
+        "max_overall": 69,
+        "top_5_players": [
+          {
+            "name": "Lautaro Martinez",
+            "overall": 69
+          },
+          {
+            "name": "Julian Alvarez",
+            "overall": 69
+          },
+          {
+            "name": "Cristian Romero",
+            "overall": 66
+          },
+          {
+            "name": "Lionel Messi",
+            "overall": 64
+          },
+          {
+            "name": "Lisandro Martinez",
+            "overall": 62
+          }
+        ],
+        "count_overall_gte_75": 0,
+        "count_overall_gte_70": 0,
+        "count_overall_lt_60": 8
+      },
+      "trust_profile": {
+        "data_confidence_counts": {
+          "estimated": 15
+        },
+        "average_uncertainty": 0.2,
+        "low_confidence_attribute_count": 150,
+        "official_profile_coverage": {
+          "club": 15,
+          "caps": 15,
+          "goals": 15,
+          "height": 15,
+          "dateOfBirth": 15
+        }
+      },
+      "roster_reconciliation": {
+        "high_confidence_add_candidate_count": 0,
+        "other_add_candidate_count": 11,
+        "ambiguous_pair_count": 0,
+        "likely_stale_seed_player_count": 0,
+        "top_ambiguous_pairs": []
+      },
+      "diagnostic_flags": [],
+      "review_summary_ja": [
+        "FIFAランク比でモデル評価が3件の対戦で見劣りしており、能力値データの精査が必要です。"
+      ],
+      "recommended_next_action": "rating_data_review"
+    }
+  ]
+}

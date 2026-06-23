@@ -184,10 +184,10 @@ def build_report(teams: list, audit_report: dict | None, roster_report: dict | N
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "sourceReports": source_reports,
         "note": (
-            "Read-only team data review priority ranking derived from the latest simulation accuracy audit and "
-            "roster reconciliation candidate reports. Does not change simulation formulas, ratings, or seed data. "
-            "This identifies where Codex should review squad/rating data next; formula changes remain frozen "
-            "unless a later calibration spec authorizes them."
+            "シミュレーション精度監査とロスター照合候補レポートから算出した、読み取り専用のチームデータレビュー優先度です。"
+            "シミュレーションのフォーミュラ・能力値・シードデータは変更しません。"
+            "次にCodexがどのチームのスカッド/能力値データを確認すべきかを示すためのものであり、"
+            "フォーミュラの調整は別途の検証スペックがない限り凍結されたままです。"
         ),
         "teamCount": len(rows),
         "teams": rows,

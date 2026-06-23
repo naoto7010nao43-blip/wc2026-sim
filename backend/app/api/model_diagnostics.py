@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from app.schemas.model_diagnostics import TeamReviewSummary
-from app.services.model_diagnostics import get_team_review_summary
+from app.schemas.model_diagnostics import SquadGapSummary, TeamReviewSummary
+from app.services.model_diagnostics import get_squad_gap_summary, get_team_review_summary
 
 router = APIRouter(prefix="/api/model-diagnostics", tags=["model-diagnostics"])
 
@@ -9,3 +9,8 @@ router = APIRouter(prefix="/api/model-diagnostics", tags=["model-diagnostics"])
 @router.get("/team-review", response_model=TeamReviewSummary)
 def get_team_review():
     return get_team_review_summary()
+
+
+@router.get("/squad-gaps", response_model=SquadGapSummary)
+def get_squad_gaps():
+    return get_squad_gap_summary()

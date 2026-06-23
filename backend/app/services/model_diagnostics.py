@@ -1,8 +1,8 @@
 """Read-only model diagnostics summary: serves the latest
-team_data_review_plan_*.json report (Spec 011) produced by
-scripts/build_team_data_review_plan.py. Never computes or mutates
-anything itself -- if the report is missing, returns a calm empty state
-rather than failing.
+team_data_review_plan_*.json (Spec 011) and squad_rating_gap_review_*.json
+(Spec 012) reports produced by their respective build scripts. Never
+computes or mutates anything itself -- if a report is missing, returns a
+calm empty state rather than failing.
 """
 
 from __future__ import annotations
@@ -30,6 +30,18 @@ def get_team_review_summary(reports_dir: Path = REPORTS_DIR) -> dict:
             "sourceReports": [],
             "note": "チームデータレビューのレポートがまだ生成されていません。",
             "teamCount": 0,
+            "teams": [],
+        }
+    return report
+
+
+def get_squad_gap_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "squad_rating_gap_review_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "スカッド評価ギャップのレポートがまだ生成されていません。",
             "teams": [],
         }
     return report

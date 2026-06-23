@@ -251,6 +251,61 @@ export interface TeamReviewSummary {
   teams: TeamReviewRow[];
 }
 
+export interface PositionGroupSummary {
+  count: number;
+  avg_overall: number | null;
+  avg_starting_probability: number | null;
+  top_player: { name: string; overall: number } | null;
+}
+
+export interface RatingDistribution {
+  min_overall: number | null;
+  median_overall: number | null;
+  max_overall: number | null;
+  top_5_players: { name: string; overall: number }[];
+  count_overall_gte_75: number;
+  count_overall_gte_70: number;
+  count_overall_lt_60: number;
+}
+
+export interface SquadTrustProfile {
+  data_confidence_counts: Record<string, number>;
+  average_uncertainty: number | null;
+  low_confidence_attribute_count: number;
+  official_profile_coverage: Record<string, number>;
+}
+
+export interface RosterReconciliationSummary {
+  high_confidence_add_candidate_count: number;
+  other_add_candidate_count: number;
+  ambiguous_pair_count: number;
+  likely_stale_seed_player_count: number;
+  top_ambiguous_pairs: { seed_player_name: string; official_candidate_name_block: string; shared_token_count: number }[];
+}
+
+export interface SquadGapTeamRow {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  priority_score: number | null;
+  rank_underperformance_flags: number;
+  seed_roster_size: number | null;
+  position_groups: Record<string, PositionGroupSummary>;
+  rating_distribution: RatingDistribution;
+  trust_profile: SquadTrustProfile;
+  roster_reconciliation: RosterReconciliationSummary;
+  diagnostic_flags: string[];
+  review_summary_ja: string[];
+  recommended_next_action: string;
+}
+
+export interface SquadGapSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teams: SquadGapTeamRow[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

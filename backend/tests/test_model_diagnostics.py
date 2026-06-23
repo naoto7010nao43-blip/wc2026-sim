@@ -12,7 +12,7 @@ from sqlalchemy.pool import StaticPool
 
 from app.database import Base, get_db
 from app.main import app
-from app.services.model_diagnostics import REPORTS_DIR, get_team_review_summary
+from app.services.model_diagnostics import REPORTS_DIR, get_squad_gap_summary, get_team_review_summary
 
 
 @pytest.fixture()
@@ -83,5 +83,47 @@ def test_get_team_review_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_team_review_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_squad_gaps_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/squad-gaps")
+    assert response.status_code == 200
+    body = response.json()
+    assert "generatedAt" in body
+    assert "sourceReports" in body
+    assert "note" in body
+    assert "teams" in body
+
+
+def test_squad_gaps_endpoint_top_team_has_expected_fields(client):
+    response = client.get("/api/model-diagnostics/squad-gaps")
+    body = response.json()
+    assert len(body["teams"]) > 0
+    row = body["teams"][0]
+    for field in (
+        "team_id", "team_name", "fifa_rank", "priority_score", "rank_underperformance_flags",
+        "position_groups", "rating_distribution", "trust_profile", "roster_reconciliation",
+        "diagnostic_flags", "review_summary_ja", "recommended_next_action",
+    ):
+        assert field in row
+    assert row["recommended_next_action"] == "rating_data_review"
+
+
+def test_squad_gap_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_squad_gap_summary(reports_dir=tmp_path)
+    assert summary["teams"] == []
+    assert summary["generatedAt"] is None
+    assert summary["note"]
+
+
+def test_get_squad_gap_summary_is_read_only(tmp_path):
+    seed_report = {"generatedAt": "2026-01-01T00:00:00+00:00", "sourceReports": [], "note": "test", "teams": [{"team_id": "AAA"}]}
+    report_path = tmp_path / "squad_rating_gap_review_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_squad_gap_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

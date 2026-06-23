@@ -8,9 +8,9 @@ Read first:
 
 ## Active Claude Code Task
 
-`docs/specs/012-squad-rating-gap-review.md`
+None. `docs/specs/012-squad-rating-gap-review.md` is complete (see `docs/codex/PROGRESS.md`). Awaiting the next Codex-authored spec.
 
-Spec 011 is complete. Spec 012 is the next Ready task and should be implemented under the autonomous sprint protocol.
+Spec 011 is complete.
 
 Spec 010 is complete.
 
@@ -36,5 +36,6 @@ Completed:
 - Spec 009 follow-up safe field apply for newly matched players
 - `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 cycle (Phase 7 skipped, documented)
 - `docs/specs/011-team-data-review-diagnostics.md`
+- `docs/specs/012-squad-rating-gap-review.md`
 
 When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.

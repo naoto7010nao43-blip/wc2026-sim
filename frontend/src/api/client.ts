@@ -4,6 +4,7 @@ import type {
   MatchPredictionOut,
   MatchResult,
   RoundRobinResult,
+  SquadGapSummary,
   StandingsRow,
   TeamOut,
   TeamReviewSummary,
@@ -57,4 +58,5 @@ export const api = {
     }),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getTeamDataReview: () => getJson<TeamReviewSummary>("/api/model-diagnostics/team-review"),
+  getSquadGapReview: () => getJson<SquadGapSummary>("/api/model-diagnostics/squad-gaps"),
 };
