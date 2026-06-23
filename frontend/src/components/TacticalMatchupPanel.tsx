@@ -30,12 +30,20 @@ function pressMatchup(profile: TacticalProfile, opponent: TacticalProfile): numb
   return Math.round((profile.press_intensity - opponent.possession_style + profile.press_intensity - opponent.defensive_line_height) / 2);
 }
 
+function matchupNote(homeTeam: TeamSummary, awayTeam: TeamSummary, homeEdge: number, awayEdge: number): string {
+  if (Math.abs(homeEdge - awayEdge) < 6) return "戦術相性は大きく偏らず、選手能力と試合展開の影響が相対的に大きいカードです。";
+  const leader = homeEdge > awayEdge ? homeTeam : awayTeam;
+  const opponent = homeEdge > awayEdge ? awayTeam : homeTeam;
+  return `${leader.id}は${opponent.id}に対して、プレス強度と相手の保持・ライン設定の噛み合わせで見どころがあります。`;
+}
+
 export function TacticalMatchupPanel({ homeTeam, awayTeam }: Props) {
   if (!homeTeam || !awayTeam || homeTeam.id === awayTeam.id) return null;
   if (!homeTeam.tactical_profile || !awayTeam.tactical_profile) return null;
 
   const homeEdge = pressMatchup(homeTeam.tactical_profile, awayTeam.tactical_profile);
   const awayEdge = pressMatchup(awayTeam.tactical_profile, homeTeam.tactical_profile);
+  const note = matchupNote(homeTeam, awayTeam, homeEdge, awayEdge);
 
   return (
     <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
@@ -53,6 +61,11 @@ export function TacticalMatchupPanel({ homeTeam, awayTeam }: Props) {
         <TeamTacticalColumn team={homeTeam} edge={homeEdge} />
         <div className="hidden items-center justify-center text-xs text-slate-500 lg:flex">vs</div>
         <TeamTacticalColumn team={awayTeam} edge={awayEdge} alignRight />
+      </div>
+
+      <div className="mt-4 rounded-lg border border-slate-700/80 bg-slate-900/45 p-3">
+        <p className="text-xs font-semibold text-slate-300">試合前の読み</p>
+        <p className="mt-1 text-xs leading-relaxed text-slate-400">{note}</p>
       </div>
 
       <p className="mt-4 text-[11px] leading-relaxed text-slate-500">
@@ -92,12 +105,19 @@ function TeamTacticalColumn({ team, edge, alignRight = false }: { team: TeamSumm
       </div>
 
       <div className="mt-3 rounded-lg border border-slate-700/80 bg-slate-900/45 px-3 py-2 text-xs">
-        <span className="text-slate-500">プレス相性: </span>
-        <span className={edge >= 6 ? "font-semibold text-emerald-300" : edge <= -6 ? "font-semibold text-rose-300" : "font-semibold text-slate-200"}>
-          {edgeLabel(edge)}
-        </span>
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-slate-500">プレス相性</span>
+          <span className={edge >= 6 ? "font-semibold text-emerald-300" : edge <= -6 ? "font-semibold text-rose-300" : "font-semibold text-slate-200"}>
+            {edgeLabel(edge)}
+          </span>
+        </div>
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-700">
+          <div
+            className={edge >= 0 ? "h-full rounded-full bg-emerald-500" : "h-full rounded-full bg-rose-500"}
+            style={{ width: `${Math.min(100, Math.abs(edge) * 4)}%` }}
+          />
+        </div>
       </div>
     </div>
   );
 }
-
