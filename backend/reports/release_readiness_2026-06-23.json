@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T16:10:41.373835+00:00",
+  "generatedAt": "2026-06-23T16:21:02.816530+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": false,
   "blockers": [
@@ -12,13 +12,14 @@
   },
   "gitStatusShort": [],
   "modelVersions": {
-    "baselineModelVersion": "poisson-v2-rank75",
+    "baselineModelVersion": "poisson-v1-rank60-order-neutral",
     "currentModelVersion": "poisson-v2-rank75-order-neutral"
   },
   "rank75Benchmark": {
     "present": true,
     "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json",
     "status": "pass",
+    "benchmarkMethod": "dual_order_average",
     "watchlistImplausibleReduction": 3.0,
     "overallImplausibleFavoriteCountDelta": -9.0,
     "averageFavoriteWinPctDelta": 0.8
@@ -30,12 +31,27 @@
       "path": "backend\\reports\\prediction_benchmark_baseline_2026-06-23.json"
     },
     {
+      "pattern": "prediction_benchmark_v1_order_neutral_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_v1_order_neutral_2026-06-23.json"
+    },
+    {
       "pattern": "prediction_benchmark_rank75_*.json",
       "present": true,
       "path": "backend\\reports\\prediction_benchmark_rank75_order_neutral_2026-06-23.json"
     },
     {
+      "pattern": "prediction_benchmark_rank75_order_neutral_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_rank75_order_neutral_2026-06-23.json"
+    },
+    {
       "pattern": "prediction_benchmark_comparison_rank75_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json"
+    },
+    {
+      "pattern": "prediction_benchmark_comparison_rank75_order_neutral_*.json",
       "present": true,
       "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json"
     },
