@@ -224,6 +224,46 @@ export interface SourceReportRef {
   generatedAt: string | null;
 }
 
+export interface ReleaseCurrentTaskState {
+  hasActiveReadyTask: boolean;
+  awaitingNextSpec: boolean;
+  latestCompletedSpecText: string | null;
+}
+
+export interface ReleaseModelVersions {
+  baselineModelVersion: string | null;
+  currentModelVersion: string | null;
+}
+
+export interface ReleaseBenchmarkSummary {
+  present: boolean;
+  path?: string | null;
+  status: string | null;
+  benchmarkMethod?: string | null;
+  watchlistImplausibleReduction: number | null;
+  overallImplausibleFavoriteCountDelta: number | null;
+  averageFavoriteWinPctDelta: number | null;
+}
+
+export interface ReleaseRequiredReport {
+  pattern: string;
+  present: boolean;
+  path: string | null;
+}
+
+export interface ReleaseReadinessSummary {
+  generatedAt: string | null;
+  note: string;
+  readyForManualPush: boolean;
+  blockers: string[];
+  currentTask: ReleaseCurrentTaskState | null;
+  gitStatusShort: string[];
+  modelVersions: ReleaseModelVersions | null;
+  rank75Benchmark: ReleaseBenchmarkSummary | null;
+  requiredReports: ReleaseRequiredReport[];
+  requiredCommands: string[];
+}
+
 export interface TeamReviewRow {
   team_id: string;
   team_name: string;

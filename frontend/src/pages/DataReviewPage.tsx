@@ -5,6 +5,7 @@ import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPan
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
 import { RatingReviewWorkbenchPanel } from "../components/RatingReviewWorkbenchPanel";
+import { ReleaseReadinessPanel } from "../components/ReleaseReadinessPanel";
 import { SimulationStabilityPanel } from "../components/SimulationStabilityPanel";
 import { SourceProvenanceAuditPanel } from "../components/SourceProvenanceAuditPanel";
 import { SquadGapPanel } from "../components/SquadGapPanel";
@@ -15,6 +16,7 @@ import type {
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
+  ReleaseReadinessSummary,
   SimulationStabilitySummary,
   SourceProvenanceAuditSummary,
   SquadGapSummary,
@@ -49,6 +51,8 @@ export function DataReviewPage() {
   const [sourceProvenanceAuditError, setSourceProvenanceAuditError] = useState<string | null>(null);
   const [modelCalibration, setModelCalibration] = useState<ModelCalibrationSummary | null>(null);
   const [modelCalibrationError, setModelCalibrationError] = useState<string | null>(null);
+  const [releaseReadiness, setReleaseReadiness] = useState<ReleaseReadinessSummary | null>(null);
+  const [releaseReadinessError, setReleaseReadinessError] = useState<string | null>(null);
   const [simulationStability, setSimulationStability] = useState<SimulationStabilitySummary | null>(null);
   const [simulationStabilityError, setSimulationStabilityError] = useState<string | null>(null);
   const [substitutionModelGap, setSubstitutionModelGap] = useState<SubstitutionModelGapSummary | null>(null);
@@ -84,6 +88,10 @@ export function DataReviewPage() {
       .then(setModelCalibration)
       .catch(() => setModelCalibrationError("モデルキャリブレーションの読み込みに失敗しました。"));
     api
+      .getReleaseReadinessSummary()
+      .then(setReleaseReadiness)
+      .catch(() => setReleaseReadinessError("本番反映readinessの読み込みに失敗しました。"));
+    api
       .getSimulationStabilitySummary()
       .then(setSimulationStability)
       .catch(() => setSimulationStabilityError("モンテカルロ安定性監査の読み込みに失敗しました。"));
@@ -112,9 +120,18 @@ export function DataReviewPage() {
         ratingDecisionAudit={ratingDecisionAudit}
         sourceProvenanceAudit={sourceProvenanceAudit}
         modelCalibration={modelCalibration}
+        releaseReadiness={releaseReadiness}
         simulationStability={simulationStability}
         substitutionModelGap={substitutionModelGap}
       />
+
+      {releaseReadinessError && (
+        <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+          {releaseReadinessError}
+        </div>
+      )}
+      {!releaseReadiness && !releaseReadinessError && <p className="text-sm text-slate-400">読み込み中...</p>}
+      {releaseReadiness && <ReleaseReadinessPanel summary={releaseReadiness} />}
 
       <nav className="flex flex-wrap gap-2" aria-label="データレビュー索引">
         {REVIEW_SECTIONS.map((section) => (

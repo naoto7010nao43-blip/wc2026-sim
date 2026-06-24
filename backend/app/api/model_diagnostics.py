@@ -5,6 +5,7 @@ from app.schemas.model_diagnostics import (
     ModelCalibrationSummary,
     RatingDecisionAuditSummary,
     RatingReviewWorkbenchSummary,
+    ReleaseReadinessSummary,
     SimulationStabilitySummary,
     SourceProvenanceAuditSummary,
     SquadGapSummary,
@@ -16,6 +17,7 @@ from app.services.model_diagnostics import (
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
+    get_release_readiness_summary,
     get_simulation_stability_summary,
     get_source_provenance_audit_summary,
     get_squad_gap_summary,
@@ -29,6 +31,11 @@ router = APIRouter(prefix="/api/model-diagnostics", tags=["model-diagnostics"])
 @router.get("/team-review", response_model=TeamReviewSummary)
 def get_team_review():
     return get_team_review_summary()
+
+
+@router.get("/release-readiness", response_model=ReleaseReadinessSummary)
+def get_release_readiness():
+    return get_release_readiness_summary()
 
 
 @router.get("/squad-gaps", response_model=SquadGapSummary)

@@ -13,6 +13,7 @@ from app.services.model_diagnostics import (
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
+    get_release_readiness_summary,
     get_simulation_stability_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
@@ -58,6 +59,10 @@ def _walk(obj, path=""):
 
 def test_team_review_summary_copy_is_japanese():
     _walk(get_team_review_summary())
+
+
+def test_release_readiness_summary_copy_is_japanese():
+    _walk(get_release_readiness_summary())
 
 
 def test_squad_gap_summary_copy_is_japanese():

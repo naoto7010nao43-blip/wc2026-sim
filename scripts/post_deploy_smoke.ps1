@@ -35,6 +35,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend health" "$backend/api/health"
     Invoke-UrlCheck "Backend teams" "$backend/api/teams"
     Invoke-UrlCheck "Backend data quality" "$backend/api/data-quality/summary"
+    Invoke-UrlCheck "Backend release readiness diagnostics" "$backend/api/model-diagnostics/release-readiness"
     Invoke-UrlCheck "Backend team review diagnostics" "$backend/api/model-diagnostics/team-review"
     Invoke-UrlCheck "Backend squad gap diagnostics" "$backend/api/model-diagnostics/squad-gaps"
     Invoke-UrlCheck "Backend manager tactical diagnostics" "$backend/api/model-diagnostics/manager-tactical-trust"

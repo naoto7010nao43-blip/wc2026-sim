@@ -2,6 +2,7 @@ import type {
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
+  ReleaseReadinessSummary,
   SimulationStabilitySummary,
   SourceProvenanceAuditSummary,
   SubstitutionModelGapSummary,
@@ -14,6 +15,7 @@ interface Props {
   ratingDecisionAudit: RatingDecisionAuditSummary | null;
   sourceProvenanceAudit: SourceProvenanceAuditSummary | null;
   modelCalibration: ModelCalibrationSummary | null;
+  releaseReadiness: ReleaseReadinessSummary | null;
   simulationStability: SimulationStabilitySummary | null;
   substitutionModelGap: SubstitutionModelGapSummary | null;
 }
@@ -48,6 +50,7 @@ export function DataReviewOverviewPanel({
   ratingDecisionAudit,
   sourceProvenanceAudit,
   modelCalibration,
+  releaseReadiness,
   simulationStability,
   substitutionModelGap,
 }: Props) {
@@ -59,12 +62,14 @@ export function DataReviewOverviewPanel({
   const stabilityBand = simulationStability?.summary?.stabilityBand;
   const maxStabilityDelta = simulationStability?.summary?.maxAbsChampionPctDelta;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
+  const releaseBlocked = releaseReadiness?.readyForManualPush === false;
 
   const actions = [
     highPriorityTeams > 0 ? `高優先度チーム ${highPriorityTeams}件をデータ更新候補として確認` : null,
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
     sourceReviewCandidates > 0 ? `出典確認が先の候補 ${sourceReviewCandidates}件を保留` : null,
     substitutionNeedsSpec ? "選手交代傾向は現エンジンに反映先がないため、将来仕様候補として扱う" : null,
+    releaseBlocked ? `本番反映は${releaseReadiness?.blockers.length ?? 0}件の理由で保留` : null,
   ].filter((item): item is string => Boolean(item));
 
   return (
@@ -92,6 +97,7 @@ export function DataReviewOverviewPanel({
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />
         <Metric label="交代モデル" value={substitutionNeedsSpec ? "将来仕様候補" : "現行対応"} tone={substitutionNeedsSpec ? "warn" : "good"} />
+        <Metric label="本番反映" value={releaseReadiness?.readyForManualPush ? "可能" : "保留"} tone={releaseReadiness?.readyForManualPush ? "good" : "warn"} />
       </div>
 
       {actions.length > 0 && (

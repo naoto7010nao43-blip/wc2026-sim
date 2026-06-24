@@ -6,6 +6,46 @@ class SourceReportRef(BaseModel):
     generatedAt: str | None = None
 
 
+class ReleaseCurrentTaskState(BaseModel):
+    hasActiveReadyTask: bool
+    awaitingNextSpec: bool
+    latestCompletedSpecText: str | None
+
+
+class ReleaseModelVersions(BaseModel):
+    baselineModelVersion: str | None
+    currentModelVersion: str | None
+
+
+class ReleaseBenchmarkSummary(BaseModel):
+    present: bool
+    path: str | None = None
+    status: str | None
+    benchmarkMethod: str | None = None
+    watchlistImplausibleReduction: float | None
+    overallImplausibleFavoriteCountDelta: float | None
+    averageFavoriteWinPctDelta: float | None
+
+
+class ReleaseRequiredReport(BaseModel):
+    pattern: str
+    present: bool
+    path: str | None
+
+
+class ReleaseReadinessSummary(BaseModel):
+    generatedAt: str | None
+    note: str
+    readyForManualPush: bool
+    blockers: list[str]
+    currentTask: ReleaseCurrentTaskState | None
+    gitStatusShort: list[str]
+    modelVersions: ReleaseModelVersions | None
+    rank75Benchmark: ReleaseBenchmarkSummary | None
+    requiredReports: list[ReleaseRequiredReport]
+    requiredCommands: list[str]
+
+
 class TeamReviewRow(BaseModel):
     team_id: str
     team_name: str

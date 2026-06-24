@@ -36,6 +36,30 @@ def get_team_review_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     return report
 
 
+def get_release_readiness_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "release_readiness_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "note": "本番反映可否レポートがまだ生成されていません。",
+            "readyForManualPush": False,
+            "blockers": ["release readiness report is missing"],
+            "currentTask": None,
+            "gitStatusShort": [],
+            "modelVersions": None,
+            "rank75Benchmark": None,
+            "requiredReports": [],
+            "requiredCommands": [],
+        }
+    return {
+        **report,
+        "note": (
+            "本番反映に必要なローカル診断レポートの要約です。"
+            "この表示は読み取り専用で、テスト実行やpushは行いません。"
+        ),
+    }
+
+
 def get_squad_gap_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "squad_rating_gap_review_*.json")
     if report is None:

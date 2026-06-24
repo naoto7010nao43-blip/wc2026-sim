@@ -18,6 +18,7 @@ from app.services.model_diagnostics import (
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
+    get_release_readiness_summary,
     get_simulation_stability_summary,
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
@@ -67,6 +68,63 @@ def test_team_review_endpoint_top_team_has_full_row_shape(client):
         "review_reasons", "recommended_next_action",
     ):
         assert field in row
+
+
+def test_release_readiness_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/release-readiness")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "note", "readyForManualPush", "blockers", "currentTask",
+        "gitStatusShort", "modelVersions", "rank75Benchmark", "requiredReports", "requiredCommands",
+    ):
+        assert field in body
+
+
+def test_release_readiness_endpoint_uses_order_neutral_versions(client):
+    response = client.get("/api/model-diagnostics/release-readiness")
+    body = response.json()
+    assert body["modelVersions"]["baselineModelVersion"] == "poisson-v1-rank60-order-neutral"
+    assert body["modelVersions"]["currentModelVersion"] == "poisson-v2-rank75-order-neutral"
+    assert body["rank75Benchmark"]["benchmarkMethod"] == "dual_order_average"
+
+
+def test_release_readiness_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_release_readiness_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["readyForManualPush"] is False
+    assert summary["blockers"]
+    assert summary["requiredReports"] == []
+
+
+def test_get_release_readiness_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "note": "test",
+        "readyForManualPush": True,
+        "blockers": [],
+        "currentTask": {"hasActiveReadyTask": False, "awaitingNextSpec": True, "latestCompletedSpecText": None},
+        "gitStatusShort": [],
+        "modelVersions": {"baselineModelVersion": "a", "currentModelVersion": "b"},
+        "rank75Benchmark": {
+            "present": True,
+            "path": "x",
+            "status": "pass",
+            "benchmarkMethod": "dual_order_average",
+            "watchlistImplausibleReduction": 0.0,
+            "overallImplausibleFavoriteCountDelta": 0.0,
+            "averageFavoriteWinPctDelta": 0.0,
+        },
+        "requiredReports": [],
+        "requiredCommands": [],
+    }
+    report_path = tmp_path / "release_readiness_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_release_readiness_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
 
 
 def test_missing_report_falls_back_to_calm_empty_state(tmp_path):
