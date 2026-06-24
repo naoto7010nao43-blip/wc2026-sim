@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-06-24T04:50:00+09:00",
   "scope": {
-    "coveredTeams": ["ARG", "ESP", "ENG", "FRA", "POR", "CRO", "NED", "MEX", "BRA", "MAR", "BEL", "GER", "URU", "COL", "USA", "JPN"],
-    "remainingUnresearchedTeams": ["SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE", "NOR", "AUS", "ALG", "EGY", "CAN", "PAN", "SCO", "TUN", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD", "RSA", "JOR", "BIH", "CPV", "GHA", "CUW", "HAI", "NZL"]
+    "coveredTeams": ["ARG", "ESP", "ENG", "FRA", "POR", "CRO", "NED", "MEX", "BRA", "MAR", "BEL", "GER", "URU", "COL", "USA", "JPN", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE"],
+    "remainingUnresearchedTeams": ["NOR", "AUS", "ALG", "EGY", "CAN", "PAN", "SCO", "TUN", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD", "RSA", "JOR", "BIH", "CPV", "GHA", "CUW", "HAI", "NZL"]
   },
   "teams": [
     {
@@ -383,6 +383,197 @@
         {"claim": "Moriyasu is known for a 'super-sub' strategy, deliberately holding back attacking depth to exploit tired opponents late; used all 5 substitution slots in the World Cup opener vs Netherlands, with a substitute (Ogawa) scoring the late equalizer.", "sources": [{"name": "Tactical Football Analysis / ESPN match report", "tier": "A", "observedDate": "2026-06-14"}], "confidence": "high", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
       ],
       "recommendedCodexNextActions": ["Update default_formation to 3-4-2-1", "Update Tomiyasu club to Ajax and reconsider his overall after long injury layoff", "Verify Mitoma's exclusion from the World Cup squad is reflected"]
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "managerStatus": [
+        {"claim": "Pape Thiaw remains manager (appointed 2024-12-13), leading Senegal through AFCON 2025 and the 2026 World Cup.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pape_Thiaw", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Base shape is 4-3-3 with Idrissa Gueye as a single pivot, but Thiaw varies to 3-4-2-1 (defensive reinforcement) or 4-2-4 when chasing a game; matches the seed default.", "sources": [{"name": "RotoWire WC2026 Group I preview", "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Qualitative reporting describes selective wave-based pressing, vertical/direct play over sustained possession, and a higher back line exploited behind advancing full-backs -- directionally consistent with press_intensity=74/possession_style=48/defensive_line_height=58, but no numeric benchmark was found to confirm the exact values.", "sources": [{"name": "RotoWire WC2026 Group I preview", "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129", "tier": "B", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "press_intensity", "candidateCategory": "ambiguous candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "El Hadji Malick Diouf transferred from Slavia Prague to West Ham United on 2025-07-15 (~£19m); seed may still show his prior club.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/El_Hadji_Malick_Diouf", "tier": "A", "observedDate": "2025-07-15"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Nicolas Jackson went on a season-long loan from Chelsea to Bayern Munich (2025-09-01, won Bundesliga) and is expected back at Chelsea after the loan; seed club should reflect the loan status.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Nicolas_Jackson", "tier": "A", "observedDate": "2025-09-01"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Kalidou Koulibaly (captain, Al-Hilal) suffered two thigh muscle tears plus a hematoma in training just before the World Cup and was named to the provisional squad despite the injury -- significant availability risk not reflected if seed shows him fully fit.", "sources": [{"name": "ESPN", "url": "https://www.espn.com/espn/story/_/id/48834466/senegal-include-injured-kalidou-koulibaly-bamba-dieng-returns-premier-league-heavy-squad", "tier": "A", "observedDate": "2026-05"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Ismaila Sarr (Crystal Palace) won the 2025-26 UEFA Conference League top-scorer and Player of the Season awards and scored twice in Senegal's World Cup match vs Norway; current overall=64 may be an underestimate of his present form.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Isma%C3%AFla_Sarr", "tier": "A", "observedDate": "2026-06"}, {"name": "ESPN match report", "url": "https://www.espn.com/soccer/match/_/gameId/760454/senegal-norway", "tier": "A", "observedDate": "2026-06-22"}], "confidence": "medium", "mapsTo": "player_rating", "candidateCategory": "rating-review candidate"},
+        {"claim": "Sadio Mane (Al Nassr, 34) and the injured-but-selected captain Koulibaly are not among the seed's listed top-3 modeled players for Senegal, despite Mane being described as the side's standout performer at AFCON 2025.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9", "tier": "A", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Senegal qualified for the World Cup unbeaten in CAF qualifying (7W-3D, 24 points), finishing top of its group.", "sources": [{"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-qualify", "tier": "S", "observedDate": "2025-10"}], "confidence": "high", "mapsTo": "fifa_rank", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Thiaw tends to hold tactical adjustments until the second half, shifting to 3-4-2-1/4-2-4 when behind and to a back-five (5-4-1) when protecting a lead, suggesting system-change substitutions rather than pure like-for-like; no quantified timing/count data was found.", "sources": [{"name": "RotoWire WC2026 Group I preview", "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129", "tier": "B", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Update Diouf club to West Ham United", "Update Jackson club to reflect Bayern loan / Chelsea ownership", "Flag Koulibaly injury risk despite squad selection", "Re-check Sarr overall given current form", "Consider adding Mane to modeled roster priority"]
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "managerStatus": [
+        {"claim": "Murat Yakin remains manager (since Aug 2021), contracted through the 2026 World Cup.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Murat_Yakin", "tier": "A", "observedDate": "2026"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "4-3-3 is Yakin's primary base shape (matches seed), but he switches to a back-three 3-4-3 against stronger opposition or in knockout-stage contexts.", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Analysis describes a Xhaka-anchored compact central block with possession emphasis, but no numeric benchmark for press_intensity=60/possession_style=66/defensive_line_height=55 was found; these vary heavily by opponent (e.g. a deeper 5-4-1 against stronger sides).", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "low", "mapsTo": "possession_style", "candidateCategory": "ambiguous candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Manuel Akanji moved on a one-year loan from Manchester City to Inter on 2025-09-01 (2026 buy option); seed should reflect Inter rather than Manchester City.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Manuel_Akanji", "tier": "A", "observedDate": "2025-09-01"}, {"name": "Transfermarkt", "url": "https://www.transfermarkt.us/manuel-akanji/profil/spieler/284730", "tier": "B", "observedDate": "2026-05-29"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Dan Ndoye transferred from Bologna to Nottingham Forest on 2025-07-31 (5-year deal, ~$46m+); his 2025-26 club scoring output has been modest (1 goal, 1 assist in league play) relative to seed overall=66.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Dan_Ndoye", "tier": "A", "observedDate": "2025-07-31"}, {"name": "FotMob", "url": "https://www.fotmob.com/players/1022649/dan-ndoye", "tier": "B", "observedDate": "2025-26"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Granit Xhaka (captain, Sunderland) and Breel Embolo are described as central to the team's structure and attack but are absent from the seed's top-3 modeled player list, which lists only defenders.", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [],
+      "substitutionTendencyCandidates": [
+        {"claim": "Yakin made a double substitution in the 72nd minute against Bosnia at the World Cup (Manzambi + Vargas) that directly produced 3 of the team's 4 goals, described in coverage as 'golden substitutions' -- a pattern of using simultaneous attacking double-changes to change games, rather than single like-for-like swaps.", "sources": [{"name": "AVA Press", "url": "https://www.avapress.com/en/news/358415/yakin-s-golden-substitutions-switzerland-4-bosnia-1", "tier": "C", "observedDate": "2026-06-18"}, {"name": "Sky Sports match report", "url": "https://www.skysports.com/football/news/12098/13553619/world-cup-2026-switzerland-4-1-bosnia-herzegovina-johan-manzambi-scores-twice-as-swiss-take-giant-leap-towards-knockout-stages", "tier": "A", "observedDate": "2026-06-18"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Update Akanji club to Inter (loan)", "Update Ndoye club to Nottingham Forest", "Consider adding Xhaka/Embolo to modeled roster priority"]
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "managerStatus": [
+        {"claim": "Amir Ghalenoei remains manager (2nd stint, since 2023), leading Iran through World Cup qualifying and the 2026 World Cup.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Amir_Ghalenoei", "tier": "A", "observedDate": "2026"}, {"name": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/6/15/irans-ghalenoei-taremi-decry-us-treatment-before-first-world-cup-game", "tier": "A", "observedDate": "2026-06-15"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "4-2-3-1 is the primary qualifying/World Cup shape (matches seed), but Ghalenoei is pragmatic and switches to 4-4-2 or a deeper 5-4-1 depending on the opponent.", "sources": [{"name": "Sports Illustrated WC2026 Iran preview", "url": "https://www.si.com/soccer/iran-2026-world-cup-preview", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Analysts consistently describe Iran as a deep, compact, low-possession, counter-reliant side that protects the box rather than presses high -- directionally supporting low defensive_line_height=28/possession_style=35/press_intensity=42, but no numeric benchmark confirms the exact values.", "sources": [{"name": "Mundial Analytics", "url": "https://mundialanalytics.com/iran-national-team-analysis", "tier": "B", "observedDate": "2026"}, {"name": "Sports Illustrated WC2026 Iran preview", "url": "https://www.si.com/soccer/iran-2026-world-cup-preview", "tier": "A", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "defensive_line_height", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Mehdi Taremi (now at Olympiacos after Inter and FC Porto, with a Champions League final appearance) has a current overall=53 that appears clearly underrated relative to his Serie A/Primeira Liga career and ~60 international goals; he had 10 goals and 7 assists in World Cup qualifying.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mehdi_Taremi", "tier": "A", "observedDate": "2026"}, {"name": "Sports Illustrated WC2026 Iran preview", "url": "https://www.si.com/soccer/iran-2026-world-cup-preview", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "player_rating", "candidateCategory": "rating-review candidate"},
+        {"claim": "Hossein Kanaanizadegan remains at Persepolis as the experienced defensive anchor; this matches the seed's framing and overall=52 looks reasonable for his role.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hossein_Kanaanizadegan", "tier": "A", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "player_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "FIFA rank confirmed at 20 as of 2026-06-11, matching the seed.", "sources": [{"name": "World Soccer Talk", "url": "https://worldsoccertalk.com/world-cup/what-is-irans-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-belgium/", "tier": "A", "observedDate": "2026-06-11"}], "confidence": "high", "mapsTo": "fifa_rank", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Several Iran substitutions against New Zealand at the World Cup were explicitly attributed by Ghalenoei to player cramping/fitness issues from travel rather than tactical planning -- a condition-driven substitution pattern rather than a fixed tactical timing.", "sources": [{"name": "CBS News", "url": "https://www.cbsnews.com/news/iran-world-cup-team-coach-says-team-ordered-out-of-us-right-after-first-match-amir-ghalenoei/", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Raise Taremi overall substantially given career level", "Update Taremi club to Olympiacos", "Mehdi Ghaedi/Ghayedi's current club (Al-Nasr vs Shabab Al-Ahli) is unresolved in research -- keep as review question only"]
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "managerStatus": [
+        {"claim": "Vincenzo Montella remains manager; the Turkish Football Federation confirmed he is retained despite a group-stage World Cup exit.", "sources": [{"name": "OneFootball", "url": "https://onefootball.com/en/news/vincenzo-montella-kept-on-as-tuerkiye-boss-despite-world-cup-exit-43047534", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "4-2-3-1 is confirmed as Montella's base shape (matches seed), shifting to 4-1-3-2 or 3-4-2-1 in defensive phases.", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Turkey dominated possession in both World Cup group games (e.g. 32 shots to 7 vs Paraguay), suggesting possession_style=56 is an underestimate; press_intensity=64 may be slightly high since the press is described as selective/trap-based rather than constant.", "sources": [{"name": "NBC News match report", "url": "https://www.nbcnews.com/sports/soccer/paraguay-beats-turkey-1-0-world-cup-clinch-group-d-us-rcna350951", "tier": "A", "observedDate": "2026-06-19"}, {"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "possession_style", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Kenan Yildiz (Juventus) won Serie A's 2025-26 Rising Star award with 11 goals/9 assists across all competitions; overall=68 may be a modest underestimate.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kenan_Y%C4%B1ld%C4%B1z", "tier": "A", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "player_rating", "candidateCategory": "rating-review candidate"},
+        {"claim": "Arda Guler (Real Madrid) won UEFA's 'Revelation of the Season 2025/26' for the Champions League and had 4 goals/8 assists in 31 league games at 90% pass completion; overall=66 appears clearly underrated.", "sources": [{"name": "Turkish-Football.com", "url": "https://turkish-football.com/real-madrid-star-arda-guler-honored-as-2025-26-uefa-champions-league-revelation-of-the-season/", "tier": "B", "observedDate": "2025-26"}, {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Arda_G%C3%BCler", "tier": "A", "observedDate": "2026"}], "confidence": "high", "mapsTo": "player_rating", "candidateCategory": "rating-review candidate"},
+        {"claim": "Merih Demiral extended his contract with Al-Ahli (Saudi Arabia) through 2029, confirming his current club as Al-Ahli rather than any prior club still in the seed.", "sources": [{"name": "Al-Ahli FC official", "url": "https://en.alahlifc.sa/news/al-ahli-extend-turkish-defender-merih-demiral-s-contract-until-2029", "tier": "S", "observedDate": "2025"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Turkey qualified for the 2026 World Cup via the UEFA playoffs (beating Romania 1-0 then Kosovo 1-0 on 2026-03-31), its first World Cup appearance since 2002, then was eliminated in the group stage (losses to Australia 0-2 and Paraguay 0-1).", "sources": [{"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-qualify", "tier": "S", "observedDate": "2026-03"}, {"name": "Wikipedia, 2026 FIFA World Cup Group D", "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "In both World Cup group matches Montella used all 5 substitution slots, with attacking double-changes around the 60th minute and further adjustments in the 70s-80s -- a mix of like-for-like and goal-chasing tactical changes.", "sources": [{"name": "Wikipedia, 2026 FIFA World Cup Group D", "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Confirm Turkey is modeled as a 2026 World Cup participant (qualified via playoff, eliminated in group stage)", "Raise Yildiz/Guler overall, especially Guler", "Update Demiral club to Al-Ahli"]
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "managerStatus": [
+        {"claim": "Sebastian Beccacece remains manager (since Aug 2024) through World Cup qualifying and the 2026 World Cup.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ecuador_national_football_team", "tier": "A", "observedDate": "2026"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Sources disagree between 4-4-2 (matches seed) and 4-2-3-1 for Ecuador's recent base shape; the predicted/observed World Cup-cycle starting XI more often resembles a 4-2-3-1, so the seed's 4-4-2 default is uncertain rather than confirmed.", "sources": [{"name": "World Soccer Talk WC2026 Ecuador preview", "url": "https://worldsoccertalk.com/world-cup/ecuador-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/", "tier": "A", "observedDate": "2026-06"}, {"name": "RotoWire WC2026 Group E preview", "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-e-preview-germany-curacao-ivory-coast-ecuador-tactics-lineups-set-pieces-odds-109286", "tier": "B", "observedDate": "2026"}], "confidence": "low", "mapsTo": "default_formation", "candidateCategory": "ambiguous candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Reporting consistently describes relentless/aggressive pressing, quick direct transitions over sustained possession, and a compact defensive shape -- directionally supporting press_intensity=70/possession_style=40/defensive_line_height=35, with no numeric benchmark found to confirm exact values.", "sources": [{"name": "World Soccer Talk WC2026 Ecuador preview", "url": "https://worldsoccertalk.com/world-cup/ecuador-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "press_intensity", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Moises Caicedo (Chelsea, contract extended to 2033) has a current overall=62 that is dramatically underrated -- independent rating sources place his base overall around 87, and he is consistently described as one of the world's best defensive midfielders; he should rank above teammates Pacho (69) and Hincapie (67), not below them.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mois%C3%A9s_Caicedo", "tier": "A", "observedDate": "2026-06"}, {"name": "EA Sports FC ratings", "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/moises-caicedo/256079", "tier": "B", "observedDate": "2025-26"}], "confidence": "high", "mapsTo": "player_rating", "candidateCategory": "rating-review candidate"},
+        {"claim": "Willian Pacho plays for Paris Saint-Germain (2025 Champions League winner) and missed several matches in May 2026 with a thigh issue but was selected for the World Cup squad; seed club/availability should be checked against PSG.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Willian_Pacho", "tier": "A", "observedDate": "2025-26"}, {"name": "RotoWire", "url": "https://www.rotowire.com/soccer/headlines/willian-pacho-injury-option-for-champions-league-final-518080", "tier": "B", "observedDate": "2026-05"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Piero Hincapie is on loan at Arsenal from Bayer Leverkusen (2025 summer, buy option ~EUR52m) and has had recurring groin/shoulder issues through 2025-26; seed club/availability should reflect Arsenal and injury risk.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Piero_Hincapi%C3%A9", "tier": "A", "observedDate": "2025-26"}, {"name": "Arsenal FC official", "url": "https://www.arsenal.com/news/piero-hincapie-completes-loan-move-arsenal", "tier": "S", "observedDate": "2025"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Ecuador finished 2nd in CONMEBOL World Cup qualifying (behind Argentina) with only 5 goals conceded in 18 matches, the fewest in the group.", "sources": [{"name": "CopaAmerica.com", "url": "https://copaamerica.com/en/news/ecuador-brazil-world-cup-qualifiers-all-results", "tier": "A", "observedDate": "2025-26"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "When chasing a result Beccacece tends to change formation shape and add attacking players (Plata, Minda, Yeboah) rather than make purely like-for-like swaps; no quantified timing data was found.", "sources": [{"name": "World Soccer Talk WC2026 Ecuador coverage", "url": "https://worldsoccertalk.com/world-cup/ecuador-vs-curacao-projected-lineups-for-the-2026-world-cup-group-e-match/", "tier": "A", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Raise Caicedo overall substantially -- he should be the team's top-rated player, not its lowest of the top-3", "Update Pacho club to PSG and flag recent thigh issue", "Update Hincapie club to Arsenal (loan) and flag recurring injury history"]
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "managerStatus": [
+        {"claim": "Hong Myung-bo remains manager (since Jul 2024), having led Korea through World Cup qualifying unbeaten.", "sources": [{"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-world-cup-squad-hong-myungbo", "tier": "S", "observedDate": "2026-05"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Korea shifted from a back-four during qualifying to a back-three; both confirmed World Cup starting XIs (vs Czechia and vs Mexico) used 3-4-2-1, not the seed's default 4-2-3-1.", "sources": [{"name": "ESPN match report (vs Czechia)", "url": "https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea", "tier": "A", "observedDate": "2026-06-11"}, {"name": "ESPN match report (vs Mexico)", "url": "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico", "tier": "A", "observedDate": "2026-06-18"}, {"name": "The Analyst", "url": "https://theanalyst.com/articles/south-korea-tactical-flexibility-preview-world-cup-2026", "tier": "B", "observedDate": "2026"}], "confidence": "high", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Son Heung-min transferred from Tottenham to LAFC (MLS) on 2025-08-06 (~$26.5m, MLS record fee) but remains national team captain and starting forward; seed club should reflect LAFC.", "sources": [{"name": "LAFC official", "url": "https://www.lafc.com/news/lafc-signs-global-football-icon-son-heung-min", "tier": "S", "observedDate": "2025-08-06"}, {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Son_Heung-min", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Kim Min-jae (Bayern Munich) has been pushed down the pecking order behind Tah/Upamecano this season and had a knee concern clear in May 2026 before being confirmed for the World Cup; he was also linked to the conceding action in Korea's 0-1 loss to Mexico.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kim_Min-jae_(footballer)", "tier": "A", "observedDate": "2025-26"}, {"name": "StarNews Korea", "url": "https://www.starnewskorea.com/en/sports/2026/05/12/2026051212120971442", "tier": "A", "observedDate": "2026-05-12"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Lee Kang-in plays for Paris Saint-Germain (squad rotation/backup minutes in 2025-26, ~1,500 league minutes) but remains Korea's primary creative midfielder, completing 100% of his passes in the World Cup opener vs Czechia.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Lee_Kang-in", "tier": "A", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [],
+      "substitutionTendencyCandidates": [
+        {"claim": "In both World Cup matches Hong made his first double substitution around the 57th-62nd minute, consistently withdrawing Son Heung-min for fresh attackers (Hwang Hee-chan, Oh Hyeon-gyu) before further changes in the 70s-80s.", "sources": [{"name": "ESPN match report (vs Czechia)", "url": "https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea", "tier": "A", "observedDate": "2026-06-11"}, {"name": "ESPN match report (vs Mexico)", "url": "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico", "tier": "A", "observedDate": "2026-06-18"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Update default_formation to 3-4-2-1", "Update Son club to LAFC", "Flag Kim Min-jae's reduced role at Bayern and recent knee concern", "Update Lee Kang-in club to PSG"]
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "managerStatus": [
+        {"claim": "Ralf Rangnick remains manager (since Jun 2022), having led Austria to its first World Cup since 1998.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ralf_Rangnick", "tier": "A", "observedDate": "2026"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "4-2-3-1 is the base/build-up shape (matches seed), shifting to a 4-4-2 block out of possession and occasionally a 3-1-5-1 against two-striker opponents.", "sources": [{"name": "The Football Analyst", "url": "https://the-footballanalyst.com/austria-ralf-rangnick-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Austria recorded the lowest PPDA (~7.1, i.e. the most intense press) of any European qualifier for this World Cup, consistent with Rangnick's 'Gegenpressing' identity; this suggests press_intensity=84 may be a slight underestimate relative to its status as the most pressing-intensive European side.", "sources": [{"name": "TelecomAsia betting analysis", "url": "https://www.telecomasia.net/sports-betting/tips/football/fifa-world-cup/argentina-vs-austria-prediction-for-the-match-on-june-22nd-2026/", "tier": "C", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "press_intensity", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Kevin Danso transferred from RC Lens to Tottenham Hotspur in Feb 2025 (completed permanently in 2025-26); seed club should reflect Tottenham.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kevin_Danso", "tier": "A", "observedDate": "2026"}, {"name": "Transfermarkt", "url": "https://www.transfermarkt.us/kevin-danso/profil/spieler/263236", "tier": "B", "observedDate": "2026-06-03"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Stefan Posch moved from Bologna to Como (2025-09, then permanent 2026-01) and is now on loan at Mainz 05 (from 2026-01-22); seed club is likely stale regardless of which prior club it shows.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Stefan_Posch", "tier": "A", "observedDate": "2026"}, {"name": "Transfermarkt", "url": "https://www.transfermarkt.us/stefan-posch/profil/spieler/223974", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Several attacking/midfield players described as central to the team (Christoph Baumgartner, Marko Arnautovic, Paul Wanner, Marcel Sabitzer, Konrad Laimer) are absent from the seed's top-3 modeled list, which contains only center-backs and a right-back.", "sources": [{"name": "Sports Illustrated WC2026 Austria preview", "url": "https://www.si.com/soccer/austria-2026-world-cup-preview", "tier": "A", "observedDate": "2026"}, {"name": "Heavy.com", "url": "https://heavy.com/sports/soccer/world-cup/austria-best-players-world-cup-2026/", "tier": "C", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Austria lost only 1 of 8 World Cup qualifying matches (22 goals scored, 4 conceded) and beat Jordan 3-1 at the World Cup for its first World Cup win in 36 years, before losing 0-2 to Argentina.", "sources": [{"name": "ESPN results", "url": "https://www.espn.com/soccer/team/results/_/id/474/austria", "tier": "A", "observedDate": "2026-06"}, {"name": "Sky Sports match report", "url": "https://www.skysports.com/football/news/11095/13552725/world-cup-2026-austria-3-1-jordan-european-side-earn-first-world-cup-win-in-36-years-with-victory-over-debutants", "tier": "A", "observedDate": "2026-06-17"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [],
+      "recommendedCodexNextActions": ["Update Danso club to Tottenham", "Update Posch club to Mainz 05 (loan)", "Consider adding Baumgartner/Arnautovic to modeled roster priority", "Consider raising press_intensity given league-low PPDA"]
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "managerStatus": [
+        {"claim": "Graham Potter took over as manager on 2025-10-20 (replacing John Dahl Tomasson after a 0-1 loss to Kosovo) and had his contract extended through 2030 on 2026-03-12.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Graham_Potter", "tier": "A", "observedDate": "2026"}, {"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-potter-sweden-contract", "tier": "S", "observedDate": "2026-03-12"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Sweden's World Cup starting XIs have consistently fielded Gyokeres and Isak together as a strike partnership (a two-forward system), reported variably as 3-5-2/4-3-3/4-2-3-1 depending on the source, which conflicts with the seed's single-striker 3-4-3 default.", "sources": [{"name": "FanDuel lineup preview", "url": "https://www.fanduel.com/research/netherlands-vs-sweden-confirmed-lineups-and-formations-with-predictions-world-cup-2026", "tier": "C", "observedDate": "2026-06-20"}, {"name": "Sky Sports confirmed lineups", "url": "https://www.skysports.com/football/netherlands-vs-sweden/teams/549800", "tier": "A", "observedDate": "2026-06-20"}, {"name": "Wikipedia, 2026 FIFA World Cup Group F", "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Viktor Gyokeres remains at Arsenal (joined summer 2025) and is in strong scoring form across competitions; seed overall=67 as the top-rated player appears consistent with his current status.", "sources": [{"name": "Premier League official", "url": "https://www.premierleague.com/en/players/224117/viktor-gyokeres/overview", "tier": "S", "observedDate": "2026"}, {"name": "Arsenal FC official", "url": "https://www.arsenal.com/news/stats-how-does-gyokeres-debut-season-compare", "tier": "S", "observedDate": "2026"}], "confidence": "high", "mapsTo": "player_rating", "candidateCategory": "safe factual candidate"},
+        {"claim": "Anthony Elanga transferred from Nottingham Forest to Newcastle United in Jul 2025; seed club should reflect Newcastle. In the World Cup match vs Netherlands he came on as a 55th-minute substitute rather than starting, scoring 4 minutes later -- suggesting his role may be more impact-substitute than guaranteed starter.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Anthony_Elanga", "tier": "A", "observedDate": "2025-26"}, {"name": "Sky Sports confirmed lineups", "url": "https://www.skysports.com/football/netherlands-vs-sweden/teams/549800", "tier": "A", "observedDate": "2026-06-20"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Isak Hien (Atalanta) suffered a thigh injury against Ukraine in the March 2026 playoff semifinal that forced him out of the playoff final; he recovered in time to start the World Cup opener but carries elevated injury risk.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Isak_Hien", "tier": "A", "observedDate": "2026"}, {"name": "Flashscore", "url": "https://www.flashscore.com/news/soccer-world-cup-isak-hien-ruled-out-of-poland-playoff-final-as-sweden-s-injury-list-grows/xbLAqJbD/", "tier": "B", "observedDate": "2026-03"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Sweden finished its qualifying group winless and last under Tomasson, then reached the World Cup via the playoffs (beating Ukraine 3-1, Poland 3-2) under Potter; at the World Cup it beat Tunisia 5-1 but lost 1-5 to the Netherlands.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Trailing 0-3 to the Netherlands, Potter made a double substitution at the 55th-56th minute (Elanga, Bergvall, Zeneli all on within 2 minutes) -- an attacking, game-state-driven cluster of changes rather than like-for-like; used all 5 slots in that match. Based on a single sampled match, so the pattern is not yet confirmed as a general tendency.", "sources": [{"name": "Sky Sports confirmed lineups", "url": "https://www.skysports.com/football/netherlands-vs-sweden/teams/549800", "tier": "A", "observedDate": "2026-06-20"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Reconsider default_formation given the consistent Gyokeres+Isak two-forward system", "Update Elanga club to Newcastle United and flag possible impact-substitute role rather than guaranteed starter", "Flag Hien's recent hamstring/thigh injury history"]
     }
   ],
   "crossTeamPatterns": [
@@ -397,9 +588,14 @@
       "confidence": "medium"
     },
     {
-      "pattern": "Club-transfer and injury-status staleness recurs broadly (Cucurella/ESP, Guehi/ENG, Malen/NED, Gimenez/MEX, De Winter/BEL, Wirtz/GER, Luis Diaz/COL, Tomiyasu/JPN all changed clubs without apparent seed reflection; Timber/NED, Araujo/URU, Aguerd/MAR, Schlotterbeck/GER, Mitoma/JPN are all unavailable for the World Cup but may be modeled as available). Suggests the freshnessPolicy in metadata.json is not being operationally kept current.",
-      "teamsAffected": ["ESP", "ENG", "NED", "MEX", "BEL", "GER", "COL", "JPN", "URU", "MAR"],
+      "pattern": "Club-transfer and injury-status staleness recurs broadly (Cucurella/ESP, Guehi/ENG, Malen/NED, Gimenez/MEX, De Winter/BEL, Wirtz/GER, Luis Diaz/COL, Tomiyasu/JPN, Diouf+Jackson/SEN, Akanji+Ndoye/SUI, Taremi/IRN, Demiral/TUR, Pacho+Hincapie/ECU, Son+Lee Kang-in/KOR, Danso+Posch/AUT, Elanga/SWE all changed clubs without apparent seed reflection; Timber/NED, Araujo/URU, Aguerd/MAR, Schlotterbeck/GER, Mitoma/JPN, Koulibaly/SEN, Hien/SWE are all unavailable or injury-flagged for the World Cup but may be modeled as fully fit). Suggests the freshnessPolicy in metadata.json is not being operationally kept current; this is now confirmed across 24 of 24 researched teams.",
+      "teamsAffected": ["ESP", "ENG", "NED", "MEX", "BEL", "GER", "COL", "JPN", "URU", "MAR", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE"],
       "confidence": "high"
+    },
+    {
+      "pattern": "default_formation mismatches between the seed and the team's actual recent/World-Cup starting shape recur in at least 7 of 24 researched teams (ENG: 4-3-3 seed vs actual 4-2-3-1; JPN: 4-2-3-1 seed vs actual 3-4-2-1; KOR: 4-2-3-1 seed vs confirmed 3-4-2-1 in both World Cup matches; SWE: 3-4-3 seed vs an actual two-forward Gyokeres+Isak system; SEN/SUI/AUT seeds are directionally correct but omit the manager's situational back-three/back-four variation). Recommend treating default_formation as the single most actionable existing-field correction category from this research pass.",
+      "teamsAffected": ["ENG", "JPN", "KOR", "SWE", "SEN", "SUI", "AUT"],
+      "confidence": "medium"
     },
     {
       "pattern": "At least 5 teams (POR, CRO, BEL, URU, COL) appear to be missing a single very famous, currently-active veteran or star player entirely from their modeled roster/top-player list (Ronaldo/POR, Modric/CRO, De Bruyne/BEL, Valverde/URU, James Rodriguez/COL). This is a distinct and higher-severity issue than overall-value miscalibration -- it suggests possible roster completeness gaps for elder statesmen players specifically.",
