@@ -46,6 +46,52 @@ class ReleaseReadinessSummary(BaseModel):
     requiredCommands: list[str]
 
 
+class ExternalDataScope(BaseModel):
+    coveredTeams: list[str]
+    remainingUnresearchedTeams: list[str]
+
+
+class ExternalTeamPriority(BaseModel):
+    teamId: str
+    priorityScore: float
+    highImpactCandidateCount: int
+    mediumImpactCandidateCount: int
+    futureEngineCandidateCount: int
+
+
+class ExternalTeamSignalProfile(BaseModel):
+    teamId: str
+    signalBand: str
+    candidateCount: int
+    categoryCounts: dict[str, int]
+    useTierCounts: dict[str, int]
+    existingFieldCandidateCount: int
+    futureEngineCandidateCount: int
+    preservedReviewQuestionCount: int
+
+
+class ExternalDataVerificationSummary(BaseModel):
+    generatedAt: str | None
+    note: str
+    valid: bool
+    errorCount: int
+    warningCount: int
+    candidateCount: int
+    coveredTeamCount: int
+    totalTeamCount: int
+    remainingTeamCount: int
+    scope: ExternalDataScope | None
+    categoryCounts: dict[str, int]
+    impactCounts: dict[str, int]
+    useTierCounts: dict[str, int]
+    teamSignalBandCounts: dict[str, int]
+    sparseTeamIds: list[str]
+    topTeamPriorities: list[ExternalTeamPriority]
+    teamSignalProfiles: list[ExternalTeamSignalProfile]
+    warnings: list[str]
+    errors: list[str]
+
+
 class TeamReviewRow(BaseModel):
     team_id: str
     team_name: str

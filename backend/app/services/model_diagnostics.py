@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 
 REPORTS_DIR = Path(__file__).resolve().parent.parent.parent / "reports"
+SEED_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "seed"
 
 
 def _latest_report(reports_dir: Path, pattern: str) -> dict | None:
@@ -57,6 +58,69 @@ def get_release_readiness_summary(reports_dir: Path = REPORTS_DIR) -> dict:
             "本番反映に必要なローカル診断レポートの要約です。"
             "この表示は読み取り専用で、テスト実行やpushは行いません。"
         ),
+    }
+
+
+def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed_dir: Path = SEED_DIR) -> dict:
+    validation = _latest_report(reports_dir, "external_data_verification_validation_*.json")
+    candidates = _latest_report(reports_dir, "external_data_verification_candidates_*.json")
+    total_team_count = 48
+    teams_path = seed_dir / "teams.json"
+    if teams_path.exists():
+        total_team_count = len(json.loads(teams_path.read_text(encoding="utf-8")))
+
+    if validation is None:
+        return {
+            "generatedAt": None,
+            "note": "外部データ検証レポートがまだ生成されていません。",
+            "valid": False,
+            "errorCount": 0,
+            "warningCount": 0,
+            "candidateCount": 0,
+            "coveredTeamCount": 0,
+            "totalTeamCount": total_team_count,
+            "remainingTeamCount": total_team_count,
+            "scope": None,
+            "categoryCounts": {},
+            "impactCounts": {},
+            "useTierCounts": {},
+            "teamSignalBandCounts": {},
+            "sparseTeamIds": [],
+            "topTeamPriorities": [],
+            "teamSignalProfiles": [],
+            "warnings": [],
+            "errors": [],
+        }
+
+    scope = (candidates or {}).get("scope") or {}
+    covered = scope.get("coveredTeams") or []
+    remaining = scope.get("remainingUnresearchedTeams") or []
+    return {
+        "generatedAt": (candidates or {}).get("generatedAt"),
+        "note": (
+            "外部調査候補をCodexレビュー前に整理した読み取り専用サマリーです。"
+            "候補は直接seedや能力値へ反映せず、信頼度と用途別に保留します。"
+        ),
+        "valid": validation.get("valid", False),
+        "errorCount": validation.get("errorCount", 0),
+        "warningCount": validation.get("warningCount", 0),
+        "candidateCount": validation.get("candidateCount", 0),
+        "coveredTeamCount": validation.get("coveredTeamCount", len(covered)),
+        "totalTeamCount": total_team_count,
+        "remainingTeamCount": len(remaining) if remaining else max(0, total_team_count - len(covered)),
+        "scope": {
+            "coveredTeams": covered,
+            "remainingUnresearchedTeams": remaining,
+        },
+        "categoryCounts": validation.get("categoryCounts", {}),
+        "impactCounts": validation.get("impactCounts", {}),
+        "useTierCounts": validation.get("useTierCounts", {}),
+        "teamSignalBandCounts": validation.get("teamSignalBandCounts", {}),
+        "sparseTeamIds": validation.get("sparseTeamIds", []),
+        "topTeamPriorities": validation.get("topTeamPriorities", []),
+        "teamSignalProfiles": validation.get("teamSignalProfiles", []),
+        "warnings": validation.get("warnings", []),
+        "errors": validation.get("errors", []),
     }
 
 

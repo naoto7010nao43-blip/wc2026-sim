@@ -264,6 +264,52 @@ export interface ReleaseReadinessSummary {
   requiredCommands: string[];
 }
 
+export interface ExternalDataScope {
+  coveredTeams: string[];
+  remainingUnresearchedTeams: string[];
+}
+
+export interface ExternalTeamPriority {
+  teamId: string;
+  priorityScore: number;
+  highImpactCandidateCount: number;
+  mediumImpactCandidateCount: number;
+  futureEngineCandidateCount: number;
+}
+
+export interface ExternalTeamSignalProfile {
+  teamId: string;
+  signalBand: string;
+  candidateCount: number;
+  categoryCounts: Record<string, number>;
+  useTierCounts: Record<string, number>;
+  existingFieldCandidateCount: number;
+  futureEngineCandidateCount: number;
+  preservedReviewQuestionCount: number;
+}
+
+export interface ExternalDataVerificationSummary {
+  generatedAt: string | null;
+  note: string;
+  valid: boolean;
+  errorCount: number;
+  warningCount: number;
+  candidateCount: number;
+  coveredTeamCount: number;
+  totalTeamCount: number;
+  remainingTeamCount: number;
+  scope: ExternalDataScope | null;
+  categoryCounts: Record<string, number>;
+  impactCounts: Record<string, number>;
+  useTierCounts: Record<string, number>;
+  teamSignalBandCounts: Record<string, number>;
+  sparseTeamIds: string[];
+  topTeamPriorities: ExternalTeamPriority[];
+  teamSignalProfiles: ExternalTeamSignalProfile[];
+  warnings: string[];
+  errors: string[];
+}
+
 export interface TeamReviewRow {
   team_id: string;
   team_name: string;

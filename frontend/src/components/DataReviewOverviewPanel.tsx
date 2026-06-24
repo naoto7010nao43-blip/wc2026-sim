@@ -1,4 +1,5 @@
 import type {
+  ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
@@ -16,6 +17,7 @@ interface Props {
   sourceProvenanceAudit: SourceProvenanceAuditSummary | null;
   modelCalibration: ModelCalibrationSummary | null;
   releaseReadiness: ReleaseReadinessSummary | null;
+  externalDataVerification: ExternalDataVerificationSummary | null;
   simulationStability: SimulationStabilitySummary | null;
   substitutionModelGap: SubstitutionModelGapSummary | null;
 }
@@ -51,6 +53,7 @@ export function DataReviewOverviewPanel({
   sourceProvenanceAudit,
   modelCalibration,
   releaseReadiness,
+  externalDataVerification,
   simulationStability,
   substitutionModelGap,
 }: Props) {
@@ -61,12 +64,18 @@ export function DataReviewOverviewPanel({
   const sourceRiskPlayers = sourceProvenanceAudit?.seedSourceSummary.players_with_source_risk ?? 0;
   const stabilityBand = simulationStability?.summary?.stabilityBand;
   const maxStabilityDelta = simulationStability?.summary?.maxAbsChampionPctDelta;
+  const externalCoveredTeams = externalDataVerification?.coveredTeamCount ?? 0;
+  const externalTotalTeams = externalDataVerification?.totalTeamCount ?? 48;
+  const externalWarnings = externalDataVerification?.warningCount ?? 0;
+  const externalReadyForReview = externalDataVerification?.useTierCounts.ready_for_codex_review ?? 0;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
   const releaseBlocked = releaseReadiness?.readyForManualPush === false;
 
   const actions = [
     highPriorityTeams > 0 ? `高優先度チーム ${highPriorityTeams}件をデータ更新候補として確認` : null,
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
+    externalReadyForReview > 0 ? `外部調査のCodexレビュー候補 ${externalReadyForReview}件をseed反映前に精査` : null,
+    externalWarnings > 0 ? `外部調査の警告 ${externalWarnings}件は反映候補から一段止める` : null,
     sourceReviewCandidates > 0 ? `出典確認が先の候補 ${sourceReviewCandidates}件を保留` : null,
     substitutionNeedsSpec ? "選手交代傾向は現エンジンに反映先がないため、将来仕様候補として扱う" : null,
     releaseBlocked ? `本番反映は${releaseReadiness?.blockers.length ?? 0}件の理由で保留` : null,
@@ -93,6 +102,11 @@ export function DataReviewOverviewPanel({
         />
         <Metric label="高優先度チーム" value={highPriorityTeams} tone={highPriorityTeams > 0 ? "warn" : "good"} />
         <Metric label="出典リスク選手" value={sourceRiskPlayers} tone={sourceRiskPlayers > 0 ? "warn" : "good"} />
+        <Metric
+          label="外部調査進捗"
+          value={`${externalCoveredTeams}/${externalTotalTeams}`}
+          tone={externalCoveredTeams >= externalTotalTeams ? "good" : "warn"}
+        />
         <Metric label="監督・戦術High" value={managerHighRisk} tone={managerHighRisk > 0 ? "warn" : "good"} />
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />

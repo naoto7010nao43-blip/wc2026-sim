@@ -9,6 +9,7 @@ screenshot review.
 import re
 
 from app.services.model_diagnostics import (
+    get_external_data_verification_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
@@ -63,6 +64,10 @@ def test_team_review_summary_copy_is_japanese():
 
 def test_release_readiness_summary_copy_is_japanese():
     _walk(get_release_readiness_summary())
+
+
+def test_external_data_verification_summary_copy_is_japanese():
+    _walk(get_external_data_verification_summary())
 
 
 def test_squad_gap_summary_copy_is_japanese():

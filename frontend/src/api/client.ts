@@ -1,5 +1,6 @@
 import type {
   DataQualitySummary,
+  ExternalDataVerificationSummary,
   LikelyLineupOut,
   ManagerTacticalTrustSummary,
   MatchPredictionOut,
@@ -66,6 +67,8 @@ export const api = {
     }),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getReleaseReadinessSummary: () => getJson<ReleaseReadinessSummary>("/api/model-diagnostics/release-readiness"),
+  getExternalDataVerificationSummary: () =>
+    getJson<ExternalDataVerificationSummary>("/api/model-diagnostics/external-data-verification"),
   getTeamDataReview: () => getJson<TeamReviewSummary>("/api/model-diagnostics/team-review"),
   getSquadGapReview: () => getJson<SquadGapSummary>("/api/model-diagnostics/squad-gaps"),
   getManagerTacticalTrust: () => getJson<ManagerTacticalTrustSummary>("/api/model-diagnostics/manager-tactical-trust"),

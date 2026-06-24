@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.schemas.model_diagnostics import (
     ManagerTacticalTrustSummary,
+    ExternalDataVerificationSummary,
     ModelCalibrationSummary,
     RatingDecisionAuditSummary,
     RatingReviewWorkbenchSummary,
@@ -14,6 +15,7 @@ from app.schemas.model_diagnostics import (
 )
 from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
+    get_external_data_verification_summary,
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
@@ -36,6 +38,11 @@ def get_team_review():
 @router.get("/release-readiness", response_model=ReleaseReadinessSummary)
 def get_release_readiness():
     return get_release_readiness_summary()
+
+
+@router.get("/external-data-verification", response_model=ExternalDataVerificationSummary)
+def get_external_data_verification():
+    return get_external_data_verification_summary()
 
 
 @router.get("/squad-gaps", response_model=SquadGapSummary)

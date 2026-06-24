@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
+import { ExternalDataVerificationPanel } from "../components/ExternalDataVerificationPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
@@ -12,6 +13,7 @@ import { SquadGapPanel } from "../components/SquadGapPanel";
 import { SubstitutionModelGapPanel } from "../components/SubstitutionModelGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
+  ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   RatingDecisionAuditSummary,
@@ -27,6 +29,7 @@ import type {
 const REVIEW_SECTIONS = [
   { id: "model-calibration", label: "モデル" },
   { id: "simulation-stability", label: "確率安定性" },
+  { id: "external-data", label: "外部調査" },
   { id: "substitution-gap", label: "選手交代" },
   { id: "team-review", label: "チーム優先度" },
   { id: "squad-gaps", label: "スカッド" },
@@ -53,6 +56,8 @@ export function DataReviewPage() {
   const [modelCalibrationError, setModelCalibrationError] = useState<string | null>(null);
   const [releaseReadiness, setReleaseReadiness] = useState<ReleaseReadinessSummary | null>(null);
   const [releaseReadinessError, setReleaseReadinessError] = useState<string | null>(null);
+  const [externalDataVerification, setExternalDataVerification] = useState<ExternalDataVerificationSummary | null>(null);
+  const [externalDataVerificationError, setExternalDataVerificationError] = useState<string | null>(null);
   const [simulationStability, setSimulationStability] = useState<SimulationStabilitySummary | null>(null);
   const [simulationStabilityError, setSimulationStabilityError] = useState<string | null>(null);
   const [substitutionModelGap, setSubstitutionModelGap] = useState<SubstitutionModelGapSummary | null>(null);
@@ -92,6 +97,10 @@ export function DataReviewPage() {
       .then(setReleaseReadiness)
       .catch(() => setReleaseReadinessError("本番反映readinessの読み込みに失敗しました。"));
     api
+      .getExternalDataVerificationSummary()
+      .then(setExternalDataVerification)
+      .catch(() => setExternalDataVerificationError("外部データ検証の読み込みに失敗しました。"));
+    api
       .getSimulationStabilitySummary()
       .then(setSimulationStability)
       .catch(() => setSimulationStabilityError("モンテカルロ安定性監査の読み込みに失敗しました。"));
@@ -121,6 +130,7 @@ export function DataReviewPage() {
         sourceProvenanceAudit={sourceProvenanceAudit}
         modelCalibration={modelCalibration}
         releaseReadiness={releaseReadiness}
+        externalDataVerification={externalDataVerification}
         simulationStability={simulationStability}
         substitutionModelGap={substitutionModelGap}
       />
@@ -163,6 +173,16 @@ export function DataReviewPage() {
         )}
         {!simulationStability && !simulationStabilityError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {simulationStability && <SimulationStabilityPanel summary={simulationStability} />}
+      </section>
+
+      <section id="external-data" className="scroll-mt-4">
+        {externalDataVerificationError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {externalDataVerificationError}
+          </div>
+        )}
+        {!externalDataVerification && !externalDataVerificationError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {externalDataVerification && <ExternalDataVerificationPanel summary={externalDataVerification} />}
       </section>
 
       <section id="substitution-gap" className="scroll-mt-4">

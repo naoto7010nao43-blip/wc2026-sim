@@ -14,6 +14,7 @@ from app.database import Base, get_db
 from app.main import app
 from app.services.model_diagnostics import (
     REPORTS_DIR,
+    get_external_data_verification_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
     get_rating_decision_audit_summary,
@@ -87,6 +88,78 @@ def test_release_readiness_endpoint_uses_order_neutral_versions(client):
     assert body["modelVersions"]["baselineModelVersion"] == "poisson-v1-rank60-order-neutral"
     assert body["modelVersions"]["currentModelVersion"] == "poisson-v2-rank75-order-neutral"
     assert body["rank75Benchmark"]["benchmarkMethod"] == "dual_order_average"
+
+
+def test_external_data_verification_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/external-data-verification")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "note", "valid", "errorCount", "warningCount", "candidateCount",
+        "coveredTeamCount", "totalTeamCount", "remainingTeamCount", "scope",
+        "categoryCounts", "impactCounts", "useTierCounts", "teamSignalBandCounts",
+        "sparseTeamIds", "topTeamPriorities", "teamSignalProfiles", "warnings", "errors",
+    ):
+        assert field in body
+
+
+def test_external_data_verification_endpoint_exposes_partial_progress(client):
+    response = client.get("/api/model-diagnostics/external-data-verification")
+    body = response.json()
+    assert body["valid"] is True
+    assert body["coveredTeamCount"] == 16
+    assert body["remainingTeamCount"] == 32
+    assert body["candidateCount"] == 121
+    assert body["teamSignalBandCounts"]["strong"] == 16
+
+
+def test_external_data_verification_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    seed_dir = tmp_path / "seed"
+    seed_dir.mkdir()
+    (seed_dir / "teams.json").write_text('[{"id":"AAA"},{"id":"BBB"}]', encoding="utf-8")
+    summary = get_external_data_verification_summary(reports_dir=tmp_path, seed_dir=seed_dir)
+    assert summary["generatedAt"] is None
+    assert summary["valid"] is False
+    assert summary["coveredTeamCount"] == 0
+    assert summary["totalTeamCount"] == 2
+    assert summary["remainingTeamCount"] == 2
+    assert summary["note"]
+
+
+def test_get_external_data_verification_summary_is_read_only(tmp_path):
+    seed_dir = tmp_path / "seed"
+    seed_dir.mkdir()
+    (seed_dir / "teams.json").write_text('[{"id":"AAA"}]', encoding="utf-8")
+    validation_report = {
+        "valid": True,
+        "errorCount": 0,
+        "warningCount": 0,
+        "candidateCount": 1,
+        "coveredTeamCount": 1,
+        "categoryCounts": {},
+        "impactCounts": {},
+        "useTierCounts": {},
+        "teamSignalBandCounts": {"strong": 1},
+        "sparseTeamIds": [],
+        "topTeamPriorities": [],
+        "teamSignalProfiles": [],
+        "warnings": [],
+        "errors": [],
+    }
+    candidate_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "scope": {"coveredTeams": ["AAA"], "remainingUnresearchedTeams": []},
+        "teams": [],
+    }
+    validation_path = tmp_path / "external_data_verification_validation_2026-01-01.json"
+    candidates_path = tmp_path / "external_data_verification_candidates_2026-01-01.json"
+    validation_path.write_text(json.dumps(validation_report), encoding="utf-8")
+    candidates_path.write_text(json.dumps(candidate_report), encoding="utf-8")
+    before = validation_path.read_text(encoding="utf-8")
+
+    get_external_data_verification_summary(reports_dir=tmp_path, seed_dir=seed_dir)
+
+    assert validation_path.read_text(encoding="utf-8") == before
 
 
 def test_release_readiness_missing_report_falls_back_to_calm_empty_state(tmp_path):
