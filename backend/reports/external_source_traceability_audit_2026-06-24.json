@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-24T05:37:01.993310+00:00",
+  "generatedAt": "2026-06-24T10:15:38.769514+00:00",
   "note": "外部調査候補の出典をあとから再確認できるかを見る読み取り専用監査です。URLが無い候補は捨てずに残しますが、seed・能力値・戦術値へ反映する前にURL付き出典で再確認します。",
   "severity": "review_required",
-  "candidateCount": 181,
-  "sourceReferenceCount": 211,
+  "candidateCount": 234,
+  "sourceReferenceCount": 290,
   "missingUrlSourceCount": 122,
   "candidateMissingResolvableUrlCount": 121,
   "missingObservedDateSourceCount": 2,
   "tierCounts": {
-    "A": 114,
-    "B": 59,
-    "C": 5,
-    "S": 33
+    "A": 148,
+    "B": 82,
+    "C": 8,
+    "S": 52
   },
   "missingUrlByTeam": {
     "ARG": 9,
@@ -42,19 +42,39 @@
   "topSourceNames": [
     {
       "name": "Wikipedia",
-      "count": 27
+      "count": 34
     },
     {
       "name": "Tactical Football Analysis",
+      "count": 10
+    },
+    {
+      "name": "EA Sports FC ratings (official)",
       "count": 8
     },
     {
       "name": "World Soccer Talk",
-      "count": 4
+      "count": 6
     },
     {
       "name": "FIFA.com",
+      "count": 6
+    },
+    {
+      "name": "Transfermarkt",
+      "count": 5
+    },
+    {
+      "name": "ESPN",
       "count": 4
+    },
+    {
+      "name": "CAF official",
+      "count": 4
+    },
+    {
+      "name": "Yahoo Sports",
+      "count": 3
     },
     {
       "name": "Tactical Football Analysis / The Football Analyst",
@@ -65,11 +85,11 @@
       "count": 3
     },
     {
-      "name": "Transfermarkt",
+      "name": "Sports Illustrated WC2026 Iran preview",
       "count": 3
     },
     {
-      "name": "Sports Illustrated WC2026 Iran preview",
+      "name": "Al Jazeera",
       "count": 3
     },
     {
@@ -81,11 +101,11 @@
       "count": 2
     },
     {
-      "name": "ESPN",
+      "name": "Wikipedia / FIFA",
       "count": 2
     },
     {
-      "name": "Wikipedia / FIFA",
+      "name": "Squawka",
       "count": 2
     },
     {
@@ -99,50 +119,9 @@
     {
       "name": "ESPN / Sky Sports",
       "count": 2
-    },
-    {
-      "name": "UEFA.com / Wikipedia",
-      "count": 2
-    },
-    {
-      "name": "Goal.com / ESPN",
-      "count": 2
-    },
-    {
-      "name": "FourFourTwo / World Soccer Talk",
-      "count": 2
-    },
-    {
-      "name": "Yahoo Sports",
-      "count": 2
-    },
-    {
-      "name": "World Soccer Talk / Wikipedia",
-      "count": 2
     }
   ],
   "candidatesMissingResolvableUrl": [
-    {
-      "teamId": "ARG",
-      "category": "managerStatus",
-      "index": 0,
-      "sourceTier": "A",
-      "summary": "Lionel Scaloni continues as manager through the 2026 World Cup, contracted since Feb 2023."
-    },
-    {
-      "teamId": "ARG",
-      "category": "tacticalProfileCandidates",
-      "index": 0,
-      "sourceTier": "B",
-      "summary": "Sources conflict on press intensity: one says Scaloni favors high pressing, another says Argentina is 'not inherently a high-press team' and plays at its own pace. Current press_intensity=62 may be roughly right but evid"
-    },
-    {
-      "teamId": "ARG",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "sourceTier": "A",
-      "summary": "Scaloni typically uses his first substitution around the 60th-70th minute when comfortably ahead, then makes a batch of changes in the 70s-80s; uses all 5 slots when the game is settled. He rotates the starting XI rather"
-    },
     {
       "teamId": "ARG",
       "category": "keyPlayerStatusCandidates",
@@ -173,10 +152,24 @@
     },
     {
       "teamId": "ARG",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Scaloni typically uses his first substitution around the 60th-70th minute when comfortably ahead, then makes a batch of changes in the 70s-80s; uses all 5 slots when the game is settled. He rotates the starting XI rather"
+    },
+    {
+      "teamId": "ARG",
       "category": "formationCandidates",
       "index": 0,
       "sourceTier": "B",
       "summary": "Scaloni runs a fluid system, nominally 4-3-3/4-2-3-1 but dropping into a 4-4-2 two-banks-of-four out of possession; reports describe the World Cup opener vs Algeria starting in a 4-4-2."
+    },
+    {
+      "teamId": "ARG",
+      "category": "tacticalProfileCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Sources conflict on press intensity: one says Scaloni favors high pressing, another says Argentina is 'not inherently a high-press team' and plays at its own pace. Current press_intensity=62 may be roughly right but evid"
     },
     {
       "teamId": "ARG",
@@ -186,25 +179,11 @@
       "summary": "Argentina is unbeaten in its last 10 matches (27 goals scored, 2 conceded) and holds FIFA rank 1 as of 2026-06-11."
     },
     {
-      "teamId": "ESP",
+      "teamId": "ARG",
       "category": "managerStatus",
       "index": 0,
-      "sourceTier": "S",
-      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25."
-    },
-    {
-      "teamId": "ESP",
-      "category": "tacticalProfileCandidates",
-      "index": 0,
-      "sourceTier": "B",
-      "summary": "Multiple tactical analyses describe Spain's press intensity and defensive line height as both 'High', suggesting press_intensity=76 and defensive_line_height=68 may be slight underestimates relative to other top sides."
-    },
-    {
-      "teamId": "ESP",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "sourceTier": "B",
-      "summary": "De la Fuente tends to make changes later (e.g. first sub at 71' in a 0-0 draw vs Cape Verde, criticized as too slow) but moves earlier (halftime double-sub) when comfortably ahead (4-0 vs Saudi Arabia); uses all 5 slots "
+      "sourceTier": "A",
+      "summary": "Lionel Scaloni continues as manager through the 2026 World Cup, contracted since Feb 2023."
     },
     {
       "teamId": "ESP",
@@ -243,31 +222,31 @@
     },
     {
       "teamId": "ESP",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "De la Fuente tends to make changes later (e.g. first sub at 71' in a 0-0 draw vs Cape Verde, criticized as too slow) but moves earlier (halftime double-sub) when comfortably ahead (4-0 vs Saudi Arabia); uses all 5 slots "
+    },
+    {
+      "teamId": "ESP",
       "category": "formationCandidates",
       "index": 0,
       "sourceTier": "B",
       "summary": "Base shape is 4-3-3 with build-up shifting to 3-2-5/2-3-5 in possession and a 4-4-2 press out of possession; current default_formation=4-3-3 matches."
     },
     {
-      "teamId": "ENG",
-      "category": "managerStatus",
-      "index": 0,
-      "sourceTier": "A",
-      "summary": "Thomas Tuchel remains manager; extended his contract through Euro 2028 in Feb 2026."
-    },
-    {
-      "teamId": "ENG",
+      "teamId": "ESP",
       "category": "tacticalProfileCandidates",
       "index": 0,
       "sourceTier": "B",
-      "summary": "England maintained over 70% possession across all 8 qualifying matches, suggesting possession_style=62 is too low; press_intensity=78 appears roughly accurate (aggressive press/counter-press is described as core to Tuche"
+      "summary": "Multiple tactical analyses describe Spain's press intensity and defensive line height as both 'High', suggesting press_intensity=76 and defensive_line_height=68 may be slight underestimates relative to other top sides."
     },
     {
-      "teamId": "ENG",
-      "category": "substitutionTendencyCandidates",
+      "teamId": "ESP",
+      "category": "managerStatus",
       "index": 0,
-      "sourceTier": "B",
-      "summary": "Tuchel tends to make changes later (65-72 minutes) but in clusters of 2-3 at once, often paired with a tactical shape change (e.g. inverting a full-back, converting a player into an auxiliary anchor) rather than pure lik"
+      "sourceTier": "S",
+      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25."
     },
     {
       "teamId": "ENG",
@@ -299,10 +278,24 @@
     },
     {
       "teamId": "ENG",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Tuchel tends to make changes later (65-72 minutes) but in clusters of 2-3 at once, often paired with a tactical shape change (e.g. inverting a full-back, converting a player into an auxiliary anchor) rather than pure lik"
+    },
+    {
+      "teamId": "ENG",
       "category": "formationCandidates",
       "index": 0,
       "sourceTier": "A",
       "summary": "England's actual base shape is 4-2-3-1 (build-up 3-2-5) with a double pivot (Rice + Anderson) and Bellingham as the 10, not the seed's default 4-3-3; confirmed starting XI vs Croatia matches this."
+    },
+    {
+      "teamId": "ENG",
+      "category": "tacticalProfileCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "England maintained over 70% possession across all 8 qualifying matches, suggesting possession_style=62 is too low; press_intensity=78 appears roughly accurate (aggressive press/counter-press is described as core to Tuche"
     },
     {
       "teamId": "ENG",
@@ -312,18 +305,11 @@
       "summary": "England qualified undefeated and unscored-on (8-0-0, 21 goals, 0 conceded) -- the first European team to do so for this cycle."
     },
     {
-      "teamId": "FRA",
+      "teamId": "ENG",
       "category": "managerStatus",
       "index": 0,
       "sourceTier": "A",
-      "summary": "Didier Deschamps remains manager through the 2026 World Cup but publicly announced in Jan 2025 that he will step down afterward; Zinedine Zidane has reportedly verbally agreed to succeed him."
-    },
-    {
-      "teamId": "FRA",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "sourceTier": "A",
-      "summary": "Deschamps is conservative with substitution timing when leading -- first change typically after 65-68 minutes, often two at once -- and prefers like-for-like positional swaps rather than shape changes, consistent with us"
+      "summary": "Thomas Tuchel remains manager; extended his contract through Euro 2028 in Feb 2026."
     },
     {
       "teamId": "FRA",
@@ -355,6 +341,13 @@
     },
     {
       "teamId": "FRA",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Deschamps is conservative with substitution timing when leading -- first change typically after 65-68 minutes, often two at once -- and prefers like-for-like positional swaps rather than shape changes, consistent with us"
+    },
+    {
+      "teamId": "FRA",
       "category": "formationCandidates",
       "index": 0,
       "sourceTier": "B",
@@ -368,25 +361,11 @@
       "summary": "France's FIFA rank rose from 3rd to 2nd as of 2026-06-22 after beating Senegal."
     },
     {
-      "teamId": "POR",
+      "teamId": "FRA",
       "category": "managerStatus",
       "index": 0,
-      "sourceTier": "S",
-      "summary": "Roberto Martinez remains manager, having won the 2025 Nations League (beating Spain on penalties)."
-    },
-    {
-      "teamId": "POR",
-      "category": "tacticalProfileCandidates",
-      "index": 0,
-      "sourceTier": "B",
-      "summary": "Qualifying possession averaged ~67% with 91.3% pass completion, and analyses describe the back line as deliberately high to support possession-building -- both suggest possession_style=66 and defensive_line_height=60 may"
-    },
-    {
-      "teamId": "POR",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
       "sourceTier": "A",
-      "summary": "Martinez tends to make his first change at halftime when reacting to a deficit (e.g. 2025 NL semifinal vs Germany), but has been criticized as slow to react in drawn/stagnant matches (last change at 83' in a 1-1 draw vs "
+      "summary": "Didier Deschamps remains manager through the 2026 World Cup but publicly announced in Jan 2025 that he will step down afterward; Zinedine Zidane has reportedly verbally agreed to succeed him."
     },
     {
       "teamId": "POR",
@@ -401,6 +380,27 @@
       "index": 1,
       "sourceTier": "A",
       "summary": "Rafael Leao has been injury-prone through 2025-26 and was benched for Portugal's World Cup opener; the seed's framing of him as the top-rated, guaranteed starter (overall=72) does not match this."
+    },
+    {
+      "teamId": "POR",
+      "category": "keyPlayerStatusCandidates",
+      "index": 2,
+      "sourceTier": "B",
+      "summary": "Vitinha finished 3rd in the 2025 Ballon d'Or and was Champions League final Man of the Match; described as 'the heart of the midfield', suggesting overall=65 (below Leao's 72) is a significant underrating."
+    },
+    {
+      "teamId": "POR",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Martinez tends to make his first change at halftime when reacting to a deficit (e.g. 2025 NL semifinal vs Germany), but has been criticized as slow to react in drawn/stagnant matches (last change at 83' in a 1-1 draw vs "
+    },
+    {
+      "teamId": "POR",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Portugal's base shape is 4-3-3 (matches seed) with variation to a compact 3-4-2-1 against stronger opposition."
     }
   ],
   "recommendationsJa": [
