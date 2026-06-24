@@ -45,6 +45,8 @@ REQUIRED_REPORT_PATTERNS = (
     "source_provenance_audit_*.json",
     "simulation_stability_audit_*.json",
     "substitution_model_gap_audit_*.json",
+    "external_data_verification_candidates_*.json",
+    "external_data_verification_validation_*.json",
 )
 
 
