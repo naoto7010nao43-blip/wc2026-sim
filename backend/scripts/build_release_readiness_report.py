@@ -48,6 +48,7 @@ REQUIRED_REPORT_PATTERNS = (
     "external_data_verification_candidates_*.json",
     "external_data_verification_validation_*.json",
     "external_data_decision_queue_*.json",
+    "external_source_traceability_audit_*.json",
 )
 
 

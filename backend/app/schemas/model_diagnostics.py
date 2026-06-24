@@ -91,6 +91,17 @@ class ExternalDataDecisionQueueSummary(BaseModel):
     topTeams: list[ExternalDataDecisionQueueTeam]
 
 
+class ExternalSourceTraceabilitySummary(BaseModel):
+    generatedAt: str | None
+    severity: str
+    candidateCount: int
+    sourceReferenceCount: int
+    missingUrlSourceCount: int
+    candidateMissingResolvableUrlCount: int
+    missingObservedDateSourceCount: int
+    recommendationsJa: list[str]
+
+
 class ExternalDataVerificationSummary(BaseModel):
     generatedAt: str | None
     note: str
@@ -110,6 +121,7 @@ class ExternalDataVerificationSummary(BaseModel):
     topTeamPriorities: list[ExternalTeamPriority]
     teamSignalProfiles: list[ExternalTeamSignalProfile]
     decisionQueue: ExternalDataDecisionQueueSummary | None
+    sourceTraceability: ExternalSourceTraceabilitySummary | None
     warnings: list[str]
     errors: list[str]
 

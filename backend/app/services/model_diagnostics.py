@@ -65,6 +65,7 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
     validation = _latest_report(reports_dir, "external_data_verification_validation_*.json")
     candidates = _latest_report(reports_dir, "external_data_verification_candidates_*.json")
     decision_queue = _latest_report(reports_dir, "external_data_decision_queue_*.json")
+    source_traceability = _latest_report(reports_dir, "external_source_traceability_audit_*.json")
     total_team_count = 48
     teams_path = seed_dir / "teams.json"
     if teams_path.exists():
@@ -90,6 +91,7 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
             "topTeamPriorities": [],
             "teamSignalProfiles": [],
             "decisionQueue": None,
+            "sourceTraceability": None,
             "warnings": [],
             "errors": [],
         }
@@ -107,6 +109,18 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
             "provisionalContextCount": decision_queue.get("provisionalContextCount", 0),
             "bucketCounts": decision_queue.get("bucketCounts", {}),
             "topTeams": (decision_queue.get("teams") or [])[:8],
+        }
+    source_traceability_summary = None
+    if source_traceability is not None:
+        source_traceability_summary = {
+            "generatedAt": source_traceability.get("generatedAt"),
+            "severity": source_traceability.get("severity", "unknown"),
+            "candidateCount": source_traceability.get("candidateCount", 0),
+            "sourceReferenceCount": source_traceability.get("sourceReferenceCount", 0),
+            "missingUrlSourceCount": source_traceability.get("missingUrlSourceCount", 0),
+            "candidateMissingResolvableUrlCount": source_traceability.get("candidateMissingResolvableUrlCount", 0),
+            "missingObservedDateSourceCount": source_traceability.get("missingObservedDateSourceCount", 0),
+            "recommendationsJa": source_traceability.get("recommendationsJa", []),
         }
     return {
         "generatedAt": (candidates or {}).get("generatedAt"),
@@ -133,6 +147,7 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
         "topTeamPriorities": validation.get("topTeamPriorities", []),
         "teamSignalProfiles": validation.get("teamSignalProfiles", []),
         "decisionQueue": decision_queue_summary,
+        "sourceTraceability": source_traceability_summary,
         "warnings": validation.get("warnings", []),
         "errors": validation.get("errors", []),
     }

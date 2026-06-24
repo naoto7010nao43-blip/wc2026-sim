@@ -71,6 +71,7 @@ export function DataReviewOverviewPanel({
     externalDataVerification?.decisionQueue?.currentFieldReviewCount ??
     externalDataVerification?.useTierCounts.ready_for_codex_review ??
     0;
+  const externalMissingUrls = externalDataVerification?.sourceTraceability?.candidateMissingResolvableUrlCount ?? 0;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
   const releaseBlocked = releaseReadiness?.readyForManualPush === false;
 
@@ -79,6 +80,7 @@ export function DataReviewOverviewPanel({
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
     externalReadyForReview > 0 ? `外部調査のCodexレビュー候補 ${externalReadyForReview}件をseed反映前に精査` : null,
     externalWarnings > 0 ? `外部調査の警告 ${externalWarnings}件は反映候補から一段止める` : null,
+    externalMissingUrls > 0 ? `外部調査候補 ${externalMissingUrls}件はURL付き出典で再確認してから反映判断` : null,
     sourceReviewCandidates > 0 ? `出典確認が先の候補 ${sourceReviewCandidates}件を保留` : null,
     substitutionNeedsSpec ? "選手交代傾向は現エンジンに反映先がないため、将来仕様候補として扱う" : null,
     releaseBlocked ? `本番反映は${releaseReadiness?.blockers.length ?? 0}件の理由で保留` : null,
@@ -110,6 +112,7 @@ export function DataReviewOverviewPanel({
           value={`${externalCoveredTeams}/${externalTotalTeams}`}
           tone={externalCoveredTeams >= externalTotalTeams ? "good" : "warn"}
         />
+        <Metric label="外部URL未確認" value={externalMissingUrls} tone={externalMissingUrls > 0 ? "warn" : "good"} />
         <Metric label="監督・戦術High" value={managerHighRisk} tone={managerHighRisk > 0 ? "warn" : "good"} />
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />

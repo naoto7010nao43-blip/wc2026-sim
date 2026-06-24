@@ -309,6 +309,17 @@ export interface ExternalDataDecisionQueueSummary {
   topTeams: ExternalDataDecisionQueueTeam[];
 }
 
+export interface ExternalSourceTraceabilitySummary {
+  generatedAt: string | null;
+  severity: string;
+  candidateCount: number;
+  sourceReferenceCount: number;
+  missingUrlSourceCount: number;
+  candidateMissingResolvableUrlCount: number;
+  missingObservedDateSourceCount: number;
+  recommendationsJa: string[];
+}
+
 export interface ExternalDataVerificationSummary {
   generatedAt: string | null;
   note: string;
@@ -328,6 +339,7 @@ export interface ExternalDataVerificationSummary {
   topTeamPriorities: ExternalTeamPriority[];
   teamSignalProfiles: ExternalTeamSignalProfile[];
   decisionQueue: ExternalDataDecisionQueueSummary | null;
+  sourceTraceability: ExternalSourceTraceabilitySummary | null;
   warnings: string[];
   errors: string[];
 }

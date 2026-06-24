@@ -28,6 +28,12 @@ const SIGNAL_LABELS: Record<string, string> = {
   weak: "弱い",
 };
 
+const TRACEABILITY_LABELS: Record<string, string> = {
+  pass: "URL確認可",
+  review_required: "URL確認要",
+  blocking_for_data_changes: "反映前にURL必須",
+};
+
 function warningLabel(warning: string): string {
   const teamMatch = warning.match(/teams\[([A-Z]{3})\]/);
   const team = teamMatch ? `${teamMatch[1]}: ` : "";
@@ -85,6 +91,7 @@ export function ExternalDataVerificationPanel({ summary }: Props) {
   const futureEngine = summary.decisionQueue?.futureEngineCount ?? summary.useTierCounts.future_engine_candidate ?? 0;
   const provisionalContext = summary.decisionQueue?.provisionalContextCount ?? summary.useTierCounts.provisional_context ?? 0;
   const highImpact = summary.impactCounts.high ?? 0;
+  const missingResolvableUrl = summary.sourceTraceability?.candidateMissingResolvableUrlCount ?? 0;
   const remainingPreview = summary.scope?.remainingUnresearchedTeams.slice(0, 18) ?? [];
   const remainingRest = Math.max(0, summary.remainingTeamCount - remainingPreview.length);
 
@@ -113,6 +120,11 @@ export function ExternalDataVerificationPanel({ summary }: Props) {
         <Metric label="将来エンジン候補" value={futureEngine} tone={futureEngine > 0 ? "warn" : "slate"} />
         <Metric label="暫定文脈" value={provisionalContext} />
         <Metric label="警告保留" value={warningHold} tone={warningHold > 0 ? "warn" : "good"} />
+        <Metric
+          label="URL未確認候補"
+          value={summary.sourceTraceability ? `${missingResolvableUrl}/${summary.sourceTraceability.candidateCount}` : "-"}
+          tone={missingResolvableUrl > 0 ? "warn" : "good"}
+        />
         <Metric label="エラー" value={summary.errorCount} tone={summary.errorCount > 0 ? "warn" : "good"} />
       </div>
 
@@ -162,6 +174,25 @@ export function ExternalDataVerificationPanel({ summary }: Props) {
           <div className="mt-2 space-y-1 text-[11px] text-amber-100/85">
             {summary.warnings.map((warning) => (
               <p key={warning}>・{warningLabel(warning)}</p>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {summary.sourceTraceability && summary.sourceTraceability.severity !== "pass" && (
+        <div className="mt-3 rounded border border-rose-500/30 bg-rose-500/10 p-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-[11px] font-semibold text-rose-200">出典URLの再確認が必要</p>
+            <span className="rounded bg-rose-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-rose-200">
+              {TRACEABILITY_LABELS[summary.sourceTraceability.severity] ?? summary.sourceTraceability.severity}
+            </span>
+          </div>
+          <p className="mt-2 text-[11px] text-rose-100/85">
+            {summary.sourceTraceability.candidateMissingResolvableUrlCount}件の候補がURLで再確認できないため、seed・能力値・戦術値の変更specへ進める前にURL付き出典へ差し替えます。
+          </p>
+          <div className="mt-2 space-y-1 text-[11px] text-rose-100/75">
+            {summary.sourceTraceability.recommendationsJa.map((line) => (
+              <p key={line}>・{line}</p>
             ))}
           </div>
         </div>

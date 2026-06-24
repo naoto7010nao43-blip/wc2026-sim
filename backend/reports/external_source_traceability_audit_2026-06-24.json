@@ -1,0 +1,411 @@
+{
+  "generatedAt": "2026-06-24T05:08:00.247664+00:00",
+  "note": "外部調査候補の出典をあとから再確認できるかを見る読み取り専用監査です。URLが無い候補は捨てずに残しますが、seed・能力値・戦術値へ反映する前にURL付き出典で再確認します。",
+  "severity": "blocking_for_data_changes",
+  "candidateCount": 121,
+  "sourceReferenceCount": 122,
+  "missingUrlSourceCount": 122,
+  "candidateMissingResolvableUrlCount": 121,
+  "missingObservedDateSourceCount": 2,
+  "tierCounts": {
+    "A": 58,
+    "B": 39,
+    "C": 1,
+    "S": 24
+  },
+  "missingUrlByTeam": {
+    "ARG": 9,
+    "BEL": 6,
+    "BRA": 7,
+    "COL": 7,
+    "CRO": 6,
+    "ENG": 9,
+    "ESP": 9,
+    "FRA": 8,
+    "GER": 7,
+    "JPN": 6,
+    "MAR": 7,
+    "MEX": 8,
+    "NED": 7,
+    "POR": 7,
+    "URU": 9,
+    "USA": 9
+  },
+  "missingUrlByCategory": {
+    "formationCandidates": 16,
+    "keyPlayerStatusCandidates": 53,
+    "managerStatus": 16,
+    "nationalStrengthContext": 10,
+    "substitutionTendencyCandidates": 16,
+    "tacticalProfileCandidates": 10
+  },
+  "topSourceNames": [
+    {
+      "name": "Tactical Football Analysis",
+      "count": 3
+    },
+    {
+      "name": "World Soccer Talk",
+      "count": 3
+    },
+    {
+      "name": "Tactical Football Analysis / The Football Analyst",
+      "count": 3
+    },
+    {
+      "name": "ESPN / inside.fifa.com",
+      "count": 2
+    },
+    {
+      "name": "ESPN / Wikipedia",
+      "count": 2
+    },
+    {
+      "name": "Wikipedia / FIFA",
+      "count": 2
+    },
+    {
+      "name": "ESPN / Goal.com",
+      "count": 2
+    },
+    {
+      "name": "UEFA.com / Wikipedia",
+      "count": 2
+    },
+    {
+      "name": "ESPN / Sky Sports",
+      "count": 2
+    },
+    {
+      "name": "FourFourTwo / World Soccer Talk",
+      "count": 2
+    },
+    {
+      "name": "Goal.com / ESPN",
+      "count": 2
+    },
+    {
+      "name": "Yahoo Sports",
+      "count": 2
+    },
+    {
+      "name": "World Soccer Talk / Wikipedia",
+      "count": 2
+    },
+    {
+      "name": "ESPN match report / World Soccer Talk",
+      "count": 1
+    },
+    {
+      "name": "World Soccer Talk / Squawka tactical analysis",
+      "count": 1
+    },
+    {
+      "name": "Wikipedia / World Soccer Talk",
+      "count": 1
+    },
+    {
+      "name": "ESPN",
+      "count": 1
+    },
+    {
+      "name": "Tribuna / Wikipedia / FIFA stats",
+      "count": 1
+    },
+    {
+      "name": "Squawka",
+      "count": 1
+    },
+    {
+      "name": "World Soccer Talk live coverage",
+      "count": 1
+    }
+  ],
+  "candidatesMissingResolvableUrl": [
+    {
+      "teamId": "ARG",
+      "category": "nationalStrengthContext",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "Argentina is unbeaten in its last 10 matches (27 goals scored, 2 conceded) and holds FIFA rank 1 as of 2026-06-11."
+    },
+    {
+      "teamId": "ARG",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Scaloni typically uses his first substitution around the 60th-70th minute when comfortably ahead, then makes a batch of changes in the 70s-80s; uses all 5 slots when the game is settled. He rotates the starting XI rather"
+    },
+    {
+      "teamId": "ARG",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Scaloni runs a fluid system, nominally 4-3-3/4-2-3-1 but dropping into a 4-4-2 two-banks-of-four out of possession; reports describe the World Cup opener vs Algeria starting in a 4-4-2."
+    },
+    {
+      "teamId": "ARG",
+      "category": "managerStatus",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Lionel Scaloni continues as manager through the 2026 World Cup, contracted since Feb 2023."
+    },
+    {
+      "teamId": "ARG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Cristian Romero suffered a knee injury in April 2026 (out for the rest of his club season) and has disciplinary issues (2 red cards); returned fit for the World Cup squad."
+    },
+    {
+      "teamId": "ARG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 1,
+      "sourceTier": "A",
+      "summary": "Lisandro Martinez tore his ACL in Feb 2025, missed ~10 months, returned Nov 2025; playing again for Man Utd but condition should be watched."
+    },
+    {
+      "teamId": "ARG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 2,
+      "sourceTier": "A",
+      "summary": "Lautaro Martinez and Julian Alvarez are in excellent club form (Serie A top scorer 17 goals; Atletico Madrid 20+ goal contributions including Champions League), suggesting their overall=69 may be an underestimate relativ"
+    },
+    {
+      "teamId": "ARG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 3,
+      "sourceTier": "A",
+      "summary": "Nico Paz (Como, 21yo) is described as Argentina's brightest emerging player, called up for his first World Cup; not present in the modeled top-player list."
+    },
+    {
+      "teamId": "ARG",
+      "category": "tacticalProfileCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Sources conflict on press intensity: one says Scaloni favors high pressing, another says Argentina is 'not inherently a high-press team' and plays at its own pace. Current press_intensity=62 may be roughly right but evid"
+    },
+    {
+      "teamId": "ESP",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "De la Fuente tends to make changes later (e.g. first sub at 71' in a 0-0 draw vs Cape Verde, criticized as too slow) but moves earlier (halftime double-sub) when comfortably ahead (4-0 vs Saudi Arabia); uses all 5 slots "
+    },
+    {
+      "teamId": "ESP",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Base shape is 4-3-3 with build-up shifting to 3-2-5/2-3-5 in possession and a 4-4-2 press out of possession; current default_formation=4-3-3 matches."
+    },
+    {
+      "teamId": "ESP",
+      "category": "managerStatus",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "Marc Cucurella transferred from Chelsea to Real Madrid on 2026-06-15 (~€55M+€5M, 6-year deal); seed data may still show Chelsea."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "index": 1,
+      "sourceTier": "A",
+      "summary": "Nico Williams has dealt with pubalgia and a hamstring injury through the season; his World Cup participation was seriously in doubt as of squad announcement."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "index": 2,
+      "sourceTier": "A",
+      "summary": "Lamine Yamal suffered a hamstring injury (2026-04-22), missed Barcelona's final 6 La Liga games, and was managed with limited minutes (15min sub appearance) in Spain's World Cup opener."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "index": 3,
+      "sourceTier": "A",
+      "summary": "Pau Cubarsi is an undisputed Barcelona starter (26 starts, 94.6% pass completion) and described as a breakout-candidate of the tournament; overall=69 may be an underestimate."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "index": 4,
+      "sourceTier": "A",
+      "summary": "The modeled top-5 list (Yamal, Cucurella, Nico Williams, Cubarsi, Porro) omits Rodri (captain-level anchor, described as 'the spine of the team'), Pedri, and Mikel Oyarzabal (scored the Euro 2024 final winner, scoring ag"
+    },
+    {
+      "teamId": "ESP",
+      "category": "tacticalProfileCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Multiple tactical analyses describe Spain's press intensity and defensive line height as both 'High', suggesting press_intensity=76 and defensive_line_height=68 may be slight underestimates relative to other top sides."
+    },
+    {
+      "teamId": "ENG",
+      "category": "nationalStrengthContext",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "England qualified undefeated and unscored-on (8-0-0, 21 goals, 0 conceded) -- the first European team to do so for this cycle."
+    },
+    {
+      "teamId": "ENG",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Tuchel tends to make changes later (65-72 minutes) but in clusters of 2-3 at once, often paired with a tactical shape change (e.g. inverting a full-back, converting a player into an auxiliary anchor) rather than pure lik"
+    },
+    {
+      "teamId": "ENG",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "England's actual base shape is 4-2-3-1 (build-up 3-2-5) with a double pivot (Rice + Anderson) and Bellingham as the 10, not the seed's default 4-3-3; confirmed starting XI vs Croatia matches this."
+    },
+    {
+      "teamId": "ENG",
+      "category": "managerStatus",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Thomas Tuchel remains manager; extended his contract through Euro 2028 in Feb 2026."
+    },
+    {
+      "teamId": "ENG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Marc Guehi transferred from Crystal Palace to Manchester City on 2026-01-19 (~£20m); seed may still show Crystal Palace."
+    },
+    {
+      "teamId": "ENG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 1,
+      "sourceTier": "A",
+      "summary": "Bukayo Saka has been playing through Achilles pain; Tuchel has confirmed managing his minutes deliberately at the World Cup."
+    },
+    {
+      "teamId": "ENG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 2,
+      "sourceTier": "A",
+      "summary": "Jude Bellingham plays the central no.10 role linking midfield and attack and is described as central to the attack, yet is absent from the modeled top-5 list; Declan Rice and Marcus Rashford are also starters not reflect"
+    },
+    {
+      "teamId": "ENG",
+      "category": "keyPlayerStatusCandidates",
+      "index": 3,
+      "sourceTier": "A",
+      "summary": "Phil Foden, Cole Palmer, and Trent Alexander-Arnold were deliberately left out of the World Cup squad as part of a tactical rebuild; if present in the modeled seed they should be removed."
+    },
+    {
+      "teamId": "ENG",
+      "category": "tacticalProfileCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "England maintained over 70% possession across all 8 qualifying matches, suggesting possession_style=62 is too low; press_intensity=78 appears roughly accurate (aggressive press/counter-press is described as core to Tuche"
+    },
+    {
+      "teamId": "FRA",
+      "category": "nationalStrengthContext",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "France's FIFA rank rose from 3rd to 2nd as of 2026-06-22 after beating Senegal."
+    },
+    {
+      "teamId": "FRA",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Deschamps is conservative with substitution timing when leading -- first change typically after 65-68 minutes, often two at once -- and prefers like-for-like positional swaps rather than shape changes, consistent with us"
+    },
+    {
+      "teamId": "FRA",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "France's actual setup is a pragmatic mix of 4-2-3-1 and 4-3-3 with a double pivot protecting the back line, consistent with the seed's 4-2-3-1 default."
+    },
+    {
+      "teamId": "FRA",
+      "category": "managerStatus",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Didier Deschamps remains manager through the 2026 World Cup but publicly announced in Jan 2025 that he will step down afterward; Zinedine Zidane has reportedly verbally agreed to succeed him."
+    },
+    {
+      "teamId": "FRA",
+      "category": "keyPlayerStatusCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Ousmane Dembele won the 2025 Ballon d'Or (ahead of Lamine Yamal) following a treble-winning season with PSG; current overall=77 appears clearly underrated relative to this status."
+    },
+    {
+      "teamId": "FRA",
+      "category": "keyPlayerStatusCandidates",
+      "index": 1,
+      "sourceTier": "A",
+      "summary": "William Saliba has had a recurring back issue through the season but Deschamps has publicly denied it affects World Cup availability; overall=68 may be undervalued for a player rated among the world's top center-backs."
+    },
+    {
+      "teamId": "FRA",
+      "category": "keyPlayerStatusCandidates",
+      "index": 2,
+      "sourceTier": "A",
+      "summary": "Michael Olise scored a hat-trick in a pre-World-Cup friendly and contributed a decisive performance in France's World Cup opener vs Senegal; described as a future Ballon d'Or contender, suggesting overall=75 has room to "
+    },
+    {
+      "teamId": "FRA",
+      "category": "keyPlayerStatusCandidates",
+      "index": 3,
+      "sourceTier": "B",
+      "summary": "Aurelien Tchouameni and N'Golo Kante (the team's double-pivot midfield core) are absent from the modeled top-5 list, which is attack-heavy (3 right-wingers)."
+    },
+    {
+      "teamId": "POR",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "sourceTier": "A",
+      "summary": "Martinez tends to make his first change at halftime when reacting to a deficit (e.g. 2025 NL semifinal vs Germany), but has been criticized as slow to react in drawn/stagnant matches (last change at 83' in a 1-1 draw vs "
+    },
+    {
+      "teamId": "POR",
+      "category": "formationCandidates",
+      "index": 0,
+      "sourceTier": "B",
+      "summary": "Portugal's base shape is 4-3-3 (matches seed) with variation to a compact 3-4-2-1 against stronger opposition."
+    },
+    {
+      "teamId": "POR",
+      "category": "managerStatus",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "Roberto Martinez remains manager, having won the 2025 Nations League (beating Spain on penalties)."
+    },
+    {
+      "teamId": "POR",
+      "category": "keyPlayerStatusCandidates",
+      "index": 0,
+      "sourceTier": "S",
+      "summary": "Cristiano Ronaldo is the current captain and started Portugal's World Cup opener vs DR Congo at 41, becoming the oldest outfield starter in World Cup history; if absent from the modeled roster, this is a major omission."
+    },
+    {
+      "teamId": "POR",
+      "category": "keyPlayerStatusCandidates",
+      "index": 1,
+      "sourceTier": "A",
+      "summary": "Rafael Leao has been injury-prone through 2025-26 and was benched for Portugal's World Cup opener; the seed's framing of him as the top-rated, guaranteed starter (overall=72) does not match this."
+    }
+  ],
+  "recommendationsJa": [
+    "現行フィールド候補73件は、反映specを書く前にURL付き出典へ差し替える。",
+    "URLが無い候補も、調査の方向性としては保持する。削除ではなく再確認キューとして扱う。",
+    "選手交代候補は現エンジンに直接入れず、将来仕様の要求データとして保留する。"
+  ]
+}
