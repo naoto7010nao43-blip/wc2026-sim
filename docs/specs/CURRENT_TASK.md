@@ -14,7 +14,9 @@ Ready:
 1. Finish `docs/specs/017-external-data-verification-expansion.md`.
 2. Continue directly into `docs/specs/018-claude-full-delivery-sprint.md`.
 
-Claude Code should continue without routine user confirmation. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, and handoff reporting while Codex is unavailable. Codex will return later for review and aftercare.
+Claude Code should continue without routine user confirmation. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, production publication, and handoff reporting while Codex is unavailable. Codex will return later for review and aftercare.
+
+The user has explicitly authorized production push/deploy after all local release gates pass and `backend/reports/release_readiness_2026-06-24.json` shows `readyForManualPush=true`.
 
 ## Critical Worktree Warning
 
@@ -51,11 +53,12 @@ Claude Code may:
 
 Claude Code must not:
 
-- push or deploy production unless the user explicitly authorizes production push/deploy;
 - delete in-progress work;
 - apply URL-less external claims to seed/rating/tactical data;
 - apply Tier C claims as data;
 - silently mark estimated data as official.
+
+Claude Code must stop before production only if the production target/branch/URLs cannot be determined from local configuration or project docs, or if deployment/post-deploy smoke fails and the safe recovery path is unclear.
 
 ## Required Minimum Verification For The Current External-Data Work
 

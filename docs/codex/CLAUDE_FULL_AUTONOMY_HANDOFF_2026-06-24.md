@@ -15,16 +15,16 @@ Codex is currently unavailable, and the user wants you to continue autonomously.
 
 Important: if backend/reports/external_data_verification_candidates_2026-06-24.json is already modified, treat it as your in-progress research. Do not reset or discard it.
 
-Finish Spec 017, then continue directly into Spec 018. Work in long batches, run the required verification, commit locally when each coherent phase passes, and continue to the next phase without asking for routine approval. Ask the user only if a Stop condition applies, or if production push/deploy is needed.
+Finish Spec 017, then continue directly into Spec 018. Work in long batches, run the required verification, commit locally when each coherent phase passes, and continue to the next phase without asking for routine approval. Ask the user only if a Stop condition applies.
 
-Do not push or deploy unless the user explicitly authorizes production push/deploy.
+The user explicitly authorizes production push/deploy after all local release gates pass and backend/reports/release_readiness_2026-06-24.json shows readyForManualPush=true. If the production target/branch/URLs cannot be determined from local configuration or project docs, ask only for that missing deployment information. If deploy or post-deploy smoke fails, stop and report immediately.
 
 After each committed phase, report commit hash, changed files, verification results, data/system changes, risks, and the next phase you will continue with.
 ```
 
 ## Why Claude Is Taking Over Temporarily
 
-The user wants the project to keep moving while Codex is usage-limited. Claude Code should now own the implementation sprint, local verification, local commits, and release-candidate preparation. Codex will return later for review, simulation audit, and aftercare.
+The user wants the project to keep moving while Codex is usage-limited. Claude Code should now own the implementation sprint, local verification, local commits, release-candidate preparation, production publication, and post-deploy smoke. Codex will return later for review, simulation audit, and aftercare.
 
 ## What Must Happen First
 
@@ -54,7 +54,7 @@ Claude may implement everything explicitly described in `docs/specs/018-claude-f
 - diagnostics and UI surfaces;
 - release-candidate notes.
 
-Claude must keep data confidence honest and must not push/deploy without explicit user authorization.
+Claude must keep data confidence honest and may push/deploy only after the release gates pass and `readyForManualPush=true`.
 
 ## Codex Aftercare Plan
 

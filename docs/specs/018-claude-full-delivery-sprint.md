@@ -4,7 +4,7 @@ Status: Ready for Claude Code
 
 ## Why This Spec Exists
 
-Codex may be unavailable because of usage limits. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, and aftercare setup as far as possible without routine confirmation.
+Codex may be unavailable because of usage limits. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, production publication, and aftercare setup as far as possible without routine confirmation.
 
 Codex will return later as reviewer, auditor, and aftercare owner. Until then, Claude Code should treat this file as the active product/data/simulation implementation plan.
 
@@ -23,7 +23,6 @@ Claude Code may:
 
 Claude Code must not:
 
-- push to remote or deploy production unless the user explicitly says production push/deploy is allowed;
 - silently mark estimated data as official;
 - copy unsupported ratings from market value or reputation alone;
 - apply Tier C claims as data;
@@ -32,6 +31,20 @@ Claude Code must not:
 - remove existing user/Codex/Claude work to make a task easier.
 
 If the working tree contains an uncommitted `backend/reports/external_data_verification_candidates_2026-06-24.json`, assume it is Claude Code's in-progress research. Continue from it. Do not discard it.
+
+## Production Publication Authorization
+
+The user has explicitly authorized Claude Code to publish the site when the release gates pass.
+
+Claude Code may push/deploy to production only after all of these are true:
+
+- all intended implementation/data/report/UI phases are complete or explicitly documented as proposal-only;
+- `.\scripts\pre_release_check.ps1` passes;
+- `backend/reports/release_readiness_2026-06-24.json` shows `readyForManualPush=true`;
+- `git status --short` is clean immediately before push/deploy;
+- the target branch, frontend production URL, and backend production URL can be identified from existing repo/deploy configuration or prior project docs.
+
+If the production target cannot be identified from local configuration/docs, stop and ask the user for only that missing deployment target information. Do not guess a production project.
 
 ## Current State To Read First
 
@@ -334,25 +347,25 @@ cd backend
 
 5. Commit release-candidate notes and readiness report.
 
-Do not push/deploy unless the user explicitly writes that production push/deploy is allowed.
+The user has explicitly authorized production push/deploy after the full local release gates pass. Continue to Phase 9 when the release candidate is clean.
 
-## Phase 9 - If User Explicitly Allows Production Push/Deploy
-
-Only after explicit user authorization:
+## Phase 9 - Production Push/Deploy
 
 1. Confirm working tree clean.
 2. Confirm latest full gate passed.
-3. Push the intended branch.
-4. If deployment is automatic, monitor build/deploy logs.
-5. Run `scripts/post_deploy_smoke.ps1` with production frontend/backend URLs.
-6. If post-deploy smoke fails, report immediately and do not hide the failure.
-7. Write a production deployment note.
+3. Confirm production target and branch from local configuration/docs.
+4. Push the intended branch.
+5. If deployment is automatic, monitor build/deploy logs.
+6. Run `scripts/post_deploy_smoke.ps1` with production frontend/backend URLs.
+7. If post-deploy smoke fails, report immediately and do not hide the failure.
+8. Write a production deployment note.
 
 ## Stop Conditions
 
 Stop and ask the user only if:
 
-- production push/deploy is needed but not explicitly authorized;
+- production target information cannot be determined from local configuration/docs;
+- production push/deploy fails and the safe recovery path is unclear;
 - source access is unavailable for the whole data task;
 - a data/system change would require a destructive rewrite;
 - verification fails and a focused investigation cannot find a safe fix;
