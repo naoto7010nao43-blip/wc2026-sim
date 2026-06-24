@@ -5,78 +5,118 @@ Read first:
 - `docs/codex/ROLE_SPLIT.md`
 - `docs/codex/HANDOFF_PROTOCOL.md`
 - `docs/codex/AUTONOMOUS_SPRINT_PROTOCOL.md`
+- `docs/codex/DATA_GOVERNANCE_POLICY.md`
 
 ## Active Claude Code Task
 
-Ready: `docs/specs/017-external-data-verification-expansion.md`
+Ready:
 
-Claude Code should continue without routine user confirmation. This is a read-only research/reporting task:
+1. Finish `docs/specs/017-external-data-verification-expansion.md`.
+2. Continue directly into `docs/specs/018-claude-full-delivery-sprint.md`.
 
-- expand external verification beyond the already-covered teams;
-- add substitution-tendency research for all 48 teams where evidence exists;
-- write structured candidate reports only;
-- do not change seed data, ratings, manager/tactical values, formulas, simulation logic, or UI behavior;
-- commit locally when verification passes;
-- do not push.
+Claude Code should continue without routine user confirmation. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, and handoff reporting while Codex is unavailable. Codex will return later for review and aftercare.
 
-Progress note for Claude Code:
+## Critical Worktree Warning
 
-- Codex found and validated a partial JSON report at `backend/reports/external_data_verification_candidates_2026-06-24.json`.
-- It currently covers 16 teams: ARG, ESP, ENG, FRA, POR, CRO, NED, MEX, BRA, MAR, BEL, GER, URU, COL, USA, JPN.
-- Validation output is committed at `backend/reports/external_data_verification_validation_2026-06-24.json`.
-- Validation result: valid=true, 121 candidates, 16 future-engine substitution candidates, 16/16 teams strong signal, 4 warnings.
-- Codex added a decision queue at `backend/reports/external_data_decision_queue_2026-06-24.json`: 73 current-field review candidates, 4 warning-hold candidates, 15 future-engine candidates, and 29 provisional-context candidates.
-- Codex added a source-traceability audit at `backend/reports/external_source_traceability_audit_2026-06-24.json`: all 121 current candidates are missing resolvable source URLs, so they are useful research signal but blocked for seed/rating/tactical data changes until URL-backed citations are added.
-- Continue from the remaining teams listed inside that JSON instead of restarting the already-covered 16.
-- For any newly researched team, include a resolvable `url` field for every material source whenever the claim may become a current-field candidate. If a URL cannot be found, keep the item as a review question or provisional context rather than a data-change candidate.
+If `backend/reports/external_data_verification_candidates_2026-06-24.json` is already modified when Claude Code starts, assume it is in-progress Claude research. Do not discard it, reset it, or overwrite it from the committed version. Parse it, continue from it, and include it in the next appropriate commit after validation passes.
 
-This task intentionally reduces user workload. Stop only on the hard stop conditions in the spec.
+## Immediate Priority
 
-Codex hit a usage limit on 2026-06-23; the user authorized Claude Code to work solo for the rest of that day, within Codex's existing policy direction (no new spec invention, no data/rating/formula changes). See `docs/codex/PROGRESS.md` "Current Priority" for the full list of verification/diagnostics-only work done.
+1. Complete external verification for all 48 teams.
+2. Add URL-backed citations to material current-field candidates.
+3. Regenerate:
+   - `backend/reports/external_data_verification_validation_2026-06-24.json`
+   - `backend/reports/external_source_traceability_audit_2026-06-24.json`
+   - `backend/reports/external_data_decision_queue_2026-06-24.json`
+4. Then execute Spec 018 phases in order.
 
-The benchmark-methodology finding from that solo pass has now been resolved by Codex: synthetic prediction benchmarks use a dual-order average (`benchmarkMethod=dual_order_average`) so FIFA-better-ranked teams no longer receive a correlated home-advantage bonus. See `docs/codex/BENCHMARK_METHOD_UPDATE_2026-06-24.md`. The rank75 calibration remains justified under the corrected method. No production simulation behavior changed.
+Known state before this handoff:
 
-Also see `docs/codex/EXTERNAL_DATA_VERIFICATION_CANDIDATES_2026-06-24.md` (new, 2026-06-24): at the user's explicit request, read-only web research across 8 priority teams comparing seed data (manager/formation/tactics/squad) against real-world current status. Several high-priority candidates (missing star players, stale club transfers, a non-selected player still in the seed roster) plus 3 cross-team patterns Codex may want to investigate further. No seed/rating/formula files touched -- purely a candidate document awaiting Codex's review.
+- 16/48 teams are already covered.
+- Covered teams: ARG, ESP, ENG, FRA, POR, CRO, NED, MEX, BRA, MAR, BEL, GER, URU, COL, USA, JPN.
+- 32 teams remain in the JSON `scope.remainingUnresearchedTeams`.
+- Current validation result before new Claude work: valid=true, 121 candidates, 16/16 covered teams strong signal, 4 warnings.
+- Codex decision queue before new Claude work: 73 current-field review candidates, 4 warning-hold candidates, 15 future-engine candidates, 29 provisional-context candidates.
+- Codex source traceability audit before new Claude work: 121/121 candidates missing resolvable URLs. Treat the data as useful signal, but do not apply seed/rating/tactical changes from URL-less claims.
 
-Additional policy context:
+## Autonomy Rules
 
-- `docs/codex/DATA_GOVERNANCE_POLICY.md`
+Claude Code may:
 
-Spec 016 is complete.
+- continue in long batches;
+- commit after verification passes;
+- proceed from one phase to the next without asking;
+- improve UI, diagnostics, reports, tests, and bounded implementation details named in Spec 018;
+- create release-candidate notes and final handoff docs.
 
-Spec 015 is complete.
+Claude Code must not:
 
-Spec 014 is complete.
+- push or deploy production unless the user explicitly authorizes production push/deploy;
+- delete in-progress work;
+- apply URL-less external claims to seed/rating/tactical data;
+- apply Tier C claims as data;
+- silently mark estimated data as official.
 
-Spec 013 is complete and committed as `b08ed51`. The production release checklist/diagnostic-copy guardrail follow-up is committed as `934df98`.
+## Required Minimum Verification For The Current External-Data Work
 
-Spec 012 is complete and committed as `10a3f84`.
+Run before committing the completed Spec 017 batch:
 
-Spec 011 is complete.
+```powershell
+cd backend
+.\venv\Scripts\python.exe -c "import json, pathlib; json.loads(pathlib.Path('reports/external_data_verification_candidates_2026-06-24.json').read_text(encoding='utf-8')); print('json ok')"
+.\venv\Scripts\python.exe scripts\validate_external_data_verification_report.py reports\external_data_verification_candidates_2026-06-24.json --out reports\external_data_verification_validation_2026-06-24.json
+.\venv\Scripts\python.exe scripts\audit_external_source_traceability.py
+.\venv\Scripts\python.exe scripts\build_external_data_decision_queue.py
+.\venv\Scripts\python.exe scripts\audit_text_encoding.py
+cd ..
+git diff --check
+```
 
-Spec 010 is complete.
+If code is changed, also run the relevant backend tests and frontend lint/build. Spec 018 lists stronger verification for later implementation phases.
 
-Spec 008 has been implemented and committed by Codex while continuing the unattended sprint.
-Spec 009 has been implemented and committed by Codex while continuing the unattended sprint.
-Codex also applied the newly safe official-profile fields found by Spec 009 and regenerated reports.
+## Current Context
 
-Context only:
+The benchmark-methodology issue has already been fixed by Codex with dual-order synthetic benchmarks. The rank75 model remains justified under corrected benchmarking.
 
-- `docs/specs/002-match-detail-v2-direction.md`
-- `docs/specs/007-official-squad-data-update-direction.md`
+The site currently has `/data-review` diagnostics for:
 
-Completed:
+- release readiness;
+- model calibration;
+- simulation stability;
+- external data verification;
+- external decision queue;
+- source traceability;
+- substitution model gap;
+- team/squad/manager/rating/source audits.
+
+Use these diagnostics as product surfaces, not just backend reports.
+
+## Reporting
+
+After each committed phase, Claude Code should report:
+
+- commit hash;
+- changed files;
+- summary;
+- verification results;
+- data/system changes made;
+- remaining risks;
+- next phase to continue.
+
+Do not ask the user whether to commit or whether to continue when verification has passed.
+
+## Completed Context
+
+Completed specs:
 
 - `docs/specs/001-lint-fix.md`
 - `docs/specs/003-match-detail-trust-states.md`
 - `docs/specs/004-simulator-prediction-panel.md`
 - `docs/specs/005-tournament-odds-panel.md`
 - `docs/specs/006-overnight-data-trust-sprint.md`
-- Spec 007A official squad merge proposal, implemented as commit `ebe4064`
 - `docs/specs/008-official-squad-safe-field-apply.md`
 - `docs/specs/009-official-squad-match-quality.md`
-- Spec 009 follow-up safe field apply for newly matched players
-- `docs/specs/010-unattended-site-quality-sprint.md` Phases 1-6, 8, 9, and one Phase-10 cycle (Phase 7 skipped, documented)
+- `docs/specs/010-unattended-site-quality-sprint.md`
 - `docs/specs/011-team-data-review-diagnostics.md`
 - `docs/specs/012-squad-rating-gap-review.md`
 - `docs/specs/013-manager-tactical-trust-review.md`
@@ -84,4 +124,7 @@ Completed:
 - `docs/specs/015-rating-readiness-data-review.md`
 - `docs/specs/016-model-calibration-transparency.md`
 
-When Codex adds a new Ready task here, follow the autonomous sprint protocol and commit when the spec passes its verification commands.
+Context-only older direction docs:
+
+- `docs/specs/002-match-detail-v2-direction.md`
+- `docs/specs/007-official-squad-data-update-direction.md`
