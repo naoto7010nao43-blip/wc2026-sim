@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T05:05:59.825138+00:00",
+  "generatedAt": "2026-06-24T05:10:30.357470+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": false,
   "blockers": [
@@ -109,6 +109,11 @@
       "pattern": "external_data_decision_queue_*.json",
       "present": true,
       "path": "backend\\reports\\external_data_decision_queue_2026-06-24.json"
+    },
+    {
+      "pattern": "external_source_traceability_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\external_source_traceability_audit_2026-06-24.json"
     }
   ],
   "requiredCommands": [
