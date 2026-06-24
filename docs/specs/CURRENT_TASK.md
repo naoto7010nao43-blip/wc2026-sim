@@ -12,12 +12,20 @@ Ready: `docs/specs/017-external-data-verification-expansion.md`
 
 Claude Code should continue without routine user confirmation. This is a read-only research/reporting task:
 
-- expand external verification from the first 8 priority teams to the remaining 40 teams;
+- expand external verification beyond the already-covered teams;
 - add substitution-tendency research for all 48 teams where evidence exists;
 - write structured candidate reports only;
 - do not change seed data, ratings, manager/tactical values, formulas, simulation logic, or UI behavior;
 - commit locally when verification passes;
 - do not push.
+
+Progress note for Claude Code:
+
+- Codex found and validated a partial JSON report at `backend/reports/external_data_verification_candidates_2026-06-24.json`.
+- It currently covers 16 teams: ARG, ESP, ENG, FRA, POR, CRO, NED, MEX, BRA, MAR, BEL, GER, URU, COL, USA, JPN.
+- Validation output is committed at `backend/reports/external_data_verification_validation_2026-06-24.json`.
+- Validation result: valid=true, 121 candidates, 16 future-engine substitution candidates, 16/16 teams strong signal, 4 warnings.
+- Continue from the remaining teams listed inside that JSON instead of restarting the already-covered 16.
 
 This task intentionally reduces user workload. Stop only on the hard stop conditions in the spec.
 
