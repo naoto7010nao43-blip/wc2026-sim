@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-06-24T04:50:00+09:00",
   "scope": {
-    "coveredTeams": ["ARG", "ESP", "ENG", "FRA", "POR", "CRO", "NED", "MEX", "BRA", "MAR", "BEL", "GER", "URU", "COL", "USA", "JPN", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE", "NOR", "AUS", "ALG", "EGY", "CAN", "PAN", "SCO", "TUN", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD"],
-    "remainingUnresearchedTeams": ["RSA", "JOR", "BIH", "CPV", "GHA", "CUW", "HAI", "NZL"]
+    "coveredTeams": ["ARG", "ESP", "ENG", "FRA", "POR", "CRO", "NED", "MEX", "BRA", "MAR", "BEL", "GER", "URU", "COL", "USA", "JPN", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE", "NOR", "AUS", "ALG", "EGY", "CAN", "PAN", "SCO", "TUN", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD", "RSA", "JOR", "BIH", "CPV", "GHA", "CUW", "HAI", "NZL"],
+    "remainingUnresearchedTeams": []
   },
   "teams": [
     {
@@ -937,6 +937,188 @@
         {"claim": "Against Portugal, defensively-minded substitutions were made in the 70s-80s (like-for-like emphasis); Bakambu was substituted before the hour mark against Colombia, suggesting a tendency to manage his minutes.", "sources": [{"name": "Bleacher Report", "url": "https://bleacherreport.com/liveblogs/25444162-colombia-vs-congo-dr-live-world-cup-2026-updates-scores-and-highlights", "tier": "A", "observedDate": "2026-06-23"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
       ],
       "recommendedCodexNextActions": ["Correct historical context: this is DR Congo's 2nd World Cup (1974, then 2026), not a debut", "Update Wissa's club to Newcastle United and Mbemba's club to Lille", "Treat the FIFA rank=43-46 claim as a review question given the large gap from the seed's 60"]
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "managerStatus": [
+        {"claim": "Hugo Broos remains manager (since 2021), with a contract through 2026-06-30; he has stated this World Cup will be his final coaching job before retiring.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Hugo_Broos", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "The seed's 4-2-3-1 is a reasonable default blueprint, but Broos used a surprise back-three 5-3-2 in the World Cup opener against Mexico to match Mexico's expected shape; captain Ronwen Williams defended the formation choice after the loss.", "sources": [{"name": "IOL", "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-12-ronwen-williams-explains-hugo-broos-surprise-formation-switch-in-bafana-bafana-loss-to-mexico/", "tier": "A", "observedDate": "2026-06-12"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Percy Tau plays for Thep Xanh Nam Dinh FC in Vietnam (joined 2025-08-16) and was not in the starting lineup for the World Cup opener against Mexico (Reyners and Foster started as the front two); his actual World Cup playing time is unclear.", "sources": [{"name": "beIN Sports", "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/mexico-s-lineup-vs-south-africa-for-the-opening-match-of-the-2026-fifa-world-cup-2026-06-11", "tier": "A", "observedDate": "2026-06-11"}, {"name": "Transfermarkt", "url": "https://www.transfermarkt.us/percy-tau/profil/spieler/312239", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Lyle Foster (Burnley) dealt with gastroenteritis and a dead-leg injury during the 2025-26 season but remains the team's primary striker option, starting the World Cup opener.", "sources": [{"name": "Kickoff.com", "url": "https://www.kickoff.com/sa-news/sa-players-abroad/injury-update-good-news-for-lyle-foster-at-burnley", "tier": "B", "observedDate": "2025-26"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Teboho Mokoena's equalizer against Czechia (83rd minute) was a penalty kick awarded by VAR for a handball, not an open-play goal; he is confirmed as the team's CDM, and the captain is goalkeeper Ronwen Williams, not Mokoena.", "sources": [{"name": "Sofascore", "url": "https://www.sofascore.com/news/czechia-1-1-south-africa-mokoenas-penalty-earns-group-a-draw", "tier": "B", "observedDate": "2026-06-18"}, {"name": "ESPN (captaincy)", "url": "https://www.espn.com/espn/story/_/id/48963468/ronwen-williams-fact-file-all-ronza-south-africa-goalkeeper-captain", "tier": "A", "observedDate": "2026"}], "confidence": "high", "mapsTo": "seed_roster", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "South Africa qualified for its first World Cup in 16 years (beating Rwanda 3-0) and lost 0-2 to Mexico, drew 1-1 with Czechia, and lost 0-1 to South Korea in the World Cup group stage.", "sources": [{"name": "beIN Sports (qualification)", "url": "https://www.beinsports.com/en-us/soccer/caf-world-cup-qualifiers/articles/bafana-bafana-qualify-for-the-2026-world-cup-south-africa-return-after-16-years-away-2025-10-14", "tier": "A", "observedDate": "2025-10-14"}, {"name": "ESPN match report (vs South Korea)", "url": "https://www.espn.com/soccer/match/_/gameId/760466/south-korea-south-africa", "tier": "A", "observedDate": "2026-06-24"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Broos has explained at least one substitution as a deliberate tactical correction for midfield ball control (replacing a player 'losing the ball too easily') rather than a fatigue-driven like-for-like swap, suggesting a tactically-reactive substitution style.", "sources": [{"name": "Kickoff.com", "url": "https://www.kickoff.com/psl/bafana/hugo-broos-explains-yaya-sithole-substitution-against-zimbabw", "tier": "B", "observedDate": "2025-26"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Note that Broos used a back-three 5-3-2 in the World Cup opener despite a 4-2-3-1 default", "Update Tau's club to Thep Xanh Nam Dinh FC and flag uncertain World Cup playing time", "Correct Mokoena's Czechia goal to a penalty and clarify captaincy belongs to Ronwen Williams"]
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "managerStatus": [
+        {"claim": "Jamal Sellami remains manager, having taken over in 2024 and led Jordan to its first-ever World Cup.", "sources": [{"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sellami-replaces-ammouta-jordan-head-coach", "tier": "S", "observedDate": "2024"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Sources disagree on Jordan's base shape: some describe 4-2-3-1 (matching the seed) shifting to 5-4-1 out of possession, while others describe a 3-4-2-1/3-4-3 base; no single confirmed World Cup lineup diagram resolved this.", "sources": [{"name": "LeagueLane", "url": "https://leaguelane.com/jordan-world-cup-2026-squad-key-players-tactics-predictions/", "tier": "B", "observedDate": "2026"}, {"name": "World Soccer Talk", "url": "https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "low", "mapsTo": "default_formation", "candidateCategory": "ambiguous candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Yazan Al-Naimat (Al-Arabi SC, Qatar) suffered an ACL tear on 2025-12-12 during the FIFA Arab Cup and was entirely unavailable for the 2026 World Cup; if the seed models him as an available starting ST, this is a major discrepancy.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Yazan_Al-Naimat", "tier": "B", "observedDate": "2025-12"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Musa Al-Taamari plays for Stade Rennais (Ligue 1, joined 2025-02-03), not AS Monaco as the seed may show.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Musa_Al-Taamari", "tier": "B", "observedDate": "2026-03"}, {"name": "FIFA.com (preliminary squad)", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-preliminary-squad", "tier": "S", "observedDate": "2026"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Noor Al-Rawabdeh is reported as a midfielder, not the seed's center-back, and plays for Selangor FC (Malaysia).", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Noor_Al-Rawabdeh", "tier": "B", "observedDate": "2024-09"}, {"name": "Heavy.com", "url": "https://heavy.com/sports/soccer/world-cup/jordan-world-cup-squad-2026-clubs-2/", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Jordan reached its first-ever World Cup but was eliminated after losing both of its first two group matches, 1-3 to Austria and 1-2 to Algeria.", "sources": [{"name": "Wikipedia, 2026 FIFA World Cup Group J", "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J", "tier": "B", "observedDate": "2026-06-22"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Sellami has been criticized for very slow substitution timing: the first change against Austria came at the 87th minute, and against Algeria he delayed changes until a cooling break (during which Algeria scored from a corner); he attributed this to his own inexperience after the match.", "sources": [{"name": "Fox Sports", "url": "https://www.foxsports.com/stories/soccer/jordan-algeria-world-4-takeaways", "tier": "A", "observedDate": "2026-06-22"}, {"name": "Africa Top Sports", "url": "https://en.africatopsports.com/2026-fifa-world-cup-sellami-proud-of-jordan-despite-exit-after-algeria-defeat/", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Flag Al-Naimat's ACL injury and complete absence from the World Cup -- high priority", "Update Al-Taamari's club to Stade Rennais", "Correct Al-Rawabdeh's position to midfielder and club to Selangor FC"]
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "managerStatus": [
+        {"claim": "Sergej Barbarez remains manager, having taken over in April 2024 in his first managerial job and led Bosnia to its first World Cup since 2014 via the playoffs.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Sergej_Barbarez", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Bosnia's confirmed World Cup starting lineup against Switzerland used a 4-4-2 (Dzeko and Demirovic as a strike pair), not the seed's 4-2-3-1.", "sources": [{"name": "ESPN match report", "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland", "tier": "A", "observedDate": "2026-06-18"}], "confidence": "high", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [
+        {"claim": "Bosnia recorded only 38% possession against Switzerland, supporting a low possession_style; no numeric source was found for press_intensity or defensive_line_height.", "sources": [{"name": "ESPN match report", "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland", "tier": "A", "observedDate": "2026-06-18"}], "confidence": "medium", "mapsTo": "possession_style", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Edin Dzeko (40, captain) moved to Schalke 04 (Bundesliga 2) in January 2026, remains active, started against Switzerland, and was substituted at the 64th minute -- a relatively early change consistent with managing a veteran's minutes.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Edin_D%C5%BEeko", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Kenan Piric is a goalkeeper (Neftci Baku, Azerbaijan), not an outfield CDM/CB; if the seed models him in an outfield role this is an identity/position error.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kenan_Piri%C4%87", "tier": "A", "observedDate": "2026"}, {"name": "UEFA official", "url": "https://www.uefa.com/uefanationsleague/teams/players/250059360--kenan-piric/", "tier": "S", "observedDate": "2026"}], "confidence": "high", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Rade Krunic (Red Star Belgrade) is a confirmed squad member but did not appear in the starting lineup for the Switzerland match; his current playing-time status is unclear.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Rade_Kruni%C4%87", "tier": "A", "observedDate": "2026"}], "confidence": "low", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Bosnia reached the World Cup via the playoffs (penalty-shootout wins over Wales and Italy) and lost 1-4 to Switzerland while drawing 1-1 with Canada in the group stage.", "sources": [{"name": "ESPN match report", "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland", "tier": "A", "observedDate": "2026-06-18"}, {"name": "Olympics.com (vs Canada)", "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-canada-bosnia-football-results-live-updates", "tier": "A", "observedDate": "2026-06-12"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Against Switzerland, Barbarez substituted Dzeko relatively early (64th minute) for fresh legs, then made a double change late (86th minute) to add running power -- a like-for-like-heavy pattern with one veteran-management exception.", "sources": [{"name": "ESPN match report", "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland", "tier": "A", "observedDate": "2026-06-18"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Update default_formation to 4-4-2", "Update Dzeko's club to Schalke 04 and flag his age-driven substitution pattern", "Resolve Kenan Piric's identity -- he is a goalkeeper, not an outfield CDM/CB"]
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "managerStatus": [
+        {"claim": "Pedro Leitao Brito ('Bubista') remains manager (since January 2020) and won the 2025 CAF Men's Coach of the Year award after leading Cape Verde to its first-ever World Cup.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bubista", "tier": "A", "observedDate": "2026-06"}, {"name": "PanAfricaFootball", "url": "https://panafricafootball.com/article/caf-awards-2025-bubista-wins-africas-coach-of-the-year-award", "tier": "A", "observedDate": "2025-11"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Cape Verde's confirmed World Cup lineup against Spain used 4-1-4-1 (Kevin Lenini as the anchor), not the seed's 4-4-2; other sources describe a variable 4-3-3/4-2-3-1 base.", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/spain-cape-verde-world-cup-2026-tactical-analysis-tactics/", "tier": "B", "observedDate": "2026-06-15"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Ryan Mendes (captain, Igdir FK in Turkey) is Cape Verde's all-time leading scorer and appearance-holder, in good current club form (a hat-trick in April 2026); seed club should reflect Igdir FK.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Ryan_Mendes", "tier": "S", "observedDate": "2026-06"}, {"name": "Heavy.com", "url": "https://heavy.com/sports/soccer/cape-verde-skipper-ryan-mendes-facts/", "tier": "A", "observedDate": "2026-05"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Jamiro Monteiro plays for PEC Zwolle (Netherlands), which may differ from the seed's club data.", "sources": [{"name": "Toffee Web", "url": "https://www.toffeeweb.com/world-cup/cape-verde-islands/jamiro-monteiro/", "tier": "B", "observedDate": "2026-05"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Stopira is reported as a left-back, not the seed's center-back, and is 38 years old, holding Hungarian as well as Cape Verdean nationality; he plays for Torreense (Portugal's second tier).", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Stopira", "tier": "S", "observedDate": "2026-05"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Cape Verde qualified for its first-ever World Cup (beating Eswatini 3-0 on 2025-10-13) and drew 0-0 with Spain then 2-2 with Uruguay in the group stage.", "sources": [{"name": "FIFA.com (vs Spain)", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-cabo-verde-highlights-match-report", "tier": "S", "observedDate": "2026-06-15"}, {"name": "FIFA.com (vs Uruguay)", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-cabo-verde-match-report-highlights", "tier": "S", "observedDate": "2026-06-21"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Against Spain, Bubista made a triple substitution at the 61st minute mixing defensive solidity and attacking refresh; against Uruguay, late substitute Helio Varela scored the equalizer, suggesting a 'super-sub' tendency in close games.", "sources": [{"name": "Tactical Football Analysis", "url": "https://tacticalfootballanalysis.com/spain-cape-verde-world-cup-2026-tactical-analysis-tactics/", "tier": "B", "observedDate": "2026-06-15"}, {"name": "Sky Sports", "url": "https://www.skysports.com/football/news/12098/13553802/world-cup-2026-uruguay-2-2-cape-verde-african-nation-claim-shock-second-group-h-point-against-two-time-winners", "tier": "A", "observedDate": "2026-06-21"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Correct Stopira's position to left-back (not center-back)", "Update Monteiro's club to PEC Zwolle", "Reconsider default_formation given the confirmed 4-1-4-1 against Spain"]
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "managerStatus": [
+        {"claim": "The seed's manager (Otto Addo) is stale: Addo was sacked on 2026-03-31 after four straight warm-up defeats (including 5-1 to Austria and 2-1 to Germany). He was replaced by Carlos Queiroz, who led Ghana at the actual World Cup.", "sources": [{"name": "Outlook India", "url": "https://www.outlookindia.com/sports/football/fifa-world-cup-2026-ghana-sack-head-coach-otto-addo", "tier": "A", "observedDate": "2026-03-31"}, {"name": "CAF official", "url": "https://www.cafonline.com/fifa-world-cup/news/ghana-appoint-carlos-queiroz-as-coach-ahead-of-2026-world-cup/", "tier": "S", "observedDate": "2026-04"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Under Queiroz, Ghana used 4-2-3-1 against Panama (Jordan Ayew at striker), shifting to a 5-man backline / 4-5-1 defensively; this contrasts with the seed's static 4-3-3 + Otto Addo pairing.", "sources": [{"name": "Africa Top Sports", "url": "https://en.africatopsports.com/2026-fifa-world-cup-ghana-and-panama-confirmed-lineup-for-opener/", "tier": "A", "observedDate": "2026-06-17"}, {"name": "ESPN", "url": "https://www.espn.com/espn/story/_/id/48908368/ghana-boss-carlos-queiroz-tactical-vision-clear-does-squad-meet-it", "tier": "A", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Mohammed Kudus transferred from West Ham to Tottenham Hotspur in summer 2025 (~£55m) but is OUT of the World Cup entirely due to a quad injury suffered in January 2026 with a recovery setback; if the seed models him as an available starting RW, this is a major discrepancy.", "sources": [{"name": "ESPN (transfer)", "url": "https://www.espn.com/soccer/story/_/id/45711801/tottenham-hotspur-mohammed-kudus-transfer-west-ham", "tier": "A", "observedDate": "2025"}, {"name": "FIFA.com (squad, confirms absence)", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/ghana-squad-world-cup-2026-carlos-queiroz", "tier": "S", "observedDate": "2026-05"}], "confidence": "high", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Thomas Partey faces ongoing rape and sexual assault charges (filed July 2025, trial set for June 2027), left Arsenal for Villarreal on a free transfer in summer 2025, was named vice-captain, and was denied entry to Canada (missing the Panama opener) but played the England match.", "sources": [{"name": "Crown Prosecution Service (official)", "url": "https://www.cps.gov.uk/london-north/news/authorises-charges-against-thomas-partey", "tier": "S", "observedDate": "2025-07"}, {"name": "Sports Illustrated", "url": "https://www.si.com/soccer/why-thomas-partey-allowed-play-ghana-vs-england-2026-world-cup", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Jordan Ayew (released by relegated Leicester City in May 2026) is Ghana's captain (since 2025), not Kudus or Partey, and started at striker against Panama.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jordan_Ayew", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Ghana beat Panama 1-0 (95th-minute winner by Caleb Yirenkyi) in World Cup Group L; its FIFA rank climbed to 65 after the win, against the seed's fifa_rank=61.", "sources": [{"name": "Al Jazeera", "url": "https://www.aljazeera.com/sports/2026/6/18/ghana-beat-panama-1-0-in-chaotic-charged-world-cup-group-l", "tier": "A", "observedDate": "2026-06-18"}, {"name": "GhanaSoccerNet", "url": "https://ghanasoccernet.com/ghana-moves-eight-places-up-in-latest-fifa-ranking-after-panama-win", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "fifa_rank", "candidateCategory": "ambiguous candidate"}
+      ],
+      "substitutionTendencyCandidates": [],
+      "recommendedCodexNextActions": ["Update manager_name to Carlos Queiroz (Addo was sacked March 2026) -- highest-priority correction in this batch", "Update Kudus's club to Tottenham and flag his World Cup-ending quad injury", "Flag Partey's ongoing legal case, club change to Villarreal, and the Canada travel restriction that cost him the Panama match", "Correct captaincy to Jordan Ayew"]
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "managerStatus": [
+        {"claim": "Dick Advocaat remains manager; one secondary source reports a resignation around February 2026 (citing his daughter's health) and a return on 2026-05-11, but this has not been directly confirmed against FIFA/official sources.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao_national_football_team", "tier": "B", "observedDate": "2026-06"}], "confidence": "low", "mapsTo": "manager_name", "candidateCategory": "ambiguous candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "4-4-2 is confirmed as Curacao's base shape (matches seed), with situational use of 5-3-2 or 4-3-3.", "sources": [{"name": "World Soccer Talk", "url": "https://worldsoccertalk.com/world-cup/curazao-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "safe factual candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "A player named 'Gevero Markus' could not be found in Curacao's official 26-man World Cup squad list (which includes 8 confirmed center-backs, none named Markus); this seed player may be fabricated or a name/identity error and should be reviewed before being used for any data change.", "sources": [{"name": "Heavy.com (full squad list)", "url": "https://heavy.com/sports/soccer/world-cup/curacao-world-cup-squad-2026-clubs/", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Leandro Bacuna (captain) moved to Igdir FK (Turkey) on 2026-01-06 and is more commonly listed as a midfielder/right-back than the seed's RW.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Leandro_Bacuna", "tier": "B", "observedDate": "2026-01"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Juninho Bacuna went on loan to FC Volendam (Netherlands) from Gaziantep FK on 2026-02-03 and is more commonly listed as a central midfielder than the seed's CAM.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Juninho_Bacuna", "tier": "B", "observedDate": "2026-02"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Curacao (population ~156,000) is the smallest nation ever to reach a World Cup, qualifying unbeaten (drawing Jamaica 0-0 on 2025-11-18); it lost 1-7 to Germany and drew 0-0 with Ecuador in the group stage.", "sources": [{"name": "Sky Sports", "url": "https://www.skysports.com/football/news/12098/13545528/world-cup-2026-curacao-caribbean-nations-historic-first-appearance", "tier": "A", "observedDate": "2026"}, {"name": "NBC News", "url": "https://www.nbcnews.com/sports/soccer/curacao-smalles-nation-world-cup-rcna348528", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [],
+      "recommendedCodexNextActions": ["Verify whether 'Gevero Markus' exists in the actual squad -- likely needs removal or correction, this is the highest-priority data-integrity flag in this batch", "Update Leandro Bacuna's club to Igdir FK and Juninho Bacuna's club to FC Volendam (loan)"]
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "managerStatus": [
+        {"claim": "Sebastien Migne remains manager, having taken over in June 2024 and led Haiti to its first World Cup since 1974 (a 52-year gap).", "sources": [{"name": "FIFA.com", "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sebastien-mign-haiti-interview", "tier": "S", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Haiti's base shape is reported as 4-2-3-1 in possession shifting to 4-4-2 off the ball (not the seed's static 4-4-2); against Brazil, Migne used a 5-4-1.", "sources": [{"name": "World Soccer Talk", "url": "https://worldsoccertalk.com/amp/world-cup/haiti-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/", "tier": "B", "observedDate": "2026"}, {"name": "Khelnow (vs Brazil lineup)", "url": "https://khelnow.com/football/world-football-haiti-starting-lineup-vs-brazil-fifa-world-cup-202606", "tier": "B", "observedDate": "2026-06-19"}], "confidence": "medium", "mapsTo": "default_formation", "candidateCategory": "tactical-profile candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Duckens Nazon (Esteghlal FC, Iran) was reported doubtful with a physical issue ahead of the Brazil match and did not appear in that starting lineup.", "sources": [{"name": "RotoWire", "url": "https://www.rotowire.com/soccer/headlines/duckens-nazon-injury-remains-unlikely-to-face-brazil-520004", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Frantzdy Pierrot is on loan at Caykur Rizespor (Turkey) from AEK Athens; he started against Brazil but was substituted at halftime.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Frantzdy_Pierrot", "tier": "B", "observedDate": "2026"}], "confidence": "medium", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"},
+        {"claim": "Jean-Ricner Bellegarde switched allegiance from France to Haiti in August 2025 (debuted September 2025) and is used as part of a defensive double pivot at Wolverhampton/for Haiti, not as the seed's CAM.", "sources": [{"name": "Wolverhampton Wanderers (official)", "url": "https://www.wolves.co.uk/news/mens-first-team/20260603-world-cup-2026-bellegarde-aiming-to-make-history-with-haiti/", "tier": "S", "observedDate": "2026-06-03"}, {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jean-Ricner_Bellegarde", "tier": "B", "observedDate": "2026"}], "confidence": "high", "mapsTo": "seed_roster", "candidateCategory": "roster/availability candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "Haiti reached its first World Cup since 1974 but was eliminated after losing 0-1 to Scotland and 0-3 to Brazil in the group stage.", "sources": [{"name": "ESPN (vs Brazil)", "url": "https://www.espn.com/soccer/match/_/gameId/760444/haiti-brazil", "tier": "A", "observedDate": "2026-06-19"}, {"name": "Haitian Times", "url": "https://haitiantimes.com/2026/06/20/haiti-loss-brazil-world-cup/", "tier": "A", "observedDate": "2026-06-20"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Against Brazil, Migne made a halftime double substitution (a tactical reset) followed by a 72nd-minute attacking change -- one observed example rather than a confirmed general tendency.", "sources": [{"name": "Khelnow", "url": "https://khelnow.com/football/world-football-haiti-starting-lineup-vs-brazil-fifa-world-cup-202606", "tier": "B", "observedDate": "2026-06-19"}], "confidence": "low", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Flag Nazon's fitness doubt and absence from the Brazil lineup", "Update Pierrot's club to Caykur Rizespor (loan)", "Correct Bellegarde's role to a defensive double-pivot midfielder (not CAM) and note his very recent allegiance switch from France"]
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "managerStatus": [
+        {"claim": "Darren Bazeley remains manager, having taken over in November 2022.", "sources": [{"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Darren_Bazeley", "tier": "A", "observedDate": "2026-06"}, {"name": "FIFA.com (official, unique record)", "url": "https://inside.fifa.com/news/darren-bazeley-new-zealand-world-cup-1st-coach-all-tournaments", "tier": "S", "observedDate": "2026"}], "confidence": "high", "mapsTo": "manager_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "formationCandidates": [
+        {"claim": "Tactical analysis describes a fluid 4-3-3/4-2-3-1 base shifting to 2-3-5 in possession, not the seed's static 4-4-2; this is based on a single Tier-B source and should be treated as a low-confidence candidate.", "sources": [{"name": "whyfootball.org", "url": "https://whyfootball.org/teams/new-zealand-brief.html", "tier": "B", "observedDate": "2026"}], "confidence": "low", "mapsTo": "default_formation", "candidateCategory": "ambiguous candidate"}
+      ],
+      "tacticalProfileCandidates": [],
+      "keyPlayerStatusCandidates": [
+        {"claim": "Chris Wood (captain, Nottingham Forest) had knee surgery in December 2025 and re-injured the same knee in April 2026, but played and recorded 2 assists against Iran at the World Cup.", "sources": [{"name": "Goal.com", "url": "https://www.goal.com/en-us/lists/nottingham-forest-striker-chris-wood-undergoes-surgery-in-bitter-end-to-2025/blt868e51148860a15a", "tier": "A", "observedDate": "2025-12"}, {"name": "NZ Herald", "url": "https://www.nzherald.co.nz/sport/football/football-world-cup/fifa-world-cup-chris-wood-cements-all-whites-legacy-with-standout-world-cup-display-against-iran/LVW25F2VERFTXOXMGXP6Q4ZPJ4/", "tier": "A", "observedDate": "2026-06"}], "confidence": "high", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Matthew Garbett (Peterborough United since August 2025) was reported ruled out of the World Cup squad with a hamstring injury just before the opener, replaced by Logan Rogerson; this is from a single Tier-C aggregator source and has not been independently corroborated, so it should be treated as a review question, not a confirmed fact.", "sources": [{"name": "Bastille Post", "url": "https://www.bastillepost.com/global/article/5937191-injured-matt-garbett-ruled-out-of-new-zealands-world-cup-squad-replaced-by-logan-rogerson", "tier": "C", "observedDate": "2026-06-16"}], "confidence": "low", "mapsTo": "availability_status", "candidateCategory": "roster/availability candidate"},
+        {"claim": "Liberato Cacace plays for Wrexham AFC (Championship, since July 2025), not Empoli/Italy as the seed may show.", "sources": [{"name": "Wrexham AFC (official)", "url": "https://www.wrexhamafc.co.uk/news/2025/july/18/get-to-know---liberato-cacace/", "tier": "S", "observedDate": "2025-07-18"}], "confidence": "high", "mapsTo": "club_name", "candidateCategory": "safe factual candidate"}
+      ],
+      "nationalStrengthContext": [
+        {"claim": "New Zealand drew 2-2 with Iran (Wood, 2 assists) then lost 1-3 to Egypt in the World Cup group stage.", "sources": [{"name": "ESPN (vs Egypt)", "url": "https://www.espn.com/soccer/match/_/gameId/760452/egypt-new-zealand", "tier": "A", "observedDate": "2026-06-21"}, {"name": "Al Jazeera (vs Egypt)", "url": "https://www.aljazeera.com/sports/2026/6/22/salah-scores-as-egypt-beat-new-zealand-3-1-for-first-world-cup-win", "tier": "A", "observedDate": "2026-06-22"}], "confidence": "high", "mapsTo": "team_strength_rating", "candidateCategory": "safe factual candidate"}
+      ],
+      "substitutionTendencyCandidates": [
+        {"claim": "Against Egypt, New Zealand's first substitution came unusually late (66th minute, 21 minutes into the second half, after conceding the equalizer) and was criticized as too slow; none of the 4 substitutes used were forwards.", "sources": [{"name": "SportNation NZ", "url": "https://sportnation.nz/article/where-did-all-whites-go-wrong-in-second-half-capitulation-against-egypt", "tier": "B", "observedDate": "2026-06"}], "confidence": "medium", "mapsTo": "substitution_tendency", "candidateCategory": "future-engine candidate"}
+      ],
+      "recommendedCodexNextActions": ["Update Cacace's club to Wrexham AFC", "Flag Wood's recurring knee injury despite his continued strong World Cup form", "Treat Garbett's reported World Cup squad exclusion as a review question pending stronger-tier confirmation"]
     }
   ],
   "crossTeamPatterns": [
@@ -951,28 +1133,38 @@
       "confidence": "medium"
     },
     {
-      "pattern": "Club-transfer and injury-status staleness recurs broadly (Cucurella/ESP, Guehi/ENG, Malen/NED, Gimenez/MEX, De Winter/BEL, Wirtz/GER, Luis Diaz/COL, Tomiyasu/JPN, Diouf+Jackson/SEN, Akanji+Ndoye/SUI, Taremi/IRN, Demiral/TUR, Pacho+Hincapie/ECU, Son+Lee Kang-in/KOR, Danso+Posch/AUT, Elanga/SWE, McGree+Yengi/AUS, Bensebaini+Bennacer/ALG, Salah+Elneny/EGY, David+Eustaquio/CAN, Carrasquilla/PAN, Mejbri+Drager/TUN, Adingra/CIV, Hlozek+Coufal/CZE, Enciso+Alderete/PAR, Almoez+Al-Haydos/QAT, Abdulhamid/KSA, Shomurodov+Fayzullaev/UZB, Jasim+Tahseen+Hussein/IRQ, Wissa+Mbemba/COD all changed clubs, lost squad selection, or carry unflagged injuries without apparent seed reflection). Suggests the freshnessPolicy in metadata.json is not being operationally kept current; this is now confirmed across 40 of 40 researched teams.",
-      "teamsAffected": ["ESP", "ENG", "NED", "MEX", "BEL", "GER", "COL", "JPN", "URU", "MAR", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE", "AUS", "ALG", "EGY", "CAN", "PAN", "TUN", "SCO", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD"],
+      "pattern": "Club-transfer and injury-status staleness recurs broadly (Cucurella/ESP, Guehi/ENG, Malen/NED, Gimenez/MEX, De Winter/BEL, Wirtz/GER, Luis Diaz/COL, Tomiyasu/JPN, Diouf+Jackson/SEN, Akanji+Ndoye/SUI, Taremi/IRN, Demiral/TUR, Pacho+Hincapie/ECU, Son+Lee Kang-in/KOR, Danso+Posch/AUT, Elanga/SWE, McGree+Yengi/AUS, Bensebaini+Bennacer/ALG, Salah+Elneny/EGY, David+Eustaquio/CAN, Carrasquilla/PAN, Mejbri+Drager/TUN, Adingra/CIV, Hlozek+Coufal/CZE, Enciso+Alderete/PAR, Almoez+Al-Haydos/QAT, Abdulhamid/KSA, Shomurodov+Fayzullaev/UZB, Jasim+Tahseen+Hussein/IRQ, Wissa+Mbemba/COD, Tau/RSA, Al-Taamari+Al-Rawabdeh/JOR, Dzeko/BIH, Monteiro+Stopira/CPV, Kudus+Partey/GHA, Bacuna brothers/CUW, Pierrot+Bellegarde/HAI, Cacace/NZL all changed clubs, lost squad selection, or carry unflagged injuries without apparent seed reflection). Suggests the freshnessPolicy in metadata.json is not being operationally kept current; this is now confirmed across all 48 of 48 researched teams -- the full squad.",
+      "teamsAffected": ["ESP", "ENG", "NED", "MEX", "BEL", "GER", "COL", "JPN", "URU", "MAR", "SEN", "SUI", "IRN", "TUR", "ECU", "KOR", "AUT", "SWE", "AUS", "ALG", "EGY", "CAN", "PAN", "TUN", "SCO", "CIV", "CZE", "PAR", "QAT", "KSA", "UZB", "IRQ", "COD", "RSA", "JOR", "BIH", "CPV", "GHA", "CUW", "HAI", "NZL"],
       "confidence": "high"
     },
     {
-      "pattern": "default_formation mismatches between the seed and the team's actual recent/World-Cup starting shape recur in at least 13 of 40 researched teams (ENG: 4-3-3 seed vs actual 4-2-3-1; JPN: 4-2-3-1 seed vs actual 3-4-2-1; KOR: 4-2-3-1 seed vs confirmed 3-4-2-1; SWE: 3-4-3 seed vs an actual two-forward Gyokeres+Isak system; CAN: 4-2-3-1 seed vs confirmed 4-4-2 'Maplepressing'; PAN: 5-4-1 seed vs confirmed 3-4-3; SCO: 3-5-2 seed vs actual 4-4-2/4-2-3-1; CZE: 4-2-3-1 seed vs a reported back-three; UZB: 4-2-3-1 seed vs a confirmed back-three 3-4-2-1; IRQ: 4-2-3-1 seed vs confirmed 4-4-2; SEN/SUI/AUT/CIV seeds are directionally correct but omit the manager's situational back-three/back-four variation). Recommend treating default_formation as the single most actionable existing-field correction category from this research pass.",
-      "teamsAffected": ["ENG", "JPN", "KOR", "SWE", "SEN", "SUI", "AUT", "CAN", "PAN", "SCO", "CZE", "UZB", "IRQ", "CIV"],
+      "pattern": "default_formation mismatches between the seed and the team's actual recent/World-Cup starting shape recur in at least 16 of 48 researched teams (ENG: 4-3-3 seed vs actual 4-2-3-1; JPN: 4-2-3-1 seed vs actual 3-4-2-1; KOR: 4-2-3-1 seed vs confirmed 3-4-2-1; SWE: 3-4-3 seed vs an actual two-forward Gyokeres+Isak system; CAN: 4-2-3-1 seed vs confirmed 4-4-2 'Maplepressing'; PAN: 5-4-1 seed vs confirmed 3-4-3; SCO: 3-5-2 seed vs actual 4-4-2/4-2-3-1; CZE: 4-2-3-1 seed vs a reported back-three; UZB: 4-2-3-1 seed vs a confirmed back-three 3-4-2-1; IRQ: 4-2-3-1 seed vs confirmed 4-4-2; BIH: 4-2-3-1 seed vs confirmed 4-4-2; CPV: 4-4-2 seed vs confirmed 4-1-4-1; HAI: 4-4-2 seed vs a 4-2-3-1/4-4-2 hybrid with a 5-4-1 used vs Brazil; RSA: 4-2-3-1 default but a surprise 5-3-2 used in the opener; SEN/SUI/AUT/CIV seeds are directionally correct but omit the manager's situational back-three/back-four variation). Recommend treating default_formation as the single most actionable existing-field correction category from this research pass.",
+      "teamsAffected": ["ENG", "JPN", "KOR", "SWE", "SEN", "SUI", "AUT", "CAN", "PAN", "SCO", "CZE", "UZB", "IRQ", "CIV", "BIH", "CPV", "HAI", "RSA"],
       "confidence": "medium"
     },
     {
-      "pattern": "Several star players have modeled overall ratings far below their official EA Sports FC 26 ratings, suggesting a possible systematic underrating of marquee individual talent independent of team-level tactical calibration: Haaland 84 vs EA 90 (NOR), Odegaard 76 vs EA 87 (NOR), Sorloth 68 vs EA 84 (NOR), McTominay 68 vs EA 85 (SCO), Tierney 60 vs EA 77 (SCO), Adams 58 vs EA 77 (SCO), Salah 78 vs EA 91 (EGY), Marmoush 66 vs EA 84 (EGY), Caicedo 62 vs an EA-style base of ~87 (ECU), Guler 66 (TUR). This recurs across 5 of 40 researched teams and may indicate the rating model under-weights players who broke out or transferred to a bigger club recently.",
+      "pattern": "Several star players have modeled overall ratings far below their official EA Sports FC 26 ratings, suggesting a possible systematic underrating of marquee individual talent independent of team-level tactical calibration: Haaland 84 vs EA 90 (NOR), Odegaard 76 vs EA 87 (NOR), Sorloth 68 vs EA 84 (NOR), McTominay 68 vs EA 85 (SCO), Tierney 60 vs EA 77 (SCO), Adams 58 vs EA 77 (SCO), Salah 78 vs EA 91 (EGY), Marmoush 66 vs EA 84 (EGY), Caicedo 62 vs an EA-style base of ~87 (ECU), Guler 66 (TUR). This recurs across 5 of 48 researched teams and may indicate the rating model under-weights players who broke out or transferred to a bigger club recently.",
       "teamsAffected": ["NOR", "SCO", "EGY", "ECU", "TUR"],
       "confidence": "medium"
     },
     {
-      "pattern": "The seeded manager_name is fully out of date (a successor is already in charge, not merely a formation/tactics drift) in at least 3 of 40 researched teams: Tunisia (Trabelsi sacked Jan 2026, replaced by Sabri Lamouchi), Saudi Arabia (Renard sacked Apr 2026, replaced by Georgios Donis), and Uzbekistan (Katanec resigned for health reasons in early 2025, replaced by Fabio Cannavaro via an interim spell). The Czech Republic is a related but distinct case: Ivan Hasek was sacked in Oct 2025 and replaced by Miroslav Koubek. This is a higher-severity class of staleness than club transfers because it affects every tactical/substitution inference tied to that manager's identity, and should be the highest-priority correction batch for Codex.",
-      "teamsAffected": ["TUN", "KSA", "UZB", "CZE"],
+      "pattern": "The seeded manager_name is fully out of date (a successor is already in charge, not merely a formation/tactics drift) in at least 5 of 48 researched teams: Tunisia (Trabelsi sacked Jan 2026, replaced by Sabri Lamouchi), Saudi Arabia (Renard sacked Apr 2026, replaced by Georgios Donis), Uzbekistan (Katanec resigned for health reasons in early 2025, replaced by Fabio Cannavaro via an interim spell), Czech Republic (Hasek sacked Oct 2025, replaced by Miroslav Koubek), and Ghana (Addo sacked Mar 2026 after 4 straight warm-up losses, replaced by Carlos Queiroz who actually led the team at the World Cup). This is a higher-severity class of staleness than club transfers because it affects every tactical/substitution inference tied to that manager's identity, and should be the highest-priority correction batch for Codex.",
+      "teamsAffected": ["TUN", "KSA", "UZB", "CZE", "GHA"],
       "confidence": "high"
     },
     {
-      "pattern": "FIFA rank discrepancies between the seed and externally reported June 2026 values recur across at least 5 of 40 researched teams, in both directions (NOR: seed 16 vs reported 27; CAN: seed 27 vs reported 30; CIV: seed 41 vs reported 30-33; QAT: seed 42 vs reported 56; COD: seed 60 vs reported 43-46). Most of these single-source aggregator claims are Tier B/C and have not been cross-checked directly against inside.fifa.com, so they are kept as review questions rather than confirmed corrections, but the consistent direction and recurrence suggests the seed's fifa_rank snapshot date may predate the World Cup group stage results factored into these later rankings.",
-      "teamsAffected": ["NOR", "CAN", "CIV", "QAT", "COD"],
+      "pattern": "FIFA rank discrepancies between the seed and externally reported June 2026 values recur across at least 6 of 48 researched teams, in both directions (NOR: seed 16 vs reported 27; CAN: seed 27 vs reported 30; CIV: seed 41 vs reported 30-33; QAT: seed 42 vs reported 56; COD: seed 60 vs reported 43-46; GHA: seed 61 vs reported 65 post-Panama-win). Most of these single-source aggregator claims are Tier B/C and have not been cross-checked directly against inside.fifa.com, so they are kept as review questions rather than confirmed corrections, but the consistent direction and recurrence suggests the seed's fifa_rank snapshot date may predate the World Cup group stage results factored into these later rankings.",
+      "teamsAffected": ["NOR", "CAN", "CIV", "QAT", "COD", "GHA"],
+      "confidence": "medium"
+    },
+    {
+      "pattern": "Highest-severity single finding of this research pass: a seeded player ('Gevero Markus', CB, overall 52, Curacao) could not be matched to any player in Curacao's official 26-man World Cup squad list, which has 8 confirmed center-backs and no player of that name. This is qualitatively different from every other finding in this report -- it is not a stale transfer or a formation drift, but a potential fabricated/hallucinated player identity in the seed data itself. Recommend this be Codex's first investigation from this whole batch: trace where 'Gevero Markus' originated in the seed generation pipeline before deciding whether to remove, rename, or otherwise correct the entry.",
+      "teamsAffected": ["CUW"],
+      "confidence": "medium"
+    },
+    {
+      "pattern": "Captaincy is misattributed or simply absent from the seed's likely assumptions in at least 3 of 48 researched teams: Qatar's captain is Hassan Al-Haydos, not the more prominent Akram Afif; Ghana's captain is Jordan Ayew, not Kudus or Partey (its more famous players); South Africa's captain is goalkeeper Ronwen Williams, not any of the seed's top-3 modeled outfield players. Captaincy itself may not be a tracked field today, but if any future spec adds leadership/morale modeling, these three are concrete known-correct values to seed it with.",
+      "teamsAffected": ["QAT", "GHA", "RSA"],
       "confidence": "medium"
     },
     {

@@ -1,32 +1,32 @@
 {
   "valid": true,
   "errorCount": 0,
-  "warningCount": 16,
-  "candidateCount": 291,
-  "coveredTeamCount": 40,
+  "warningCount": 18,
+  "candidateCount": 346,
+  "coveredTeamCount": 48,
   "categoryCounts": {
-    "formationCandidates": 40,
-    "keyPlayerStatusCandidates": 125,
-    "managerStatus": 40,
-    "nationalStrengthContext": 34,
-    "substitutionTendencyCandidates": 33,
-    "tacticalProfileCandidates": 19
+    "formationCandidates": 48,
+    "keyPlayerStatusCandidates": 149,
+    "managerStatus": 48,
+    "nationalStrengthContext": 42,
+    "substitutionTendencyCandidates": 39,
+    "tacticalProfileCandidates": 20
   },
   "impactCounts": {
-    "high": 177,
-    "low": 48,
-    "medium": 66
+    "high": 207,
+    "low": 58,
+    "medium": 81
   },
   "useTierCounts": {
-    "future_engine_candidate": 33,
-    "provisional_context": 59,
-    "ready_for_codex_review": 185,
-    "review_question": 14
+    "future_engine_candidate": 39,
+    "provisional_context": 74,
+    "ready_for_codex_review": 216,
+    "review_question": 17
   },
-  "existingFieldCandidateCount": 258,
-  "futureEngineCandidateCount": 33,
+  "existingFieldCandidateCount": 307,
+  "futureEngineCandidateCount": 39,
   "teamSignalBandCounts": {
-    "strong": 40
+    "strong": 48
   },
   "teamSignalProfiles": [
     {
@@ -126,6 +126,27 @@
         "ready_for_codex_review": 4
       },
       "existingFieldCandidateCount": 5,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "BIH",
+      "signalBand": "strong",
+      "candidateCount": 8,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 6
+      },
+      "existingFieldCandidateCount": 7,
       "futureEngineCandidateCount": 1,
       "preservedReviewQuestionCount": 0
     },
@@ -233,6 +254,26 @@
       "preservedReviewQuestionCount": 1
     },
     {
+      "teamId": "CPV",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 4
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
       "teamId": "CRO",
       "signalBand": "strong",
       "candidateCount": 6,
@@ -251,6 +292,25 @@
       "existingFieldCandidateCount": 5,
       "futureEngineCandidateCount": 1,
       "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "CUW",
+      "signalBand": "strong",
+      "candidateCount": 6,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1
+      },
+      "useTierCounts": {
+        "provisional_context": 4,
+        "ready_for_codex_review": 1,
+        "review_question": 1
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 0,
+      "preservedReviewQuestionCount": 1
     },
     {
       "teamId": "CZE",
@@ -395,6 +455,44 @@
       "preservedReviewQuestionCount": 0
     },
     {
+      "teamId": "GHA",
+      "signalBand": "strong",
+      "candidateCount": 6,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1
+      },
+      "useTierCounts": {
+        "provisional_context": 1,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 0,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "HAI",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 3
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
       "teamId": "IRN",
       "signalBand": "strong",
       "candidateCount": 7,
@@ -430,6 +528,26 @@
         "future_engine_candidate": 1,
         "provisional_context": 1,
         "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "JOR",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 3
       },
       "existingFieldCandidateCount": 6,
       "futureEngineCandidateCount": 1,
@@ -572,6 +690,26 @@
       "preservedReviewQuestionCount": 2
     },
     {
+      "teamId": "NZL",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "ready_for_codex_review": 4,
+        "review_question": 2
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 2
+    },
+    {
       "teamId": "PAN",
       "signalBand": "strong",
       "candidateCount": 7,
@@ -647,6 +785,26 @@
       "existingFieldCandidateCount": 6,
       "futureEngineCandidateCount": 0,
       "preservedReviewQuestionCount": 1
+    },
+    {
+      "teamId": "RSA",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
     },
     {
       "teamId": "SCO",
@@ -867,6 +1025,13 @@
       "futureEngineCandidateCount": 1
     },
     {
+      "teamId": "BIH",
+      "priorityScore": 76,
+      "highImpactCandidateCount": 6,
+      "mediumImpactCandidateCount": 1,
+      "futureEngineCandidateCount": 1
+    },
+    {
       "teamId": "TUR",
       "priorityScore": 75,
       "highImpactCandidateCount": 5,
@@ -907,13 +1072,6 @@
       "highImpactCandidateCount": 6,
       "mediumImpactCandidateCount": 0,
       "futureEngineCandidateCount": 1
-    },
-    {
-      "teamId": "CZE",
-      "priorityScore": 68,
-      "highImpactCandidateCount": 4,
-      "mediumImpactCandidateCount": 2,
-      "futureEngineCandidateCount": 1
     }
   ],
   "topCandidatePreviews": [
@@ -942,6 +1100,18 @@
       "summary": "Australia beat Turkey 2-0 (not 0-2) at the World Cup on 2026-06-14 (goals by Irankunda and Metcalfe), confirmed by FIFA's official match centre; this is the reverse of a 0-2 scorel"
     },
     {
+      "teamId": "BIH",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "seed_roster",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Kenan Piric is a goalkeeper (Neftci Baku, Azerbaijan), not an outfield CDM/CB; if the seed models him in an outfield role this is an identity/position error."
+    },
+    {
       "teamId": "CAN",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
@@ -952,18 +1122,6 @@
       "mapsTo": "availability_status",
       "candidateCategory": "roster/availability candidate",
       "summary": "Alphonso Davies (Bayern Munich, captain) tore his ACL in March 2025, returned in December 2025, and has had recurring thigh/hamstring issues through 2026, missing the World Cup ope"
-    },
-    {
-      "teamId": "COD",
-      "category": "keyPlayerStatusCandidates",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "club_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Yoane Wissa transferred from Brentford to Newcastle United on 2025-09-01 (~EUR57.7m) and scored DR Congo's first-ever World Cup goal, the equalizer against Portugal; seed club shou"
     },
     {
       "teamId": "COD",
@@ -978,7 +1136,7 @@
       "summary": "Sebastien Desabre remains manager, having taken over in August 2022, through AFCON 2025-26 and the 2026 World Cup."
     },
     {
-      "teamId": "CZE",
+      "teamId": "COD",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
@@ -987,7 +1145,31 @@
       "confidence": "high",
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
-      "summary": "Vladimir Coufal moved from West Ham to TSG Hoffenheim in summer 2025 and is the team's leading creator on the right flank (8 assists in 2025-26); seed club should reflect Hoffenhei"
+      "summary": "Yoane Wissa transferred from Brentford to Newcastle United on 2025-09-01 (~EUR57.7m) and scored DR Congo's first-ever World Cup goal, the equalizer against Portugal; seed club shou"
+    },
+    {
+      "teamId": "CPV",
+      "category": "nationalStrengthContext",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "team_strength_rating",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Cape Verde qualified for its first-ever World Cup (beating Eswatini 3-0 on 2025-10-13) and drew 0-0 with Spain then 2-2 with Uruguay in the group stage."
+    },
+    {
+      "teamId": "CPV",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Ryan Mendes (captain, Igdir FK in Turkey) is Cape Verde's all-time leading scorer and appearance-holder, in good current club form (a hat-trick in April 2026); seed club should ref"
     },
     {
       "teamId": "CZE",
@@ -1002,16 +1184,16 @@
       "summary": "Czechia reached the World Cup via the playoffs (penalty-shootout wins over Ireland and Denmark), then lost 2-1 to South Korea and drew 1-1 with South Africa in the group stage."
     },
     {
-      "teamId": "EGY",
+      "teamId": "CZE",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
       "useTier": "ready_for_codex_review",
       "sourceTier": "S",
       "confidence": "high",
-      "mapsTo": "seed_roster",
-      "candidateCategory": "roster/availability candidate",
-      "summary": "Mohamed Elneny (Al Jazira, UAE) was not selected for either Egypt's AFCON 2025 28-man squad or the World Cup 2026 final 26-man squad; if the seed models him as an available CDM sta"
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Vladimir Coufal moved from West Ham to TSG Hoffenheim in summer 2025 and is the team's leading creator on the right flank (8 assists in 2025-26); seed club should reflect Hoffenhei"
     },
     {
       "teamId": "EGY",
@@ -1038,6 +1220,66 @@
       "summary": "Egypt qualified directly, topping CAF Group A (8W-2D, +18 goal difference), and is in World Cup Group G with Belgium, Iran, and New Zealand; drew Belgium 1-1 then beat New Zealand "
     },
     {
+      "teamId": "EGY",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "seed_roster",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Mohamed Elneny (Al Jazira, UAE) was not selected for either Egypt's AFCON 2025 28-man squad or the World Cup 2026 final 26-man squad; if the seed models him as an available CDM sta"
+    },
+    {
+      "teamId": "GHA",
+      "category": "managerStatus",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "The seed's manager (Otto Addo) is stale: Addo was sacked on 2026-03-31 after four straight warm-up defeats (including 5-1 to Austria and 2-1 to Germany). He was replaced by Carlos "
+    },
+    {
+      "teamId": "GHA",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "availability_status",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Mohammed Kudus transferred from West Ham to Tottenham Hotspur in summer 2025 (~£55m) but is OUT of the World Cup entirely due to a quad injury suffered in January 2026 with a recov"
+    },
+    {
+      "teamId": "GHA",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Thomas Partey faces ongoing rape and sexual assault charges (filed July 2025, trial set for June 2027), left Arsenal for Villarreal on a free transfer in summer 2025, was named vic"
+    },
+    {
+      "teamId": "HAI",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "seed_roster",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Jean-Ricner Bellegarde switched allegiance from France to Haiti in August 2025 (debuted September 2025) and is used as part of a defensive double pivot at Wolverhampton/for Haiti, "
+    },
+    {
       "teamId": "IRQ",
       "category": "managerStatus",
       "qualityScore": 13,
@@ -1050,6 +1292,18 @@
       "summary": "Graham Arnold remains manager, having taken over on 2025-05-09 (previously managed Australia for 6 years); he led Iraq to its first World Cup in 40 years."
     },
     {
+      "teamId": "JOR",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Musa Al-Taamari plays for Stade Rennais (Ligue 1, joined 2025-02-03), not AS Monaco as the seed may show."
+    },
+    {
       "teamId": "KOR",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
@@ -1060,121 +1314,27 @@
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
       "summary": "Son Heung-min transferred from Tottenham to LAFC (MLS) on 2025-08-06 (~$26.5m, MLS record fee) but remains national team captain and starting forward; seed club should reflect LAFC"
-    },
-    {
-      "teamId": "KSA",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "The seed's manager (Herve Renard) is stale: Renard was sacked on 2026-04-17 after back-to-back pre-World Cup friendly losses to Egypt (0-4) and Serbia (1-2). The current manager is"
-    },
-    {
-      "teamId": "QAT",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Julen Lopetegui remains manager, having taken over on 2025-05-01 with a contract through the 2027 Asian Cup."
-    },
-    {
-      "teamId": "SWE",
-      "category": "keyPlayerStatusCandidates",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "player_rating",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Viktor Gyokeres remains at Arsenal (joined summer 2025) and is in strong scoring form across competitions; seed overall=67 as the top-rated player appears consistent with his curre"
-    },
-    {
-      "teamId": "SWE",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Graham Potter took over as manager on 2025-10-20 (replacing John Dahl Tomasson after a 0-1 loss to Kosovo) and had his contract extended through 2030 on 2026-03-12."
-    },
-    {
-      "teamId": "TUN",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "The seed's manager (Sami Trabelsi) is stale: Trabelsi was sacked in January 2026 after Tunisia's AFCON 2025 Round-of-16 penalty-shootout exit to Mali. The current manager is Sabri "
-    },
-    {
-      "teamId": "TUR",
-      "category": "nationalStrengthContext",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "team_strength_rating",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Turkey qualified for the 2026 World Cup via the UEFA playoffs (beating Romania 1-0 then Kosovo 1-0 on 2026-03-31), its first World Cup appearance since 2002, then was eliminated in"
-    },
-    {
-      "teamId": "UZB",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "The seed's manager (Srecko Katanec) is stale: Katanec resigned for health reasons around January 2025. After an interim spell under Timur Kapadze (who led the team through historic"
-    },
-    {
-      "teamId": "ARG",
-      "category": "nationalStrengthContext",
-      "qualityScore": 12,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "fifa_rank",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Argentina is unbeaten in its last 10 matches (27 goals scored, 2 conceded) and holds FIFA rank 1 as of 2026-06-11."
     }
   ],
   "errors": [],
   "warnings": [
     "teams[POR].keyPlayerStatusCandidates[2] is Tier B but high confidence; verify before using for data changes",
     "teams[MAR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
-    "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[URU].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[AUT].tacticalProfileCandidates[0] uses Tier C evidence; keep as review question only",
-    "teams[NOR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
     "teams[NOR].nationalStrengthContext[0] uses Tier C evidence; keep as review question only",
+    "teams[NOR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
     "teams[ALG].keyPlayerStatusCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[CAN].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
-    "teams[PAN].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[PAN].managerStatus[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[PAN].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[CIV].nationalStrengthContext[1] uses Tier C evidence; keep as review question only",
     "teams[CZE].keyPlayerStatusCandidates[1] is Tier B but high confidence; verify before using for data changes",
     "teams[PAR].keyPlayerStatusCandidates[2] is Tier B but high confidence; verify before using for data changes",
     "teams[KSA].keyPlayerStatusCandidates[2] uses Tier C evidence; keep as review question only",
-    "teams[COD].keyPlayerStatusCandidates[1] uses Tier C evidence; keep as review question only"
+    "teams[COD].keyPlayerStatusCandidates[1] uses Tier C evidence; keep as review question only",
+    "teams[JOR].nationalStrengthContext[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[NZL].keyPlayerStatusCandidates[1] uses Tier C evidence; keep as review question only"
   ]
 }
