@@ -1,0 +1,692 @@
+{
+  "valid": true,
+  "errorCount": 0,
+  "warningCount": 4,
+  "candidateCount": 121,
+  "coveredTeamCount": 16,
+  "categoryCounts": {
+    "formationCandidates": 16,
+    "keyPlayerStatusCandidates": 53,
+    "managerStatus": 16,
+    "nationalStrengthContext": 10,
+    "substitutionTendencyCandidates": 16,
+    "tacticalProfileCandidates": 10
+  },
+  "impactCounts": {
+    "high": 68,
+    "low": 19,
+    "medium": 34
+  },
+  "useTierCounts": {
+    "future_engine_candidate": 16,
+    "provisional_context": 30,
+    "ready_for_codex_review": 73,
+    "review_question": 2
+  },
+  "existingFieldCandidateCount": 105,
+  "futureEngineCandidateCount": 16,
+  "teamSignalBandCounts": {
+    "strong": 16
+  },
+  "teamSignalProfiles": [
+    {
+      "teamId": "ARG",
+      "signalBand": "strong",
+      "candidateCount": 9,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 4,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 6
+      },
+      "existingFieldCandidateCount": 8,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "BEL",
+      "signalBand": "strong",
+      "candidateCount": 6,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 4
+      },
+      "existingFieldCandidateCount": 5,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "BRA",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 3
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "COL",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 3,
+        "review_question": 1
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 1
+    },
+    {
+      "teamId": "CRO",
+      "signalBand": "strong",
+      "candidateCount": 6,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 2,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 2
+      },
+      "existingFieldCandidateCount": 5,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "ENG",
+      "signalBand": "strong",
+      "candidateCount": 9,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 4,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 7
+      },
+      "existingFieldCandidateCount": 8,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "ESP",
+      "signalBand": "strong",
+      "candidateCount": 9,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 5,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 6
+      },
+      "existingFieldCandidateCount": 8,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "FRA",
+      "signalBand": "strong",
+      "candidateCount": 8,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 4,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 7,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "GER",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "JPN",
+      "signalBand": "strong",
+      "candidateCount": 6,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 5,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "MAR",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 4
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "MEX",
+      "signalBand": "strong",
+      "candidateCount": 8,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 4,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 7,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "NED",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 1,
+        "ready_for_codex_review": 4,
+        "review_question": 1
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 1
+    },
+    {
+      "teamId": "POR",
+      "signalBand": "strong",
+      "candidateCount": 7,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 3
+      },
+      "existingFieldCandidateCount": 6,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "URU",
+      "signalBand": "strong",
+      "candidateCount": 9,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 1,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 2
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 2,
+        "ready_for_codex_review": 6
+      },
+      "existingFieldCandidateCount": 8,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    },
+    {
+      "teamId": "USA",
+      "signalBand": "strong",
+      "candidateCount": 9,
+      "categoryCounts": {
+        "formationCandidates": 1,
+        "keyPlayerStatusCandidates": 3,
+        "managerStatus": 1,
+        "nationalStrengthContext": 2,
+        "substitutionTendencyCandidates": 1,
+        "tacticalProfileCandidates": 1
+      },
+      "useTierCounts": {
+        "future_engine_candidate": 1,
+        "provisional_context": 3,
+        "ready_for_codex_review": 5
+      },
+      "existingFieldCandidateCount": 8,
+      "futureEngineCandidateCount": 1,
+      "preservedReviewQuestionCount": 0
+    }
+  ],
+  "sparseTeamIds": [],
+  "topTeamPriorities": [
+    {
+      "teamId": "URU",
+      "priorityScore": 85,
+      "highImpactCandidateCount": 6,
+      "mediumImpactCandidateCount": 2,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "ENG",
+      "priorityScore": 84,
+      "highImpactCandidateCount": 7,
+      "mediumImpactCandidateCount": 1,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "ESP",
+      "priorityScore": 80,
+      "highImpactCandidateCount": 5,
+      "mediumImpactCandidateCount": 3,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "USA",
+      "priorityScore": 79,
+      "highImpactCandidateCount": 5,
+      "mediumImpactCandidateCount": 3,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "ARG",
+      "priorityScore": 70,
+      "highImpactCandidateCount": 5,
+      "mediumImpactCandidateCount": 2,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "MEX",
+      "priorityScore": 70,
+      "highImpactCandidateCount": 5,
+      "mediumImpactCandidateCount": 2,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "FRA",
+      "priorityScore": 67,
+      "highImpactCandidateCount": 3,
+      "mediumImpactCandidateCount": 4,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "GER",
+      "priorityScore": 66,
+      "highImpactCandidateCount": 5,
+      "mediumImpactCandidateCount": 1,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "MAR",
+      "priorityScore": 59,
+      "highImpactCandidateCount": 4,
+      "mediumImpactCandidateCount": 2,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "POR",
+      "priorityScore": 58,
+      "highImpactCandidateCount": 3,
+      "mediumImpactCandidateCount": 3,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "BEL",
+      "priorityScore": 55,
+      "highImpactCandidateCount": 4,
+      "mediumImpactCandidateCount": 1,
+      "futureEngineCandidateCount": 1
+    },
+    {
+      "teamId": "BRA",
+      "priorityScore": 54,
+      "highImpactCandidateCount": 3,
+      "mediumImpactCandidateCount": 3,
+      "futureEngineCandidateCount": 1
+    }
+  ],
+  "topCandidatePreviews": [
+    {
+      "teamId": "ARG",
+      "category": "nationalStrengthContext",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "fifa_rank",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Argentina is unbeaten in its last 10 matches (27 goals scored, 2 conceded) and holds FIFA rank 1 as of 2026-06-11."
+    },
+    {
+      "teamId": "BEL",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Koni De Winter transferred from Genoa to AC Milan on 2025-08-13 (5-year deal); seed may not reflect this club change."
+    },
+    {
+      "teamId": "BEL",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "seed_roster",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Romelu Lukaku (striker), Youri Tielemans (current captain), and Thibaut Courtois (goalkeeper) are described as core squad members but absent from the modeled top-3 list."
+    },
+    {
+      "teamId": "BEL",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Rudi Garcia remains manager, appointed Jan 2025."
+    },
+    {
+      "teamId": "CRO",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Zlatko Dalic remains manager, continuing through World Cup qualifying and the tournament."
+    },
+    {
+      "teamId": "ENG",
+      "category": "nationalStrengthContext",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "team_strength_rating",
+      "candidateCategory": "safe factual candidate",
+      "summary": "England qualified undefeated and unscored-on (8-0-0, 21 goals, 0 conceded) -- the first European team to do so for this cycle."
+    },
+    {
+      "teamId": "ESP",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Marc Cucurella transferred from Chelsea to Real Madrid on 2026-06-15 (~€55M+€5M, 6-year deal); seed data may still show Chelsea."
+    },
+    {
+      "teamId": "ESP",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25."
+    },
+    {
+      "teamId": "FRA",
+      "category": "nationalStrengthContext",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "fifa_rank",
+      "candidateCategory": "safe factual candidate",
+      "summary": "France's FIFA rank rose from 3rd to 2nd as of 2026-06-22 after beating Senegal."
+    },
+    {
+      "teamId": "GER",
+      "category": "nationalStrengthContext",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "fifa_rank",
+      "candidateCategory": "safe factual candidate",
+      "summary": "FIFA rank confirmed at 10th as of June 2026, matching the seed value."
+    },
+    {
+      "teamId": "GER",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Florian Wirtz transferred from Leverkusen to Liverpool in July 2025 (club-record fee); seed may not reflect this club change."
+    },
+    {
+      "teamId": "GER",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Julian Nagelsmann remains manager (since Sept 2023)."
+    },
+    {
+      "teamId": "JPN",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Hajime Moriyasu remains manager (since 2018), his 2nd World Cup in charge."
+    },
+    {
+      "teamId": "MAR",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Mohamed Ouahbi is the actual current manager, but only since 2026-03-05, replacing Walid Regragui after the latter resigned; this is a very recent change worth flagging given how c"
+    },
+    {
+      "teamId": "MEX",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Javier Aguirre remains manager (appointed July 2024), his 3rd World Cup as Mexico coach."
+    },
+    {
+      "teamId": "NED",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "club_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Donyell Malen transferred from Aston Villa to AS Roma in Jan 2026 and has been in excellent form there (league-leading scoring in the second half of the season)."
+    },
+    {
+      "teamId": "NED",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Ronald Koeman remains manager (appointed June 2023), led the team through an unbeaten qualifying campaign."
+    },
+    {
+      "teamId": "POR",
+      "category": "keyPlayerStatusCandidates",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "seed_roster",
+      "candidateCategory": "roster/availability candidate",
+      "summary": "Cristiano Ronaldo is the current captain and started Portugal's World Cup opener vs DR Congo at 41, becoming the oldest outfield starter in World Cup history; if absent from the mo"
+    },
+    {
+      "teamId": "POR",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Roberto Martinez remains manager, having won the 2025 Nations League (beating Spain on penalties)."
+    },
+    {
+      "teamId": "URU",
+      "category": "managerStatus",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Marcelo Bielsa remains manager (since 2023, contracted through the World Cup)."
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "teams[POR].keyPlayerStatusCandidates[2] is Tier B but high confidence; verify before using for data changes",
+    "teams[MAR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
+    "teams[URU].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes"
+  ]
+}
