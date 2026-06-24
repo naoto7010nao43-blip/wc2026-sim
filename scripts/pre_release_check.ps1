@@ -2,6 +2,7 @@ param(
     [switch]$SkipBackendTests,
     [switch]$SkipFrontendChecks,
     [switch]$SkipEncodingAudit,
+    [switch]$SkipReleaseReadiness,
     [switch]$SkipGitStatus
 )
 
@@ -69,9 +70,14 @@ try {
         }
     }
 
+    if (-not $SkipReleaseReadiness) {
+        Invoke-Step "Release readiness structural check" {
+            & $backendPython "backend\scripts\build_release_readiness_report.py" --check-only --fail-on-blockers
+        }
+    }
+
     Write-Host ""
     Write-Host "Pre-release check completed." -ForegroundColor Green
 } finally {
     Pop-Location
 }
-

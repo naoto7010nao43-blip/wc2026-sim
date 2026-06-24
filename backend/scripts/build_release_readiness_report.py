@@ -9,7 +9,10 @@ latest model benchmark comparison state.
 Read-only: does not mutate seed data, ratings, formulas, or prediction
 behavior.
 
-Usage: ./venv/Scripts/python.exe scripts/build_release_readiness_report.py
+Usage:
+  ./venv/Scripts/python.exe scripts/build_release_readiness_report.py
+  ./venv/Scripts/python.exe scripts/build_release_readiness_report.py --check-only
+  ./venv/Scripts/python.exe scripts/build_release_readiness_report.py --check-only --fail-on-blockers
 """
 
 from __future__ import annotations
@@ -200,19 +203,30 @@ def build_report(
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.parse_args()
+    parser.add_argument(
+        "--check-only",
+        action="store_true",
+        help="Print the release readiness result without writing backend/reports.",
+    )
+    parser.add_argument(
+        "--fail-on-blockers",
+        action="store_true",
+        help="Exit with status 1 when release blockers are present.",
+    )
+    args = parser.parse_args()
 
     report = build_report()
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    out_path = REPORTS_DIR / f"release_readiness_{date_str}.json"
-    out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    if not args.check_only:
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        out_path = REPORTS_DIR / f"release_readiness_{date_str}.json"
+        out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Wrote {out_path}")
 
-    print(f"Wrote {out_path}")
     print(f"readyForManualPush={report['readyForManualPush']}")
     for blocker in report["blockers"]:
         print(f"  - {blocker}")
-    return 0
+    return 1 if args.fail_on_blockers and report["blockers"] else 0
 
 
 if __name__ == "__main__":

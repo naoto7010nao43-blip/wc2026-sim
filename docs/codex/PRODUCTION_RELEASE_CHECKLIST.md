@@ -27,11 +27,12 @@ This runs:
 - frontend lint
 - frontend build
 - text encoding audit
+- release readiness structural check (`build_release_readiness_report.py --check-only --fail-on-blockers`)
 
 For a quick script sanity check while another agent is mid-task:
 
 ```powershell
-.\scripts\pre_release_check.ps1 -SkipBackendTests -SkipFrontendChecks
+.\scripts\pre_release_check.ps1 -SkipBackendTests -SkipFrontendChecks -SkipReleaseReadiness
 ```
 
 ## Browser Smoke
