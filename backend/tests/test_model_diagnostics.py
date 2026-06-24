@@ -98,7 +98,7 @@ def test_external_data_verification_endpoint_returns_200_with_expected_top_level
         "generatedAt", "note", "valid", "errorCount", "warningCount", "candidateCount",
         "coveredTeamCount", "totalTeamCount", "remainingTeamCount", "scope",
         "categoryCounts", "impactCounts", "useTierCounts", "teamSignalBandCounts",
-        "sparseTeamIds", "topTeamPriorities", "teamSignalProfiles", "warnings", "errors",
+        "sparseTeamIds", "topTeamPriorities", "teamSignalProfiles", "decisionQueue", "warnings", "errors",
     ):
         assert field in body
 
@@ -111,6 +111,9 @@ def test_external_data_verification_endpoint_exposes_partial_progress(client):
     assert body["remainingTeamCount"] == 32
     assert body["candidateCount"] == 121
     assert body["teamSignalBandCounts"]["strong"] == 16
+    assert body["decisionQueue"]["currentFieldReviewCount"] == 73
+    assert body["decisionQueue"]["warningHoldCount"] == 4
+    assert body["decisionQueue"]["futureEngineCount"] == 15
 
 
 def test_external_data_verification_missing_report_falls_back_to_calm_empty_state(tmp_path):
@@ -143,6 +146,7 @@ def test_get_external_data_verification_summary_is_read_only(tmp_path):
         "sparseTeamIds": [],
         "topTeamPriorities": [],
         "teamSignalProfiles": [],
+        "decisionQueue": None,
         "warnings": [],
         "errors": [],
     }

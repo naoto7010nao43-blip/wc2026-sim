@@ -288,6 +288,27 @@ export interface ExternalTeamSignalProfile {
   preservedReviewQuestionCount: number;
 }
 
+export interface ExternalDataDecisionQueueTeam {
+  teamId: string;
+  teamName: string | null;
+  candidateCount: number;
+  bucketCounts: Record<string, number>;
+  currentFieldReviewCount: number;
+  warningHoldCount: number;
+  futureEngineCount: number;
+  reviewScore: number;
+}
+
+export interface ExternalDataDecisionQueueSummary {
+  generatedAt: string | null;
+  currentFieldReviewCount: number;
+  warningHoldCount: number;
+  futureEngineCount: number;
+  provisionalContextCount: number;
+  bucketCounts: Record<string, number>;
+  topTeams: ExternalDataDecisionQueueTeam[];
+}
+
 export interface ExternalDataVerificationSummary {
   generatedAt: string | null;
   note: string;
@@ -306,6 +327,7 @@ export interface ExternalDataVerificationSummary {
   sparseTeamIds: string[];
   topTeamPriorities: ExternalTeamPriority[];
   teamSignalProfiles: ExternalTeamSignalProfile[];
+  decisionQueue: ExternalDataDecisionQueueSummary | null;
   warnings: string[];
   errors: string[];
 }

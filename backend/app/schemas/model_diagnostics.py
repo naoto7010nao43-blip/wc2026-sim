@@ -70,6 +70,27 @@ class ExternalTeamSignalProfile(BaseModel):
     preservedReviewQuestionCount: int
 
 
+class ExternalDataDecisionQueueTeam(BaseModel):
+    teamId: str
+    teamName: str | None
+    candidateCount: int
+    bucketCounts: dict[str, int]
+    currentFieldReviewCount: int
+    warningHoldCount: int
+    futureEngineCount: int
+    reviewScore: float
+
+
+class ExternalDataDecisionQueueSummary(BaseModel):
+    generatedAt: str | None
+    currentFieldReviewCount: int
+    warningHoldCount: int
+    futureEngineCount: int
+    provisionalContextCount: int
+    bucketCounts: dict[str, int]
+    topTeams: list[ExternalDataDecisionQueueTeam]
+
+
 class ExternalDataVerificationSummary(BaseModel):
     generatedAt: str | None
     note: str
@@ -88,6 +109,7 @@ class ExternalDataVerificationSummary(BaseModel):
     sparseTeamIds: list[str]
     topTeamPriorities: list[ExternalTeamPriority]
     teamSignalProfiles: list[ExternalTeamSignalProfile]
+    decisionQueue: ExternalDataDecisionQueueSummary | None
     warnings: list[str]
     errors: list[str]
 

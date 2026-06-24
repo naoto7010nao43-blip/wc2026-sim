@@ -80,8 +80,10 @@ function CountList({ title, counts, labels }: { title: string; counts: Record<st
 export function ExternalDataVerificationPanel({ summary }: Props) {
   const coverage =
     summary.totalTeamCount > 0 ? `${summary.coveredTeamCount}/${summary.totalTeamCount}` : `${summary.coveredTeamCount}`;
-  const readyForCodex = summary.useTierCounts.ready_for_codex_review ?? 0;
-  const futureEngine = summary.useTierCounts.future_engine_candidate ?? 0;
+  const readyForCodex = summary.decisionQueue?.currentFieldReviewCount ?? summary.useTierCounts.ready_for_codex_review ?? 0;
+  const warningHold = summary.decisionQueue?.warningHoldCount ?? summary.warningCount;
+  const futureEngine = summary.decisionQueue?.futureEngineCount ?? summary.useTierCounts.future_engine_candidate ?? 0;
+  const provisionalContext = summary.decisionQueue?.provisionalContextCount ?? summary.useTierCounts.provisional_context ?? 0;
   const highImpact = summary.impactCounts.high ?? 0;
   const remainingPreview = summary.scope?.remainingUnresearchedTeams.slice(0, 18) ?? [];
   const remainingRest = Math.max(0, summary.remainingTeamCount - remainingPreview.length);
@@ -106,10 +108,11 @@ export function ExternalDataVerificationPanel({ summary }: Props) {
         <Metric label="調査済み国" value={coverage} tone={summary.remainingTeamCount === 0 ? "good" : "warn"} />
         <Metric label="未調査国" value={summary.remainingTeamCount} tone={summary.remainingTeamCount === 0 ? "good" : "warn"} />
         <Metric label="候補総数" value={summary.candidateCount} />
-        <Metric label="Codexレビュー候補" value={readyForCodex} tone={readyForCodex > 0 ? "warn" : "good"} />
+        <Metric label="現行フィールド候補" value={readyForCodex} tone={readyForCodex > 0 ? "warn" : "good"} />
         <Metric label="高影響候補" value={highImpact} tone={highImpact > 0 ? "warn" : "slate"} />
         <Metric label="将来エンジン候補" value={futureEngine} tone={futureEngine > 0 ? "warn" : "slate"} />
-        <Metric label="警告" value={summary.warningCount} tone={summary.warningCount > 0 ? "warn" : "good"} />
+        <Metric label="暫定文脈" value={provisionalContext} />
+        <Metric label="警告保留" value={warningHold} tone={warningHold > 0 ? "warn" : "good"} />
         <Metric label="エラー" value={summary.errorCount} tone={summary.errorCount > 0 ? "warn" : "good"} />
       </div>
 
@@ -130,6 +133,23 @@ export function ExternalDataVerificationPanel({ summary }: Props) {
                   高{team.highImpactCandidateCount} / 中{team.mediumImpactCandidateCount} / 将来{team.futureEngineCandidateCount}
                 </span>
                 <span className="font-semibold text-slate-200">{team.priorityScore.toFixed(0)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {summary.decisionQueue && summary.decisionQueue.topTeams.length > 0 && (
+        <div className="mt-3 rounded border border-slate-700/70 bg-slate-900/40 p-3">
+          <p className="text-xs font-semibold text-slate-300">現行フィールド反映を検討する前の判断キュー</p>
+          <div className="mt-2 grid grid-cols-1 gap-1.5 md:grid-cols-2">
+            {summary.decisionQueue.topTeams.slice(0, 8).map((team) => (
+              <div key={team.teamId} className="flex items-center justify-between gap-2 rounded bg-slate-800/60 px-2 py-1.5 text-[11px]">
+                <TeamBadge teamId={team.teamId} />
+                <span className="text-slate-400">
+                  現行{team.currentFieldReviewCount} / 保留{team.warningHoldCount} / 将来{team.futureEngineCount}
+                </span>
+                <span className="font-semibold text-slate-200">{team.reviewScore.toFixed(0)}</span>
               </div>
             ))}
           </div>

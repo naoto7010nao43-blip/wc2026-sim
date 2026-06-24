@@ -66,8 +66,11 @@ export function DataReviewOverviewPanel({
   const maxStabilityDelta = simulationStability?.summary?.maxAbsChampionPctDelta;
   const externalCoveredTeams = externalDataVerification?.coveredTeamCount ?? 0;
   const externalTotalTeams = externalDataVerification?.totalTeamCount ?? 48;
-  const externalWarnings = externalDataVerification?.warningCount ?? 0;
-  const externalReadyForReview = externalDataVerification?.useTierCounts.ready_for_codex_review ?? 0;
+  const externalWarnings = externalDataVerification?.decisionQueue?.warningHoldCount ?? externalDataVerification?.warningCount ?? 0;
+  const externalReadyForReview =
+    externalDataVerification?.decisionQueue?.currentFieldReviewCount ??
+    externalDataVerification?.useTierCounts.ready_for_codex_review ??
+    0;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
   const releaseBlocked = releaseReadiness?.readyForManualPush === false;
 

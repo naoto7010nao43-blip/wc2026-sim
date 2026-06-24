@@ -64,6 +64,7 @@ def get_release_readiness_summary(reports_dir: Path = REPORTS_DIR) -> dict:
 def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed_dir: Path = SEED_DIR) -> dict:
     validation = _latest_report(reports_dir, "external_data_verification_validation_*.json")
     candidates = _latest_report(reports_dir, "external_data_verification_candidates_*.json")
+    decision_queue = _latest_report(reports_dir, "external_data_decision_queue_*.json")
     total_team_count = 48
     teams_path = seed_dir / "teams.json"
     if teams_path.exists():
@@ -88,6 +89,7 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
             "sparseTeamIds": [],
             "topTeamPriorities": [],
             "teamSignalProfiles": [],
+            "decisionQueue": None,
             "warnings": [],
             "errors": [],
         }
@@ -95,6 +97,17 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
     scope = (candidates or {}).get("scope") or {}
     covered = scope.get("coveredTeams") or []
     remaining = scope.get("remainingUnresearchedTeams") or []
+    decision_queue_summary = None
+    if decision_queue is not None:
+        decision_queue_summary = {
+            "generatedAt": decision_queue.get("generatedAt"),
+            "currentFieldReviewCount": decision_queue.get("currentFieldReviewCount", 0),
+            "warningHoldCount": decision_queue.get("warningHoldCount", 0),
+            "futureEngineCount": decision_queue.get("futureEngineCount", 0),
+            "provisionalContextCount": decision_queue.get("provisionalContextCount", 0),
+            "bucketCounts": decision_queue.get("bucketCounts", {}),
+            "topTeams": (decision_queue.get("teams") or [])[:8],
+        }
     return {
         "generatedAt": (candidates or {}).get("generatedAt"),
         "note": (
@@ -119,6 +132,7 @@ def get_external_data_verification_summary(reports_dir: Path = REPORTS_DIR, seed
         "sparseTeamIds": validation.get("sparseTeamIds", []),
         "topTeamPriorities": validation.get("topTeamPriorities", []),
         "teamSignalProfiles": validation.get("teamSignalProfiles", []),
+        "decisionQueue": decision_queue_summary,
         "warnings": validation.get("warnings", []),
         "errors": validation.get("errors", []),
     }
