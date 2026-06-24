@@ -25,7 +25,10 @@ Progress note for Claude Code:
 - It currently covers 16 teams: ARG, ESP, ENG, FRA, POR, CRO, NED, MEX, BRA, MAR, BEL, GER, URU, COL, USA, JPN.
 - Validation output is committed at `backend/reports/external_data_verification_validation_2026-06-24.json`.
 - Validation result: valid=true, 121 candidates, 16 future-engine substitution candidates, 16/16 teams strong signal, 4 warnings.
+- Codex added a decision queue at `backend/reports/external_data_decision_queue_2026-06-24.json`: 73 current-field review candidates, 4 warning-hold candidates, 15 future-engine candidates, and 29 provisional-context candidates.
+- Codex added a source-traceability audit at `backend/reports/external_source_traceability_audit_2026-06-24.json`: all 121 current candidates are missing resolvable source URLs, so they are useful research signal but blocked for seed/rating/tactical data changes until URL-backed citations are added.
 - Continue from the remaining teams listed inside that JSON instead of restarting the already-covered 16.
+- For any newly researched team, include a resolvable `url` field for every material source whenever the claim may become a current-field candidate. If a URL cannot be found, keep the item as a review question or provisional context rather than a data-change candidate.
 
 This task intentionally reduces user workload. Stop only on the hard stop conditions in the spec.
 

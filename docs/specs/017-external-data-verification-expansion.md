@@ -58,11 +58,17 @@ Use source tiers:
 Every material claim must include:
 
 - source name
-- URL when available
+- URL for every source used to support a current-field candidate
 - source tier
 - observed date
 - confidence: `high`, `medium`, or `low`
 - whether it maps to an existing field, future field, or review-only note
+
+If a material claim has no resolvable URL, keep it in the report but do not
+label it as ready for seed/rating/tactical-value changes. Treat it as
+`provisional_context` or `review_question` until a URL-backed citation is added.
+This is a traceability rule, not a deletion rule: preserve useful sparse-team
+signal, but make the missing URL explicit.
 
 ## Output Files
 
@@ -161,6 +167,10 @@ Required before commit:
   - `cd backend && .\venv\Scripts\python.exe -c "import json, pathlib; json.loads(pathlib.Path('reports/external_data_verification_candidates_2026-06-24.json').read_text(encoding='utf-8')); print('json ok')"`
 - Run the Codex acceptance gate for research quality and simulator relevance:
   - `cd backend && .\venv\Scripts\python.exe scripts\validate_external_data_verification_report.py reports\external_data_verification_candidates_2026-06-24.json --out reports\external_data_verification_validation_2026-06-24.json`
+- Run the Codex source-traceability audit:
+  - `cd backend && .\venv\Scripts\python.exe scripts\audit_external_source_traceability.py`
+- Rebuild the Codex decision queue:
+  - `cd backend && .\venv\Scripts\python.exe scripts\build_external_data_decision_queue.py`
 - `git diff --check`
 
 No backend pytest or frontend build is required unless code is changed. Code should not be changed in this spec.
