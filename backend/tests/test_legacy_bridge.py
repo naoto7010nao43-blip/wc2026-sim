@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.rating_v2.legacy_bridge import derive_legacy_attributes
+from app.rating_v2.legacy_bridge import derive_legacy_attributes, rating_trust_metadata
 from app.rating_v2.seed_pipeline_v2 import official_profile_attributes
 from app.rating_v2.player_rating_model import compute_player_rating_v2
 
@@ -69,3 +69,23 @@ def test_official_profile_attributes_are_preserved_for_runtime_api():
         "caps": 80,
         "nationalTeamGoals": 0,
     }
+
+
+def test_trust_metadata_surfaces_external_reference_flag_to_api():
+    # The API-facing sourceBreakdown (built here, read by Player.source_breakdown)
+    # must expose whether an EA-sourced reference drove the rating, so the site
+    # can honestly distinguish externally-sourced players from estimated ones.
+    ea_ref = {
+        "playerId": "TST_PLAYER", "source": "EA SPORTS FC 26", "sourceUrl": "https://www.ea.com/x",
+        "overall": 90, "pace": 86, "shooting": 91, "passing": 70,
+        "dribbling": 80, "defending": 45, "physical": 88,
+    }
+    estimated = rating_trust_metadata(
+        compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000])
+    )
+    external = rating_trust_metadata(
+        compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000], external_reference=ea_ref)
+    )
+    assert estimated["sourceBreakdown"]["externalReferenceUsed"] is False
+    assert external["sourceBreakdown"]["externalReferenceUsed"] is True
+    assert external["dataConfidence"] == "external"

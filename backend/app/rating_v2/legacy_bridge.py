@@ -93,6 +93,7 @@ def rating_trust_metadata(rating: PlayerRatingV2) -> dict:
             "nationalTeamMinutesUsed": rating.source_breakdown.national_team_minutes_used,
             "injuryDataUsed": rating.source_breakdown.injury_data_used,
             "manualOverrideUsed": rating.source_breakdown.manual_override_used,
+            "externalReferenceUsed": rating.source_breakdown.external_reference_used,
         },
         "lowConfidenceAttributes": rating.low_confidence_attributes,
         "lastUpdated": rating.last_updated,
