@@ -1,82 +1,85 @@
 {
-  "generatedAt": "2026-06-25T16:08:49.065249+00:00",
+  "generatedAt": "2026-06-25T16:19:40.671083+00:00",
   "totalPlayers": 669,
   "biggestRisers": [
     {
-      "playerId": "SCO_MCTOMINAY",
-      "delta": 28,
-      "from": 57,
-      "to": 85
-    },
-    {
-      "playerId": "ESP_RODRI",
-      "delta": 27,
+      "playerId": "URU_VALVERDE",
+      "delta": 26,
       "from": 63,
-      "to": 90
+      "to": 89
     },
     {
-      "playerId": "ENG_BELLINGHAM",
-      "delta": 25,
-      "from": 65,
-      "to": 90
-    },
-    {
-      "playerId": "ECU_CAICEDO_M",
+      "playerId": "ENG_RICE",
       "delta": 25,
       "from": 62,
       "to": 87
     },
     {
-      "playerId": "EGY_SALAH",
-      "delta": 25,
+      "playerId": "POR_VITINHA",
+      "delta": 24,
+      "from": 65,
+      "to": 89
+    },
+    {
+      "playerId": "ESP_PEDRI",
+      "delta": 23,
       "from": 66,
-      "to": 91
+      "to": 89
     },
     {
-      "playerId": "NOR_ODEGAARD",
+      "playerId": "GER_MUSIALA",
       "delta": 20,
-      "from": 67,
-      "to": 87
+      "from": 68,
+      "to": 88
     },
     {
-      "playerId": "ENG_KANE",
+      "playerId": "GER_WIRTZ",
       "delta": 19,
       "from": 70,
       "to": 89
     },
     {
-      "playerId": "ESP_LAMINEYAMAL",
-      "delta": 14,
-      "from": 75,
-      "to": 89
+      "playerId": "ARG_ALVAREZ",
+      "delta": 18,
+      "from": 69,
+      "to": 87
     },
     {
-      "playerId": "NOR_HAALAND",
-      "delta": 14,
-      "from": 76,
+      "playerId": "FRA_DEMBELE",
+      "delta": 13,
+      "from": 77,
       "to": 90
     },
     {
-      "playerId": "BRA_VINICIUSJR",
-      "delta": 12,
-      "from": 77,
-      "to": 89
+      "playerId": "FRA_OLISE",
+      "delta": 11,
+      "from": 75,
+      "to": 86
     }
   ],
   "biggestFallers": [],
   "changedByManualOverride": [],
   "externallySourced": [
     "BRA_VINICIUSJR",
+    "ARG_ALVAREZ",
     "FRA_MBAPPE",
+    "FRA_DEMBELE",
+    "FRA_OLISE",
+    "ENG_RICE",
     "ENG_BELLINGHAM",
     "ENG_KANE",
+    "GER_WIRTZ",
+    "GER_MUSIALA",
     "SCO_MCTOMINAY",
     "ECU_CAICEDO_M",
     "EGY_SALAH",
     "ESP_RODRI",
+    "ESP_PEDRI",
     "ESP_LAMINEYAMAL",
+    "URU_VALVERDE",
     "NOR_ODEGAARD",
-    "NOR_HAALAND"
+    "NOR_HAALAND",
+    "POR_VITINHA"
   ],
   "lowConfidencePlayers": [],
   "missingCriticalData": []
