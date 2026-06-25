@@ -9,7 +9,23 @@ Read first:
 
 ## Active Claude Code Task
 
-None. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`.
+**Player rating accuracy (started 2026-06-26, autonomous).** The user reported that player
+abilities are poorly reflected on the site. Root cause: the from-scratch estimation pipeline
+(`compute_player_rating_v2` -> Stage A/B/C) compresses the top of the scale — before the fix,
+pool max was 82 with ZERO players >= 85, and marquee players sat 20-30 points low. Fix: an
+external-reference injection path using EA SPORTS FC 26 as a citable Tier-A source (sofifa is
+403-blocked). A new seed `data/seed/externalPlayerRatings2026.json` holds EA's overall + six
+face stats per player (with source URL + EA id); when present these replace the estimate
+verbatim, but all sub-attributes are still derived from that base so the player stays
+internally consistent. Marked `dataConfidence="external"` (never "official"). **Pilot done:
+11 marquee players, committed (bd1deb2), 406 tests pass.** Pool max 82->91, players >=85: 0->11.
+Full methodology: `backend/reports/external_rating_injection_methodology_2026-06-26.md`.
+
+**Open decision:** scaling to the remaining ~658 players (approach is the user's call —
+full multi-agent workflow vs. prioritized squad-importance batches vs. incremental). The
+infrastructure is idempotent: scaling = adding rows to the seed + re-running the rebuild.
+
+(Codex is no longer involved — Claude now owns all decisions/execution on this project.)
 
 **Spec 017 and Spec 018 are both fully complete, including production push/deploy (2026-06-25).** Full final report: `docs/codex/CLAUDE_FINAL_HANDOFF_2026-06-25.md`. Summary: Claude Code completed Spec 017 in full (48/48 teams, 346 URL-backed candidates), then worked through all of Spec 018's phases autonomously while Codex was unavailable -- repaired source traceability (121/346 -> 1/346 missing resolvable URLs), built 4 data-change proposal reports, applied exactly one safe verified factual update (Uruguay fifa_rank 14->16) after holding two genuinely conflicting/overtaken candidates for Codex's judgment, added a substitution-profile prototype to the match engine (neutral-default-preserving, fully tested, not yet wired to real per-team data), re-ran the full diagnostics suite with a confirmed no-regression check, fixed one stale diagnostic the prototype itself had made inaccurate, prepared a release candidate, and pushed to production.
 
