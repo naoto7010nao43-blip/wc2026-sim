@@ -99,15 +99,49 @@ def _build_sub_player(p: dict, out_player: PlayerState) -> PlayerState:
     )
 
 
-def maybe_substitute(team: TeamState, minute: int, rng: random.Random) -> dict | None:
+def _effective_sub_window(profile: dict) -> tuple[int, int]:
+    """Shift the substitution window's start by the profile's
+    first_sub_minute_bias (minutes earlier(-)/later(+)), clamped so the
+    window can never invert or start implausibly early. A neutral (0.0)
+    bias reproduces SUB_WINDOW exactly."""
+    bias = profile.get("first_sub_minute_bias", 0.0)
+    start = SUB_WINDOW[0] + bias
+    start = max(40, min(SUB_WINDOW[1], start))
+    return (int(round(start)), SUB_WINDOW[1])
+
+
+def _effective_sub_chance(team: TeamState, opponent_score: int, profile: dict) -> float:
+    """Neutral profile values reproduce SUB_CHANCE_PER_MINUTE exactly
+    (bench_trust=0.5 -> *1.0 multiplier; trailing_aggression/
+    leading_defensive_bias=0.0 -> no score-state add-on)."""
+    bench_trust = profile.get("bench_trust", 0.5)
+    chance = SUB_CHANCE_PER_MINUTE * (0.5 + bench_trust)
+
+    score_diff = team.score - opponent_score
+    if score_diff < 0:
+        chance *= 1.0 + profile.get("trailing_aggression", 0.0)
+    elif score_diff > 0:
+        chance *= 1.0 + profile.get("leading_defensive_bias", 0.0) * 0.5
+
+    return max(0.0, min(0.9, chance))
+
+
+def maybe_substitute(team: TeamState, minute: int, rng: random.Random, opponent_score: int = 0) -> dict | None:
     """With small per-minute odds inside the substitution window, swap the
     most fatigued eligible starter for the best matching bench player.
-    Returns a substitution event dict, or None if no sub was made."""
+    Returns a substitution event dict, or None if no sub was made.
+
+    `team.substitution_profile` (estimated/external metadata, never
+    'official') can nudge the window, the per-minute chance, and the bench
+    selection's positional strictness; the default NEUTRAL_SUBSTITUTION_PROFILE
+    reproduces the original fatigue-only, fixed-window behavior exactly."""
+    profile = team.substitution_profile
     if team.subs_made >= MAX_SUBS or not team.bench:
         return None
-    if not (SUB_WINDOW[0] <= minute <= SUB_WINDOW[1]):
+    window = _effective_sub_window(profile)
+    if not (window[0] <= minute <= window[1]):
         return None
-    if rng.random() > SUB_CHANCE_PER_MINUTE:
+    if rng.random() > _effective_sub_chance(team, opponent_score, profile):
         return None
 
     outfield = team.outfield()
@@ -119,12 +153,21 @@ def maybe_substitute(team: TeamState, minute: int, rng: random.Random) -> dict |
         return None
 
     aliases = SLOT_POSITION_ALIASES.get(tired.slot_position, [tired.slot_position])
-    candidates = [
+    like_for_like_preference = profile.get("like_for_like_preference", 1.0)
+    position_candidates = [
         p for p in team.bench
         if p["primary_position"] == tired.slot_position or p["primary_position"] in aliases
     ]
-    if not candidates:
-        candidates = [p for p in team.bench if p["primary_position"] != "GK"]
+    non_gk_candidates = [p for p in team.bench if p["primary_position"] != "GK"]
+    # The neutral default (1.0) never rolls -- this keeps the original
+    # behavior's RNG consumption identical when no profile is customized.
+    prefers_position_match = (
+        like_for_like_preference >= 1.0 or rng.random() < like_for_like_preference
+    )
+    if position_candidates and prefers_position_match:
+        candidates = position_candidates
+    else:
+        candidates = non_gk_candidates or position_candidates
     if not candidates:
         return None
 

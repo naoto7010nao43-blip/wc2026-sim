@@ -62,10 +62,18 @@ def simulate_match(
     allow_draw: bool = True,
     home_tactical_profile: dict | None = None,
     away_tactical_profile: dict | None = None,
+    home_substitution_profile: dict | None = None,
+    away_substitution_profile: dict | None = None,
 ) -> dict:
     rng = random.Random(seed)
-    home = build_team_state(home_team_id, home_players, home_formation, attacking_direction=1, tactical_profile=home_tactical_profile)
-    away = build_team_state(away_team_id, away_players, away_formation, attacking_direction=-1, tactical_profile=away_tactical_profile)
+    home = build_team_state(
+        home_team_id, home_players, home_formation, attacking_direction=1,
+        tactical_profile=home_tactical_profile, substitution_profile=home_substitution_profile,
+    )
+    away = build_team_state(
+        away_team_id, away_players, away_formation, attacking_direction=-1,
+        tactical_profile=away_tactical_profile, substitution_profile=away_substitution_profile,
+    )
     apply_game_plan(home, away)
 
     def lineup_snapshot(team: TeamState) -> list[dict]:
@@ -113,8 +121,8 @@ def simulate_match(
             last_minute_processed = minute
             update_score_state_tactics(home, away, clock, final_minute)
             update_score_state_tactics(away, home, clock, final_minute)
-            for team, roster in ((home, home_roster), (away, away_roster)):
-                sub_event = maybe_substitute(team, minute, rng)
+            for team, opponent, roster in ((home, away, home_roster), (away, home, away_roster)):
+                sub_event = maybe_substitute(team, minute, rng, opponent_score=opponent.score)
                 if sub_event is not None:
                     sub_in = next((p for p in team.lineup if p.player_id == sub_event["player_id"]), None)
                     if sub_in is not None:

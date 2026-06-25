@@ -9,6 +9,32 @@ from dataclasses import dataclass, field
 
 from app.engine.formations import FORMATIONS, SLOT_POSITION_ALIASES, Formation
 
+# Per-manager substitution tendency, estimated/external metadata rather than
+# confirmed fact (see DATA_GOVERNANCE_POLICY.md). Every field defaults to a
+# neutral value chosen so that an unset/neutral profile reproduces exactly
+# the prior fatigue-only, fixed-window substitution behavior -- this lets
+# the feature exist without changing any match's output until a specific
+# team is given a non-neutral, source-backed profile.
+NEUTRAL_SUBSTITUTION_PROFILE: dict = {
+    # Minutes earlier(-)/later(+) than the base substitution window start.
+    "first_sub_minute_bias": 0.0,
+    # 0-1 add-on to substitution chance per minute while trailing.
+    "trailing_aggression": 0.0,
+    # 0-1 add-on to substitution chance per minute while leading.
+    "leading_defensive_bias": 0.0,
+    # 0-1; 0.5 is neutral (chance multiplier 1.0x), 1.0 doubles it, 0.0 halves it.
+    "bench_trust": 0.5,
+    # 0-1; 1.0 always prefers a same-position bench replacement when one
+    # exists (current/prior behavior); lower values sometimes pick the best
+    # available bench player regardless of position.
+    "like_for_like_preference": 1.0,
+    # 0-1; recorded for future extra-time/penalty-shootout substitution
+    # prep logic. Not yet wired to any behavior -- evidence for this field
+    # is too sparse across researched teams to implement safely (see Spec
+    # 018 Phase 5).
+    "late_penalty_prep_bias": 0.0,
+}
+
 
 @dataclass
 class PlayerState:
@@ -52,6 +78,7 @@ class TeamState:
     # (raw player dicts, converted to PlayerState only when subbed on).
     bench: list[dict] = field(default_factory=list)
     subs_made: int = 0
+    substitution_profile: dict = field(default_factory=lambda: dict(NEUTRAL_SUBSTITUTION_PROFILE))
 
     def goalkeeper(self) -> PlayerState:
         return next(p for p in self.lineup if p.slot_position == "GK")
@@ -91,6 +118,7 @@ def build_team_state(
     formation_name: str,
     attacking_direction: int,
     tactical_profile: dict | None = None,
+    substitution_profile: dict | None = None,
 ) -> TeamState:
     """Assign up to 11 players from `players` (list of player dicts with at
     least id/name/primary_position/secondary_positions/overall/attributes/
@@ -167,4 +195,5 @@ def build_team_state(
         tactical_profile=dict(tactical_profile or {}),
         base_tactical_profile=dict(tactical_profile or {}),
         bench=bench,
+        substitution_profile={**NEUTRAL_SUBSTITUTION_PROFILE, **(substitution_profile or {})},
     )
