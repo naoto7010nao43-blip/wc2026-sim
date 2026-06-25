@@ -9,37 +9,23 @@ Read first:
 
 ## Active Claude Code Task
 
-Ready:
+None. Awaiting the next Codex-authored Ready spec in `docs/specs/CURRENT_TASK.md`.
 
-1. Finish `docs/specs/017-external-data-verification-expansion.md`.
-2. Continue directly into `docs/specs/018-claude-full-delivery-sprint.md`.
+Claude Code completed Spec 017 in full (48/48 teams, 346 URL-backed candidates) and worked through Spec 018 Phases 0-7 autonomously while Codex was unavailable (2026-06-25): repaired source traceability for the original 16-team batch (121/346 -> 1/346 missing resolvable URLs), built 4 data-change proposal reports, applied exactly one safe verified factual update (Uruguay fifa_rank 14->16) after holding two genuinely conflicting/overtaken candidates for Codex's judgment, added a substitution-profile prototype to the match engine (neutral-default-preserving, fully tested, not yet wired to real per-team data), re-ran the full diagnostics suite with a confirmed no-regression check, and fixed one stale diagnostic (`substitution_model_gap_audit`) that the engine prototype itself had made inaccurate. See `docs/codex/PROGRESS.md`'s "Current Priority" entries dated 2026-06-25 for full detail on every phase, including two items explicitly held for Codex review rather than auto-resolved: a genuine source conflict on Tunisia's manager identity, and a pre-existing benchmark-methodology number (43 vs a stale report's 27) that needs the "status: pass" framing updated, not a regression.
 
-Claude Code should continue without routine user confirmation. The user wants Claude Code to carry implementation, verification, local commits, release-candidate preparation, production publication, and handoff reporting while Codex is unavailable. Codex will return later for review and aftercare.
-
-The user has explicitly authorized production push/deploy after all local release gates pass and `backend/reports/release_readiness_2026-06-24.json` shows `readyForManualPush=true`.
+Proceeding into Spec 018 Phase 8 (release candidate preparation) and, if all gates pass, Phase 9 (production push/deploy) under the user's existing explicit authorization recorded below.
 
 ## Critical Worktree Warning
 
-If `backend/reports/external_data_verification_candidates_2026-06-24.json` is already modified when Claude Code starts, assume it is in-progress Claude research. Do not discard it, reset it, or overwrite it from the committed version. Parse it, continue from it, and include it in the next appropriate commit after validation passes.
+`backend/reports/external_data_verification_candidates_2026-06-24.json` is now complete (48/48 teams) and committed. No in-progress worktree state remains for Spec 017.
 
-## Immediate Priority
+## Handoff Notes For Codex
 
-1. Complete external verification for all 48 teams.
-2. Add URL-backed citations to material current-field candidates.
-3. Regenerate:
-   - `backend/reports/external_data_verification_validation_2026-06-24.json`
-   - `backend/reports/external_source_traceability_audit_2026-06-24.json`
-   - `backend/reports/external_data_decision_queue_2026-06-24.json`
-4. Then execute Spec 018 phases in order.
-
-Known state before this handoff:
-
-- 16/48 teams are already covered.
-- Covered teams: ARG, ESP, ENG, FRA, POR, CRO, NED, MEX, BRA, MAR, BEL, GER, URU, COL, USA, JPN.
-- 32 teams remain in the JSON `scope.remainingUnresearchedTeams`.
-- Current validation result before new Claude work: valid=true, 121 candidates, 16/16 covered teams strong signal, 4 warnings.
-- Codex decision queue before new Claude work: 73 current-field review candidates, 4 warning-hold candidates, 15 future-engine candidates, 29 provisional-context candidates.
-- Codex source traceability audit before new Claude work: 121/121 candidates missing resolvable URLs. Treat the data as useful signal, but do not apply seed/rating/tactical changes from URL-less claims.
+- 5 stale-manager findings from Spec 017 research: Tunisia, Saudi Arabia, Uzbekistan, Czech Republic, Ghana. 4 of 5 (KSA/UZB/CZE/GHA) were already corrected in `teams.json` by an earlier process before this handoff. Tunisia's case is a genuine, unresolved **conflict** between two independently Tier-S-sourced claims (see `backend/reports/external_factual_updates_applied_2026-06-24.json`'s `heldForReview` entry) -- needs a human/Codex decision, not automation.
+- A seeded Curacao player, "Gevero Markus" (CB, overall 52), could not be matched to any of Curacao's actual 26-man World Cup squad -- flagged as a possible fabricated/hallucinated seed identity in `docs/codex/CLAUDE_EXTERNAL_DATA_VERIFICATION_FINAL_REPORT_2026-06-25.md`; not auto-corrected.
+- `backend/reports/prediction_benchmark_baseline_2026-06-25.json` is the first committed report reflecting the benchmark script's already-installed dual-order-averaging fix; `implausible_favorite_count` is correctly 43 under that methodology, not the stale 06-23 report's single-order-biased 27. The rank75-over-v1 improvement itself was separately confirmed to hold under both orderings.
+- 4 new data-change proposal reports (`external_current_field_change_proposals`, `external_rating_change_proposals`, `external_tactical_change_proposals`, `external_roster_change_proposals`, all dated 2026-06-24) are ready for review; only Uruguay's fifa_rank has been applied from them so far.
+- The substitution-profile prototype (Spec 018 Phase 5) is implemented and tested but has zero real per-team data; populating it needs a follow-up Codex-reviewed spec (DB column + migration + seed loader from the future-engine decision-queue candidates).
 
 ## Autonomy Rules
 
@@ -59,23 +45,6 @@ Claude Code must not:
 - silently mark estimated data as official.
 
 Claude Code must stop before production only if the production target/branch/URLs cannot be determined from local configuration or project docs, or if deployment/post-deploy smoke fails and the safe recovery path is unclear.
-
-## Required Minimum Verification For The Current External-Data Work
-
-Run before committing the completed Spec 017 batch:
-
-```powershell
-cd backend
-.\venv\Scripts\python.exe -c "import json, pathlib; json.loads(pathlib.Path('reports/external_data_verification_candidates_2026-06-24.json').read_text(encoding='utf-8')); print('json ok')"
-.\venv\Scripts\python.exe scripts\validate_external_data_verification_report.py reports\external_data_verification_candidates_2026-06-24.json --out reports\external_data_verification_validation_2026-06-24.json
-.\venv\Scripts\python.exe scripts\audit_external_source_traceability.py
-.\venv\Scripts\python.exe scripts\build_external_data_decision_queue.py
-.\venv\Scripts\python.exe scripts\audit_text_encoding.py
-cd ..
-git diff --check
-```
-
-If code is changed, also run the relevant backend tests and frontend lint/build. Spec 018 lists stronger verification for later implementation phases.
 
 ## Current Context
 
@@ -126,6 +95,8 @@ Completed specs:
 - `docs/specs/014-rating-review-workbench.md`
 - `docs/specs/015-rating-readiness-data-review.md`
 - `docs/specs/016-model-calibration-transparency.md`
+- `docs/specs/017-external-data-verification-expansion.md`
+- `docs/specs/018-claude-full-delivery-sprint.md` (Phases 0-7 complete; Phase 8/9 in progress -- see "Handoff Notes For Codex" above)
 
 Context-only older direction docs:
 
