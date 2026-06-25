@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-25T06:40:52.284099+00:00",
+  "note": "外部データ検証候補から、出典と現在のseed値の両方を人が直接確認した、安全かつ確定的に適用可能な事実項目のみを反映した適用レポートです。推測による値の生成は行っていません。",
+  "appliedCount": 1,
+  "skippedCount": 0,
+  "heldForReviewCount": 2,
+  "applied": [
+    {
+      "teamId": "URU",
+      "field": "fifa_rank",
+      "oldValue": 14,
+      "newValue": 16,
+      "sourceName": "World Soccer Talk",
+      "sourceUrl": "https://worldsoccertalk.com/world-cup/uruguays-updated-fifa-ranking-before-2026-world-cup-clash-with-cape-verde/",
+      "sourceTier": "S",
+      "observedDate": "2026-06",
+      "claim": "FIFA rank as of the pre-tournament June 2026 update is 16, not the seed's 14.",
+      "appliedAt": true
+    }
+  ],
+  "skipped": [],
+  "heldForReview": [
+    {
+      "teamId": "TUN",
+      "field": "manager_name",
+      "reason": "conflicting_evidence: 2026-06-22 commit 268c1fa recorded manager_name as Renard succeeding Lamouchi (sacked mid-tournament 2026-06-15); 2026-06-25 external research (CAF official, FIFA.com, Tier S) says Lamouchi succeeded Trabelsi in January 2026 and led Tunisia through the World Cup, with no mention of Renard managing Tunisia at all. These two Tier-S-sourced claims directly disagree; needs Codex/human judgment, not automated resolution."
+    },
+    {
+      "teamId": "GHA",
+      "field": "fifa_rank",
+      "reason": "value_overtaken: candidate recorded old=61/new=65, but the live seed value is 72 -- matches neither, so some other edit already moved this field past what this candidate proposed. Applying either 61 or 65 now would not reflect the most current known state; needs a fresh source check."
+    }
+  ]
+}

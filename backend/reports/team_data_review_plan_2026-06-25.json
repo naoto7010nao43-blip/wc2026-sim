@@ -1,0 +1,1008 @@
+{
+  "generatedAt": "2026-06-25T06:41:40.741418+00:00",
+  "sourceReports": [
+    {
+      "name": "simulation_accuracy_audit",
+      "generatedAt": "2026-06-25T06:41:40.411350+00:00"
+    },
+    {
+      "name": "roster_reconciliation_candidates",
+      "generatedAt": "2026-06-23T07:18:10.990508+00:00"
+    }
+  ],
+  "note": "シミュレーション精度監査とロスター照合候補レポートから算出した、読み取り専用のチームデータレビュー優先度です。シミュレーションのフォーミュラ・能力値・シードデータは変更しません。次にCodexがどのチームのスカッド/能力値データを確認すべきかを示すためのものであり、フォーミュラの調整は別途の検証スペックがない限り凍結されたままです。",
+  "teamCount": 48,
+  "teams": [
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "fifa_rank": 10,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 9,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 141.0,
+      "priority_band": "high",
+      "review_reasons": [
+        "FIFAランク比でモデル評価が9件の対戦で見劣り",
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "スカッド能力値レビュー"
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "fifa_rank": 7,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": 64.5,
+      "strength_rating": null,
+      "rank_underperformance_flags": 8,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 129.5,
+      "priority_band": "high",
+      "review_reasons": [
+        "FIFAランク比でモデル評価が8件の対戦で見劣り",
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "スカッド能力値レビュー"
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "fifa_rank": 5,
+      "seed_roster_size": 14,
+      "attack_rating": 61.7,
+      "defense_rating": 66.2,
+      "strength_rating": 80.0,
+      "rank_underperformance_flags": 5,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 81.0,
+      "priority_band": "high",
+      "review_reasons": [
+        "FIFAランク比でモデル評価が5件の対戦で見劣り",
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "スカッド能力値レビュー"
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "fifa_rank": 14,
+      "seed_roster_size": 16,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 4,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 14,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 4,
+      "priority_score": 73.4,
+      "priority_band": "high",
+      "review_reasons": [
+        "FIFAランク比でモデル評価が4件の対戦で見劣り",
+        "未確認の古いシード選手が4件"
+      ],
+      "recommended_next_action": "スカッド能力値レビュー"
+    },
+    {
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "fifa_rank": 63,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": 47.8,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 5,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 35.0,
+      "priority_band": "high",
+      "review_reasons": [
+        "名寄せ候補が5件あり",
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "fifa_rank": 64,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 19,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 6,
+      "priority_score": 27.5,
+      "priority_band": "high",
+      "review_reasons": [
+        "未確認の古いシード選手が6件",
+        "高信頼度の追加候補が19件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "fifa_rank": 26,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 19,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 6,
+      "priority_score": 27.5,
+      "priority_band": "high",
+      "review_reasons": [
+        "未確認の古いシード選手が6件",
+        "高信頼度の追加候補が19件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "fifa_rank": 54,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 16,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 1,
+      "likely_stale_seed_player_count": 4,
+      "priority_score": 25.0,
+      "priority_band": "high",
+      "review_reasons": [
+        "名寄せ候補が1件あり",
+        "未確認の古いシード選手が4件",
+        "高信頼度の追加候補が16件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "KSA",
+      "team_name": "Saudi Arabia",
+      "fifa_rank": 56,
+      "seed_roster_size": 12,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 16,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 2,
+      "likely_stale_seed_player_count": 2,
+      "priority_score": 24.0,
+      "priority_band": "high",
+      "review_reasons": [
+        "名寄せ候補が2件あり",
+        "未確認の古いシード選手が2件",
+        "高信頼度の追加候補が16件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "RSA",
+      "team_name": "South Africa",
+      "fifa_rank": 60,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 17,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 4,
+      "priority_score": 20.5,
+      "priority_band": "high",
+      "review_reasons": [
+        "未確認の古いシード選手が4件",
+        "高信頼度の追加候補が17件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "IRN",
+      "team_name": "Iran",
+      "fifa_rank": 20,
+      "seed_roster_size": 17,
+      "attack_rating": 44.2,
+      "defense_rating": 49.4,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 12,
+      "ambiguous_pair_count": 2,
+      "likely_stale_seed_player_count": 3,
+      "priority_score": 20.2,
+      "priority_band": "high",
+      "review_reasons": [
+        "名寄せ候補が2件あり",
+        "未確認の古いシード選手が3件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "CZE",
+      "team_name": "Czechia",
+      "fifa_rank": 41,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 16,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 3,
+      "priority_score": 17.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が3件",
+        "高信頼度の追加候補が16件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "UZB",
+      "team_name": "Uzbekistan",
+      "fifa_rank": 56,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 1,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 15.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "名寄せ候補が1件あり",
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "TUN",
+      "team_name": "Tunisia",
+      "fifa_rank": 38,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 1,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 14.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "名寄せ候補が1件あり",
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "MAR",
+      "team_name": "Morocco",
+      "fifa_rank": 8,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 15,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 4,
+      "priority_score": 13.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が4件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "CPV",
+      "team_name": "Cape Verde",
+      "fifa_rank": 70,
+      "seed_roster_size": 13,
+      "attack_rating": 44.3,
+      "defense_rating": null,
+      "strength_rating": 39.3,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 15,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 2,
+      "priority_score": 13.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が2件",
+        "高信頼度の追加候補が15件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "IRQ",
+      "team_name": "Iraq",
+      "fifa_rank": 58,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": 48.6,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 15,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 2,
+      "priority_score": 13.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が2件",
+        "高信頼度の追加候補が15件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "SWE",
+      "team_name": "Sweden",
+      "fifa_rank": 25,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 2,
+      "priority_score": 13.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が2件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "QAT",
+      "team_name": "Qatar",
+      "fifa_rank": 56,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": 49.6,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 1,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 11.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "名寄せ候補が1件あり",
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "EGY",
+      "team_name": "Egypt",
+      "fifa_rank": 29,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 2,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 11.1,
+      "priority_band": "medium",
+      "review_reasons": [
+        "名寄せ候補が2件あり"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "SEN",
+      "team_name": "Senegal",
+      "fifa_rank": 18,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 1,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 11.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "名寄せ候補が1件あり",
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "名寄せ候補レビュー"
+    },
+    {
+      "team_id": "KOR",
+      "team_name": "South Korea",
+      "fifa_rank": 23,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 10.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "SUI",
+      "team_name": "Switzerland",
+      "fifa_rank": 19,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 10.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "TUR",
+      "team_name": "Turkey",
+      "fifa_rank": 22,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 10.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "AUT",
+      "team_name": "Austria",
+      "fifa_rank": 24,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 10.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "COD",
+      "team_name": "DR Congo",
+      "fifa_rank": 58,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 10.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "JPN",
+      "team_name": "Japan",
+      "fifa_rank": 18,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 9.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が1件",
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "NZL",
+      "team_name": "New Zealand",
+      "fifa_rank": 85,
+      "seed_roster_size": 16,
+      "attack_rating": 41.5,
+      "defense_rating": null,
+      "strength_rating": 38.1,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 12,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 2,
+      "priority_score": 7.2,
+      "priority_band": "medium",
+      "review_reasons": [
+        "未確認の古いシード選手が2件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "ECU",
+      "team_name": "Ecuador",
+      "fifa_rank": 22,
+      "seed_roster_size": 12,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 7.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "URU",
+      "team_name": "Uruguay",
+      "fifa_rank": 16,
+      "seed_roster_size": 12,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 14,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 7.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が14件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "HAI",
+      "team_name": "Haiti",
+      "fifa_rank": 83,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": 38.8,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "CIV",
+      "team_name": "Ivory Coast",
+      "fifa_rank": 39,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "COL",
+      "team_name": "Colombia",
+      "fifa_rank": 14,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "GHA",
+      "team_name": "Ghana",
+      "fifa_rank": 72,
+      "seed_roster_size": 13,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": 40.0,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "PAN",
+      "team_name": "Panama",
+      "fifa_rank": 30,
+      "seed_roster_size": 13,
+      "attack_rating": 43.6,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 13,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.5,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が13件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "CAN",
+      "team_name": "Canada",
+      "fifa_rank": 30,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "SCO",
+      "team_name": "Scotland",
+      "fifa_rank": 38,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "ESP",
+      "team_name": "Spain",
+      "fifa_rank": 2,
+      "seed_roster_size": 14,
+      "attack_rating": 63.1,
+      "defense_rating": 65.5,
+      "strength_rating": 85.3,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "ALG",
+      "team_name": "Algeria",
+      "fifa_rank": 28,
+      "seed_roster_size": 14,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 12,
+      "other_add_candidate_count": 0,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 6.0,
+      "priority_band": "medium",
+      "review_reasons": [
+        "高信頼度の追加候補が12件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "BRA",
+      "team_name": "Brazil",
+      "fifa_rank": 6,
+      "seed_roster_size": 15,
+      "attack_rating": 63.7,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 12,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 4.2,
+      "priority_band": "low",
+      "review_reasons": [
+        "未確認の古いシード選手が1件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "USA",
+      "team_name": "United States",
+      "fifa_rank": 17,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 12,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 4.2,
+      "priority_band": "low",
+      "review_reasons": [
+        "未確認の古いシード選手が1件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "NOR",
+      "team_name": "Norway",
+      "fifa_rank": 25,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 12,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 1,
+      "priority_score": 4.2,
+      "priority_band": "low",
+      "review_reasons": [
+        "未確認の古いシード選手が1件"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "ARG",
+      "team_name": "Argentina",
+      "fifa_rank": 1,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": 86.5,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 1.1,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "FRA",
+      "team_name": "France",
+      "fifa_rank": 3,
+      "seed_roster_size": 15,
+      "attack_rating": 68.2,
+      "defense_rating": 64.9,
+      "strength_rating": 83.9,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 1.1,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "ENG",
+      "team_name": "England",
+      "fifa_rank": 4,
+      "seed_roster_size": 15,
+      "attack_rating": 63.1,
+      "defense_rating": 64.3,
+      "strength_rating": 81.4,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 1.1,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "GER",
+      "team_name": "Germany",
+      "fifa_rank": 10,
+      "seed_roster_size": 15,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 1.1,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "CUW",
+      "team_name": "Curacao",
+      "fifa_rank": 82,
+      "seed_roster_size": 15,
+      "attack_rating": 43.0,
+      "defense_rating": 49.4,
+      "strength_rating": 38.1,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 11,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 1.1,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    },
+    {
+      "team_id": "BEL",
+      "team_name": "Belgium",
+      "fifa_rank": 9,
+      "seed_roster_size": 19,
+      "attack_rating": null,
+      "defense_rating": null,
+      "strength_rating": null,
+      "rank_underperformance_flags": 0,
+      "high_confidence_add_candidate_count": 0,
+      "other_add_candidate_count": 7,
+      "ambiguous_pair_count": 0,
+      "likely_stale_seed_player_count": 0,
+      "priority_score": 0.7,
+      "priority_band": "low",
+      "review_reasons": [
+        "特筆すべき指摘なし"
+      ],
+      "recommended_next_action": "ロスター候補レビュー"
+    }
+  ]
+}
