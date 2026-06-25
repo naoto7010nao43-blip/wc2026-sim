@@ -65,6 +65,49 @@ LEGACY_FIELD_FROM_V2 = {
 }
 LEGACY_FIELD_ORDER = ["id", "name", "confederation", "fifa_rank", "default_formation", "group_id", "tactical_profile"]
 
+# players.json is the legacy-layer equivalent of teams.json: a snake_case
+# mirror of a subset of players2026_official.json's fields. The live app seeds
+# players from the v2 layer (players2026_official.json + the separate
+# playerRatings2026_estimated.json, see app/rating_v2/seed_pipeline_v2.py), NOT
+# from players.json -- players.json is read only by the diagnostics/benchmark
+# scripts. So, exactly like teams.json, it is regenerated from the v2 official
+# file every run and guarded by a consistency test, so it can never silently
+# drift from the production source the way teams.json's fifa_rank once did.
+PLAYERS_PATH = SEED_DIR / "players.json"
+PLAYERS_V2_PATH = SEED_DIR / "players2026_official.json"
+LEGACY_PLAYER_FIELD_FROM_V2 = {
+    "id": "playerId",
+    "team_id": "teamId",
+    "name": "name",
+    "age": "age",
+    "primary_position": "primaryPosition",
+    "secondary_positions": "secondaryPositions",
+    "career_stats": "careerStats",  # nested keys translated via CAREER_STATS_LEGACY_FROM_V2
+    "market_value_eur": "marketValueEur",
+    "qualitative_adjustments": "qualitativeAdjustments",
+    "source_citations": "sourceCitations",
+    "stamina_max": "staminaMax",
+    "name_ja": "nameJa",
+}
+LEGACY_PLAYER_FIELD_ORDER = list(LEGACY_PLAYER_FIELD_FROM_V2.keys())
+# Ordered so the goalkeeper-only stats (save_pct, goals_conceded_per90) land
+# last, matching the existing players.json layout exactly; outfielders simply
+# omit those two keys (they are absent from their v2 careerStats too).
+CAREER_STATS_LEGACY_FROM_V2 = {
+    "appearances": "appearances",
+    "goals": "goals",
+    "assists": "assists",
+    "minutes_played": "minutesPlayed",
+    "key_passes_per90": "keyPassesPer90",
+    "successful_dribbles_per90": "successfulDribblesPer90",
+    "tackles_per90": "tacklesPer90",
+    "interceptions_per90": "interceptionsPer90",
+    "aerial_duels_won_pct": "aerialDuelsWonPct",
+    "pass_completion_pct": "passCompletionPct",
+    "save_pct": "savePct",
+    "goals_conceded_per90": "goalsConcededPer90",
+}
+
 SAFE_UPDATES: list[dict[str, Any]] = [
     {
         "teamId": "URU",
@@ -221,6 +264,47 @@ def regenerate_legacy_teams_json(teams_v2: list[dict], existing_teams: list[dict
     return legacy_teams
 
 
+def _legacy_career_stats(v2_career_stats: dict) -> dict:
+    """Snake_case mirror of a v2 careerStats block, preserving the canonical
+    key order. Any v2 inner key with no legacy name is carried over verbatim
+    rather than dropped, so a future stat can never be silently lost from the
+    legacy file even though it would arrive un-renamed."""
+    out = {
+        legacy_key: v2_career_stats[v2_key]
+        for legacy_key, v2_key in CAREER_STATS_LEGACY_FROM_V2.items()
+        if v2_key in v2_career_stats
+    }
+    known_v2 = set(CAREER_STATS_LEGACY_FROM_V2.values())
+    out.update({k: v for k, v in v2_career_stats.items() if k not in known_v2})
+    return out
+
+
+def regenerate_legacy_players_json(players_v2: list[dict], existing_players: list[dict] | None = None) -> list[dict]:
+    """players.json counterpart of regenerate_legacy_teams_json(): derives the
+    legacy players.json shape from players2026_official.json by field-name
+    translation only -- no value changes to the fields both files represent.
+    Like the teams version, any existing per-player key not in
+    LEGACY_PLAYER_FIELD_ORDER is carried over unchanged from existing_players
+    rather than silently dropped, so a legacy-only annotation (should one ever
+    be added) survives regeneration."""
+    existing_by_id = {
+        p["id"]: p for p in (existing_players or []) if isinstance(p, dict) and p.get("id")
+    }
+    legacy_players = []
+    for player in players_v2:
+        row: dict[str, Any] = {}
+        for legacy_key in LEGACY_PLAYER_FIELD_ORDER:
+            v2_key = LEGACY_PLAYER_FIELD_FROM_V2[legacy_key]
+            if legacy_key == "career_stats":
+                row[legacy_key] = _legacy_career_stats(player.get(v2_key) or {})
+            else:
+                row[legacy_key] = player.get(v2_key)
+        existing = existing_by_id.get(row["id"], {})
+        row.update({k: v for k, v in existing.items() if k not in LEGACY_PLAYER_FIELD_ORDER})
+        legacy_players.append(row)
+    return legacy_players
+
+
 def update_metadata_freshness(metadata: dict, checked_at: str) -> dict:
     metadata["lastUpdated"] = checked_at
     for source in metadata.get("sources", []):
@@ -253,6 +337,14 @@ def main() -> int:
         applied, skipped = apply_updates(teams, SAFE_UPDATES)
         if applied:
             write_json(TEAMS_PATH, teams)
+
+    # players.json is likewise a generated mirror of players2026_official.json
+    # whenever the v2 layer exists -- regenerate it every run so it can never
+    # silently drift from the production source the diagnostics scripts read.
+    if PLAYERS_V2_PATH.exists():
+        players_v2 = load_json(PLAYERS_V2_PATH)
+        existing_players = load_json(PLAYERS_PATH) if PLAYERS_PATH.exists() else []
+        write_json(PLAYERS_PATH, regenerate_legacy_players_json(players_v2, existing_players))
 
     if applied or applied_v2:
         metadata = load_json(METADATA_PATH)

@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.apply_external_factual_updates import (
     apply_updates,
     apply_updates_v2,
+    regenerate_legacy_players_json,
     regenerate_legacy_teams_json,
     update_metadata_freshness,
 )
@@ -151,6 +152,95 @@ def test_regenerate_legacy_teams_json_reflects_an_applied_v2_update():
     legacy = regenerate_legacy_teams_json(teams_v2)
 
     assert legacy[0]["fifa_rank"] == 16
+
+
+def test_regenerate_legacy_players_json_translates_field_and_career_stat_names():
+    players_v2 = [{
+        "playerId": "URU_VALVERDE",
+        "teamId": "URU",
+        "teamCode": "URU",
+        "name": "Federico Valverde",
+        "nameJa": "フェデリコ・バルベルデ",
+        "age": 27,
+        "primaryPosition": "CM",
+        "secondaryPositions": ["RM"],
+        "careerStats": {
+            "appearances": 70, "goals": 12, "assists": 9,
+            "minutesPlayed": 5800, "keyPassesPer90": 1.4,
+            "successfulDribblesPer90": 1.1, "tacklesPer90": 1.8,
+            "interceptionsPer90": 1.0, "aerialDuelsWonPct": 52.0,
+            "passCompletionPct": 86.0,
+        },
+        "marketValueEur": 130000000,
+        "qualitativeAdjustments": {"leadership": 0.2},
+        "sourceCitations": ["https://example.com/valverde"],
+        "staminaMax": 95,
+        "clubName": "Real Madrid CF",  # v2-only field, must not leak into legacy
+        "dataConfidence": "official",
+    }]
+
+    legacy = regenerate_legacy_players_json(players_v2)
+
+    assert legacy == [{
+        "id": "URU_VALVERDE",
+        "team_id": "URU",
+        "name": "Federico Valverde",
+        "age": 27,
+        "primary_position": "CM",
+        "secondary_positions": ["RM"],
+        "career_stats": {
+            "appearances": 70, "goals": 12, "assists": 9,
+            "minutes_played": 5800, "key_passes_per90": 1.4,
+            "successful_dribbles_per90": 1.1, "tackles_per90": 1.8,
+            "interceptions_per90": 1.0, "aerial_duels_won_pct": 52.0,
+            "pass_completion_pct": 86.0,
+        },
+        "market_value_eur": 130000000,
+        "qualitative_adjustments": {"leadership": 0.2},
+        "source_citations": ["https://example.com/valverde"],
+        "stamina_max": 95,
+        "name_ja": "フェデリコ・バルベルデ",
+    }]
+
+
+def test_regenerate_legacy_players_json_keeps_goalkeeper_only_stats_last():
+    players_v2 = [{
+        "playerId": "BRA_ALISSON", "teamId": "BRA", "name": "Alisson Becker",
+        "nameJa": "アリソン", "age": 33, "primaryPosition": "GK",
+        "secondaryPositions": [],
+        "careerStats": {
+            "appearances": 78, "goals": 0, "assists": 1, "minutesPlayed": 6950,
+            "keyPassesPer90": 0.1, "successfulDribblesPer90": 0.0,
+            "tacklesPer90": 0.0, "interceptionsPer90": 0.1,
+            "aerialDuelsWonPct": 55.0, "passCompletionPct": 84.0,
+            "savePct": 68.5, "goalsConcededPer90": 0.9,
+        },
+        "marketValueEur": 30000000, "qualitativeAdjustments": {},
+        "sourceCitations": [], "staminaMax": 100,
+    }]
+
+    legacy = regenerate_legacy_players_json(players_v2)
+
+    assert list(legacy[0]["career_stats"].keys())[-2:] == ["save_pct", "goals_conceded_per90"]
+    assert legacy[0]["career_stats"]["save_pct"] == 68.5
+
+
+def test_regenerate_legacy_players_json_preserves_fields_with_no_v2_equivalent():
+    players_v2 = [{
+        "playerId": "JPN_MITOMA", "teamId": "JPN", "name": "Kaoru Mitoma",
+        "nameJa": "三笘薫", "age": 28, "primaryPosition": "LW",
+        "secondaryPositions": [], "careerStats": {"appearances": 40},
+        "marketValueEur": 50000000, "qualitativeAdjustments": {},
+        "sourceCitations": [], "staminaMax": 90,
+    }]
+    existing_players = [{
+        "id": "JPN_MITOMA", "team_id": "JPN", "name": "Kaoru Mitoma",
+        "_legacy_only_note": "carried over verbatim",
+    }]
+
+    legacy = regenerate_legacy_players_json(players_v2, existing_players)
+
+    assert legacy[0]["_legacy_only_note"] == "carried over verbatim"
 
 
 def test_update_metadata_freshness_updates_fifa_rank_source_and_top_level_timestamp():
