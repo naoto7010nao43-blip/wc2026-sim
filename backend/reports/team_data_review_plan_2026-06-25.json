@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-25T06:41:40.741418+00:00",
+  "generatedAt": "2026-06-25T06:50:51.493483+00:00",
   "sourceReports": [
     {
       "name": "simulation_accuracy_audit",
-      "generatedAt": "2026-06-25T06:41:40.411350+00:00"
+      "generatedAt": "2026-06-25T06:50:50.999636+00:00"
     },
     {
       "name": "roster_reconciliation_candidates",

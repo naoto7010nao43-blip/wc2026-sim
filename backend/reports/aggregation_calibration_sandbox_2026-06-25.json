@@ -1,0 +1,1307 @@
+{
+  "generatedAt": "2026-06-25T06:50:52.951537+00:00",
+  "note": "チーム強度集約式の代替案を本番コード変更なしで比較する読み取り専用サンドボックスです。結果は将来の明示的なフォーミュラ検証specの判断材料であり、このレポート自体は挙動を変えません。",
+  "sourceReports": [
+    {
+      "name": "prediction_benchmark_baseline",
+      "generatedAt": "2026-06-23T15:21:47.221692+00:00"
+    }
+  ],
+  "variantCount": 4,
+  "bestVariantId": "rank75_current_squad25",
+  "variants": [
+    {
+      "variant_id": "rank70_current_squad30",
+      "label_ja": "FIFAランク比重70% + 現行ベストXI平均30%",
+      "rank_weight": 0.7,
+      "squad_method": "current",
+      "benchmark_summary": {
+        "overallSummary": {
+          "matchup_count": 190,
+          "average_favorite_win_pct": 47.0,
+          "minimum_favorite_win_pct": 22.9,
+          "maximum_favorite_win_pct": 71.6,
+          "implausible_favorite_count": 45
+        },
+        "watchlistTeams": [
+          {
+            "team_id": "CRO",
+            "matchup_count": 10,
+            "average_favorite_win_pct": 33.9,
+            "minimum_favorite_win_pct": 22.9,
+            "maximum_favorite_win_pct": 44.0,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 0,
+                "favorite_win_pct": 22.9,
+                "minimum_expected_favorite_win_pct": 33.0
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 4,
+                "favorite_win_pct": 28.3,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 8,
+                "favorite_win_pct": 30.3,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 8,
+                "favorite_win_pct": 33.1,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 7,
+                "favorite_win_pct": 34.0,
+                "minimum_expected_favorite_win_pct": 41.4
+              }
+            ]
+          },
+          {
+            "team_id": "NED",
+            "matchup_count": 13,
+            "average_favorite_win_pct": 41.0,
+            "minimum_favorite_win_pct": 29.8,
+            "maximum_favorite_win_pct": 52.5,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 3,
+                "favorite_win_pct": 29.8,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 1,
+                "favorite_win_pct": 34.1,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 2,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 7,
+                "favorite_win_pct": 36.0,
+                "minimum_expected_favorite_win_pct": 41.4
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 11,
+                "favorite_win_pct": 38.0,
+                "minimum_expected_favorite_win_pct": 46.2
+              }
+            ]
+          },
+          {
+            "team_id": "POR",
+            "matchup_count": 15,
+            "average_favorite_win_pct": 45.2,
+            "minimum_favorite_win_pct": 32.2,
+            "maximum_favorite_win_pct": 58.1,
+            "implausible_favorite_count": 5,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "BRA",
+                "rank_gap": 1,
+                "favorite_win_pct": 32.2,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "GER",
+                "rank_gap": 5,
+                "favorite_win_pct": 34.8,
+                "minimum_expected_favorite_win_pct": 39.0
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 3,
+                "favorite_win_pct": 39.3,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 4,
+                "favorite_win_pct": 39.8,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 9,
+                "favorite_win_pct": 41.2,
+                "minimum_expected_favorite_win_pct": 43.8
+              }
+            ]
+          },
+          {
+            "team_id": "MEX",
+            "matchup_count": 7,
+            "average_favorite_win_pct": 37.7,
+            "minimum_favorite_win_pct": 31.9,
+            "maximum_favorite_win_pct": 45.9,
+            "implausible_favorite_count": 4,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 4,
+                "favorite_win_pct": 31.9,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 4,
+                "favorite_win_pct": 34.8,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 3,
+                "favorite_win_pct": 35.8,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "URU",
+                "rank_gap": 2,
+                "favorite_win_pct": 36.2,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "SUI",
+                "rank_gap": 5,
+                "favorite_win_pct": 38.8,
+                "minimum_expected_favorite_win_pct": 39.0
+              }
+            ]
+          },
+          {
+            "team_id": "JOR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "BIH",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "AUS",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "PAR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          }
+        ]
+      },
+      "comparison": {
+        "beforeGeneratedAt": "2026-06-23T15:21:47.221692+00:00",
+        "afterGeneratedAt": "2026-06-25T06:50:52.854447+00:00",
+        "modelVersionBefore": "poisson-v2-rank75",
+        "modelVersionAfter": "aggregation-sandbox:rank70_current_squad30",
+        "benchmarkMethod": "dual_order_average",
+        "overall": {
+          "before_matchup_count": 190,
+          "after_matchup_count": 190,
+          "average_favorite_win_pct_delta": -0.2,
+          "implausible_favorite_count_delta": 2.0,
+          "minimum_favorite_win_pct_delta": 0.0,
+          "maximum_favorite_win_pct_delta": -0.4
+        },
+        "rankGapBuckets": [
+          {
+            "rank_gap_bucket": "00-02",
+            "before_matchup_count": 33,
+            "after_matchup_count": 36,
+            "average_favorite_win_pct_delta": -0.4,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "03-05",
+            "before_matchup_count": 47,
+            "after_matchup_count": 42,
+            "average_favorite_win_pct_delta": 0.2,
+            "implausible_favorite_count_delta": -2.0
+          },
+          {
+            "rank_gap_bucket": "06-10",
+            "before_matchup_count": 53,
+            "after_matchup_count": 53,
+            "average_favorite_win_pct_delta": -0.4,
+            "implausible_favorite_count_delta": 2.0
+          },
+          {
+            "rank_gap_bucket": "11-20",
+            "before_matchup_count": 56,
+            "after_matchup_count": 58,
+            "average_favorite_win_pct_delta": -0.5,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "21+",
+            "before_matchup_count": 1,
+            "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": -1.1,
+            "implausible_favorite_count_delta": 0.0
+          }
+        ],
+        "watchlistTeams": [
+          {
+            "team_id": "AUS",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "BIH",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "CRO",
+            "average_favorite_win_pct_delta": -0.1,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.0
+          },
+          {
+            "team_id": "JOR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "MEX",
+            "average_favorite_win_pct_delta": -0.2,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.6
+          },
+          {
+            "team_id": "NED",
+            "average_favorite_win_pct_delta": -0.2,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.2
+          },
+          {
+            "team_id": "PAR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "POR",
+            "average_favorite_win_pct_delta": -0.2,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": -0.2
+          }
+        ],
+        "evaluation": {
+          "status": "review",
+          "watchlist_implausible_reduction": 0,
+          "warnings": [
+            "watchlist implausible-favorite cases improved by only 0, below required 1"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "rank75_current_squad25",
+      "label_ja": "FIFAランク比重75% + 現行ベストXI平均25%",
+      "rank_weight": 0.75,
+      "squad_method": "current",
+      "benchmark_summary": {
+        "overallSummary": {
+          "matchup_count": 190,
+          "average_favorite_win_pct": 47.2,
+          "minimum_favorite_win_pct": 23.0,
+          "maximum_favorite_win_pct": 72.0,
+          "implausible_favorite_count": 43
+        },
+        "watchlistTeams": [
+          {
+            "team_id": "CRO",
+            "matchup_count": 10,
+            "average_favorite_win_pct": 34.1,
+            "minimum_favorite_win_pct": 23.0,
+            "maximum_favorite_win_pct": 44.5,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 0,
+                "favorite_win_pct": 23.0,
+                "minimum_expected_favorite_win_pct": 33.0
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 4,
+                "favorite_win_pct": 28.4,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 8,
+                "favorite_win_pct": 30.7,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 8,
+                "favorite_win_pct": 33.4,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 7,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 41.4
+              }
+            ]
+          },
+          {
+            "team_id": "NED",
+            "matchup_count": 13,
+            "average_favorite_win_pct": 41.2,
+            "minimum_favorite_win_pct": 29.9,
+            "maximum_favorite_win_pct": 53.0,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 3,
+                "favorite_win_pct": 29.9,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 1,
+                "favorite_win_pct": 34.0,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 2,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 7,
+                "favorite_win_pct": 36.0,
+                "minimum_expected_favorite_win_pct": 41.4
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 11,
+                "favorite_win_pct": 38.5,
+                "minimum_expected_favorite_win_pct": 46.2
+              }
+            ]
+          },
+          {
+            "team_id": "POR",
+            "matchup_count": 15,
+            "average_favorite_win_pct": 45.4,
+            "minimum_favorite_win_pct": 32.3,
+            "maximum_favorite_win_pct": 58.6,
+            "implausible_favorite_count": 5,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "BRA",
+                "rank_gap": 1,
+                "favorite_win_pct": 32.3,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "GER",
+                "rank_gap": 5,
+                "favorite_win_pct": 35.0,
+                "minimum_expected_favorite_win_pct": 39.0
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 3,
+                "favorite_win_pct": 39.3,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 4,
+                "favorite_win_pct": 39.9,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 9,
+                "favorite_win_pct": 41.4,
+                "minimum_expected_favorite_win_pct": 43.8
+              }
+            ]
+          },
+          {
+            "team_id": "MEX",
+            "matchup_count": 7,
+            "average_favorite_win_pct": 38.0,
+            "minimum_favorite_win_pct": 32.2,
+            "maximum_favorite_win_pct": 46.2,
+            "implausible_favorite_count": 3,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 4,
+                "favorite_win_pct": 32.2,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 4,
+                "favorite_win_pct": 35.0,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 3,
+                "favorite_win_pct": 36.0,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "URU",
+                "rank_gap": 2,
+                "favorite_win_pct": 36.5,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "SUI",
+                "rank_gap": 5,
+                "favorite_win_pct": 39.0,
+                "minimum_expected_favorite_win_pct": 39.0
+              }
+            ]
+          },
+          {
+            "team_id": "JOR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "BIH",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "AUS",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "PAR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          }
+        ]
+      },
+      "comparison": {
+        "beforeGeneratedAt": "2026-06-23T15:21:47.221692+00:00",
+        "afterGeneratedAt": "2026-06-25T06:50:52.885602+00:00",
+        "modelVersionBefore": "poisson-v2-rank75",
+        "modelVersionAfter": "aggregation-sandbox:rank75_current_squad25",
+        "benchmarkMethod": "dual_order_average",
+        "overall": {
+          "before_matchup_count": 190,
+          "after_matchup_count": 190,
+          "average_favorite_win_pct_delta": 0.0,
+          "implausible_favorite_count_delta": 0.0,
+          "minimum_favorite_win_pct_delta": 0.1,
+          "maximum_favorite_win_pct_delta": 0.0
+        },
+        "rankGapBuckets": [
+          {
+            "rank_gap_bucket": "00-02",
+            "before_matchup_count": 33,
+            "after_matchup_count": 36,
+            "average_favorite_win_pct_delta": -0.3,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "03-05",
+            "before_matchup_count": 47,
+            "after_matchup_count": 42,
+            "average_favorite_win_pct_delta": 0.4,
+            "implausible_favorite_count_delta": -3.0
+          },
+          {
+            "rank_gap_bucket": "06-10",
+            "before_matchup_count": 53,
+            "after_matchup_count": 53,
+            "average_favorite_win_pct_delta": -0.1,
+            "implausible_favorite_count_delta": 2.0
+          },
+          {
+            "rank_gap_bucket": "11-20",
+            "before_matchup_count": 56,
+            "after_matchup_count": 58,
+            "average_favorite_win_pct_delta": -0.1,
+            "implausible_favorite_count_delta": 0.0
+          },
+          {
+            "rank_gap_bucket": "21+",
+            "before_matchup_count": 1,
+            "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": -0.2,
+            "implausible_favorite_count_delta": 0.0
+          }
+        ],
+        "watchlistTeams": [
+          {
+            "team_id": "AUS",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "BIH",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "CRO",
+            "average_favorite_win_pct_delta": 0.1,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.1
+          },
+          {
+            "team_id": "JOR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "MEX",
+            "average_favorite_win_pct_delta": 0.1,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": -0.3
+          },
+          {
+            "team_id": "NED",
+            "average_favorite_win_pct_delta": 0.0,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.1
+          },
+          {
+            "team_id": "PAR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "POR",
+            "average_favorite_win_pct_delta": 0.0,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": -0.1
+          }
+        ],
+        "evaluation": {
+          "status": "review",
+          "watchlist_implausible_reduction": 0,
+          "warnings": [
+            "watchlist implausible-favorite cases improved by only 0, below required 1"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "rank65_elite_squad35",
+      "label_ja": "FIFAランク比重65% + エリート重視スカッド35%",
+      "rank_weight": 0.65,
+      "squad_method": "elite_weighted",
+      "benchmark_summary": {
+        "overallSummary": {
+          "matchup_count": 190,
+          "average_favorite_win_pct": 46.8,
+          "minimum_favorite_win_pct": 23.1,
+          "maximum_favorite_win_pct": 71.2,
+          "implausible_favorite_count": 48
+        },
+        "watchlistTeams": [
+          {
+            "team_id": "CRO",
+            "matchup_count": 10,
+            "average_favorite_win_pct": 33.9,
+            "minimum_favorite_win_pct": 23.1,
+            "maximum_favorite_win_pct": 43.3,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 0,
+                "favorite_win_pct": 23.1,
+                "minimum_expected_favorite_win_pct": 33.0
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 4,
+                "favorite_win_pct": 28.1,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 8,
+                "favorite_win_pct": 30.3,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 8,
+                "favorite_win_pct": 33.1,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 7,
+                "favorite_win_pct": 33.9,
+                "minimum_expected_favorite_win_pct": 41.4
+              }
+            ]
+          },
+          {
+            "team_id": "NED",
+            "matchup_count": 13,
+            "average_favorite_win_pct": 40.7,
+            "minimum_favorite_win_pct": 29.7,
+            "maximum_favorite_win_pct": 51.5,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 3,
+                "favorite_win_pct": 29.7,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 1,
+                "favorite_win_pct": 34.0,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 2,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 7,
+                "favorite_win_pct": 35.4,
+                "minimum_expected_favorite_win_pct": 41.4
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 11,
+                "favorite_win_pct": 37.8,
+                "minimum_expected_favorite_win_pct": 46.2
+              }
+            ]
+          },
+          {
+            "team_id": "POR",
+            "matchup_count": 15,
+            "average_favorite_win_pct": 44.8,
+            "minimum_favorite_win_pct": 31.8,
+            "maximum_favorite_win_pct": 57.0,
+            "implausible_favorite_count": 6,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "BRA",
+                "rank_gap": 1,
+                "favorite_win_pct": 31.8,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "GER",
+                "rank_gap": 5,
+                "favorite_win_pct": 34.6,
+                "minimum_expected_favorite_win_pct": 39.0
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 3,
+                "favorite_win_pct": 39.2,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 4,
+                "favorite_win_pct": 39.7,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 9,
+                "favorite_win_pct": 40.5,
+                "minimum_expected_favorite_win_pct": 43.8
+              }
+            ]
+          },
+          {
+            "team_id": "MEX",
+            "matchup_count": 7,
+            "average_favorite_win_pct": 37.3,
+            "minimum_favorite_win_pct": 31.6,
+            "maximum_favorite_win_pct": 44.8,
+            "implausible_favorite_count": 4,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 4,
+                "favorite_win_pct": 31.6,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 4,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 3,
+                "favorite_win_pct": 35.2,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "URU",
+                "rank_gap": 2,
+                "favorite_win_pct": 35.8,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "SUI",
+                "rank_gap": 5,
+                "favorite_win_pct": 38.2,
+                "minimum_expected_favorite_win_pct": 39.0
+              }
+            ]
+          },
+          {
+            "team_id": "JOR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "BIH",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "AUS",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "PAR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          }
+        ]
+      },
+      "comparison": {
+        "beforeGeneratedAt": "2026-06-23T15:21:47.221692+00:00",
+        "afterGeneratedAt": "2026-06-25T06:50:52.917652+00:00",
+        "modelVersionBefore": "poisson-v2-rank75",
+        "modelVersionAfter": "aggregation-sandbox:rank65_elite_squad35",
+        "benchmarkMethod": "dual_order_average",
+        "overall": {
+          "before_matchup_count": 190,
+          "after_matchup_count": 190,
+          "average_favorite_win_pct_delta": -0.4,
+          "implausible_favorite_count_delta": 5.0,
+          "minimum_favorite_win_pct_delta": 0.2,
+          "maximum_favorite_win_pct_delta": -0.8
+        },
+        "rankGapBuckets": [
+          {
+            "rank_gap_bucket": "00-02",
+            "before_matchup_count": 33,
+            "after_matchup_count": 36,
+            "average_favorite_win_pct_delta": -0.3,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "03-05",
+            "before_matchup_count": 47,
+            "after_matchup_count": 42,
+            "average_favorite_win_pct_delta": 0.1,
+            "implausible_favorite_count_delta": -2.0
+          },
+          {
+            "rank_gap_bucket": "06-10",
+            "before_matchup_count": 53,
+            "after_matchup_count": 53,
+            "average_favorite_win_pct_delta": -0.7,
+            "implausible_favorite_count_delta": 3.0
+          },
+          {
+            "rank_gap_bucket": "11-20",
+            "before_matchup_count": 56,
+            "after_matchup_count": 58,
+            "average_favorite_win_pct_delta": -0.9,
+            "implausible_favorite_count_delta": 3.0
+          },
+          {
+            "rank_gap_bucket": "21+",
+            "before_matchup_count": 1,
+            "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": -2.4,
+            "implausible_favorite_count_delta": 0.0
+          }
+        ],
+        "watchlistTeams": [
+          {
+            "team_id": "AUS",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "BIH",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "CRO",
+            "average_favorite_win_pct_delta": -0.1,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.2
+          },
+          {
+            "team_id": "JOR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "MEX",
+            "average_favorite_win_pct_delta": -0.6,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.9
+          },
+          {
+            "team_id": "NED",
+            "average_favorite_win_pct_delta": -0.5,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.3
+          },
+          {
+            "team_id": "PAR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "POR",
+            "average_favorite_win_pct_delta": -0.6,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.6
+          }
+        ],
+        "evaluation": {
+          "status": "review",
+          "watchlist_implausible_reduction": 0,
+          "warnings": [
+            "watchlist implausible-favorite cases improved by only 0, below required 1"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "rank70_elite_squad30",
+      "label_ja": "FIFAランク比重70% + エリート重視スカッド30%",
+      "rank_weight": 0.7,
+      "squad_method": "elite_weighted",
+      "benchmark_summary": {
+        "overallSummary": {
+          "matchup_count": 190,
+          "average_favorite_win_pct": 47.0,
+          "minimum_favorite_win_pct": 23.2,
+          "maximum_favorite_win_pct": 71.6,
+          "implausible_favorite_count": 45
+        },
+        "watchlistTeams": [
+          {
+            "team_id": "CRO",
+            "matchup_count": 10,
+            "average_favorite_win_pct": 34.1,
+            "minimum_favorite_win_pct": 23.2,
+            "maximum_favorite_win_pct": 43.8,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 0,
+                "favorite_win_pct": 23.2,
+                "minimum_expected_favorite_win_pct": 33.0
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 4,
+                "favorite_win_pct": 28.3,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 8,
+                "favorite_win_pct": 30.7,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 8,
+                "favorite_win_pct": 33.4,
+                "minimum_expected_favorite_win_pct": 42.6
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 7,
+                "favorite_win_pct": 34.2,
+                "minimum_expected_favorite_win_pct": 41.4
+              }
+            ]
+          },
+          {
+            "team_id": "NED",
+            "matchup_count": 13,
+            "average_favorite_win_pct": 40.8,
+            "minimum_favorite_win_pct": 29.9,
+            "maximum_favorite_win_pct": 51.9,
+            "implausible_favorite_count": 10,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "GER",
+                "rank_gap": 3,
+                "favorite_win_pct": 29.9,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 1,
+                "favorite_win_pct": 34.0,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 2,
+                "favorite_win_pct": 34.5,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 7,
+                "favorite_win_pct": 35.5,
+                "minimum_expected_favorite_win_pct": 41.4
+              },
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 11,
+                "favorite_win_pct": 38.2,
+                "minimum_expected_favorite_win_pct": 46.2
+              }
+            ]
+          },
+          {
+            "team_id": "POR",
+            "matchup_count": 15,
+            "average_favorite_win_pct": 45.1,
+            "minimum_favorite_win_pct": 31.9,
+            "maximum_favorite_win_pct": 57.5,
+            "implausible_favorite_count": 5,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "BRA",
+                "rank_gap": 1,
+                "favorite_win_pct": 31.9,
+                "minimum_expected_favorite_win_pct": 34.2
+              },
+              {
+                "away_team_id": "GER",
+                "rank_gap": 5,
+                "favorite_win_pct": 34.9,
+                "minimum_expected_favorite_win_pct": 39.0
+              },
+              {
+                "away_team_id": "MAR",
+                "rank_gap": 3,
+                "favorite_win_pct": 39.2,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "BEL",
+                "rank_gap": 4,
+                "favorite_win_pct": 39.8,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "COL",
+                "rank_gap": 9,
+                "favorite_win_pct": 40.8,
+                "minimum_expected_favorite_win_pct": 43.8
+              }
+            ]
+          },
+          {
+            "team_id": "MEX",
+            "matchup_count": 7,
+            "average_favorite_win_pct": 37.5,
+            "minimum_favorite_win_pct": 31.9,
+            "maximum_favorite_win_pct": 45.1,
+            "implausible_favorite_count": 4,
+            "lowest_favorite_matchups": [
+              {
+                "away_team_id": "SEN",
+                "rank_gap": 4,
+                "favorite_win_pct": 31.9,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "JPN",
+                "rank_gap": 4,
+                "favorite_win_pct": 34.6,
+                "minimum_expected_favorite_win_pct": 37.8
+              },
+              {
+                "away_team_id": "USA",
+                "rank_gap": 3,
+                "favorite_win_pct": 35.5,
+                "minimum_expected_favorite_win_pct": 36.6
+              },
+              {
+                "away_team_id": "URU",
+                "rank_gap": 2,
+                "favorite_win_pct": 36.0,
+                "minimum_expected_favorite_win_pct": 35.4
+              },
+              {
+                "away_team_id": "SUI",
+                "rank_gap": 5,
+                "favorite_win_pct": 38.4,
+                "minimum_expected_favorite_win_pct": 39.0
+              }
+            ]
+          },
+          {
+            "team_id": "JOR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "BIH",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "AUS",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          },
+          {
+            "team_id": "PAR",
+            "matchup_count": 0,
+            "average_favorite_win_pct": null,
+            "minimum_favorite_win_pct": null,
+            "maximum_favorite_win_pct": null,
+            "implausible_favorite_count": 0,
+            "lowest_favorite_matchups": []
+          }
+        ]
+      },
+      "comparison": {
+        "beforeGeneratedAt": "2026-06-23T15:21:47.221692+00:00",
+        "afterGeneratedAt": "2026-06-25T06:50:52.950335+00:00",
+        "modelVersionBefore": "poisson-v2-rank75",
+        "modelVersionAfter": "aggregation-sandbox:rank70_elite_squad30",
+        "benchmarkMethod": "dual_order_average",
+        "overall": {
+          "before_matchup_count": 190,
+          "after_matchup_count": 190,
+          "average_favorite_win_pct_delta": -0.2,
+          "implausible_favorite_count_delta": 2.0,
+          "minimum_favorite_win_pct_delta": 0.3,
+          "maximum_favorite_win_pct_delta": -0.4
+        },
+        "rankGapBuckets": [
+          {
+            "rank_gap_bucket": "00-02",
+            "before_matchup_count": 33,
+            "after_matchup_count": 36,
+            "average_favorite_win_pct_delta": -0.3,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "03-05",
+            "before_matchup_count": 47,
+            "after_matchup_count": 42,
+            "average_favorite_win_pct_delta": 0.2,
+            "implausible_favorite_count_delta": -2.0
+          },
+          {
+            "rank_gap_bucket": "06-10",
+            "before_matchup_count": 53,
+            "after_matchup_count": 53,
+            "average_favorite_win_pct_delta": -0.4,
+            "implausible_favorite_count_delta": 2.0
+          },
+          {
+            "rank_gap_bucket": "11-20",
+            "before_matchup_count": 56,
+            "after_matchup_count": 58,
+            "average_favorite_win_pct_delta": -0.5,
+            "implausible_favorite_count_delta": 1.0
+          },
+          {
+            "rank_gap_bucket": "21+",
+            "before_matchup_count": 1,
+            "after_matchup_count": 1,
+            "average_favorite_win_pct_delta": -1.4,
+            "implausible_favorite_count_delta": 0.0
+          }
+        ],
+        "watchlistTeams": [
+          {
+            "team_id": "AUS",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "BIH",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "CRO",
+            "average_favorite_win_pct_delta": 0.1,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": 0.3
+          },
+          {
+            "team_id": "JOR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "MEX",
+            "average_favorite_win_pct_delta": -0.4,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.6
+          },
+          {
+            "team_id": "NED",
+            "average_favorite_win_pct_delta": -0.4,
+            "implausible_favorite_count_delta": 1.0,
+            "minimum_favorite_win_pct_delta": -0.1
+          },
+          {
+            "team_id": "PAR",
+            "average_favorite_win_pct_delta": null,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": null
+          },
+          {
+            "team_id": "POR",
+            "average_favorite_win_pct_delta": -0.3,
+            "implausible_favorite_count_delta": 0.0,
+            "minimum_favorite_win_pct_delta": -0.5
+          }
+        ],
+        "evaluation": {
+          "status": "review",
+          "watchlist_implausible_reduction": 0,
+          "warnings": [
+            "watchlist implausible-favorite cases improved by only 0, below required 1"
+          ]
+        }
+      }
+    }
+  ],
+  "recommendations_ja": [
+    "watchlist改善がない案は本番式変更候補にしない。",
+    "改善がある案でも、全体平均勝率やランク差バケットの動きが大きい場合は別途レビューする。",
+    "このサンドボックスで有望な案だけを、次の明示的なフォーミュラ検証specに進める。"
+  ]
+}

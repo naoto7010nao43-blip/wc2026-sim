@@ -1,0 +1,523 @@
+{
+  "generatedAt": "2026-06-25T06:50:52.673147+00:00",
+  "note": "能力値レビュー候補の小幅な仮説補正が予測ベンチマークへ与える影響を見る読み取り専用感度分析です。これは能力値変更案ではなく、seedデータも予測式も変更しません。",
+  "sourceReports": [
+    {
+      "name": "rating_decision_audit",
+      "generatedAt": "2026-06-25T06:50:52.048287+00:00"
+    },
+    {
+      "name": "prediction_benchmark_baseline",
+      "generatedAt": "2026-06-23T15:21:47.221692+00:00"
+    }
+  ],
+  "probeDelta": 2,
+  "candidateCount": 4,
+  "appliedCandidateCount": 4,
+  "appliedChanges": [
+    {
+      "player_id": "CRO_KOVACIC",
+      "team_id": "CRO",
+      "name": "Mateo Kovacic",
+      "primary_position": "CM",
+      "dominant_negative_driver": "defense",
+      "field_changes": [
+        {
+          "field": "overall",
+          "before": 56,
+          "after": 58
+        },
+        {
+          "field": "positionOverall",
+          "before": 56,
+          "after": 58
+        },
+        {
+          "field": "passing",
+          "before": 52,
+          "after": 54
+        },
+        {
+          "field": "chanceCreation",
+          "before": 54,
+          "after": 56
+        },
+        {
+          "field": "decisionMaking",
+          "before": 60,
+          "after": 62
+        },
+        {
+          "field": "composure",
+          "before": 67,
+          "after": 69
+        },
+        {
+          "field": "pressing",
+          "before": 61,
+          "after": 63
+        }
+      ]
+    },
+    {
+      "player_id": "CRO_PASALIC",
+      "team_id": "CRO",
+      "name": "Mario Pasalic",
+      "primary_position": "CM",
+      "dominant_negative_driver": "defense",
+      "field_changes": [
+        {
+          "field": "overall",
+          "before": 51,
+          "after": 53
+        },
+        {
+          "field": "positionOverall",
+          "before": 51,
+          "after": 53
+        },
+        {
+          "field": "passing",
+          "before": 47,
+          "after": 49
+        },
+        {
+          "field": "chanceCreation",
+          "before": 48,
+          "after": 50
+        },
+        {
+          "field": "decisionMaking",
+          "before": 57,
+          "after": 59
+        },
+        {
+          "field": "composure",
+          "before": 63,
+          "after": 65
+        },
+        {
+          "field": "pressing",
+          "before": 58,
+          "after": 60
+        }
+      ]
+    },
+    {
+      "player_id": "MEX_JIMENEZ_R",
+      "team_id": "MEX",
+      "name": "Raul Jimenez",
+      "primary_position": "ST",
+      "dominant_negative_driver": "attack",
+      "field_changes": [
+        {
+          "field": "overall",
+          "before": 51,
+          "after": 53
+        },
+        {
+          "field": "positionOverall",
+          "before": 51,
+          "after": 53
+        },
+        {
+          "field": "attack",
+          "before": 49,
+          "after": 51
+        },
+        {
+          "field": "finishing",
+          "before": 54,
+          "after": 56
+        },
+        {
+          "field": "shotPower",
+          "before": 57,
+          "after": 59
+        },
+        {
+          "field": "chanceCreation",
+          "before": 42,
+          "after": 44
+        },
+        {
+          "field": "ballCarrying",
+          "before": 48,
+          "after": 50
+        },
+        {
+          "field": "crossing",
+          "before": 43,
+          "after": 45
+        }
+      ]
+    },
+    {
+      "player_id": "MEX_PINEDA",
+      "team_id": "MEX",
+      "name": "Orbelin Pineda",
+      "primary_position": "CAM",
+      "dominant_negative_driver": "attack",
+      "field_changes": [
+        {
+          "field": "overall",
+          "before": 48,
+          "after": 50
+        },
+        {
+          "field": "positionOverall",
+          "before": 48,
+          "after": 50
+        },
+        {
+          "field": "attack",
+          "before": 46,
+          "after": 48
+        },
+        {
+          "field": "finishing",
+          "before": 45,
+          "after": 47
+        },
+        {
+          "field": "shotPower",
+          "before": 48,
+          "after": 50
+        },
+        {
+          "field": "chanceCreation",
+          "before": 47,
+          "after": 49
+        },
+        {
+          "field": "ballCarrying",
+          "before": 52,
+          "after": 54
+        },
+        {
+          "field": "crossing",
+          "before": 49,
+          "after": 51
+        }
+      ]
+    }
+  ],
+  "probeBenchmarkSummary": {
+    "overallSummary": {
+      "matchup_count": 190,
+      "average_favorite_win_pct": 47.2,
+      "minimum_favorite_win_pct": 23.1,
+      "maximum_favorite_win_pct": 72.0,
+      "implausible_favorite_count": 42
+    },
+    "watchlistTeams": [
+      {
+        "team_id": "CRO",
+        "matchup_count": 10,
+        "average_favorite_win_pct": 34.2,
+        "minimum_favorite_win_pct": 23.1,
+        "maximum_favorite_win_pct": 44.6,
+        "implausible_favorite_count": 10,
+        "lowest_favorite_matchups": [
+          {
+            "away_team_id": "GER",
+            "rank_gap": 0,
+            "favorite_win_pct": 23.1,
+            "minimum_expected_favorite_win_pct": 33.0
+          },
+          {
+            "away_team_id": "COL",
+            "rank_gap": 4,
+            "favorite_win_pct": 28.6,
+            "minimum_expected_favorite_win_pct": 37.8
+          },
+          {
+            "away_team_id": "SEN",
+            "rank_gap": 8,
+            "favorite_win_pct": 30.9,
+            "minimum_expected_favorite_win_pct": 42.6
+          },
+          {
+            "away_team_id": "JPN",
+            "rank_gap": 8,
+            "favorite_win_pct": 33.5,
+            "minimum_expected_favorite_win_pct": 42.6
+          },
+          {
+            "away_team_id": "USA",
+            "rank_gap": 7,
+            "favorite_win_pct": 34.5,
+            "minimum_expected_favorite_win_pct": 41.4
+          }
+        ]
+      },
+      {
+        "team_id": "NED",
+        "matchup_count": 13,
+        "average_favorite_win_pct": 41.2,
+        "minimum_favorite_win_pct": 30.0,
+        "maximum_favorite_win_pct": 53.0,
+        "implausible_favorite_count": 10,
+        "lowest_favorite_matchups": [
+          {
+            "away_team_id": "GER",
+            "rank_gap": 3,
+            "favorite_win_pct": 30.0,
+            "minimum_expected_favorite_win_pct": 36.6
+          },
+          {
+            "away_team_id": "MAR",
+            "rank_gap": 1,
+            "favorite_win_pct": 34.1,
+            "minimum_expected_favorite_win_pct": 34.2
+          },
+          {
+            "away_team_id": "BEL",
+            "rank_gap": 2,
+            "favorite_win_pct": 34.7,
+            "minimum_expected_favorite_win_pct": 35.4
+          },
+          {
+            "away_team_id": "COL",
+            "rank_gap": 7,
+            "favorite_win_pct": 36.1,
+            "minimum_expected_favorite_win_pct": 41.4
+          },
+          {
+            "away_team_id": "SEN",
+            "rank_gap": 11,
+            "favorite_win_pct": 38.6,
+            "minimum_expected_favorite_win_pct": 46.2
+          }
+        ]
+      },
+      {
+        "team_id": "POR",
+        "matchup_count": 15,
+        "average_favorite_win_pct": 45.4,
+        "minimum_favorite_win_pct": 32.4,
+        "maximum_favorite_win_pct": 58.6,
+        "implausible_favorite_count": 5,
+        "lowest_favorite_matchups": [
+          {
+            "away_team_id": "BRA",
+            "rank_gap": 1,
+            "favorite_win_pct": 32.4,
+            "minimum_expected_favorite_win_pct": 34.2
+          },
+          {
+            "away_team_id": "GER",
+            "rank_gap": 5,
+            "favorite_win_pct": 35.0,
+            "minimum_expected_favorite_win_pct": 39.0
+          },
+          {
+            "away_team_id": "MAR",
+            "rank_gap": 3,
+            "favorite_win_pct": 39.4,
+            "minimum_expected_favorite_win_pct": 36.6
+          },
+          {
+            "away_team_id": "BEL",
+            "rank_gap": 4,
+            "favorite_win_pct": 40.0,
+            "minimum_expected_favorite_win_pct": 37.8
+          },
+          {
+            "away_team_id": "COL",
+            "rank_gap": 9,
+            "favorite_win_pct": 41.5,
+            "minimum_expected_favorite_win_pct": 43.8
+          }
+        ]
+      },
+      {
+        "team_id": "MEX",
+        "matchup_count": 7,
+        "average_favorite_win_pct": 38.8,
+        "minimum_favorite_win_pct": 33.0,
+        "maximum_favorite_win_pct": 47.0,
+        "implausible_favorite_count": 2,
+        "lowest_favorite_matchups": [
+          {
+            "away_team_id": "SEN",
+            "rank_gap": 4,
+            "favorite_win_pct": 33.0,
+            "minimum_expected_favorite_win_pct": 37.8
+          },
+          {
+            "away_team_id": "JPN",
+            "rank_gap": 4,
+            "favorite_win_pct": 35.7,
+            "minimum_expected_favorite_win_pct": 37.8
+          },
+          {
+            "away_team_id": "USA",
+            "rank_gap": 3,
+            "favorite_win_pct": 36.9,
+            "minimum_expected_favorite_win_pct": 36.6
+          },
+          {
+            "away_team_id": "URU",
+            "rank_gap": 2,
+            "favorite_win_pct": 37.3,
+            "minimum_expected_favorite_win_pct": 35.4
+          },
+          {
+            "away_team_id": "SUI",
+            "rank_gap": 5,
+            "favorite_win_pct": 39.9,
+            "minimum_expected_favorite_win_pct": 39.0
+          }
+        ]
+      },
+      {
+        "team_id": "JOR",
+        "matchup_count": 0,
+        "average_favorite_win_pct": null,
+        "minimum_favorite_win_pct": null,
+        "maximum_favorite_win_pct": null,
+        "implausible_favorite_count": 0,
+        "lowest_favorite_matchups": []
+      },
+      {
+        "team_id": "BIH",
+        "matchup_count": 0,
+        "average_favorite_win_pct": null,
+        "minimum_favorite_win_pct": null,
+        "maximum_favorite_win_pct": null,
+        "implausible_favorite_count": 0,
+        "lowest_favorite_matchups": []
+      },
+      {
+        "team_id": "AUS",
+        "matchup_count": 0,
+        "average_favorite_win_pct": null,
+        "minimum_favorite_win_pct": null,
+        "maximum_favorite_win_pct": null,
+        "implausible_favorite_count": 0,
+        "lowest_favorite_matchups": []
+      },
+      {
+        "team_id": "PAR",
+        "matchup_count": 0,
+        "average_favorite_win_pct": null,
+        "minimum_favorite_win_pct": null,
+        "maximum_favorite_win_pct": null,
+        "implausible_favorite_count": 0,
+        "lowest_favorite_matchups": []
+      }
+    ]
+  },
+  "comparison": {
+    "beforeGeneratedAt": "2026-06-23T15:21:47.221692+00:00",
+    "afterGeneratedAt": "2026-06-25T06:50:52.671820+00:00",
+    "modelVersionBefore": "poisson-v2-rank75",
+    "modelVersionAfter": "rating-probe-sensitivity",
+    "benchmarkMethod": "dual_order_average",
+    "overall": {
+      "before_matchup_count": 190,
+      "after_matchup_count": 190,
+      "average_favorite_win_pct_delta": 0.0,
+      "implausible_favorite_count_delta": -1.0,
+      "minimum_favorite_win_pct_delta": 0.2,
+      "maximum_favorite_win_pct_delta": 0.0
+    },
+    "rankGapBuckets": [
+      {
+        "rank_gap_bucket": "00-02",
+        "before_matchup_count": 33,
+        "after_matchup_count": 36,
+        "average_favorite_win_pct_delta": -0.3,
+        "implausible_favorite_count_delta": 1.0
+      },
+      {
+        "rank_gap_bucket": "03-05",
+        "before_matchup_count": 47,
+        "after_matchup_count": 42,
+        "average_favorite_win_pct_delta": 0.4,
+        "implausible_favorite_count_delta": -4.0
+      },
+      {
+        "rank_gap_bucket": "06-10",
+        "before_matchup_count": 53,
+        "after_matchup_count": 53,
+        "average_favorite_win_pct_delta": -0.2,
+        "implausible_favorite_count_delta": 2.0
+      },
+      {
+        "rank_gap_bucket": "11-20",
+        "before_matchup_count": 56,
+        "after_matchup_count": 58,
+        "average_favorite_win_pct_delta": -0.1,
+        "implausible_favorite_count_delta": 0.0
+      },
+      {
+        "rank_gap_bucket": "21+",
+        "before_matchup_count": 1,
+        "after_matchup_count": 1,
+        "average_favorite_win_pct_delta": 0.0,
+        "implausible_favorite_count_delta": 0.0
+      }
+    ],
+    "watchlistTeams": [
+      {
+        "team_id": "AUS",
+        "average_favorite_win_pct_delta": null,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": null
+      },
+      {
+        "team_id": "BIH",
+        "average_favorite_win_pct_delta": null,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": null
+      },
+      {
+        "team_id": "CRO",
+        "average_favorite_win_pct_delta": 0.2,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": 0.2
+      },
+      {
+        "team_id": "JOR",
+        "average_favorite_win_pct_delta": null,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": null
+      },
+      {
+        "team_id": "MEX",
+        "average_favorite_win_pct_delta": 0.9,
+        "implausible_favorite_count_delta": -1.0,
+        "minimum_favorite_win_pct_delta": 0.5
+      },
+      {
+        "team_id": "NED",
+        "average_favorite_win_pct_delta": 0.0,
+        "implausible_favorite_count_delta": 1.0,
+        "minimum_favorite_win_pct_delta": 0.0
+      },
+      {
+        "team_id": "PAR",
+        "average_favorite_win_pct_delta": null,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": null
+      },
+      {
+        "team_id": "POR",
+        "average_favorite_win_pct_delta": 0.0,
+        "implausible_favorite_count_delta": 0.0,
+        "minimum_favorite_win_pct_delta": 0.0
+      }
+    ],
+    "evaluation": {
+      "status": "pass",
+      "watchlist_implausible_reduction": 1.0,
+      "warnings": []
+    }
+  },
+  "recommendations_ja": [
+    "この感度分析で改善が小さい場合、能力値変更だけでなくロスターやモデル式の監査を優先する。",
+    "改善が見える場合でも、実際の数値変更は出典確認とベンチマーク比較を通過するまで適用しない。"
+  ]
+}
