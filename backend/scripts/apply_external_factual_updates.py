@@ -12,10 +12,11 @@ value, the entry is skipped and held for review rather than overwritten.
 This intentionally does not attempt every "ready for Codex review" proposal
 in external_current_field_change_proposals_2026-06-24.json. Cross-checking
 those proposals against the live seed surfaced several cases that are no
-longer safe for blind automation:
-  - Ghana and Qatar's fifa_rank candidates were already overtaken by other
-    edits to live values that match neither the candidate's recorded "old"
-    nor "new" number. Already-moved targets are held rather than applied.
+longer safe for, or no longer need, blind automation:
+  - Qatar's fifa_rank candidate (recorded old=42 -> new=56) is already
+    satisfied: the live seed already reads 56, the proposed new value, so
+    there is nothing to apply. The old-value-match guard would skip it as a
+    no-op regardless. Already-at-target candidates are not re-applied.
   - club_name and team_strength_rating candidates require free-text value
     extraction (the proposal report deliberately does not fabricate a
     structured "new club" value) or do not map to a literal seed field;
@@ -109,20 +110,39 @@ RESOLVED_CONFLICTS: list[dict[str, Any]] = [
             },
         ],
     },
-]
-
-HELD_FOR_REVIEW: list[dict[str, Any]] = [
     {
         "teamId": "GHA",
         "field": "fifa_rank",
-        "reason": (
-            "value_overtaken: candidate recorded old=61/new=65, but the live seed value "
-            "is 72 -- matches neither, so some other edit already moved this field past "
-            "what this candidate proposed. Applying either 61 or 65 now would not reflect "
-            "the most current known state; needs a fresh source check."
+        "resolution": (
+            "The candidate's recorded old=61 was itself inaccurate, not overtaken: "
+            "FIFA's own official ranking page (inside.fifa.com) confirms the last "
+            "official list, dated 2026-06-11, placed Ghana at 73rd pre-tournament -- "
+            "matching the live seed's 72 closely (within ordinary source/rounding "
+            "variance, not a real discrepancy worth chasing). The candidate's new=65 "
+            "is an unofficial post-match 'live ranking' projection following Ghana's "
+            "Panama win (Al Jazeera/GhanaSoccerNet/Flashscore, 2026-06-18-26), not yet "
+            "a finalized FIFA list entry -- FIFA's site states the next official "
+            "update is not until 2026-07-20. Applying an unofficial projected number "
+            "now would violate this project's no-speculative-data policy. teams.json's "
+            "current value (72) is left unchanged; recommend a fresh check once the "
+            "2026-07-20 official list is published."
         ),
+        "sources": [
+            {
+                "name": "FIFA.com (official ranking page)",
+                "url": "https://inside.fifa.com/fifa-world-ranking/GHA",
+                "tier": "S",
+            },
+            {
+                "name": "World Soccer Talk",
+                "url": "https://worldsoccertalk.com/world-cup/what-is-ghanas-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-england/",
+                "tier": "A",
+            },
+        ],
     },
 ]
+
+HELD_FOR_REVIEW: list[dict[str, Any]] = []
 
 
 def load_json(path: Path) -> Any:

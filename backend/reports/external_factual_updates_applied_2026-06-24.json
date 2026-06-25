@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-25T15:16:20.800273+00:00",
+  "generatedAt": "2026-06-25T15:32:13.744283+00:00",
   "note": "外部データ検証候補から、出典と現在のseed値の両方を人が直接確認した、安全かつ確定的に適用可能な事実項目のみを反映した適用レポートです。推測による値の生成は行っていません。teams2026_official.json(v2公式データ層)が存在する場合はそちらにも同じ値を反映します。",
   "appliedCount": 0,
   "skippedCount": 0,
   "appliedCountV2": 0,
   "skippedCountV2": 1,
-  "heldForReviewCount": 1,
-  "resolvedConflictCount": 1,
+  "heldForReviewCount": 0,
+  "resolvedConflictCount": 2,
   "applied": [],
   "skipped": [],
   "appliedV2": [],
@@ -25,13 +25,7 @@
       "liveValue": 16
     }
   ],
-  "heldForReview": [
-    {
-      "teamId": "GHA",
-      "field": "fifa_rank",
-      "reason": "value_overtaken: candidate recorded old=61/new=65, but the live seed value is 72 -- matches neither, so some other edit already moved this field past what this candidate proposed. Applying either 61 or 65 now would not reflect the most current known state; needs a fresh source check."
-    }
-  ],
+  "heldForReview": [],
   "resolvedConflicts": [
     {
       "teamId": "TUN",
@@ -47,6 +41,23 @@
           "name": "World Soccer Talk",
           "url": "https://worldsoccertalk.com/world-cup/who-is-tunisias-new-head-coach-at-the-2026-world-cup/",
           "tier": "S"
+        }
+      ]
+    },
+    {
+      "teamId": "GHA",
+      "field": "fifa_rank",
+      "resolution": "The candidate's recorded old=61 was itself inaccurate, not overtaken: FIFA's own official ranking page (inside.fifa.com) confirms the last official list, dated 2026-06-11, placed Ghana at 73rd pre-tournament -- matching the live seed's 72 closely (within ordinary source/rounding variance, not a real discrepancy worth chasing). The candidate's new=65 is an unofficial post-match 'live ranking' projection following Ghana's Panama win (Al Jazeera/GhanaSoccerNet/Flashscore, 2026-06-18-26), not yet a finalized FIFA list entry -- FIFA's site states the next official update is not until 2026-07-20. Applying an unofficial projected number now would violate this project's no-speculative-data policy. teams.json's current value (72) is left unchanged; recommend a fresh check once the 2026-07-20 official list is published.",
+      "sources": [
+        {
+          "name": "FIFA.com (official ranking page)",
+          "url": "https://inside.fifa.com/fifa-world-ranking/GHA",
+          "tier": "S"
+        },
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/what-is-ghanas-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-england/",
+          "tier": "A"
         }
       ]
     }
