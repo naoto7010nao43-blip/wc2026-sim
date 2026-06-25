@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-06-25T11:39:58.376904+00:00",
+  "generatedAt": "2026-06-25T15:16:20.800273+00:00",
   "note": "外部データ検証候補から、出典と現在のseed値の両方を人が直接確認した、安全かつ確定的に適用可能な事実項目のみを反映した適用レポートです。推測による値の生成は行っていません。teams2026_official.json(v2公式データ層)が存在する場合はそちらにも同じ値を反映します。",
   "appliedCount": 0,
   "skippedCount": 0,
   "appliedCountV2": 0,
   "skippedCountV2": 1,
-  "heldForReviewCount": 2,
+  "heldForReviewCount": 1,
+  "resolvedConflictCount": 1,
   "applied": [],
   "skipped": [],
   "appliedV2": [],
@@ -26,14 +27,28 @@
   ],
   "heldForReview": [
     {
-      "teamId": "TUN",
-      "field": "manager_name",
-      "reason": "conflicting_evidence: 2026-06-22 commit 268c1fa recorded manager_name as Renard succeeding Lamouchi (sacked mid-tournament 2026-06-15); 2026-06-25 external research (CAF official, FIFA.com, Tier S) says Lamouchi succeeded Trabelsi in January 2026 and led Tunisia through the World Cup, with no mention of Renard managing Tunisia at all. These two Tier-S-sourced claims directly disagree; needs Codex/human judgment, not automated resolution."
-    },
-    {
       "teamId": "GHA",
       "field": "fifa_rank",
       "reason": "value_overtaken: candidate recorded old=61/new=65, but the live seed value is 72 -- matches neither, so some other edit already moved this field past what this candidate proposed. Applying either 61 or 65 now would not reflect the most current known state; needs a fresh source check."
+    }
+  ],
+  "resolvedConflicts": [
+    {
+      "teamId": "TUN",
+      "field": "manager_name",
+      "resolution": "Both prior claims were correct for their own point in time, not conflicting: Lamouchi succeeded Trabelsi in January 2026 (CAF official/FIFA.com, Tier S, dated 2026-01), then Tunisia sacked Lamouchi mid-tournament after their opening loss to Sweden and named Herve Renard as manager on 2026-06-16 (confirmed live via FIFA.com, World Soccer Talk, and Wikipedia on 2026-06-26). The 2026-06-25 research's Tier-S sources simply predated the in-tournament change. teams.json's current value (\"Herve Renard\") is already correct; no data change was needed.",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-sabri-lamouchi-coach",
+          "tier": "S"
+        },
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/who-is-tunisias-new-head-coach-at-the-2026-world-cup/",
+          "tier": "S"
+        }
+      ]
     }
   ]
 }

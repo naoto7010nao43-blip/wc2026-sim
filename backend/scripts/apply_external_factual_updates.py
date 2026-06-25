@@ -13,10 +13,6 @@ This intentionally does not attempt every "ready for Codex review" proposal
 in external_current_field_change_proposals_2026-06-24.json. Cross-checking
 those proposals against the live seed surfaced several cases that are no
 longer safe for blind automation:
-  - Tunisia's manager_name candidate conflicts with an earlier, independently
-    sourced seed edit (commit 268c1fa, 2026-06-22) that says the opposite
-    direction of change. This is a genuine source conflict, not staleness;
-    held for Codex, not applied.
   - Ghana and Qatar's fifa_rank candidates were already overtaken by other
     edits to live values that match neither the candidate's recorded "old"
     nor "new" number. Already-moved targets are held rather than applied.
@@ -82,19 +78,40 @@ SAFE_UPDATES: list[dict[str, Any]] = [
     },
 ]
 
-HELD_FOR_REVIEW: list[dict[str, Any]] = [
+# Conflicts raised in an earlier pass of this script that have since been
+# resolved by fresh live verification, kept here (rather than silently
+# deleted) so the audit trail of how/why the conflict closed is not lost.
+RESOLVED_CONFLICTS: list[dict[str, Any]] = [
     {
         "teamId": "TUN",
         "field": "manager_name",
-        "reason": (
-            "conflicting_evidence: 2026-06-22 commit 268c1fa recorded manager_name as "
-            "Renard succeeding Lamouchi (sacked mid-tournament 2026-06-15); 2026-06-25 "
-            "external research (CAF official, FIFA.com, Tier S) says Lamouchi succeeded "
-            "Trabelsi in January 2026 and led Tunisia through the World Cup, with no "
-            "mention of Renard managing Tunisia at all. These two Tier-S-sourced claims "
-            "directly disagree; needs Codex/human judgment, not automated resolution."
+        "resolution": (
+            "Both prior claims were correct for their own point in time, not "
+            "conflicting: Lamouchi succeeded Trabelsi in January 2026 (CAF "
+            "official/FIFA.com, Tier S, dated 2026-01), then Tunisia sacked "
+            "Lamouchi mid-tournament after their opening loss to Sweden and "
+            "named Herve Renard as manager on 2026-06-16 (confirmed live via "
+            "FIFA.com, World Soccer Talk, and Wikipedia on 2026-06-26). The "
+            "2026-06-25 research's Tier-S sources simply predated the in-"
+            "tournament change. teams.json's current value (\"Herve Renard\") "
+            "is already correct; no data change was needed."
         ),
+        "sources": [
+            {
+                "name": "FIFA.com",
+                "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/tunisia-sabri-lamouchi-coach",
+                "tier": "S",
+            },
+            {
+                "name": "World Soccer Talk",
+                "url": "https://worldsoccertalk.com/world-cup/who-is-tunisias-new-head-coach-at-the-2026-world-cup/",
+                "tier": "S",
+            },
+        ],
     },
+]
+
+HELD_FOR_REVIEW: list[dict[str, Any]] = [
     {
         "teamId": "GHA",
         "field": "fifa_rank",
@@ -235,11 +252,13 @@ def main() -> int:
         "appliedCountV2": len(applied_v2),
         "skippedCountV2": len(skipped_v2),
         "heldForReviewCount": len(HELD_FOR_REVIEW),
+        "resolvedConflictCount": len(RESOLVED_CONFLICTS),
         "applied": applied,
         "skipped": skipped,
         "appliedV2": applied_v2,
         "skippedV2": skipped_v2,
         "heldForReview": HELD_FOR_REVIEW,
+        "resolvedConflicts": RESOLVED_CONFLICTS,
     }
     out_path = REPORTS_DIR / "external_factual_updates_applied_2026-06-24.json"
     write_json(out_path, report)
