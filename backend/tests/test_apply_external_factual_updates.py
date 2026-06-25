@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.apply_external_factual_updates import apply_updates, update_metadata_freshness
+from scripts.apply_external_factual_updates import apply_updates, apply_updates_v2, update_metadata_freshness
 
 
 def test_apply_updates_changes_matching_field():
@@ -55,6 +55,40 @@ def test_apply_updates_is_idempotent_on_second_run():
     assert applied_twice == []
     assert skipped_twice[0]["skipReason"] == "seed_value_changed_since_candidate"
     assert skipped_twice[0]["liveValue"] == 16
+
+
+def test_apply_updates_v2_mirrors_the_field_with_translated_name():
+    teams_v2 = [{"teamId": "URU", "fifaRank": 14}, {"teamId": "ARG", "fifaRank": 1}]
+    updates = [{"teamId": "URU", "field": "fifa_rank", "oldValue": 14, "newValue": 16}]
+
+    applied, skipped = apply_updates_v2(teams_v2, updates)
+
+    assert len(applied) == 1
+    assert skipped == []
+    by_id = {team["teamId"]: team for team in teams_v2}
+    assert by_id["URU"]["fifaRank"] == 16
+    assert by_id["ARG"]["fifaRank"] == 1
+
+
+def test_apply_updates_v2_skips_when_live_value_no_longer_matches():
+    teams_v2 = [{"teamId": "URU", "fifaRank": 99}]
+    updates = [{"teamId": "URU", "field": "fifa_rank", "oldValue": 14, "newValue": 16}]
+
+    applied, skipped = apply_updates_v2(teams_v2, updates)
+
+    assert applied == []
+    assert skipped[0]["skipReason"] == "v2_seed_value_changed_since_candidate"
+    assert skipped[0]["liveValue"] == 99
+
+
+def test_apply_updates_v2_ignores_fields_with_no_v2_equivalent():
+    teams_v2 = [{"teamId": "URU", "fifaRank": 14}]
+    updates = [{"teamId": "URU", "field": "manager_name", "oldValue": "Old", "newValue": "New"}]
+
+    applied, skipped = apply_updates_v2(teams_v2, updates)
+
+    assert applied == []
+    assert skipped == []
 
 
 def test_update_metadata_freshness_updates_fifa_rank_source_and_top_level_timestamp():

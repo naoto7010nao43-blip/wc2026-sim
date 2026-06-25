@@ -43,6 +43,16 @@ REPORTS_DIR = BACKEND_DIR / "reports"
 TEAMS_PATH = SEED_DIR / "teams.json"
 METADATA_PATH = SEED_DIR / "metadata.json"
 
+# When the v2 official/estimated data layer is present, scripts/seed_db.py
+# reads team fifa_rank/etc. from THIS file instead of teams.json (see
+# app/rating_v2/seed_pipeline_v2.py's v2_files_present()/load_v2_seed_data()).
+# A safe update must be mirrored here too, or the live database keeps
+# serving the old value forever regardless of how many times teams.json is
+# corrected -- this is exactly what happened to Uruguay's fifa_rank update
+# during Spec 018 Phase 9 (see docs/codex/PROGRESS.md for the investigation).
+TEAMS_V2_PATH = SEED_DIR / "teams2026_official.json"
+V2_FIELD_NAME = {"fifa_rank": "fifaRank"}
+
 SAFE_UPDATES: list[dict[str, Any]] = [
     {
         "teamId": "URU",
@@ -109,6 +119,27 @@ def apply_updates(teams: list[dict], updates: list[dict]) -> tuple[list[dict], l
     return applied, skipped
 
 
+def apply_updates_v2(teams_v2: list[dict], updates: list[dict]) -> tuple[list[dict], list[dict]]:
+    by_id = {team["teamId"]: team for team in teams_v2 if isinstance(team, dict) and team.get("teamId")}
+    applied = []
+    skipped = []
+    for update in updates:
+        v2_field = V2_FIELD_NAME.get(update["field"])
+        if v2_field is None:
+            continue  # this field has no v2-file equivalent to mirror
+        team = by_id.get(update["teamId"])
+        if team is None:
+            skipped.append({**update, "skipReason": "team_not_found_in_v2_file"})
+            continue
+        current = team.get(v2_field)
+        if current != update["oldValue"]:
+            skipped.append({**update, "skipReason": "v2_seed_value_changed_since_candidate", "liveValue": current})
+            continue
+        team[v2_field] = update["newValue"]
+        applied.append({**update, "appliedAt": True, "file": "teams2026_official.json"})
+    return applied, skipped
+
+
 def update_metadata_freshness(metadata: dict, checked_at: str) -> dict:
     metadata["lastUpdated"] = checked_at
     for source in metadata.get("sources", []):
@@ -129,18 +160,31 @@ def main() -> int:
         update_metadata_freshness(metadata, generated_at)
         write_json(METADATA_PATH, metadata)
 
+    applied_v2: list[dict] = []
+    skipped_v2: list[dict] = []
+    if TEAMS_V2_PATH.exists():
+        teams_v2 = load_json(TEAMS_V2_PATH)
+        applied_v2, skipped_v2 = apply_updates_v2(teams_v2, SAFE_UPDATES)
+        if applied_v2:
+            write_json(TEAMS_V2_PATH, teams_v2)
+
     report = {
         "generatedAt": generated_at,
         "note": (
             "外部データ検証候補から、出典と現在のseed値の両方を人が直接確認した、"
             "安全かつ確定的に適用可能な事実項目のみを反映した適用レポートです。"
-            "推測による値の生成は行っていません。"
+            "推測による値の生成は行っていません。teams2026_official.json"
+            "(v2公式データ層)が存在する場合はそちらにも同じ値を反映します。"
         ),
         "appliedCount": len(applied),
         "skippedCount": len(skipped),
+        "appliedCountV2": len(applied_v2),
+        "skippedCountV2": len(skipped_v2),
         "heldForReviewCount": len(HELD_FOR_REVIEW),
         "applied": applied,
         "skipped": skipped,
+        "appliedV2": applied_v2,
+        "skippedV2": skipped_v2,
         "heldForReview": HELD_FOR_REVIEW,
     }
     out_path = REPORTS_DIR / "external_factual_updates_applied_2026-06-24.json"

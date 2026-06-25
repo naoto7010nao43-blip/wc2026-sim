@@ -14,11 +14,22 @@ Base.metadata.create_all(bind=engine)
 # every deploy/restart), the SQLite file may come up empty even though the
 # repo's seed JSON has real data. Auto-reseed once on startup if so, instead
 # of requiring a manual SSH step after every deploy.
+#
+# A non-empty table is not reliable proof the seed data is current, though:
+# in practice this file has been observed to outlive a deploy even without a
+# Render Persistent Disk attached. Team/Player are pure reference data the
+# app never mutates at runtime (see sync_reference_data()'s docstring), so
+# it's always safe -- and necessary -- to resync them in place every startup
+# rather than only when the table happens to be empty.
 with SessionLocal() as _db:
     if _db.scalar(select(Team).limit(1)) is None:
         from scripts.seed_db import main as _seed_db
 
         _seed_db()
+    else:
+        from scripts.seed_db import sync_reference_data as _sync_reference_data
+
+        _sync_reference_data(_db)
 
 app = FastAPI(title="WC2026 Sim API")
 
