@@ -1,0 +1,2046 @@
+{
+  "generatedAt": "2026-06-25T06:32:58.960050+00:00",
+  "note": "外部データ検証候補から、出典URL付きでフィールドに対応付けられた候補のみを抜き出した変更提案レポートです。seed/能力値/戦術値/ロスターへの直接反映は一切行っていません。Codexのレビューを経て、別の反映spec/スクリプトで初めて適用してください。",
+  "proposalKind": "roster",
+  "candidateCount": 67,
+  "readyForCodexReviewCount": 33,
+  "proposalOnlyCount": 34,
+  "excludedTierCCount": 6,
+  "excludedNoResolvableUrlCount": 0,
+  "excludedUnmappedFieldCount": 0,
+  "proposals": [
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Kenan Piric is a goalkeeper (Neftci Baku, Azerbaijan), not an outfield CDM/CB; if the seed models him in an outfield role this is an identity/position error.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kenan_Piri%C4%87",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "UEFA official",
+          "url": "https://www.uefa.com/uefanationsleague/teams/players/250059360--kenan-piric/",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "CAN_DAVIES",
+      "playerName": "Alphonso Davies",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Alphonso Davies (Bayern Munich, captain) tore his ACL in March 2025, returned in December 2025, and has had recurring thigh/hamstring issues through 2026, missing the World Cup opener against Bosnia with a hamstring injury; this elevated injury risk is not reflected if the seed treats him as a fully fit guaranteed starter.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com (official)",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/bayern-munich-alphonso-davies-canada-acl-injury-update-34381",
+          "tier": "S",
+          "observedDate": "2025-12"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49103614/alphonso-davies-fit-available-play-canada-world-cup-qatar",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Mohamed Elneny (Al Jazira, UAE) was not selected for either Egypt's AFCON 2025 28-man squad or the World Cup 2026 final 26-man squad; if the seed models him as an available CDM starter, this is a significant discrepancy.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/afcon2025/news/egypt-name-final-28-man-squad-for-totalenergies-caf-afcon-2025-salah-leads-pharaohs-charge/",
+          "tier": "S",
+          "observedDate": "2025-12-02"
+        },
+        {
+          "name": "KingFut.com",
+          "url": "https://www.kingfut.com/2026/05/30/hossam-hassan-confirms-egypt-final-world-cup-squad/",
+          "tier": "B",
+          "observedDate": "2026-05-30"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Mohammed Kudus transferred from West Ham to Tottenham Hotspur in summer 2025 (~£55m) but is OUT of the World Cup entirely due to a quad injury suffered in January 2026 with a recovery setback; if the seed models him as an available starting RW, this is a major discrepancy.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN (transfer)",
+          "url": "https://www.espn.com/soccer/story/_/id/45711801/tottenham-hotspur-mohammed-kudus-transfer-west-ham",
+          "tier": "A",
+          "observedDate": "2025"
+        },
+        {
+          "name": "FIFA.com (squad, confirms absence)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/ghana-squad-world-cup-2026-carlos-queiroz",
+          "tier": "S",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "HAI_BELLEGARDE",
+      "playerName": "Jean-Ricner Bellegarde",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Jean-Ricner Bellegarde switched allegiance from France to Haiti in August 2025 (debuted September 2025) and is used as part of a defensive double pivot at Wolverhampton/for Haiti, not as the seed's CAM.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wolverhampton Wanderers (official)",
+          "url": "https://www.wolves.co.uk/news/mens-first-team/20260603-world-cup-2026-bellegarde-aiming-to-make-history-with-haiti/",
+          "tier": "S",
+          "observedDate": "2026-06-03"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jean-Ricner_Bellegarde",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Cameron Devlin (Hearts) was selected in the final 26-man World Cup squad as the team's defensive midfielder, matching the seed's CDM position.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Socceroos official (Football Australia)",
+          "url": "https://socceroos.com.au/player/cameron-devlin",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "There appear to be two different Yengi brothers: Kusini Yengi (b.1999, on loan at Cerezo Osaka) was reportedly NOT selected for the final World Cup squad due to fitness/form issues, while his younger brother Tete Yengi (b.2000, on loan at Machida Zelvia) was a surprise first-time call-up who made the squad. If the seed's 'Kusini Yengi' striker is meant to represent Australia's actual World Cup forward, this may be the wrong player entirely.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia (Kusini Yengi)",
+          "url": "https://en.wikipedia.org/wiki/Kusini_Yengi",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Socceroos official squad notes",
+          "url": "https://socceroos.com.au/news/squad-notes-two-potential-debutants-five-return-fifa-world-cup-2026tm",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "BEL_COURTOIS",
+      "playerName": "Thibaut Courtois",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Romelu Lukaku (striker), Youri Tielemans (current captain), and Thibaut Courtois (goalkeeper) are described as core squad members but absent from the modeled top-3 list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/de-bruyne-and-lukaku-named-in-belgium-world-cup-squad-despite-injuries-2026-05-15",
+          "tier": "S",
+          "observedDate": "2026-05-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "CZE_SCHICK",
+      "playerName": "Patrik Schick",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Patrik Schick (Bayer Leverkusen) missed October 2025 internationals with a fascia injury but has since recovered, posting 16 goals in 28 games in 2025-26 and starting at the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com (official)",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/patrik-schick-bayer-leverkusen-interview-czechia-world-cup-37393",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "NZL_WOOD",
+      "playerName": "Chris Wood",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Chris Wood (captain, Nottingham Forest) had knee surgery in December 2025 and re-injured the same knee in April 2026, but played and recorded 2 assists against Iran at the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Goal.com",
+          "url": "https://www.goal.com/en-us/lists/nottingham-forest-striker-chris-wood-undergoes-surgery-in-bitter-end-to-2025/blt868e51148860a15a",
+          "tier": "A",
+          "observedDate": "2025-12"
+        },
+        {
+          "name": "NZ Herald",
+          "url": "https://www.nzherald.co.nz/sport/football/football-world-cup/fifa-world-cup-chris-wood-cements-all-whites-legacy-with-standout-world-cup-display-against-iran/LVW25F2VERFTXOXMGXP6Q4ZPJ4/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "PAN_CARRASQUILLA",
+      "playerName": "Adalberto Carrasquilla",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Adalberto Carrasquilla (Pumas UNAM) suffered an adductor tear on 2026-05-25 and was benched (not starting) for both of Panama's World Cup group matches against Ghana and Croatia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "GhanaSoccerNet",
+          "url": "https://ghanasoccernet.com/world-cup-2026-adalberto-carrasquilla-sidelined-from-start-as-panama-opt-for-caution-against-ghana",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "RotoWire",
+          "url": "https://www.rotowire.com/soccer/headlines/adalberto-carrasquilla-injury-will-be-on-bench-wednesday-519693",
+          "tier": "B",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "POR_RONALDO",
+      "playerName": "Cristiano Ronaldo",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Cristiano Ronaldo is the current captain and started Portugal's World Cup opener vs DR Congo at 41, becoming the oldest outfield starter in World Cup history; if absent from the modeled roster, this is a major omission.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Open The Magazine",
+          "url": "https://openthemagazine.com/sports/cristiano-ronaldo-makes-fifa-world-cup-history-as-oldest-outfield-starter-at-41",
+          "tier": "S",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "QAT_ALMOEZALI",
+      "playerName": "Almoez Ali",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Almoez Ali (Al-Duhail) underwent successful leg surgery in November 2025 and has been severely limited in 2025-26 (4 club appearances, 1 goal); if the seed treats him as fully fit this overstates his availability.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Qatar News Agency (official)",
+          "url": "https://qna.org.qa/en/News-Area/News/2025-11/14/al-duhail-sc-announces-successful-surgery-for-striker-almoez-ali",
+          "tier": "S",
+          "observedDate": "2025-11-14"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ALG_BENSEBAINI",
+      "playerName": "Ramy Bensebaini",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Ramy Bensebaini (Borussia Dortmund) suffered an ankle injury in April 2026 that ruled him out of Algeria's World Cup opener against Argentina; he was added to the final 27-man squad despite the injury, and his return-to-play status as of 2026-06-24 is unconfirmed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/dortmunds-bensebaini-season-adeyemi-close-130822647.html",
+          "tier": "A",
+          "observedDate": "2026-05"
+        },
+        {
+          "name": "AfricaSoccer",
+          "url": "https://africasoccer.com/world-cup-2026-top-algeria-defender-ramy-bensebaini-ruled-out-of-argentina-opener/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "BRA_RAPHINHA",
+      "playerName": "Raphinha",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Raphinha suffered a hamstring injury in the World Cup match vs Haiti (2026-06-19), with reports of a minimum 7-10 day recovery, creating uncertainty for the rest of the tournament.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/brazil-confirm-raphinha-injury-fresh-203109969.html",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ENG_SAKA",
+      "playerName": "Bukayo Saka",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Bukayo Saka has been playing through Achilles pain; Tuchel has confirmed managing his minutes deliberately at the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12016/13555396/world-cup-2026-bukayo-saka-unlikely-to-start-for-england-until-panama-game-thomas-tuchel-says",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ESP_LAMINEYAMAL",
+      "playerName": "Lamine Yamal",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Lamine Yamal suffered a hamstring injury (2026-04-22), missed Barcelona's final 6 La Liga games, and was managed with limited minutes (15min sub appearance) in Spain's World Cup opener.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48930567/lamine-yamal-spain-fifa-world-cup-barcelona",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "GER_MUSIALA",
+      "playerName": "Jamal Musiala",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Jamal Musiala suffered a severe fibula fracture and ankle injury/dislocation in mid-2025, missed ~196 days, but fully returned to play and was selected for and is playing in the World Cup as of the 26-man squad announced 2026-05-21; the seed's framing as an injury concern should be updated to reflect active participation.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/47632599/bayern-munich-jamal-musiala-return-injury-germany-leipzig",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "GER_SCHLOTTERBECK",
+      "playerName": "Nico Schlotterbeck",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Nico Schlotterbeck suffered an ankle ligament injury in Germany's 2nd World Cup match (vs Ivory Coast, 2026-06-20) and is ruled out for the rest of the tournament per DFB announcement.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49143768/germany-nico-schlotterbeck-miss-rest-world-cup-ankle-injury",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Kaoru Mitoma (Brighton, one of Japan's best players) missed selection for the World Cup squad due to a hamstring injury; should not be modeled as available if the seed includes him as a top player.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/5/15/mitoma-fails-to-make-japans-2026-world-cup-squad-due-to-hamstring-injury",
+          "tier": "A",
+          "observedDate": "2026-05-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "KOR_KIMMINJAE",
+      "playerName": "Kim Min-jae",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Kim Min-jae (Bayern Munich) has been pushed down the pecking order behind Tah/Upamecano this season and had a knee concern clear in May 2026 before being confirmed for the World Cup; he was also linked to the conceding action in Korea's 0-1 loss to Mexico.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kim_Min-jae_(footballer)",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "StarNews Korea",
+          "url": "https://www.starnewskorea.com/en/sports/2026/05/12/2026051212120971442",
+          "tier": "A",
+          "observedDate": "2026-05-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "KSA_SALEMALDAWSARI",
+      "playerName": "Salem Al-Dawsari",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Salem Al-Dawsari (Al-Hilal, captain, 2025 AFC Player of the Year) has dealt with recurring injuries through 2026 -- a hamstring injury in January and calf treatment reported in April -- raising availability risk for a player the seed may model as fully fit.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "YSScores",
+          "url": "https://www.ysscores.com/en/news/13890760/Al-Hilal-reveals-Salem-Al-Dawsari's-injury-and-his-return-date",
+          "tier": "B",
+          "observedDate": "2026-01-14"
+        },
+        {
+          "name": "Arab News",
+          "url": "https://www.arabnews.com/node/2606133/sport",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "MAR_AGUERD",
+      "playerName": "Nayef Aguerd",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Nayef Aguerd was cut from Morocco's World Cup squad on 2026-06-11 due to a groin injury (replaced by Marwane Saadane) and has not played in the tournament; the seed lists him as a starting CB.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49027277/morocco-cut-injured-aguerd-ezzalzouli-last-minute-world-cup-reshuffle",
+          "tier": "A",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "NED_DEVENTIMBER",
+      "playerName": "Jurrien Timber",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Jurrien Timber is out of the World Cup with a groin injury (KNVB announced around 2026-06-09); replaced by Lutsharel Geertruida. Seed lists him as the 2nd-highest-rated player, which does not reflect his unavailability.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49001511/netherlands-arsenal-defender-jurrien-timber-miss-world-cup-injury",
+          "tier": "A",
+          "observedDate": "2026-06-09"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "PAR_ALMIRON",
+      "playerName": "Miguel Almiron",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Miguel Almiron (Atlanta United, MLS) received a straight red card against Turkey for covering his mouth toward an opponent (the first such dismissal under a new World Cup rule) and was given a one-match ban, ruling him out of the final group match against Australia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49123197/miguel-almiron-red-card-covering-mouth-paraguay-turkiye-2026-world-cup",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "SWE_HIEN",
+      "playerName": "Isak Hien",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Isak Hien (Atalanta) suffered a thigh injury against Ukraine in the March 2026 playoff semifinal that forced him out of the playoff final; he recovered in time to start the World Cup opener but carries elevated injury risk.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Isak_Hien",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Flashscore",
+          "url": "https://www.flashscore.com/news/soccer-world-cup-isak-hien-ruled-out-of-poland-playoff-final-as-sweden-s-injury-list-grows/xbLAqJbD/",
+          "tier": "B",
+          "observedDate": "2026-03"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "URU_ARAUJO",
+      "playerName": "Ronald Araujo",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Ronald Araujo has a calf injury and has not played in either of Uruguay's first two World Cup matches; the seed lists him as a starting CB.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/why-isnt-ronald-araujo-playing-for-uruguay-against-cape-verde-at-the-2026-world-cup/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "USA_PULISIC",
+      "playerName": "Christian Pulisic",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Christian Pulisic suffered a calf injury during the World Cup opener and missed the following match (vs Australia) before returning to training.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49118064/christian-pulisic-calf-usmnt-world-cup-clash-australia",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ARG_ROMERO",
+      "playerName": "Cristian Romero",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Cristian Romero suffered a knee injury in April 2026 (out for the rest of his club season) and has disciplinary issues (2 red cards); returned fit for the World Cup squad.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49146959/argentina-coach-scaloni-awaits-tests-extent-cristian-romero-knee-injury",
+          "tier": "A",
+          "observedDate": "2026-04-13"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ARG_LISANDRO",
+      "playerName": "Lisandro Martinez",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Lisandro Martinez tore his ACL in Feb 2025, missed ~10 months, returned Nov 2025; playing again for Man Utd but condition should be watched.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/47623753/man-united-lisandro-martinez-quit-acl-injury-argentina",
+          "tier": "A",
+          "observedDate": "2025-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "ESP_NICOWILLIAMS",
+      "playerName": "Nico Williams",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Nico Williams has dealt with pubalgia and a hamstring injury through the season; his World Cup participation was seriously in doubt as of squad announcement.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Football España",
+          "url": "https://www.football-espana.net/2026/05/11/world-cup-nico-williams-injury-blow",
+          "tier": "A",
+          "observedDate": "2026-05-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "POR_RAFAELLEAO",
+      "playerName": "Rafael Leao",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Rafael Leao has been injury-prone through 2025-26 and was benched for Portugal's World Cup opener; the seed's framing of him as the top-rated, guaranteed starter (overall=72) does not match this.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/why-isnt-rafael-leao-starting-for-portugal-against-uzbekistan-at-the-2026-world-cup/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "SEN_KOULIBALY",
+      "playerName": "Kalidou Koulibaly",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Kalidou Koulibaly (captain, Al-Hilal) suffered two thigh muscle tears plus a hematoma in training just before the World Cup and was named to the provisional squad despite the injury -- significant availability risk not reflected if seed shows him fully fit.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/espn/story/_/id/48834466/senegal-include-injured-kalidou-koulibaly-bamba-dieng-returns-premier-league-heavy-squad",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "QAT_ALHAYDOS",
+      "playerName": "Hassan Al-Haydos",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Akram Afif (Al-Sadd, lifetime contract since May 2025) is in good club form (5 goals, 6 assists in 9 league games) but is not the national team captain; the captain is Hassan Al-Haydos.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia (Afif)",
+          "url": "https://en.wikipedia.org/wiki/Akram_Afif",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Wikipedia (Al-Haydos)",
+          "url": "https://en.wikipedia.org/wiki/Hassan_Al-Haydos",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "RSA_WILLIAMS",
+      "playerName": "Ronwen Williams",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Teboho Mokoena's equalizer against Czechia (83rd minute) was a penalty kick awarded by VAR for a handball, not an open-play goal; he is confirmed as the team's CDM, and the captain is goalkeeper Ronwen Williams, not Mokoena.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sofascore",
+          "url": "https://www.sofascore.com/news/czechia-1-1-south-africa-mokoenas-penalty-earns-group-a-draw",
+          "tier": "B",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "ESPN (captaincy)",
+          "url": "https://www.espn.com/espn/story/_/id/48963468/ronwen-williams-fact-file-all-ronza-south-africa-goalkeeper-captain",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "AUT_BAUMGARTNER",
+      "playerName": "Christoph Baumgartner",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Several attacking/midfield players described as central to the team (Christoph Baumgartner, Marko Arnautovic, Paul Wanner, Marcel Sabitzer, Konrad Laimer) are absent from the seed's top-3 modeled list, which contains only center-backs and a right-back.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sports Illustrated WC2026 Austria preview",
+          "url": "https://www.si.com/soccer/austria-2026-world-cup-preview",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Heavy.com",
+          "url": "https://heavy.com/sports/soccer/world-cup/austria-best-players-world-cup-2026/",
+          "tier": "C",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "BEL_TIELEMANS",
+      "playerName": "Youri Tielemans",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Kevin De Bruyne is absent from the modeled top-3 list despite being an active, selected World Cup squad member (moved to Napoli in 2025, suffered a serious hamstring tear in Oct 2025, returned to play in March 2026); the captaincy passed to Youri Tielemans in Sept 2025.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Football Italia",
+          "url": "https://football-italia.net/garcia-takes-belgium-captaincy-away-de-bruyne/",
+          "tier": "A",
+          "observedDate": "2025-09-03"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "BRA_NEYMAR",
+      "playerName": "Neymar",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Neymar has returned to the World Cup squad and Estevao (Chelsea, a major young talent) is OUT of the squad due to a serious hamstring injury from April 2026 -- if the seed includes Estevao as available, this is incorrect; if it excludes Neymar, that is also incorrect.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48745620/chelsea-estevao-miss-world-cup-neymar-makes-brazil-preliminary-cut",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "COL_JAMES",
+      "playerName": "James Rodriguez",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "James Rodriguez remains team captain and the creative focal point (most assists in CONMEBOL qualifying) despite an unstable club situation (multiple moves); he is absent from the modeled top-3 list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "A",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "CRO_MODRIC",
+      "playerName": "Luka Modric",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Luka Modric remains active as captain in his 5th World Cup (moved to AC Milan in 2025-26); recovered from a cheekbone fracture in April 2026 to play at the World Cup. He does not appear in the modeled top-5 player list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48610561/milan-luka-modric-breaks-cheekbone-expected-fit-croatia-world-cup",
+          "tier": "A",
+          "observedDate": "2026-04-27"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "MEX_ARTEAGA",
+      "playerName": "Gerardo Arteaga",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Gerardo Arteaga was NOT selected for Mexico's official 26-man World Cup squad (multiple Spanish-language outlets report this and his own confusion about being left out); the seed lists him as a starting left-back.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sopitas",
+          "url": "https://www.sopitas.com/deportes/gerardo-arteaga-lateral-seleccion-mexicana-genk-por-que-borrado/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "QAT_ALHAYDOS",
+      "playerName": "Hassan Al-Haydos",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Hassan Al-Haydos announced international retirement in March 2024 but came out of retirement in June 2025 at Lopetegui's request; he remains captain with roughly 187-188 caps, Qatar's all-time appearance leader.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "The Peninsula Qatar",
+          "url": "https://thepeninsulaqatar.com/article/29/06/2025/al-haydos-comes-out-of-retirement-as-qatar-target-world-cup-spot",
+          "tier": "A",
+          "observedDate": "2025-06-29"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "URU_VALVERDE",
+      "playerName": "Federico Valverde",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Federico Valverde (captain per some sources, vice-captain per others) is described as the team's most important player (8 goals + 8 assists across 2026) and is absent from the modeled top-3 list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Federico_Valverde",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Nico Paz (Como, 21yo) is described as Argentina's brightest emerging player, called up for his first World Cup; not present in the modeled top-player list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Nico_Paz",
+          "tier": "A",
+          "observedDate": "2026-05-27"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Sebastien Haller suffered a hamstring injury in December 2025 (while on loan at FC Utrecht), missed AFCON 2025-26, and was reportedly left off Ivory Coast's final 26-man World Cup squad, named only among 5 reserves; if the seed models him as an available starting ST this is a significant discrepancy.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48778996/ivory-coast-2026-world-cup-squad-sebastien-haller-ange-yoan-bonny",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "ENG_BELLINGHAM",
+      "playerName": "Jude Bellingham",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Jude Bellingham plays the central no.10 role linking midfield and attack and is described as central to the attack, yet is absent from the modeled top-5 list; Declan Rice and Marcus Rashford are also starters not reflected.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12016/13550121/england-reveal-world-cup-squad-numbers-with-harry-kane-jude-bellingham-and-marcus-rashford-handed-key-shirts",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Phil Foden, Cole Palmer, and Trent Alexander-Arnold were deliberately left out of the World Cup squad as part of a tactical rebuild; if present in the modeled seed they should be removed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48841808/england-2026-world-cup-squad-foden-palmer-toney-magure-madueke-watkins-kane-stones-alexander-arnold",
+          "tier": "A",
+          "observedDate": "2026-05-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "ESP_OYARZABAL",
+      "playerName": "Mikel Oyarzabal",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "The modeled top-5 list (Yamal, Cucurella, Nico Williams, Cubarsi, Porro) omits Rodri (captain-level anchor, described as 'the spine of the team'), Pedri, and Mikel Oyarzabal (scored the Euro 2024 final winner, scoring again at this World Cup) -- all widely described as more central to the team than several listed players.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Heavy.com",
+          "url": "https://heavy.com/sports/spain-best-players-2026-world-cup/",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "MAR_BOUNOU",
+      "playerName": "Yassine Bounou",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Yassine Bounou (GK), Sofyan Amrabat (CM), and Ismael Saibari (who scored vs Brazil) are described as core players but are absent from the modeled top-3 list; En-Nesyri and Boufal were left off the final squad entirely.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Squawka",
+          "url": "https://www.squawka.com/en/news/world-cup/morocco-world-cup-2026-fixtures-squad-analysis/",
+          "tier": "A",
+          "observedDate": "2026-05-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "MEX_RODRIGUEZ_E",
+      "playerName": "Edson Alvarez",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Gilberto Mora (17, Tijuana) is described as the tournament's biggest breakout prospect and youngest player; Raul Jimenez and captain Edson Alvarez are also described as central but are absent from the modeled top-5 list.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48955103/mexico-gilberto-mora-17-youngest-player-world-cup",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "SEN_MANE_S",
+      "playerName": "Sadio Mane",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Sadio Mane (Al Nassr, 34) and the injured-but-selected captain Koulibaly are not among the seed's listed top-3 modeled players for Senegal, despite Mane being described as the side's standout performer at AFCON 2025.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sadio_Man%C3%A9",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "USA_FREEMAN",
+      "playerName": "Alex Freeman",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Alex Freeman (not in modeled top-3) has played every minute of the World Cup so far and scored against Australia, suggesting he is a more central player than the current top-3 list implies.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CBS Sports",
+          "url": "https://www.cbssports.com/soccer/news/usmnt-player-ratings-alex-freeman-leads-way-vs-australia-usa-soccer-clinch-knockout-spot/",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Ismael Bennacer (AC Milan, on loan at Dinamo Zagreb) was reportedly left out of Algeria's final World Cup squad despite saying he felt '100%' fit; if the seed models him as an available World Cup squad member this is a significant discrepancy.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "AfricaSoccer",
+          "url": "https://africasoccer.com/ismael-bennacer-reacts-algeria-world-cup-omission-petkovic/",
+          "tier": "B",
+          "observedDate": "2026-05-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "AUS_MCGREE",
+      "playerName": "Riley McGree",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Riley McGree (Middlesbrough) suffered a hamstring injury and was reported to have been left out of the final World Cup squad (replaced by Ryan); if the seed models him as an available starting CAM this is stale.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Football360.com.au",
+          "url": "https://football360.com.au/socceroos-world-cup-squad-update/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "BIH_KRUNIC",
+      "playerName": "Rade Krunic",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Rade Krunic (Red Star Belgrade) is a confirmed squad member but did not appear in the starting lineup for the Switzerland match; his current playing-time status is unclear.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "low",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rade_Kruni%C4%87",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=low)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "CRO_LIVAKOVIC",
+      "playerName": "Dominik Livakovic",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Several other established starters (Kovacic, Perisic, Kramaric, Musa, Livakovic) also appear absent from the modeled top-player list, which is weighted toward younger players (Gvardiol, Sutalo, Stanisic, Baturina, Sucic).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Sofascore",
+          "url": "https://www.sofascore.com/news/martin-baturina-was-croatias-bright-spot-vs-england",
+          "tier": "B",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "A player named 'Gevero Markus' could not be found in Curacao's official 26-man World Cup squad list (which includes 8 confirmed center-backs, none named Markus); this seed player may be fabricated or a name/identity error and should be reviewed before being used for any data change.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Heavy.com (full squad list)",
+          "url": "https://heavy.com/sports/soccer/world-cup/curacao-world-cup-squad-2026-clubs/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "FRA_TCHOUAMENI",
+      "playerName": "Aurelien Tchouameni",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Aurelien Tchouameni and N'Golo Kante (the team's double-pivot midfield core) are absent from the modeled top-5 list, which is attack-heavy (3 right-wingers).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/why-arent-aurelien-tchouameni-and-ngolo-kante-starting-for-france-against-iraq-at-the-2026-world-cup/",
+          "tier": "B",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "GHA_AYEW_J",
+      "playerName": "Jordan Ayew",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Jordan Ayew (released by relegated Leicester City in May 2026) is Ghana's captain (since 2025), not Kudus or Partey, and started at striker against Panama.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jordan_Ayew",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "HAI_NAZON",
+      "playerName": "Duckens Nazon",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Duckens Nazon (Esteghlal FC, Iran) was reported doubtful with a physical issue ahead of the Brazil match and did not appear in that starting lineup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "RotoWire",
+          "url": "https://www.rotowire.com/soccer/headlines/duckens-nazon-injury-remains-unlikely-to-face-brazil-520004",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Yazan Al-Naimat (Al-Arabi SC, Qatar) suffered an ACL tear on 2025-12-12 during the FIFA Arab Cup and was entirely unavailable for the 2026 World Cup; if the seed models him as an available starting ST, this is a major discrepancy.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yazan_Al-Naimat",
+          "tier": "B",
+          "observedDate": "2025-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "NED_VANDIJK",
+      "playerName": "Virgil van Dijk",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Brian Brobbey, Frenkie de Jong, and Virgil van Dijk (captain) are absent from the modeled top-5 list; Brobbey scored twice off the bench vs Sweden as a breakout forward, de Jong and van Dijk are described as key players in tournament previews.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/amp/world-cup/netherlands-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": "not_found_in_seed_roster",
+      "claimText": "Cesar Blackman (Slovan Bratislava) is reported as primarily playing right-back rather than the seed's center-back position.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "FotMob",
+          "url": "https://www.fotmob.com/players/888966/cesar-blackman",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "PAN_FAJARDO",
+      "playerName": "Jose Fajardo",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Jose Fajardo is described in multiple sources as a striker/forward rather than the seed's right-winger position.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "MLSSoccer.com",
+          "url": "https://www.mlssoccer.com/players/jose-fajardo/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "RSA_FOSTER",
+      "playerName": "Lyle Foster",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Lyle Foster (Burnley) dealt with gastroenteritis and a dead-leg injury during the 2025-26 season but remains the team's primary striker option, starting the World Cup opener.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Kickoff.com",
+          "url": "https://www.kickoff.com/sa-news/sa-players-abroad/injury-update-good-news-for-lyle-foster-at-burnley",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "seed_roster",
+      "playerId": "SUI_XHAKA",
+      "playerName": "Granit Xhaka",
+      "playerMatchConfidence": "matched",
+      "currentValue": "present_in_seed_roster",
+      "claimText": "Granit Xhaka (captain, Sunderland) and Breel Embolo are described as central to the team's structure and attack but are absent from the seed's top-3 modeled player list, which lists only defenders.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "シードの選手登録(追加/除外/差し替え)に影響する可能性があります。",
+      "safetyRationaleJa": "ロスター変更はTierSまたはFIFA/協会の出典が必要です。現状の出典ではこの基準を満たさないため、提案のみに留めてください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "availability_status",
+      "playerId": "USA_ROBINSON",
+      "playerName": "Antonee Robinson",
+      "playerMatchConfidence": "matched",
+      "currentValue": 100,
+      "claimText": "Antonee Robinson has had a chronic knee issue since Oct 2024 requiring May 2025 surgery, missing most of the 2025-26 club season and returning gradually (only one full 90 minutes all season); seed's framing as a fit regular starter may be optimistic.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Fulhamish",
+          "url": "https://www.fulhamish.co.uk/p/whats-going-on-with-antonee-robinson",
+          "tier": "B",
+          "observedDate": "2025-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "出場可否の扱いに影響し、先発確率や采配シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    }
+  ]
+}

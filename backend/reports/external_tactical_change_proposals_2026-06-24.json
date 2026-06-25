@@ -1,0 +1,2052 @@
+{
+  "generatedAt": "2026-06-25T06:32:58.960050+00:00",
+  "note": "外部データ検証候補から、出典URL付きでフィールドに対応付けられた候補のみを抜き出した変更提案レポートです。seed/能力値/戦術値/ロスターへの直接反映は一切行っていません。Codexのレビューを経て、別の反映spec/スクリプトで初めて適用してください。",
+  "proposalKind": "tactical",
+  "candidateCount": 67,
+  "readyForCodexReviewCount": 18,
+  "proposalOnlyCount": 49,
+  "excludedTierCCount": 6,
+  "excludedNoResolvableUrlCount": 0,
+  "excludedUnmappedFieldCount": 0,
+  "proposals": [
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Korea shifted from a back-four during qualifying to a back-three; both confirmed World Cup starting XIs (vs Czechia and vs Mexico) used 3-4-2-1, not the seed's default 4-2-3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report (vs Czechia)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea",
+          "tier": "A",
+          "observedDate": "2026-06-11"
+        },
+        {
+          "name": "ESPN match report (vs Mexico)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "The Analyst",
+          "url": "https://theanalyst.com/articles/south-korea-tactical-flexibility-preview-world-cup-2026",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "4-3-3 is one of several shapes used (matches seed) alongside 3-4-2-1 and 4-2-3-1, varying by opponent; against Jordan, Petkovic made a halftime double pivot swap that shifted the team into a two-striker, higher-fullback shape.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/algeria-vladimir-petkovic-tactics-world-cup-2026-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com/stories/soccer/jordan-algeria-world-4-takeaways",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Bosnia's confirmed World Cup starting lineup against Switzerland used a 4-4-2 (Dzeko and Demirovic as a strike pair), not the seed's 4-2-3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "England's actual base shape is 4-2-3-1 (build-up 3-2-5) with a double pivot (Rice + Anderson) and Bellingham as the 10, not the seed's default 4-3-3; confirmed starting XI vs Croatia matches this.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/49060512/england-predicted-line-world-cup-opener-croatia",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Under Queiroz, Ghana used 4-2-3-1 against Panama (Jordan Ayew at striker), shifting to a 5-man backline / 4-5-1 defensively; this contrasts with the seed's static 4-3-3 + Otto Addo pairing.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Africa Top Sports",
+          "url": "https://en.africatopsports.com/2026-fifa-world-cup-ghana-and-panama-confirmed-lineup-for-opener/",
+          "tier": "A",
+          "observedDate": "2026-06-17"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/espn/story/_/id/48908368/ghana-boss-carlos-queiroz-tactical-vision-clear-does-squad-meet-it",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Japan's actual starting formation vs Netherlands (World Cup, 2026-06-14) was 3-4-2-1, not the seed's 4-2-3-1; Moriyasu is described as flexible but 3-4-2-1 is now the more consistent recent baseline.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/netherlands-vs-japan-confirmed-lineups-for-2026-world-cup-group-f-game/",
+          "tier": "A",
+          "observedDate": "2026-06-14"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Clarke moved away from a back-three after Euro 2024; World Cup starting lineups used 4-4-2 against Haiti and 4-2-3-1 against Morocco, not the seed's 3-5-2.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN (predicted/confirmed XIs)",
+          "url": "https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        },
+        {
+          "name": "RotoWire WC2026 Group C preview",
+          "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-c-preview-brazil-morocco-scotland-haiti-tactics-lineups-set-pieces-odds-109040",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-3",
+      "claimText": "Sweden's World Cup starting XIs have consistently fielded Gyokeres and Isak together as a strike partnership (a two-forward system), reported variably as 3-5-2/4-3-3/4-2-3-1 depending on the source, which conflicts with the seed's single-striker 3-4-3 default.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FanDuel lineup preview",
+          "url": "https://www.fanduel.com/research/netherlands-vs-sweden-confirmed-lineups-and-formations-with-predictions-world-cup-2026",
+          "tier": "C",
+          "observedDate": "2026-06-20"
+        },
+        {
+          "name": "Sky Sports confirmed lineups",
+          "url": "https://www.skysports.com/football/netherlands-vs-sweden/teams/549800",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        },
+        {
+          "name": "Wikipedia, 2026 FIFA World Cup Group F",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 56,
+      "claimText": "Turkey dominated possession in both World Cup group games (e.g. 32 shots to 7 vs Paraguay), suggesting possession_style=56 is an underestimate; press_intensity=64 may be slightly high since the press is described as selective/trap-based rather than constant.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "NBC News match report",
+          "url": "https://www.nbcnews.com/sports/soccer/paraguay-beats-turkey-1-0-world-cup-clinch-group-d-us-rcna350951",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        },
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 54,
+      "claimText": "Uruguay held 67% possession (a national record at a World Cup) vs Saudi Arabia, suggesting possession_style=54 may be an underestimate.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Opta Analyst",
+          "url": "https://theanalyst.com/articles/saudi-arabia-vs-uruguay-stats-world-cup-2026",
+          "tier": "S",
+          "observedDate": "2026-06-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Under Cannavaro, Uzbekistan uses a back-three 3-4-2-1 (sometimes dropping to a 5-man backline), not the seed's 4-2-3-1; confirmed in coverage of the World Cup match against Portugal.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/uzbekistan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/23/ronaldo-scores-twice-as-portugal-thrash-uzbekistan-5-0-at-world-cup-2026",
+          "tier": "A",
+          "observedDate": "2026-06-23"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 28,
+      "claimText": "Bosnia recorded only 38% possession against Switzerland, supporting a low possession_style; no numeric source was found for press_intensity or defensive_line_height.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "4-3-3 is a general base tendency (matches seed), but the confirmed World Cup starting lineup against Germany used a 4-1-4-1 (Sangare as a lone pivot, Bonny as a lone striker).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 70,
+      "claimText": "Reporting consistently describes relentless/aggressive pressing, quick direct transitions over sustained possession, and a compact defensive shape -- directionally supporting press_intensity=70/possession_style=40/defensive_line_height=35, with no numeric benchmark found to confirm exact values.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk WC2026 Ecuador preview",
+          "url": "https://worldsoccertalk.com/world-cup/ecuador-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "4-2-3-1 is the primary qualifying/World Cup shape (matches seed), but Ghalenoei is pragmatic and switches to 4-4-2 or a deeper 5-4-1 depending on the opponent.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sports Illustrated WC2026 Iran preview",
+          "url": "https://www.si.com/soccer/iran-2026-world-cup-preview",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Netherlands used a 4-2-3-1 in their World Cup win over Sweden (5-1), differing from the seed's default 4-3-3.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FanDuel Research",
+          "url": "https://www.fanduel.com/research/netherlands-vs-sweden-confirmed-lineups-and-formations-with-predictions-world-cup-2026",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "The seed's 4-2-3-1 is a reasonable default blueprint, but Broos used a surprise back-three 5-3-2 in the World Cup opener against Mexico to match Mexico's expected shape; captain Ronwen Williams defended the formation choice after the loss.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "IOL",
+          "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-06-12-ronwen-williams-explains-hugo-broos-surprise-formation-switch-in-bafana-bafana-loss-to-mexico/",
+          "tier": "A",
+          "observedDate": "2026-06-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-2-1",
+      "claimText": "The USA's actual base formation in the World Cup opener vs Paraguay was 4-2-3-1, not the seed's 3-4-2-1; Pochettino has used multiple back-line structures but 4-2-3-1 is the more consistent recent baseline.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/news/usas-pochettino-eschews-safety-for-swagger-what-we-learned-from-usmnts-world-cup-opener-vs-paraguay",
+          "tier": "A",
+          "observedDate": "2026-06-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Canada's actual base shape under Marsch's 'Maplepressing' identity is 4-4-2 with a double pivot and a high defensive line, not the seed's 4-2-3-1; confirmed starting lineups at the World Cup against Bosnia and Qatar both used 4-4-2.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Squawka",
+          "url": "https://www.squawka.com/ca/news/canada-lineup/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "OneSoccer (Maplepressing explainer)",
+          "url": "https://www.onesoccer.ca/a/what-is-maplepressing-a-deep-dive-into-the-jesse-marsch-s-high-press-tactics-for-canmnt-canada",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-2-1",
+      "claimText": "Koubek is reported to favor a back-three (3-4-2-1/3-5-2/3-4-1-2), not the seed's 4-2-3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "The Hard Tackle",
+          "url": "https://thehardtackle.com/round-up/2026/06/23/czech-republic-vs-mexico-preview-and-prediction/",
+          "tier": "B",
+          "observedDate": "2026-06-23"
+        },
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/miroslav-koubek/profil/trainer/9822",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Haiti's base shape is reported as 4-2-3-1 in possession shifting to 4-4-2 off the ball (not the seed's static 4-4-2); against Brazil, Migne used a 5-4-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/amp/world-cup/haiti-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Khelnow (vs Brazil lineup)",
+          "url": "https://khelnow.com/football/world-football-haiti-starting-lineup-vs-brazil-fifa-world-cup-202606",
+          "tier": "B",
+          "observedDate": "2026-06-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "defensive_line_height",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 28,
+      "claimText": "Analysts consistently describe Iran as a deep, compact, low-possession, counter-reliant side that protects the box rather than presses high -- directionally supporting low defensive_line_height=28/possession_style=35/press_intensity=42, but no numeric benchmark confirms the exact values.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "low",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Mundial Analytics",
+          "url": "https://mundialanalytics.com/iran-national-team-analysis",
+          "tier": "B",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Sports Illustrated WC2026 Iran preview",
+          "url": "https://www.si.com/soccer/iran-2026-world-cup-preview",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "戦術プロファイル(最終ラインの高さ)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=low)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 56,
+      "claimText": "Panama averaged 61.9% possession in World Cup qualifying and recorded 62% possession with 502 passes in its World Cup opener against Ghana, suggesting the seed's possession_style=38 (low) is in the wrong direction relative to actual recent form.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk WC2026 Panama preview",
+          "url": "https://worldsoccertalk.com/world-cup/panama-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        },
+        {
+          "name": "The Analyst (Opta)",
+          "url": "https://theanalyst.com/articles/ghana-vs-panama-stats-world-cup-2026",
+          "tier": "B",
+          "observedDate": "2026-06-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Panama's actual base shape at the World Cup is 3-4-3 (confirmed in starting lineups against both Ghana and Croatia), not the seed's 5-4-1; no source for this research found a confirmed 5-4-1 usage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Lineup confirmation (vs Croatia)",
+          "url": "https://www.italiansoccerseriea.com/2026-fifa-world-cup/panama-vs-croatia-official-lineups-tuesday-23-june-2026-world-cup-group-l/",
+          "tier": "B",
+          "observedDate": "2026-06-23"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 88,
+      "claimText": "Multiple analyses describe Uruguay's press as 'relentless' and the defensive line as 'notoriously high', consistent with the seed's press_intensity=88 and defensive_line_height=74 (both already set very high).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "The Football Analyst",
+          "url": "https://the-footballanalyst.com/marcelo-bielsa-uruguay-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Uruguay's 4-3-3 base (build-up via a 2+1 structure) matches the seed default.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/marcelo-bielsa-tactics-uruguay-2026-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Scaloni runs a fluid system, nominally 4-3-3/4-2-3-1 but dropping into a 4-4-2 two-banks-of-four out of possession; reports describe the World Cup opener vs Algeria starting in a 4-4-2.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Squawka tactical analysis",
+          "url": "https://www.squawka.com/en/news/world-cup/argentina-world-cup-2026-fixtures-squad-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-2-1",
+      "claimText": "4-2-3-1 is the most-cited base shape (matches seed), but Popovic also uses 3-4-2-1; his style is described as having shifted from an initial high-press/possession approach toward a more reactive, compact-block counterattacking one over time.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "fwctimes.com",
+          "url": "https://fwctimes.com/tony-popovic/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "4-2-3-1 is the base/build-up shape (matches seed), shifting to a 4-4-2 block out of possession and occasionally a 3-1-5-1 against two-striker opponents.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "The Football Analyst",
+          "url": "https://the-footballanalyst.com/austria-ralf-rangnick-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Garcia varies between 4-2-3-1, 4-3-3, and a back-three 3-4-2-1 depending on opponent (e.g. 3-4-2-1 vs Croatia); the seed default of 4-2-3-1 is a reasonable primary choice but not fixed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/rudi-garcia-tactics-belgium-2026-world-cup-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Ancelotti's Brazil primarily uses 4-3-3 (shifting to attacking 4-2-4 against deep blocks), not the seed's default 4-2-3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 38,
+      "claimText": "DR Congo recorded roughly 21% possession against Portugal, 33% against Colombia, and 39% against Uzbekistan in the World Cup group stage (averaging well under half), supporting the seed's low possession_style=40.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Squawka",
+          "url": "https://www.squawka.com/en/news/world-cup/colombia-dr-congo-result-stats-24-06-2026/",
+          "tier": "B",
+          "observedDate": "2026-06-24"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Colombia varies between 4-2-3-1 (matches seed default) and 4-3-3.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Cape Verde's confirmed World Cup lineup against Spain used 4-1-4-1 (Kevin Lenini as the anchor), not the seed's 4-4-2; other sources describe a variable 4-3-3/4-2-3-1 base.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/spain-cape-verde-world-cup-2026-tactical-analysis-tactics/",
+          "tier": "B",
+          "observedDate": "2026-06-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 68,
+      "claimText": "Qualifying possession averaged ~70% with several attacking metrics ranking top-5 in Europe, suggesting possession_style=68 may be an underestimate (closer to 80 per some analysis).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "tacticalfootballanalysis.com",
+          "url": "https://tacticalfootballanalysis.com/zlatko-dalic-tactics-croatia-2026-world-cup-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Croatia's base 4-3-3 is largely accurate, but the team switched to a 3-4-2-1 (back three) in the World Cup match against England.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "tacticalfootballanalysis.com",
+          "url": "https://tacticalfootballanalysis.com/england-croatia-tactics-world-cup-2026-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-3",
+      "claimText": "4-4-2 is confirmed as Curacao's base shape (matches seed), with situational use of 5-3-2 or 4-3-3.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/curazao-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "4-2-3-1 is the most-cited base shape (matches seed) with variation to 3-4-1-2 or a more 4-3-3-like front three depending on opponent.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "RotoWire WC2026 Group G preview",
+          "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-g-preview-belgium-egypt-iran-new-zealand-tactics-lineups-set-pieces-odds-109591",
+          "tier": "B",
+          "observedDate": "2026-05-29"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 62,
+      "claimText": "England maintained over 70% possession across all 8 qualifying matches, suggesting possession_style=62 is too low; press_intensity=78 appears roughly accurate (aggressive press/counter-press is described as core to Tuchel's plan).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/england-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 76,
+      "claimText": "Multiple tactical analyses describe Spain's press intensity and defensive line height as both 'High', suggesting press_intensity=76 and defensive_line_height=68 may be slight underestimates relative to other top sides.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Squawka",
+          "url": "https://www.squawka.com/en/features/spain-tactical-analysis-favourites-for-world-cup-2026/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Base shape is 4-3-3 with build-up shifting to 3-2-5/2-3-5 in possession and a 4-4-2 press out of possession; current default_formation=4-3-3 matches.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/luis-de-la-fuente-tactics-spain-2026-world-cup-analysis/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "France's actual setup is a pragmatic mix of 4-2-3-1 and 4-3-3 with a double pivot protecting the back line, consistent with the seed's 4-2-3-1 default.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Germany's base 4-2-3-1 matches the seed; the team also shifts to 4-2-2-2 against deep blocks.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Bundesliga.com",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/how-will-germany-line-up-havertz-musiala-wirtz-nagelsmann-world-cup-2026-28807",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Iraq's confirmed World Cup starting lineup against Norway used a 4-4-2, not the seed's 4-2-3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "WhoScored confirmed lineup",
+          "url": "https://www.whoscored.com/news/IASCFTpfp0ugbaVK5Vi52g/show/20260616-iraq-vs-norway-confirmed-lineup-1781644137",
+          "tier": "B",
+          "observedDate": "2026-06-16"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Donis favors 4-2-3-1 at club level (also using 4-4-2/3-5-2), roughly consistent with the seed's default formation.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Saudi Pro League (official)",
+          "url": "https://www.spl.com.sa/en/news/513960/donis-returns-to-al-hilal-with-al-khaleej-confounding-expectations",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Morocco's setup is a flexible 4-3-3/4-2-3-1 under Ouahbi, consistent with the seed default.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "FWCTimes",
+          "url": "https://fwctimes.com/mohamed-ouahbi/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Mexico's nominal 4-3-3 functions closer to a hybrid 4-2-3-1 in possession according to tactical analysis of the World Cup opener.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/mexico-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "4-4-2 is confirmed as Paraguay's primary shape (matches seed), though Alfaro has also used 4-2-3-1 and 4-3-3.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "fwctimes.com",
+          "url": "https://fwctimes.com/gustavo-alfaro/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 66,
+      "claimText": "Qualifying possession averaged ~67% with 91.3% pass completion, and analyses describe the back line as deliberately high to support possession-building -- both suggest possession_style=66 and defensive_line_height=60 may be underestimates.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/portugal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Portugal's base shape is 4-3-3 (matches seed) with variation to a compact 3-4-2-1 against stronger opposition.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/roberto-martinez-tactics-portugal-2026-world-cup-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "Base shape is 4-3-3 with Idrissa Gueye as a single pivot, but Thiaw varies to 3-4-2-1 (defensive reinforcement) or 4-2-4 when chasing a game; matches the seed default.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "RotoWire WC2026 Group I preview",
+          "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "4-3-3 is Yakin's primary base shape (matches seed), but he switches to a back-three 3-4-3 against stronger opposition or in knockout-stage contexts.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "TUN",
+      "teamName": "Tunisia",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Under Lamouchi, Tunisia uses 4-3-3, 4-2-3-1, and 4-1-4-1 depending on phase, with selective (not constant) pressing and a compact mid/low block roughly 30-35m deep.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "fwctimes.com",
+          "url": "https://fwctimes.com/sabri-lamouchi/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "4-2-3-1 is confirmed as Montella's base shape (matches seed), shifting to 4-1-3-2 or 3-4-2-1 in defensive phases.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 58,
+      "claimText": "Measured possession over the prior 12 months averaged ~54.8%, closely matching the seed's possession_style=58.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/mauricio-pochettino-tactics-usa-2026-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Sources disagree between 4-4-2 (matches seed) and 4-2-3-1 for Ecuador's recent base shape; the predicted/observed World Cup-cycle starting XI more often resembles a 4-2-3-1, so the seed's 4-4-2 default is uncertain rather than confirmed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "low",
+      "qualityScore": 7,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk WC2026 Ecuador preview",
+          "url": "https://worldsoccertalk.com/world-cup/ecuador-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "RotoWire WC2026 Group E preview",
+          "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-e-preview-germany-curacao-ivory-coast-ecuador-tactics-lineups-set-pieces-odds-109286",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=low)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 68,
+      "claimText": "Brazil's possession-oriented build-up (CBs splitting wide) suggests possession_style=68 could be slightly higher (70s); press_intensity=60 and defensive_line_height=58 are roughly consistent with Ancelotti's reactive, organized-but-not-high-press defensive approach.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 6,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 62,
+      "claimText": "Sources conflict on press intensity: one says Scaloni favors high pressing, another says Argentina is 'not inherently a high-press team' and plays at its own pace. Current press_intensity=62 may be roughly right but evidence is mixed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 5,
+      "impactBand": "low",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Squawka",
+          "url": "https://www.squawka.com/en/features/tactical-analysis-argentina-most-interesting-national-team-2026-world-cup/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-4-3",
+      "claimText": "Sources disagree on Jordan's base shape: some describe 4-2-3-1 (matching the seed) shifting to 5-4-1 out of possession, while others describe a 3-4-2-1/3-4-3 base; no single confirmed World Cup lineup diagram resolved this.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 5,
+      "impactBand": "low",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "LeagueLane",
+          "url": "https://leaguelane.com/jordan-world-cup-2026-squad-key-players-tactics-predictions/",
+          "tier": "B",
+          "observedDate": "2026"
+        },
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "3-5-2",
+      "claimText": "Desabre uses 4-2-3-1 or 4-3-3 depending on the match (matches seed loosely); the exact World-Cup-match-by-match base shape is not confirmed by a single source.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "fwctimes.com",
+          "url": "https://fwctimes.com/sebastien-desabre/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 60,
+      "claimText": "Analysis describes Lorenzo's identity as prioritizing balance and tactical discipline over possession dominance, suggesting possession_style=60 may be slightly too high (closer to 50).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "FWCUMC",
+          "url": "https://fwcumc.com/news/nestor-lorenzo-colombia-coach-profile-tactics/",
+          "tier": "B",
+          "observedDate": "2026-03-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "NOR",
+      "teamName": "Norway",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-3-3",
+      "claimText": "4-3-3 with high pressing and direct passes to Haaland is described as the base shape (matches seed), but Solbakken has also used 4-1-4-1, 4-4-2, and 4-5-1 depending on opponent.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/norway-tactics-fifa-world-cup-2026-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-4-2",
+      "claimText": "Tactical analysis describes a fluid 4-3-3/4-2-3-1 base shifting to 2-3-5 in possession, not the seed's static 4-4-2; this is based on a single Tier-B source and should be treated as a low-confidence candidate.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "whyfootball.org",
+          "url": "https://whyfootball.org/teams/new-zealand-brief.html",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "formationCandidates",
+      "mapsTo": "default_formation",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "4-2-3-1",
+      "claimText": "Sources are split between 4-3-3 (more frequently cited, possession-based, built around Afif and Almoez Ali) and the seed's 4-2-3-1; no single confirmed World Cup starting-lineup formation diagram was found.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "fwctimes.com",
+          "url": "https://fwctimes.com/julen-lopetegui/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "既定フォーメーション表示とシミュレーションの初期配置に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 74,
+      "claimText": "Qualitative reporting describes selective wave-based pressing, vertical/direct play over sustained possession, and a higher back line exploited behind advancing full-backs -- directionally consistent with press_intensity=74/possession_style=48/defensive_line_height=58, but no numeric benchmark was found to confirm the exact values.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "RotoWire WC2026 Group I preview",
+          "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-i-preview-france-senegal-iraq-norway-tactics-lineups-set-pieces-odds-111129",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "possession_style",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 66,
+      "claimText": "Analysis describes a Xhaka-anchored compact central block with possession emphasis, but no numeric benchmark for press_intensity=60/possession_style=66/defensive_line_height=55 was found; these vary heavily by opponent (e.g. a deeper 5-4-1 against stronger sides).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "Tactical Football Analysis",
+          "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(ポゼッション傾向)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "tacticalProfileCandidates",
+      "mapsTo": "press_intensity",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 44,
+      "claimText": "Multiple tactical previews describe Uzbekistan as a low-block-and-counter side rather than a high-press/possession team, which is in some tension with the seed's press_intensity=50 (mid-range) -- though no numeric benchmark confirms the exact value.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "BreakoutTools tactical breakdown",
+          "url": "https://www.breakouttools.com/world-cup-2026/world-cup-2026-tactical-breakdown-uzbekistan-vs-colombia-an-analysis-of-the-central-asian-underdogs-taking-on-south-american-flair/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "戦術プロファイル(プレッシング強度)に影響し、試合シミュレーションに反映されます。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    }
+  ]
+}

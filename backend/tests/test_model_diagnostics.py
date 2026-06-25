@@ -108,15 +108,15 @@ def test_external_data_verification_endpoint_exposes_partial_progress(client):
     response = client.get("/api/model-diagnostics/external-data-verification")
     body = response.json()
     assert body["valid"] is True
-    assert body["coveredTeamCount"] == 16
-    assert body["remainingTeamCount"] == 32
-    assert body["candidateCount"] == 121
-    assert body["teamSignalBandCounts"]["strong"] == 16
-    assert body["decisionQueue"]["currentFieldReviewCount"] == 73
-    assert body["decisionQueue"]["warningHoldCount"] == 4
-    assert body["decisionQueue"]["futureEngineCount"] == 15
-    assert body["sourceTraceability"]["severity"] == "blocking_for_data_changes"
-    assert body["sourceTraceability"]["candidateMissingResolvableUrlCount"] == 121
+    assert body["coveredTeamCount"] == 48
+    assert body["remainingTeamCount"] == 0
+    assert body["candidateCount"] == 346
+    assert body["teamSignalBandCounts"]["strong"] == 48
+    assert body["decisionQueue"]["currentFieldReviewCount"] == 217
+    assert body["decisionQueue"]["warningHoldCount"] == 18
+    assert body["decisionQueue"]["futureEngineCount"] == 37
+    assert body["sourceTraceability"]["severity"] == "review_required"
+    assert body["sourceTraceability"]["candidateMissingResolvableUrlCount"] == 1
 
 
 def test_external_data_verification_missing_report_falls_back_to_calm_empty_state(tmp_path):

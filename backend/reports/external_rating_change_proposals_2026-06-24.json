@@ -1,0 +1,862 @@
+{
+  "generatedAt": "2026-06-25T06:32:58.960050+00:00",
+  "note": "外部データ検証候補から、出典URL付きでフィールドに対応付けられた候補のみを抜き出した変更提案レポートです。seed/能力値/戦術値/ロスターへの直接反映は一切行っていません。Codexのレビューを経て、別の反映spec/スクリプトで初めて適用してください。",
+  "proposalKind": "rating",
+  "candidateCount": 27,
+  "readyForCodexReviewCount": 22,
+  "proposalOnlyCount": 5,
+  "excludedTierCCount": 6,
+  "excludedNoResolvableUrlCount": 0,
+  "excludedUnmappedFieldCount": 0,
+  "proposals": [
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "SWE_GYOKERES",
+      "playerName": "Viktor Gyokeres",
+      "playerMatchConfidence": "matched",
+      "currentValue": 67,
+      "claimText": "Viktor Gyokeres remains at Arsenal (joined summer 2025) and is in strong scoring form across competitions; seed overall=67 as the top-rated player appears consistent with his current status.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Premier League official",
+          "url": "https://www.premierleague.com/en/players/224117/viktor-gyokeres/overview",
+          "tier": "S",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Arsenal FC official",
+          "url": "https://www.arsenal.com/news/stats-how-does-gyokeres-debut-season-compare",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "SCO_MCTOMINAY",
+      "playerName": "Scott McTominay",
+      "playerMatchConfidence": "matched",
+      "currentValue": 57,
+      "claimText": "Scott McTominay (Napoli, Serie A champion 2024-25) has an EA Sports FC 26 official overall of 85, far above the seed's overall=68; he scored the decisive bicycle-kick goal in the World Cup qualifying win over Denmark.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/scott-mc-tominay/237238",
+          "tier": "S",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Scott_McTominay",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "SCO_ADAMS",
+      "playerName": "Che Adams",
+      "playerMatchConfidence": "matched",
+      "currentValue": 55,
+      "claimText": "Che Adams (Torino) has an EA Sports FC 26 official overall of 77, above the seed's overall=58, and scored a hat-trick against Liechtenstein in qualifying.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/che-adams/226093",
+          "tier": "S",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "UEFA official",
+          "url": "https://www.uefa.com/european-qualifiers/teams/players/250155055--che-adams/",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "ECU_CAICEDO_M",
+      "playerName": "Moises Caicedo",
+      "playerMatchConfidence": "matched",
+      "currentValue": 62,
+      "claimText": "Moises Caicedo (Chelsea, contract extended to 2033) has a current overall=62 that is dramatically underrated -- independent rating sources place his base overall around 87, and he is consistently described as one of the world's best defensive midfielders; he should rank above teammates Pacho (69) and Hincapie (67), not below them.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mois%C3%A9s_Caicedo",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "EA Sports FC ratings",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/moises-caicedo/256079",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "EGY_MARMOUSH",
+      "playerName": "Omar Marmoush",
+      "playerMatchConfidence": "matched",
+      "currentValue": 66,
+      "claimText": "Omar Marmoush remains at Manchester City (contract through June 2029) with an EA Sports FC 26 official overall of 84, well above the seed's overall=66.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/omar-marmoush/profil/spieler/445939",
+          "tier": "A",
+          "observedDate": "2026-06-03"
+        },
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/omar-marmoush/256675",
+          "tier": "S",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "IRN_TAREMI",
+      "playerName": "Mehdi Taremi",
+      "playerMatchConfidence": "matched",
+      "currentValue": 53,
+      "claimText": "Mehdi Taremi (now at Olympiacos after Inter and FC Porto, with a Champions League final appearance) has a current overall=53 that appears clearly underrated relative to his Serie A/Primeira Liga career and ~60 international goals; he had 10 goals and 7 assists in World Cup qualifying.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mehdi_Taremi",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Sports Illustrated WC2026 Iran preview",
+          "url": "https://www.si.com/soccer/iran-2026-world-cup-preview",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NOR",
+      "teamName": "Norway",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "NOR_SORLOTH",
+      "playerName": "Alexander Sorloth",
+      "playerMatchConfidence": "matched",
+      "currentValue": 64,
+      "claimText": "Alexander Sorloth (Atletico Madrid) is in strong scoring form this season and has an EA Sports FC 26 official overall of 84, well above the seed's overall=68.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/alexander-s-rloth/216549",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Atletico Madrid official",
+          "url": "https://en.atleticodemadrid.com/jugadores/alexander-s-rloth-2025-2026-2",
+          "tier": "S",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "SCO_TIERNEY",
+      "playerName": "Kieran Tierney",
+      "playerMatchConfidence": "matched",
+      "currentValue": 58,
+      "claimText": "Kieran Tierney returned to Celtic in June 2025 (5-year deal) and has an EA Sports FC 26 official overall of 77, above the seed's overall=60; he was substituted around the 60th minute of the World Cup match against Morocco with a muscle injury.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/kieran-tierney/226491",
+          "tier": "S",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kieran_Tierney",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "TUR_GULER",
+      "playerName": "Arda Guler",
+      "playerMatchConfidence": "matched",
+      "currentValue": 66,
+      "claimText": "Arda Guler (Real Madrid) won UEFA's 'Revelation of the Season 2025/26' for the Champions League and had 4 goals/8 assists in 31 league games at 90% pass completion; overall=66 appears clearly underrated.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Turkish-Football.com",
+          "url": "https://turkish-football.com/real-madrid-star-arda-guler-honored-as-2025-26-uefa-champions-league-revelation-of-the-season/",
+          "tier": "B",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Arda_G%C3%BCler",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "COL_LDIAZ",
+      "playerName": "Luis Diaz",
+      "playerMatchConfidence": "matched",
+      "currentValue": 73,
+      "claimText": "Luis Diaz transferred from Liverpool to Bayern Munich in summer 2025 (~€75M) and has scored 15 goals/13 assists in 28 Bundesliga matches; overall=73 appears significantly underrated for this level of production.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/what-has-luis-diaz-brought-to-champions-bayern-munich-kompany-kane-olise-36648",
+          "tier": "A",
+          "observedDate": "2026-04-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "FRA_DEMBELE",
+      "playerName": "Ousmane Dembele",
+      "playerMatchConfidence": "matched",
+      "currentValue": 77,
+      "claimText": "Ousmane Dembele won the 2025 Ballon d'Or (ahead of Lamine Yamal) following a treble-winning season with PSG; current overall=77 appears clearly underrated relative to this status.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/news/ousmane-dembele-wins-2025-ballon-dor",
+          "tier": "A",
+          "observedDate": "2025-09-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "IRN_KANAANI",
+      "playerName": "Hossein Kanaani",
+      "playerMatchConfidence": "matched",
+      "currentValue": 52,
+      "claimText": "Hossein Kanaanizadegan remains at Persepolis as the experienced defensive anchor; this matches the seed's framing and overall=52 looks reasonable for his role.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hossein_Kanaanizadegan",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NOR",
+      "teamName": "Norway",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "NOR_ODEGAARD",
+      "playerName": "Martin Odegaard",
+      "playerMatchConfidence": "matched",
+      "currentValue": 67,
+      "claimText": "Martin Odegaard (Arsenal captain) has had a heavily injury-disrupted 2025-26 season (shoulder, knee, collateral ligament issues limiting him to ~13 Premier League starts) and an EA Sports FC 26 official overall of 87, above the seed's overall=76.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/martin-degaard/222665",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Goal.com",
+          "url": "https://www.goal.com/en-us/lists/martin-odegaard-arsenal-offered-concerning-update-injury-norwegian-national-team-doctor/bltbb1d5f77f662c0f2",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "SEN_SARR_I",
+      "playerName": "Ismaila Sarr",
+      "playerMatchConfidence": "matched",
+      "currentValue": 64,
+      "claimText": "Ismaila Sarr (Crystal Palace) won the 2025-26 UEFA Conference League top-scorer and Player of the Season awards and scored twice in Senegal's World Cup match vs Norway; current overall=64 may be an underestimate of his present form.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Isma%C3%AFla_Sarr",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760454/senegal-norway",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "ARG_LAUTARO",
+      "playerName": "Lautaro Martinez",
+      "playerMatchConfidence": "matched",
+      "currentValue": 69,
+      "claimText": "Lautaro Martinez and Julian Alvarez are in excellent club form (Serie A top scorer 17 goals; Atletico Madrid 20+ goal contributions including Champions League), suggesting their overall=69 may be an underestimate relative to other elite forwards.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Inter Milan official site",
+          "url": "https://www.inter.it/en/news/lautaro-martinez-top-scorer-serie-a-2025-26",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "ESP_CUBARSI",
+      "playerName": "Pau Cubarsi",
+      "playerMatchConfidence": "matched",
+      "currentValue": 69,
+      "claimText": "Pau Cubarsi is an undisputed Barcelona starter (26 starts, 94.6% pass completion) and described as a breakout-candidate of the tournament; overall=69 may be an underestimate.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Manchester Reporter",
+          "url": "https://manchesterreporter.co.uk/pau-cubarsi/",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "FRA_SALIBA",
+      "playerName": "William Saliba",
+      "playerMatchConfidence": "matched",
+      "currentValue": 68,
+      "claimText": "William Saliba has had a recurring back issue through the season but Deschamps has publicly denied it affects World Cup availability; overall=68 may be undervalued for a player rated among the world's top center-backs.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48957835/france-boss-didier-deschamps-eases-william-saliba-injury-fears-ahead-pre-world-cup-friendlies",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "FRA_OLISE",
+      "playerName": "Michael Olise",
+      "playerMatchConfidence": "matched",
+      "currentValue": 75,
+      "claimText": "Michael Olise scored a hat-trick in a pre-World-Cup friendly and contributed a decisive performance in France's World Cup opener vs Senegal; described as a future Ballon d'Or contender, suggesting overall=75 has room to rise.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/sport/20260609-michael-olise-hat-trick-rounds-off-france-world-cup-preparations-sends-ominous-warning",
+          "tier": "A",
+          "observedDate": "2026-06-09"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "JPN_DOAN",
+      "playerName": "Ritsu Doan",
+      "playerMatchConfidence": "matched",
+      "currentValue": 62,
+      "claimText": "Ritsu Doan moved to Eintracht Frankfurt (Aug 2025) and has captained the national team in multiple recent matches including the World Cup opener, suggesting his role/importance exceeds overall=62.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/world-cup-stars-ritsu-doan-japan-eintracht-frankfurt-36781",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "KSA_FIRASALBURAIKAN",
+      "playerName": "Firas Al-Buraikan",
+      "playerMatchConfidence": "matched",
+      "currentValue": 57,
+      "claimText": "Firas Al-Buraikan (Al-Ahli) scored the extra-time winner in the 2026 AFC Champions League Elite final and has modest 2025-26 league output (5 goals in 1730 minutes).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Firas_Al-Buraikan",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NOR",
+      "teamName": "Norway",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "NOR_HAALAND",
+      "playerName": "Erling Haaland",
+      "playerMatchConfidence": "matched",
+      "currentValue": 76,
+      "claimText": "Erling Haaland (Manchester City, 10-year contract) has an EA Sports FC 26 official overall rating of 90, well above the seed's overall=84.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/erling-haaland/239085",
+          "tier": "A",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "TUR_YILDIZ",
+      "playerName": "Kenan Yildiz",
+      "playerMatchConfidence": "matched",
+      "currentValue": 68,
+      "claimText": "Kenan Yildiz (Juventus) won Serie A's 2025-26 Rising Star award with 11 goals/9 assists across all competitions; overall=68 may be a modest underestimate.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kenan_Y%C4%B1ld%C4%B1z",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "POR_VITINHA",
+      "playerName": "Vitinha",
+      "playerMatchConfidence": "matched",
+      "currentValue": 65,
+      "claimText": "Vitinha finished 3rd in the 2025 Ballon d'Or and was Champions League final Man of the Match; described as 'the heart of the midfield', suggesting overall=65 (below Leao's 72) is a significant underrating.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "portugoal.net",
+          "url": "https://portugoal.net/portuguese-abroad/5111-vitinha-reacts-to-ballon-dor-3rd-place-finish-i-wont-stop-wanting-more",
+          "tier": "B",
+          "observedDate": "2025-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "BRA_CUNHA",
+      "playerName": "Matheus Cunha",
+      "playerMatchConfidence": "matched",
+      "currentValue": 69,
+      "claimText": "Matheus Cunha scored twice in a recent World Cup match and is in good scoring form for Manchester United; overall=69 may be a slight underestimate.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "low",
+      "qualityScore": 7,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/20/cunha-hits-brazil-double-against-haiti-to-seal-first-world-cup-2026-win",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=low)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "COL_DSANCHEZ",
+      "playerName": "Davinson Sanchez",
+      "playerMatchConfidence": "matched",
+      "currentValue": 60,
+      "claimText": "Daniel Munoz and Davinson Sanchez are both established regulars at title-winning clubs (Crystal Palace, Galatasaray respectively); their overalls (63, 60) may be modest underestimates.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "low",
+      "qualityScore": 7,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Daniel_Mu%C3%B1oz_(footballer)",
+          "tier": "A",
+          "observedDate": "2026-06-25"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=low)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "MAR_HAKIMI",
+      "playerName": "Achraf Hakimi",
+      "playerMatchConfidence": "matched",
+      "currentValue": 68,
+      "claimText": "Achraf Hakimi is the team captain and described as one of the world's best full-backs; overall=68 may be an underestimate given his status as the team's clear leader.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 7,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/amp/world-cup/morocco-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "player_rating",
+      "playerId": "MEX_MONTES",
+      "playerName": "Cesar Montes",
+      "playerMatchConfidence": "matched",
+      "currentValue": 60,
+      "claimText": "Cesar Montes's age in seed (27) does not match his actual age (29 per FotMob).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 7,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "FotMob",
+          "url": "https://www.fotmob.com/players/664644/cesar-montes",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "選手の能力値(overall)に影響し、シミュレーション上の強さに直接反映されます。小幅かつ慎重な範囲設定が必要です。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    }
+  ]
+}

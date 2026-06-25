@@ -1,0 +1,4391 @@
+{
+  "generatedAt": "2026-06-25T06:32:58.960050+00:00",
+  "note": "外部データ検証候補から、出典URL付きでフィールドに対応付けられた候補のみを抜き出した変更提案レポートです。seed/能力値/戦術値/ロスターへの直接反映は一切行っていません。Codexのレビューを経て、別の反映spec/スクリプトで初めて適用してください。",
+  "proposalKind": "current_field",
+  "candidateCount": 140,
+  "readyForCodexReviewCount": 125,
+  "proposalOnlyCount": 15,
+  "excludedTierCCount": 6,
+  "excludedNoResolvableUrlCount": 0,
+  "excludedUnmappedFieldCount": 0,
+  "proposals": [
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Algeria qualified directly (not via playoff), topping CAF Group G (8W-1D-1L, 24 goals scored, 8 conceded), and is in World Cup Group J with Argentina, Austria, and Jordan; lost 0-3 to Argentina then beat Jordan 2-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/fifa-world-cup/news/algeria-qualify-as-uganda-edge-closer-to-world-cup-playoffs-liberia-stun-namibia/",
+          "tier": "S",
+          "observedDate": "2025-10"
+        },
+        {
+          "name": "Wikipedia, 2026 FIFA World Cup Group J",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Australia beat Turkey 2-0 (not 0-2) at the World Cup on 2026-06-14 (goals by Irankunda and Metcalfe), confirmed by FIFA's official match centre; this is the reverse of a 0-2 scoreline and should be checked against any modeled fixture/result data for this match.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA Match Centre",
+          "url": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463",
+          "tier": "S",
+          "observedDate": "2026-06-14"
+        },
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia",
+          "tier": "A",
+          "observedDate": "2026-06-14"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Sebastien Desabre",
+      "claimText": "Sebastien Desabre remains manager, having taken over in August 2022, through AFCON 2025-26 and the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/S%C3%A9bastien_Desabre",
+          "tier": "C",
+          "observedDate": "2026"
+        },
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/afcon2025/news/totalenergies-caf-afcon-2025-know-the-coach-sebastien-desabre-dr-congo/",
+          "tier": "S",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "COD_WISSA",
+      "playerName": "Yoane Wissa",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Newcastle United FC (ENG)",
+      "claimText": "Yoane Wissa transferred from Brentford to Newcastle United on 2025-09-01 (~EUR57.7m) and scored DR Congo's first-ever World Cup goal, the equalizer against Portugal; seed club should reflect Newcastle, not Brentford.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "TNT Sports",
+          "url": "https://www.tntsports.co.uk/football/transfers/2025-2026/newcastle-yoane-wissa-sign-brentford-transfer-deadline-day_sto23217123/story.shtml",
+          "tier": "A",
+          "observedDate": "2025-09-01"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-congo-dr-highlights-match-report",
+          "tier": "S",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Cape Verde qualified for its first-ever World Cup (beating Eswatini 3-0 on 2025-10-13) and drew 0-0 with Spain then 2-2 with Uruguay in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com (vs Spain)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-cabo-verde-highlights-match-report",
+          "tier": "S",
+          "observedDate": "2026-06-15"
+        },
+        {
+          "name": "FIFA.com (vs Uruguay)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/uruguay-cabo-verde-match-report-highlights",
+          "tier": "S",
+          "observedDate": "2026-06-21"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CPV_RYANMENDES",
+      "playerName": "Ryan Mendes",
+      "playerMatchConfidence": "matched",
+      "currentValue": "I ğ dır FK (TUR)",
+      "claimText": "Ryan Mendes (captain, Igdir FK in Turkey) is Cape Verde's all-time leading scorer and appearance-holder, in good current club form (a hat-trick in April 2026); seed club should reflect Igdir FK.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ryan_Mendes",
+          "tier": "S",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "Heavy.com",
+          "url": "https://heavy.com/sports/soccer/cape-verde-skipper-ryan-mendes-facts/",
+          "tier": "A",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Czechia reached the World Cup via the playoffs (penalty-shootout wins over Ireland and Denmark), then lost 2-1 to South Korea and drew 1-1 with South Africa in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report (vs South Korea)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea",
+          "tier": "A",
+          "observedDate": "2026-06-11"
+        },
+        {
+          "name": "FIFA.com (vs South Africa)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/czechia-south-africa-highlights-match-report",
+          "tier": "S",
+          "observedDate": "2026-06-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CZE_COUFAL",
+      "playerName": "Vladimir Coufal",
+      "playerMatchConfidence": "matched",
+      "currentValue": "TSG Hoffenheim (GER)",
+      "claimText": "Vladimir Coufal moved from West Ham to TSG Hoffenheim in summer 2025 and is the team's leading creator on the right flank (8 assists in 2025-26); seed club should reflect Hoffenheim, not West Ham.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com (official)",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/hoffenheim-sign-vladimir-coufal-west-ham-33388",
+          "tier": "S",
+          "observedDate": "2025"
+        },
+        {
+          "name": "Bundesliga.com (official)",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/vladimir-coufal-hoffenheim-secret-weapon-czechia-right-back-west-ham-36629",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Hossam Hassan",
+      "claimText": "Hossam Hassan remains manager, having taken over in February 2024; no indication of dismissal as of 2026-06-23, though the Egyptian FA is reported to be deciding his future after the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/afcon2025/news/hossam-hassan-replaces-rui-vitoria-as-egypt-head-coach/",
+          "tier": "S",
+          "observedDate": "2024-02"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/egypt-squad-named",
+          "tier": "S",
+          "observedDate": "2026-06-02"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Egypt qualified directly, topping CAF Group A (8W-2D, +18 goal difference), and is in World Cup Group G with Belgium, Iran, and New Zealand; drew Belgium 1-1 then beat New Zealand 3-1.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA Match Centre (vs New Zealand)",
+          "url": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021480",
+          "tier": "S",
+          "observedDate": "2026-06-21"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/22/salah-scores-as-egypt-beat-new-zealand-3-1-for-first-world-cup-win",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Carlos Queiroz",
+      "claimText": "The seed's manager (Otto Addo) is stale: Addo was sacked on 2026-03-31 after four straight warm-up defeats (including 5-1 to Austria and 2-1 to Germany). He was replaced by Carlos Queiroz, who led Ghana at the actual World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Outlook India",
+          "url": "https://www.outlookindia.com/sports/football/fifa-world-cup-2026-ghana-sack-head-coach-otto-addo",
+          "tier": "A",
+          "observedDate": "2026-03-31"
+        },
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/fifa-world-cup/news/ghana-appoint-carlos-queiroz-as-coach-ahead-of-2026-world-cup/",
+          "tier": "S",
+          "observedDate": "2026-04"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "GHA_PARTEY",
+      "playerName": "Thomas Partey",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Villarreal CF (ESP)",
+      "claimText": "Thomas Partey faces ongoing rape and sexual assault charges (filed July 2025, trial set for June 2027), left Arsenal for Villarreal on a free transfer in summer 2025, was named vice-captain, and was denied entry to Canada (missing the Panama opener) but played the England match.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Crown Prosecution Service (official)",
+          "url": "https://www.cps.gov.uk/london-north/news/authorises-charges-against-thomas-partey",
+          "tier": "S",
+          "observedDate": "2025-07"
+        },
+        {
+          "name": "Sports Illustrated",
+          "url": "https://www.si.com/soccer/why-thomas-partey-allowed-play-ghana-vs-england-2026-world-cup",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Graham Arnold",
+      "claimText": "Graham Arnold remains manager, having taken over on 2025-05-09 (previously managed Australia for 6 years); he led Iraq to its first World Cup in 40 years.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-arnold-appointed-iraq-coach",
+          "tier": "S",
+          "observedDate": "2025-05"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Graham_Arnold",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Musa Al-Taamari plays for Stade Rennais (Ligue 1, joined 2025-02-03), not AS Monaco as the seed may show.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Musa_Al-Taamari",
+          "tier": "B",
+          "observedDate": "2026-03"
+        },
+        {
+          "name": "FIFA.com (preliminary squad)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/jordan-preliminary-squad",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "KOR_SONHEUNGMIN",
+      "playerName": "Son Heung-min",
+      "playerMatchConfidence": "matched",
+      "currentValue": "LAFC (USA)",
+      "claimText": "Son Heung-min transferred from Tottenham to LAFC (MLS) on 2025-08-06 (~$26.5m, MLS record fee) but remains national team captain and starting forward; seed club should reflect LAFC.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "LAFC official",
+          "url": "https://www.lafc.com/news/lafc-signs-global-football-icon-son-heung-min",
+          "tier": "S",
+          "observedDate": "2025-08-06"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Son_Heung-min",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Georgios Donis",
+      "claimText": "The seed's manager (Herve Renard) is stale: Renard was sacked on 2026-04-17 after back-to-back pre-World Cup friendly losses to Egypt (0-4) and Serbia (1-2). The current manager is Georgios Donis, appointed shortly after.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/4/17/saudi-arabia-sack-coach-herve-renard-ahead-of-fifa-world-cup-2026",
+          "tier": "A",
+          "observedDate": "2026-04-17"
+        },
+        {
+          "name": "Saudi Press Agency (official)",
+          "url": "https://www.spa.gov.sa/en/N2570338",
+          "tier": "S",
+          "observedDate": "2026-04"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Darren Bazeley",
+      "claimText": "Darren Bazeley remains manager, having taken over in November 2022.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Darren_Bazeley",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "FIFA.com (official, unique record)",
+          "url": "https://inside.fifa.com/news/darren-bazeley-new-zealand-world-cup-1st-coach-all-tournaments",
+          "tier": "S",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Julen Lopetegui",
+      "claimText": "Julen Lopetegui remains manager, having taken over on 2025-05-01 with a contract through the 2027 Asian Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Julen_Lopetegui",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/qatar-lopetegui-appoint-coach",
+          "tier": "S",
+          "observedDate": "2025-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Graham Potter",
+      "claimText": "Graham Potter took over as manager on 2025-10-20 (replacing John Dahl Tomasson after a 0-1 loss to Kosovo) and had his contract extended through 2030 on 2026-03-12.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Graham_Potter",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-potter-sweden-contract",
+          "tier": "S",
+          "observedDate": "2026-03-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUN",
+      "teamName": "Tunisia",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Herve Renard",
+      "claimText": "The seed's manager (Sami Trabelsi) is stale: Trabelsi was sacked in January 2026 after Tunisia's AFCON 2025 Round-of-16 penalty-shootout exit to Mali. The current manager is Sabri Lamouchi (appointed January 2026, previously led Ivory Coast to the 2014 World Cup).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CAF official",
+          "url": "https://www.cafonline.com/afcon2025/news/tunisia-part-ways-with-coach-sami-trabelsi-after-afcon-2025-last-16-exit/",
+          "tier": "S",
+          "observedDate": "2026-01"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sami-trabelsi-leaves-tunisia",
+          "tier": "S",
+          "observedDate": "2026-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Turkey qualified for the 2026 World Cup via the UEFA playoffs (beating Romania 1-0 then Kosovo 1-0 on 2026-03-31), its first World Cup appearance since 2002, then was eliminated in the group stage (losses to Australia 0-2 and Paraguay 0-1).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/turkiye-qualify",
+          "tier": "S",
+          "observedDate": "2026-03"
+        },
+        {
+          "name": "Wikipedia, 2026 FIFA World Cup Group D",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Fabio Cannavaro",
+      "claimText": "The seed's manager (Srecko Katanec) is stale: Katanec resigned for health reasons around January 2025. After an interim spell under Timur Kapadze (who led the team through historic qualification), Fabio Cannavaro was appointed manager in October 2025 and leads the team at the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/katanec-departs-uzbekistan-post",
+          "tier": "S",
+          "observedDate": "2025-01"
+        },
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fabio-cannavaro-appointed-uzbekistan-coach",
+          "tier": "S",
+          "observedDate": "2025-10"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 1,
+      "claimText": "Argentina is unbeaten in its last 10 matches (27 goals scored, 2 conceded) and holds FIFA rank 1 as of 2026-06-11.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "inside.fifa.com",
+          "url": "https://inside.fifa.com/news/argentina-reclaim-top-spot-mens-world-ranking-fifa-coca-cola",
+          "tier": "S",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Austria lost only 1 of 8 World Cup qualifying matches (22 goals scored, 4 conceded) and beat Jordan 3-1 at the World Cup for its first World Cup win in 36 years, before losing 0-2 to Argentina.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN results",
+          "url": "https://www.espn.com/soccer/team/results/_/id/474/austria",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "Sky Sports match report",
+          "url": "https://www.skysports.com/football/news/11095/13552725/world-cup-2026-austria-3-1-jordan-european-side-earn-first-world-cup-win-in-36-years-with-victory-over-debutants",
+          "tier": "A",
+          "observedDate": "2026-06-17"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "AUT_DANSO",
+      "playerName": "Kevin Danso",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Tottenham Hotspur FC (ENG)",
+      "claimText": "Kevin Danso transferred from RC Lens to Tottenham Hotspur in Feb 2025 (completed permanently in 2025-26); seed club should reflect Tottenham.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kevin_Danso",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/kevin-danso/profil/spieler/263236",
+          "tier": "B",
+          "observedDate": "2026-06-03"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "BEL_DEWINTER",
+      "playerName": "Koni De Winter",
+      "playerMatchConfidence": "matched",
+      "currentValue": "AC Milan (ITA)",
+      "claimText": "Koni De Winter transferred from Genoa to AC Milan on 2025-08-13 (5-year deal); seed may not reflect this club change.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "AC Milan official",
+          "url": "https://www.acmilan.com/en/news/articles/media/2025-08-13/official-statement-koni-de-winter",
+          "tier": "S",
+          "observedDate": "2025-08-13"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Bosnia reached the World Cup via the playoffs (penalty-shootout wins over Wales and Italy) and lost 1-4 to Switzerland while drawing 1-1 with Canada in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760439/bosnia-herzegovina-switzerland",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "Olympics.com (vs Canada)",
+          "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-canada-bosnia-football-results-live-updates",
+          "tier": "A",
+          "observedDate": "2026-06-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CAN_DAVID_J",
+      "playerName": "Jonathan David",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Juventus FC (ITA)",
+      "claimText": "Jonathan David transferred from Lille (LOSC) to Juventus on a free transfer in summer 2025 (5-year deal through 2030); he scored a hat-trick against Qatar at the World Cup. Seed club should reflect Juventus, not Lille.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/jonathan-david/profil/spieler/533738",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/sports/soccer/canada-jonathan-david-world-cup-qatar-results-rcna350819",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Ivory Coast qualified for the World Cup unbeaten and unscored-on through CAF Group F qualifying, but failed to defend its AFCON title, losing the 2025-26 AFCON quarterfinal 2-3 to Egypt; at the World Cup it beat Ecuador 1-0 (90th-minute winner) then lost 1-2 to Germany.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13552703/world-cup-2026-ivory-coast-1-0-ecuador-amad-diallo-nets-90th-minute-winner-to-end-ecuadors-19-game-unbeaten-streak",
+          "tier": "A",
+          "observedDate": "2026-06-14"
+        },
+        {
+          "name": "ESPN match report",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "This is DR Congo's second World Cup appearance, not its first -- it also played in 1974 -- making this a 52-year gap rather than a historic debut; it qualified via the intercontinental playoff (beating Jamaica 1-0 in extra time on 2026-03-31) and drew Portugal 1-1 before losing 0-1 to Colombia in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera (qualification)",
+          "url": "https://www.aljazeera.com/sports/2026/3/31/dr-congo-beat-jamaica-in-world-cup-intercontinental-qualifying-finals",
+          "tier": "A",
+          "observedDate": "2026-03-31"
+        },
+        {
+          "name": "Al Jazeera (vs Colombia)",
+          "url": "https://www.aljazeera.com/sports/2026/6/24/colombia-dr-congo-1-0-fifa-world-cup-2026-knockout-munoz-rodrigruez-arias-mpasi",
+          "tier": "A",
+          "observedDate": "2026-06-24"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Pedro \"Bubista\" Brito",
+      "claimText": "Pedro Leitao Brito ('Bubista') remains manager (since January 2020) and won the 2025 CAF Men's Coach of the Year award after leading Cape Verde to its first-ever World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bubista",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "PanAfricaFootball",
+          "url": "https://panafricafootball.com/article/caf-awards-2025-bubista-wins-africas-coach-of-the-year-award",
+          "tier": "A",
+          "observedDate": "2025-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CPV_STOPIRA",
+      "playerName": "Stopira",
+      "playerMatchConfidence": "matched",
+      "currentValue": "SCU Torreense (POR)",
+      "claimText": "Stopira is reported as a left-back, not the seed's center-back, and is 38 years old, holding Hungarian as well as Cape Verdean nationality; he plays for Torreense (Portugal's second tier).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stopira",
+          "tier": "S",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Zlatko Dalic",
+      "claimText": "Zlatko Dalic remains manager, continuing through World Cup qualifying and the tournament.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "UEFA.com",
+          "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d159312e19-b662016c6c47-1000--croatia-at-the-world-cup-2026-squad-fixtures-group-and-hi/",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Curacao (population ~156,000) is the smallest nation ever to reach a World Cup, qualifying unbeaten (drawing Jamaica 0-0 on 2025-11-18); it lost 1-7 to Germany and drew 0-0 with Ecuador in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12098/13545528/world-cup-2026-curacao-caribbean-nations-historic-first-appearance",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/sports/soccer/curacao-smalles-nation-world-cup-rcna348528",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Miroslav Koubek",
+      "claimText": "The seed's manager (Ivan Hasek) is stale: Hasek was sacked on 2025-10-15 after a 1-2 World Cup qualifying loss to the Faroe Islands. After an interim spell, Miroslav Koubek is the current manager leading the team at the World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Washington Post",
+          "url": "https://www.washingtonpost.com/sports/soccer/2025/10/15/czech-republic-ivan-hasek/fc41065a-a9bb-11f0-a2bc-82cf6840599d_story.html",
+          "tier": "A",
+          "observedDate": "2025-10-15"
+        },
+        {
+          "name": "Yahoo Sports",
+          "url": "https://uk.sports.yahoo.com/news/czech-republic-world-cup-2026-154053102.html",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "ECU_HINCAPIE",
+      "playerName": "Piero Hincapie",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Arsenal FC (ENG)",
+      "claimText": "Piero Hincapie is on loan at Arsenal from Bayer Leverkusen (2025 summer, buy option ~EUR52m) and has had recurring groin/shoulder issues through 2025-26; seed club/availability should reflect Arsenal and injury risk.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Piero_Hincapi%C3%A9",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Arsenal FC official",
+          "url": "https://www.arsenal.com/news/piero-hincapie-completes-loan-move-arsenal",
+          "tier": "S",
+          "observedDate": "2025"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "EGY_SALAH",
+      "playerName": "Mohamed Salah",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Liverpool FC (ENG)",
+      "claimText": "Mohamed Salah left Liverpool as a free agent on 2026-03-25 and had not signed with a new club as of mid-June 2026; his EA Sports FC 26 official overall (91, set before his 2025-26 form decline) suggests the seed's overall=78 may be a significant underestimate even accounting for his current uncertain club situation and age (34).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/3/25/why-is-mohamed-salah-leaving-liverpool-and-which-club-will-he-join-next",
+          "tier": "A",
+          "observedDate": "2026-03-25"
+        },
+        {
+          "name": "EA Sports FC ratings (official)",
+          "url": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/mohamed-salah/209331",
+          "tier": "S",
+          "observedDate": "2025-09"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "England qualified undefeated and unscored-on (8-0-0, 21 goals, 0 conceded) -- the first European team to do so for this cycle.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_K",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "ESP_CUCURELLA",
+      "playerName": "Marc Cucurella",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Chelsea FC (ENG)",
+      "claimText": "Marc Cucurella transferred from Chelsea to Real Madrid on 2026-06-15 (~€55M+€5M, 6-year deal); seed data may still show Chelsea.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Real Madrid official statement",
+          "url": "https://www.realmadrid.com/en-US/news/club/announcements/comunicado-oficial-cucurella-15-06-2026",
+          "tier": "S",
+          "observedDate": "2026-06-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 3,
+      "claimText": "France's FIFA rank rose from 3rd to 2nd as of 2026-06-22 after beating Senegal.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/france-move-to-second-fifa-coca-cola-mens-world-rankings",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Julian Nagelsmann",
+      "claimText": "Julian Nagelsmann remains manager (since Sept 2023).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Bundesliga.com",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/julian-nagelsmann-extends-germany-contract-to-2026-world-cup-27040",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 10,
+      "claimText": "FIFA rank confirmed at 10th as of June 2026, matching the seed value.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "inside.fifa.com",
+          "url": "https://inside.fifa.com/fifa-world-ranking/GER",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "GER_WIRTZ",
+      "playerName": "Florian Wirtz",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Liverpool FC (ENG)",
+      "claimText": "Florian Wirtz transferred from Leverkusen to Liverpool in July 2025 (club-record fee); seed may not reflect this club change.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Liverpool.com",
+          "url": "https://www.liverpoolfc.com/news/liverpool-agree-british-record-ps116m-florian-wirtz-transfer",
+          "tier": "S",
+          "observedDate": "2025-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Sebastien Migne",
+      "claimText": "Sebastien Migne remains manager, having taken over in June 2024 and led Haiti to its first World Cup since 1974 (a 52-year gap).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sebastien-mign-haiti-interview",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Haiti reached its first World Cup since 1974 but was eliminated after losing 0-1 to Scotland and 0-3 to Brazil in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN (vs Brazil)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760444/haiti-brazil",
+          "tier": "A",
+          "observedDate": "2026-06-19"
+        },
+        {
+          "name": "Haitian Times",
+          "url": "https://haitiantimes.com/2026/06/20/haiti-loss-brazil-world-cup/",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Amir Ghalenoei",
+      "claimText": "Amir Ghalenoei remains manager (2nd stint, since 2023), leading Iran through World Cup qualifying and the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Amir_Ghalenoei",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/15/irans-ghalenoei-taremi-decry-us-treatment-before-first-world-cup-game",
+          "tier": "A",
+          "observedDate": "2026-06-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Iraq qualified for its first World Cup since 1986 (40 years) via the intercontinental playoff, beating Bolivia 2-1 on 2026-04-01, then lost both of its first two group matches, 1-4 to Norway and 0-3 to France.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera (qualification)",
+          "url": "https://www.aljazeera.com/sports/2026/4/1/iraq-defeat-bolivia-2-1-to-qualify-for-fifa-world-cup-2026",
+          "tier": "A",
+          "observedDate": "2026-04-01"
+        },
+        {
+          "name": "ESPN match report (vs France)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760457/iraq-france",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Jamal Sellami",
+      "claimText": "Jamal Sellami remains manager, having taken over in 2024 and led Jordan to its first-ever World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sellami-replaces-ammouta-jordan-head-coach",
+          "tier": "S",
+          "observedDate": "2024"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Hajime Moriyasu",
+      "claimText": "Hajime Moriyasu remains manager (since 2018), his 2nd World Cup in charge.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hajime_Moriyasu",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Hong Myung-bo",
+      "claimText": "Hong Myung-bo remains manager (since Jul 2024), having led Korea through World Cup qualifying unbeaten.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/korea-republic-world-cup-squad-hong-myungbo",
+          "tier": "S",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Saudi Arabia drew 1-1 with Uruguay then lost 0-4 to Spain in its first two World Cup group matches, following a manager change just two months before the tournament.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN match report (vs Uruguay)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760429/uruguay-saudi-arabia",
+          "tier": "A",
+          "observedDate": "2026-06-15"
+        },
+        {
+          "name": "ESPN match report (vs Spain)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760453/saudi-arabia-spain",
+          "tier": "A",
+          "observedDate": "2026-06-21"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Mohamed Ouahbi",
+      "claimText": "Mohamed Ouahbi is the actual current manager, but only since 2026-03-05, replacing Walid Regragui after the latter resigned; this is a very recent change worth flagging given how close it is to the tournament.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/48115189/morocco-coach-walid-regragui-world-cup-mohamed-ouahbi",
+          "tier": "S",
+          "observedDate": "2026-03-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Javier Aguirre",
+      "claimText": "Javier Aguirre remains manager (appointed July 2024), his 3rd World Cup as Mexico coach.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-squad-announced",
+          "tier": "S",
+          "observedDate": "2026-06-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Ronald Koeman",
+      "claimText": "Ronald Koeman remains manager (appointed June 2023), led the team through an unbeaten qualifying campaign.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FourFourTwo",
+          "url": "https://www.fourfourtwo.com/team/netherlands-world-cup-2026-squad",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "NED_MALEN",
+      "playerName": "Donyell Malen",
+      "playerMatchConfidence": "matched",
+      "currentValue": "AS Roma (ITA)",
+      "claimText": "Donyell Malen transferred from Aston Villa to AS Roma in Jan 2026 and has been in excellent form there (league-leading scoring in the second half of the season).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Aston Villa FC",
+          "url": "https://www.avfc.co.uk/news/2026/january/16/signing-malen-joins-serie-a-side-roma/",
+          "tier": "S",
+          "observedDate": "2026-01-16"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "New Zealand drew 2-2 with Iran (Wood, 2 assists) then lost 1-3 to Egypt in the World Cup group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN (vs Egypt)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760452/egypt-new-zealand",
+          "tier": "A",
+          "observedDate": "2026-06-21"
+        },
+        {
+          "name": "Al Jazeera (vs Egypt)",
+          "url": "https://www.aljazeera.com/sports/2026/6/22/salah-scores-as-egypt-beat-new-zealand-3-1-for-first-world-cup-win",
+          "tier": "A",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "NZL_CACACE",
+      "playerName": "Liberato Cacace",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Wrexham AFC (WAL)",
+      "claimText": "Liberato Cacace plays for Wrexham AFC (Championship, since July 2025), not Empoli/Italy as the seed may show.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wrexham AFC (official)",
+          "url": "https://www.wrexhamafc.co.uk/news/2025/july/18/get-to-know---liberato-cacace/",
+          "tier": "S",
+          "observedDate": "2025-07-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Panama qualified directly via CONCACAF Round 3 (beating El Salvador 3-0 on 2025-11-18) and lost both of its first two World Cup group matches 0-1 to Ghana and Croatia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera (vs Ghana)",
+          "url": "https://www.aljazeera.com/sports/2026/6/18/ghana-beat-panama-1-0-in-chaotic-charged-world-cup-group-l",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "ESPN (vs Croatia)",
+          "url": "https://www.espn.com/soccer/story/_/id/49157167/panama-croatia-live-world-cup-2026-latest-updates-commentary-score-result",
+          "tier": "A",
+          "observedDate": "2026-06-23"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Gustavo Alfaro",
+      "claimText": "Gustavo Alfaro remains manager through the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/paraguay-squad-announcement-gustavo-alfaro",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "PAR_ENCISO",
+      "playerName": "Julio Enciso",
+      "playerMatchConfidence": "matched",
+      "currentValue": "RC Strasbourg (FRA)",
+      "claimText": "Julio Enciso moved from Brighton to Strasbourg (both BlueCo-affiliated clubs) in August 2025 after being told to leave Brighton; he was directly involved in the build-up to Paraguay's winning goal against Turkey.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Julio_Enciso_(footballer,_born_2004)",
+          "tier": "B",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Sussex Express",
+          "url": "https://www.sussexexpress.co.uk/sport/football/brighton-and-hove-albion/negotiation-julio-enciso-is-told-to-leave-brighton-as-contract-enters-final-12-months-5187060",
+          "tier": "A",
+          "observedDate": "2025"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Roberto Martinez",
+      "claimText": "Roberto Martinez remains manager, having won the 2025 Nations League (beating Spain on penalties).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_final",
+          "tier": "S",
+          "observedDate": "2025-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "South Africa qualified for its first World Cup in 16 years (beating Rwanda 3-0) and lost 0-2 to Mexico, drew 1-1 with Czechia, and lost 0-1 to South Korea in the World Cup group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "beIN Sports (qualification)",
+          "url": "https://www.beinsports.com/en-us/soccer/caf-world-cup-qualifiers/articles/bafana-bafana-qualify-for-the-2026-world-cup-south-africa-return-after-16-years-away-2025-10-14",
+          "tier": "A",
+          "observedDate": "2025-10-14"
+        },
+        {
+          "name": "ESPN match report (vs South Korea)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760466/south-korea-south-africa",
+          "tier": "A",
+          "observedDate": "2026-06-24"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 18,
+      "claimText": "Senegal qualified for the World Cup unbeaten in CAF qualifying (7W-3D, 24 points), finishing top of its group.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/senegal-qualify",
+          "tier": "S",
+          "observedDate": "2025-10"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "SUI_AKANJI",
+      "playerName": "Manuel Akanji",
+      "playerMatchConfidence": "matched",
+      "currentValue": "FC Internazionale Milano (ITA)",
+      "claimText": "Manuel Akanji moved on a one-year loan from Manchester City to Inter on 2025-09-01 (2026 buy option); seed should reflect Inter rather than Manchester City.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Manuel_Akanji",
+          "tier": "A",
+          "observedDate": "2025-09-01"
+        },
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/manuel-akanji/profil/spieler/284730",
+          "tier": "B",
+          "observedDate": "2026-05-29"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUN",
+      "teamName": "Tunisia",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Tunisia lost both of its first two World Cup group matches, 1-5 to Sweden and 0-4 to Japan, eliminating it from knockout contention before the final group match against the Netherlands.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN (vs Sweden)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760424/tunisia-sweden",
+          "tier": "A",
+          "observedDate": "2026-06-14"
+        },
+        {
+          "name": "ESPN (vs Japan)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760449/japan-tunisia",
+          "tier": "A",
+          "observedDate": "2026-06-21"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUN",
+      "teamName": "Tunisia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "TUN_MEJBRI",
+      "playerName": "Hannibal Mejbri",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Burnley FC (ENG)",
+      "claimText": "Hannibal Mejbri plays for Burnley (not Manchester United), having moved on after a loan spell at Sevilla and a permanent transfer to Burnley.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hannibal_Mejbri",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "The National News",
+          "url": "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/14/sweden-v-tunisia-hannibals-journey-from-manchester-united-prospect-to-2026-world-cup-talisman/",
+          "tier": "A",
+          "observedDate": "2026-06-14"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "TUR_DEMIRAL",
+      "playerName": "Merih Demiral",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Ahli FC (KSA)",
+      "claimText": "Merih Demiral extended his contract with Al-Ahli (Saudi Arabia) through 2029, confirming his current club as Al-Ahli rather than any prior club still in the seed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al-Ahli FC official",
+          "url": "https://en.alahlifc.sa/news/al-ahli-extend-turkish-defender-merih-demiral-s-contract-until-2029",
+          "tier": "S",
+          "observedDate": "2025"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Marcelo Bielsa",
+      "claimText": "Marcelo Bielsa remains manager (since 2023, contracted through the World Cup).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA.com",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/marcelo-bielsea-coach-argentina-uruguay-2026-qualifying",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Mauricio Pochettino",
+      "claimText": "Mauricio Pochettino remains manager, named the official 26-man World Cup roster.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "US Soccer official",
+          "url": "https://www.ussoccer.com/stories/2026/05/usmnt/us-mens-national-team-head-coach-mauricio-pochettino-names-26-player-roster-for-fifa-world-cup-2026",
+          "tier": "S",
+          "observedDate": "2026-05-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 17,
+      "claimText": "FIFA rank confirmed at 17 as of 2026-06-11, matching the seed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/articles/usas-fifa-world-ranking-updated-160746611.html",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "UZB_KHUSANOV",
+      "playerName": "Abdukodir Khusanov",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Manchester City FC (ENG)",
+      "claimText": "Abduqodir Khusanov's move to Manchester City (~EUR40m, January 2025) is confirmed; he had a strong rookie season including FA Cup and EFL Cup titles.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "high",
+      "qualityScore": 12,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Manchester City (official)",
+          "url": "https://www.mancity.com/news/mens/abdukodir-khusanov-signing-manchester-city-63872982",
+          "tier": "S",
+          "observedDate": "2025-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Vladimir Petkovic",
+      "claimText": "Vladimir Petkovic remains manager, having taken over on 2024-02-29.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_Petkovi%C4%87",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Lionel Scaloni",
+      "claimText": "Lionel Scaloni continues as manager through the 2026 World Cup, contracted since Feb 2023.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lionel_Scaloni",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Tony Popovic",
+      "claimText": "Tony Popovic remains manager, having taken over in September 2024.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/45585942/how-tony-popovic-guided-socceroos-2026-world-cup",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Ralf Rangnick",
+      "claimText": "Ralf Rangnick remains manager (since Jun 2022), having led Austria to its first World Cup since 1998.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ralf_Rangnick",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "AUT",
+      "teamName": "Austria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "AUT_POSCH",
+      "playerName": "Stefan Posch",
+      "playerMatchConfidence": "matched",
+      "currentValue": "1. FSV Mainz 05 (GER)",
+      "claimText": "Stefan Posch moved from Bologna to Como (2025-09, then permanent 2026-01) and is now on loan at Mainz 05 (from 2026-01-22); seed club is likely stale regardless of which prior club it shows.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stefan_Posch",
+          "tier": "A",
+          "observedDate": "2026"
+        },
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/stefan-posch/profil/spieler/223974",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Rudi Garcia",
+      "claimText": "Rudi Garcia remains manager, appointed Jan 2025.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Get French Football News",
+          "url": "https://www.getfootballnewsfrance.com/2025/official-rudi-garcia-appointed-belgium-head-coach/",
+          "tier": "A",
+          "observedDate": "2025-01-24"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Sergej Barbarez",
+      "claimText": "Sergej Barbarez remains manager, having taken over in April 2024 in his first managerial job and led Bosnia to its first World Cup since 2014 via the playoffs.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sergej_Barbarez",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "BIH_DZEKO",
+      "playerName": "Edin Dzeko",
+      "playerMatchConfidence": "matched",
+      "currentValue": "FC Schalke 04 (GER)",
+      "claimText": "Edin Dzeko (40, captain) moved to Schalke 04 (Bundesliga 2) in January 2026, remains active, started against Switzerland, and was substituted at the 64th minute -- a relatively early change consistent with managing a veteran's minutes.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Edin_D%C5%BEeko",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Carlo Ancelotti",
+      "claimText": "Carlo Ancelotti remains manager, appointed May 2025.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/44848767/real-madrid-carlo-ancelotti-announced-brazil-boss",
+          "tier": "A",
+          "observedDate": "2025-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Jesse Marsch",
+      "claimText": "Jesse Marsch remains manager, having taken over in May 2024, with a contract extension reported through the 2030 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sports Illustrated",
+          "url": "https://www.si.com/soccer/why-canada-signed-jesse-marsch-2030-world-cup-extension-ahead-2026",
+          "tier": "A",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Emerse Fae",
+      "claimText": "Emerse Fae remains manager, having taken over on 2024-01-24, and continued through AFCON 2025-26 and the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Emerse_Fa%C3%A9",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CIV_ADINGRA",
+      "playerName": "Simon Adingra",
+      "playerMatchConfidence": "matched",
+      "currentValue": "AS Monaco (FRA)",
+      "claimText": "Simon Adingra transferred from Brighton to Sunderland on 2025-07-10, then went on loan from Sunderland to AS Monaco on 2026-02-02; seed club should reflect Monaco, not Brighton.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Simon_Adingra",
+          "tier": "A",
+          "observedDate": "2026-02"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Nestor Lorenzo",
+      "claimText": "Nestor Lorenzo remains manager (since June 2022).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/n%C3%A9stor-lorenzo-s-official-colombia-squad-for-the-2026-fifa-world-cup-2026-05-25",
+          "tier": "A",
+          "observedDate": "2026-05-25"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Sebastian Beccacece",
+      "claimText": "Sebastian Beccacece remains manager (since Aug 2024) through World Cup qualifying and the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ecuador_national_football_team",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Ecuador finished 2nd in CONMEBOL World Cup qualifying (behind Argentina) with only 5 goals conceded in 18 matches, the fewest in the group.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "CopaAmerica.com",
+          "url": "https://copaamerica.com/en/news/ecuador-brazil-world-cup-qualifiers-all-results",
+          "tier": "A",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "ECU_PACHO",
+      "playerName": "Willian Pacho",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Paris Saint-Germain (FRA)",
+      "claimText": "Willian Pacho plays for Paris Saint-Germain (2025 Champions League winner) and missed several matches in May 2026 with a thigh issue but was selected for the World Cup squad; seed club/availability should be checked against PSG.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Willian_Pacho",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "RotoWire",
+          "url": "https://www.rotowire.com/soccer/headlines/willian-pacho-injury-option-for-champions-league-final-518080",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Thomas Tuchel",
+      "claimText": "Thomas Tuchel remains manager; extended his contract through Euro 2028 in Feb 2026.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11095/13506620/thomas-tuchel-england-boss-signs-contract-extension-until-2028",
+          "tier": "A",
+          "observedDate": "2026-02-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "ENG_GUEHI",
+      "playerName": "Marc Guehi",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Manchester City FC (ENG)",
+      "claimText": "Marc Guehi transferred from Crystal Palace to Manchester City on 2026-01-19 (~£20m); seed may still show Crystal Palace.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/12040/13495051/marc-guehi-transfer-news-defender-set-to-leave-crystal-palace-amidafter-manchester-city-agree-lb20m-fee",
+          "tier": "A",
+          "observedDate": "2026-01-19"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Luis de la Fuente",
+      "claimText": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/luis-de-la-fuente-s-official-spain-squad-for-the-2026-fifa-world-cup-2026-05-25",
+          "tier": "A",
+          "observedDate": "2026-05-25"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Didier Deschamps",
+      "claimText": "Didier Deschamps remains manager through the 2026 World Cup but publicly announced in Jan 2025 that he will step down afterward; Zinedine Zidane has reportedly verbally agreed to succeed him.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/soccer/story/_/id/43324614/didier-deschamps-step-france-26-wc-cycle",
+          "tier": "A",
+          "observedDate": "2025-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 20,
+      "claimText": "FIFA rank confirmed at 20 as of 2026-06-11, matching the seed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/what-is-irans-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-belgium/",
+          "tier": "A",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "IRQ_HUSSEIN_A",
+      "playerName": "Aymen Hussein",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Karma SC (IRQ)",
+      "claimText": "Aymen Hussein (Al-Karma) scored a header against Norway but also recorded an own goal in the same match -- one of a small number of players in World Cup history to do both in one game.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Aymen_Hussein",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "JOR_RAWABDEH",
+      "playerName": "Noor Al-Rawabdeh",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Selangor FC (MAS)",
+      "claimText": "Noor Al-Rawabdeh is reported as a midfielder, not the seed's center-back, and plays for Selangor FC (Malaysia).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Noor_Al-Rawabdeh",
+          "tier": "B",
+          "observedDate": "2024-09"
+        },
+        {
+          "name": "Heavy.com",
+          "url": "https://heavy.com/sports/soccer/world-cup/jordan-world-cup-squad-2026-clubs-2/",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "JPN_TOMIYASU",
+      "playerName": "Takehiro Tomiyasu",
+      "playerMatchConfidence": "matched",
+      "currentValue": "AFC Ajax (NED)",
+      "claimText": "Takehiro Tomiyasu had his Arsenal contract terminated in July 2025 (recurring knee surgeries, almost no playing time) and joined Ajax on a short-term deal, called up to the World Cup squad as a late injury replacement; seed's club (Arsenal) and overall=61 as a trusted starter may both be stale/optimistic.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Takehiro_Tomiyasu",
+          "tier": "A",
+          "observedDate": "2025-12"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MAR",
+      "teamName": "Morocco",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Morocco is unbeaten in its last 10 matches (6 wins, 3 draws), tied for first in its World Cup group with Brazil.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Morocco_national_football_team",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "As host nation, Mexico did not play qualifiers and instead scheduled an unusually heavy slate of high-profile friendlies (Portugal, Belgium, Serbia, Australia, Ghana) in 2025-26.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "ESPN results archive",
+          "url": "https://www.espn.com/soccer/team/fixtures/_/id/203/league/fifa.friendly",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "MEX_GIMENEZ",
+      "playerName": "Santiago Gimenez",
+      "playerMatchConfidence": "matched",
+      "currentValue": "AC Milan (ITA)",
+      "claimText": "Santiago Gimenez's club is AC Milan (not Feyenoord) and he has had a severely poor scoring season there (0 goals in 16 Serie A appearances) plus an ankle injury; this is not reflected if seed assumes good current form.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Goal.com",
+          "url": "https://www.goal.com/en-us/lists/world-cup-santiago-gimenez-ac-milan-mexico-jared-borgetti-serie-a-striker/blt5ff7d3664c552a41",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Paraguay beat Turkey 1-0 at the World Cup (Gustavo Gomez-led build-up to Matias Galarza's goal at 64 seconds, the fastest in World Cup history) while playing most of the second half with 10 men after Almiron's red card, but lost 1-4 to the USA.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/20/turkiye-knocked-out-of-world-cup-2026-after-1-0-defeat-to-10-man-paraguay",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Hugo Broos",
+      "claimText": "Hugo Broos remains manager (since 2021), with a contract through 2026-06-30; he has stated this World Cup will be his final coaching job before retiring.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hugo_Broos",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "RSA_FOSTER",
+      "playerName": "Lyle Foster",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Burnley FC (ENG)",
+      "claimText": "Percy Tau plays for Thep Xanh Nam Dinh FC in Vietnam (joined 2025-08-16) and was not in the starting lineup for the World Cup opener against Mexico (Reyners and Foster started as the front two); his actual World Cup playing time is unclear.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "beIN Sports",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/mexico-s-lineup-vs-south-africa-for-the-opening-match-of-the-2026-fifa-world-cup-2026-06-11",
+          "tier": "A",
+          "observedDate": "2026-06-11"
+        },
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/percy-tau/profil/spieler/312239",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Steve Clarke",
+      "claimText": "Steve Clarke remains manager; after qualifying for the 2026 World Cup (beating Denmark 4-2 on 2025-11-18) he signed a new contract through 2030.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/football/news/11096/13546541/world-cup-2026-scotland-boss-steve-clarke-facing-five-selection-questions-ahead-of-campaign",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SCO",
+      "teamName": "Scotland",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Scotland reached the World Cup for the first time since 1998, beating Denmark 4-2 in the final qualifier, then lost 0-1 to Morocco and beat Haiti 1-0 in the group stage.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia, 2026 FIFA World Cup Group C",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Pape Thiaw",
+      "claimText": "Pape Thiaw remains manager (appointed 2024-12-13), leading Senegal through AFCON 2025 and the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pape_Thiaw",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "SEN_NDIAYE_E",
+      "playerName": "El Hadji Malick Diouf",
+      "playerMatchConfidence": "matched",
+      "currentValue": "West Ham United FC (ENG)",
+      "claimText": "El Hadji Malick Diouf transferred from Slavia Prague to West Ham United on 2025-07-15 (~£19m); seed may still show his prior club.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/El_Hadji_Malick_Diouf",
+          "tier": "A",
+          "observedDate": "2025-07-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "SEN_JACKSON_N",
+      "playerName": "Nicolas Jackson",
+      "playerMatchConfidence": "matched",
+      "currentValue": "FC Bayern München (GER)",
+      "claimText": "Nicolas Jackson went on a season-long loan from Chelsea to Bayern Munich (2025-09-01, won Bundesliga) and is expected back at Chelsea after the loan; seed club should reflect the loan status.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Nicolas_Jackson",
+          "tier": "A",
+          "observedDate": "2025-09-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Murat Yakin",
+      "claimText": "Murat Yakin remains manager (since Aug 2021), contracted through the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Murat_Yakin",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "SUI_NDOYE",
+      "playerName": "Dan Ndoye",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Nottingham Forest FC (ENG)",
+      "claimText": "Dan Ndoye transferred from Bologna to Nottingham Forest on 2025-07-31 (5-year deal, ~$46m+); his 2025-26 club scoring output has been modest (1 goal, 1 assist in league play) relative to seed overall=66.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dan_Ndoye",
+          "tier": "A",
+          "observedDate": "2025-07-31"
+        },
+        {
+          "name": "FotMob",
+          "url": "https://www.fotmob.com/players/1022649/dan-ndoye",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Sweden finished its qualifying group winless and last under Tomasson, then reached the World Cup via the playoffs (beating Ukraine 3-1, Poland 3-2) under Potter; at the World Cup it beat Tunisia 5-1 but lost 1-5 to the Netherlands.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "SWE_ELANGA",
+      "playerName": "Anthony Elanga",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Newcastle United FC (ENG)",
+      "claimText": "Anthony Elanga transferred from Nottingham Forest to Newcastle United in Jul 2025; seed club should reflect Newcastle. In the World Cup match vs Netherlands he came on as a 55th-minute substitute rather than starting, scoring 4 minutes later -- suggesting his role may be more impact-substitute than guaranteed starter.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Anthony_Elanga",
+          "tier": "A",
+          "observedDate": "2025-26"
+        },
+        {
+          "name": "Sky Sports confirmed lineups",
+          "url": "https://www.skysports.com/football/netherlands-vs-sweden/teams/549800",
+          "tier": "A",
+          "observedDate": "2026-06-20"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Vincenzo Montella",
+      "claimText": "Vincenzo Montella remains manager; the Turkish Football Federation confirmed he is retained despite a group-stage World Cup exit.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "OneFootball",
+          "url": "https://onefootball.com/en/news/vincenzo-montella-kept-on-as-tuerkiye-boss-despite-world-cup-exit-43047534",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 14,
+      "claimText": "FIFA rank as of the pre-tournament June 2026 update is 16, not the seed's 14.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/uruguays-updated-fifa-ranking-before-2026-world-cup-clash-with-cape-verde/",
+          "tier": "S",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "URU_DARWINNUNEZ",
+      "playerName": "Darwin Nunez",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Hilal SC (KSA)",
+      "claimText": "Darwin Nunez's current club is Al Hilal (Saudi Arabia), not any prior club the seed might assume, and he has been in poor recent form (substituted at halftime in the World Cup opener).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Goal.com",
+          "url": "https://www.goal.com/en/lists/maxi-araujo-uruguay-saudi-arabia-world-cup-opener-darwin-nunez-subbed/bltb0a693a0f6d7966a",
+          "tier": "A",
+          "observedDate": "2026-06-15"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Uzbekistan qualified for its first-ever World Cup in June 2025 (beating UAE 0-0 away on points) but lost both of its first two group matches, 1-3 to Colombia and 0-5 to Portugal.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/23/ronaldo-scores-twice-as-portugal-thrash-uzbekistan-5-0-at-world-cup-2026",
+          "tier": "A",
+          "observedDate": "2026-06-23"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "UZB_SHOMURODOV",
+      "playerName": "Eldor Shomurodov",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Ba ş ak ş ehir FK (TUR)",
+      "claimText": "Eldor Shomurodov (captain) went on loan from Roma to Istanbul Basaksehir in July 2025 and completed a permanent transfer on 2026-04-22 (contract through 2029); seed club should reflect Basaksehir, not an Italian club.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "high",
+      "qualityScore": 11,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Zamin.uz (Uzbek national outlet)",
+          "url": "https://zamin.uz/en/sport/197225-eldor-shomurodov-completes-permanent-transfer-and-signs-contract-with-istanbul-basaksehir.html",
+          "tier": "A",
+          "observedDate": "2026-04-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=high)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 30,
+      "claimText": "Canada (co-host) drew Bosnia 1-1 then beat Qatar 6-0 (David hat-trick) at the World Cup; one aggregator places its FIFA rank at 30 as of 2026-06-11, against the seed's fifa_rank=27 -- a modest discrepancy that may reflect different snapshot dates.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "S",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "FIFA official match report (vs Qatar)",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-qatar-match-report-highlights",
+          "tier": "S",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/world-cup-2026-what-is-canada-current-fifa-world-ranking/",
+          "tier": "C",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "official",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CIV_KESSIE",
+      "playerName": "Franck Kessie",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Ahli FC (KSA)",
+      "claimText": "Franck Kessie (captain) plays for Al-Ahli in the Saudi Pro League and reached 100 caps in 2026; he scored against Germany at the World Cup and remains the midfield's central figure.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Franck_Kessi%C3%A9",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "IRQ_JASIM_A",
+      "playerName": "Ali Jasim",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Najmah SC (KSA)",
+      "claimText": "Ali Jasim is on loan from Como 1907 to Al-Najma (Saudi Arabia) since 2025-08-29 and is reported as right-footed despite playing on the left wing; seed club should reflect the loan if it currently shows Como.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ali_Jasim",
+          "tier": "A",
+          "observedDate": "2025-08-29"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Zaid Tahseen is reported as a center-back (forming Iraq's CB pairing with Ali Hashim), not the seed's CDM, and transferred from Al-Quwa Al-Jawiya to Pakhtakor (Uzbekistan) on 2025-07-22.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Zaid_Tahseen",
+          "tier": "A",
+          "observedDate": "2025-07-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "KOR_LEEKANGIN",
+      "playerName": "Lee Kang-in",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Paris Saint-Germain (FRA)",
+      "claimText": "Lee Kang-in plays for Paris Saint-Germain (squad rotation/backup minutes in 2025-26, ~1,500 league minutes) but remains Korea's primary creative midfielder, completing 100% of his passes in the World Cup opener vs Czechia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kang-in",
+          "tier": "A",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "NOR",
+      "teamName": "Norway",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Stale Solbakken",
+      "claimText": "Stale Solbakken remains manager and is reported to have extended his contract through Euro 2028, despite earlier reporting that he planned to step down after the 2026 World Cup.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/St%C3%A5le_Solbakken",
+          "tier": "A",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "TUN",
+      "teamName": "Tunisia",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Mohamed Drager is reported as a right-back in multiple sources, not the seed's left-back, and moved from a foreign club back to Esperance de Tunis in January 2026.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mohamed_Dr%C3%A4ger",
+          "tier": "A",
+          "observedDate": "2026-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "As host nation the USA's pre-tournament form was uneven against top opposition (losses to Belgium 2-5, Portugal 0-2, Germany 1-2) despite wins over lesser opposition -- suggests the team's true strength against elite teams may be lower than its overall record implies.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 10,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "NBC Sports",
+          "url": "https://www.nbcsports.com/soccer/news/usmnt-vs-germany-live-updates-score-highlights-stats-watch",
+          "tier": "A",
+          "observedDate": "2026-06-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "GHA",
+      "teamName": "Ghana",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 72,
+      "claimText": "Ghana beat Panama 1-0 (95th-minute winner by Caleb Yirenkyi) in World Cup Group L; its FIFA rank climbed to 65 after the win, against the seed's fifa_rank=61.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/6/18/ghana-beat-panama-1-0-in-chaotic-charged-world-cup-group-l",
+          "tier": "A",
+          "observedDate": "2026-06-18"
+        },
+        {
+          "name": "GhanaSoccerNet",
+          "url": "https://ghanasoccernet.com/ghana-moves-eight-places-up-in-latest-fifa-ranking-after-panama-win",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "QAT",
+      "teamName": "Qatar",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 56,
+      "claimText": "Qatar lost 0-6 to Canada (consistent with Canada's batch-3 research) and drew 1-1 with Switzerland at the World Cup; one source places its FIFA rank at 56 as of 2026-06-11, a significant discrepancy from the seed's fifa_rank=42.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "A",
+      "confidence": "medium",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "ready_for_codex_review",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Qatar_national_football_team",
+          "tier": "A",
+          "observedDate": "2026-06"
+        },
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/world-cup-2026-what-is-qatar-current-fifa-world-ranking/",
+          "tier": "B",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "出典の信頼度が高く(TierS/A、confidence=medium)、Codexのレビュー後に反映候補として検討可能です。",
+      "readyForCodexReview": true
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "ALG_MAHREZ",
+      "playerName": "Riyad Mahrez",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Al Ahli FC (KSA)",
+      "claimText": "Riyad Mahrez remains at Al-Ahli (Saudi Arabia, contract through 2027) and is national team captain; seed club should reflect Al-Ahli.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Africa Top Sports",
+          "url": "https://en.africatopsports.com/2026/02/26/saudi-pro-league-riyad-mahrez-stays-at-al-ahli/",
+          "tier": "B",
+          "observedDate": "2026-02-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Adam Hlozek plays for TSG Hoffenheim (moved from Bayer Leverkusen in 2024, contract through 2029), not the seed's possible Leverkusen club.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/adam-hlozek/transfers/spieler/552057",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "category": "nationalStrengthContext",
+      "mapsTo": "team_strength_rating",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": null,
+      "claimText": "Jordan reached its first-ever World Cup but was eliminated after losing both of its first two group matches, 1-3 to Austria and 1-2 to Algeria.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia, 2026 FIFA World Cup Group J",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J",
+          "tier": "B",
+          "observedDate": "2026-06-22"
+        }
+      ],
+      "recommendedConfidenceLabel": "estimated",
+      "expectedSimulatorImpactJa": "team_strength_ratingはseedの直接フィールドではなく算出値である可能性が高く、反映方法はCodexが判断する必要があります。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAN",
+      "teamName": "Panama",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Thomas Christiansen",
+      "claimText": "Thomas Christiansen remains manager, having taken over on 2020-07-23; Panama secured World Cup qualification on 2025-11-18 by beating El Salvador 3-0.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Thomas_Christiansen",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "unmatched",
+      "currentValue": null,
+      "claimText": "Omar Alderete transferred from Getafe to Sunderland (Premier League) on 2025-08-12 for roughly EUR11.6m on a 4-year deal, and has become a regular starter in the Premier League (32 starts).",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "high",
+      "qualityScore": 9,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Omar_Alderete",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CAN_EUSTAQUIO",
+      "playerName": "Stephen Eustaquio",
+      "playerMatchConfidence": "matched",
+      "currentValue": "LAFC (USA)",
+      "claimText": "Stephen Eustaquio (FC Porto, vice-captain) went on a 4-month loan to LAFC (MLS) starting February 2026 and suffered a muscle injury during a collision with a referee; seed club should reflect the LAFC loan if not already current.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Canadian Soccer Daily",
+          "url": "https://canadiansoccerdaily.com/2026/04/18/injured-canada-vice-captain-lafc-midfielder-stephen-eustaquio-back-at-fc-porto-recovery/",
+          "tier": "B",
+          "observedDate": "2026-04-18"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "COD_BAKAMBU",
+      "playerName": "Cedric Bakambu",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Real Betis (ESP)",
+      "claimText": "Cedric Bakambu plays for Real Betis (La Liga, contract through June 2026) and was substituted before the hour in the World Cup match against Colombia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/cedric-bakambu/profil/spieler/127048",
+          "tier": "B",
+          "observedDate": "2025-26"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CPV_JAMIROMONTEIRO",
+      "playerName": "Jamiro Monteiro",
+      "playerMatchConfidence": "matched",
+      "currentValue": "PEC Zwolle (NED)",
+      "claimText": "Jamiro Monteiro plays for PEC Zwolle (Netherlands), which may differ from the seed's club data.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Toffee Web",
+          "url": "https://www.toffeeweb.com/world-cup/cape-verde-islands/jamiro-monteiro/",
+          "tier": "B",
+          "observedDate": "2026-05"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CUW_BACUNA_L",
+      "playerName": "Leandro Bacuna",
+      "playerMatchConfidence": "matched",
+      "currentValue": "I ğ dır FK (TUR)",
+      "claimText": "Leandro Bacuna (captain) moved to Igdir FK (Turkey) on 2026-01-06 and is more commonly listed as a midfielder/right-back than the seed's RW.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Leandro_Bacuna",
+          "tier": "B",
+          "observedDate": "2026-01"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "CUW_BACUNA_J",
+      "playerName": "Juninho Bacuna",
+      "playerMatchConfidence": "matched",
+      "currentValue": "FC Volendam (NED)",
+      "claimText": "Juninho Bacuna went on loan to FC Volendam (Netherlands) from Gaziantep FK on 2026-02-03 and is more commonly listed as a central midfielder than the seed's CAM.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Juninho_Bacuna",
+          "tier": "B",
+          "observedDate": "2026-02"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "HAI_PIERROT",
+      "playerName": "Frantzdy Pierrot",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Çaykur Rizespor (TUR)",
+      "claimText": "Frantzdy Pierrot is on loan at Caykur Rizespor (Turkey) from AEK Athens; he started against Brazil but was substituted at halftime.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Frantzdy_Pierrot",
+          "tier": "B",
+          "observedDate": "2026"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "UZB",
+      "teamName": "Uzbekistan",
+      "category": "keyPlayerStatusCandidates",
+      "mapsTo": "club_name",
+      "playerId": "UZB_FAYZULLAEV",
+      "playerName": "Abbosbek Fayzullaev",
+      "playerMatchConfidence": "matched",
+      "currentValue": "Ba ş ak ş ehir FK (TUR)",
+      "claimText": "Abbosbek Fayzullaev moved from CSKA Moscow to Istanbul Basaksehir (the same club as Shomurodov) and scored Uzbekistan's first-ever World Cup goal against Colombia.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "medium",
+      "qualityScore": 8,
+      "impactBand": "medium",
+      "useTier": "provisional_context",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Abbosbek_Fayzullaev",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "選手の所属クラブ表示に影響しますが、能力値そのものは変更しません。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 58,
+      "claimText": "One aggregator source places DR Congo's FIFA rank at 43-46 as of June 2026, conflicting with the seed's fifa_rank=60; this should be cross-checked directly against inside.fifa.com before being treated as confirmed.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "World Soccer Talk",
+          "url": "https://worldsoccertalk.com/world-cup/what-is-dr-congos-current-fifa-ranking-ahead-of-its-2026-world-cup-match-vs-colombia/",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "CUW",
+      "teamName": "Curacao",
+      "category": "managerStatus",
+      "mapsTo": "manager_name",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": "Dick Advocaat",
+      "claimText": "Dick Advocaat remains manager; one secondary source reports a resignation around February 2026 (citing his daughter's health) and a return on 2026-05-11, but this has not been directly confirmed against FIFA/official sources.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao_national_football_team",
+          "tier": "B",
+          "observedDate": "2026-06"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "チーム運用上の監督名表示と戦術推論の前提に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "category": "nationalStrengthContext",
+      "mapsTo": "fifa_rank",
+      "playerId": null,
+      "playerName": null,
+      "playerMatchConfidence": "team_level",
+      "currentValue": 7,
+      "claimText": "FIFA rank reported as 7th (2026-04-01) and 8th (2026-06-11) by different sources -- current seed value of 7 may be one position stale.",
+      "proposedValueNote": "CodexがclaimTextを確認し、反映する具体的な値を確定してください。本レポートは値を自動生成しません。",
+      "sourceTier": "B",
+      "confidence": "low",
+      "qualityScore": 4,
+      "impactBand": "low",
+      "useTier": "review_question",
+      "sources": [
+        {
+          "name": "Bolavip",
+          "url": "https://bolavip.com/en/world-cup/sweden-and-netherlands-fifa-rankings-updated-before-2026-world-cup-game-today",
+          "tier": "B",
+          "observedDate": "2026-06-11"
+        }
+      ],
+      "recommendedConfidenceLabel": "external",
+      "expectedSimulatorImpactJa": "FIFAランクに依存する国力評価・予測補正に影響します。",
+      "safetyRationaleJa": "報道ベースの情報(TierB)のため、TierS/Aで補強されるまでは'external/estimated'扱いに留め、確定事実としては反映しないでください。",
+      "readyForCodexReview": false
+    }
+  ]
+}
