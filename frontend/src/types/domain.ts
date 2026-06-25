@@ -700,6 +700,8 @@ export interface SubstitutionEngineCapabilities {
   hasManagerSpecificSubstitutionParameters: boolean;
   hasScoreStateSubstitutionBias: boolean;
   hasPositionSpecificSubstitutionPreferences: boolean;
+  anyTeamUsesNonNeutralProfile: boolean;
+  neutralSubstitutionProfileFields: string[];
   maxSubs: number;
   subWindow: { startMinute: number; endMinute: number };
   subChancePerMinute: number;
@@ -719,6 +721,7 @@ export interface SubstitutionModelGap {
 
 export interface SubstitutionModelGapSummaryState {
   currentModelHasManagerSpecificSubstitutions: boolean;
+  substitutionProfileMechanismImplemented: boolean;
   dataResearchCanBeStored: boolean;
   safeCurrentAction: string;
   recommendedNextSpec: string;

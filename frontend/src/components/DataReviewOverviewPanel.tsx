@@ -82,7 +82,7 @@ export function DataReviewOverviewPanel({
     externalWarnings > 0 ? `外部調査の警告 ${externalWarnings}件は反映候補から一段止める` : null,
     externalMissingUrls > 0 ? `外部調査候補 ${externalMissingUrls}件はURL付き出典で再確認してから反映判断` : null,
     sourceReviewCandidates > 0 ? `出典確認が先の候補 ${sourceReviewCandidates}件を保留` : null,
-    substitutionNeedsSpec ? "選手交代傾向は現エンジンに反映先がないため、将来仕様候補として扱う" : null,
+    substitutionNeedsSpec ? "選手交代傾向の反映先(プロファイル機構)は実装済みだが、全チーム中立値のため反映は将来spec候補として扱う" : null,
     releaseBlocked ? `本番反映は${releaseReadiness?.blockers.length ?? 0}件の理由で保留` : null,
   ].filter((item): item is string => Boolean(item));
 

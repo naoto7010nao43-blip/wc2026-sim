@@ -35,8 +35,17 @@ export function SubstitutionModelGapPanel({ summary }: Props) {
         <Metric label="最大交代数" value={`${capabilities.maxSubs}人`} />
         <Metric label="交代時間帯" value={`${capabilities.subWindow.startMinute}-${capabilities.subWindow.endMinute}分`} />
         <Metric label="毎分の検討確率" value={`${Math.round(capabilities.subChancePerMinute * 100)}%`} />
-        <Metric label="監督別パラメータ" value={capabilities.hasManagerSpecificSubstitutionParameters ? "あり" : "なし"} />
+        <Metric
+          label="監督別プロファイル機構"
+          value={capabilities.hasManagerSpecificSubstitutionParameters ? "実装済み" : "なし"}
+        />
       </div>
+      {capabilities.hasManagerSpecificSubstitutionParameters && !capabilities.anyTeamUsesNonNeutralProfile && (
+        <p className="mt-2 text-[11px] text-amber-200/90">
+          交代プロファイルの仕組み自体はエンジンに実装済みですが、現在は全チームが中立値のままで、
+          チーム間の実質的な交代傾向の差はまだありません。
+        </p>
+      )}
 
       <div className="mt-3 rounded border border-slate-700/70 bg-slate-900/40 p-3">
         <p className="text-[11px] font-semibold text-slate-300">現在の交代ルール</p>
@@ -48,7 +57,9 @@ export function SubstitutionModelGapPanel({ summary }: Props) {
           <div key={gap.gapId} className="rounded border border-slate-700/70 bg-slate-900/40 p-3">
             <div className="flex items-center justify-between gap-2">
               <p className="text-xs font-semibold text-slate-200">{gap.label}</p>
-              <span className="rounded bg-slate-700/70 px-1.5 py-0.5 text-[10px] text-slate-300">未実装</span>
+              <span className="rounded bg-slate-700/70 px-1.5 py-0.5 text-[10px] text-slate-300">
+                {capabilities.anyTeamUsesNonNeutralProfile ? "一部反映" : "中立値のまま"}
+              </span>
             </div>
             <p className="mt-2 text-[11px] text-slate-400">{gap.currentBehavior}</p>
             <p className="mt-2 text-[11px] text-amber-200/90">{gap.precisionRiskJa}</p>

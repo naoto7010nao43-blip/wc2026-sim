@@ -681,7 +681,8 @@ def test_substitution_model_gap_endpoint_exposes_current_engine_limits(client):
     response = client.get("/api/model-diagnostics/substitution-model-gap")
     body = response.json()
     assert body["engineCapabilities"]["hasSubstitutionEvents"] is True
-    assert body["engineCapabilities"]["hasManagerSpecificSubstitutionParameters"] is False
+    assert body["engineCapabilities"]["hasManagerSpecificSubstitutionParameters"] is True
+    assert body["engineCapabilities"]["anyTeamUsesNonNeutralProfile"] is False
     assert body["summary"]["safeCurrentAction"] == "read_only_candidate_collection"
     assert len(body["gaps"]) >= 4
 

@@ -424,6 +424,8 @@ class SubstitutionEngineCapabilities(BaseModel):
     hasManagerSpecificSubstitutionParameters: bool
     hasScoreStateSubstitutionBias: bool
     hasPositionSpecificSubstitutionPreferences: bool
+    anyTeamUsesNonNeutralProfile: bool = False
+    neutralSubstitutionProfileFields: list[str] = []
     maxSubs: int
     subWindow: dict
     subChancePerMinute: float
@@ -443,6 +445,7 @@ class SubstitutionModelGap(BaseModel):
 
 class SubstitutionModelGapSummaryState(BaseModel):
     currentModelHasManagerSpecificSubstitutions: bool
+    substitutionProfileMechanismImplemented: bool = False
     dataResearchCanBeStored: bool
     safeCurrentAction: str
     recommendedNextSpec: str
