@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-06-25T11:20:28.588496+00:00",
+  "generatedAt": "2026-06-25T11:39:58.376904+00:00",
   "note": "外部データ検証候補から、出典と現在のseed値の両方を人が直接確認した、安全かつ確定的に適用可能な事実項目のみを反映した適用レポートです。推測による値の生成は行っていません。teams2026_official.json(v2公式データ層)が存在する場合はそちらにも同じ値を反映します。",
   "appliedCount": 0,
-  "skippedCount": 1,
-  "appliedCountV2": 1,
-  "skippedCountV2": 0,
+  "skippedCount": 0,
+  "appliedCountV2": 0,
+  "skippedCountV2": 1,
   "heldForReviewCount": 2,
   "applied": [],
-  "skipped": [
+  "skipped": [],
+  "appliedV2": [],
+  "skippedV2": [
     {
       "teamId": "URU",
       "field": "fifa_rank",
@@ -18,26 +20,10 @@
       "sourceTier": "S",
       "observedDate": "2026-06",
       "claim": "FIFA rank as of the pre-tournament June 2026 update is 16, not the seed's 14.",
-      "skipReason": "seed_value_changed_since_candidate",
+      "skipReason": "v2_seed_value_changed_since_candidate",
       "liveValue": 16
     }
   ],
-  "appliedV2": [
-    {
-      "teamId": "URU",
-      "field": "fifa_rank",
-      "oldValue": 14,
-      "newValue": 16,
-      "sourceName": "World Soccer Talk",
-      "sourceUrl": "https://worldsoccertalk.com/world-cup/uruguays-updated-fifa-ranking-before-2026-world-cup-clash-with-cape-verde/",
-      "sourceTier": "S",
-      "observedDate": "2026-06",
-      "claim": "FIFA rank as of the pre-tournament June 2026 update is 16, not the seed's 14.",
-      "appliedAt": true,
-      "file": "teams2026_official.json"
-    }
-  ],
-  "skippedV2": [],
   "heldForReview": [
     {
       "teamId": "TUN",

@@ -50,8 +50,23 @@ METADATA_PATH = SEED_DIR / "metadata.json"
 # serving the old value forever regardless of how many times teams.json is
 # corrected -- this is exactly what happened to Uruguay's fifa_rank update
 # during Spec 018 Phase 9 (see docs/codex/PROGRESS.md for the investigation).
+#
+# Once this file exists, it is the single source of truth for team data:
+# teams.json becomes a generated mirror (see regenerate_legacy_teams_json()),
+# not an independently hand-maintained copy, so the two files can never
+# silently drift apart again.
 TEAMS_V2_PATH = SEED_DIR / "teams2026_official.json"
 V2_FIELD_NAME = {"fifa_rank": "fifaRank"}
+LEGACY_FIELD_FROM_V2 = {
+    "teamId": "id",
+    "name": "name",
+    "confederation": "confederation",
+    "fifaRank": "fifa_rank",
+    "defaultFormation": "default_formation",
+    "groupId": "group_id",
+    "tacticalProfile": "tactical_profile",
+}
+LEGACY_FIELD_ORDER = ["id", "name", "confederation", "fifa_rank", "default_formation", "group_id", "tactical_profile"]
 
 SAFE_UPDATES: list[dict[str, Any]] = [
     {
@@ -140,6 +155,35 @@ def apply_updates_v2(teams_v2: list[dict], updates: list[dict]) -> tuple[list[di
     return applied, skipped
 
 
+def regenerate_legacy_teams_json(teams_v2: list[dict], existing_teams: list[dict] | None = None) -> list[dict]:
+    """Derives teams.json's shape from teams2026_official.json, field-name
+    translation only -- no value changes to the fields both files represent.
+    Once the v2 layer exists, this makes teams.json a generated mirror
+    instead of a hand-maintained parallel file, so a future safe update can
+    never again reach one file and not the other (see TEAMS_V2_PATH's
+    module-level comment).
+
+    teams.json carries at least one field with no v2 equivalent at all --
+    `_tactical_profile_basis`, a sourcing note present for 8/48 teams -- so
+    this is not a pure field-rename: any existing per-team key not in
+    LEGACY_FIELD_ORDER is carried over unchanged from existing_teams rather
+    than silently dropped."""
+    existing_by_id = {
+        t["id"]: t for t in (existing_teams or []) if isinstance(t, dict) and t.get("id")
+    }
+    legacy_teams = []
+    for team in teams_v2:
+        legacy_team = {
+            LEGACY_FIELD_FROM_V2[v2_key]: team.get(v2_key)
+            for v2_key in LEGACY_FIELD_FROM_V2
+        }
+        ordered = {field: legacy_team[field] for field in LEGACY_FIELD_ORDER}
+        existing = existing_by_id.get(legacy_team["id"], {})
+        ordered.update({k: v for k, v in existing.items() if k not in LEGACY_FIELD_ORDER})
+        legacy_teams.append(ordered)
+    return legacy_teams
+
+
 def update_metadata_freshness(metadata: dict, checked_at: str) -> dict:
     metadata["lastUpdated"] = checked_at
     for source in metadata.get("sources", []):
@@ -151,22 +195,32 @@ def update_metadata_freshness(metadata: dict, checked_at: str) -> dict:
 def main() -> int:
     generated_at = datetime.now(timezone.utc).isoformat()
 
-    teams = load_json(TEAMS_PATH)
-    applied, skipped = apply_updates(teams, SAFE_UPDATES)
-
-    if applied:
-        write_json(TEAMS_PATH, teams)
-        metadata = load_json(METADATA_PATH)
-        update_metadata_freshness(metadata, generated_at)
-        write_json(METADATA_PATH, metadata)
-
+    applied: list[dict] = []
+    skipped: list[dict] = []
     applied_v2: list[dict] = []
     skipped_v2: list[dict] = []
+
     if TEAMS_V2_PATH.exists():
+        # teams2026_official.json is the single source of truth once it
+        # exists -- apply there, then regenerate teams.json from it every
+        # run (not just when something changed) so the legacy file can never
+        # silently drift again, regardless of what future SAFE_UPDATES add.
         teams_v2 = load_json(TEAMS_V2_PATH)
         applied_v2, skipped_v2 = apply_updates_v2(teams_v2, SAFE_UPDATES)
         if applied_v2:
             write_json(TEAMS_V2_PATH, teams_v2)
+        existing_teams = load_json(TEAMS_PATH) if TEAMS_PATH.exists() else []
+        write_json(TEAMS_PATH, regenerate_legacy_teams_json(teams_v2, existing_teams))
+    else:
+        teams = load_json(TEAMS_PATH)
+        applied, skipped = apply_updates(teams, SAFE_UPDATES)
+        if applied:
+            write_json(TEAMS_PATH, teams)
+
+    if applied or applied_v2:
+        metadata = load_json(METADATA_PATH)
+        update_metadata_freshness(metadata, generated_at)
+        write_json(METADATA_PATH, metadata)
 
     report = {
         "generatedAt": generated_at,

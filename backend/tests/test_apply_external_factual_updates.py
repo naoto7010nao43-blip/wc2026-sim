@@ -4,7 +4,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.apply_external_factual_updates import apply_updates, apply_updates_v2, update_metadata_freshness
+from scripts.apply_external_factual_updates import (
+    apply_updates,
+    apply_updates_v2,
+    regenerate_legacy_teams_json,
+    update_metadata_freshness,
+)
 
 
 def test_apply_updates_changes_matching_field():
@@ -89,6 +94,63 @@ def test_apply_updates_v2_ignores_fields_with_no_v2_equivalent():
 
     assert applied == []
     assert skipped == []
+
+
+def test_regenerate_legacy_teams_json_translates_field_names():
+    teams_v2 = [{
+        "teamId": "URU",
+        "teamCode": "URU",
+        "name": "Uruguay",
+        "confederation": "CONMEBOL",
+        "fifaRank": 16,
+        "defaultFormation": "4-3-3",
+        "groupId": "H",
+        "tacticalProfile": {"manager_name": "Marcelo Bielsa", "press_intensity": 70},
+        "dataConfidence": "official",
+        "lastUpdated": "2026-06",
+    }]
+
+    legacy = regenerate_legacy_teams_json(teams_v2)
+
+    assert legacy == [{
+        "id": "URU",
+        "name": "Uruguay",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 16,
+        "default_formation": "4-3-3",
+        "group_id": "H",
+        "tactical_profile": {"manager_name": "Marcelo Bielsa", "press_intensity": 70},
+    }]
+
+
+def test_regenerate_legacy_teams_json_preserves_fields_with_no_v2_equivalent():
+    teams_v2 = [{
+        "teamId": "MEX", "name": "Mexico", "confederation": "CONCACAF",
+        "fifaRank": 12, "defaultFormation": "4-3-3", "groupId": "A",
+        "tacticalProfile": {"manager_name": "Javier Aguirre"},
+    }]
+    existing_teams = [{
+        "id": "MEX", "name": "Mexico", "confederation": "CONCACAF",
+        "fifa_rank": 12, "default_formation": "4-3-3", "group_id": "A",
+        "tactical_profile": {"manager_name": "Javier Aguirre"},
+        "_tactical_profile_basis": "Aguirre favors a pragmatic, structured 4-3-3...",
+    }]
+
+    legacy = regenerate_legacy_teams_json(teams_v2, existing_teams)
+
+    assert legacy[0]["_tactical_profile_basis"] == "Aguirre favors a pragmatic, structured 4-3-3..."
+
+
+def test_regenerate_legacy_teams_json_reflects_an_applied_v2_update():
+    teams_v2 = [{
+        "teamId": "URU", "name": "Uruguay", "confederation": "CONMEBOL",
+        "fifaRank": 14, "defaultFormation": "4-3-3", "groupId": "H", "tacticalProfile": {},
+    }]
+    apply_updates_v2(teams_v2, [{"teamId": "URU", "field": "fifa_rank", "oldValue": 14, "newValue": 16}])
+
+    legacy = regenerate_legacy_teams_json(teams_v2)
+
+    assert legacy[0]["fifa_rank"] == 16
 
 
 def test_update_metadata_freshness_updates_fifa_rank_source_and_top_level_timestamp():
