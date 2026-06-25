@@ -94,6 +94,7 @@ def rating_trust_metadata(rating: PlayerRatingV2) -> dict:
             "injuryDataUsed": rating.source_breakdown.injury_data_used,
             "manualOverrideUsed": rating.source_breakdown.manual_override_used,
             "externalReferenceUsed": rating.source_breakdown.external_reference_used,
+            "calibrationApplied": rating.source_breakdown.calibration_applied,
         },
         "lowConfidenceAttributes": rating.low_confidence_attributes,
         "lastUpdated": rating.last_updated,

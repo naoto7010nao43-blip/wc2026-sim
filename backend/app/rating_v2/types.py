@@ -34,6 +34,11 @@ class RatingSourceBreakdown:
     injury_data_used: bool = False
     manual_override_used: bool = False
     external_reference_used: bool = False
+    # An estimated (non-external) player whose from-scratch base was shifted
+    # onto the EA-anchored scale, using the monotonic est->EA mapping fit from
+    # the externally-sourced overlap. Corrects the estimator's systematic
+    # compression so estimated and EA-sourced players share one coherent scale.
+    calibration_applied: bool = False
 
 
 @dataclass(frozen=True)
@@ -115,6 +120,7 @@ class PlayerRatingV2:
                 injury_data_used=sb.get("injuryDataUsed", False),
                 manual_override_used=sb.get("manualOverrideUsed", False),
                 external_reference_used=sb.get("externalReferenceUsed", False),
+                calibration_applied=sb.get("calibrationApplied", False),
             ),
             low_confidence_attributes=d.get("lowConfidenceAttributes", []),
             last_updated=d.get("lastUpdated", utcnow_iso()),
@@ -166,6 +172,7 @@ class PlayerRatingV2:
                 "injuryDataUsed": self.source_breakdown.injury_data_used,
                 "manualOverrideUsed": self.source_breakdown.manual_override_used,
                 "externalReferenceUsed": self.source_breakdown.external_reference_used,
+                "calibrationApplied": self.source_breakdown.calibration_applied,
             },
             "lowConfidenceAttributes": self.low_confidence_attributes,
             "lastUpdated": self.last_updated,

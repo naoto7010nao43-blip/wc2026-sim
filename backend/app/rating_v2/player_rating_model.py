@@ -55,6 +55,30 @@ GK_OUTFIELD_PLACEHOLDER_BASE = {
 # consistent and the micro-simulator/Poisson model need no special-casing.
 EXTERNAL_REFERENCE_UNCERTAINTY = 0.05
 
+# Extra uncertainty added to an estimated player whose base was calibration-
+# shifted onto the EA-anchored scale. The shift corrects the estimator's
+# proven systematic compression, but (a) it is an inference, not sourced data,
+# and (b) unmatched players skew toward weaker domestic leagues, so any single
+# calibrated value carries more slack than a sourced one -- recorded honestly.
+CALIBRATION_UNCERTAINTY_PENALTY = 0.05
+
+_BASE_FACE_KEYS = ("pace", "shooting", "passing", "dribbling", "defending", "physical")
+
+
+def _apply_calibration_shift(base: dict, shift: int) -> dict:
+    """Add `shift` (a non-negative EA-scale correction) to every present base
+    attribute, keeping the player internally consistent: overall is recomputed
+    downstream from these shifted face stats, so the headline and the
+    sub-attributes move together rather than diverging."""
+    shifted = dict(base)
+    for key in _BASE_FACE_KEYS:
+        if shifted.get(key) is not None:
+            shifted[key] = clamp(shifted[key] + shift)
+    for key in ("gk_reflexes", "gk_handling"):
+        if shifted.get(key) is not None:
+            shifted[key] = clamp(shifted[key] + shift)
+    return shifted
+
 
 def _external_base_and_overall(ext: dict, position_group: str) -> tuple[dict, int]:
     overall = int(ext["overall"])
@@ -112,6 +136,7 @@ def compute_player_rating_v2(
     peer_market_values_eur: list[float],
     manual_override: dict | None = None,
     external_reference: dict | None = None,
+    calibration_shift: int | None = None,
 ) -> PlayerRatingV2:
     """`player` is one entry from players2026_official.json (camelCase
     keys). `peer_market_values_eur` should be every same-position-group
@@ -143,6 +168,13 @@ def compute_player_rating_v2(
         stage_a = stage_a_raw_attributes(inp)
         final = apply_pipeline(stage_a, market_score / 100.0, player.get("qualitativeAdjustments", {}), inp.age)
         base = {**final, "gk_reflexes": None, "gk_handling": None}
+        overall = compute_overall(base, player["primaryPosition"])
+
+    # Calibration only applies to estimated players (an external reference is
+    # already on the EA scale and must stay verbatim).
+    is_calibrated = (not is_external) and bool(calibration_shift)
+    if is_calibrated:
+        base = _apply_calibration_shift(base, int(calibration_shift))
         overall = compute_overall(base, player["primaryPosition"])
 
     stamina_max = player.get("staminaMax") or 85
@@ -200,6 +232,7 @@ def compute_player_rating_v2(
             injury_data_used=False,
             manual_override_used=manual_override is not None,
             external_reference_used=is_external,
+            calibration_applied=is_calibrated,
         ),
         low_confidence_attributes=list(LOW_CONFIDENCE_ATTRIBUTES),
     )
@@ -223,6 +256,8 @@ def compute_player_rating_v2(
             uncertainty += 0.10
         if not career_known:
             uncertainty += 0.15
+        if is_calibrated:
+            uncertainty += CALIBRATION_UNCERTAINTY_PENALTY
 
         if manual_override:
             uncertainty *= 0.5

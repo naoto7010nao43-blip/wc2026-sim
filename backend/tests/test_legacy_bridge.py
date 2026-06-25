@@ -89,3 +89,17 @@ def test_trust_metadata_surfaces_external_reference_flag_to_api():
     assert estimated["sourceBreakdown"]["externalReferenceUsed"] is False
     assert external["sourceBreakdown"]["externalReferenceUsed"] is True
     assert external["dataConfidence"] == "external"
+
+
+def test_trust_metadata_surfaces_calibration_flag_to_api():
+    # The API must be able to tell a plain estimate apart from one shifted onto
+    # the EA-anchored scale, so the site can label calibrated players honestly.
+    plain = rating_trust_metadata(
+        compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000])
+    )
+    calibrated = rating_trust_metadata(
+        compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000], calibration_shift=15)
+    )
+    assert plain["sourceBreakdown"]["calibrationApplied"] is False
+    assert calibrated["sourceBreakdown"]["calibrationApplied"] is True
+    assert calibrated["dataConfidence"] == "estimated"

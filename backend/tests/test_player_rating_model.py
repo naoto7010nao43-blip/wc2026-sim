@@ -169,3 +169,30 @@ def test_external_goalkeeper_uses_gk_reference_stats():
     assert rating.goalkeeper_reflexes == 90
     assert rating.goalkeeper_handling == 85
     assert rating.data_confidence == "external"
+
+
+def test_calibration_shift_raises_overall_and_marks_flag():
+    # An estimated player calibrated onto the EA scale: overall rises, face
+    # stats move with it (internal consistency), and the provenance is honestly
+    # recorded as estimated+calibrated with extra uncertainty.
+    base = compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000])
+    calibrated = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000], calibration_shift=15,
+    )
+    assert calibrated.overall > base.overall
+    assert calibrated.defense == min(99, base.defense + 15)
+    assert calibrated.data_confidence == "estimated"
+    assert calibrated.source_breakdown.calibration_applied is True
+    assert calibrated.uncertainty > base.uncertainty
+
+
+def test_calibration_does_not_touch_external_players():
+    # A sourced EA reference is already on the EA scale; a calibration_shift
+    # passed alongside it must be ignored so the EA value stays verbatim.
+    external = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000],
+        external_reference=_ea_reference(overall=90), calibration_shift=15,
+    )
+    assert external.overall == 90
+    assert external.source_breakdown.calibration_applied is False
+    assert external.source_breakdown.external_reference_used is True
