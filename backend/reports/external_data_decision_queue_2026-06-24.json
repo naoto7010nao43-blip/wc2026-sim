@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T15:37:26.872630+00:00",
+  "generatedAt": "2026-06-25T06:05:15.018587+00:00",
   "sourceReports": [
     {
       "name": "external_data_verification_candidates",
@@ -14,9 +14,9 @@
   "validInput": true,
   "candidateCount": 346,
   "bucketCounts": {
-    "current_field_review": 216,
+    "current_field_review": 217,
     "future_engine": 37,
-    "provisional_context": 75,
+    "provisional_context": 74,
     "warning_hold": 18
   },
   "categoryCounts": {
@@ -28,20 +28,20 @@
     "tacticalProfileCandidates": 20
   },
   "impactCounts": {
-    "high": 207,
+    "high": 208,
     "low": 58,
-    "medium": 81
+    "medium": 80
   },
   "useTierCounts": {
     "future_engine_candidate": 39,
-    "provisional_context": 74,
-    "ready_for_codex_review": 216,
+    "provisional_context": 73,
+    "ready_for_codex_review": 217,
     "review_question": 17
   },
-  "currentFieldReviewCount": 216,
+  "currentFieldReviewCount": 217,
   "warningHoldCount": 18,
   "futureEngineCount": 37,
-  "provisionalContextCount": 75,
+  "provisionalContextCount": 74,
   "teamCount": 48,
   "teams": [
     {
@@ -154,6 +154,20 @@
       "reviewScore": 66
     },
     {
+      "teamId": "USA",
+      "teamName": "United States",
+      "candidateCount": 9,
+      "bucketCounts": {
+        "current_field_review": 6,
+        "future_engine": 1,
+        "provisional_context": 2
+      },
+      "currentFieldReviewCount": 6,
+      "warningHoldCount": 0,
+      "futureEngineCount": 1,
+      "reviewScore": 65
+    },
+    {
       "teamId": "CIV",
       "teamName": "Ivory Coast",
       "candidateCount": 8,
@@ -179,7 +193,7 @@
       "currentFieldReviewCount": 6,
       "warningHoldCount": 0,
       "futureEngineCount": 1,
-      "reviewScore": 64
+      "reviewScore": 63
     },
     {
       "teamId": "ARG",
@@ -392,20 +406,6 @@
       "reviewScore": 55
     },
     {
-      "teamId": "USA",
-      "teamName": "United States",
-      "candidateCount": 9,
-      "bucketCounts": {
-        "current_field_review": 5,
-        "future_engine": 1,
-        "provisional_context": 3
-      },
-      "currentFieldReviewCount": 5,
-      "warningHoldCount": 0,
-      "futureEngineCount": 1,
-      "reviewScore": 55
-    },
-    {
       "teamId": "IRN",
       "teamName": "Iran",
       "candidateCount": 7,
@@ -490,20 +490,6 @@
       "reviewScore": 48
     },
     {
-      "teamId": "BEL",
-      "teamName": "Belgium",
-      "candidateCount": 6,
-      "bucketCounts": {
-        "current_field_review": 4,
-        "future_engine": 1,
-        "provisional_context": 1
-      },
-      "currentFieldReviewCount": 4,
-      "warningHoldCount": 0,
-      "futureEngineCount": 1,
-      "reviewScore": 47
-    },
-    {
       "teamId": "TUN",
       "teamName": "Tunisia",
       "candidateCount": 5,
@@ -515,6 +501,20 @@
       "warningHoldCount": 0,
       "futureEngineCount": 0,
       "reviewScore": 47
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "candidateCount": 6,
+      "bucketCounts": {
+        "current_field_review": 4,
+        "future_engine": 1,
+        "provisional_context": 1
+      },
+      "currentFieldReviewCount": 4,
+      "warningHoldCount": 0,
+      "futureEngineCount": 1,
+      "reviewScore": 46
     },
     {
       "teamId": "JOR",
@@ -1347,24 +1347,6 @@
       "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
     },
     {
-      "teamId": "BEL",
-      "teamName": "Belgium",
-      "category": "managerStatus",
-      "index": 0,
-      "bucket": "current_field_review",
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "qualityScore": 12,
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Rudi Garcia remains manager, appointed Jan 2025.",
-      "warnings": [],
-      "errors": [],
-      "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
-    },
-    {
       "teamId": "BIH",
       "teamName": "Bosnia and Herzegovina",
       "category": "nationalStrengthContext",
@@ -1612,24 +1594,6 @@
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
       "summary": "Marc Cucurella transferred from Chelsea to Real Madrid on 2026-06-15 (~€55M+€5M, 6-year deal); seed data may still show Chelsea.",
-      "warnings": [],
-      "errors": [],
-      "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
-    },
-    {
-      "teamId": "ESP",
-      "teamName": "Spain",
-      "category": "managerStatus",
-      "index": 0,
-      "bucket": "current_field_review",
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "qualityScore": 12,
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25.",
       "warnings": [],
       "errors": [],
       "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
@@ -2535,6 +2499,24 @@
       "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
     },
     {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "managerStatus",
+      "index": 0,
+      "bucket": "current_field_review",
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "qualityScore": 11,
+      "sourceTier": "A",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Rudi Garcia remains manager, appointed Jan 2025.",
+      "warnings": [],
+      "errors": [],
+      "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
+    },
+    {
       "teamId": "BIH",
       "teamName": "Bosnia and Herzegovina",
       "category": "formationCandidates",
@@ -2926,6 +2908,24 @@
       "mapsTo": "availability_status",
       "candidateCategory": "roster/availability candidate",
       "summary": "Lamine Yamal suffered a hamstring injury (2026-04-22), missed Barcelona's final 6 La Liga games, and was managed with limited minutes (15min sub appearance) in Spain's World Cup opener.",
+      "warnings": [],
+      "errors": [],
+      "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "category": "managerStatus",
+      "index": 0,
+      "bucket": "current_field_review",
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "qualityScore": 11,
+      "sourceTier": "A",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Luis de la Fuente remains manager; announced the 26-man World Cup squad on 2026-05-25.",
       "warnings": [],
       "errors": [],
       "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
@@ -4391,6 +4391,24 @@
     {
       "teamId": "USA",
       "teamName": "United States",
+      "category": "formationCandidates",
+      "index": 0,
+      "bucket": "current_field_review",
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "qualityScore": 10,
+      "sourceTier": "A",
+      "confidence": "medium",
+      "mapsTo": "default_formation",
+      "candidateCategory": "tactical-profile candidate",
+      "summary": "The USA's actual base formation in the World Cup opener vs Paraguay was 4-2-3-1, not the seed's 3-4-2-1; Pochettino has used multiple back-line structures but 4-2-3-1 is the more consistent recent baseline.",
+      "warnings": [],
+      "errors": [],
+      "recommendedHandlingJa": "既存フィールドに対応します。出典を再確認したうえで、別specでseed/能力値変更候補にできます。"
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
       "category": "keyPlayerStatusCandidates",
       "index": 2,
       "bucket": "current_field_review",
@@ -4987,6 +5005,24 @@
       "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
     },
     {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "bucket": "future_engine",
+      "impactBand": "low",
+      "useTier": "future_engine_candidate",
+      "qualityScore": 5,
+      "sourceTier": "S",
+      "confidence": "medium",
+      "mapsTo": "substitution_tendency",
+      "candidateCategory": "future-engine candidate",
+      "summary": "Dalic makes his first substitution around halftime-to-60th-minute when behind (58' vs England) and tends toward like-for-like swaps rather than shape changes; Modric (age 40) is substituted relatively early (58' vs England) as an explicit fatigue-management me",
+      "warnings": [],
+      "errors": [],
+      "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
+    },
+    {
       "teamId": "JOR",
       "teamName": "Jordan",
       "category": "substitutionTendencyCandidates",
@@ -5126,24 +5162,6 @@
       "mapsTo": "substitution_tendency",
       "candidateCategory": "future-engine candidate",
       "summary": "Against Germany, Fae made 5 substitutions clustered around the 75th-85th minute, mixing like-for-like swaps with a type change (replacing the more defensive Singo with the more attacking Doue); reporting described this round of changes as a tactical success.",
-      "warnings": [],
-      "errors": [],
-      "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
-    },
-    {
-      "teamId": "CRO",
-      "teamName": "Croatia",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "bucket": "future_engine",
-      "impactBand": "low",
-      "useTier": "future_engine_candidate",
-      "qualityScore": 4,
-      "sourceTier": "A",
-      "confidence": "medium",
-      "mapsTo": "substitution_tendency",
-      "candidateCategory": "future-engine candidate",
-      "summary": "Dalic makes his first substitution around halftime-to-60th-minute when behind (58' vs England) and tends toward like-for-like swaps rather than shape changes; Modric (age 40) is substituted relatively early (58' vs England) as an explicit fatigue-management me",
       "warnings": [],
       "errors": [],
       "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
@@ -6568,24 +6586,6 @@
       "mapsTo": "default_formation",
       "candidateCategory": "tactical-profile candidate",
       "summary": "4-2-3-1 is confirmed as Montella's base shape (matches seed), shifting to 4-1-3-2 or 3-4-2-1 in defensive phases.",
-      "warnings": [],
-      "errors": [],
-      "recommendedHandlingJa": "判断材料として残しますが、単独ではseed/能力値変更に使いません。"
-    },
-    {
-      "teamId": "USA",
-      "teamName": "United States",
-      "category": "formationCandidates",
-      "index": 0,
-      "bucket": "provisional_context",
-      "impactBand": "medium",
-      "useTier": "provisional_context",
-      "qualityScore": 8,
-      "sourceTier": "B",
-      "confidence": "medium",
-      "mapsTo": "default_formation",
-      "candidateCategory": "tactical-profile candidate",
-      "summary": "The USA's actual base formation in the World Cup opener vs Paraguay was 4-2-3-1, not the seed's 3-4-2-1; Pochettino has used multiple back-line structures but 4-2-3-1 is the more consistent recent baseline.",
       "warnings": [],
       "errors": [],
       "recommendedHandlingJa": "判断材料として残しますが、単独ではseed/能力値変更に使いません。"

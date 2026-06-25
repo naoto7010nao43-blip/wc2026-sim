@@ -13,14 +13,14 @@
     "tacticalProfileCandidates": 20
   },
   "impactCounts": {
-    "high": 207,
+    "high": 208,
     "low": 58,
-    "medium": 81
+    "medium": 80
   },
   "useTierCounts": {
     "future_engine_candidate": 39,
-    "provisional_context": 74,
-    "ready_for_codex_review": 216,
+    "provisional_context": 73,
+    "ready_for_codex_review": 217,
     "review_question": 17
   },
   "existingFieldCandidateCount": 307,
@@ -959,8 +959,8 @@
       },
       "useTierCounts": {
         "future_engine_candidate": 1,
-        "provisional_context": 3,
-        "ready_for_codex_review": 5
+        "provisional_context": 2,
+        "ready_for_codex_review": 6
       },
       "existingFieldCandidateCount": 8,
       "futureEngineCandidateCount": 1,
@@ -1011,14 +1011,14 @@
       "futureEngineCandidateCount": 1
     },
     {
-      "teamId": "ESP",
-      "priorityScore": 80,
-      "highImpactCandidateCount": 5,
-      "mediumImpactCandidateCount": 3,
+      "teamId": "USA",
+      "priorityScore": 81,
+      "highImpactCandidateCount": 6,
+      "mediumImpactCandidateCount": 2,
       "futureEngineCandidateCount": 1
     },
     {
-      "teamId": "USA",
+      "teamId": "ESP",
       "priorityScore": 79,
       "highImpactCandidateCount": 5,
       "mediumImpactCandidateCount": 3,
@@ -1149,18 +1149,6 @@
     },
     {
       "teamId": "CPV",
-      "category": "nationalStrengthContext",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "team_strength_rating",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Cape Verde qualified for its first-ever World Cup (beating Eswatini 3-0 on 2025-10-13) and drew 0-0 with Spain then 2-2 with Uruguay in the group stage."
-    },
-    {
-      "teamId": "CPV",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1172,7 +1160,7 @@
       "summary": "Ryan Mendes (captain, Igdir FK in Turkey) is Cape Verde's all-time leading scorer and appearance-holder, in good current club form (a hat-trick in April 2026); seed club should ref"
     },
     {
-      "teamId": "CZE",
+      "teamId": "CPV",
       "category": "nationalStrengthContext",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1181,7 +1169,7 @@
       "confidence": "high",
       "mapsTo": "team_strength_rating",
       "candidateCategory": "safe factual candidate",
-      "summary": "Czechia reached the World Cup via the playoffs (penalty-shootout wins over Ireland and Denmark), then lost 2-1 to South Korea and drew 1-1 with South Africa in the group stage."
+      "summary": "Cape Verde qualified for its first-ever World Cup (beating Eswatini 3-0 on 2025-10-13) and drew 0-0 with Spain then 2-2 with Uruguay in the group stage."
     },
     {
       "teamId": "CZE",
@@ -1194,6 +1182,18 @@
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
       "summary": "Vladimir Coufal moved from West Ham to TSG Hoffenheim in summer 2025 and is the team's leading creator on the right flank (8 assists in 2025-26); seed club should reflect Hoffenhei"
+    },
+    {
+      "teamId": "CZE",
+      "category": "nationalStrengthContext",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "team_strength_rating",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Czechia reached the World Cup via the playoffs (penalty-shootout wins over Ireland and Denmark), then lost 2-1 to South Korea and drew 1-1 with South Africa in the group stage."
     },
     {
       "teamId": "EGY",
@@ -1209,18 +1209,6 @@
     },
     {
       "teamId": "EGY",
-      "category": "nationalStrengthContext",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "team_strength_rating",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Egypt qualified directly, topping CAF Group A (8W-2D, +18 goal difference), and is in World Cup Group G with Belgium, Iran, and New Zealand; drew Belgium 1-1 then beat New Zealand "
-    },
-    {
-      "teamId": "EGY",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1230,6 +1218,18 @@
       "mapsTo": "seed_roster",
       "candidateCategory": "roster/availability candidate",
       "summary": "Mohamed Elneny (Al Jazira, UAE) was not selected for either Egypt's AFCON 2025 28-man squad or the World Cup 2026 final 26-man squad; if the seed models him as an available CDM sta"
+    },
+    {
+      "teamId": "EGY",
+      "category": "nationalStrengthContext",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "team_strength_rating",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Egypt qualified directly, topping CAF Group A (8W-2D, +18 goal difference), and is in World Cup Group G with Belgium, Iran, and New Zealand; drew Belgium 1-1 then beat New Zealand "
     },
     {
       "teamId": "GHA",
@@ -1320,8 +1320,8 @@
   "warnings": [
     "teams[POR].keyPlayerStatusCandidates[2] is Tier B but high confidence; verify before using for data changes",
     "teams[MAR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
-    "teams[URU].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[URU].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[AUT].tacticalProfileCandidates[0] uses Tier C evidence; keep as review question only",
     "teams[NOR].nationalStrengthContext[0] uses Tier C evidence; keep as review question only",
     "teams[NOR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
