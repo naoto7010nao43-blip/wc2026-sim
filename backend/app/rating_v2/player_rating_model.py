@@ -45,6 +45,43 @@ GK_OUTFIELD_PLACEHOLDER_BASE = {
     "pace": 50, "shooting": 15, "passing": 55, "dribbling": 35, "defending": 40, "physical": 60,
 }
 
+# When an EA Sports FC 26 (or comparably sourced) reference rating is supplied
+# for a player, we use its published overall + six face stats verbatim as the
+# authoritative base instead of the from-scratch per-90 estimation, which was
+# found to compress the top of the scale badly (e.g. Haaland estimated 76 vs
+# EA's 90). The six EA face stats map 1:1 onto this engine's six legacy base
+# attributes; every richer v2 sub-attribute is still derived from them by the
+# SAME formulas the estimated path uses, so an external player stays internally
+# consistent and the micro-simulator/Poisson model need no special-casing.
+EXTERNAL_REFERENCE_UNCERTAINTY = 0.05
+
+
+def _external_base_and_overall(ext: dict, position_group: str) -> tuple[dict, int]:
+    overall = int(ext["overall"])
+    if position_group == "GK":
+        # EA goalkeeper cards expose DIV/HAN/KIC/REF/SPD/POS rather than the
+        # outfield six. Only reflexes/handling drive this engine's GK model;
+        # the outfield placeholder base is kept (optionally letting EA's GK
+        # speed inform `pace`) so derived outfield-flavoured attributes stay
+        # sane for a keeper.
+        base = dict(GK_OUTFIELD_PLACEHOLDER_BASE)
+        base["gk_reflexes"] = int(ext.get("gkReflexes", overall))
+        base["gk_handling"] = int(ext.get("gkHandling", overall))
+        if ext.get("gkSpeed") is not None:
+            base["pace"] = int(ext["gkSpeed"])
+        return base, overall
+    base = {
+        "pace": int(ext["pace"]),
+        "shooting": int(ext["shooting"]),
+        "passing": int(ext["passing"]),
+        "dribbling": int(ext["dribbling"]),
+        "defending": int(ext["defending"]),
+        "physical": int(ext["physical"]),
+        "gk_reflexes": None,
+        "gk_handling": None,
+    }
+    return base, overall
+
 
 def _stage_a_inputs(player: dict) -> tuple[StageAInputs, bool]:
     stats = player.get("careerStats") or {}
@@ -74,12 +111,19 @@ def compute_player_rating_v2(
     player: dict,
     peer_market_values_eur: list[float],
     manual_override: dict | None = None,
+    external_reference: dict | None = None,
 ) -> PlayerRatingV2:
     """`player` is one entry from players2026_official.json (camelCase
     keys). `peer_market_values_eur` should be every same-position-group
     teammate-or-opponent's marketValueEur across the full player pool, for
     percentile normalization (mirrors the existing Stage B percentile
-    approach)."""
+    approach).
+
+    `external_reference`, when given, is a sourced EA-FC-26-style rating
+    (overall + six face stats, see _external_base_and_overall); it replaces
+    the estimated base/overall for this player while every derived
+    sub-attribute is still produced by the formulas below, so a sourced
+    player remains internally consistent with the rest of the pool."""
     position_group = POSITION_GROUPS.get(player["primaryPosition"], "MID")
     inp, career_known = _stage_a_inputs(player)
 
@@ -87,16 +131,20 @@ def compute_player_rating_v2(
     market_score, market_known = market_value_score(market_eur, peer_market_values_eur)
     age_score, age_known = age_curve_score(player.get("age"))
 
-    if position_group == "GK":
+    is_external = external_reference is not None
+    if is_external:
+        base, overall = _external_base_and_overall(external_reference, position_group)
+    elif position_group == "GK":
         stage_a = stage_a_gk_attributes(inp)
         gk_final = apply_pipeline(stage_a, market_score / 100.0, player.get("qualitativeAdjustments", {}), inp.age)
         base = {**GK_OUTFIELD_PLACEHOLDER_BASE, **gk_final}
+        overall = compute_overall(base, player["primaryPosition"])
     else:
         stage_a = stage_a_raw_attributes(inp)
         final = apply_pipeline(stage_a, market_score / 100.0, player.get("qualitativeAdjustments", {}), inp.age)
         base = {**final, "gk_reflexes": None, "gk_handling": None}
+        overall = compute_overall(base, player["primaryPosition"])
 
-    overall = compute_overall(base, player["primaryPosition"])
     stamina_max = player.get("staminaMax") or 85
 
     pace, shooting, passing, dribbling, defending, physical = (
@@ -151,25 +199,38 @@ def compute_player_rating_v2(
             national_team_minutes_used=False,
             injury_data_used=False,
             manual_override_used=manual_override is not None,
+            external_reference_used=is_external,
         ),
         low_confidence_attributes=list(LOW_CONFIDENCE_ATTRIBUTES),
     )
 
-    uncertainty = BASELINE_UNCERTAINTY_NO_NATIONAL_TEAM_DATA
-    if not market_known:
-        uncertainty += 0.15
-    if not age_known:
-        uncertainty += 0.10
-    if not career_known:
-        uncertainty += 0.15
-
-    if manual_override:
-        uncertainty *= 0.5
-        data_confidence = "mixed"
-    elif not market_known and not career_known:
-        data_confidence = "missing"
+    if is_external:
+        # A sourced EA-FC-26 reference replaces the estimated base/overall,
+        # so the headline values no longer depend on the missing-data
+        # penalties below; the only residual uncertainty is the small
+        # source/observation slack. Sub-attributes are still derived, but
+        # they hang off authoritative face stats, so this stays low.
+        uncertainty = EXTERNAL_REFERENCE_UNCERTAINTY
+        data_confidence = "external"
+        if manual_override:
+            uncertainty *= 0.5
+            data_confidence = "mixed"
     else:
-        data_confidence = "estimated"
+        uncertainty = BASELINE_UNCERTAINTY_NO_NATIONAL_TEAM_DATA
+        if not market_known:
+            uncertainty += 0.15
+        if not age_known:
+            uncertainty += 0.10
+        if not career_known:
+            uncertainty += 0.15
+
+        if manual_override:
+            uncertainty *= 0.5
+            data_confidence = "mixed"
+        elif not market_known and not career_known:
+            data_confidence = "missing"
+        else:
+            data_confidence = "estimated"
 
     uncertainty = max(0.0, min(1.0, uncertainty))
 

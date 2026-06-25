@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-06-25T16:08:49.065249+00:00",
+  "totalPlayers": 669,
+  "biggestRisers": [
+    {
+      "playerId": "SCO_MCTOMINAY",
+      "delta": 28,
+      "from": 57,
+      "to": 85
+    },
+    {
+      "playerId": "ESP_RODRI",
+      "delta": 27,
+      "from": 63,
+      "to": 90
+    },
+    {
+      "playerId": "ENG_BELLINGHAM",
+      "delta": 25,
+      "from": 65,
+      "to": 90
+    },
+    {
+      "playerId": "ECU_CAICEDO_M",
+      "delta": 25,
+      "from": 62,
+      "to": 87
+    },
+    {
+      "playerId": "EGY_SALAH",
+      "delta": 25,
+      "from": 66,
+      "to": 91
+    },
+    {
+      "playerId": "NOR_ODEGAARD",
+      "delta": 20,
+      "from": 67,
+      "to": 87
+    },
+    {
+      "playerId": "ENG_KANE",
+      "delta": 19,
+      "from": 70,
+      "to": 89
+    },
+    {
+      "playerId": "ESP_LAMINEYAMAL",
+      "delta": 14,
+      "from": 75,
+      "to": 89
+    },
+    {
+      "playerId": "NOR_HAALAND",
+      "delta": 14,
+      "from": 76,
+      "to": 90
+    },
+    {
+      "playerId": "BRA_VINICIUSJR",
+      "delta": 12,
+      "from": 77,
+      "to": 89
+    }
+  ],
+  "biggestFallers": [],
+  "changedByManualOverride": [],
+  "externallySourced": [
+    "BRA_VINICIUSJR",
+    "FRA_MBAPPE",
+    "ENG_BELLINGHAM",
+    "ENG_KANE",
+    "SCO_MCTOMINAY",
+    "ECU_CAICEDO_M",
+    "EGY_SALAH",
+    "ESP_RODRI",
+    "ESP_LAMINEYAMAL",
+    "NOR_ODEGAARD",
+    "NOR_HAALAND"
+  ],
+  "lowConfidencePlayers": [],
+  "missingCriticalData": []
+}

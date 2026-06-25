@@ -33,6 +33,7 @@ class RatingSourceBreakdown:
     national_team_minutes_used: bool = False
     injury_data_used: bool = False
     manual_override_used: bool = False
+    external_reference_used: bool = False
 
 
 @dataclass(frozen=True)
@@ -113,6 +114,7 @@ class PlayerRatingV2:
                 national_team_minutes_used=sb.get("nationalTeamMinutesUsed", False),
                 injury_data_used=sb.get("injuryDataUsed", False),
                 manual_override_used=sb.get("manualOverrideUsed", False),
+                external_reference_used=sb.get("externalReferenceUsed", False),
             ),
             low_confidence_attributes=d.get("lowConfidenceAttributes", []),
             last_updated=d.get("lastUpdated", utcnow_iso()),
@@ -163,6 +165,7 @@ class PlayerRatingV2:
                 "nationalTeamMinutesUsed": self.source_breakdown.national_team_minutes_used,
                 "injuryDataUsed": self.source_breakdown.injury_data_used,
                 "manualOverrideUsed": self.source_breakdown.manual_override_used,
+                "externalReferenceUsed": self.source_breakdown.external_reference_used,
             },
             "lowConfidenceAttributes": self.low_confidence_attributes,
             "lastUpdated": self.last_updated,

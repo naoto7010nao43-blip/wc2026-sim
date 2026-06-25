@@ -52,15 +52,25 @@ def _overrides_by_player_id(overrides: list[dict]) -> dict[str, dict]:
     return {o["playerId"]: o for o in overrides}
 
 
+def _external_refs_by_player_id(external: list[dict]) -> dict[str, dict]:
+    """Keyed by playerId. Each entry is a sourced EA-FC-26-style rating
+    (overall + six face stats, or GK variants) that compute_player_rating_v2
+    injects in place of the from-scratch estimation for that one player."""
+    return {e["playerId"]: e for e in external}
+
+
 def main():
     players = _load("players2026_official.json")
     teams = _load("teams2026_official.json")
     managers = _load("managers2026_official.json")
     overrides_path = SEED_DIR / "manualPlayerOverrides2026.json"
     overrides = json.loads(overrides_path.read_text(encoding="utf-8")) if overrides_path.exists() else []
+    external_path = SEED_DIR / "externalPlayerRatings2026.json"
+    external = json.loads(external_path.read_text(encoding="utf-8")) if external_path.exists() else []
 
     peer_values_by_group = _peer_market_values(players)
     overrides_by_id = _overrides_by_player_id(overrides)
+    external_by_id = _external_refs_by_player_id(external)
 
     previous_ratings_by_id: dict[str, dict] = {}
     ratings_path = SEED_DIR / "playerRatings2026_estimated.json"
@@ -70,7 +80,12 @@ def main():
     ratings_by_id: dict[str, object] = {}
     for p in players:
         group = POSITION_GROUPS.get(p["primaryPosition"], "MID")
-        rating = compute_player_rating_v2(p, peer_values_by_group.get(group, []), overrides_by_id.get(p["playerId"]))
+        rating = compute_player_rating_v2(
+            p,
+            peer_values_by_group.get(group, []),
+            overrides_by_id.get(p["playerId"]),
+            external_by_id.get(p["playerId"]),
+        )
         ratings_by_id[p["playerId"]] = rating
 
     starting_prob_by_id = compute_starting_probabilities(players, ratings_by_id)
@@ -115,6 +130,9 @@ def main():
     changed_by_manual_override = [
         r["playerId"] for r in new_ratings if r["sourceBreakdown"]["manualOverrideUsed"]
     ]
+    externally_sourced = [
+        r["playerId"] for r in new_ratings if r["sourceBreakdown"].get("externalReferenceUsed")
+    ]
 
     report = {
         "generatedAt": _now_iso(),
@@ -122,6 +140,7 @@ def main():
         "biggestRisers": biggest_risers[:10],
         "biggestFallers": biggest_fallers[:10],
         "changedByManualOverride": changed_by_manual_override,
+        "externallySourced": externally_sourced,
         "lowConfidencePlayers": low_confidence_players,
         "missingCriticalData": missing_critical_data,
     }
@@ -135,6 +154,7 @@ def main():
     metadata_path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"Rebuilt {len(new_ratings)} player ratings, {len(new_manager_ratings)} manager ratings.")
+    print(f"Externally-sourced (EA FC 26) players: {len(externally_sourced)}")
     print(f"Low-confidence players (uncertainty >= {LOW_CONFIDENCE_UNCERTAINTY_THRESHOLD}): {len(low_confidence_players)}")
     print(f"Missing-critical-data players: {len(missing_critical_data)}")
     print(f"Diff report written to {report_path}")

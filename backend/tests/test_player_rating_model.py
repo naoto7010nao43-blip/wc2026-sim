@@ -96,3 +96,76 @@ def test_low_confidence_attributes_are_flagged_not_hidden():
     # but the stats-backed attributes must NOT be in that list
     assert "passing" not in rating.low_confidence_attributes
     assert "defense" not in rating.low_confidence_attributes
+
+
+def _ea_reference(**overrides) -> dict:
+    # Shape of one entry in externalPlayerRatings2026.json (EA FC 26 face stats).
+    base = {
+        "playerId": "TST_PLAYER", "source": "EA SPORTS FC 26",
+        "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/x/1",
+        "overall": 90, "pace": 86, "shooting": 91, "passing": 70,
+        "dribbling": 80, "defending": 45, "physical": 88,
+    }
+    base.update(overrides)
+    return base
+
+
+def test_external_reference_overrides_estimated_overall_verbatim():
+    # The whole point: a sourced EA overall replaces the compressed estimate,
+    # rather than being blended/diluted by the per-90 pipeline.
+    estimated = compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000])
+    external = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000], external_reference=_ea_reference(overall=90),
+    )
+    assert estimated.overall < 90  # the estimator compresses this player
+    assert external.overall == 90  # the EA value is taken verbatim
+    assert external.data_confidence == "external"
+    assert external.source_breakdown.external_reference_used is True
+
+
+def test_external_reference_face_stats_drive_derived_attributes():
+    # The six EA face stats map onto the engine's base; derived sub-attributes
+    # must reflect them (e.g. defense mirrors EA defending), so a sourced
+    # player stays internally consistent rather than carrying stale estimates.
+    rating = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000],
+        external_reference=_ea_reference(defending=45, physical=88, passing=70),
+    )
+    assert rating.defense == 45
+    assert rating.physical == 88
+    assert rating.passing == 70
+
+
+def test_external_reference_has_low_uncertainty():
+    estimated = compute_player_rating_v2(_player(), peer_market_values_eur=[20_000_000])
+    external = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000], external_reference=_ea_reference(),
+    )
+    assert external.uncertainty < estimated.uncertainty
+    assert external.uncertainty > 0.0  # still a small source/observation slack
+
+
+def test_external_reference_plus_manual_override_is_mixed():
+    override = {"playerId": "TST_PLAYER", "overrides": {"finishing": 99}, "reason": "test"}
+    rating = compute_player_rating_v2(
+        _player(), peer_market_values_eur=[20_000_000],
+        manual_override=override, external_reference=_ea_reference(),
+    )
+    assert rating.finishing == 99
+    assert rating.data_confidence == "mixed"
+    assert rating.source_breakdown.external_reference_used is True
+    assert rating.source_breakdown.manual_override_used is True
+
+
+def test_external_goalkeeper_uses_gk_reference_stats():
+    rating = compute_player_rating_v2(
+        _player(primaryPosition="GK"), peer_market_values_eur=[20_000_000],
+        external_reference={
+            "playerId": "TST_GK", "source": "EA SPORTS FC 26", "sourceUrl": "https://www.ea.com/x",
+            "overall": 89, "gkReflexes": 90, "gkHandling": 85, "gkSpeed": 60,
+        },
+    )
+    assert rating.overall == 89
+    assert rating.goalkeeper_reflexes == 90
+    assert rating.goalkeeper_handling == 85
+    assert rating.data_confidence == "external"
