@@ -1131,6 +1131,23 @@
     "physical": 66
   },
   {
+    "playerId": "BIH_ALAJBEGOVIC",
+    "name": "Kerim Alajbegovic",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/k-alajbegovic/75533",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "75533",
+    "position": "CAM",
+    "observedDate": "2026-06-26",
+    "overall": 63,
+    "pace": 70,
+    "shooting": 64,
+    "passing": 60,
+    "dribbling": 66,
+    "defending": 36,
+    "physical": 53
+  },
+  {
     "playerId": "BIH_BAJRAKTAREVIC",
     "name": "Esmir Bajraktarevic",
     "source": "EA SPORTS FC 26",
@@ -1146,6 +1163,23 @@
     "dribbling": 76,
     "defending": 40,
     "physical": 59
+  },
+  {
+    "playerId": "BIH_BICAKCIC",
+    "name": "Amir Hadziahmetovic",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-hadziahmetovic/233053",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "233053",
+    "position": "CDM",
+    "observedDate": "2026-06-26",
+    "overall": 73,
+    "pace": 65,
+    "shooting": 60,
+    "passing": 73,
+    "dribbling": 72,
+    "defending": 70,
+    "physical": 73
   },
   {
     "playerId": "BIH_DEMIROVIC",
@@ -1609,6 +1643,23 @@
     "dribbling": 71,
     "defending": 28,
     "physical": 78
+  },
+  {
+    "playerId": "CAN_LARYEA",
+    "name": "Richie Laryea",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/r-laryea/232081",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=0.5 ageDelta=2 surnameConfirmed)",
+    "eaPlayerId": "232081",
+    "position": "RB",
+    "observedDate": "2026-06-26",
+    "overall": 72,
+    "pace": 81,
+    "shooting": 61,
+    "passing": 65,
+    "dribbling": 74,
+    "defending": 64,
+    "physical": 71
   },
   {
     "playerId": "CAN_OLUWASEYI",
@@ -2109,6 +2160,23 @@
     "physical": 79
   },
   {
+    "playerId": "COL_LSUAREZ",
+    "name": "Luis Suarez",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/l-suarez/245158",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=3 surnameConfirmed)",
+    "eaPlayerId": "245158",
+    "position": "ST",
+    "observedDate": "2026-06-26",
+    "overall": 77,
+    "pace": 83,
+    "shooting": 77,
+    "passing": 66,
+    "dribbling": 75,
+    "defending": 38,
+    "physical": 78
+  },
+  {
     "playerId": "COL_MOJICA",
     "name": "Johan Mojica",
     "source": "EA SPORTS FC 26",
@@ -2508,6 +2576,37 @@
     "physical": 76
   },
   {
+    "playerId": "CUW_BODAK",
+    "name": "Tyrick Bodak",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/t-bodak/79028",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "79028",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 60,
+    "gkReflexes": 64,
+    "gkHandling": 61,
+    "gkSpeed": 24
+  },
+  {
+    "playerId": "CUW_SAMBO",
+    "name": "Shurandy Sambo",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/s-sambo/260099",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "260099",
+    "position": "LB",
+    "observedDate": "2026-06-26",
+    "overall": 68,
+    "pace": 78,
+    "shooting": 45,
+    "passing": 59,
+    "dribbling": 67,
+    "defending": 63,
+    "physical": 72
+  },
+  {
     "playerId": "CZE_CHYTIL",
     "name": "Mojmir Chytil",
     "source": "EA SPORTS FC 26",
@@ -2887,6 +2986,23 @@
     "dribbling": 86,
     "defending": 34,
     "physical": 71
+  },
+  {
+    "playerId": "EGY_RABIA",
+    "name": "Ramy Rabia",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/r-rabia/220380",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=0.5 ageDelta=2 surnameConfirmed)",
+    "eaPlayerId": "220380",
+    "position": "CB",
+    "observedDate": "2026-06-26",
+    "overall": 67,
+    "pace": 60,
+    "shooting": 49,
+    "passing": 55,
+    "dribbling": 55,
+    "defending": 67,
+    "physical": 72
   },
   {
     "playerId": "EGY_SALAH",
@@ -4074,6 +4190,40 @@
     "physical": 84
   },
   {
+    "playerId": "HAI_ADE",
+    "name": "Ricardo Ade",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/r-ade/265610",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=7 surnameConfirmed)",
+    "eaPlayerId": "265610",
+    "position": "CB",
+    "observedDate": "2026-06-26",
+    "overall": 72,
+    "pace": 71,
+    "shooting": 36,
+    "passing": 58,
+    "dribbling": 57,
+    "defending": 71,
+    "physical": 77
+  },
+  {
+    "playerId": "HAI_ARCUS",
+    "name": "Carlens Arcus",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/c-arcus/228591",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=6 surnameConfirmed)",
+    "eaPlayerId": "228591",
+    "position": "RB",
+    "observedDate": "2026-06-26",
+    "overall": 71,
+    "pace": 75,
+    "shooting": 44,
+    "passing": 66,
+    "dribbling": 66,
+    "defending": 66,
+    "physical": 75
+  },
+  {
     "playerId": "HAI_BELLEGARDE",
     "name": "Jean-Ricner Bellegarde",
     "source": "EA SPORTS FC 26",
@@ -4222,6 +4372,23 @@
     "dribbling": 73,
     "defending": 63,
     "physical": 62
+  },
+  {
+    "playerId": "IRQ_JASIM_A",
+    "name": "Ali Jasim",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-jasim/74705",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=7 surnameConfirmed)",
+    "eaPlayerId": "74705",
+    "position": "LW",
+    "observedDate": "2026-06-26",
+    "overall": 62,
+    "pace": 67,
+    "shooting": 62,
+    "passing": 57,
+    "dribbling": 63,
+    "defending": 22,
+    "physical": 59
   },
   {
     "playerId": "JOR_TAMARI",
@@ -5677,6 +5844,40 @@
     "physical": 74
   },
   {
+    "playerId": "NZL_DEVRIES",
+    "name": "Francis De Vries",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/f-de-vries/237268",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=6 surnameConfirmed)",
+    "eaPlayerId": "237268",
+    "position": "RB",
+    "observedDate": "2026-06-26",
+    "overall": 69,
+    "pace": 64,
+    "shooting": 53,
+    "passing": 67,
+    "dribbling": 62,
+    "defending": 63,
+    "physical": 83
+  },
+  {
+    "playerId": "NZL_JUST",
+    "name": "Eli Just",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/e-just/254136",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=0.5 ageDelta=2 surnameConfirmed)",
+    "eaPlayerId": "254136",
+    "position": "ST",
+    "observedDate": "2026-06-26",
+    "overall": 66,
+    "pace": 81,
+    "shooting": 66,
+    "passing": 58,
+    "dribbling": 68,
+    "defending": 38,
+    "physical": 53
+  },
+  {
     "playerId": "NZL_MARTIN",
     "name": "Oliver Sail",
     "source": "EA SPORTS FC 26",
@@ -5689,6 +5890,20 @@
     "gkReflexes": 63,
     "gkHandling": 62,
     "gkSpeed": 49
+  },
+  {
+    "playerId": "NZL_MOSS",
+    "name": "Max Crocombe",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/m-crocombe/206566",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=0.5 ageDelta=0 surnameConfirmed)",
+    "eaPlayerId": "206566",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 65,
+    "gkReflexes": 65,
+    "gkHandling": 65,
+    "gkSpeed": 47
   },
   {
     "playerId": "NZL_PAYNE",
@@ -5723,6 +5938,23 @@
     "dribbling": 53,
     "defending": 65,
     "physical": 79
+  },
+  {
+    "playerId": "NZL_RUFER",
+    "name": "Alex Rufer",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-rufer/219392",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "219392",
+    "position": "CM",
+    "observedDate": "2026-06-26",
+    "overall": 67,
+    "pace": 64,
+    "shooting": 59,
+    "passing": 65,
+    "dribbling": 65,
+    "defending": 63,
+    "physical": 78
   },
   {
     "playerId": "NZL_STAMENIC",
@@ -5793,6 +6025,40 @@
     "physical": 79
   },
   {
+    "playerId": "PAN_CORDOBA_J",
+    "name": "Jose Cordoba",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/j-cordoba/72708",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=7 surnameConfirmed)",
+    "eaPlayerId": "72708",
+    "position": "CB",
+    "observedDate": "2026-06-26",
+    "overall": 68,
+    "pace": 72,
+    "shooting": 31,
+    "passing": 53,
+    "dribbling": 61,
+    "defending": 65,
+    "physical": 73
+  },
+  {
+    "playerId": "PAN_FAJARDO",
+    "name": "Jose Fajardo",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/j-fajardo/243545",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=6 surnameConfirmed)",
+    "eaPlayerId": "243545",
+    "position": "RW",
+    "observedDate": "2026-06-26",
+    "overall": 68,
+    "pace": 69,
+    "shooting": 68,
+    "passing": 58,
+    "dribbling": 68,
+    "defending": 33,
+    "physical": 68
+  },
+  {
     "playerId": "PAN_GODOY",
     "name": "Anibal Godoy",
     "source": "EA SPORTS FC 26",
@@ -5808,6 +6074,20 @@
     "dribbling": 67,
     "defending": 64,
     "physical": 75
+  },
+  {
+    "playerId": "PAN_MEJIA",
+    "name": "Luis Mejia",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/l-mejia/202089",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=4 surnameConfirmed)",
+    "eaPlayerId": "202089",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 72,
+    "gkReflexes": 75,
+    "gkHandling": 67,
+    "gkSpeed": 52
   },
   {
     "playerId": "PAN_MOSQUERA",
@@ -5875,6 +6155,23 @@
     "physical": 51
   },
   {
+    "playerId": "PAR_ESCOBAR",
+    "name": "Gustavo Velazquez",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/g-velazquez/246696",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=7 surnameConfirmed)",
+    "eaPlayerId": "246696",
+    "position": "RB",
+    "observedDate": "2026-06-26",
+    "overall": 73,
+    "pace": 74,
+    "shooting": 31,
+    "passing": 47,
+    "dribbling": 55,
+    "defending": 72,
+    "physical": 78
+  },
+  {
     "playerId": "PAR_GATITO",
     "name": "Carlos Coronel",
     "source": "EA SPORTS FC 26",
@@ -5887,6 +6184,23 @@
     "gkReflexes": 73,
     "gkHandling": 70,
     "gkSpeed": 39
+  },
+  {
+    "playerId": "PAR_SANABRIA",
+    "name": "Antonio Sanabria",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-sanabria/219932",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=0 surnameConfirmed)",
+    "eaPlayerId": "219932",
+    "position": "ST",
+    "observedDate": "2026-06-26",
+    "overall": 76,
+    "pace": 75,
+    "shooting": 75,
+    "passing": 68,
+    "dribbling": 79,
+    "defending": 32,
+    "physical": 57
   },
   {
     "playerId": "POR_BERNARDOSILVA",
@@ -5938,6 +6252,20 @@
     "dribbling": 77,
     "defending": 76,
     "physical": 78
+  },
+  {
+    "playerId": "POR_DCOSTA",
+    "name": "Diogo Costa",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/diogo-costa/234577",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=1 surnameConfirmed)",
+    "eaPlayerId": "234577",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 84,
+    "gkReflexes": 86,
+    "gkHandling": 78,
+    "gkSpeed": 35
   },
   {
     "playerId": "POR_GRAMOS",
@@ -6171,6 +6499,23 @@
     "physical": 74
   },
   {
+    "playerId": "QAT_HATEM",
+    "name": "Abdulaziz Hatem",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-hatem/215911",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=False score=1.0 ageDelta=3 surnameConfirmed)",
+    "eaPlayerId": "215911",
+    "position": "CAM",
+    "observedDate": "2026-06-26",
+    "overall": 70,
+    "pace": 59,
+    "shooting": 67,
+    "passing": 70,
+    "dribbling": 68,
+    "defending": 61,
+    "physical": 70
+  },
+  {
     "playerId": "QAT_KHOUKHI",
     "name": "Boualem Khoukhi",
     "source": "EA SPORTS FC 26",
@@ -6222,6 +6567,23 @@
     "physical": 73
   },
   {
+    "playerId": "RSA_MAYAMBELA",
+    "name": "Sphephelo Sithole",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/s-sithole/257293",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=3 surnameConfirmed)",
+    "eaPlayerId": "257293",
+    "position": "CM",
+    "observedDate": "2026-06-26",
+    "overall": 65,
+    "pace": 64,
+    "shooting": 53,
+    "passing": 59,
+    "dribbling": 61,
+    "defending": 64,
+    "physical": 74
+  },
+  {
     "playerId": "SCO_ADAMS",
     "name": "Che Adams",
     "source": "EA SPORTS FC 26",
@@ -6271,6 +6633,20 @@
     "dribbling": 78,
     "defending": 72,
     "physical": 75
+  },
+  {
+    "playerId": "SCO_GORDON",
+    "name": "Craig Gordon",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/c-gordon/53110",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=False score=1.0 ageDelta=1 surnameConfirmed)",
+    "eaPlayerId": "53110",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 67,
+    "gkReflexes": 68,
+    "gkHandling": 66,
+    "gkSpeed": 26
   },
   {
     "playerId": "SCO_GUNN",
@@ -7336,6 +7712,20 @@
     "physical": 50
   },
   {
+    "playerId": "TUR_GUNOK",
+    "name": "Ugurcan Cakir",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/u-cakir/226300",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=1.0 ageDelta=1 surnameConfirmed)",
+    "eaPlayerId": "226300",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 80,
+    "gkReflexes": 79,
+    "gkHandling": 76,
+    "gkSpeed": 54
+  },
+  {
     "playerId": "TUR_KOKCU",
     "name": "Ferdi Kadioglu",
     "source": "EA SPORTS FC 26",
@@ -7636,6 +8026,20 @@
     "dribbling": 83,
     "defending": 72,
     "physical": 72
+  },
+  {
+    "playerId": "USA_FREESE",
+    "name": "Matt Freese",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/m-freese/247506",
+    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official; promoted club=True score=0.5 ageDelta=2 surnameConfirmed)",
+    "eaPlayerId": "247506",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 69,
+    "gkReflexes": 71,
+    "gkHandling": 68,
+    "gkSpeed": 29
   },
   {
     "playerId": "USA_MCKENNIE",

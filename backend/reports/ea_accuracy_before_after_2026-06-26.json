@@ -1,0 +1,42 @@
+{
+  "angle1_player_fidelity_vs_EA": {
+    "before": {
+      "n": 498,
+      "mae": 21.07,
+      "mean_signed_bias": -21.07,
+      "pct_within_3": 0.0
+    },
+    "after": {
+      "n": 498,
+      "mae": 0.0,
+      "mean_signed_bias": 0.0,
+      "pct_within_3": 100.0
+    }
+  },
+  "angle2_squad_strength_vs_fifa_rank_spearman": {
+    "before": 0.8413,
+    "after": 0.8349
+  },
+  "angle3_match_prediction_vs_40_real_results": {
+    "before": {
+      "matches": 40,
+      "hit_rate": 0.575,
+      "rps": 0.1614,
+      "brier": 0.5534,
+      "log_loss": 0.9343,
+      "xg_mae_home": 1.149,
+      "xg_mae_away": 0.741,
+      "xg_mae_total": 1.57
+    },
+    "after": {
+      "matches": 40,
+      "hit_rate": 0.625,
+      "rps": 0.1581,
+      "brier": 0.5475,
+      "log_loss": 0.9254,
+      "xg_mae_home": 1.163,
+      "xg_mae_away": 0.713,
+      "xg_mae_total": 1.586
+    }
+  }
+}
