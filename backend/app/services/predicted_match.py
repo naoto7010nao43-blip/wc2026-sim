@@ -53,7 +53,7 @@ def run_and_persist_predicted_match(
     host_bump_home = config.host_advantage if req.home_team_id in HOST_NATIONS else 0.0
     host_bump_away = config.host_advantage if req.away_team_id in HOST_NATIONS else 0.0
     lambda_home, lambda_away = compute_lambda(features, config, host_bump_home, host_bump_away)
-    matrix = score_distribution(lambda_home, lambda_away, config.max_goals)
+    matrix = score_distribution(lambda_home, lambda_away, config.max_goals, config.dixon_coles_rho)
 
     seed = req.seed if req.seed is not None else uuid.uuid4().int & 0xFFFFFFFF
     rng = random.Random(seed)

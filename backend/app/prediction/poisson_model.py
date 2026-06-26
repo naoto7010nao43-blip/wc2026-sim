@@ -133,13 +133,31 @@ def _poisson_pmf(k: int, lam: float) -> float:
     return math.exp(-lam) * lam**k / math.factorial(k)
 
 
-def score_distribution(lambda_home: float, lambda_away: float, max_goals: int = 8) -> list[list[float]]:
-    """Independent-Poisson scoreline probability matrix; matrix[h][a] is
-    P(home scores h AND away scores a), normalized to sum to 1 after
-    truncating at max_goals."""
+def score_distribution(
+    lambda_home: float, lambda_away: float, max_goals: int = 8, dixon_coles_rho: float = 0.0
+) -> list[list[float]]:
+    """Scoreline probability matrix; matrix[h][a] is P(home scores h AND away
+    scores a), normalized to sum to 1 after truncating at max_goals.
+
+    With a non-zero `dixon_coles_rho` the four lowest-score cells are
+    multiplied by the Dixon-Coles (1997) dependency correction tau, which
+    couples the two scores there rather than assuming full independence. A
+    negative rho lifts 0-0 and 1-1 (and trims 1-0/0-1), correcting the draw
+    under-prediction that plagues independent Poisson. rho=0 reproduces the
+    exact independent-Poisson matrix, so existing callers are unaffected."""
     home_pmf = [_poisson_pmf(h, lambda_home) for h in range(max_goals + 1)]
     away_pmf = [_poisson_pmf(a, lambda_away) for a in range(max_goals + 1)]
     matrix = [[home_pmf[h] * away_pmf[a] for a in range(max_goals + 1)] for h in range(max_goals + 1)]
+    if dixon_coles_rho and max_goals >= 1:
+        rho = dixon_coles_rho
+        matrix[0][0] *= 1.0 - lambda_home * lambda_away * rho
+        matrix[0][1] *= 1.0 + lambda_home * rho
+        matrix[1][0] *= 1.0 + lambda_away * rho
+        matrix[1][1] *= 1.0 - rho
+        for h in range(max_goals + 1):
+            for a in range(max_goals + 1):
+                if matrix[h][a] < 0.0:  # guard the rho non-negativity bound
+                    matrix[h][a] = 0.0
     total = sum(sum(row) for row in matrix)
     if total > 0:
         matrix = [[p / total for p in row] for row in matrix]
@@ -219,7 +237,7 @@ def predict_match(
         home_tactical_profile, away_tactical_profile,
     )
     lambda_home, lambda_away = compute_lambda(features, config, host_bump_home, host_bump_away)
-    matrix = score_distribution(lambda_home, lambda_away, config.max_goals)
+    matrix = score_distribution(lambda_home, lambda_away, config.max_goals, config.dixon_coles_rho)
 
     size = len(matrix)
     home_win = sum(matrix[h][a] for h in range(size) for a in range(size) if h > a)

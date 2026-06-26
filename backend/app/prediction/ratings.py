@@ -41,6 +41,33 @@ def _weighted_avg(values_and_weights: list[tuple[float, float]], default: float 
     return sum(v * w for v, w in values_and_weights) / total_weight
 
 
+_NEUTRAL_STARTING_PROBABILITY = 50.0
+
+
+def _playing_factor(player: dict) -> float:
+    """How much this player should move the team rating, based on how likely
+    they are to actually start (startingProbability) and be available -- so a
+    high-`overall` backup or an injured star doesn't inflate squad strength
+    the way a nailed-on starter does. Both signals already exist per player
+    in Player.attributes (see app.rating_v2.legacy_bridge). Falls back to a
+    neutral constant when absent, which -- being constant across the squad --
+    leaves the prior overall-ranked behavior unchanged (e.g. in tests that
+    pass bare player dicts)."""
+    attrs = player.get("attributes") or {}
+    sp = attrs.get("startingProbability")
+    av = attrs.get("availability")
+    sp = sp if sp is not None else _NEUTRAL_STARTING_PROBABILITY
+    av = av if av is not None else 100.0
+    return max(0.0, sp / 100.0) * max(0.0, av / 100.0)
+
+
+def _effective_overall(player: dict) -> float:
+    """Selection key: rank candidates by quality discounted by how likely
+    they are to actually feature, so the 'effective XI' is the players who
+    will really take the field, not just the highest-rated names on paper."""
+    return player["overall"] * _playing_factor(player)
+
+
 def attack_rating(players: list[dict]) -> float:
     """Squad's attacking quality, weighted toward forwards and toward the
     strongest contributors (rather than a flat full-squad average):
@@ -50,11 +77,11 @@ def attack_rating(players: list[dict]) -> float:
     contributors = [p for p in players if _position_group(p) in ("FWD", "MID")]
     if not contributors:
         return _DEFAULT_SCORE
-    contributors = sorted(contributors, key=lambda p: -p["overall"])[:_BENCH_CUTOFF]
+    contributors = sorted(contributors, key=lambda p: -_effective_overall(p))[:_BENCH_CUTOFF]
     scored = []
     for p in contributors:
         attrs = p["attributes"]
-        weight = 1.5 if _position_group(p) == "FWD" else 1.0
+        weight = (1.5 if _position_group(p) == "FWD" else 1.0) * _playing_factor(p)
         score = (
             _attr(attrs, "finishing", "shooting") * 0.35
             + _attr(attrs, "shotPower", "shooting") * 0.15
@@ -74,11 +101,11 @@ def defense_rating(players: list[dict]) -> float:
     contributors = [p for p in players if _position_group(p) in ("DEF", "MID")]
     outfield_score = _DEFAULT_SCORE
     if contributors:
-        contributors = sorted(contributors, key=lambda p: -p["overall"])[:_BENCH_CUTOFF]
+        contributors = sorted(contributors, key=lambda p: -_effective_overall(p))[:_BENCH_CUTOFF]
         scored = []
         for p in contributors:
             attrs = p["attributes"]
-            weight = 1.5 if _position_group(p) == "DEF" else 1.0
+            weight = (1.5 if _position_group(p) == "DEF" else 1.0) * _playing_factor(p)
             score = (
                 _attr(attrs, "tackling", "defending") * 0.4
                 + _attr(attrs, "interception", "defending") * 0.3
@@ -91,7 +118,7 @@ def defense_rating(players: list[dict]) -> float:
     keepers = [p for p in players if _position_group(p) == "GK"]
     gk_score = _DEFAULT_SCORE
     if keepers:
-        best_gk = max(keepers, key=lambda p: p["overall"])
+        best_gk = max(keepers, key=_effective_overall)
         attrs = best_gk["attributes"]
         gk_score = (
             _attr(attrs, "goalkeeperReflexes", "gk_reflexes") * 0.5
@@ -104,10 +131,11 @@ def defense_rating(players: list[dict]) -> float:
 
 def squad_strength_rating(players: list[dict]) -> float:
     """Plain overall-rating average across the likely best XI (top 11 by
-    `overall`) -- a coarse whole-team strength signal."""
+    playing-likelihood-discounted `overall`, see _effective_overall) -- a
+    coarse whole-team strength signal."""
     if not players:
         return 50.0
-    best_xi = sorted(players, key=lambda p: -p["overall"])[:11]
+    best_xi = sorted(players, key=lambda p: -_effective_overall(p))[:11]
     return sum(p["overall"] for p in best_xi) / len(best_xi)
 
 

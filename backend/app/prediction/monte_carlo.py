@@ -108,7 +108,7 @@ def simulate_tournament_outcomes(
 
     def winner_of(home_id: str, away_id: str, rng: random.Random) -> str:
         lam_h, lam_a = lambdas_for(home_id, away_id)
-        matrix = score_distribution(lam_h, lam_a, config.max_goals)
+        matrix = score_distribution(lam_h, lam_a, config.max_goals, config.dixon_coles_rho)
         h, a = sample_scoreline(matrix, rng)
         if h != a:
             return home_id if h > a else away_id
@@ -128,7 +128,7 @@ def simulate_tournament_outcomes(
                 ))
             else:
                 lam_h, lam_a = lambdas_for(home_id, away_id)
-                group_matrices[letter][(home_id, away_id)] = score_distribution(lam_h, lam_a, config.max_goals)
+                group_matrices[letter][(home_id, away_id)] = score_distribution(lam_h, lam_a, config.max_goals, config.dixon_coles_rho)
 
     stage_counts: dict[str, dict[str, int]] = {key: {t.id: 0 for t in teams} for key in _STAGE_KEYS}
 

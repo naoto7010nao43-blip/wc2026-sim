@@ -35,4 +35,7 @@ def test_team_strength_without_fifa_rank_uses_squad_only():
 
 
 def test_prediction_model_version_tracks_rank75_calibration():
-    assert DEFAULT_MODEL_CONFIG.model_version == "poisson-v2-rank75"
+    # Bumped when the Dixon-Coles low-score correction + starting-probability
+    # weighting (Phase 0 accuracy work) landed; the rank75 squad blend is
+    # unchanged, the version just tracks the model revision.
+    assert DEFAULT_MODEL_CONFIG.model_version == "poisson-v3-dc-startprob"
