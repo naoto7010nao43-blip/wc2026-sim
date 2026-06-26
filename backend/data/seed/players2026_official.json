@@ -15174,6 +15174,37 @@
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
   },
   {
+    "playerId": "JPN_SUZUKI_ZION",
+    "teamId": "JPN",
+    "teamCode": "JPN",
+    "name": "Zion Suzuki",
+    "nameJa": "鈴木彩艶",
+    "age": 23,
+    "dateOfBirth": "21/08/2002",
+    "shirtNumber": null,
+    "primaryPosition": "GK",
+    "secondaryPositions": [],
+    "preferredFoot": "unknown",
+    "heightCm": 190,
+    "weightKg": null,
+    "clubName": "Parma (ITA)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": 20000000,
+    "careerStats": null,
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 255981)",
+      "fcratings.com EA FC 26 profile (overall 74, GK)",
+      "Transfermarkt market value EUR 20.00m (2026-05-29)"
+    ],
+    "staminaMax": null,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-26T00:00:00+00:00"
+  },
+  {
     "playerId": "JPN_HAYAKAWA",
     "teamId": "JPN",
     "teamCode": "JPN",

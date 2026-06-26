@@ -8258,5 +8258,18 @@
     "dribbling": 75,
     "defending": 40,
     "physical": 66
+  },
+  {
+    "playerId": "JPN_SUZUKI_ZION",
+    "name": "Zion Suzuki",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/zion-suzuki/255981",
+    "sourceDataset": "EA official player ratings page (FC 26), observed 2026-06-26",
+    "eaPlayerId": "255981",
+    "position": "GK",
+    "observedDate": "2026-06-26",
+    "overall": 74,
+    "gkReflexes": 76,
+    "gkHandling": 72
   }
 ]

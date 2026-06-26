@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "playerId": "JPN_SUZUKI_ZION",
+    "name": "Zion Suzuki",
+    "reason": "Japan's confirmed No.1 GK at the 2026 World Cup; started the group stage. The roster previously lacked him, so the auto-selected starter wrongly fell to Hayakawa/Osako.",
+    "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
+    "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/japan",
+    "observedDate": "2026-06-26",
+    "overrides": { "startingProbability": 92 }
+  },
+  {
+    "playerId": "GER_NEUER",
+    "name": "Manuel Neuer",
+    "reason": "Germany's confirmed No.1 GK at the 2026 World Cup (came out of international retirement); started the group stage ahead of Baumann.",
+    "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
+    "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/germany",
+    "observedDate": "2026-06-26",
+    "overrides": { "startingProbability": 92 }
+  },
+  {
+    "playerId": "SUI_KOBEL",
+    "name": "Gregor Kobel",
+    "reason": "Switzerland's confirmed No.1 GK at the 2026 World Cup after Yann Sommer's international retirement; started the group stage.",
+    "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
+    "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/switzerland",
+    "observedDate": "2026-06-26",
+    "overrides": { "startingProbability": 92 }
+  },
+  {
+    "playerId": "NZL_MOSS",
+    "name": "Max Crocombe",
+    "reason": "New Zealand's confirmed No.1 GK at the 2026 World Cup; won the starting battle and started the group stage.",
+    "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
+    "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/new-zealand",
+    "observedDate": "2026-06-26",
+    "overrides": { "startingProbability": 92 }
+  },
+  {
+    "playerId": "ESP_UNAISIMON",
+    "name": "Unai Simon",
+    "reason": "Spain's confirmed No.1 GK at the 2026 World Cup; De la Fuente started Simon over Raya and Joan Garcia in the group stage.",
+    "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
+    "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/spain",
+    "observedDate": "2026-06-26",
+    "overrides": { "startingProbability": 92 }
+  }
+]

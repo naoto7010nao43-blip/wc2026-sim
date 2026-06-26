@@ -285,7 +285,9 @@ def compute_player_rating_v2(
 
 
 def compute_starting_probabilities(
-    players: list[dict], ratings_by_id: dict[str, PlayerRatingV2]
+    players: list[dict],
+    ratings_by_id: dict[str, PlayerRatingV2],
+    overrides_by_id: dict[str, dict] | None = None,
 ) -> dict[str, int]:
     """0-100 per player: how likely they are to start, relative only to
     *their own team's other players in the same coarse position group*
@@ -297,7 +299,14 @@ def compute_starting_probabilities(
     (e.g. a team's only specialist at a position) gets the neutral 50
     every percentile_rank gives a singleton population, rather than a
     misleadingly confident 100.
+
+    The blend is only a proxy for "who actually starts". When a manual
+    override supplies an explicit `startingProbability` -- e.g. a confirmed
+    real-tournament starter sourced from the observed 2026 World Cup lineups
+    (a citable external fact, not an estimate) -- that value is used verbatim
+    instead, since direct observation outranks the proxy.
     """
+    overrides_by_id = overrides_by_id or {}
     cohorts: dict[tuple[str, str], list[dict]] = {}
     for p in players:
         group = POSITION_GROUPS.get(p["primaryPosition"], "MID")
@@ -322,6 +331,11 @@ def compute_starting_probabilities(
                 + 0.25 * percentile_rank(overall, overall_pool)
             )
             result[p["playerId"]] = int(round(max(1.0, min(99.0, score * 100.0))))
+
+    for pid, ov in overrides_by_id.items():
+        sp = (ov.get("overrides") or {}).get("startingProbability")
+        if sp is not None and pid in result:
+            result[pid] = int(round(max(1.0, min(99.0, float(sp)))))
     return result
 
 

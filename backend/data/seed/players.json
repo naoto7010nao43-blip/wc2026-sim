@@ -10832,6 +10832,24 @@
     "name_ja": "ヴァウト・ウェホルスト"
   },
   {
+    "id": "JPN_SUZUKI_ZION",
+    "team_id": "JPN",
+    "name": "Zion Suzuki",
+    "age": 23,
+    "primary_position": "GK",
+    "secondary_positions": [],
+    "career_stats": {},
+    "market_value_eur": 20000000,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 official player ratings (player 255981)",
+      "fcratings.com EA FC 26 profile (overall 74, GK)",
+      "Transfermarkt market value EUR 20.00m (2026-05-29)"
+    ],
+    "stamina_max": null,
+    "name_ja": "鈴木彩艶"
+  },
+  {
     "id": "JPN_HAYAKAWA",
     "team_id": "JPN",
     "name": "Tomoki Hayakawa",

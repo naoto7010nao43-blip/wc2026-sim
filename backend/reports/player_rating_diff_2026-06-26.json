@@ -1,131 +1,15 @@
 {
-  "generatedAt": "2026-06-25T22:57:36.581717+00:00",
-  "totalPlayers": 669,
-  "biggestRisers": [
-    {
-      "playerId": "POR_DCOSTA",
-      "delta": 14,
-      "from": 70,
-      "to": 84
-    },
-    {
-      "playerId": "TUR_GUNOK",
-      "delta": 11,
-      "from": 69,
-      "to": 80
-    },
-    {
-      "playerId": "NZL_RUFER",
-      "delta": 9,
-      "from": 58,
-      "to": 67
-    },
-    {
-      "playerId": "BIH_BICAKCIC",
-      "delta": 7,
-      "from": 66,
-      "to": 73
-    },
-    {
-      "playerId": "NZL_DEVRIES",
-      "delta": 7,
-      "from": 62,
-      "to": 69
-    },
-    {
-      "playerId": "QAT_HATEM",
-      "delta": 6,
-      "from": 64,
-      "to": 70
-    },
-    {
-      "playerId": "PAR_SANABRIA",
-      "delta": 6,
-      "from": 70,
-      "to": 76
-    },
-    {
-      "playerId": "COL_LSUAREZ",
-      "delta": 5,
-      "from": 72,
-      "to": 77
-    },
-    {
-      "playerId": "PAN_MEJIA",
-      "delta": 5,
-      "from": 67,
-      "to": 72
-    },
-    {
-      "playerId": "HAI_ADE",
-      "delta": 4,
-      "from": 68,
-      "to": 72
-    }
+  "generatedAt": "2026-06-26T03:29:41.133092+00:00",
+  "totalPlayers": 670,
+  "biggestRisers": [],
+  "biggestFallers": [],
+  "changedByManualOverride": [
+    "GER_NEUER",
+    "SUI_KOBEL",
+    "JPN_SUZUKI_ZION",
+    "NZL_MOSS",
+    "ESP_UNAISIMON"
   ],
-  "biggestFallers": [
-    {
-      "playerId": "IRQ_JASIM_A",
-      "delta": -6,
-      "from": 68,
-      "to": 62
-    },
-    {
-      "playerId": "BIH_ALAJBEGOVIC",
-      "delta": -5,
-      "from": 68,
-      "to": 63
-    },
-    {
-      "playerId": "CUW_BODAK",
-      "delta": -4,
-      "from": 64,
-      "to": 60
-    },
-    {
-      "playerId": "EGY_RABIA",
-      "delta": -3,
-      "from": 70,
-      "to": 67
-    },
-    {
-      "playerId": "TUN_BENHESSEN",
-      "delta": -2,
-      "from": 68,
-      "to": 66
-    },
-    {
-      "playerId": "TUN_DAHMEN",
-      "delta": -2,
-      "from": 68,
-      "to": 66
-    },
-    {
-      "playerId": "IRQ_RAHMAN",
-      "delta": -2,
-      "from": 66,
-      "to": 64
-    },
-    {
-      "playerId": "ALG_ZIDANE_L",
-      "delta": -2,
-      "from": 68,
-      "to": 66
-    },
-    {
-      "playerId": "COD_ELIA",
-      "delta": -2,
-      "from": 66,
-      "to": 64
-    },
-    {
-      "playerId": "UZB_MASHARIPOV",
-      "delta": -2,
-      "from": 66,
-      "to": 64
-    }
-  ],
-  "changedByManualOverride": [],
   "externallySourced": [
     "BRA_ALISSON",
     "BRA_EDERSON",
@@ -392,6 +276,7 @@
     "NED_DEPAY",
     "NED_MALEN",
     "NED_WEGHORST",
+    "JPN_SUZUKI_ZION",
     "JPN_ITAKURA",
     "JPN_ITO_T",
     "JPN_SUGAWARA",

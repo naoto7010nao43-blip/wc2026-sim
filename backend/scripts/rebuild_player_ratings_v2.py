@@ -183,7 +183,7 @@ def main():
         )
         calibrated_ids.append(pid)
 
-    starting_prob_by_id = compute_starting_probabilities(players, ratings_by_id)
+    starting_prob_by_id = compute_starting_probabilities(players, ratings_by_id, overrides_by_id)
     new_ratings = []
     for p in players:
         rating = replace(ratings_by_id[p["playerId"]], starting_probability=starting_prob_by_id[p["playerId"]])
