@@ -5,7 +5,7 @@
     "name": "Brazil",
     "confederation": "CONMEBOL",
     "fifaRank": 6,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "C",
     "tacticalProfile": {
       "manager_name": "Carlo Ancelotti",
@@ -14,7 +14,8 @@
       "defensive_line_height": 58
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "ARG",
@@ -22,7 +23,7 @@
     "name": "Argentina",
     "confederation": "CONMEBOL",
     "fifaRank": 1,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-4-2",
     "groupId": "J",
     "tacticalProfile": {
       "manager_name": "Lionel Scaloni",
@@ -31,7 +32,8 @@
       "defensive_line_height": 58
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "FRA",
@@ -56,7 +58,7 @@
     "name": "England",
     "confederation": "UEFA",
     "fifaRank": 4,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-2-3-1",
     "groupId": "L",
     "tacticalProfile": {
       "manager_name": "Thomas Tuchel",
@@ -65,7 +67,8 @@
       "defensive_line_height": 68
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "GER",
@@ -90,7 +93,7 @@
     "name": "United States",
     "confederation": "CONCACAF",
     "fifaRank": 17,
-    "defaultFormation": "3-4-2-1",
+    "defaultFormation": "3-5-2",
     "groupId": "D",
     "tacticalProfile": {
       "manager_name": "Mauricio Pochettino",
@@ -99,7 +102,8 @@
       "defensive_line_height": 62
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "MEX",
@@ -124,7 +128,7 @@
     "name": "South Africa",
     "confederation": "CAF",
     "fifaRank": 60,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "A",
     "tacticalProfile": {
       "manager_name": "Hugo Broos",
@@ -133,7 +137,8 @@
       "defensive_line_height": 45
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "KOR",
@@ -141,7 +146,7 @@
     "name": "South Korea",
     "confederation": "AFC",
     "fifaRank": 23,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "A",
     "tacticalProfile": {
       "manager_name": "Hong Myung-bo",
@@ -150,7 +155,8 @@
       "defensive_line_height": 58
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "CZE",
@@ -158,7 +164,7 @@
     "name": "Czechia",
     "confederation": "UEFA",
     "fifaRank": 41,
-    "defaultFormation": "3-4-2-1",
+    "defaultFormation": "3-5-2",
     "groupId": "A",
     "tacticalProfile": {
       "manager_name": "Miroslav Koubek",
@@ -167,7 +173,8 @@
       "defensive_line_height": 44
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "CAN",
@@ -209,7 +216,7 @@
     "name": "Qatar",
     "confederation": "AFC",
     "fifaRank": 56,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "B",
     "tacticalProfile": {
       "manager_name": "Julen Lopetegui",
@@ -218,7 +225,8 @@
       "defensive_line_height": 50
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "SUI",
@@ -226,7 +234,7 @@
     "name": "Switzerland",
     "confederation": "UEFA",
     "fifaRank": 19,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-4-2",
     "groupId": "B",
     "tacticalProfile": {
       "manager_name": "Murat Yakin",
@@ -235,7 +243,8 @@
       "defensive_line_height": 55
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "MAR",
@@ -243,7 +252,7 @@
     "name": "Morocco",
     "confederation": "CAF",
     "fifaRank": 8,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-2-3-1",
     "groupId": "C",
     "tacticalProfile": {
       "manager_name": "Mohamed Ouahbi",
@@ -252,7 +261,8 @@
       "defensive_line_height": 64
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "HAI",
@@ -260,7 +270,7 @@
     "name": "Haiti",
     "confederation": "CONCACAF",
     "fifaRank": 83,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "C",
     "tacticalProfile": {
       "manager_name": "Sebastien Migne",
@@ -269,7 +279,8 @@
       "defensive_line_height": 24
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "SCO",
@@ -277,7 +288,7 @@
     "name": "Scotland",
     "confederation": "UEFA",
     "fifaRank": 38,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "C",
     "tacticalProfile": {
       "manager_name": "Steve Clarke",
@@ -286,7 +297,8 @@
       "defensive_line_height": 40
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "PAR",
@@ -345,7 +357,7 @@
     "name": "Curacao",
     "confederation": "CONCACAF",
     "fifaRank": 82,
-    "defaultFormation": "3-4-3",
+    "defaultFormation": "3-4-2-1",
     "groupId": "E",
     "tacticalProfile": {
       "manager_name": "Dick Advocaat",
@@ -354,7 +366,8 @@
       "defensive_line_height": 30
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "CIV",
@@ -379,7 +392,7 @@
     "name": "Ecuador",
     "confederation": "CONMEBOL",
     "fifaRank": 22,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "3-5-2",
     "groupId": "E",
     "tacticalProfile": {
       "manager_name": "Sebastian Beccacece",
@@ -388,7 +401,8 @@
       "defensive_line_height": 35
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "NED",
@@ -413,7 +427,7 @@
     "name": "Japan",
     "confederation": "AFC",
     "fifaRank": 18,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "F",
     "tacticalProfile": {
       "manager_name": "Hajime Moriyasu",
@@ -422,7 +436,8 @@
       "defensive_line_height": 52
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "SWE",
@@ -430,7 +445,7 @@
     "name": "Sweden",
     "confederation": "UEFA",
     "fifaRank": 25,
-    "defaultFormation": "3-4-3",
+    "defaultFormation": "3-5-2",
     "groupId": "F",
     "tacticalProfile": {
       "manager_name": "Graham Potter",
@@ -439,7 +454,8 @@
       "defensive_line_height": 48
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "TUN",
@@ -447,7 +463,7 @@
     "name": "Tunisia",
     "confederation": "CAF",
     "fifaRank": 38,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "F",
     "tacticalProfile": {
       "manager_name": "Herve Renard",
@@ -456,7 +472,8 @@
       "defensive_line_height": 36
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "BEL",
@@ -498,7 +515,7 @@
     "name": "Iran",
     "confederation": "AFC",
     "fifaRank": 20,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "G",
     "tacticalProfile": {
       "manager_name": "Amir Ghalenoei",
@@ -507,7 +524,8 @@
       "defensive_line_height": 28
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "NZL",
@@ -515,7 +533,7 @@
     "name": "New Zealand",
     "confederation": "OFC",
     "fifaRank": 85,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "4-2-3-1",
     "groupId": "G",
     "tacticalProfile": {
       "manager_name": "Darren Bazeley",
@@ -524,7 +542,8 @@
       "defensive_line_height": 25
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "ESP",
@@ -549,7 +568,7 @@
     "name": "Cape Verde",
     "confederation": "CAF",
     "fifaRank": 70,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "4-3-3",
     "groupId": "H",
     "tacticalProfile": {
       "manager_name": "Pedro \"Bubista\" Brito",
@@ -558,7 +577,8 @@
       "defensive_line_height": 36
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "KSA",
@@ -566,7 +586,7 @@
     "name": "Saudi Arabia",
     "confederation": "AFC",
     "fifaRank": 56,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "3-4-2-1",
     "groupId": "H",
     "tacticalProfile": {
       "manager_name": "Georgios Donis",
@@ -575,7 +595,8 @@
       "defensive_line_height": 46
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "URU",
@@ -583,7 +604,7 @@
     "name": "Uruguay",
     "confederation": "CONMEBOL",
     "fifaRank": 16,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-2-3-1",
     "groupId": "H",
     "tacticalProfile": {
       "manager_name": "Marcelo Bielsa",
@@ -592,7 +613,8 @@
       "defensive_line_height": 74
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "SEN",
@@ -600,7 +622,7 @@
     "name": "Senegal",
     "confederation": "CAF",
     "fifaRank": 18,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-2-3-1",
     "groupId": "I",
     "tacticalProfile": {
       "manager_name": "Pape Thiaw",
@@ -609,7 +631,8 @@
       "defensive_line_height": 58
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "IRQ",
@@ -617,7 +640,7 @@
     "name": "Iraq",
     "confederation": "AFC",
     "fifaRank": 58,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "I",
     "tacticalProfile": {
       "manager_name": "Graham Arnold",
@@ -626,7 +649,8 @@
       "defensive_line_height": 38
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "NOR",
@@ -685,7 +709,7 @@
     "name": "Jordan",
     "confederation": "AFC",
     "fifaRank": 63,
-    "defaultFormation": "3-4-3",
+    "defaultFormation": "3-4-2-1",
     "groupId": "J",
     "tacticalProfile": {
       "manager_name": "Jamal Sellami",
@@ -694,7 +718,8 @@
       "defensive_line_height": 34
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "POR",
@@ -702,7 +727,7 @@
     "name": "Portugal",
     "confederation": "UEFA",
     "fifaRank": 5,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-2-3-1",
     "groupId": "K",
     "tacticalProfile": {
       "manager_name": "Roberto Martinez",
@@ -711,7 +736,8 @@
       "defensive_line_height": 60
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "COD",
@@ -736,7 +762,7 @@
     "name": "Uzbekistan",
     "confederation": "AFC",
     "fifaRank": 56,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-2-1",
     "groupId": "K",
     "tacticalProfile": {
       "manager_name": "Fabio Cannavaro",
@@ -745,7 +771,8 @@
       "defensive_line_height": 36
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "COL",
@@ -753,7 +780,7 @@
     "name": "Colombia",
     "confederation": "CONMEBOL",
     "fifaRank": 14,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "4-3-3",
     "groupId": "K",
     "tacticalProfile": {
       "manager_name": "Nestor Lorenzo",
@@ -762,7 +789,8 @@
       "defensive_line_height": 58
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "CRO",
@@ -770,7 +798,7 @@
     "name": "Croatia",
     "confederation": "UEFA",
     "fifaRank": 10,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "3-4-2-1",
     "groupId": "L",
     "tacticalProfile": {
       "manager_name": "Zlatko Dalic",
@@ -779,7 +807,8 @@
       "defensive_line_height": 50
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "GHA",
@@ -787,7 +816,7 @@
     "name": "Ghana",
     "confederation": "CAF",
     "fifaRank": 72,
-    "defaultFormation": "4-3-3",
+    "defaultFormation": "4-4-2",
     "groupId": "L",
     "tacticalProfile": {
       "manager_name": "Carlos Queiroz",
@@ -796,7 +825,8 @@
       "defensive_line_height": 40
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   },
   {
     "teamId": "PAN",
@@ -804,7 +834,7 @@
     "name": "Panama",
     "confederation": "CONCACAF",
     "fifaRank": 30,
-    "defaultFormation": "4-2-3-1",
+    "defaultFormation": "3-4-3",
     "groupId": "L",
     "tacticalProfile": {
       "manager_name": "Thomas Christiansen",
@@ -813,6 +843,7 @@
       "defensive_line_height": 45
     },
     "dataConfidence": "official",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
+    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
   }
 ]

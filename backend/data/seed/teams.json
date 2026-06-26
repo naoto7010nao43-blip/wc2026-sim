@@ -4,7 +4,7 @@
     "name": "Brazil",
     "confederation": "CONMEBOL",
     "fifa_rank": 6,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Carlo Ancelotti",
@@ -18,7 +18,7 @@
     "name": "Argentina",
     "confederation": "CONMEBOL",
     "fifa_rank": 1,
-    "default_formation": "4-3-3",
+    "default_formation": "4-4-2",
     "group_id": "J",
     "tactical_profile": {
       "manager_name": "Lionel Scaloni",
@@ -46,7 +46,7 @@
     "name": "England",
     "confederation": "UEFA",
     "fifa_rank": 4,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "L",
     "tactical_profile": {
       "manager_name": "Thomas Tuchel",
@@ -74,7 +74,7 @@
     "name": "United States",
     "confederation": "CONCACAF",
     "fifa_rank": 17,
-    "default_formation": "3-4-2-1",
+    "default_formation": "3-5-2",
     "group_id": "D",
     "tactical_profile": {
       "manager_name": "Mauricio Pochettino",
@@ -103,7 +103,7 @@
     "name": "South Africa",
     "confederation": "CAF",
     "fifa_rank": 60,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "A",
     "tactical_profile": {
       "manager_name": "Hugo Broos",
@@ -118,7 +118,7 @@
     "name": "South Korea",
     "confederation": "AFC",
     "fifa_rank": 23,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "A",
     "tactical_profile": {
       "manager_name": "Hong Myung-bo",
@@ -133,7 +133,7 @@
     "name": "Czechia",
     "confederation": "UEFA",
     "fifa_rank": 41,
-    "default_formation": "3-4-2-1",
+    "default_formation": "3-5-2",
     "group_id": "A",
     "tactical_profile": {
       "manager_name": "Miroslav Koubek",
@@ -178,7 +178,7 @@
     "name": "Qatar",
     "confederation": "AFC",
     "fifa_rank": 56,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "B",
     "tactical_profile": {
       "manager_name": "Julen Lopetegui",
@@ -193,7 +193,7 @@
     "name": "Switzerland",
     "confederation": "UEFA",
     "fifa_rank": 19,
-    "default_formation": "4-3-3",
+    "default_formation": "4-4-2",
     "group_id": "B",
     "tactical_profile": {
       "manager_name": "Murat Yakin",
@@ -208,7 +208,7 @@
     "name": "Morocco",
     "confederation": "CAF",
     "fifa_rank": 8,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Mohamed Ouahbi",
@@ -222,7 +222,7 @@
     "name": "Haiti",
     "confederation": "CONCACAF",
     "fifa_rank": 83,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Sebastien Migne",
@@ -236,7 +236,7 @@
     "name": "Scotland",
     "confederation": "UEFA",
     "fifa_rank": 38,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Steve Clarke",
@@ -292,7 +292,7 @@
     "name": "Curacao",
     "confederation": "CONCACAF",
     "fifa_rank": 82,
-    "default_formation": "3-4-3",
+    "default_formation": "3-4-2-1",
     "group_id": "E",
     "tactical_profile": {
       "manager_name": "Dick Advocaat",
@@ -320,7 +320,7 @@
     "name": "Ecuador",
     "confederation": "CONMEBOL",
     "fifa_rank": 22,
-    "default_formation": "4-4-2",
+    "default_formation": "3-5-2",
     "group_id": "E",
     "tactical_profile": {
       "manager_name": "Sebastian Beccacece",
@@ -348,7 +348,7 @@
     "name": "Japan",
     "confederation": "AFC",
     "fifa_rank": 18,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "F",
     "tactical_profile": {
       "manager_name": "Hajime Moriyasu",
@@ -362,7 +362,7 @@
     "name": "Sweden",
     "confederation": "UEFA",
     "fifa_rank": 25,
-    "default_formation": "3-4-3",
+    "default_formation": "3-5-2",
     "group_id": "F",
     "tactical_profile": {
       "manager_name": "Graham Potter",
@@ -376,7 +376,7 @@
     "name": "Tunisia",
     "confederation": "CAF",
     "fifa_rank": 38,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "F",
     "tactical_profile": {
       "manager_name": "Herve Renard",
@@ -418,7 +418,7 @@
     "name": "Iran",
     "confederation": "AFC",
     "fifa_rank": 20,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "G",
     "tactical_profile": {
       "manager_name": "Amir Ghalenoei",
@@ -432,7 +432,7 @@
     "name": "New Zealand",
     "confederation": "OFC",
     "fifa_rank": 85,
-    "default_formation": "4-4-2",
+    "default_formation": "4-2-3-1",
     "group_id": "G",
     "tactical_profile": {
       "manager_name": "Darren Bazeley",
@@ -460,7 +460,7 @@
     "name": "Cape Verde",
     "confederation": "CAF",
     "fifa_rank": 70,
-    "default_formation": "4-4-2",
+    "default_formation": "4-3-3",
     "group_id": "H",
     "tactical_profile": {
       "manager_name": "Pedro \"Bubista\" Brito",
@@ -474,7 +474,7 @@
     "name": "Saudi Arabia",
     "confederation": "AFC",
     "fifa_rank": 56,
-    "default_formation": "4-4-2",
+    "default_formation": "3-4-2-1",
     "group_id": "H",
     "tactical_profile": {
       "manager_name": "Georgios Donis",
@@ -488,7 +488,7 @@
     "name": "Uruguay",
     "confederation": "CONMEBOL",
     "fifa_rank": 16,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "H",
     "tactical_profile": {
       "manager_name": "Marcelo Bielsa",
@@ -502,7 +502,7 @@
     "name": "Senegal",
     "confederation": "CAF",
     "fifa_rank": 18,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "I",
     "tactical_profile": {
       "manager_name": "Pape Thiaw",
@@ -516,7 +516,7 @@
     "name": "Iraq",
     "confederation": "AFC",
     "fifa_rank": 58,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "I",
     "tactical_profile": {
       "manager_name": "Graham Arnold",
@@ -572,7 +572,7 @@
     "name": "Jordan",
     "confederation": "AFC",
     "fifa_rank": 63,
-    "default_formation": "3-4-3",
+    "default_formation": "3-4-2-1",
     "group_id": "J",
     "tactical_profile": {
       "manager_name": "Jamal Sellami",
@@ -586,7 +586,7 @@
     "name": "Portugal",
     "confederation": "UEFA",
     "fifa_rank": 5,
-    "default_formation": "4-3-3",
+    "default_formation": "4-2-3-1",
     "group_id": "K",
     "tactical_profile": {
       "manager_name": "Roberto Martinez",
@@ -614,7 +614,7 @@
     "name": "Uzbekistan",
     "confederation": "AFC",
     "fifa_rank": 56,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-2-1",
     "group_id": "K",
     "tactical_profile": {
       "manager_name": "Fabio Cannavaro",
@@ -628,7 +628,7 @@
     "name": "Colombia",
     "confederation": "CONMEBOL",
     "fifa_rank": 14,
-    "default_formation": "4-2-3-1",
+    "default_formation": "4-3-3",
     "group_id": "K",
     "tactical_profile": {
       "manager_name": "Nestor Lorenzo",
@@ -642,7 +642,7 @@
     "name": "Croatia",
     "confederation": "UEFA",
     "fifa_rank": 10,
-    "default_formation": "4-3-3",
+    "default_formation": "3-4-2-1",
     "group_id": "L",
     "tactical_profile": {
       "manager_name": "Zlatko Dalic",
@@ -656,7 +656,7 @@
     "name": "Ghana",
     "confederation": "CAF",
     "fifa_rank": 72,
-    "default_formation": "4-3-3",
+    "default_formation": "4-4-2",
     "group_id": "L",
     "tactical_profile": {
       "manager_name": "Carlos Queiroz",
@@ -670,7 +670,7 @@
     "name": "Panama",
     "confederation": "CONCACAF",
     "fifa_rank": 30,
-    "default_formation": "4-2-3-1",
+    "default_formation": "3-4-3",
     "group_id": "L",
     "tactical_profile": {
       "manager_name": "Thomas Christiansen",
