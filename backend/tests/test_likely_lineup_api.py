@@ -62,6 +62,20 @@ def test_likely_lineup_endpoint_returns_11_slots_with_disclaimer(client):
     assert len(player_ids) == len(set(player_ids))
 
 
+def test_likely_lineup_never_places_a_goalkeeper_outfield(client):
+    # Partial rosters previously let the last-resort fallback drop a backup
+    # keeper into an outfield slot (e.g. Japan's 3rd centre-back). A GK must
+    # only ever occupy the GK slot. Check every team to lock the invariant.
+    teams = client.get("/api/teams").json()
+    for team in teams:
+        body = client.get(f"/api/teams/{team['id']}/likely-lineup").json()
+        for slot in body["lineup"]:
+            if slot["slot_position"] != "GK":
+                assert slot["primary_position"] != "GK", (
+                    f"{team['id']}: {slot['name']} (GK) placed at {slot['slot_position']}"
+                )
+
+
 def test_likely_lineup_endpoint_404s_for_unknown_team(client):
     resp = client.get("/api/teams/ZZZ/likely-lineup")
     assert resp.status_code == 404

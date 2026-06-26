@@ -22,6 +22,18 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
     used_ids: set[str] = set()
     assignments: dict[int, dict] = {}
 
+    # A goalkeeper must never fill an outfield slot (nor an outfielder the GK
+    # slot). With partial rosters the last-resort fallback below would
+    # otherwise drop a backup keeper into, say, a centre-back slot. Keep the
+    # two pools strictly separate so every pass only ever considers the right
+    # kind of player for the slot.
+    def _is_gk(p: dict) -> bool:
+        return p["primary_position"] == "GK"
+
+    def _slot_pool(slot_position: str) -> list[dict]:
+        want_gk = slot_position == "GK"
+        return [p for p in available if _is_gk(p) == want_gk]
+
     def _score(p: dict) -> float:
         starting_probability = (p.get("attributes") or {}).get("startingProbability")
         return starting_probability if starting_probability is not None else p.get("overall", 50)
@@ -35,7 +47,7 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
         used_ids.add(best["id"])
 
     for idx, slot in enumerate(formation.slots):
-        exact = [p for p in available if p["primary_position"] == slot.position]
+        exact = [p for p in _slot_pool(slot.position) if p["primary_position"] == slot.position]
         pick(idx, exact)
 
     for idx, slot in enumerate(formation.slots):
@@ -43,7 +55,7 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
             continue
         aliases = SLOT_POSITION_ALIASES.get(slot.position, [slot.position])
         candidates = [
-            p for p in available
+            p for p in _slot_pool(slot.position)
             if p["primary_position"] in aliases or any(sp in aliases for sp in p.get("secondary_positions", []))
         ]
         pick(idx, candidates)
@@ -51,7 +63,7 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
     for idx, slot in enumerate(formation.slots):
         if idx in assignments:
             continue
-        pick(idx, available)
+        pick(idx, _slot_pool(slot.position))
 
     lineup = []
     for idx, slot in enumerate(formation.slots):
