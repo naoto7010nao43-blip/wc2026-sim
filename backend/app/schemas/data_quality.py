@@ -13,4 +13,8 @@ class DataQualitySummary(BaseModel):
     last_seed_update: str | None
     last_report_update: str | None
     control_character_issues: int
+    real_group_match_count: int
+    real_group_match_expected: int
+    real_group_match_coverage_pct: float
+    real_knockout_match_count: int
     notes: list[str]

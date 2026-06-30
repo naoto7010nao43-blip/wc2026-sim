@@ -52,7 +52,13 @@ export function DataQualityPanel() {
         <p className="text-[11px] text-slate-500">最終更新: {formatDate(summary.last_seed_update)}</p>
       </div>
 
-      <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <Metric
+          label="実結果反映"
+          value={`${summary.real_group_match_count}/${summary.real_group_match_expected}試合`}
+          detail={`${summary.real_group_match_coverage_pct.toFixed(1)}%`}
+        />
+        <Metric label="決勝T実結果" value={`${summary.real_knockout_match_count}試合`} />
         <Metric label="公式データ反映率" value={`${summary.official_profile_coverage_pct.toFixed(1)}%`} />
         <Metric
           label="未対応の公式選手"
@@ -83,11 +89,12 @@ export function DataQualityPanel() {
   );
 }
 
-function Metric({ label, value }: { label: string; value: string }) {
+function Metric({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
     <div>
       <p className="text-[11px] text-slate-500">{label}</p>
       <p className="mt-1 text-sm font-semibold text-slate-100">{value}</p>
+      {detail && <p className="mt-0.5 text-[10px] text-slate-500">{detail}</p>}
     </div>
   );
 }

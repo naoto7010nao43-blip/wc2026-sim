@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+from itertools import combinations
 from pathlib import Path
 
 SEED_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "seed"
@@ -46,6 +47,34 @@ def _count_control_character_issues(paths: list[Path]) -> int:
     return issues
 
 
+def _real_results_coverage(seed_dir: Path) -> dict:
+    teams = _load_json(seed_dir / "teams.json") or []
+    real_results_dir = seed_dir / "real_results"
+    group_to_teams: dict[str, list[str]] = {}
+    for team in teams:
+        group_id = team.get("group_id")
+        if group_id:
+            group_to_teams.setdefault(group_id, []).append(team["id"])
+
+    expected_group_matches = sum(len(list(combinations(team_ids, 2))) for team_ids in group_to_teams.values())
+    real_group_matches = 0
+    for group_id in group_to_teams:
+        entries = _load_json(real_results_dir / f"{group_id}.json") or []
+        real_group_matches += len(entries) if isinstance(entries, list) else 0
+
+    knockout_entries = _load_json(real_results_dir / "knockout.json") or []
+    real_knockout_matches = len(knockout_entries) if isinstance(knockout_entries, list) else 0
+
+    return {
+        "real_group_match_count": real_group_matches,
+        "real_group_match_expected": expected_group_matches,
+        "real_group_match_coverage_pct": (
+            round(real_group_matches / expected_group_matches * 100, 1) if expected_group_matches else 0.0
+        ),
+        "real_knockout_match_count": real_knockout_matches,
+    }
+
+
 def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = REPORTS_DIR) -> dict:
     notes: list[str] = []
 
@@ -80,6 +109,7 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
         last_report_update = merge_proposal.get("generatedAt")
 
     last_seed_update = metadata.get("lastUpdated")
+    real_results = _real_results_coverage(seed_dir)
 
     control_character_issues = _count_control_character_issues(
         [
@@ -99,6 +129,11 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
         notes.append(
             f"{remaining_unmatched_seed_players}人のシード選手が公式スカッドと未対応のままです。"
         )
+    if real_results["real_group_match_count"] < real_results["real_group_match_expected"]:
+        notes.append(
+            f"グループステージ実結果は{real_results['real_group_match_count']}/"
+            f"{real_results['real_group_match_expected']}試合まで反映済みです。"
+        )
 
     return {
         "seed_player_count": seed_player_count,
@@ -112,5 +147,6 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
         "last_seed_update": last_seed_update,
         "last_report_update": last_report_update,
         "control_character_issues": control_character_issues,
+        **real_results,
         "notes": notes,
     }

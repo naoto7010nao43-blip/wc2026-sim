@@ -750,5 +750,9 @@ export interface DataQualitySummary {
   last_seed_update: string | null;
   last_report_update: string | null;
   control_character_issues: number;
+  real_group_match_count: number;
+  real_group_match_expected: number;
+  real_group_match_coverage_pct: number;
+  real_knockout_match_count: number;
   notes: string[];
 }

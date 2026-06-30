@@ -41,6 +41,10 @@ def test_summary_endpoint_returns_current_counts(client):
     assert body["remaining_unmatched_seed_players"] == 73
     assert body["matched_player_field_update_candidates"] == 0
     assert body["control_character_issues"] == 0
+    assert body["real_group_match_count"] == 72
+    assert body["real_group_match_expected"] == 72
+    assert body["real_group_match_coverage_pct"] == 100.0
+    assert body["real_knockout_match_count"] == 4
 
 
 def test_summary_matches_current_repository_reports():
@@ -56,6 +60,10 @@ def test_summary_matches_current_repository_reports():
     assert summary["control_character_issues"] == 0
     assert summary["official_profile_players"] == summary["seed_player_count"] - 73
     assert 0 < summary["official_profile_coverage_pct"] < 100
+    assert summary["real_group_match_count"] == 72
+    assert summary["real_group_match_expected"] == 72
+    assert summary["real_group_match_coverage_pct"] == 100.0
+    assert summary["real_knockout_match_count"] == 4
 
 
 def test_missing_report_falls_back_gracefully(tmp_path):
@@ -79,6 +87,10 @@ def test_missing_report_falls_back_gracefully(tmp_path):
     assert summary["remaining_unmatched_seed_players"] is None
     assert summary["matched_player_field_update_candidates"] is None
     assert summary["last_report_update"] is None
+    assert summary["real_group_match_count"] == 0
+    assert summary["real_group_match_expected"] == 0
+    assert summary["real_group_match_coverage_pct"] == 0.0
+    assert summary["real_knockout_match_count"] == 0
     assert any("照合レポート" in note for note in summary["notes"])
 
 
