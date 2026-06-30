@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-06-30T14:53:28.179964+00:00",
+  "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
+  "readyForManualPush": true,
+  "blockers": [],
+  "currentTask": {
+    "hasActiveReadyTask": false,
+    "awaitingNextSpec": false,
+    "latestCompletedSpecText": null
+  },
+  "gitStatusShort": [],
+  "modelVersions": {
+    "baselineModelVersion": "poisson-v1-rank60-order-neutral",
+    "currentModelVersion": "poisson-v2-rank75-order-neutral"
+  },
+  "rank75Benchmark": {
+    "present": true,
+    "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-30.json",
+    "status": "pass",
+    "benchmarkMethod": "dual_order_average",
+    "watchlistImplausibleReduction": 3.0,
+    "overallImplausibleFavoriteCountDelta": -5.0,
+    "averageFavoriteWinPctDelta": 0.6
+  },
+  "requiredReports": [
+    {
+      "pattern": "prediction_benchmark_baseline_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_baseline_2026-06-25.json"
+    },
+    {
+      "pattern": "prediction_benchmark_v1_order_neutral_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_v1_order_neutral_2026-06-30.json"
+    },
+    {
+      "pattern": "prediction_benchmark_rank75_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_rank75_order_neutral_2026-06-30.json"
+    },
+    {
+      "pattern": "prediction_benchmark_rank75_order_neutral_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_rank75_order_neutral_2026-06-30.json"
+    },
+    {
+      "pattern": "prediction_benchmark_comparison_rank75_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-30.json"
+    },
+    {
+      "pattern": "prediction_benchmark_comparison_rank75_order_neutral_*.json",
+      "present": true,
+      "path": "backend\\reports\\prediction_benchmark_comparison_rank75_order_neutral_2026-06-30.json"
+    },
+    {
+      "pattern": "simulation_accuracy_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\simulation_accuracy_audit_2026-06-25.json"
+    },
+    {
+      "pattern": "team_data_review_plan_*.json",
+      "present": true,
+      "path": "backend\\reports\\team_data_review_plan_2026-06-25.json"
+    },
+    {
+      "pattern": "squad_rating_gap_review_*.json",
+      "present": true,
+      "path": "backend\\reports\\squad_rating_gap_review_2026-06-25.json"
+    },
+    {
+      "pattern": "rating_review_workbench_*.json",
+      "present": true,
+      "path": "backend\\reports\\rating_review_workbench_2026-06-25.json"
+    },
+    {
+      "pattern": "rating_decision_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\rating_decision_audit_2026-06-25.json"
+    },
+    {
+      "pattern": "source_provenance_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\source_provenance_audit_2026-06-25.json"
+    },
+    {
+      "pattern": "simulation_stability_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\simulation_stability_audit_2026-06-23.json"
+    },
+    {
+      "pattern": "substitution_model_gap_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\substitution_model_gap_audit_2026-06-25.json"
+    },
+    {
+      "pattern": "external_data_verification_candidates_*.json",
+      "present": true,
+      "path": "backend\\reports\\external_data_verification_candidates_2026-06-24.json"
+    },
+    {
+      "pattern": "external_data_verification_validation_*.json",
+      "present": true,
+      "path": "backend\\reports\\external_data_verification_validation_2026-06-24.json"
+    },
+    {
+      "pattern": "external_data_decision_queue_*.json",
+      "present": true,
+      "path": "backend\\reports\\external_data_decision_queue_2026-06-24.json"
+    },
+    {
+      "pattern": "external_source_traceability_audit_*.json",
+      "present": true,
+      "path": "backend\\reports\\external_source_traceability_audit_2026-06-24.json"
+    }
+  ],
+  "requiredCommands": [
+    ".\\scripts\\pre_release_check.ps1",
+    ".\\scripts\\post_deploy_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\" -BackendBaseUrl \"<production-backend-url>\"",
+    ".\\scripts\\post_deploy_content_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\" -BackendBaseUrl \"<production-backend-url>\"",
+    ".\\scripts\\post_deploy_browser_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\""
+  ]
+}
