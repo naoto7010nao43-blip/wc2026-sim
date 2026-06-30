@@ -5,7 +5,7 @@ import { LikelyLineupPanel } from "../components/LikelyLineupPanel";
 import { SquadDepthPanel } from "../components/SquadDepthPanel";
 import { TacticalProfilePanel } from "../components/TacticalProfilePanel";
 import { countryNameJa } from "../data/countryNamesJa";
-import type { PlayerSummary, TeamOut } from "../types/domain";
+import type { DataQualitySummary, PlayerSummary, TeamOut } from "../types/domain";
 
 const DATA_CONFIDENCE_LABELS: Record<string, string> = {
   official: "公式",
@@ -18,6 +18,12 @@ const DATA_CONFIDENCE_LABELS: Record<string, string> = {
 
 function confidenceLabel(value: string): string {
   return DATA_CONFIDENCE_LABELS[value] ?? value;
+}
+
+function freshnessLabel(status: string): string {
+  if (status === "critical") return "再確認推奨";
+  if (status === "warning") return "一部注意";
+  return "良好";
 }
 
 function summarizeTrust(players: PlayerSummary[]) {
@@ -71,6 +77,7 @@ function sortPlayers(players: PlayerSummary[], sortMode: PlayerSortMode): Player
 export function TeamPage() {
   const { teamId } = useParams<{ teamId: string }>();
   const [team, setTeam] = useState<TeamOut | null>(null);
+  const [dataQuality, setDataQuality] = useState<DataQualitySummary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [playerQuery, setPlayerQuery] = useState("");
   const [positionFilter, setPositionFilter] = useState<PositionFilter>("all");
@@ -83,6 +90,21 @@ export function TeamPage() {
     setError(null);
     api.getTeam(teamId).then(setTeam).catch((e) => setError(String(e)));
   }, [teamId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .getDataQualitySummary()
+      .then((data) => {
+        if (!cancelled) setDataQuality(data);
+      })
+      .catch(() => {
+        if (!cancelled) setDataQuality(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const visiblePlayers = useMemo(() => {
     if (!team) return [];
@@ -157,7 +179,21 @@ export function TeamPage() {
               低信頼度属性あり: <span className="font-semibold text-amber-400">{trust.lowConfidenceCount}人</span>
             </span>
           )}
+          {dataQuality && (
+            <span>
+              データ鮮度:{" "}
+              <span className={dataQuality.freshness_status === "ok" ? "font-semibold text-emerald-300" : "font-semibold text-amber-300"}>
+                {freshnessLabel(dataQuality.freshness_status)}
+              </span>
+            </span>
+          )}
         </div>
+
+        {dataQuality && dataQuality.freshness_status !== "ok" && (
+          <div className="mt-3 rounded border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-[11px] leading-relaxed text-amber-100/85">
+            能力値・戦術値の追加反映前に、公式スカッドや既存seedデータの最新ソースを再確認してください。
+          </div>
+        )}
 
         <p className="mt-3 text-[11px] text-slate-500">
           スタメン予測・選手能力値はFIFAが公式発表したものではなく、公開データから推定したものです。クラブ・代表出場数などの公式プロフィール項目はFIFA Squad Listを基にしています。
