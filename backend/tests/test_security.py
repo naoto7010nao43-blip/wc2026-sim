@@ -58,6 +58,19 @@ def test_security_headers_present_on_every_response(client):
     assert "permissions-policy" in resp.headers
 
 
+def test_local_preview_origin_is_allowed_for_browser_smoke(client):
+    origin = "http://127.0.0.1:4173"
+    resp = client.options(
+        "/api/teams",
+        headers={
+            "Origin": origin,
+            "Access-Control-Request-Method": "GET",
+        },
+    )
+    assert resp.status_code == 200
+    assert resp.headers["access-control-allow-origin"] == origin
+
+
 def test_tournament_run_is_rate_limited_per_ip(client):
     # Limit is 6/min -- the first 6 should succeed (200), the 7th must be
     # rejected with 429 rather than silently letting an unbounded number of

@@ -33,7 +33,12 @@ with SessionLocal() as _db:
 
 app = FastAPI(title="WC2026 Sim API")
 
-_default_origins = "http://localhost:5173,http://127.0.0.1:5173"
+_default_origins = ",".join((
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:4173",
+    "http://127.0.0.1:4173",
+))
 allowed_origins = os.environ.get("ALLOWED_ORIGINS", _default_origins).split(",")
 
 app.add_middleware(

@@ -22,7 +22,14 @@ import type {
   TournamentSimulationOut,
 } from "../types/domain";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+function defaultApiBaseUrl(): string {
+  if (typeof window !== "undefined" && ["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+    return `${window.location.protocol}//${window.location.hostname}:8000`;
+  }
+  return "http://localhost:8000";
+}
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || defaultApiBaseUrl();
 
 async function getJson<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`);
