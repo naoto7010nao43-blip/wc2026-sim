@@ -1,0 +1,109 @@
+{
+  "beforeGeneratedAt": "2026-06-30T14:48:58.847626+00:00",
+  "afterGeneratedAt": "2026-06-30T14:48:58.900948+00:00",
+  "modelVersionBefore": "poisson-v1-rank60-order-neutral",
+  "modelVersionAfter": "poisson-v2-rank75-order-neutral",
+  "benchmarkMethod": "dual_order_average",
+  "overall": {
+    "before_matchup_count": 190,
+    "after_matchup_count": 190,
+    "average_favorite_win_pct_delta": 0.6,
+    "implausible_favorite_count_delta": -5.0,
+    "minimum_favorite_win_pct_delta": 0.1,
+    "maximum_favorite_win_pct_delta": 2.2
+  },
+  "rankGapBuckets": [
+    {
+      "rank_gap_bucket": "00-02",
+      "before_matchup_count": 36,
+      "after_matchup_count": 36,
+      "average_favorite_win_pct_delta": 0.2,
+      "implausible_favorite_count_delta": 0.0
+    },
+    {
+      "rank_gap_bucket": "03-05",
+      "before_matchup_count": 42,
+      "after_matchup_count": 42,
+      "average_favorite_win_pct_delta": 0.4,
+      "implausible_favorite_count_delta": -1.0
+    },
+    {
+      "rank_gap_bucket": "06-10",
+      "before_matchup_count": 53,
+      "after_matchup_count": 53,
+      "average_favorite_win_pct_delta": 0.7,
+      "implausible_favorite_count_delta": -1.0
+    },
+    {
+      "rank_gap_bucket": "11-20",
+      "before_matchup_count": 58,
+      "after_matchup_count": 58,
+      "average_favorite_win_pct_delta": 1.2,
+      "implausible_favorite_count_delta": -3.0
+    },
+    {
+      "rank_gap_bucket": "21+",
+      "before_matchup_count": 1,
+      "after_matchup_count": 1,
+      "average_favorite_win_pct_delta": 2.2,
+      "implausible_favorite_count_delta": 0.0
+    }
+  ],
+  "watchlistTeams": [
+    {
+      "team_id": "AUS",
+      "average_favorite_win_pct_delta": null,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": null
+    },
+    {
+      "team_id": "BIH",
+      "average_favorite_win_pct_delta": null,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": null
+    },
+    {
+      "team_id": "CRO",
+      "average_favorite_win_pct_delta": 0.5,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 0.5
+    },
+    {
+      "team_id": "JOR",
+      "average_favorite_win_pct_delta": null,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": null
+    },
+    {
+      "team_id": "MEX",
+      "average_favorite_win_pct_delta": 0.5,
+      "implausible_favorite_count_delta": -1.0,
+      "minimum_favorite_win_pct_delta": 0.5
+    },
+    {
+      "team_id": "NED",
+      "average_favorite_win_pct_delta": 0.5,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": 0.1
+    },
+    {
+      "team_id": "PAR",
+      "average_favorite_win_pct_delta": null,
+      "implausible_favorite_count_delta": 0.0,
+      "minimum_favorite_win_pct_delta": null
+    },
+    {
+      "team_id": "POR",
+      "average_favorite_win_pct_delta": 0.7,
+      "implausible_favorite_count_delta": -2.0,
+      "minimum_favorite_win_pct_delta": 0.3
+    }
+  ],
+  "evaluation": {
+    "status": "pass",
+    "watchlist_implausible_reduction": 3.0,
+    "warnings": []
+  },
+  "generatedAt": "2026-06-30T14:48:58.902431+00:00",
+  "note": "Order-neutral comparison for the rank75 calibration. This supersedes favorite-as-home benchmark framing for methodology decisions, while leaving production prediction behavior unchanged."
+}
