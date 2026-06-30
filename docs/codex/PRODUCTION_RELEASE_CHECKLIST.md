@@ -80,3 +80,11 @@ After production deploy finishes, run:
 ```
 
 This checks the public frontend routes plus the core backend API endpoints used by the release gate.
+
+Then run the content smoke:
+
+```powershell
+.\scripts\post_deploy_content_smoke.ps1 -FrontendBaseUrl "https://wc2026-sim-ten.vercel.app" -BackendBaseUrl "<production-backend-url>"
+```
+
+This verifies that the deployed frontend bundle contains the current match-detail/data markers, and that key backend JSON is served as UTF-8 with Japanese text intact rather than only returning HTTP 200.
