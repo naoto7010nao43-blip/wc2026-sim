@@ -89,3 +89,11 @@ Then run the content smoke:
 ```
 
 This verifies that the deployed frontend bundle contains the current match-detail/data markers, and that key backend JSON is served as UTF-8 with Japanese text intact rather than only returning HTTP 200.
+
+When Edge or Chrome is available, also run the browser smoke:
+
+```powershell
+.\scripts\post_deploy_browser_smoke.ps1 -FrontendBaseUrl "https://wc2026-sim-ten.vercel.app"
+```
+
+This opens the live frontend in a headless browser at desktop and mobile widths and fails on console errors, failed requests, likely mojibake markers, blank pages, or full-page horizontal overflow.
