@@ -1,4 +1,5 @@
 import type {
+  DataQualitySummary,
   ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
@@ -17,6 +18,7 @@ interface Props {
   sourceProvenanceAudit: SourceProvenanceAuditSummary | null;
   modelCalibration: ModelCalibrationSummary | null;
   releaseReadiness: ReleaseReadinessSummary | null;
+  dataQuality: DataQualitySummary | null;
   externalDataVerification: ExternalDataVerificationSummary | null;
   simulationStability: SimulationStabilitySummary | null;
   substitutionModelGap: SubstitutionModelGapSummary | null;
@@ -32,6 +34,13 @@ function bandLabel(band: string | null | undefined): string {
 function modelStatusLabel(status: string | null | undefined): string {
   if (status === "pass") return "検証上は合格";
   if (status === "review") return "レビュー要";
+  return "未読込";
+}
+
+function freshnessLabel(status: string | null | undefined): string {
+  if (status === "ok") return "良好";
+  if (status === "warning") return "一部注意";
+  if (status === "critical") return "再確認推奨";
   return "未読込";
 }
 
@@ -53,6 +62,7 @@ export function DataReviewOverviewPanel({
   sourceProvenanceAudit,
   modelCalibration,
   releaseReadiness,
+  dataQuality,
   externalDataVerification,
   simulationStability,
   substitutionModelGap,
@@ -74,8 +84,12 @@ export function DataReviewOverviewPanel({
   const externalMissingUrls = externalDataVerification?.sourceTraceability?.candidateMissingResolvableUrlCount ?? 0;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
   const releaseBlocked = releaseReadiness?.readyForManualPush === false;
+  const freshnessNeedsReview = dataQuality?.freshness_status === "critical" || dataQuality?.freshness_status === "warning";
 
   const actions = [
+    freshnessNeedsReview
+      ? `データ鮮度は${freshnessLabel(dataQuality?.freshness_status)}です。能力値・戦術値の反映前に最新ソースを再確認`
+      : null,
     highPriorityTeams > 0 ? `高優先度チーム ${highPriorityTeams}件をデータ更新候補として確認` : null,
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
     externalReadyForReview > 0 ? `外部調査のCodexレビュー候補 ${externalReadyForReview}件をseed反映前に精査` : null,
@@ -107,6 +121,11 @@ export function DataReviewOverviewPanel({
         />
         <Metric label="高優先度チーム" value={highPriorityTeams} tone={highPriorityTeams > 0 ? "warn" : "good"} />
         <Metric label="出典リスク選手" value={sourceRiskPlayers} tone={sourceRiskPlayers > 0 ? "warn" : "good"} />
+        <Metric
+          label="データ鮮度"
+          value={freshnessLabel(dataQuality?.freshness_status)}
+          tone={freshnessNeedsReview ? "warn" : "good"}
+        />
         <Metric
           label="外部調査進捗"
           value={`${externalCoveredTeams}/${externalTotalTeams}`}

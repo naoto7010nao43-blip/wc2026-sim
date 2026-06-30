@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
+import { DataFreshnessPanel } from "../components/DataFreshnessPanel";
 import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
 import { ExternalDataVerificationPanel } from "../components/ExternalDataVerificationPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
@@ -13,6 +14,7 @@ import { SquadGapPanel } from "../components/SquadGapPanel";
 import { SubstitutionModelGapPanel } from "../components/SubstitutionModelGapPanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
+  DataQualitySummary,
   ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
@@ -27,6 +29,7 @@ import type {
 } from "../types/domain";
 
 const REVIEW_SECTIONS = [
+  { id: "data-freshness", label: "鮮度" },
   { id: "model-calibration", label: "モデル" },
   { id: "simulation-stability", label: "確率安定性" },
   { id: "external-data", label: "外部調査" },
@@ -42,6 +45,8 @@ const REVIEW_SECTIONS = [
 export function DataReviewPage() {
   const [summary, setSummary] = useState<TeamReviewSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [dataQuality, setDataQuality] = useState<DataQualitySummary | null>(null);
+  const [dataQualityError, setDataQualityError] = useState<string | null>(null);
   const [squadGaps, setSquadGaps] = useState<SquadGapSummary | null>(null);
   const [squadGapsError, setSquadGapsError] = useState<string | null>(null);
   const [managerTrust, setManagerTrust] = useState<ManagerTacticalTrustSummary | null>(null);
@@ -64,6 +69,10 @@ export function DataReviewPage() {
   const [substitutionModelGapError, setSubstitutionModelGapError] = useState<string | null>(null);
 
   useEffect(() => {
+    api
+      .getDataQualitySummary()
+      .then(setDataQuality)
+      .catch(() => setDataQualityError("データ鮮度・品質情報の読み込みに失敗しました。"));
     api
       .getTeamDataReview()
       .then(setSummary)
@@ -130,6 +139,7 @@ export function DataReviewPage() {
         sourceProvenanceAudit={sourceProvenanceAudit}
         modelCalibration={modelCalibration}
         releaseReadiness={releaseReadiness}
+        dataQuality={dataQuality}
         externalDataVerification={externalDataVerification}
         simulationStability={simulationStability}
         substitutionModelGap={substitutionModelGap}
@@ -154,6 +164,16 @@ export function DataReviewPage() {
           </a>
         ))}
       </nav>
+
+      <section id="data-freshness" className="scroll-mt-4">
+        {dataQualityError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {dataQualityError}
+          </div>
+        )}
+        {!dataQuality && !dataQualityError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {dataQuality && <DataFreshnessPanel summary={dataQuality} />}
+      </section>
 
       <section id="model-calibration" className="scroll-mt-4">
         {modelCalibrationError && (
