@@ -109,7 +109,23 @@ if ($prediction.model_version -notmatch "^poisson-v") {
     throw "Prediction model_version is unexpected: $($prediction.model_version)"
 }
 Assert-HasJapanese "BRA/ARG prediction explanation" (($prediction.explanation | ForEach-Object { $_ }) -join " ")
-Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team data" -ForegroundColor Green
+
+$dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
+Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson
+$dataQuality = $dataQualityJson | ConvertFrom-Json
+if ($dataQuality.real_group_match_expected -ne 72) {
+    throw "Data quality real_group_match_expected is unexpected: $($dataQuality.real_group_match_expected)"
+}
+if ($dataQuality.real_group_match_count -ne $dataQuality.real_group_match_expected) {
+    throw "Data quality real group coverage is incomplete: $($dataQuality.real_group_match_count)/$($dataQuality.real_group_match_expected)"
+}
+if ($dataQuality.real_group_match_coverage_pct -ne 100.0) {
+    throw "Data quality real_group_match_coverage_pct is unexpected: $($dataQuality.real_group_match_coverage_pct)"
+}
+if ($dataQuality.real_knockout_match_count -lt 0) {
+    throw "Data quality real_knockout_match_count is invalid: $($dataQuality.real_knockout_match_count)"
+}
+Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
 Write-Host ""
 Write-Host "Post-deploy content smoke completed." -ForegroundColor Green
