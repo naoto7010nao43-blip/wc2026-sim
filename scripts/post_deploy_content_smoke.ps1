@@ -125,6 +125,13 @@ if ($dataQuality.real_group_match_coverage_pct -ne 100.0) {
 if ($dataQuality.real_knockout_match_count -lt 0) {
     throw "Data quality real_knockout_match_count is invalid: $($dataQuality.real_knockout_match_count)"
 }
+$allowedFreshnessStatus = @("ok", "warning", "critical")
+if ($allowedFreshnessStatus -notcontains [string]$dataQuality.freshness_status) {
+    throw "Data quality freshness_status is unexpected: $($dataQuality.freshness_status)"
+}
+if ($null -eq $dataQuality.freshness_critical_count -or $null -eq $dataQuality.freshness_warning_count) {
+    throw "Data quality freshness counts are missing"
+}
 Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
 Write-Host ""
