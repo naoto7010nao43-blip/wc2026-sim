@@ -2,6 +2,7 @@ param(
     [switch]$SkipBackendTests,
     [switch]$SkipFrontendChecks,
     [switch]$SkipEncodingAudit,
+    [switch]$SkipRealResultsAudit,
     [switch]$SkipReleaseReadiness,
     [switch]$SkipGitStatus
 )
@@ -67,6 +68,12 @@ try {
     if (-not $SkipEncodingAudit) {
         Invoke-Step "Text encoding audit" {
             & $backendPython "backend\scripts\audit_text_encoding.py"
+        }
+    }
+
+    if (-not $SkipRealResultsAudit) {
+        Invoke-Step "Real results integrity audit" {
+            & $backendPython "backend\scripts\audit_real_results_integrity.py"
         }
     }
 
