@@ -147,6 +147,9 @@ try {
     $env:WC2026_BACKEND_BASE_URL = $BackendBaseUrl
     $env:WC2026_TIMEOUT_SEC = [string]$TimeoutSec
     node $scriptPath
+    if ($LASTEXITCODE -ne 0) {
+        throw "Post-deploy browser smoke failed with exit code $LASTEXITCODE"
+    }
 } finally {
     Remove-Item Env:\WC2026_BROWSER_PATH -ErrorAction SilentlyContinue
     Remove-Item Env:\WC2026_FRONTEND_BASE_URL -ErrorAction SilentlyContinue
