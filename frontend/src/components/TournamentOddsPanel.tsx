@@ -3,7 +3,8 @@ import { api } from "../api/client";
 import { TeamBadge } from "./TeamBadge";
 import type { SimulationStabilitySummary, TournamentSimulationOut } from "../types/domain";
 
-const ITERATIONS = 500;
+const DEFAULT_ITERATIONS = 500;
+const ITERATION_OPTIONS = [500, 1000, 2000, 3000] as const;
 const TOP_N = 5;
 
 function topEntries(pct: Record<string, number>, n: number): [string, number][] {
@@ -23,6 +24,7 @@ function sumTopEntries(pct: Record<string, number>, n: number): number {
 export function TournamentOddsPanel() {
   const [result, setResult] = useState<TournamentSimulationOut | null>(null);
   const [stability, setStability] = useState<SimulationStabilitySummary | null>(null);
+  const [iterations, setIterations] = useState<number>(DEFAULT_ITERATIONS);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -45,7 +47,7 @@ export function TournamentOddsPanel() {
     setLoading(true);
     setError(null);
     try {
-      const data = await api.simulateTournamentMonteCarlo({ iterations: ITERATIONS });
+      const data = await api.simulateTournamentMonteCarlo({ iterations });
       setResult(data);
     } catch (e) {
       setError(String(e));
@@ -58,17 +60,37 @@ export function TournamentOddsPanel() {
     <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
       <h3 className="text-lg font-bold">優勝確率・モンテカルロ推定</h3>
       <p className="mt-1 text-sm text-slate-400">
-        1回のトーナメント結果だけではなく、{ITERATIONS}回のシミュレーションから勝ち上がりやすさを確認できます。
+        1回のトーナメント結果だけではなく、複数回のシミュレーションから勝ち上がりやすさを確認できます。
         計算負荷が高いため、ボタンを押したときだけ実行します。
       </p>
 
-      <button
-        onClick={run}
-        disabled={loading}
-        className="mt-4 rounded-lg bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {loading ? "計算中..." : result ? "再計算する" : "優勝確率を計算する"}
-      </button>
+      <div className="mt-4 flex flex-wrap items-end gap-3">
+        <label className="block">
+          <span className="text-xs text-slate-500">試行回数</span>
+          <select
+            value={iterations}
+            onChange={(event) => setIterations(Number(event.target.value))}
+            disabled={loading}
+            className="mt-1 rounded-md border border-slate-600 bg-slate-900 px-2 py-2 text-sm text-slate-100 outline-none focus:border-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {ITERATION_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option.toLocaleString("ja-JP")}回
+              </option>
+            ))}
+          </select>
+        </label>
+        <button
+          onClick={run}
+          disabled={loading}
+          className="rounded-lg bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {loading ? "計算中..." : result ? "再計算する" : "優勝確率を計算する"}
+        </button>
+        <p className="max-w-md text-xs leading-relaxed text-slate-500">
+          試行回数を増やすほど確率のぶれは小さくなりますが、計算には時間がかかります。
+        </p>
+      </div>
 
       {error && <p className="mt-3 text-sm text-rose-400">優勝確率の計算に失敗しました: {error}</p>}
 
@@ -111,7 +133,7 @@ export function TournamentOddsPanel() {
                 優勝候補集中度は、上位3チームの優勝確率合計です。高いほど大会が少数候補に寄っています。
               </p>
               <p className="rounded-lg border border-slate-700/80 bg-slate-900/45 p-3">
-                各ラウンドの候補数は、{ITERATIONS}回の試行で1回以上その地点に到達したチーム数です。
+                各ラウンドの候補数は、{result.iterations}回の試行で1回以上その地点に到達したチーム数です。
               </p>
             </div>
           </div>
