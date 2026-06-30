@@ -4,13 +4,14 @@ import { api } from "../api/client";
 import { MatchPredictionPanel } from "../components/MatchPredictionPanel";
 import { TacticalMatchupPanel } from "../components/TacticalMatchupPanel";
 import { countryNameJa } from "../data/countryNamesJa";
-import type { TeamSummary } from "../types/domain";
+import type { DataQualitySummary, TeamSummary } from "../types/domain";
 
 export function SimulatorPage() {
   const navigate = useNavigate();
   const [teams, setTeams] = useState<TeamSummary[]>([]);
   const [homeTeamId, setHomeTeamId] = useState("");
   const [awayTeamId, setAwayTeamId] = useState("");
+  const [dataQuality, setDataQuality] = useState<DataQualitySummary | null>(null);
   const [seed, setSeed] = useState("");
   const [decisive, setDecisive] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,21 @@ export function SimulatorPage() {
         setAwayTeamId(sorted[1].id);
       }
     });
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .getDataQualitySummary()
+      .then((data) => {
+        if (!cancelled) setDataQuality(data);
+      })
+      .catch(() => {
+        if (!cancelled) setDataQuality(null);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const homeTeam = useMemo(() => teams.find((t) => t.id === homeTeamId), [teams, homeTeamId]);
@@ -152,7 +168,7 @@ export function SimulatorPage() {
       <TacticalMatchupPanel homeTeam={homeTeam} awayTeam={awayTeam} />
 
       {homeTeamId && awayTeamId && homeTeamId !== awayTeamId && (
-        <MatchPredictionPanel homeTeamId={homeTeamId} awayTeamId={awayTeamId} />
+        <MatchPredictionPanel homeTeamId={homeTeamId} awayTeamId={awayTeamId} dataQuality={dataQuality} />
       )}
     </div>
   );

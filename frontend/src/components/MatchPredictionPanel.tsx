@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import { TeamBadge } from "./TeamBadge";
-import type { MatchPredictionOut } from "../types/domain";
+import type { DataQualitySummary, MatchPredictionOut } from "../types/domain";
 
 interface Props {
   homeTeamId: string;
   awayTeamId: string;
+  dataQuality?: DataQualitySummary | null;
 }
 
 interface ScopedError {
@@ -14,7 +15,13 @@ interface ScopedError {
   message: string;
 }
 
-export function MatchPredictionPanel({ homeTeamId, awayTeamId }: Props) {
+function freshnessLabel(status: string): string {
+  if (status === "critical") return "再確認推奨";
+  if (status === "warning") return "一部注意";
+  return "良好";
+}
+
+export function MatchPredictionPanel({ homeTeamId, awayTeamId, dataQuality }: Props) {
   const [prediction, setPrediction] = useState<MatchPredictionOut | null>(null);
   const [error, setError] = useState<ScopedError | null>(null);
 
@@ -108,6 +115,11 @@ export function MatchPredictionPanel({ homeTeamId, awayTeamId }: Props) {
       <p className="mt-3 text-[11px] text-slate-500">
         モデル: {prediction.model_version} / データ信頼度: {prediction.data_confidence}
       </p>
+      {dataQuality && dataQuality.freshness_status !== "ok" && (
+        <div className="mt-2 rounded border border-amber-500/25 bg-amber-500/10 px-2 py-1.5 text-[11px] leading-relaxed text-amber-100/85">
+          基礎データ: {freshnessLabel(dataQuality.freshness_status)}。能力値・戦術値の追加反映前に最新ソースの再確認が必要です。
+        </div>
+      )}
       <p className="mt-1 text-[11px] text-slate-500">{prediction.disclaimer}</p>
     </div>
   );
