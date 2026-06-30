@@ -15174,6 +15174,36 @@
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
   },
   {
+    "playerId": "JPN_SEKO",
+    "teamId": "JPN",
+    "teamCode": "JPN",
+    "name": "Ayumu Seko",
+    "nameJa": "瀬古歩夢",
+    "age": 26,
+    "dateOfBirth": "07/06/2000",
+    "shirtNumber": null,
+    "primaryPosition": "CB",
+    "secondaryPositions": [],
+    "preferredFoot": "unknown",
+    "heightCm": 185,
+    "weightKg": null,
+    "clubName": "Le Havre AC (FRA)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": null,
+    "careerStats": null,
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 247264): overall 68, CB",
+      "fcratings.com EA FC 26 profile (Le Havre AC, 185cm, age 26)"
+    ],
+    "staminaMax": 90,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-06-30T00:00:00+00:00"
+  },
+  {
     "playerId": "JPN_SUZUKI_ZION",
     "teamId": "JPN",
     "teamCode": "JPN",

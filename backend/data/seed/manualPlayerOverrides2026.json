@@ -9,6 +9,15 @@
     "overrides": { "startingProbability": 92 }
   },
   {
+    "playerId": "JPN_SEKO",
+    "name": "Ayumu Seko",
+    "reason": "Started in Japan's back three (3-4-2-1) at the 2026 World Cup (e.g. vs Sweden: Seko, Itakura, H. Ito). Was missing from the roster, so a winger was wrongly slotted at the 3rd centre-back.",
+    "source": "World Soccer Talk / beIN Sports confirmed 2026 WC group-stage lineups",
+    "sourceUrl": "https://worldsoccertalk.com/world-cup/japan-vs-sweden-projected-lineups-for-the-2026-world-cup-group-f-game/",
+    "observedDate": "2026-06-30",
+    "overrides": { "startingProbability": 75 }
+  },
+  {
     "playerId": "GER_NEUER",
     "name": "Manuel Neuer",
     "reason": "Germany's confirmed No.1 GK at the 2026 World Cup (came out of international retirement); started the group stage ahead of Baumann.",

@@ -68,7 +68,10 @@ def build_player_rows(players_raw: list[dict]) -> list[dict]:
             stage_a_by_id[p["id"]] = stage_a_gk_attributes(inp)
         else:
             stage_a_by_id[p["id"]] = stage_a_raw_attributes(inp)
-        market_value_by_id[p["id"]] = p.get("market_value_eur", 0)
+        # `or 0` (not a default arg) so an explicit null market value -- e.g. a
+        # newly added player whose value isn't sourced yet -- is treated as 0
+        # rather than crashing the percentile sort with a None.
+        market_value_by_id[p["id"]] = p.get("market_value_eur") or 0
 
     rows = []
     for p in players_raw:

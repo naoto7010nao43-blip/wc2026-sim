@@ -10832,6 +10832,23 @@
     "name_ja": "ヴァウト・ウェホルスト"
   },
   {
+    "id": "JPN_SEKO",
+    "team_id": "JPN",
+    "name": "Ayumu Seko",
+    "age": 26,
+    "primary_position": "CB",
+    "secondary_positions": [],
+    "career_stats": {},
+    "market_value_eur": null,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 official player ratings (player 247264): overall 68, CB",
+      "fcratings.com EA FC 26 profile (Le Havre AC, 185cm, age 26)"
+    ],
+    "stamina_max": 90,
+    "name_ja": "瀬古歩夢"
+  },
+  {
     "id": "JPN_SUZUKI_ZION",
     "team_id": "JPN",
     "name": "Zion Suzuki",

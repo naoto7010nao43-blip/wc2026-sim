@@ -8260,6 +8260,23 @@
     "physical": 66
   },
   {
+    "playerId": "JPN_SEKO",
+    "name": "Ayumu Seko",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/ayumu-seko/247264",
+    "sourceDataset": "EA official player ratings page (FC 26), observed 2026-06-30",
+    "eaPlayerId": "247264",
+    "position": "CB",
+    "observedDate": "2026-06-30",
+    "overall": 68,
+    "pace": 64,
+    "shooting": 36,
+    "passing": 54,
+    "dribbling": 58,
+    "defending": 68,
+    "physical": 74
+  },
+  {
     "playerId": "JPN_SUZUKI_ZION",
     "name": "Zion Suzuki",
     "source": "EA SPORTS FC 26",
