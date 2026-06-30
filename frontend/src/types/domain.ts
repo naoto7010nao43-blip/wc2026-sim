@@ -256,6 +256,7 @@ export interface ReleaseReadinessSummary {
   note: string;
   readyForManualPush: boolean;
   blockers: string[];
+  nonBlockingWarnings: string[];
   currentTask: ReleaseCurrentTaskState | null;
   gitStatusShort: string[];
   modelVersions: ReleaseModelVersions | null;

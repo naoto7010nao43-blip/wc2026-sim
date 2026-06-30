@@ -1,5 +1,6 @@
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -9,6 +10,7 @@ from build_release_readiness_report import (
     build_report,
     current_task_state,
     model_version_summary,
+    non_blocking_warnings,
     release_blockers,
     required_report_status,
 )
@@ -124,6 +126,31 @@ def test_release_blockers_include_active_task_dirty_status_missing_report_and_fa
     assert len(blockers) == 4
 
 
+def test_non_blocking_warnings_include_stale_freshness_policy(tmp_path):
+    seed_dir = tmp_path / "seed"
+    seed_dir.mkdir()
+    stale_timestamp = (datetime.now(timezone.utc) - timedelta(hours=48)).isoformat()
+    write_json(
+        seed_dir / "metadata.json",
+        {
+            "freshnessPolicy": {"officialRosterMaxAgeHours": 24},
+            "sources": [
+                {
+                    "name": "FIFA Official Squad feed",
+                    "status": "active",
+                    "lastChecked": stale_timestamp,
+                }
+            ],
+        },
+    )
+
+    warnings = non_blocking_warnings(seed_dir)
+
+    assert warnings
+    assert "公式スカッドfeed" in warnings[0]
+    assert "公開は可能" in warnings[0]
+
+
 def test_build_report_not_ready_when_task_active(tmp_path):
     write_json(
         tmp_path / "prediction_benchmark_comparison_rank75_2026-06-23.json",
@@ -138,10 +165,12 @@ def test_build_report_not_ready_when_task_active(tmp_path):
         current_task_text="## Active Claude Code Task\n\nReady:\n- docs/specs/016.md",
         git_status=[],
         reports_dir=tmp_path,
+        seed_dir=tmp_path / "missing-seed",
     )
     assert report["readyForManualPush"] is False
     assert "CURRENT_TASK.md still lists an active Ready task." in report["blockers"]
     assert report["rank75Benchmark"]["status"] == "pass"
+    assert "nonBlockingWarnings" in report
 
 
 def test_build_report_lists_all_post_deploy_smoke_commands(tmp_path):
@@ -157,6 +186,7 @@ def test_build_report_lists_all_post_deploy_smoke_commands(tmp_path):
         current_task_text="None. Awaiting the next Codex-authored Ready spec.",
         git_status=[],
         reports_dir=tmp_path,
+        seed_dir=tmp_path / "missing-seed",
     )
 
     commands = "\n".join(report["requiredCommands"])

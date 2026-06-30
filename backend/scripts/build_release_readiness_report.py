@@ -25,9 +25,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from check_data_freshness import check_freshness
+
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = BACKEND_DIR.parent
 REPORTS_DIR = BACKEND_DIR / "reports"
+SEED_DIR = BACKEND_DIR / "data" / "seed"
 CURRENT_TASK_PATH = REPO_ROOT / "docs" / "specs" / "CURRENT_TASK.md"
 
 REQUIRED_REPORT_PATTERNS = (
@@ -167,11 +170,34 @@ def release_blockers(
     return blockers
 
 
+def freshness_warning_label(message: str) -> str:
+    if message.startswith("FIFA Official Squad feed: stale"):
+        return "公式スカッドfeedの最終確認が鮮度ポリシーを超過しています。公開は可能ですが、能力値・戦術値の追加反映前に再確認してください。"
+    if message.startswith("Existing project seed data"):
+        return "既存seedデータ（経歴・市場価値・出典）の最終確認が鮮度ポリシーを超過しています。公開は可能ですが、精度改善作業では最新ソースを優先してください。"
+    if message.startswith("metadata.lastUpdated"):
+        return "seedメタデータの最終更新日が鮮度ポリシーを超過しています。"
+    return f"データ鮮度注意: {message}"
+
+
+def non_blocking_warnings(seed_dir: Path = SEED_DIR) -> list[str]:
+    metadata_path = seed_dir / "metadata.json"
+    if not metadata_path.exists():
+        return ["metadata.jsonが見つからないため、データ鮮度を確認できません。"]
+    metadata = load_json(metadata_path)
+    return [
+        freshness_warning_label(finding["message"])
+        for finding in check_freshness(metadata)
+        if finding.get("level") in {"critical", "warning"}
+    ]
+
+
 def build_report(
     *,
     current_task_text: str | None = None,
     git_status: list[str] | None = None,
     reports_dir: Path = REPORTS_DIR,
+    seed_dir: Path = SEED_DIR,
 ) -> dict:
     current_task_text = current_task_text if current_task_text is not None else CURRENT_TASK_PATH.read_text(encoding="utf-8")
     git_status = git_status if git_status is not None else git_status_short()
@@ -179,6 +205,7 @@ def build_report(
     reports = required_report_status(reports_dir)
     benchmark = benchmark_summary(reports_dir)
     model_versions = model_version_summary(reports_dir)
+    warnings = non_blocking_warnings(seed_dir)
     blockers = release_blockers(
         current_task=task,
         git_status=git_status,
@@ -193,6 +220,7 @@ def build_report(
         ),
         "readyForManualPush": not blockers,
         "blockers": blockers,
+        "nonBlockingWarnings": warnings,
         "currentTask": task,
         "gitStatusShort": git_status,
         "modelVersions": model_versions,

@@ -15,6 +15,7 @@ function blockerLabel(blocker: string): string {
 export function ReleaseReadinessPanel({ summary }: Props) {
   const presentReports = summary.requiredReports.filter((report) => report.present).length;
   const missingReports = summary.requiredReports.length - presentReports;
+  const warningCount = summary.nonBlockingWarnings.length;
 
   return (
     <section className="rounded-lg border border-slate-700 bg-slate-800/40 p-4">
@@ -32,11 +33,12 @@ export function ReleaseReadinessPanel({ summary }: Props) {
         </span>
       </div>
 
-      <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] md:grid-cols-4">
+      <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] md:grid-cols-5">
         <Metric label="必須レポート" value={`${presentReports}/${summary.requiredReports.length}`} tone={missingReports === 0 ? "good" : "warn"} />
         <Metric label="不足レポート" value={missingReports} tone={missingReports === 0 ? "good" : "warn"} />
         <Metric label="作業ツリー" value={summary.gitStatusShort.length === 0 ? "clean" : `${summary.gitStatusShort.length}件`} tone={summary.gitStatusShort.length === 0 ? "good" : "warn"} />
         <Metric label="Benchmark" value={summary.rank75Benchmark?.status ?? "未生成"} tone={summary.rank75Benchmark?.status === "pass" ? "good" : "warn"} />
+        <Metric label="注意" value={warningCount} tone={warningCount === 0 ? "good" : "warn"} />
       </div>
 
       {summary.modelVersions && (
@@ -59,6 +61,17 @@ export function ReleaseReadinessPanel({ summary }: Props) {
           <div className="mt-2 space-y-1 text-[11px] text-amber-100/85">
             {summary.blockers.map((blocker) => (
               <p key={blocker}>・{blockerLabel(blocker)}</p>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {warningCount > 0 && (
+        <div className="mt-3 rounded border border-sky-500/25 bg-sky-500/10 p-3">
+          <p className="text-[11px] font-semibold text-sky-200">公開は止めないが見ておく注意</p>
+          <div className="mt-2 space-y-1 text-[11px] text-sky-100/85">
+            {summary.nonBlockingWarnings.map((warning) => (
+              <p key={warning}>・{warning}</p>
             ))}
           </div>
         </div>

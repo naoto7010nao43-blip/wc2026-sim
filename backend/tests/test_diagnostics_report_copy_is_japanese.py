@@ -35,6 +35,7 @@ COPY_FIELDS = {
     "precisionRiskJa",
     "evidenceNeededJa",
     "recommendedNextAction",
+    "nonBlockingWarnings",
 }
 
 

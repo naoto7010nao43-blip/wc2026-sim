@@ -45,6 +45,7 @@ def get_release_readiness_summary(reports_dir: Path = REPORTS_DIR) -> dict:
             "note": "本番反映可否レポートがまだ生成されていません。",
             "readyForManualPush": False,
             "blockers": ["release readiness report is missing"],
+            "nonBlockingWarnings": [],
             "currentTask": None,
             "gitStatusShort": [],
             "modelVersions": None,

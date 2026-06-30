@@ -77,7 +77,8 @@ def test_release_readiness_endpoint_returns_200_with_expected_top_level_fields(c
     body = response.json()
     for field in (
         "generatedAt", "note", "readyForManualPush", "blockers", "currentTask",
-        "gitStatusShort", "modelVersions", "rank75Benchmark", "requiredReports", "requiredCommands",
+        "nonBlockingWarnings", "gitStatusShort", "modelVersions", "rank75Benchmark", "requiredReports",
+        "requiredCommands",
     ):
         assert field in body
 
@@ -184,6 +185,7 @@ def test_get_release_readiness_summary_is_read_only(tmp_path):
         "note": "test",
         "readyForManualPush": True,
         "blockers": [],
+        "nonBlockingWarnings": [],
         "currentTask": {"hasActiveReadyTask": False, "awaitingNextSpec": True, "latestCompletedSpecText": None},
         "gitStatusShort": [],
         "modelVersions": {"baselineModelVersion": "a", "currentModelVersion": "b"},

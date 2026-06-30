@@ -38,6 +38,7 @@ class ReleaseReadinessSummary(BaseModel):
     note: str
     readyForManualPush: bool
     blockers: list[str]
+    nonBlockingWarnings: list[str] = []
     currentTask: ReleaseCurrentTaskState | None
     gitStatusShort: list[str]
     modelVersions: ReleaseModelVersions | None
