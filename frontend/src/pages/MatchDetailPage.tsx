@@ -33,6 +33,12 @@ function fmt(value: number | null): string {
 }
 
 type MatchKind = "real" | "detailed_simulation" | "predicted_detail" | "poisson";
+type TeamPairState = {
+  homeId: string;
+  awayId: string;
+  home: TeamOut;
+  away: TeamOut;
+};
 
 function matchKindOf(match: MatchResult): MatchKind {
   if (match.is_real) return "real";
@@ -80,8 +86,7 @@ function StatRow({ label, home, away, homePct }: { label: string; home: string; 
 export function MatchDetailPage() {
   const { matchId } = useParams<{ matchId: string }>();
   const [match, setMatch] = useState<MatchResult | null>(null);
-  const [homeTeam, setHomeTeam] = useState<TeamOut | null>(null);
-  const [awayTeam, setAwayTeam] = useState<TeamOut | null>(null);
+  const [teamPair, setTeamPair] = useState<TeamPairState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -114,16 +119,13 @@ export function MatchDetailPage() {
   useEffect(() => {
     if (!homeId || !awayId) return;
     let cancelled = false;
-    setHomeTeam(null);
-    setAwayTeam(null);
     Promise.all([api.getTeam(homeId), api.getTeam(awayId)])
       .then(([h, a]) => {
         if (cancelled) return;
-        setHomeTeam(h);
-        setAwayTeam(a);
+        setTeamPair({ homeId, awayId, home: h, away: a });
       })
       .catch(() => {
-        /* intro panel is optional; ignore */
+        if (!cancelled) setTeamPair(null);
       });
     return () => {
       cancelled = true;
@@ -164,6 +166,10 @@ export function MatchDetailPage() {
   const matchKind = matchKindOf(match);
   const hasEvents = match.events.length > 0;
   const showRatingsSection = match.is_real || hasEvents;
+  const homeTeam =
+    teamPair?.homeId === match.home_team_id && teamPair.awayId === match.away_team_id ? teamPair.home : null;
+  const awayTeam =
+    teamPair?.homeId === match.home_team_id && teamPair.awayId === match.away_team_id ? teamPair.away : null;
 
   return (
     <div className="space-y-4">
