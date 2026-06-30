@@ -31,22 +31,32 @@ function fmt(value: number | null): string {
   return value == null ? "-" : String(value);
 }
 
-type MatchKind = "real" | "detailed_simulation" | "poisson";
+type MatchKind = "real" | "detailed_simulation" | "predicted_detail" | "poisson";
 
 function matchKindOf(match: MatchResult): MatchKind {
   if (match.is_real) return "real";
+  // Poisson-model matches carry a derived narrative layer (starting XIs,
+  // possession, shots, goal scorers) on top of the predicted scoreline --
+  // distinct from the old event-by-event micro-simulator, which sets no
+  // data_source. Be honest about which one produced this match.
+  if (match.data_source === "poisson-model") {
+    return match.events.length > 0 ? "predicted_detail" : "poisson";
+  }
   return match.events.length > 0 ? "detailed_simulation" : "poisson";
 }
 
 const MATCH_KIND_DESCRIPTIONS: Record<MatchKind, string> = {
   real: "実際に行われた試合の結果です。",
   detailed_simulation: "選手データに基づく、イベント単位の詳細シミュレーション結果です。",
+  predicted_detail:
+    "期待得点モデルが予測したスコアに、選手データから推定したスタッツ（ボール保持率・シュート数）と得点者を付加した結果です。スタッツと得点者は推定であり、実際の試合ではありません。",
   poisson: "期待得点モデルによるスコア予測です。イベント再現や選手採点はありません。",
 };
 
 const NO_EVENTS_DESCRIPTIONS: Record<MatchKind, string> = {
   real: "この試合は結果データのみのため、イベント再現は利用できません。",
   detailed_simulation: "この試合はイベントデータが記録されていないため、イベント再現は利用できません。",
+  predicted_detail: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
   poisson: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
 };
 
@@ -138,6 +148,8 @@ export function MatchDetailPage() {
             <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-400">実結果</span>
           ) : matchKind === "detailed_simulation" ? (
             <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">詳細シミュレーション</span>
+          ) : matchKind === "predicted_detail" ? (
+            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">予測スコア＋推定スタッツ</span>
           ) : (
             <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">スコア予測モデル</span>
           )}
