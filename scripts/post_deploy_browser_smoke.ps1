@@ -1,5 +1,6 @@
 param(
     [string]$FrontendBaseUrl = "https://wc2026-sim-ten.vercel.app",
+    [string]$BackendBaseUrl = "",
     [int]$TimeoutSec = 45,
     [switch]$SkipPlaywrightInstall
 )
@@ -44,6 +45,7 @@ $js = @'
   const { chromium } = require("playwright");
   const browserPath = process.env.WC2026_BROWSER_PATH;
   const base = process.env.WC2026_FRONTEND_BASE_URL.replace(/\/$/, "");
+  const backendBase = (process.env.WC2026_BACKEND_BASE_URL || "").replace(/\/$/, "");
   const timeoutMs = Number(process.env.WC2026_TIMEOUT_SEC || "45") * 1000;
   const routes = ["/", "/tournament", "/simulate", "/teams", "/teams/BRA", "/data-review"];
   const viewports = [
@@ -58,6 +60,26 @@ $js = @'
     String.fromCodePoint(0x00c3),
     String.fromCodePoint(0x00e3),
   ];
+
+  if (backendBase) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const response = await fetch(`${backendBase}/api/matches/simulate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ home_team_id: "BRA", away_team_id: "ARG", seed: 20260630, allow_draw: true }),
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error(`sample match simulation failed with HTTP ${response.status}`);
+      const match = await response.json();
+      if (!match.id) throw new Error("sample match simulation did not return an id");
+      routes.push(`/matches/${match.id}`);
+      console.log(`sample match detail route: /matches/${match.id}`);
+    } finally {
+      clearTimeout(timer);
+    }
+  }
 
   const browser = await chromium.launch({ executablePath: browserPath, headless: true });
   const failures = [];
@@ -122,11 +144,13 @@ Push-Location $tmp
 try {
     $env:WC2026_BROWSER_PATH = $browserPath
     $env:WC2026_FRONTEND_BASE_URL = $FrontendBaseUrl
+    $env:WC2026_BACKEND_BASE_URL = $BackendBaseUrl
     $env:WC2026_TIMEOUT_SEC = [string]$TimeoutSec
     node $scriptPath
 } finally {
     Remove-Item Env:\WC2026_BROWSER_PATH -ErrorAction SilentlyContinue
     Remove-Item Env:\WC2026_FRONTEND_BASE_URL -ErrorAction SilentlyContinue
+    Remove-Item Env:\WC2026_BACKEND_BASE_URL -ErrorAction SilentlyContinue
     Remove-Item Env:\WC2026_TIMEOUT_SEC -ErrorAction SilentlyContinue
     Pop-Location
 }

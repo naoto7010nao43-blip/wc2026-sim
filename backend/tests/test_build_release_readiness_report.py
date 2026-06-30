@@ -164,3 +164,5 @@ def test_build_report_lists_all_post_deploy_smoke_commands(tmp_path):
     assert "post_deploy_smoke.ps1" in commands
     assert "post_deploy_content_smoke.ps1" in commands
     assert "post_deploy_browser_smoke.ps1" in commands
+    assert "post_deploy_browser_smoke.ps1 -FrontendBaseUrl" in commands
+    assert "post_deploy_browser_smoke.ps1" in commands and "BackendBaseUrl" in commands

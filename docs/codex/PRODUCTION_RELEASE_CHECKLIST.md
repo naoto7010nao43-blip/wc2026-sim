@@ -93,7 +93,7 @@ This verifies that the deployed frontend bundle contains the current match-detai
 When Edge or Chrome is available, also run the browser smoke:
 
 ```powershell
-.\scripts\post_deploy_browser_smoke.ps1 -FrontendBaseUrl "https://wc2026-sim-ten.vercel.app"
+.\scripts\post_deploy_browser_smoke.ps1 -FrontendBaseUrl "https://wc2026-sim-ten.vercel.app" -BackendBaseUrl "<production-backend-url>"
 ```
 
-This opens the live frontend in a headless browser at desktop and mobile widths and fails on console errors, failed requests, likely mojibake markers, blank pages, or full-page horizontal overflow.
+This opens the live frontend in a headless browser at desktop and mobile widths, creates one deterministic sample match when a backend URL is provided, and fails on console errors, failed requests, likely mojibake markers, blank pages, or full-page horizontal overflow.
