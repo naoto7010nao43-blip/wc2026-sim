@@ -146,12 +146,21 @@ def _build_events_legacy(db: Session, goals: list[dict]) -> list[dict]:
     out = []
     for goal in goals:
         scorer_team_id = goal["team_id"]
-        player_id, display_name = _find_player(
-            db, scorer_team_id, goal["scorer_name"], goal.get("scorer_name_ja")
-        )
+        # An own goal is credited to the benefiting team (scorer_team_id) but
+        # the scorer plays for the opponent, so don't link/highlight him as one
+        # of the benefiting team's roster players.
+        if goal.get("own_goal"):
+            suffix = "(オウンゴール)"
+            display_name = goal.get("scorer_name_ja") or goal["scorer_name"]
+            player_id = None
+        else:
+            player_id, display_name = _find_player(
+                db, scorer_team_id, goal["scorer_name"], goal.get("scorer_name_ja")
+            )
+            suffix = "(PK)" if goal.get("penalty") else ""
         out.append(make_event(
             min(goal["minute"], 90), "goal", scorer_team_id,
-            f"{display_name} がゴール!",
+            f"{display_name}{suffix} がゴール!",
             player_id=player_id,
         ))
     return out

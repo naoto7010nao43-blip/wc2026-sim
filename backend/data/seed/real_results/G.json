@@ -5,10 +5,28 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-15",
-    "stats": {"home_possession_pct": 54, "away_possession_pct": 46, "home_shots": 15, "away_shots": 14, "home_shots_on_target": 3, "away_shots_on_target": 3, "home_yellow_cards": 2, "away_yellow_cards": 2},
+    "stats": {
+      "home_possession_pct": 54,
+      "away_possession_pct": 46,
+      "home_shots": 15,
+      "away_shots": 14,
+      "home_shots_on_target": 3,
+      "away_shots_on_target": 3,
+      "home_yellow_cards": 2,
+      "away_yellow_cards": 2
+    },
     "goals": [
-      {"minute": 19, "team_id": "EGY", "scorer_name": "Emam Ashour"},
-      {"minute": 66, "team_id": "BEL", "scorer_name": "Mohamed Hany (own goal)", "scorer_name_ja": "モハメド・ハニー(オウンゴール)"}
+      {
+        "minute": 19,
+        "team_id": "EGY",
+        "scorer_name": "Emam Ashour"
+      },
+      {
+        "minute": 66,
+        "team_id": "BEL",
+        "scorer_name": "Mohamed Hany (own goal)",
+        "scorer_name_ja": "モハメド・ハニー(オウンゴール)"
+      }
     ]
   },
   {
@@ -17,12 +35,34 @@
     "home_score": 2,
     "away_score": 2,
     "date": "2026-06-15",
-    "stats": {"home_possession_pct": 48, "away_possession_pct": 52, "home_shots": 17, "away_shots": 14},
+    "stats": {
+      "home_possession_pct": 48,
+      "away_possession_pct": 52,
+      "home_shots": 17,
+      "away_shots": 14
+    },
     "goals": [
-      {"minute": 7, "team_id": "NZL", "scorer_name": "Elijah Just"},
-      {"minute": 32, "team_id": "IRN", "scorer_name": "Ramin Rezaeian"},
-      {"minute": 54, "team_id": "NZL", "scorer_name": "Elijah Just"},
-      {"minute": 64, "team_id": "IRN", "scorer_name": "Mohammad Mohebi", "scorer_name_ja": "モハマド・モヘビ"}
+      {
+        "minute": 7,
+        "team_id": "NZL",
+        "scorer_name": "Elijah Just"
+      },
+      {
+        "minute": 32,
+        "team_id": "IRN",
+        "scorer_name": "Ramin Rezaeian"
+      },
+      {
+        "minute": 54,
+        "team_id": "NZL",
+        "scorer_name": "Elijah Just"
+      },
+      {
+        "minute": 64,
+        "team_id": "IRN",
+        "scorer_name": "Mohammad Mohebi",
+        "scorer_name_ja": "モハマド・モヘビ"
+      }
     ]
   },
   {
@@ -31,12 +71,41 @@
     "home_score": 1,
     "away_score": 3,
     "date": "2026-06-21",
-    "stats": {"home_possession_pct": 44, "away_possession_pct": 56, "home_shots": 8, "away_shots": 10, "home_shots_on_target": 5, "away_shots_on_target": 7, "home_yellow_cards": 2, "away_yellow_cards": 1},
+    "stats": {
+      "home_possession_pct": 44,
+      "away_possession_pct": 56,
+      "home_shots": 8,
+      "away_shots": 10,
+      "home_shots_on_target": 5,
+      "away_shots_on_target": 7,
+      "home_yellow_cards": 2,
+      "away_yellow_cards": 1
+    },
     "goals": [
-      {"minute": 15, "team_id": "NZL", "scorer_name": "Finn Surman", "scorer_name_ja": "フィン・サーマン"},
-      {"minute": 58, "team_id": "EGY", "scorer_name": "Mostafa Ziko", "scorer_name_ja": "モスタファ・ジコ"},
-      {"minute": 67, "team_id": "EGY", "scorer_name": "Mohamed Salah", "scorer_name_ja": "モハメド・サラー"},
-      {"minute": 82, "team_id": "EGY", "scorer_name": "Mahmoud Trezeguet", "scorer_name_ja": "マフムード・トレゼゲ"}
+      {
+        "minute": 15,
+        "team_id": "NZL",
+        "scorer_name": "Finn Surman",
+        "scorer_name_ja": "フィン・サーマン"
+      },
+      {
+        "minute": 58,
+        "team_id": "EGY",
+        "scorer_name": "Mostafa Ziko",
+        "scorer_name_ja": "モスタファ・ジコ"
+      },
+      {
+        "minute": 67,
+        "team_id": "EGY",
+        "scorer_name": "Mohamed Salah",
+        "scorer_name_ja": "モハメド・サラー"
+      },
+      {
+        "minute": 82,
+        "team_id": "EGY",
+        "scorer_name": "Mahmoud Trezeguet",
+        "scorer_name_ja": "マフムード・トレゼゲ"
+      }
     ]
   },
   {
@@ -45,7 +114,74 @@
     "home_score": 0,
     "away_score": 0,
     "date": "2026-06-21",
-    "stats": {"home_possession_pct": 70, "away_possession_pct": 30, "home_shots": 7, "away_shots": 3, "home_shots_on_target": 7, "away_shots_on_target": 3, "home_yellow_cards": null, "away_yellow_cards": null},
+    "stats": {
+      "home_possession_pct": 70,
+      "away_possession_pct": 30,
+      "home_shots": 7,
+      "away_shots": 3,
+      "home_shots_on_target": 7,
+      "away_shots_on_target": 3,
+      "home_yellow_cards": null,
+      "away_yellow_cards": null
+    },
     "goals": []
+  },
+  {
+    "home_team_id": "EGY",
+    "away_team_id": "IRN",
+    "home_score": 1,
+    "away_score": 1,
+    "date": "2026-06-26",
+    "goals": [
+      {
+        "minute": 5,
+        "team_id": "EGY",
+        "scorer_name": "Mahmoud Saber"
+      },
+      {
+        "minute": 14,
+        "team_id": "IRN",
+        "scorer_name": "Ramin Rezaeian"
+      }
+    ]
+  },
+  {
+    "home_team_id": "NZL",
+    "away_team_id": "BEL",
+    "home_score": 1,
+    "away_score": 5,
+    "date": "2026-06-26",
+    "goals": [
+      {
+        "minute": 84,
+        "team_id": "NZL",
+        "scorer_name": "Elijah Just"
+      },
+      {
+        "minute": 28,
+        "team_id": "BEL",
+        "scorer_name": "Leandro Trossard"
+      },
+      {
+        "minute": 50,
+        "team_id": "BEL",
+        "scorer_name": "Leandro Trossard"
+      },
+      {
+        "minute": 66,
+        "team_id": "BEL",
+        "scorer_name": "Kevin De Bruyne"
+      },
+      {
+        "minute": 86,
+        "team_id": "BEL",
+        "scorer_name": "Romelu Lukaku"
+      },
+      {
+        "minute": 94,
+        "team_id": "BEL",
+        "scorer_name": "Alexis Saelemaekers"
+      }
+    ]
   }
 ]

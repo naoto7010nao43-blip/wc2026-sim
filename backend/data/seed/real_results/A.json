@@ -5,10 +5,26 @@
     "home_score": 2,
     "away_score": 0,
     "date": "2026-06-11",
-    "stats": {"home_possession_pct": 60, "away_possession_pct": 40, "home_shots": 16, "away_shots": 3, "home_yellow_cards": 1, "away_yellow_cards": 2},
+    "stats": {
+      "home_possession_pct": 60,
+      "away_possession_pct": 40,
+      "home_shots": 16,
+      "away_shots": 3,
+      "home_yellow_cards": 1,
+      "away_yellow_cards": 2
+    },
     "goals": [
-      {"minute": 9, "team_id": "MEX", "scorer_name": "Julian Quinones", "scorer_name_ja": "フリアン・キニョネス"},
-      {"minute": 67, "team_id": "MEX", "scorer_name": "Raul Jimenez"}
+      {
+        "minute": 9,
+        "team_id": "MEX",
+        "scorer_name": "Julian Quinones",
+        "scorer_name_ja": "フリアン・キニョネス"
+      },
+      {
+        "minute": 67,
+        "team_id": "MEX",
+        "scorer_name": "Raul Jimenez"
+      }
     ]
   },
   {
@@ -17,11 +33,29 @@
     "home_score": 2,
     "away_score": 1,
     "date": "2026-06-11",
-    "stats": {"home_possession_pct": 62, "away_possession_pct": 38, "home_shots": 15, "away_shots": 7},
+    "stats": {
+      "home_possession_pct": 62,
+      "away_possession_pct": 38,
+      "home_shots": 15,
+      "away_shots": 7
+    },
     "goals": [
-      {"minute": 6, "team_id": "CZE", "scorer_name": "Ladislav Krejci", "scorer_name_ja": "ラディスラフ・クレイチー"},
-      {"minute": 67, "team_id": "KOR", "scorer_name": "Hwang In-beom"},
-      {"minute": 80, "team_id": "KOR", "scorer_name": "Oh Hyeon-gyu"}
+      {
+        "minute": 6,
+        "team_id": "CZE",
+        "scorer_name": "Ladislav Krejci",
+        "scorer_name_ja": "ラディスラフ・クレイチー"
+      },
+      {
+        "minute": 67,
+        "team_id": "KOR",
+        "scorer_name": "Hwang In-beom"
+      },
+      {
+        "minute": 80,
+        "team_id": "KOR",
+        "scorer_name": "Oh Hyeon-gyu"
+      }
     ]
   },
   {
@@ -30,10 +64,26 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-18",
-    "stats": {"home_possession_pct": 38, "away_possession_pct": 62, "home_shots": 14, "away_shots": 17, "home_yellow_cards": 2, "away_yellow_cards": 1},
+    "stats": {
+      "home_possession_pct": 38,
+      "away_possession_pct": 62,
+      "home_shots": 14,
+      "away_shots": 17,
+      "home_yellow_cards": 2,
+      "away_yellow_cards": 1
+    },
     "goals": [
-      {"minute": 6, "team_id": "CZE", "scorer_name": "Michal Sadilek", "scorer_name_ja": "ミハル・サディーレク"},
-      {"minute": 83, "team_id": "RSA", "scorer_name": "Teboho Mokoena"}
+      {
+        "minute": 6,
+        "team_id": "CZE",
+        "scorer_name": "Michal Sadilek",
+        "scorer_name_ja": "ミハル・サディーレク"
+      },
+      {
+        "minute": 83,
+        "team_id": "RSA",
+        "scorer_name": "Teboho Mokoena"
+      }
     ]
   },
   {
@@ -42,9 +92,58 @@
     "home_score": 1,
     "away_score": 0,
     "date": "2026-06-18",
-    "stats": {"home_possession_pct": 42, "away_possession_pct": 58, "home_shots": 8, "away_shots": 9, "away_shots_on_target": 2},
+    "stats": {
+      "home_possession_pct": 42,
+      "away_possession_pct": 58,
+      "home_shots": 8,
+      "away_shots": 9,
+      "away_shots_on_target": 2
+    },
     "goals": [
-      {"minute": 50, "team_id": "MEX", "scorer_name": "Luis Romo", "scorer_name_ja": "ルイス・ロモ"}
+      {
+        "minute": 50,
+        "team_id": "MEX",
+        "scorer_name": "Luis Romo",
+        "scorer_name_ja": "ルイス・ロモ"
+      }
+    ]
+  },
+  {
+    "home_team_id": "CZE",
+    "away_team_id": "MEX",
+    "home_score": 0,
+    "away_score": 3,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 55,
+        "team_id": "MEX",
+        "scorer_name": "Mateo Chavez"
+      },
+      {
+        "minute": 61,
+        "team_id": "MEX",
+        "scorer_name": "Julian Quinones"
+      },
+      {
+        "minute": 94,
+        "team_id": "MEX",
+        "scorer_name": "Alvaro Fidalgo"
+      }
+    ]
+  },
+  {
+    "home_team_id": "RSA",
+    "away_team_id": "KOR",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 63,
+        "team_id": "RSA",
+        "scorer_name": "Thapelo Maseko"
+      }
     ]
   }
 ]

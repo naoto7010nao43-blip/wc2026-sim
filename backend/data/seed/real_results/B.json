@@ -5,10 +5,26 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-12",
-    "stats": {"home_possession_pct": 61, "away_possession_pct": 39, "home_shots": 13, "away_shots": 8, "home_yellow_cards": 2, "away_yellow_cards": 3},
+    "stats": {
+      "home_possession_pct": 61,
+      "away_possession_pct": 39,
+      "home_shots": 13,
+      "away_shots": 8,
+      "home_yellow_cards": 2,
+      "away_yellow_cards": 3
+    },
     "goals": [
-      {"minute": 21, "team_id": "BIH", "scorer_name": "Jovo Lukic", "scorer_name_ja": "ヨヴォ・ルキッチ"},
-      {"minute": 78, "team_id": "CAN", "scorer_name": "Cyle Larin"}
+      {
+        "minute": 21,
+        "team_id": "BIH",
+        "scorer_name": "Jovo Lukic",
+        "scorer_name_ja": "ヨヴォ・ルキッチ"
+      },
+      {
+        "minute": 78,
+        "team_id": "CAN",
+        "scorer_name": "Cyle Larin"
+      }
     ]
   },
   {
@@ -17,10 +33,26 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-13",
-    "stats": {"home_possession_pct": 32, "away_possession_pct": 68, "home_shots": 6, "away_shots": 26, "home_yellow_cards": 1, "away_yellow_cards": 1},
+    "stats": {
+      "home_possession_pct": 32,
+      "away_possession_pct": 68,
+      "home_shots": 6,
+      "away_shots": 26,
+      "home_yellow_cards": 1,
+      "away_yellow_cards": 1
+    },
     "goals": [
-      {"minute": 17, "team_id": "SUI", "scorer_name": "Breel Embolo"},
-      {"minute": 90, "team_id": "QAT", "scorer_name": "Miro Muheim (own goal)", "scorer_name_ja": "ミロ・ムヘイム(オウンゴール)"}
+      {
+        "minute": 17,
+        "team_id": "SUI",
+        "scorer_name": "Breel Embolo"
+      },
+      {
+        "minute": 90,
+        "team_id": "QAT",
+        "scorer_name": "Miro Muheim (own goal)",
+        "scorer_name_ja": "ミロ・ムヘイム(オウンゴール)"
+      }
     ]
   },
   {
@@ -29,13 +61,42 @@
     "home_score": 4,
     "away_score": 1,
     "date": "2026-06-18",
-    "stats": {"home_possession_pct": 62, "away_possession_pct": 38, "home_shots": 13, "away_shots": 5, "away_yellow_cards": 2},
+    "stats": {
+      "home_possession_pct": 62,
+      "away_possession_pct": 38,
+      "home_shots": 13,
+      "away_shots": 5,
+      "away_yellow_cards": 2
+    },
     "goals": [
-      {"minute": 74, "team_id": "SUI", "scorer_name": "Johan Manzambi", "scorer_name_ja": "ヨアン・マンザンビ"},
-      {"minute": 84, "team_id": "SUI", "scorer_name": "Ruben Vargas"},
-      {"minute": 90, "team_id": "BIH", "scorer_name": "Ermin Mahmic", "scorer_name_ja": "エルミン・マフムィッチ"},
-      {"minute": 90, "team_id": "SUI", "scorer_name": "Johan Manzambi", "scorer_name_ja": "ヨアン・マンザンビ"},
-      {"minute": 90, "team_id": "SUI", "scorer_name": "Granit Xhaka"}
+      {
+        "minute": 74,
+        "team_id": "SUI",
+        "scorer_name": "Johan Manzambi",
+        "scorer_name_ja": "ヨアン・マンザンビ"
+      },
+      {
+        "minute": 84,
+        "team_id": "SUI",
+        "scorer_name": "Ruben Vargas"
+      },
+      {
+        "minute": 90,
+        "team_id": "BIH",
+        "scorer_name": "Ermin Mahmic",
+        "scorer_name_ja": "エルミン・マフムィッチ"
+      },
+      {
+        "minute": 90,
+        "team_id": "SUI",
+        "scorer_name": "Johan Manzambi",
+        "scorer_name_ja": "ヨアン・マンザンビ"
+      },
+      {
+        "minute": 90,
+        "team_id": "SUI",
+        "scorer_name": "Granit Xhaka"
+      }
     ]
   },
   {
@@ -44,14 +105,99 @@
     "home_score": 6,
     "away_score": 0,
     "date": "2026-06-18",
-    "stats": {"home_possession_pct": 79, "away_possession_pct": 21, "home_shots": 32, "away_shots": 2},
+    "stats": {
+      "home_possession_pct": 79,
+      "away_possession_pct": 21,
+      "home_shots": 32,
+      "away_shots": 2
+    },
     "goals": [
-      {"minute": 16, "team_id": "CAN", "scorer_name": "Cyle Larin"},
-      {"minute": 29, "team_id": "CAN", "scorer_name": "Jonathan David"},
-      {"minute": 45, "team_id": "CAN", "scorer_name": "Jonathan David"},
-      {"minute": 64, "team_id": "CAN", "scorer_name": "Nathan Saliba", "scorer_name_ja": "ネイサン・サリバ"},
-      {"minute": 75, "team_id": "CAN", "scorer_name": "Mohamed Manai (own goal)", "scorer_name_ja": "モハメド・マナイ(オウンゴール)"},
-      {"minute": 90, "team_id": "CAN", "scorer_name": "Jonathan David"}
+      {
+        "minute": 16,
+        "team_id": "CAN",
+        "scorer_name": "Cyle Larin"
+      },
+      {
+        "minute": 29,
+        "team_id": "CAN",
+        "scorer_name": "Jonathan David"
+      },
+      {
+        "minute": 45,
+        "team_id": "CAN",
+        "scorer_name": "Jonathan David"
+      },
+      {
+        "minute": 64,
+        "team_id": "CAN",
+        "scorer_name": "Nathan Saliba",
+        "scorer_name_ja": "ネイサン・サリバ"
+      },
+      {
+        "minute": 75,
+        "team_id": "CAN",
+        "scorer_name": "Mohamed Manai (own goal)",
+        "scorer_name_ja": "モハメド・マナイ(オウンゴール)"
+      },
+      {
+        "minute": 90,
+        "team_id": "CAN",
+        "scorer_name": "Jonathan David"
+      }
+    ]
+  },
+  {
+    "home_team_id": "SUI",
+    "away_team_id": "CAN",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 46,
+        "team_id": "SUI",
+        "scorer_name": "Ruben Vargas"
+      },
+      {
+        "minute": 57,
+        "team_id": "SUI",
+        "scorer_name": "Johan Manzambi"
+      },
+      {
+        "minute": 76,
+        "team_id": "CAN",
+        "scorer_name": "Patrick David"
+      }
+    ]
+  },
+  {
+    "home_team_id": "BIH",
+    "away_team_id": "QAT",
+    "home_score": 3,
+    "away_score": 1,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 29,
+        "team_id": "BIH",
+        "scorer_name": "Aleksandar Alajbegovic"
+      },
+      {
+        "minute": 34,
+        "team_id": "BIH",
+        "scorer_name": "Abdulaziz Abunada",
+        "own_goal": true
+      },
+      {
+        "minute": 80,
+        "team_id": "BIH",
+        "scorer_name": "Esmir Mahmic"
+      },
+      {
+        "minute": 42,
+        "team_id": "QAT",
+        "scorer_name": "Hassan Al-Haydos"
+      }
     ]
   }
 ]

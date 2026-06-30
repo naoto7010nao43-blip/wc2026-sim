@@ -5,10 +5,25 @@
     "home_score": 1,
     "away_score": 1,
     "date": "2026-06-13",
-    "stats": {"home_possession_pct": 51, "away_possession_pct": 49, "home_shots": 12, "away_shots": 14, "home_yellow_cards": 2},
+    "stats": {
+      "home_possession_pct": 51,
+      "away_possession_pct": 49,
+      "home_shots": 12,
+      "away_shots": 14,
+      "home_yellow_cards": 2
+    },
     "goals": [
-      {"minute": 21, "team_id": "MAR", "scorer_name": "Ismael Saibari", "scorer_name_ja": "イスマエル・サイバリ"},
-      {"minute": 32, "team_id": "BRA", "scorer_name": "Vinicius Junior"}
+      {
+        "minute": 21,
+        "team_id": "MAR",
+        "scorer_name": "Ismael Saibari",
+        "scorer_name_ja": "イスマエル・サイバリ"
+      },
+      {
+        "minute": 32,
+        "team_id": "BRA",
+        "scorer_name": "Vinicius Junior"
+      }
     ]
   },
   {
@@ -17,9 +32,20 @@
     "home_score": 0,
     "away_score": 1,
     "date": "2026-06-13",
-    "stats": {"home_possession_pct": 54, "away_possession_pct": 46, "home_shots": 15, "away_shots": 9, "home_shots_on_target": 2, "away_shots_on_target": 2},
+    "stats": {
+      "home_possession_pct": 54,
+      "away_possession_pct": 46,
+      "home_shots": 15,
+      "away_shots": 9,
+      "home_shots_on_target": 2,
+      "away_shots_on_target": 2
+    },
     "goals": [
-      {"minute": 28, "team_id": "SCO", "scorer_name": "John McGinn"}
+      {
+        "minute": 28,
+        "team_id": "SCO",
+        "scorer_name": "John McGinn"
+      }
     ]
   },
   {
@@ -28,9 +54,21 @@
     "home_score": 0,
     "away_score": 1,
     "date": "2026-06-19",
-    "stats": {"home_possession_pct": 41, "away_possession_pct": 59, "home_shots": 6, "away_shots": 12, "home_yellow_cards": 2, "away_yellow_cards": 0},
+    "stats": {
+      "home_possession_pct": 41,
+      "away_possession_pct": 59,
+      "home_shots": 6,
+      "away_shots": 12,
+      "home_yellow_cards": 2,
+      "away_yellow_cards": 0
+    },
     "goals": [
-      {"minute": 2, "team_id": "MAR", "scorer_name": "Ismael Saibari", "scorer_name_ja": "イスマエル・サイバリ"}
+      {
+        "minute": 2,
+        "team_id": "MAR",
+        "scorer_name": "Ismael Saibari",
+        "scorer_name_ja": "イスマエル・サイバリ"
+      }
     ]
   },
   {
@@ -39,11 +77,94 @@
     "home_score": 3,
     "away_score": 0,
     "date": "2026-06-19",
-    "stats": {"home_possession_pct": 57, "away_possession_pct": 43, "home_shots": 8, "away_shots": 7, "home_yellow_cards": 1, "away_yellow_cards": 2},
+    "stats": {
+      "home_possession_pct": 57,
+      "away_possession_pct": 43,
+      "home_shots": 8,
+      "away_shots": 7,
+      "home_yellow_cards": 1,
+      "away_yellow_cards": 2
+    },
     "goals": [
-      {"minute": 23, "team_id": "BRA", "scorer_name": "Matheus Cunha"},
-      {"minute": 36, "team_id": "BRA", "scorer_name": "Matheus Cunha"},
-      {"minute": 45, "team_id": "BRA", "scorer_name": "Vinicius Junior"}
+      {
+        "minute": 23,
+        "team_id": "BRA",
+        "scorer_name": "Matheus Cunha"
+      },
+      {
+        "minute": 36,
+        "team_id": "BRA",
+        "scorer_name": "Matheus Cunha"
+      },
+      {
+        "minute": 45,
+        "team_id": "BRA",
+        "scorer_name": "Vinicius Junior"
+      }
+    ]
+  },
+  {
+    "home_team_id": "SCO",
+    "away_team_id": "BRA",
+    "home_score": 0,
+    "away_score": 3,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 7,
+        "team_id": "BRA",
+        "scorer_name": "Vinicius Junior"
+      },
+      {
+        "minute": 48,
+        "team_id": "BRA",
+        "scorer_name": "Vinicius Junior"
+      },
+      {
+        "minute": 60,
+        "team_id": "BRA",
+        "scorer_name": "Matheus Cunha"
+      }
+    ]
+  },
+  {
+    "home_team_id": "MAR",
+    "away_team_id": "HAI",
+    "home_score": 4,
+    "away_score": 2,
+    "date": "2026-06-24",
+    "goals": [
+      {
+        "minute": 10,
+        "team_id": "HAI",
+        "scorer_name": "Yassine Bounou",
+        "own_goal": true
+      },
+      {
+        "minute": 39,
+        "team_id": "MAR",
+        "scorer_name": "Achraf Hakimi"
+      },
+      {
+        "minute": 43,
+        "team_id": "HAI",
+        "scorer_name": "Wilson Isidor"
+      },
+      {
+        "minute": 46,
+        "team_id": "MAR",
+        "scorer_name": "Ismael Saibari"
+      },
+      {
+        "minute": 78,
+        "team_id": "MAR",
+        "scorer_name": "Soufiane Rahimi"
+      },
+      {
+        "minute": 89,
+        "team_id": "MAR",
+        "scorer_name": "Gessime Yassine"
+      }
     ]
   }
 ]

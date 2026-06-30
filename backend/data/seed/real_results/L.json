@@ -5,14 +5,48 @@
     "home_score": 4,
     "away_score": 2,
     "date": "2026-06-17",
-    "stats": {"home_possession_pct": 52, "away_possession_pct": 48, "home_shots": 22, "away_shots": 10, "home_shots_on_target": 11, "away_shots_on_target": 5, "home_yellow_cards": 0, "away_yellow_cards": 0},
+    "stats": {
+      "home_possession_pct": 52,
+      "away_possession_pct": 48,
+      "home_shots": 22,
+      "away_shots": 10,
+      "home_shots_on_target": 11,
+      "away_shots_on_target": 5,
+      "home_yellow_cards": 0,
+      "away_yellow_cards": 0
+    },
     "goals": [
-      {"minute": 12, "team_id": "ENG", "scorer_name": "Harry Kane"},
-      {"minute": 36, "team_id": "CRO", "scorer_name": "Martin Baturina"},
-      {"minute": 42, "team_id": "ENG", "scorer_name": "Harry Kane"},
-      {"minute": 45, "team_id": "CRO", "scorer_name": "Petar Musa", "scorer_name_ja": "ペタル・ムサ"},
-      {"minute": 47, "team_id": "ENG", "scorer_name": "Jude Bellingham"},
-      {"minute": 85, "team_id": "ENG", "scorer_name": "Marcus Rashford"}
+      {
+        "minute": 12,
+        "team_id": "ENG",
+        "scorer_name": "Harry Kane"
+      },
+      {
+        "minute": 36,
+        "team_id": "CRO",
+        "scorer_name": "Martin Baturina"
+      },
+      {
+        "minute": 42,
+        "team_id": "ENG",
+        "scorer_name": "Harry Kane"
+      },
+      {
+        "minute": 45,
+        "team_id": "CRO",
+        "scorer_name": "Petar Musa",
+        "scorer_name_ja": "ペタル・ムサ"
+      },
+      {
+        "minute": 47,
+        "team_id": "ENG",
+        "scorer_name": "Jude Bellingham"
+      },
+      {
+        "minute": 85,
+        "team_id": "ENG",
+        "scorer_name": "Marcus Rashford"
+      }
     ]
   },
   {
@@ -21,9 +55,88 @@
     "home_score": 1,
     "away_score": 0,
     "date": "2026-06-17",
-    "stats": {"home_possession_pct": 38, "away_possession_pct": 62, "home_shots": 7, "away_shots": 11, "home_shots_on_target": 2, "away_shots_on_target": 4, "home_yellow_cards": 1, "away_yellow_cards": 3},
+    "stats": {
+      "home_possession_pct": 38,
+      "away_possession_pct": 62,
+      "home_shots": 7,
+      "away_shots": 11,
+      "home_shots_on_target": 2,
+      "away_shots_on_target": 4,
+      "home_yellow_cards": 1,
+      "away_yellow_cards": 3
+    },
     "goals": [
-      {"minute": 95, "team_id": "GHA", "scorer_name": "Caleb Yirenkyi", "scorer_name_ja": "カレブ・イレンキー"}
+      {
+        "minute": 95,
+        "team_id": "GHA",
+        "scorer_name": "Caleb Yirenkyi",
+        "scorer_name_ja": "カレブ・イレンキー"
+      }
+    ]
+  },
+  {
+    "home_team_id": "ENG",
+    "away_team_id": "GHA",
+    "home_score": 0,
+    "away_score": 0,
+    "date": "2026-06-23",
+    "goals": []
+  },
+  {
+    "home_team_id": "PAN",
+    "away_team_id": "CRO",
+    "home_score": 0,
+    "away_score": 1,
+    "date": "2026-06-23",
+    "goals": [
+      {
+        "minute": 54,
+        "team_id": "CRO",
+        "scorer_name": "Ante Budimir"
+      }
+    ]
+  },
+  {
+    "home_team_id": "PAN",
+    "away_team_id": "ENG",
+    "home_score": 0,
+    "away_score": 2,
+    "date": "2026-06-27",
+    "goals": [
+      {
+        "minute": 62,
+        "team_id": "ENG",
+        "scorer_name": "Jude Bellingham"
+      },
+      {
+        "minute": 67,
+        "team_id": "ENG",
+        "scorer_name": "Harry Kane"
+      }
+    ]
+  },
+  {
+    "home_team_id": "CRO",
+    "away_team_id": "GHA",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-06-27",
+    "goals": [
+      {
+        "minute": 31,
+        "team_id": "CRO",
+        "scorer_name": "Petar Sucic"
+      },
+      {
+        "minute": 83,
+        "team_id": "CRO",
+        "scorer_name": "Nikola Vlasic"
+      },
+      {
+        "minute": 73,
+        "team_id": "GHA",
+        "scorer_name": "Derrick Luckassen"
+      }
     ]
   }
 ]

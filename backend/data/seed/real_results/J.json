@@ -5,11 +5,30 @@
     "home_score": 3,
     "away_score": 0,
     "date": "2026-06-16",
-    "stats": {"home_possession_pct": 48, "away_possession_pct": 52, "home_shots": 10, "away_shots": 7, "home_shots_on_target": 6, "away_shots_on_target": 0},
+    "stats": {
+      "home_possession_pct": 48,
+      "away_possession_pct": 52,
+      "home_shots": 10,
+      "away_shots": 7,
+      "home_shots_on_target": 6,
+      "away_shots_on_target": 0
+    },
     "goals": [
-      {"minute": 17, "team_id": "ARG", "scorer_name": "Lionel Messi"},
-      {"minute": 60, "team_id": "ARG", "scorer_name": "Lionel Messi"},
-      {"minute": 76, "team_id": "ARG", "scorer_name": "Lionel Messi"}
+      {
+        "minute": 17,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      },
+      {
+        "minute": 60,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      },
+      {
+        "minute": 76,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      }
     ]
   },
   {
@@ -18,12 +37,152 @@
     "home_score": 3,
     "away_score": 1,
     "date": "2026-06-16",
-    "stats": {"home_possession_pct": 63, "away_possession_pct": 37, "home_shots": 11, "away_shots": 11, "home_shots_on_target": 4, "away_shots_on_target": 4, "home_yellow_cards": 1, "away_yellow_cards": 0},
+    "stats": {
+      "home_possession_pct": 63,
+      "away_possession_pct": 37,
+      "home_shots": 11,
+      "away_shots": 11,
+      "home_shots_on_target": 4,
+      "away_shots_on_target": 4,
+      "home_yellow_cards": 1,
+      "away_yellow_cards": 0
+    },
     "goals": [
-      {"minute": 20, "team_id": "AUT", "scorer_name": "Romano Schmid", "scorer_name_ja": "ロマノ・シュミット"},
-      {"minute": 50, "team_id": "JOR", "scorer_name": "Ali Olwan"},
-      {"minute": 76, "team_id": "AUT", "scorer_name": "Yazan Al Arab (own goal)", "scorer_name_ja": "ヤザン・アル・アラブ(オウンゴール)"},
-      {"minute": 102, "team_id": "AUT", "scorer_name": "Marko Arnautović (penalty)", "scorer_name_ja": "マルコ・アルナウトビッチ(PK)"}
+      {
+        "minute": 20,
+        "team_id": "AUT",
+        "scorer_name": "Romano Schmid",
+        "scorer_name_ja": "ロマノ・シュミット"
+      },
+      {
+        "minute": 50,
+        "team_id": "JOR",
+        "scorer_name": "Ali Olwan"
+      },
+      {
+        "minute": 76,
+        "team_id": "AUT",
+        "scorer_name": "Yazan Al Arab (own goal)",
+        "scorer_name_ja": "ヤザン・アル・アラブ(オウンゴール)"
+      },
+      {
+        "minute": 102,
+        "team_id": "AUT",
+        "scorer_name": "Marko Arnautović (penalty)",
+        "scorer_name_ja": "マルコ・アルナウトビッチ(PK)"
+      }
+    ]
+  },
+  {
+    "home_team_id": "ARG",
+    "away_team_id": "AUT",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-06-22",
+    "goals": [
+      {
+        "minute": 38,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      },
+      {
+        "minute": 95,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      }
+    ]
+  },
+  {
+    "home_team_id": "JOR",
+    "away_team_id": "ALG",
+    "home_score": 1,
+    "away_score": 2,
+    "date": "2026-06-22",
+    "goals": [
+      {
+        "minute": 36,
+        "team_id": "JOR",
+        "scorer_name": "Nizar Al-Rashdan"
+      },
+      {
+        "minute": 69,
+        "team_id": "ALG",
+        "scorer_name": "Nadhir Benbouali"
+      },
+      {
+        "minute": 82,
+        "team_id": "ALG",
+        "scorer_name": "Amine Gouiri"
+      }
+    ]
+  },
+  {
+    "home_team_id": "ALG",
+    "away_team_id": "AUT",
+    "home_score": 3,
+    "away_score": 3,
+    "date": "2026-06-27",
+    "goals": [
+      {
+        "minute": 45,
+        "team_id": "ALG",
+        "scorer_name": "Rafik Belghali"
+      },
+      {
+        "minute": 60,
+        "team_id": "ALG",
+        "scorer_name": "Riyad Mahrez"
+      },
+      {
+        "minute": 93,
+        "team_id": "ALG",
+        "scorer_name": "Riyad Mahrez"
+      },
+      {
+        "minute": 28,
+        "team_id": "AUT",
+        "scorer_name": "Marko Arnautovic"
+      },
+      {
+        "minute": 55,
+        "team_id": "AUT",
+        "scorer_name": "Marcel Sabitzer"
+      },
+      {
+        "minute": 96,
+        "team_id": "AUT",
+        "scorer_name": "Sasa Kalajdzic"
+      }
+    ]
+  },
+  {
+    "home_team_id": "JOR",
+    "away_team_id": "ARG",
+    "home_score": 1,
+    "away_score": 3,
+    "date": "2026-06-27",
+    "goals": [
+      {
+        "minute": 55,
+        "team_id": "JOR",
+        "scorer_name": "Musa Al-Taamari"
+      },
+      {
+        "minute": 19,
+        "team_id": "ARG",
+        "scorer_name": "Giovani Lo Celso"
+      },
+      {
+        "minute": 31,
+        "team_id": "ARG",
+        "scorer_name": "Lautaro Martinez",
+        "penalty": true
+      },
+      {
+        "minute": 80,
+        "team_id": "ARG",
+        "scorer_name": "Lionel Messi"
+      }
     ]
   }
 ]

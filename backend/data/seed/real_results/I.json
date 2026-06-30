@@ -6,10 +6,28 @@
     "away_score": 1,
     "date": "2026-06-16",
     "goals": [
-      { "minute": 66, "team_id": "FRA", "scorer_name": "Kylian Mbappe" },
-      { "minute": 82, "team_id": "FRA", "scorer_name": "Bradley Barcola", "scorer_name_ja": "ブラッドリー・バルコラ" },
-      { "minute": 90, "team_id": "SEN", "scorer_name": "Ibrahim Mbaye", "scorer_name_ja": "イブラヒマ・ンバイエ" },
-      { "minute": 96, "team_id": "FRA", "scorer_name": "Kylian Mbappe" }
+      {
+        "minute": 66,
+        "team_id": "FRA",
+        "scorer_name": "Kylian Mbappe"
+      },
+      {
+        "minute": 82,
+        "team_id": "FRA",
+        "scorer_name": "Bradley Barcola",
+        "scorer_name_ja": "ブラッドリー・バルコラ"
+      },
+      {
+        "minute": 90,
+        "team_id": "SEN",
+        "scorer_name": "Ibrahim Mbaye",
+        "scorer_name_ja": "イブラヒマ・ンバイエ"
+      },
+      {
+        "minute": 96,
+        "team_id": "FRA",
+        "scorer_name": "Kylian Mbappe"
+      }
     ]
   },
   {
@@ -19,11 +37,158 @@
     "away_score": 4,
     "date": "2026-06-16",
     "goals": [
-      { "minute": 29, "team_id": "NOR", "scorer_name": "Erling Haaland" },
-      { "minute": 39, "team_id": "IRQ", "scorer_name": "Aymen Hussein" },
-      { "minute": 43, "team_id": "NOR", "scorer_name": "Erling Haaland" },
-      { "minute": 76, "team_id": "NOR", "scorer_name": "Leo Ostigard" },
-      { "minute": 96, "team_id": "NOR", "scorer_name": "Aymen Hussein (own goal)", "scorer_name_ja": "アイメン・フセイン(オウンゴール)" }
+      {
+        "minute": 29,
+        "team_id": "NOR",
+        "scorer_name": "Erling Haaland"
+      },
+      {
+        "minute": 39,
+        "team_id": "IRQ",
+        "scorer_name": "Aymen Hussein"
+      },
+      {
+        "minute": 43,
+        "team_id": "NOR",
+        "scorer_name": "Erling Haaland"
+      },
+      {
+        "minute": 76,
+        "team_id": "NOR",
+        "scorer_name": "Leo Ostigard"
+      },
+      {
+        "minute": 96,
+        "team_id": "NOR",
+        "scorer_name": "Aymen Hussein (own goal)",
+        "scorer_name_ja": "アイメン・フセイン(オウンゴール)"
+      }
+    ]
+  },
+  {
+    "home_team_id": "FRA",
+    "away_team_id": "IRQ",
+    "home_score": 3,
+    "away_score": 0,
+    "date": "2026-06-22",
+    "goals": [
+      {
+        "minute": 14,
+        "team_id": "FRA",
+        "scorer_name": "Kylian Mbappe"
+      },
+      {
+        "minute": 54,
+        "team_id": "FRA",
+        "scorer_name": "Kylian Mbappe"
+      },
+      {
+        "minute": 66,
+        "team_id": "FRA",
+        "scorer_name": "Ousmane Dembele"
+      }
+    ]
+  },
+  {
+    "home_team_id": "NOR",
+    "away_team_id": "SEN",
+    "home_score": 3,
+    "away_score": 2,
+    "date": "2026-06-22",
+    "goals": [
+      {
+        "minute": 43,
+        "team_id": "NOR",
+        "scorer_name": "Marcus Pedersen"
+      },
+      {
+        "minute": 48,
+        "team_id": "NOR",
+        "scorer_name": "Erling Haaland"
+      },
+      {
+        "minute": 58,
+        "team_id": "NOR",
+        "scorer_name": "Erling Haaland"
+      },
+      {
+        "minute": 53,
+        "team_id": "SEN",
+        "scorer_name": "Ismaila Sarr"
+      },
+      {
+        "minute": 93,
+        "team_id": "SEN",
+        "scorer_name": "Ismaila Sarr"
+      }
+    ]
+  },
+  {
+    "home_team_id": "NOR",
+    "away_team_id": "FRA",
+    "home_score": 1,
+    "away_score": 4,
+    "date": "2026-06-26",
+    "goals": [
+      {
+        "minute": 21,
+        "team_id": "NOR",
+        "scorer_name": "Oscar Aasgaard"
+      },
+      {
+        "minute": 7,
+        "team_id": "FRA",
+        "scorer_name": "Ousmane Dembele"
+      },
+      {
+        "minute": 20,
+        "team_id": "FRA",
+        "scorer_name": "Ousmane Dembele"
+      },
+      {
+        "minute": 32,
+        "team_id": "FRA",
+        "scorer_name": "Ousmane Dembele"
+      },
+      {
+        "minute": 94,
+        "team_id": "FRA",
+        "scorer_name": "Desire Doue"
+      }
+    ]
+  },
+  {
+    "home_team_id": "SEN",
+    "away_team_id": "IRQ",
+    "home_score": 5,
+    "away_score": 0,
+    "date": "2026-06-26",
+    "goals": [
+      {
+        "minute": 4,
+        "team_id": "SEN",
+        "scorer_name": "Habib Diarra"
+      },
+      {
+        "minute": 56,
+        "team_id": "SEN",
+        "scorer_name": "Ismaila Sarr"
+      },
+      {
+        "minute": 59,
+        "team_id": "SEN",
+        "scorer_name": "Pape Matar Gueye"
+      },
+      {
+        "minute": 71,
+        "team_id": "SEN",
+        "scorer_name": "Pape Matar Gueye"
+      },
+      {
+        "minute": 82,
+        "team_id": "SEN",
+        "scorer_name": "Iliman Ndiaye"
+      }
     ]
   }
 ]
