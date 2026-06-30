@@ -30,7 +30,11 @@ Push-Location $repoRoot
 try {
     if (-not $SkipGitStatus) {
         Invoke-Step "Git working tree status" {
-            git status --short
+            $status = git status --short
+            if ($status) {
+                $status | ForEach-Object { Write-Host $_ }
+                throw "Git working tree is not clean."
+            }
         }
     }
 
