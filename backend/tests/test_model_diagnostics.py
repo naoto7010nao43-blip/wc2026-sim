@@ -116,8 +116,8 @@ def test_external_data_verification_endpoint_exposes_partial_progress(client):
     assert body["decisionQueue"]["currentFieldReviewCount"] == 217
     assert body["decisionQueue"]["warningHoldCount"] == 18
     assert body["decisionQueue"]["futureEngineCount"] == 37
-    assert body["sourceTraceability"]["severity"] == "review_required"
-    assert body["sourceTraceability"]["candidateMissingResolvableUrlCount"] == 1
+    assert body["sourceTraceability"]["severity"] == "pass"
+    assert body["sourceTraceability"]["candidateMissingResolvableUrlCount"] == 0
 
 
 def test_external_data_verification_missing_report_falls_back_to_calm_empty_state(tmp_path):

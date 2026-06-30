@@ -1422,12 +1422,19 @@
       "nationalStrengthContext": [],
       "substitutionTendencyCandidates": [
         {
-          "claim": "No specific quantitative substitution data found for Garcia; qualitative reports suggest an attacking-minded bench (Trossard, De Ketelaere, Fofana, Saelemaekers have scored as substitutes in qualifying).",
+          "claim": "No specific quantitative substitution-tendency dataset found for Garcia. Preserve Belgium substitution usage as a low-confidence future-engine research question; public tournament reporting confirms Garcia's Belgium context and late attacking substitutions/goals, but does not justify a current-field tactical value change.",
           "sources": [
             {
-              "name": "Wikipedia qualifying match data",
+              "name": "UEFA Belgium World Cup 2026 profile",
               "tier": "B",
-              "observedDate": "2025"
+              "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d159584345-7c4009d41554-1000--belgium-at-the-world-cup-2026-squad-fixtures-group-and-hi/",
+              "observedDate": "2026-06-27"
+            },
+            {
+              "name": "Guardian New Zealand 1-5 Belgium live report",
+              "tier": "B",
+              "url": "https://www.theguardian.com/football/live/2026/jun/27/fifa-world-cup-2026-live-new-zealand-v-belgium-updates-nzl-vs-bel-group-g-match-score-latest",
+              "observedDate": "2026-06-27"
             }
           ],
           "confidence": "low",

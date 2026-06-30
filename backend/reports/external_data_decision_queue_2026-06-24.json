@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T06:05:15.018587+00:00",
+  "generatedAt": "2026-06-30T15:40:30.491376+00:00",
   "sourceReports": [
     {
       "name": "external_data_verification_candidates",
@@ -5491,6 +5491,24 @@
       "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
     },
     {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "category": "substitutionTendencyCandidates",
+      "index": 0,
+      "bucket": "future_engine",
+      "impactBand": "low",
+      "useTier": "future_engine_candidate",
+      "qualityScore": 1,
+      "sourceTier": "B",
+      "confidence": "low",
+      "mapsTo": "substitution_tendency",
+      "candidateCategory": "future-engine candidate",
+      "summary": "No specific quantitative substitution-tendency dataset found for Garcia. Preserve Belgium substitution usage as a low-confidence future-engine research question; public tournament reporting confirms Garcia's Belgium context and late attacking substitutions/goa",
+      "warnings": [],
+      "errors": [],
+      "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
+    },
+    {
       "teamId": "AUS",
       "teamName": "Australia",
       "category": "substitutionTendencyCandidates",
@@ -5504,24 +5522,6 @@
       "mapsTo": "substitution_tendency",
       "candidateCategory": "future-engine candidate",
       "summary": "Against the USA, Popovic made 3 substitutions within the first 16 minutes of the second half (including halftime), suggesting a tendency toward early, clustered, motivation/tactically-driven changes rather than late like-for-like swaps; based on limited match ",
-      "warnings": [],
-      "errors": [],
-      "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"
-    },
-    {
-      "teamId": "BEL",
-      "teamName": "Belgium",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "bucket": "future_engine",
-      "impactBand": "low",
-      "useTier": "future_engine_candidate",
-      "qualityScore": 0,
-      "sourceTier": "B",
-      "confidence": "low",
-      "mapsTo": "substitution_tendency",
-      "candidateCategory": "future-engine candidate",
-      "summary": "No specific quantitative substitution data found for Garcia; qualitative reports suggest an attacking-minded bench (Trossard, De Ketelaere, Fofana, Saelemaekers have scored as substitutes in qualifying).",
       "warnings": [],
       "errors": [],
       "recommendedHandlingJa": "現エンジンに直接の反映先がありません。将来の選手交代・監督傾向仕様の候補として保留します。"

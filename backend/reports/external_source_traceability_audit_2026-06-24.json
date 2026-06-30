@@ -1,24 +1,20 @@
 {
-  "generatedAt": "2026-06-25T06:05:14.882772+00:00",
+  "generatedAt": "2026-06-30T15:40:30.191357+00:00",
   "note": "外部調査候補の出典をあとから再確認できるかを見る読み取り専用監査です。URLが無い候補は捨てずに残しますが、seed・能力値・戦術値へ反映する前にURL付き出典で再確認します。",
-  "severity": "review_required",
+  "severity": "pass",
   "candidateCount": 346,
-  "sourceReferenceCount": 446,
-  "missingUrlSourceCount": 2,
-  "candidateMissingResolvableUrlCount": 1,
+  "sourceReferenceCount": 447,
+  "missingUrlSourceCount": 1,
+  "candidateMissingResolvableUrlCount": 0,
   "missingObservedDateSourceCount": 1,
   "tierCounts": {
     "A": 225,
-    "B": 129,
+    "B": 130,
     "C": 13,
     "S": 79
   },
-  "missingUrlByTeam": {
-    "BEL": 1
-  },
-  "missingUrlByCategory": {
-    "substitutionTendencyCandidates": 1
-  },
+  "missingUrlByTeam": {},
+  "missingUrlByCategory": {},
   "topSourceNames": [
     {
       "name": "Wikipedia",
@@ -85,11 +81,11 @@
       "count": 4
     },
     {
-      "name": "beIN Sports",
+      "name": "Heavy.com",
       "count": 4
     },
     {
-      "name": "Heavy.com",
+      "name": "beIN Sports",
       "count": 4
     },
     {
@@ -101,15 +97,7 @@
       "count": 4
     }
   ],
-  "candidatesMissingResolvableUrl": [
-    {
-      "teamId": "BEL",
-      "category": "substitutionTendencyCandidates",
-      "index": 0,
-      "sourceTier": "B",
-      "summary": "No specific quantitative substitution data found for Garcia; qualitative reports suggest an attacking-minded bench (Trossard, De Ketelaere, Fofana, Saelemaekers have scored as substitutes in qualifying)."
-    }
-  ],
+  "candidatesMissingResolvableUrl": [],
   "recommendationsJa": [
     "現行フィールド候補73件は、反映specを書く前にURL付き出典へ差し替える。",
     "URLが無い候補も、調査の方向性としては保持する。削除ではなく再確認キューとして扱う。",

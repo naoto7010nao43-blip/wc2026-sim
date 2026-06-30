@@ -1125,18 +1125,6 @@
     },
     {
       "teamId": "COD",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Sebastien Desabre remains manager, having taken over in August 2022, through AFCON 2025-26 and the 2026 World Cup."
-    },
-    {
-      "teamId": "COD",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1146,6 +1134,18 @@
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
       "summary": "Yoane Wissa transferred from Brentford to Newcastle United on 2025-09-01 (~EUR57.7m) and scored DR Congo's first-ever World Cup goal, the equalizer against Portugal; seed club shou"
+    },
+    {
+      "teamId": "COD",
+      "category": "managerStatus",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Sebastien Desabre remains manager, having taken over in August 2022, through AFCON 2025-26 and the 2026 World Cup."
     },
     {
       "teamId": "CPV",
@@ -1197,18 +1197,6 @@
     },
     {
       "teamId": "EGY",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "Hossam Hassan remains manager, having taken over in February 2024; no indication of dismissal as of 2026-06-23, though the Egyptian FA is reported to be deciding his future after t"
-    },
-    {
-      "teamId": "EGY",
       "category": "keyPlayerStatusCandidates",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1221,6 +1209,18 @@
     },
     {
       "teamId": "EGY",
+      "category": "managerStatus",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "Hossam Hassan remains manager, having taken over in February 2024; no indication of dismissal as of 2026-06-23, though the Egyptian FA is reported to be deciding his future after t"
+    },
+    {
+      "teamId": "EGY",
       "category": "nationalStrengthContext",
       "qualityScore": 13,
       "impactBand": "high",
@@ -1230,18 +1230,6 @@
       "mapsTo": "team_strength_rating",
       "candidateCategory": "safe factual candidate",
       "summary": "Egypt qualified directly, topping CAF Group A (8W-2D, +18 goal difference), and is in World Cup Group G with Belgium, Iran, and New Zealand; drew Belgium 1-1 then beat New Zealand "
-    },
-    {
-      "teamId": "GHA",
-      "category": "managerStatus",
-      "qualityScore": 13,
-      "impactBand": "high",
-      "useTier": "ready_for_codex_review",
-      "sourceTier": "S",
-      "confidence": "high",
-      "mapsTo": "manager_name",
-      "candidateCategory": "safe factual candidate",
-      "summary": "The seed's manager (Otto Addo) is stale: Addo was sacked on 2026-03-31 after four straight warm-up defeats (including 5-1 to Austria and 2-1 to Germany). He was replaced by Carlos "
     },
     {
       "teamId": "GHA",
@@ -1266,6 +1254,18 @@
       "mapsTo": "club_name",
       "candidateCategory": "safe factual candidate",
       "summary": "Thomas Partey faces ongoing rape and sexual assault charges (filed July 2025, trial set for June 2027), left Arsenal for Villarreal on a free transfer in summer 2025, was named vic"
+    },
+    {
+      "teamId": "GHA",
+      "category": "managerStatus",
+      "qualityScore": 13,
+      "impactBand": "high",
+      "useTier": "ready_for_codex_review",
+      "sourceTier": "S",
+      "confidence": "high",
+      "mapsTo": "manager_name",
+      "candidateCategory": "safe factual candidate",
+      "summary": "The seed's manager (Otto Addo) is stale: Addo was sacked on 2026-03-31 after four straight warm-up defeats (including 5-1 to Austria and 2-1 to Germany). He was replaced by Carlos "
     },
     {
       "teamId": "HAI",
@@ -1320,11 +1320,11 @@
   "warnings": [
     "teams[POR].keyPlayerStatusCandidates[2] is Tier B but high confidence; verify before using for data changes",
     "teams[MAR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
-    "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[URU].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
+    "teams[URU].tacticalProfileCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[AUT].tacticalProfileCandidates[0] uses Tier C evidence; keep as review question only",
-    "teams[NOR].nationalStrengthContext[0] uses Tier C evidence; keep as review question only",
     "teams[NOR].substitutionTendencyCandidates[0] uses Tier C evidence; keep as review question only",
+    "teams[NOR].nationalStrengthContext[0] uses Tier C evidence; keep as review question only",
     "teams[ALG].keyPlayerStatusCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[CAN].formationCandidates[0] is Tier B but high confidence; verify before using for data changes",
     "teams[PAN].managerStatus[0] is Tier B but high confidence; verify before using for data changes",
