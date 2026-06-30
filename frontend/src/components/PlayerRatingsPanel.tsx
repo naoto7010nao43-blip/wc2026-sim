@@ -17,14 +17,14 @@ function ratingColor(rating: number): string {
 function RatingRow({ rating }: { rating: PlayerRating }) {
   return (
     <div className="flex items-center justify-between gap-2 py-1">
-      <span className={`flex items-center gap-1 text-sm text-slate-200 ${rating.is_mom ? "font-bold" : ""}`}>
+      <span className={`flex min-w-0 items-center gap-1 text-sm text-slate-200 ${rating.is_mom ? "font-bold" : ""}`}>
         {rating.is_mom && <span title="Man of the Match">⭐</span>}
-        {rating.name}
+        <span className="truncate">{rating.name}</span>
         {rating.is_estimated && (
-          <span className="rounded bg-slate-700 px-1 py-0.5 text-[9px] font-normal text-slate-400">推定</span>
+          <span className="shrink-0 rounded bg-slate-700 px-1 py-0.5 text-[9px] font-normal text-slate-400">推定</span>
         )}
       </span>
-      <span className={`min-w-[2.5rem] rounded px-1.5 py-0.5 text-center text-xs font-bold text-white ${ratingColor(rating.rating)}`}>
+      <span className={`min-w-[2.5rem] shrink-0 rounded px-1.5 py-0.5 text-center text-xs font-bold text-white ${ratingColor(rating.rating)}`}>
         {rating.rating.toFixed(1)}
       </span>
     </div>
@@ -61,7 +61,7 @@ export function PlayerRatingsPanel({ ratings, homeTeamId, awayTeamId }: Props) {
           実際の試合のため、確認できた得点者のみ推定採点を表示しています(全選手の採点ではありません)。
         </p>
       )}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           {home.map((r) => (
             <RatingRow key={r.player_id} rating={r} />
