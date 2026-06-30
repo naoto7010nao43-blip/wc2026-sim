@@ -88,6 +88,7 @@ Assert-Contains "frontend bundle" $bundleText "poisson-model"
 Assert-Contains "frontend bundle" $bundleText "home_possession_pct"
 Assert-Contains "frontend bundle" $bundleText "manager_name"
 Assert-Contains "frontend bundle" $bundleText "data_source"
+Assert-Contains "frontend bundle" $bundleText "nonBlockingWarnings"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -131,6 +132,22 @@ if ($allowedFreshnessStatus -notcontains [string]$dataQuality.freshness_status) 
 }
 if ($null -eq $dataQuality.freshness_critical_count -or $null -eq $dataQuality.freshness_warning_count) {
     throw "Data quality freshness counts are missing"
+}
+
+$releaseReadinessJson = Get-Utf8Text "$backend/api/model-diagnostics/release-readiness"
+Assert-NoMojibakeMarkers "release readiness JSON" $releaseReadinessJson
+$releaseReadiness = $releaseReadinessJson | ConvertFrom-Json
+if ($releaseReadiness.readyForManualPush -ne $true) {
+    throw "Release readiness is not readyForManualPush=true"
+}
+if ($releaseReadiness.blockers.Count -ne 0) {
+    throw "Release readiness still reports blockers: $($releaseReadiness.blockers -join '; ')"
+}
+if (($releaseReadiness.PSObject.Properties.Name -notcontains "nonBlockingWarnings")) {
+    throw "Release readiness JSON is missing nonBlockingWarnings"
+}
+if ($releaseReadiness.nonBlockingWarnings.Count -gt 0) {
+    Assert-HasJapanese "release readiness warnings" (($releaseReadiness.nonBlockingWarnings | ForEach-Object { $_ }) -join " ")
 }
 Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
