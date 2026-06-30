@@ -4,10 +4,11 @@ import { BracketView } from "../components/BracketView";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
-import type { TournamentResult } from "../types/domain";
+import type { DataQualitySummary, TournamentResult } from "../types/domain";
 
 export function TournamentPage() {
   const [result, setResult] = useState<TournamentResult | null>(null);
+  const [dataQuality, setDataQuality] = useState<DataQualitySummary | null>(null);
   const [loading, setLoading] = useState(false);
   const [restoring, setRestoring] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -23,6 +24,21 @@ export function TournamentPage() {
       })
       .catch((e) => setError(String(e)))
       .finally(() => setRestoring(false));
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .getDataQualitySummary()
+      .then((data) => {
+        if (!cancelled) setDataQuality(data);
+      })
+      .catch(() => {
+        if (!cancelled) setDataQuality(null);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   async function runTournament() {
@@ -71,6 +87,7 @@ export function TournamentPage() {
           )}
         </div>
         {error && <p className="mt-3 text-sm text-rose-400">{error}</p>}
+        <TournamentReadinessStrip dataQuality={dataQuality} />
       </section>
 
       <TournamentOddsPanel />
@@ -96,6 +113,42 @@ export function TournamentPage() {
           </section>
         </div>
       )}
+    </div>
+  );
+}
+
+function TournamentReadinessStrip({ dataQuality }: { dataQuality: DataQualitySummary | null }) {
+  const groupCoverage =
+    dataQuality && dataQuality.real_group_match_expected > 0
+      ? `${dataQuality.real_group_match_count}/${dataQuality.real_group_match_expected}試合`
+      : "確認中";
+  const officialCoverage = dataQuality ? `${dataQuality.official_profile_coverage_pct.toFixed(1)}%` : "確認中";
+  const unmatchedSeedPlayers =
+    dataQuality?.remaining_unmatched_seed_players == null ? "確認中" : `${dataQuality.remaining_unmatched_seed_players}人`;
+  const knockoutMatches = dataQuality?.real_knockout_match_count == null ? "確認中" : `${dataQuality.real_knockout_match_count}試合`;
+
+  return (
+    <div className="mt-5 border-t border-slate-700/80 pt-4">
+      <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">大会実行前のデータ状態</p>
+      <dl className="mt-3 grid grid-cols-2 gap-x-5 gap-y-3 text-sm md:grid-cols-4">
+        <StatusMetric label="実結果反映" value={groupCoverage} detail={`決勝T ${knockoutMatches}`} />
+        <StatusMetric label="公式プロフィール" value={officialCoverage} detail="選手属性の反映率" />
+        <StatusMetric label="未対応シード選手" value={unmatchedSeedPlayers} detail="今後の確認対象" />
+        <StatusMetric label="品質監査" value={dataQuality?.control_character_issues === 0 ? "異常なし" : "要確認"} detail="文字化け・制御文字" />
+      </dl>
+      <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
+        実施済みの試合結果は固定し、未実施カードは現在のPoissonモデルで予測します。数値が近いチーム同士は、順位より候補帯として見るのが自然です。
+      </p>
+    </div>
+  );
+}
+
+function StatusMetric({ label, value, detail }: { label: string; value: string; detail: string }) {
+  return (
+    <div className="min-w-0">
+      <dt className="truncate text-xs text-slate-500">{label}</dt>
+      <dd className="mt-1 text-base font-bold text-slate-100">{value}</dd>
+      <dd className="mt-0.5 truncate text-xs text-slate-500">{detail}</dd>
     </div>
   );
 }
