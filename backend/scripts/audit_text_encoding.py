@@ -16,6 +16,7 @@ from pathlib import Path
 DEFAULT_ROOTS = (
     "frontend/src",
     "backend/app",
+    "backend/scripts",
     "backend/tests",
     "docs/codex",
     "docs/specs",
@@ -26,7 +27,16 @@ DEFAULT_ROOTS = (
     "backend/reports",
 )
 TEXT_SUFFIXES = {".css", ".md", ".py", ".ts", ".tsx", ".json"}
-MOJIBAKE_MARKERS = ("縺", "繝", "莠", "蜆", "螟", "邇", "謗")
+REPLACEMENT_CHARACTER = chr(0xFFFD)
+MOJIBAKE_MARKERS = tuple(chr(codepoint) for codepoint in (
+    0x7E3A,
+    0x7E5D,
+    0x83A0,
+    0x8706,
+    0x879F,
+    0x9087,
+    0x8B17,
+))
 
 
 @dataclass(frozen=True)
@@ -71,7 +81,7 @@ def audit_text_encoding(base: Path, roots: tuple[str, ...] = DEFAULT_ROOTS) -> l
             findings.append(EncodingFinding(path.relative_to(base).as_posix(), 0, "decode-error", str(exc)))
             continue
         for line_no, line in enumerate(lines, start=1):
-            if "�" in line:
+            if REPLACEMENT_CHARACTER in line:
                 if not _allowed_test_marker(line):
                     findings.append(EncodingFinding(path.relative_to(base).as_posix(), line_no, "replacement-character", line.strip()))
             if _has_halfwidth_katakana(line) and not _allowed_test_marker(line):

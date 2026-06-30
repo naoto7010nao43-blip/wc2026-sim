@@ -31,7 +31,8 @@ def test_audit_text_encoding_flags_mojibake(tmp_path):
 def test_audit_text_encoding_allows_marker_regression_tests(tmp_path):
     tests = tmp_path / "backend" / "tests"
     tests.mkdir(parents=True)
-    (tests / "test_example.py").write_text('assert "縺" not in text\n', encoding="utf-8")
+    marker = chr(0x7E3A)
+    (tests / "test_example.py").write_text(f'assert "{marker}" not in text\n', encoding="utf-8")
 
     findings = audit_text_encoding(tmp_path, ("backend/tests",))
 
@@ -42,6 +43,7 @@ def test_audit_text_encoding_covers_seed_and_report_json_data():
     # Japanese name/copy data lives in JSON, not just source code, and this
     # project has had real mojibake bugs land in data before -- the
     # guardrail must scan it, not only frontend/backend source files.
+    assert "backend/scripts" in DEFAULT_ROOTS
     assert "backend/data/seed" in DEFAULT_ROOTS
     assert "backend/reports" in DEFAULT_ROOTS
 
