@@ -201,6 +201,8 @@ def build_report(
         "requiredCommands": [
             ".\\scripts\\pre_release_check.ps1",
             ".\\scripts\\post_deploy_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\" -BackendBaseUrl \"<production-backend-url>\"",
+            ".\\scripts\\post_deploy_content_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\" -BackendBaseUrl \"<production-backend-url>\"",
+            ".\\scripts\\post_deploy_browser_smoke.ps1 -FrontendBaseUrl \"https://wc2026-sim-ten.vercel.app\"",
         ],
     }
 

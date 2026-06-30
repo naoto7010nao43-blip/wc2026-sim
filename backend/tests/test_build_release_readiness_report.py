@@ -142,3 +142,25 @@ def test_build_report_not_ready_when_task_active(tmp_path):
     assert report["readyForManualPush"] is False
     assert "CURRENT_TASK.md still lists an active Ready task." in report["blockers"]
     assert report["rank75Benchmark"]["status"] == "pass"
+
+
+def test_build_report_lists_all_post_deploy_smoke_commands(tmp_path):
+    write_json(
+        tmp_path / "prediction_benchmark_comparison_rank75_order_neutral_2026-06-23.json",
+        {
+            "benchmarkMethod": "dual_order_average",
+            "evaluation": {"status": "pass", "watchlist_implausible_reduction": 5},
+            "overall": {"implausible_favorite_count_delta": -6, "average_favorite_win_pct_delta": 0.7},
+        },
+    )
+    report = build_report(
+        current_task_text="None. Awaiting the next Codex-authored Ready spec.",
+        git_status=[],
+        reports_dir=tmp_path,
+    )
+
+    commands = "\n".join(report["requiredCommands"])
+
+    assert "post_deploy_smoke.ps1" in commands
+    assert "post_deploy_content_smoke.ps1" in commands
+    assert "post_deploy_browser_smoke.ps1" in commands
