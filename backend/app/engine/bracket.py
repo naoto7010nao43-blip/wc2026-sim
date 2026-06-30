@@ -69,17 +69,43 @@ R32_TEMPLATE: list[tuple[str, str]] = [
 
 T = TypeVar("T")
 
+# Curated rows of FIFA's Annex C table for combinations whose real-world
+# assignment has been confirmed against the published bracket. Keyed by the
+# sorted tuple of the 8 qualifying group letters. The generic candidate-pool
+# search below can pick a *different* valid permutation than FIFA's literal
+# table, so for combinations that have actually occurred we pin the real one
+# to reproduce the genuine bracket. Each row is verified to satisfy every
+# slot's THIRD_PLACE_CANDIDATE_POOLS entry.
+#
+# ("B","D","E","F","I","J","K","L") is the real 2026 World Cup qualifying
+# third-place set; this row reproduces the actual Round of 32 (GER-PAR,
+# USA-BIH, BEL-SEN, MEX-ECU, FRA-SWE, SUI-ALG, ENG-COD, COL-GHA), confirmed
+# against the Wikipedia 2026 FIFA World Cup knockout-stage bracket.
+FIFA_THIRD_PLACE_TABLE: dict[tuple[str, ...], dict[str, str]] = {
+    ("B", "D", "E", "F", "I", "J", "K", "L"): {
+        "A1": "E", "B1": "J", "D1": "B", "E1": "D",
+        "G1": "I", "I1": "F", "K1": "L", "L1": "K",
+    },
+}
+
 
 def assign_third_place_slots(qualifying_groups: list[str]) -> dict[str, str]:
     """Given exactly 8 distinct qualifying group letters, return a mapping
     from each of the 8 THIRD_PLACE_SLOTS to one qualifying group, such that
-    every slot's confirmed candidate pool is respected. Deterministic: the
-    qualifying groups are sorted first, and the lexicographically-first
-    valid permutation is returned.
+    every slot's confirmed candidate pool is respected.
+
+    If the combination appears in FIFA_THIRD_PLACE_TABLE, that confirmed
+    real-world assignment is returned. Otherwise falls back to a
+    deterministic search: the qualifying groups are sorted first, and the
+    lexicographically-first valid permutation is returned.
     """
     groups = sorted(qualifying_groups)
     if len(groups) != 8 or len(set(groups)) != 8:
         raise ValueError(f"Expected exactly 8 distinct qualifying groups, got {qualifying_groups}")
+
+    pinned = FIFA_THIRD_PLACE_TABLE.get(tuple(groups))
+    if pinned is not None:
+        return dict(pinned)
 
     for perm in permutations(groups):
         assignment = dict(zip(THIRD_PLACE_SLOTS, perm))

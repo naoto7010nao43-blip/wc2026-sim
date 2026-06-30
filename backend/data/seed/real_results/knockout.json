@@ -1,0 +1,89 @@
+[
+  {
+    "round": "R32",
+    "home_team_id": "RSA",
+    "away_team_id": "CAN",
+    "home_score": 0,
+    "away_score": 1,
+    "date": "2026-06-28",
+    "goals": [
+      {
+        "minute": 92,
+        "team_id": "CAN",
+        "scorer_name": "Stephen Eustaquio"
+      }
+    ]
+  },
+  {
+    "round": "R32",
+    "home_team_id": "BRA",
+    "away_team_id": "JPN",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-06-29",
+    "goals": [
+      {
+        "minute": 29,
+        "team_id": "JPN",
+        "scorer_name": "Kaishu Sano",
+        "scorer_name_ja": "佐野海舟"
+      },
+      {
+        "minute": 56,
+        "team_id": "BRA",
+        "scorer_name": "Casemiro"
+      },
+      {
+        "minute": 95,
+        "team_id": "BRA",
+        "scorer_name": "Gabriel Martinelli"
+      }
+    ]
+  },
+  {
+    "round": "R32",
+    "home_team_id": "GER",
+    "away_team_id": "PAR",
+    "home_score": 1,
+    "away_score": 1,
+    "went_to_penalties": true,
+    "penalty_home_score": 3,
+    "penalty_away_score": 4,
+    "date": "2026-06-29",
+    "goals": [
+      {
+        "minute": 42,
+        "team_id": "PAR",
+        "scorer_name": "Julio Enciso"
+      },
+      {
+        "minute": 54,
+        "team_id": "GER",
+        "scorer_name": "Kai Havertz"
+      }
+    ]
+  },
+  {
+    "round": "R32",
+    "home_team_id": "NED",
+    "away_team_id": "MAR",
+    "home_score": 1,
+    "away_score": 1,
+    "went_to_penalties": true,
+    "penalty_home_score": 2,
+    "penalty_away_score": 3,
+    "date": "2026-06-29",
+    "goals": [
+      {
+        "minute": 72,
+        "team_id": "NED",
+        "scorer_name": "Cody Gakpo"
+      },
+      {
+        "minute": 91,
+        "team_id": "MAR",
+        "scorer_name": "Issa Diop"
+      }
+    ]
+  }
+]

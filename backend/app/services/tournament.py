@@ -18,7 +18,11 @@ from app.models.team import Team
 from app.schemas.match import SimulateMatchRequest
 from app.schemas.standings import StandingsRow
 from app.services.predicted_match import run_and_persist_predicted_match
-from app.services.real_results import load_real_results, persist_real_match
+from app.services.real_results import (
+    load_real_knockout_results,
+    load_real_results,
+    persist_real_match,
+)
 from app.services.standings import compute_standings
 from app.services.third_place import rank_third_place_teams
 
@@ -70,6 +74,19 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
         )
         return run_and_persist_predicted_match(db, req)
 
+    # Already-played knockout fixtures (R32 onward) use their researched real
+    # result; everything else is predicted. Keyed by team-pair frozenset.
+    real_knockout = load_real_knockout_results()
+
+    def play_knockout(home_id: str, away_id: str, *, round: str, bracket_slot: str) -> Match:
+        real = real_knockout.get(frozenset({home_id, away_id}))
+        if real is not None and real.get("round") == round:
+            return persist_real_match(
+                db, real["home_team_id"], real["away_team_id"], real,
+                round=round, bracket_slot=bracket_slot,
+            )
+        return play(home_id, away_id, round=round, bracket_slot=bracket_slot, allow_draw=False)
+
     # 1. Group stage: round robin within each of the 12 groups. Fixtures
     # that have already been played in the real 2026 World Cup use the
     # researched real result instead of the simulator (see real_results.py).
@@ -84,7 +101,7 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
         for home_id, away_id in itertools.combinations(team_ids, 2):
             real_result = real_results.get(frozenset({home_id, away_id}))
             if real_result is not None:
-                matches.append(persist_real_match(db, real_result["home_team_id"], real_result["away_team_id"], letter, real_result))
+                matches.append(persist_real_match(db, real_result["home_team_id"], real_result["away_team_id"], real_result, group_id=letter))
             else:
                 matches.append(play(home_id, away_id, group_id=letter, round="group"))
         group_matches[letter] = matches
@@ -105,13 +122,13 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
     for i, (slot_a, slot_b) in enumerate(R32_TEMPLATE):
         home_id = _resolve_slot(slot_a, group_standings, third_place_team_by_group, third_place_assignment)
         away_id = _resolve_slot(slot_b, group_standings, third_place_team_by_group, third_place_assignment)
-        r32_matches.append(play(home_id, away_id, round="R32", bracket_slot=f"R32_{i + 1}", allow_draw=False))
+        r32_matches.append(play_knockout(home_id, away_id, round="R32", bracket_slot=f"R32_{i + 1}"))
 
     def play_next_round(prev_matches: list[Match], round_name: str) -> list[Match]:
         winners = [match_winner(m) for m in prev_matches]
         pairs = next_round_pairs(winners)
         return [
-            play(home_id, away_id, round=round_name, bracket_slot=f"{round_name}_{i + 1}", allow_draw=False)
+            play_knockout(home_id, away_id, round=round_name, bracket_slot=f"{round_name}_{i + 1}")
             for i, (home_id, away_id) in enumerate(pairs)
         ]
 
@@ -123,8 +140,8 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
     # 5. Third place match + Final.
     sf_winners = [match_winner(m) for m in sf_matches]
     sf_losers = [match_loser(m) for m in sf_matches]
-    third_place_match = play(sf_losers[0], sf_losers[1], round="THIRD_PLACE", bracket_slot="THIRD_PLACE", allow_draw=False)
-    final_match = play(sf_winners[0], sf_winners[1], round="FINAL", bracket_slot="FINAL", allow_draw=False)
+    third_place_match = play_knockout(sf_losers[0], sf_losers[1], round="THIRD_PLACE", bracket_slot="THIRD_PLACE")
+    final_match = play_knockout(sf_winners[0], sf_winners[1], round="FINAL", bracket_slot="FINAL")
 
     return {
         "champion_team_id": match_winner(final_match),

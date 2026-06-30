@@ -40,7 +40,7 @@ def test_persist_legacy_goals_only_schema(db):
             {"minute": 67, "team_id": "HOME", "scorer_name": "Some Other Guy", "scorer_name_ja": "サム・アザー"},
         ],
     }
-    match = persist_real_match(db, "HOME", "AWAY", "A", result)
+    match = persist_real_match(db, "HOME", "AWAY", result, group_id="A")
     assert match.data_source == "Wikipedia (2026 FIFA World Cup Group pages)"
     assert match.home_lineup == []
     assert match.player_ratings == []
@@ -76,7 +76,7 @@ def test_persist_api_football_schema_with_lineup_and_ratings(db):
             {"name": "Defender Guy", "team_id": "AWAY", "rating": 6.1},
         ],
     }
-    match = persist_real_match(db, "HOME", "AWAY", "A", result)
+    match = persist_real_match(db, "HOME", "AWAY", result, group_id="A")
 
     assert match.data_source == "API-Football"
     assert match.home_formation == "1-1"
@@ -99,3 +99,32 @@ def test_persist_api_football_schema_with_lineup_and_ratings(db):
     assert by_name["スター・プレイヤー"]["is_mom"] is True
     assert by_name["スター・プレイヤー"]["is_estimated"] is False
     assert by_name["Defender Guy"]["is_mom"] is False
+
+
+def test_persist_knockout_match_with_penalties(db):
+    """A drawn R32 fixture decided on penalties: round/bracket_slot are set,
+    penalty fields persist, and a penalty_shootout event is emitted."""
+    result = {
+        "round": "R32", "home_score": 1, "away_score": 1,
+        "went_to_penalties": True, "penalty_home_score": 3, "penalty_away_score": 4,
+        "date": "2026-06-29",
+        "goals": [
+            {"minute": 54, "team_id": "HOME", "scorer_name": "Star Player"},
+        ],
+    }
+    match = persist_real_match(db, "HOME", "AWAY", result, round="R32", bracket_slot="R32_1")
+
+    assert match.round == "R32"
+    assert match.bracket_slot == "R32_1"
+    assert match.group_id is None
+    assert match.went_to_penalties is True
+    assert match.penalty_home_score == 3
+    assert match.penalty_away_score == 4
+    assert match.data_source == "Wikipedia (2026 FIFA World Cup knockout stage)"
+
+    events = db.query(MatchEvent).filter_by(match_id=match.id).order_by(MatchEvent.id).all()
+    types = [e.event_type for e in events]
+    assert "penalty_shootout" in types
+    shootout = next(e for e in events if e.event_type == "penalty_shootout")
+    assert "3-4" in shootout.description
+    assert shootout.event_metadata["penalty_away_score"] == 4

@@ -33,6 +33,7 @@ from app.models.team import Team
 REAL_RESULTS_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "seed" / "real_results"
 GROUP_LETTERS = list("ABCDEFGHIJKL")
 LEGACY_DATA_SOURCE = "Wikipedia (2026 FIFA World Cup Group pages)"
+LEGACY_KNOCKOUT_DATA_SOURCE = "Wikipedia (2026 FIFA World Cup knockout stage)"
 API_DATA_SOURCE = "API-Football"
 
 CARD_EVENT_TYPES = {"Yellow Card": "yellow_card", "Red Card": "red_card"}
@@ -52,6 +53,23 @@ def load_real_results() -> dict[str, dict[frozenset, dict]]:
             for e in entries
         }
     return by_group
+
+
+def load_real_knockout_results() -> dict[frozenset, dict]:
+    """Returns {frozenset({home_id, away_id}): result_dict} for already-played
+    knockout fixtures (Round of 32 onward). Each entry carries its own
+    "round" ("R32"/"R16"/"QF"/"SF"/"THIRD_PLACE"/"FINAL") and, for matches
+    decided after a draw, penalty shootout fields. A knockout pairing is
+    unique across the whole bracket, so a single team-pair keyed dict is
+    sufficient. Missing file -> empty dict (nothing played yet)."""
+    path = REAL_RESULTS_DIR / "knockout.json"
+    if not path.exists():
+        return {}
+    entries = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        frozenset({e["home_team_id"], e["away_team_id"]}): e
+        for e in entries
+    }
 
 
 def _find_player(
@@ -189,16 +207,33 @@ def persist_real_match(
     db: Session,
     home_team_id: str,
     away_team_id: str,
-    group_id: str,
     result: dict,
+    *,
+    group_id: str | None = None,
+    round: str = "group",
+    bracket_slot: str | None = None,
 ) -> Match:
     """Builds a real-data event timeline from a synced result dict and
-    persists it as a completed Match, skipping the simulator entirely."""
+    persists it as a completed Match, skipping the simulator entirely.
+
+    Works for group-stage fixtures (round="group", group_id set) and for
+    knockout fixtures (round="R32"/.../"FINAL", bracket_slot set). Knockout
+    matches that were drawn after 90' carry penalty fields in the result
+    dict (went_to_penalties / penalty_home_score / penalty_away_score)."""
     home_team = db.get(Team, home_team_id)
     away_team = db.get(Team, away_team_id)
     home_score = result["home_score"]
     away_score = result["away_score"]
     is_api_sourced = result.get("source") == "api-football"
+    if is_api_sourced:
+        data_source = API_DATA_SOURCE
+    elif round != "group":
+        data_source = LEGACY_KNOCKOUT_DATA_SOURCE
+    else:
+        data_source = LEGACY_DATA_SOURCE
+    went_to_penalties = bool(result.get("went_to_penalties"))
+    penalty_home_score = result.get("penalty_home_score")
+    penalty_away_score = result.get("penalty_away_score")
 
     home_lineup: list[dict] = []
     away_lineup: list[dict] = []
@@ -210,9 +245,23 @@ def persist_real_match(
         events.extend(_build_events_from_api(db, result["events"]))
     else:
         events.extend(_build_events_legacy(db, result.get("goals", [])))
-    events.append(make_event(90, "fulltime", home_team_id, "試合終了。", event_metadata={
-        "home_score": home_score, "away_score": away_score,
-    }))
+    fulltime_metadata = {"home_score": home_score, "away_score": away_score}
+    if went_to_penalties:
+        fulltime_metadata["went_to_penalties"] = True
+        fulltime_metadata["penalty_home_score"] = penalty_home_score
+        fulltime_metadata["penalty_away_score"] = penalty_away_score
+        shootout_winner = home_team if penalty_home_score > penalty_away_score else away_team
+        events.append(make_event(
+            90, "penalty_shootout", home_team_id,
+            f"PK戦: {home_team.name} {penalty_home_score}-"
+            f"{penalty_away_score} {away_team.name} で"
+            f"{shootout_winner.name}が勝利。",
+            event_metadata={
+                "penalty_home_score": penalty_home_score,
+                "penalty_away_score": penalty_away_score,
+            },
+        ))
+    events.append(make_event(90, "fulltime", home_team_id, "試合終了。", event_metadata=fulltime_metadata))
 
     home_roster = {p["player_id"]: p["name"] for p in home_lineup}
     away_roster = {p["player_id"]: p["name"] for p in away_lineup}
@@ -225,7 +274,8 @@ def persist_real_match(
     match = Match(
         id=str(uuid.uuid4()),
         group_id=group_id,
-        round="group",
+        round=round,
+        bracket_slot=bracket_slot,
         home_team_id=home_team_id,
         away_team_id=away_team_id,
         home_formation=(lineups.get("home") or {}).get("formation") or home_team.default_formation,
@@ -236,11 +286,13 @@ def persist_real_match(
         away_roster=away_roster,
         home_score=home_score,
         away_score=away_score,
-        went_to_penalties=False,
+        went_to_penalties=went_to_penalties,
+        penalty_home_score=penalty_home_score,
+        penalty_away_score=penalty_away_score,
         status="completed",
         played_at=played_at,
         is_real=True,
-        data_source=API_DATA_SOURCE if is_api_sourced else LEGACY_DATA_SOURCE,
+        data_source=data_source,
         home_possession_pct=stats.get("home_possession_pct"),
         away_possession_pct=stats.get("away_possession_pct"),
         home_shots=stats.get("home_shots"),
