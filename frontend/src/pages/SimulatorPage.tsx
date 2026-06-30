@@ -29,17 +29,26 @@ export function SimulatorPage() {
 
   const homeTeam = useMemo(() => teams.find((t) => t.id === homeTeamId), [teams, homeTeamId]);
   const awayTeam = useMemo(() => teams.find((t) => t.id === awayTeamId), [teams, awayTeamId]);
+  const trimmedSeed = seed.trim();
+  const parsedSeed = trimmedSeed === "" ? undefined : Number(trimmedSeed);
+  const seedIsValid = trimmedSeed === "" || (typeof parsedSeed === "number" && Number.isInteger(parsedSeed));
+  const sameTeamsSelected = Boolean(homeTeamId && awayTeamId && homeTeamId === awayTeamId);
+  const canRunSimulation = teams.length > 0 && !loading && !sameTeamsSelected && seedIsValid;
 
   async function runSimulation() {
     if (!homeTeamId || !awayTeamId || homeTeamId === awayTeamId) {
       setError("異なる2チームを選択してください。");
       return;
     }
+    if (!seedIsValid) {
+      setError("シードは整数で入力してください。");
+      return;
+    }
     setLoading(true);
     setError(null);
     try {
       const match = await api.simulateMatch(homeTeamId, awayTeamId, {
-        seed: seed.trim() === "" ? undefined : Number(seed),
+        seed: parsedSeed,
         allowDraw: !decisive,
       });
       navigate(`/matches/${match.id}`);
@@ -113,6 +122,7 @@ export function SimulatorPage() {
               value={seed}
               onChange={(e) => setSeed(e.target.value)}
               placeholder="ランダム"
+              inputMode="numeric"
               className="w-28 rounded-md border border-slate-600 bg-slate-900 px-2 py-1 text-slate-100"
             />
           </label>
@@ -122,11 +132,17 @@ export function SimulatorPage() {
           </label>
         </div>
 
+        {(sameTeamsSelected || !seedIsValid) && (
+          <p className="mt-3 text-xs text-amber-300">
+            {sameTeamsSelected ? "同じチーム同士では実行できません。左右で異なる国を選んでください。" : "シードは空欄、または整数だけを指定できます。"}
+          </p>
+        )}
+
         {error && <p className="mt-3 text-sm text-rose-400">{error}</p>}
 
         <button
           onClick={runSimulation}
-          disabled={loading || teams.length === 0}
+          disabled={!canRunSimulation}
           className="mt-5 rounded-lg bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading ? "シミュレーション中..." : "シミュレーション開始"}
