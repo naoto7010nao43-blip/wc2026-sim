@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
+import { CountryIntroPanel } from "../components/CountryIntroPanel";
 import { MatchAnalysisPanel } from "../components/MatchAnalysisPanel";
 import { MatchEventTimeline } from "../components/MatchEventTimeline";
 import { PitchFormationView } from "../components/PitchFormationView";
 import { PlayerRatingsPanel } from "../components/PlayerRatingsPanel";
 import { TeamBadge } from "../components/TeamBadge";
-import type { MatchResult, RoundName } from "../types/domain";
+import type { MatchResult, RoundName, TeamOut } from "../types/domain";
 
 const ROUND_LABELS: Record<RoundName, string> = {
   group: "グループステージ",
@@ -79,6 +80,8 @@ function StatRow({ label, home, away, homePct }: { label: string; home: string; 
 export function MatchDetailPage() {
   const { matchId } = useParams<{ matchId: string }>();
   const [match, setMatch] = useState<MatchResult | null>(null);
+  const [homeTeam, setHomeTeam] = useState<TeamOut | null>(null);
+  const [awayTeam, setAwayTeam] = useState<TeamOut | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -103,6 +106,29 @@ export function MatchDetailPage() {
       cancelled = true;
     };
   }, [matchId]);
+
+  // Fetch both nations' full team data for the "対戦国ガイド" intro panel.
+  // Best-effort: if a fetch fails the panel is simply omitted.
+  const homeId = match?.home_team_id;
+  const awayId = match?.away_team_id;
+  useEffect(() => {
+    if (!homeId || !awayId) return;
+    let cancelled = false;
+    setHomeTeam(null);
+    setAwayTeam(null);
+    Promise.all([api.getTeam(homeId), api.getTeam(awayId)])
+      .then(([h, a]) => {
+        if (cancelled) return;
+        setHomeTeam(h);
+        setAwayTeam(a);
+      })
+      .catch(() => {
+        /* intro panel is optional; ignore */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [homeId, awayId]);
 
   useEffect(() => {
     if (!isPlaying || !match) return;
@@ -190,6 +216,8 @@ export function MatchDetailPage() {
           </div>
         )}
       </div>
+
+      {homeTeam && awayTeam && <CountryIntroPanel home={homeTeam} away={awayTeam} />}
 
       {hasEvents ? (
         <>
