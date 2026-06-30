@@ -12,6 +12,8 @@ import re
 from itertools import combinations
 from pathlib import Path
 
+from scripts.check_data_freshness import check_freshness
+
 SEED_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "seed"
 REPORTS_DIR = Path(__file__).resolve().parent.parent.parent / "reports"
 
@@ -75,6 +77,18 @@ def _real_results_coverage(seed_dir: Path) -> dict:
     }
 
 
+def _freshness_note(message: str) -> str:
+    if message.startswith("FIFA Official Squad feed: stale"):
+        return "公式スカッドfeedの最終確認が鮮度ポリシーを超過しています。反映済みデータは保持しつつ、公開後も再確認対象です。"
+    if message.startswith("Existing project seed data"):
+        return "既存seedデータ（経歴・市場価値・出典）の最終確認が鮮度ポリシーを超過しています。能力値変更前に再確認が必要です。"
+    if message.startswith("metadata.lastUpdated"):
+        return "seedメタデータの最終更新日が鮮度ポリシーを超過しています。"
+    if "not yet integrated" in message:
+        return "未連携の外部データソースがあります。現時点では参考情報として扱います。"
+    return f"データ鮮度確認: {message}"
+
+
 def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = REPORTS_DIR) -> dict:
     notes: list[str] = []
 
@@ -110,6 +124,11 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
 
     last_seed_update = metadata.get("lastUpdated")
     real_results = _real_results_coverage(seed_dir)
+    freshness_findings = check_freshness(metadata) if isinstance(metadata, dict) else []
+    freshness_critical_count = sum(1 for finding in freshness_findings if finding.get("level") == "critical")
+    freshness_warning_count = sum(1 for finding in freshness_findings if finding.get("level") == "warning")
+    freshness_notice_count = sum(1 for finding in freshness_findings if finding.get("level") == "notice")
+    freshness_status = "critical" if freshness_critical_count else "warning" if freshness_warning_count else "ok"
 
     control_character_issues = _count_control_character_issues(
         [
@@ -134,6 +153,9 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
             f"グループステージ実結果は{real_results['real_group_match_count']}/"
             f"{real_results['real_group_match_expected']}試合まで反映済みです。"
         )
+    for finding in freshness_findings:
+        if finding.get("level") in {"critical", "warning"}:
+            notes.append(_freshness_note(finding.get("message", "")))
 
     return {
         "seed_player_count": seed_player_count,
@@ -147,6 +169,10 @@ def compute_data_quality_summary(seed_dir: Path = SEED_DIR, reports_dir: Path = 
         "last_seed_update": last_seed_update,
         "last_report_update": last_report_update,
         "control_character_issues": control_character_issues,
+        "freshness_status": freshness_status,
+        "freshness_critical_count": freshness_critical_count,
+        "freshness_warning_count": freshness_warning_count,
+        "freshness_notice_count": freshness_notice_count,
         **real_results,
         "notes": notes,
     }

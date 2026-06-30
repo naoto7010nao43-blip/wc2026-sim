@@ -45,6 +45,9 @@ def test_summary_endpoint_returns_current_counts(client):
     assert body["real_group_match_expected"] == 72
     assert body["real_group_match_coverage_pct"] == 100.0
     assert body["real_knockout_match_count"] == 4
+    assert body["freshness_status"] == "critical"
+    assert body["freshness_critical_count"] == 1
+    assert body["freshness_warning_count"] >= 1
 
 
 def test_summary_matches_current_repository_reports():
@@ -64,6 +67,10 @@ def test_summary_matches_current_repository_reports():
     assert summary["real_group_match_expected"] == 72
     assert summary["real_group_match_coverage_pct"] == 100.0
     assert summary["real_knockout_match_count"] == 4
+    assert summary["freshness_status"] == "critical"
+    assert summary["freshness_critical_count"] == 1
+    assert summary["freshness_warning_count"] >= 1
+    assert any("公式スカッドfeed" in note for note in summary["notes"])
 
 
 def test_missing_report_falls_back_gracefully(tmp_path):
@@ -75,7 +82,10 @@ def test_missing_report_falls_back_gracefully(tmp_path):
         json.dumps([{"playerId": "A", "caps": 1}, {"playerId": "B", "caps": None, "clubName": None}]),
         encoding="utf-8",
     )
-    (seed_dir / "metadata.json").write_text(json.dumps({"lastUpdated": "2026-01-01T00:00:00Z"}), encoding="utf-8")
+    (seed_dir / "metadata.json").write_text(
+        json.dumps({"lastUpdated": "2026-01-01T00:00:00Z", "freshnessPolicy": {"playerRatingsMaxAgeDays": 30}}),
+        encoding="utf-8",
+    )
 
     empty_reports_dir = tmp_path / "reports"
 
@@ -91,6 +101,8 @@ def test_missing_report_falls_back_gracefully(tmp_path):
     assert summary["real_group_match_expected"] == 0
     assert summary["real_group_match_coverage_pct"] == 0.0
     assert summary["real_knockout_match_count"] == 0
+    assert summary["freshness_status"] == "warning"
+    assert summary["freshness_warning_count"] == 1
     assert any("照合レポート" in note for note in summary["notes"])
 
 

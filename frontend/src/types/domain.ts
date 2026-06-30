@@ -750,6 +750,10 @@ export interface DataQualitySummary {
   last_seed_update: string | null;
   last_report_update: string | null;
   control_character_issues: number;
+  freshness_status: string;
+  freshness_critical_count: number;
+  freshness_warning_count: number;
+  freshness_notice_count: number;
   real_group_match_count: number;
   real_group_match_expected: number;
   real_group_match_coverage_pct: number;

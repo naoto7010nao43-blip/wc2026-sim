@@ -13,6 +13,10 @@ class DataQualitySummary(BaseModel):
     last_seed_update: str | None
     last_report_update: str | None
     control_character_issues: int
+    freshness_status: str
+    freshness_critical_count: int
+    freshness_warning_count: int
+    freshness_notice_count: int
     real_group_match_count: int
     real_group_match_expected: int
     real_group_match_coverage_pct: float

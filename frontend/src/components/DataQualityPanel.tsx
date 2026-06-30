@@ -10,6 +10,12 @@ function formatDate(value: string | null): string {
   return date.toLocaleDateString("ja-JP", { year: "numeric", month: "short", day: "numeric" });
 }
 
+function freshnessLabel(status: string): string {
+  if (status === "critical") return "再確認推奨";
+  if (status === "warning") return "一部注意";
+  return "良好";
+}
+
 export function DataQualityPanel() {
   const [summary, setSummary] = useState<DataQualitySummary | null>(null);
   const [failed, setFailed] = useState(false);
@@ -71,6 +77,11 @@ export function DataQualityPanel() {
         <Metric
           label="反映待ちの更新候補"
           value={summary.matched_player_field_update_candidates != null ? `${summary.matched_player_field_update_candidates}件` : "-"}
+        />
+        <Metric
+          label="鮮度確認"
+          value={freshnessLabel(summary.freshness_status)}
+          detail={`重大${summary.freshness_critical_count} / 注意${summary.freshness_warning_count}`}
         />
       </div>
 

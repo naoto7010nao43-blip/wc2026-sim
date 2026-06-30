@@ -126,6 +126,8 @@ function TournamentReadinessStrip({ dataQuality }: { dataQuality: DataQualitySum
   const unmatchedSeedPlayers =
     dataQuality?.remaining_unmatched_seed_players == null ? "確認中" : `${dataQuality.remaining_unmatched_seed_players}人`;
   const knockoutMatches = dataQuality?.real_knockout_match_count == null ? "確認中" : `${dataQuality.real_knockout_match_count}試合`;
+  const freshnessStatus =
+    dataQuality?.freshness_status === "critical" ? "再確認推奨" : dataQuality?.freshness_status === "warning" ? "一部注意" : "良好";
 
   return (
     <div className="mt-5 border-t border-slate-700/80 pt-4">
@@ -134,7 +136,7 @@ function TournamentReadinessStrip({ dataQuality }: { dataQuality: DataQualitySum
         <StatusMetric label="実結果反映" value={groupCoverage} detail={`決勝T ${knockoutMatches}`} />
         <StatusMetric label="公式プロフィール" value={officialCoverage} detail="選手属性の反映率" />
         <StatusMetric label="未対応シード選手" value={unmatchedSeedPlayers} detail="今後の確認対象" />
-        <StatusMetric label="品質監査" value={dataQuality?.control_character_issues === 0 ? "異常なし" : "要確認"} detail="文字化け・制御文字" />
+        <StatusMetric label="鮮度確認" value={dataQuality ? freshnessStatus : "確認中"} detail="再確認対象の有無" />
       </dl>
       <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
         実施済みの試合結果は固定し、未実施カードは現在のPoissonモデルで予測します。数値が近いチーム同士は、順位より候補帯として見るのが自然です。
