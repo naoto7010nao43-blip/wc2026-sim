@@ -16237,47 +16237,45 @@
     "playerId": "SWE_EKDAL_A",
     "teamId": "SWE",
     "teamCode": "SWE",
-    "name": "Albin Ekdal",
-    "nameJa": "アルビン・エクダール",
-    "age": 36,
-    "dateOfBirth": null,
+    "name": "Mattias Svanberg",
+    "nameJa": "マティアス・スヴァンベリ",
+    "age": 27,
+    "dateOfBirth": "05/01/1999",
     "shirtNumber": null,
     "primaryPosition": "CDM",
     "secondaryPositions": [
       "CM"
     ],
-    "preferredFoot": "unknown",
-    "heightCm": null,
-    "weightKg": null,
-    "clubName": null,
+    "preferredFoot": "Right",
+    "heightCm": 185,
+    "weightKg": 75,
+    "clubName": "VfL Wolfsburg (GER)",
     "clubCountry": null,
     "leagueName": null,
     "caps": null,
     "nationalTeamGoals": null,
-    "marketValueEur": 800000,
+    "marketValueEur": 15000000,
     "careerStats": {
-      "appearances": 30,
-      "goals": 1,
-      "assists": 2,
-      "minutesPlayed": 2400,
+      "appearances": 31,
+      "goals": 3,
+      "assists": 3,
+      "minutesPlayed": 2500,
       "keyPassesPer90": 0.9,
-      "successfulDribblesPer90": 0.4,
-      "tacklesPer90": 1.8,
-      "interceptionsPer90": 1.5,
-      "aerialDuelsWonPct": 54.0,
-      "passCompletionPct": 86.0
+      "successfulDribblesPer90": 0.6,
+      "tacklesPer90": 1.9,
+      "interceptionsPer90": 1.3,
+      "aerialDuelsWonPct": 52.0,
+      "passCompletionPct": 85.0
     },
-    "qualitativeAdjustments": {
-      "pace": -3,
-      "passing": 1
-    },
+    "qualitativeAdjustments": {},
     "sourceCitations": [
-      "Transfermarkt 2026-06 (age 36)",
-      "Swedish Allsvenskan 2025-26 stats"
+      "EA SPORTS FC 26 player ratings ea.com id 228946 (2026-07-01): CM/CDM overall 76 (pace 73 shooting 70 passing 74 dribbling 76 defending 66 physical 73)",
+      "fcratings.com/mattias-svanberg-228946: b.05/01/1999 (age 27 per EA FC 26), VfL Wolfsburg, 185cm, right-footed; selected in Sweden 2026 World Cup 26-man squad (Albin Ekdal not selected)",
+      "Transfermarkt 2025-26: market value EUR 15m; VfL Wolfsburg Bundesliga 2025-26"
     ],
-    "staminaMax": 70,
+    "staminaMax": 88,
     "dataConfidence": "external",
-    "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
   },
   {
     "playerId": "SWE_OLSSON_J",

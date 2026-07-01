@@ -97,3 +97,32 @@ class TournamentUpsetWatchOut(BaseModel):
     candidates: list[TournamentUpsetWatchMatchOut]
     model_version: str
     disclaimer: str
+
+
+class GroupDifficultyTeamOut(BaseModel):
+    team_id: str
+    team_name: str
+    fifa_rank: int | None
+    strength_rating: float
+
+
+class GroupDifficultyOut(BaseModel):
+    group_id: str
+    difficulty_score: float
+    difficulty_band: str
+    average_strength: float
+    top_strength: float
+    strength_spread: float
+    average_favorite_gap_pct: float
+    average_draw_pct: float
+    upset_pressure: float
+    top_team_id: str
+    teams: list[GroupDifficultyTeamOut]
+    reason_ja: str
+
+
+class TournamentGroupDifficultyOut(BaseModel):
+    group_count: int
+    groups: list[GroupDifficultyOut]
+    model_version: str
+    disclaimer: str

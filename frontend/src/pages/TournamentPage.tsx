@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { api } from "../api/client";
 import { BracketView } from "../components/BracketView";
+import { GroupDifficultyPanel } from "../components/GroupDifficultyPanel";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
@@ -92,6 +93,7 @@ export function TournamentPage() {
       </section>
 
       <TournamentOddsPanel />
+      <GroupDifficultyPanel />
       <TournamentUpsetWatchPanel />
 
       {restoring && <p className="text-sm text-slate-400">読み込み中...</p>}

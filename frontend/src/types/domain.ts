@@ -104,6 +104,35 @@ export interface TournamentUpsetWatchOut {
   disclaimer: string;
 }
 
+export interface GroupDifficultyTeam {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  strength_rating: number;
+}
+
+export interface GroupDifficulty {
+  group_id: string;
+  difficulty_score: number;
+  difficulty_band: "high" | "medium" | "low";
+  average_strength: number;
+  top_strength: number;
+  strength_spread: number;
+  average_favorite_gap_pct: number;
+  average_draw_pct: number;
+  upset_pressure: number;
+  top_team_id: string;
+  teams: GroupDifficultyTeam[];
+  reason_ja: string;
+}
+
+export interface TournamentGroupDifficultyOut {
+  group_count: number;
+  groups: GroupDifficulty[];
+  model_version: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;

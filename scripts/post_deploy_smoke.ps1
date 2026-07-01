@@ -53,6 +53,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend sample prediction" "$backend/api/predictions/BRA/ARG"
     Invoke-UrlCheck "Backend sample matchup breakdown" "$backend/api/predictions/BRA/ARG/breakdown"
     Invoke-UrlCheck "Backend tournament upset watch" "$backend/api/tournament/upset-watch"
+    Invoke-UrlCheck "Backend tournament group difficulty" "$backend/api/tournament/group-difficulty"
 } else {
     Write-Host ""
     Write-Host "BackendBaseUrl not provided; skipped backend checks." -ForegroundColor Yellow

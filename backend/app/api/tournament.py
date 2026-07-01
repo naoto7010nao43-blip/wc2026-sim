@@ -12,10 +12,14 @@ from app.models.team import Team
 from app.prediction.monte_carlo import simulate_tournament_outcomes
 from app.prediction.model_config import DEFAULT_MODEL_CONFIG
 from app.prediction.poisson_model import predict_match
+from app.prediction.ratings import team_strength_rating
 from app.rate_limit import rate_limit
 from app.schemas.match import MatchSummary
 from app.schemas.prediction import (
+    GroupDifficultyOut,
+    GroupDifficultyTeamOut,
     SimulateMonteCarloRequest,
+    TournamentGroupDifficultyOut,
     TournamentSimulationOut,
     TournamentUpsetWatchMatchOut,
     TournamentUpsetWatchOut,
@@ -140,6 +144,113 @@ def get_tournament_upset_watch(
     return TournamentUpsetWatchOut(
         match_count=len(candidates),
         candidates=candidates[:limit],
+        model_version=model_version,
+        disclaimer=disclaimer,
+    )
+
+
+def _group_difficulty_band(score: float) -> str:
+    if score >= 70:
+        return "high"
+    if score >= 65:
+        return "medium"
+    return "low"
+
+
+def _group_difficulty_reason(group: GroupDifficultyOut) -> str:
+    if group.difficulty_band == "high":
+        return "平均戦力が高く、カードごとの勝率差も小さいため、順位変動が起きやすいグループです。"
+    if group.average_favorite_gap_pct <= 9:
+        return "突出した本命が少なく、直接対決の一試合で通過順が大きく変わりやすいグループです。"
+    if group.upset_pressure >= 40:
+        return "本命は存在しますが、格下側の勝率と引き分け確率が高く、取りこぼしの圧力があります。"
+    return "上位候補は比較的見えていますが、通過順位や3位争いでは細かい分岐が残るグループです。"
+
+
+@router.get("/group-difficulty", response_model=TournamentGroupDifficultyOut, dependencies=[Depends(rate_limit(20))])
+def get_tournament_group_difficulty(db: Session = Depends(get_db)):
+    teams = db.scalars(select(Team).where(Team.group_id.isnot(None)).order_by(Team.group_id, Team.id)).all()
+    teams_by_group: dict[str, list[Team]] = {}
+    players_by_team = {team.id: team_players_as_dicts(db, team.id) for team in teams}
+    for team in teams:
+        teams_by_group.setdefault(team.group_id or "", []).append(team)
+
+    groups: list[GroupDifficultyOut] = []
+    model_version = DEFAULT_MODEL_CONFIG.model_version
+    disclaimer = "これは既存のチーム強度と試合前予測から作った比較指標であり、実際の順位を保証するものではありません。"
+
+    for group_id in GROUP_LETTERS:
+        group_teams = teams_by_group.get(group_id, [])
+        if len(group_teams) != 4:
+            continue
+
+        team_rows: list[GroupDifficultyTeamOut] = []
+        for team in group_teams:
+            strength, _confidence = team_strength_rating(team.fifa_rank, players_by_team[team.id])
+            team_rows.append(
+                GroupDifficultyTeamOut(
+                    team_id=team.id,
+                    team_name=team.name,
+                    fifa_rank=team.fifa_rank,
+                    strength_rating=round(strength, 1),
+                )
+            )
+        team_rows.sort(key=lambda row: (-row.strength_rating, row.fifa_rank or 999, row.team_id))
+
+        favorite_gaps: list[float] = []
+        draw_pcts: list[float] = []
+        upset_scores: list[float] = []
+        for home_team, away_team in itertools.combinations(group_teams, 2):
+            host_bump_home = DEFAULT_MODEL_CONFIG.host_advantage if home_team.id in HOST_NATIONS else 0.0
+            host_bump_away = DEFAULT_MODEL_CONFIG.host_advantage if away_team.id in HOST_NATIONS else 0.0
+            prediction = predict_match(
+                home_team_id=home_team.id,
+                away_team_id=away_team.id,
+                home_players=players_by_team[home_team.id],
+                away_players=players_by_team[away_team.id],
+                home_fifa_rank=home_team.fifa_rank,
+                away_fifa_rank=away_team.fifa_rank,
+                home_tactical_profile=home_team.tactical_profile,
+                away_tactical_profile=away_team.tactical_profile,
+                host_bump_home=host_bump_home,
+                host_bump_away=host_bump_away,
+            )
+            model_version = prediction.model_version
+            favorite_gaps.append(abs(prediction.home_win_pct - prediction.away_win_pct))
+            draw_pcts.append(prediction.draw_pct)
+            upset_scores.append(min(prediction.home_win_pct, prediction.away_win_pct) + prediction.draw_pct * 0.35)
+
+        strengths = [row.strength_rating for row in team_rows]
+        average_strength = sum(strengths) / len(strengths)
+        average_favorite_gap = sum(favorite_gaps) / len(favorite_gaps)
+        average_draw_pct = sum(draw_pcts) / len(draw_pcts)
+        upset_pressure = sum(upset_scores) / len(upset_scores)
+        difficulty_score = round(
+            average_strength + max(0.0, 18.0 - average_favorite_gap) * 0.7 + upset_pressure * 0.18,
+            1,
+        )
+
+        row = GroupDifficultyOut(
+            group_id=group_id,
+            difficulty_score=difficulty_score,
+            difficulty_band=_group_difficulty_band(difficulty_score),
+            average_strength=round(average_strength, 1),
+            top_strength=round(max(strengths), 1),
+            strength_spread=round(max(strengths) - min(strengths), 1),
+            average_favorite_gap_pct=round(average_favorite_gap, 1),
+            average_draw_pct=round(average_draw_pct, 1),
+            upset_pressure=round(upset_pressure, 1),
+            top_team_id=team_rows[0].team_id,
+            teams=team_rows,
+            reason_ja="",
+        )
+        row.reason_ja = _group_difficulty_reason(row)
+        groups.append(row)
+
+    groups.sort(key=lambda row: (-row.difficulty_score, row.group_id))
+    return TournamentGroupDifficultyOut(
+        group_count=len(groups),
+        groups=groups,
         model_version=model_version,
         disclaimer=disclaimer,
     )

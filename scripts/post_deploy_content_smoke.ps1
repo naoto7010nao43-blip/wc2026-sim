@@ -174,6 +174,20 @@ if (-not $upsetWatch.model_version -or $upsetWatch.model_version -notmatch "^poi
 }
 Assert-HasJapanese "tournament upset watch reason" (($upsetWatch.candidates | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
 
+$groupDifficultyJson = Get-Utf8Text "$backend/api/tournament/group-difficulty"
+Assert-NoMojibakeMarkers "tournament group difficulty JSON" $groupDifficultyJson
+$groupDifficulty = $groupDifficultyJson | ConvertFrom-Json
+if ($groupDifficulty.group_count -ne 12) {
+    throw "Tournament group difficulty group_count is unexpected: $($groupDifficulty.group_count)"
+}
+if ($groupDifficulty.groups.Count -ne 12) {
+    throw "Tournament group difficulty did not expose all groups: $($groupDifficulty.groups.Count)"
+}
+if (-not $groupDifficulty.model_version -or $groupDifficulty.model_version -notmatch "^poisson-v") {
+    throw "Tournament group difficulty model_version is unexpected: $($groupDifficulty.model_version)"
+}
+Assert-HasJapanese "tournament group difficulty reason" (($groupDifficulty.groups | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
+
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson
 $dataQuality = $dataQualityJson | ConvertFrom-Json

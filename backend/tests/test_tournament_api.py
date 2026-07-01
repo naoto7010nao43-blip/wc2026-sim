@@ -119,3 +119,29 @@ def test_tournament_upset_watch_respects_limit(client):
     resp = client.get("/api/tournament/upset-watch?limit=5")
     assert resp.status_code == 200
     assert len(resp.json()["candidates"]) == 5
+
+
+def test_tournament_group_difficulty_returns_ranked_groups(client):
+    resp = client.get("/api/tournament/group-difficulty")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["group_count"] == 12
+    assert len(body["groups"]) == 12
+    assert body["model_version"].startswith("poisson-v")
+    assert "保証" in body["disclaimer"]
+    scores = [row["difficulty_score"] for row in body["groups"]]
+    assert scores == sorted(scores, reverse=True)
+    bands = {row["difficulty_band"] for row in body["groups"]}
+    assert "high" in bands
+    assert "medium" in bands
+    for row in body["groups"]:
+        assert row["group_id"] in "ABCDEFGHIJKL"
+        assert row["difficulty_band"] in {"high", "medium", "low"}
+        assert len(row["teams"]) == 4
+        assert row["top_team_id"] == row["teams"][0]["team_id"]
+        assert row["average_strength"] > 0
+        assert row["average_favorite_gap_pct"] >= 0
+        assert row["average_draw_pct"] >= 0
+        assert row["upset_pressure"] >= 0
+        assert row["reason_ja"]
+        _assert_no_mojibake(row["reason_ja"])

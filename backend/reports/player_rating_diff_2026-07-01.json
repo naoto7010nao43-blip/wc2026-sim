@@ -1,68 +1,38 @@
 {
-  "generatedAt": "2026-07-01T12:52:22.325387+00:00",
+  "generatedAt": "2026-07-01T14:21:23.808338+00:00",
   "totalPlayers": 676,
   "biggestRisers": [
     {
-      "playerId": "BIH_GOJAK",
-      "delta": 4,
-      "from": 63,
-      "to": 67
-    },
-    {
-      "playerId": "BIH_BARISIC",
-      "delta": 3,
-      "from": 67,
-      "to": 70
+      "playerId": "SWE_EKDAL_A",
+      "delta": 8,
+      "from": 68,
+      "to": 76
     }
   ],
   "biggestFallers": [
     {
-      "playerId": "BIH_HADZIKADUNIC",
+      "playerId": "RSA_MOKOENA_T",
       "delta": -2,
-      "from": 71,
-      "to": 69
+      "from": 67,
+      "to": 65
     },
     {
-      "playerId": "IRN_REZAEIAN",
-      "delta": -1,
-      "from": 64,
-      "to": 63
+      "playerId": "BIH_KRUNIC",
+      "delta": -2,
+      "from": 67,
+      "to": 65
     },
     {
-      "playerId": "IRN_HAJSAFI",
+      "playerId": "IRN_EZATOLAHI",
       "delta": -1,
-      "from": 64,
-      "to": 63
+      "from": 61,
+      "to": 60
     },
     {
-      "playerId": "IRN_JAHANBAKHSH",
+      "playerId": "PAN_BARCENAS",
       "delta": -1,
-      "from": 64,
-      "to": 63
-    },
-    {
-      "playerId": "CPV_RYANMENDES",
-      "delta": -1,
-      "from": 64,
-      "to": 63
-    },
-    {
-      "playerId": "JOR_ABUTAHA",
-      "delta": -1,
-      "from": 64,
-      "to": 63
-    },
-    {
-      "playerId": "JOR_ABUZRAYQ",
-      "delta": -1,
-      "from": 64,
-      "to": 63
-    },
-    {
-      "playerId": "PAN_MILLER_R",
-      "delta": -1,
-      "from": 64,
-      "to": 63
+      "from": 62,
+      "to": 61
     }
   ],
   "changedByManualOverride": [

@@ -79,7 +79,12 @@ def test_summary_matches_current_repository_reports():
     # profile + EA FC 26 rating: BIH_HADZIKADUNIC (Toni Sunjic -> Nikola Katic,
     # Schalke), BIH_BARISIC (Ognjen Vranjes -> Tarik Muharemovic, Sassuolo) and
     # BIH_GOJAK (Gojko Cimirot -> Benjamin Tahirovic, Brondby) (606 -> 609).
-    assert summary["official_profile_players"] == 609
+    # The 2026-07-01 Sweden refresh then completed one more stale null-club
+    # placeholder: SWE_EKDAL_A (Albin Ekdal, retired from int'l football and not
+    # in Sweden's final 26 -> Mattias Svanberg, VfL Wolfsburg), a confirmed 2026
+    # squad midfielder with a sourced profile + EA FC 26 rating. Adding his club
+    # (previously null) flips him into the official-profile count (609 -> 610).
+    assert summary["official_profile_players"] == 610
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72
