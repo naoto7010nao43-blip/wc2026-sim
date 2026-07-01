@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T17:53:27.459089+00:00",
+  "generatedAt": "2026-07-01T18:04:31.237385+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": true,
   "blockers": [],
@@ -60,7 +60,7 @@
     {
       "pattern": "simulation_accuracy_audit_*.json",
       "present": true,
-      "path": "backend\\reports\\simulation_accuracy_audit_2026-06-25.json"
+      "path": "backend\\reports\\simulation_accuracy_audit_2026-07-01.json"
     },
     {
       "pattern": "team_data_review_plan_*.json",
@@ -70,7 +70,7 @@
     {
       "pattern": "squad_rating_gap_review_*.json",
       "present": true,
-      "path": "backend\\reports\\squad_rating_gap_review_2026-06-25.json"
+      "path": "backend\\reports\\squad_rating_gap_review_2026-07-01.json"
     },
     {
       "pattern": "player_rating_diff_*.json",
