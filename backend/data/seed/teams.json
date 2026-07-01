@@ -222,7 +222,7 @@
     "name": "Haiti",
     "confederation": "CONCACAF",
     "fifa_rank": 83,
-    "default_formation": "3-4-2-1",
+    "default_formation": "4-4-2",
     "group_id": "C",
     "tactical_profile": {
       "manager_name": "Sebastien Migne",

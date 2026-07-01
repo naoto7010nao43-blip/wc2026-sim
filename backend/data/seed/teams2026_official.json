@@ -270,7 +270,7 @@
     "name": "Haiti",
     "confederation": "CONCACAF",
     "fifaRank": 83,
-    "defaultFormation": "3-4-2-1",
+    "defaultFormation": "4-4-2",
     "groupId": "C",
     "tacticalProfile": {
       "manager_name": "Sebastien Migne",
@@ -280,7 +280,7 @@
     },
     "dataConfidence": "official",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
-    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
+    "defaultFormationSource": "Corrected 2026-07-01 (was 3-4-2-1, which fielded striker Isidor at CB). Migne's primary shape is 4-4-2 (5-4-1 only vs Brazil); Sports Mole predicted XI = Placide; Arcus, Ade, Delcroix, Duverne; Etienne, Bellegarde, Jean Jacques, Simon; Nazon, Isidor: https://www.sportsmole.co.uk/football/haiti/world-cup-2026/predicted-lineups/isidor-pushing-to-start-nazon-decision-predicted-haiti-lineup-vs-morocco_599777.html ; https://www.goal.com/en/lists/probable-line-ups-world-cup-2026-starters-and-expected-starting-xi-of-the-48-national-teams/blt0d21c342d47a4cc2 (accessed 2026-07-01)"
   },
   {
     "teamId": "SCO",
