@@ -201,3 +201,32 @@ def test_tournament_final_matchups_returns_ranked_candidate_pairs(client):
         assert row["champion_favorite_team_id"] in {row["team_a_id"], row["team_b_id"]}
         assert row["matchup_pct"] > 0
         assert 99.0 <= row["team_a_win_given_matchup_pct"] + row["team_b_win_given_matchup_pct"] <= 101.0
+
+
+def test_tournament_dark_horses_returns_ranked_non_favorite_candidates(client):
+    resp = client.get("/api/tournament/dark-horses?iterations=100&limit=6")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["iterations"] == 100
+    assert body["candidate_count"] >= len(body["candidates"]) > 0
+    assert len(body["candidates"]) <= 6
+    assert body["model_version"].startswith("poisson-v")
+    assert "注目候補" in body["note_ja"]
+    assert "保証" in body["disclaimer"]
+    _assert_no_mojibake(body["note_ja"])
+    _assert_no_mojibake(body["disclaimer"])
+
+    scores = [row["surprise_score"] for row in body["candidates"]]
+    assert scores == sorted(scores, reverse=True)
+    for row in body["candidates"]:
+        assert row["team_id"]
+        assert row["team_name"]
+        assert row["fifa_rank"] is None or row["fifa_rank"] > 12
+        assert 0 <= row["round_of_16_pct"] <= 100
+        assert 0 <= row["quarterfinal_pct"] <= 100
+        assert 0 <= row["semifinal_pct"] <= 100
+        assert 0 <= row["final_pct"] <= 100
+        assert 0 <= row["champion_pct"] <= 100
+        assert row["quarterfinal_pct"] >= 8.0 or row["champion_pct"] >= 0.8
+        assert row["reason_ja"]
+        _assert_no_mojibake(row["reason_ja"])

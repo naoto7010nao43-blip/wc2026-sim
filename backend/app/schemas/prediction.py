@@ -175,3 +175,26 @@ class TournamentFinalMatchupsOut(BaseModel):
     data_confidence: str
     note_ja: str
     disclaimer: str
+
+
+class TournamentDarkHorseCandidateOut(BaseModel):
+    team_id: str
+    team_name: str
+    fifa_rank: int | None
+    round_of_16_pct: float
+    quarterfinal_pct: float
+    semifinal_pct: float
+    final_pct: float
+    champion_pct: float
+    surprise_score: float
+    reason_ja: str
+
+
+class TournamentDarkHorsesOut(BaseModel):
+    iterations: int
+    candidate_count: int
+    candidates: list[TournamentDarkHorseCandidateOut]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str

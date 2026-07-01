@@ -13,7 +13,12 @@ from app.database import Base
 from app.models.match import Match  # noqa: F401  (ensures table is registered with Base.metadata)
 from app.models.player import Player
 from app.models.team import Team
-from app.prediction.monte_carlo import project_final_matchups, project_team_tournament_path, simulate_tournament_outcomes
+from app.prediction.monte_carlo import (
+    project_dark_horses,
+    project_final_matchups,
+    project_team_tournament_path,
+    simulate_tournament_outcomes,
+)
 from app.rating.seed_pipeline import build_player_rows, load_seed_data
 
 
@@ -93,6 +98,19 @@ def test_final_matchups_are_deterministic_given_the_same_seed(db_session):
     for candidate in result1.candidates:
         assert candidate.team_a_id != candidate.team_b_id
         assert candidate.champion_favorite_team_id in {candidate.team_a_id, candidate.team_b_id}
+
+
+def test_dark_horses_are_deterministic_and_exclude_top_ranked_favorites(db_session):
+    result1 = project_dark_horses(db_session, iterations=30, base_seed=17, limit=6)
+    result2 = project_dark_horses(db_session, iterations=30, base_seed=17, limit=6)
+    assert result1.candidates == result2.candidates
+    assert result1.candidate_count >= len(result1.candidates) > 0
+    scores = [candidate.surprise_score for candidate in result1.candidates]
+    assert scores == sorted(scores, reverse=True)
+    for candidate in result1.candidates:
+        assert candidate.fifa_rank is None or candidate.fifa_rank > 12
+        assert candidate.quarterfinal_pct >= 8.0 or candidate.champion_pct >= 0.8
+        assert candidate.reason_ja
 
 
 def test_monte_carlo_disclaimer_present(db_session):

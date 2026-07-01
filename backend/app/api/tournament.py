@@ -9,7 +9,12 @@ from app.api.matches import team_players_as_dicts
 from app.database import get_db
 from app.models.match import Match
 from app.models.team import Team
-from app.prediction.monte_carlo import project_final_matchups, project_team_tournament_path, simulate_tournament_outcomes
+from app.prediction.monte_carlo import (
+    project_dark_horses,
+    project_final_matchups,
+    project_team_tournament_path,
+    simulate_tournament_outcomes,
+)
 from app.prediction.model_config import DEFAULT_MODEL_CONFIG
 from app.prediction.poisson_model import predict_match
 from app.prediction.ratings import team_strength_rating
@@ -19,6 +24,7 @@ from app.schemas.prediction import (
     GroupDifficultyOut,
     GroupDifficultyTeamOut,
     SimulateMonteCarloRequest,
+    TournamentDarkHorsesOut,
     TournamentGroupDifficultyOut,
     TournamentFinalMatchupsOut,
     TournamentPathProjectionOut,
@@ -92,6 +98,16 @@ def get_tournament_final_matchups(
     db: Session = Depends(get_db),
 ):
     return project_final_matchups(db, iterations=iterations, base_seed=seed, limit=limit)
+
+
+@router.get("/dark-horses", response_model=TournamentDarkHorsesOut, dependencies=[Depends(rate_limit(12))])
+def get_tournament_dark_horses(
+    iterations: int = Query(default=1000, ge=100, le=3000),
+    seed: int = Query(default=0),
+    limit: int = Query(default=8, ge=1, le=16),
+    db: Session = Depends(get_db),
+):
+    return project_dark_horses(db, iterations=iterations, base_seed=seed, limit=limit)
 
 
 def _upset_reason(underdog_win_pct: float, draw_pct: float, expected_goal_gap: float) -> str:

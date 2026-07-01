@@ -23,6 +23,7 @@ import type {
   TeamOut,
   TeamReviewSummary,
   TeamSummary,
+  TournamentDarkHorsesOut,
   TournamentResult,
   TournamentFinalMatchupsOut,
   TournamentGroupDifficultyOut,
@@ -93,6 +94,10 @@ export const api = {
   getTournamentFinalMatchups: (opts?: { iterations?: number; seed?: number; limit?: number }) =>
     getJson<TournamentFinalMatchupsOut>(
       `/api/tournament/final-matchups?iterations=${opts?.iterations ?? 1000}&seed=${opts?.seed ?? 0}&limit=${opts?.limit ?? 8}`,
+    ),
+  getTournamentDarkHorses: (opts?: { iterations?: number; seed?: number; limit?: number }) =>
+    getJson<TournamentDarkHorsesOut>(
+      `/api/tournament/dark-horses?iterations=${opts?.iterations ?? 1000}&seed=${opts?.seed ?? 0}&limit=${opts?.limit ?? 8}`,
     ),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getReleaseReadinessSummary: () => getJson<ReleaseReadinessSummary>("/api/model-diagnostics/release-readiness"),

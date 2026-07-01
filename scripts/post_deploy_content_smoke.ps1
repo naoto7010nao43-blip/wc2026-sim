@@ -129,6 +129,7 @@ Assert-Contains "frontend bundle" $bundleText "lineup-engine-parity"
 Assert-Contains "frontend bundle" $bundleText "breakdown"
 Assert-Contains "frontend bundle" $bundleText "path-projection"
 Assert-Contains "frontend bundle" $bundleText "final-matchups"
+Assert-Contains "frontend bundle" $bundleText "dark-horses"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -214,6 +215,18 @@ if (-not $finalMatchups.model_version -or $finalMatchups.model_version -notmatch
     throw "Tournament final matchups model_version is unexpected: $($finalMatchups.model_version)"
 }
 Assert-HasJapanese "tournament final matchups note" $finalMatchups.note_ja
+
+$darkHorsesJson = Get-Utf8Text "$backend/api/tournament/dark-horses?iterations=100&limit=4"
+Assert-NoMojibakeMarkers "tournament dark horses JSON" $darkHorsesJson
+$darkHorses = $darkHorsesJson | ConvertFrom-Json
+if ($darkHorses.candidates.Count -lt 1) {
+    throw "Tournament dark horses did not expose any candidates"
+}
+if (-not $darkHorses.model_version -or $darkHorses.model_version -notmatch "^poisson-v") {
+    throw "Tournament dark horses model_version is unexpected: $($darkHorses.model_version)"
+}
+Assert-HasJapanese "tournament dark horses note" $darkHorses.note_ja
+Assert-HasJapanese "tournament dark horses reason" (($darkHorses.candidates | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
 
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson

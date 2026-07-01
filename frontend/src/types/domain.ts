@@ -180,6 +180,29 @@ export interface TournamentFinalMatchupsOut {
   disclaimer: string;
 }
 
+export interface TournamentDarkHorseCandidate {
+  team_id: string;
+  team_name: string;
+  fifa_rank: number | null;
+  round_of_16_pct: number;
+  quarterfinal_pct: number;
+  semifinal_pct: number;
+  final_pct: number;
+  champion_pct: number;
+  surprise_score: number;
+  reason_ja: string;
+}
+
+export interface TournamentDarkHorsesOut {
+  iterations: number;
+  candidate_count: number;
+  candidates: TournamentDarkHorseCandidate[];
+  model_version: string;
+  data_confidence: string;
+  note_ja: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;

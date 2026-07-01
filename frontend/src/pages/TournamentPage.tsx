@@ -4,6 +4,7 @@ import { BracketView } from "../components/BracketView";
 import { GroupDifficultyPanel } from "../components/GroupDifficultyPanel";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
+import { TournamentDarkHorsesPanel } from "../components/TournamentDarkHorsesPanel";
 import { TournamentFinalMatchupsPanel } from "../components/TournamentFinalMatchupsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
 import { TournamentPathProjectionPanel } from "../components/TournamentPathProjectionPanel";
@@ -96,6 +97,7 @@ export function TournamentPage() {
 
       <TournamentOddsPanel />
       <TournamentFinalMatchupsPanel />
+      <TournamentDarkHorsesPanel />
       <TournamentPathProjectionPanel />
       <GroupDifficultyPanel />
       <TournamentUpsetWatchPanel />

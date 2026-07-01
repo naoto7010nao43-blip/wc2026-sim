@@ -105,6 +105,31 @@ class TournamentFinalMatchupsResult:
     disclaimer: str = "これは予測モデルによる決勝カードの集計であり、実際の決勝進出や勝敗を保証するものではありません。"
 
 
+@dataclass(frozen=True)
+class TournamentDarkHorseCandidate:
+    team_id: str
+    team_name: str
+    fifa_rank: int | None
+    round_of_16_pct: float
+    quarterfinal_pct: float
+    semifinal_pct: float
+    final_pct: float
+    champion_pct: float
+    surprise_score: float
+    reason_ja: str
+
+
+@dataclass(frozen=True)
+class TournamentDarkHorsesResult:
+    iterations: int
+    candidate_count: int
+    candidates: list[TournamentDarkHorseCandidate]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str = "これは予測モデル上の注目候補であり、実際の番狂わせや勝ち上がりを保証するものではありません。"
+
+
 def _in_memory_match(home_team_id: str, away_team_id: str, home_score: int, away_score: int) -> Match:
     """An unpersisted, in-memory Match record. calculate_standings only
     reads plain attributes off it, so a real DB row is never needed."""
@@ -508,4 +533,76 @@ def project_final_matchups(
         model_version=config.model_version,
         data_confidence=data_confidence,
         note_ja="大会全体のモンテカルロ試行から、決勝で発生しやすいカードを集計しています。勝率はその決勝カードが実現した場合の条件付き比率です。",
+    )
+
+
+def _dark_horse_reason(rank: int | None, quarterfinal_pct: float, final_pct: float, champion_pct: float) -> str:
+    rank_label = f"FIFAランク{rank}位" if rank is not None else "FIFAランク未設定"
+    if champion_pct >= 3.0:
+        return f"{rank_label}ながら優勝候補の端に残っており、上振れ時の天井が高いチームです。"
+    if final_pct >= 6.0:
+        return f"{rank_label}ながら決勝到達の芽があり、山の崩れ方次第で大きく伸びる候補です。"
+    if quarterfinal_pct >= 18.0:
+        return f"{rank_label}ながら準々決勝到達率が目立ち、短期大会で追いかける価値があります。"
+    return f"{rank_label}としては勝ち上がりの余地が残っており、グループ突破後の相手次第で化ける候補です。"
+
+
+def project_dark_horses(
+    db: Session,
+    iterations: int = DEFAULT_ITERATIONS,
+    base_seed: int = 0,
+    limit: int = 8,
+    config: ModelConfig = DEFAULT_MODEL_CONFIG,
+) -> TournamentDarkHorsesResult:
+    teams = db.scalars(select(Team)).all()
+    team_names = {team.id: team.name for team in teams}
+    fifa_ranks = {team.id: team.fifa_rank for team in teams}
+    simulation = simulate_tournament_outcomes(db, iterations=iterations, base_seed=base_seed, config=config)
+
+    candidates: list[TournamentDarkHorseCandidate] = []
+    for team in teams:
+        rank = fifa_ranks.get(team.id)
+        if rank is not None and rank <= 12:
+            continue
+
+        r16_pct = simulation.round_of_16_pct.get(team.id, 0.0)
+        qf_pct = simulation.quarterfinal_pct.get(team.id, 0.0)
+        sf_pct = simulation.semifinal_pct.get(team.id, 0.0)
+        final_pct = simulation.final_pct.get(team.id, 0.0)
+        champion_pct = simulation.champion_pct.get(team.id, 0.0)
+        if qf_pct < 8.0 and champion_pct < 0.8:
+            continue
+
+        rank_bonus = min(4.0, max(0.0, ((rank or 48) - 12) * 0.08))
+        surprise_score = round(qf_pct * 0.35 + sf_pct * 0.65 + final_pct * 1.1 + champion_pct * 2.0 + rank_bonus, 1)
+        candidates.append(
+            TournamentDarkHorseCandidate(
+                team_id=team.id,
+                team_name=team_names.get(team.id, team.id),
+                fifa_rank=rank,
+                round_of_16_pct=r16_pct,
+                quarterfinal_pct=qf_pct,
+                semifinal_pct=sf_pct,
+                final_pct=final_pct,
+                champion_pct=champion_pct,
+                surprise_score=surprise_score,
+                reason_ja=_dark_horse_reason(rank, qf_pct, final_pct, champion_pct),
+            )
+        )
+
+    candidates.sort(
+        key=lambda row: (
+            -row.surprise_score,
+            -(row.champion_pct * 2 + row.final_pct),
+            row.fifa_rank or 999,
+            row.team_id,
+        )
+    )
+    return TournamentDarkHorsesResult(
+        iterations=iterations,
+        candidate_count=len(candidates),
+        candidates=candidates[:limit],
+        model_version=simulation.model_version,
+        data_confidence=simulation.data_confidence,
+        note_ja="FIFAランク上位12チームを除外し、勝ち上がり確率が一定以上ある注目候補を抽出しています。低ランクであるほど面白い候補として少しだけ加点しますが、到達率の根拠が薄いチームは残しません。",
     )
