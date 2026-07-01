@@ -49,6 +49,7 @@ def test_required_report_status_marks_missing_and_present(tmp_path):
     write_json(tmp_path / "external_data_verification_validation_2026-06-24.json", {})
     write_json(tmp_path / "external_data_decision_queue_2026-06-24.json", {})
     write_json(tmp_path / "external_source_traceability_audit_2026-06-24.json", {})
+    write_json(tmp_path / "substitution_profile_candidate_queue_2026-06-30.json", {})
     rows = required_report_status(tmp_path)
     baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_baseline_*.json")
     neutral_baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_v1_order_neutral_*.json")
@@ -56,6 +57,7 @@ def test_required_report_status_marks_missing_and_present(tmp_path):
     external_validation = next(row for row in rows if row["pattern"] == "external_data_verification_validation_*.json")
     external_decision_queue = next(row for row in rows if row["pattern"] == "external_data_decision_queue_*.json")
     external_traceability = next(row for row in rows if row["pattern"] == "external_source_traceability_audit_*.json")
+    substitution_queue = next(row for row in rows if row["pattern"] == "substitution_profile_candidate_queue_*.json")
     comparison = next(row for row in rows if row["pattern"] == "prediction_benchmark_comparison_rank75_*.json")
     assert baseline["present"] is True
     assert neutral_baseline["present"] is True
@@ -63,6 +65,7 @@ def test_required_report_status_marks_missing_and_present(tmp_path):
     assert external_validation["present"] is True
     assert external_decision_queue["present"] is True
     assert external_traceability["present"] is True
+    assert substitution_queue["present"] is True
     assert comparison["present"] is False
 
 
