@@ -8339,5 +8339,22 @@
     "dribbling": 56,
     "defending": 74,
     "physical": 79
+  },
+  {
+    "playerId": "URU_M_ARAUJO",
+    "name": "Maximiliano Araujo",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/maximiliano-araujo/254817",
+    "sourceDataset": "EA SPORTS FC 26 official player ratings page (fetched 2026-07-01)",
+    "eaPlayerId": "254817",
+    "position": "LM",
+    "observedDate": "2026-07-01",
+    "overall": 77,
+    "pace": 85,
+    "shooting": 63,
+    "passing": 70,
+    "dribbling": 79,
+    "defending": 68,
+    "physical": 68
   }
 ]

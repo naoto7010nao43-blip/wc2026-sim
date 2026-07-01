@@ -29132,7 +29132,8 @@
     "shirtNumber": null,
     "primaryPosition": "LW",
     "secondaryPositions": [
-      "LM"
+      "LM",
+      "LB"
     ],
     "preferredFoot": "unknown",
     "heightCm": 186,
@@ -29163,7 +29164,8 @@
     "sourceCitations": [
       "Transfermarkt 2026-06",
       "PSV Eindhoven Eredivisie 2025-26 stats",
-      "Age 37 - veteran experience, declining pace"
+      "Age 37 - veteran experience, declining pace",
+      "Confirmed 2026 WC left wing-back: started LWB vs England, dropped to LB vs Ghana — khelnow/Squawka confirmed lineups (2026 WC)."
     ],
     "staminaMax": 68,
     "dataConfidence": "external",
@@ -30518,6 +30520,39 @@
       "Confirmed 2026 World Cup starter — khelnow / FanDuel Research — Mexico vs Ecuador confirmed lineups (2026 WC R32): https://khelnow.com/football/ecuador-starting-lineup-vs-mexico-fifa-world-cup-2026"
     ],
     "staminaMax": 82,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
+  },
+  {
+    "playerId": "URU_M_ARAUJO",
+    "teamId": "URU",
+    "teamCode": "URU",
+    "name": "Maximiliano Araujo",
+    "nameJa": "マキシミリアーノ・アラウホ",
+    "age": 26,
+    "dateOfBirth": null,
+    "shirtNumber": null,
+    "primaryPosition": "LM",
+    "secondaryPositions": [
+      "LW",
+      "LB"
+    ],
+    "preferredFoot": "unknown",
+    "heightCm": 177,
+    "weightKg": null,
+    "clubName": "Sporting CP (POR)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": null,
+    "careerStats": {},
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 254817): overall 77, LM, Sporting CP (POR) — https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/maximiliano-araujo/254817",
+      "Confirmed 2026 World Cup starter — FourFourTwo / SI / Al Jazeera — Uruguay confirmed & predicted 2026 WC lineups: https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad"
+    ],
+    "staminaMax": 86,
     "dataConfidence": "external",
     "lastUpdated": "2026-07-01T00:00:00+00:00"
   }

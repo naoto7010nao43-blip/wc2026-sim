@@ -47,6 +47,18 @@ NEW_STARTERS = [
         "starterSource": "khelnow / FanDuel Research — Mexico vs Ecuador confirmed lineups (2026 WC R32)",
         "starterUrl": "https://khelnow.com/football/ecuador-starting-lineup-vs-mexico-fifa-world-cup-2026",
     },
+    {
+        "playerId": "URU_M_ARAUJO", "teamId": "URU", "name": "Maximiliano Araujo", "nameJa": "マキシミリアーノ・アラウホ",
+        "age": 26, "dateOfBirth": None, "primaryPosition": "LM", "secondaryPositions": ["LW", "LB"],
+        "heightCm": 177, "clubName": "Sporting CP (POR)", "staminaMax": 86,
+        "ea": {"eaPlayerId": "254817", "position": "LM", "overall": 77,
+               "pace": 85, "shooting": 63, "passing": 70, "dribbling": 79, "defending": 68, "physical": 68,
+               "url": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/maximiliano-araujo/254817"},
+        "startProb": 72,
+        "starterReason": "Uruguay's left-sided attacker in Bielsa's front three (Canobbio-Nunez-Araujo) at the 2026 WC. The roster had no natural left winger so the slot was auto-filled by a central midfielder (Bentancur).",
+        "starterSource": "FourFourTwo / SI / Al Jazeera — Uruguay confirmed & predicted 2026 WC lineups",
+        "starterUrl": "https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad",
+    },
 ]
 
 OBSERVED = "2026-07-01"

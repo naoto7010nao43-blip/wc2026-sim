@@ -97,5 +97,27 @@
     "overrides": {
       "startingProbability": 80
     }
+  },
+  {
+    "playerId": "CRO_PERISIC",
+    "name": "Ivan Perisic",
+    "reason": "Confirmed Croatia left wing-back at the 2026 WC (started LWB vs England, LB vs Ghana). Roster listed him only as LW so the LB/wing-back slot was wrongly auto-filled by a striker (Kramaric).",
+    "source": "khelnow / Squawka confirmed 2026 WC lineups",
+    "sourceUrl": "https://khelnow.com/football/world-football-croatia-starting-lineup-vs-england-fifa-world-cup-202606",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 70
+    }
+  },
+  {
+    "playerId": "URU_M_ARAUJO",
+    "name": "Maximiliano Araujo",
+    "reason": "Uruguay's left-sided attacker in Bielsa's front three (Canobbio-Nunez-Araujo) at the 2026 WC. The roster had no natural left winger so the slot was auto-filled by a central midfielder (Bentancur).",
+    "source": "FourFourTwo / SI / Al Jazeera — Uruguay confirmed & predicted 2026 WC lineups",
+    "sourceUrl": "https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 72
+    }
   }
 ]

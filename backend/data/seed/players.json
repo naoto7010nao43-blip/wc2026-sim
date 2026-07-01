@@ -20782,7 +20782,8 @@
     "age": 37,
     "primary_position": "LW",
     "secondary_positions": [
-      "LM"
+      "LM",
+      "LB"
     ],
     "career_stats": {
       "appearances": 48,
@@ -20805,7 +20806,8 @@
     "source_citations": [
       "Transfermarkt 2026-06",
       "PSV Eindhoven Eredivisie 2025-26 stats",
-      "Age 37 - veteran experience, declining pace"
+      "Age 37 - veteran experience, declining pace",
+      "Confirmed 2026 WC left wing-back: started LWB vs England, dropped to LB vs Ghana — khelnow/Squawka confirmed lineups (2026 WC)."
     ],
     "stamina_max": 68,
     "name_ja": "イヴァン・ペリシッチ"
@@ -21758,5 +21760,25 @@
     ],
     "stamina_max": 82,
     "name_ja": "ジョエル・オルドニェス"
+  },
+  {
+    "id": "URU_M_ARAUJO",
+    "team_id": "URU",
+    "name": "Maximiliano Araujo",
+    "age": 26,
+    "primary_position": "LM",
+    "secondary_positions": [
+      "LW",
+      "LB"
+    ],
+    "career_stats": {},
+    "market_value_eur": null,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 official player ratings (player 254817): overall 77, LM, Sporting CP (POR) — https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/maximiliano-araujo/254817",
+      "Confirmed 2026 World Cup starter — FourFourTwo / SI / Al Jazeera — Uruguay confirmed & predicted 2026 WC lineups: https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad"
+    ],
+    "stamina_max": 86,
+    "name_ja": "マキシミリアーノ・アラウホ"
   }
 ]
