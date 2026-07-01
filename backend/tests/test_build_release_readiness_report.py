@@ -45,6 +45,7 @@ def test_current_task_state_detects_awaiting_state():
 def test_required_report_status_marks_missing_and_present(tmp_path):
     write_json(tmp_path / "prediction_benchmark_baseline_2026-06-23.json", {"modelVersion": "poisson-v1"})
     write_json(tmp_path / "prediction_benchmark_v1_order_neutral_2026-06-23.json", {"modelVersion": "poisson-v1-order-neutral"})
+    write_json(tmp_path / "player_rating_diff_2026-07-01.json", {})
     write_json(tmp_path / "external_data_verification_candidates_2026-06-24.json", {})
     write_json(tmp_path / "external_data_verification_validation_2026-06-24.json", {})
     write_json(tmp_path / "external_data_decision_queue_2026-06-24.json", {})
@@ -53,6 +54,7 @@ def test_required_report_status_marks_missing_and_present(tmp_path):
     rows = required_report_status(tmp_path)
     baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_baseline_*.json")
     neutral_baseline = next(row for row in rows if row["pattern"] == "prediction_benchmark_v1_order_neutral_*.json")
+    player_rating_diff = next(row for row in rows if row["pattern"] == "player_rating_diff_*.json")
     external_candidates = next(row for row in rows if row["pattern"] == "external_data_verification_candidates_*.json")
     external_validation = next(row for row in rows if row["pattern"] == "external_data_verification_validation_*.json")
     external_decision_queue = next(row for row in rows if row["pattern"] == "external_data_decision_queue_*.json")
@@ -61,6 +63,7 @@ def test_required_report_status_marks_missing_and_present(tmp_path):
     comparison = next(row for row in rows if row["pattern"] == "prediction_benchmark_comparison_rank75_*.json")
     assert baseline["present"] is True
     assert neutral_baseline["present"] is True
+    assert player_rating_diff["present"] is True
     assert external_candidates["present"] is True
     assert external_validation["present"] is True
     assert external_decision_queue["present"] is True

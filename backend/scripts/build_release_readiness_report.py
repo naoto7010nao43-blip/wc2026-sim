@@ -43,6 +43,7 @@ REQUIRED_REPORT_PATTERNS = (
     "simulation_accuracy_audit_*.json",
     "team_data_review_plan_*.json",
     "squad_rating_gap_review_*.json",
+    "player_rating_diff_*.json",
     "rating_review_workbench_*.json",
     "rating_decision_audit_*.json",
     "source_provenance_audit_*.json",
