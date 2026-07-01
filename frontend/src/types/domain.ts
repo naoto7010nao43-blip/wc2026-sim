@@ -159,6 +159,27 @@ export interface TournamentPathProjectionOut {
   disclaimer: string;
 }
 
+export interface TournamentFinalMatchupCandidate {
+  team_a_id: string;
+  team_a_name: string;
+  team_b_id: string;
+  team_b_name: string;
+  matchup_pct: number;
+  team_a_win_given_matchup_pct: number;
+  team_b_win_given_matchup_pct: number;
+  champion_favorite_team_id: string;
+}
+
+export interface TournamentFinalMatchupsOut {
+  iterations: number;
+  matchup_count: number;
+  candidates: TournamentFinalMatchupCandidate[];
+  model_version: string;
+  data_confidence: string;
+  note_ja: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;

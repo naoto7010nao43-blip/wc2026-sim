@@ -24,6 +24,7 @@ import type {
   TeamReviewSummary,
   TeamSummary,
   TournamentResult,
+  TournamentFinalMatchupsOut,
   TournamentGroupDifficultyOut,
   TournamentPathProjectionOut,
   TournamentSimulationOut,
@@ -88,6 +89,10 @@ export const api = {
   getTournamentPathProjection: (teamId: string, opts?: { iterations?: number; seed?: number }) =>
     getJson<TournamentPathProjectionOut>(
       `/api/tournament/path-projection?team_id=${encodeURIComponent(teamId)}&iterations=${opts?.iterations ?? 1000}&seed=${opts?.seed ?? 0}`,
+    ),
+  getTournamentFinalMatchups: (opts?: { iterations?: number; seed?: number; limit?: number }) =>
+    getJson<TournamentFinalMatchupsOut>(
+      `/api/tournament/final-matchups?iterations=${opts?.iterations ?? 1000}&seed=${opts?.seed ?? 0}&limit=${opts?.limit ?? 8}`,
     ),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getReleaseReadinessSummary: () => getJson<ReleaseReadinessSummary>("/api/model-diagnostics/release-readiness"),

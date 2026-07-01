@@ -154,3 +154,24 @@ class TournamentPathProjectionOut(BaseModel):
     disclaimer: str
 
     model_config = {"from_attributes": True}
+
+
+class TournamentFinalMatchupCandidateOut(BaseModel):
+    team_a_id: str
+    team_a_name: str
+    team_b_id: str
+    team_b_name: str
+    matchup_pct: float
+    team_a_win_given_matchup_pct: float
+    team_b_win_given_matchup_pct: float
+    champion_favorite_team_id: str
+
+
+class TournamentFinalMatchupsOut(BaseModel):
+    iterations: int
+    matchup_count: int
+    candidates: list[TournamentFinalMatchupCandidateOut]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str

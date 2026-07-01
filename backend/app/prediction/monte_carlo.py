@@ -82,6 +82,29 @@ class TournamentPathProjectionResult:
     disclaimer: str = "これは予測モデルによる到達ルートの集計であり、実際の対戦相手や勝敗を保証するものではありません。"
 
 
+@dataclass(frozen=True)
+class TournamentFinalMatchupCandidate:
+    team_a_id: str
+    team_a_name: str
+    team_b_id: str
+    team_b_name: str
+    matchup_pct: float
+    team_a_win_given_matchup_pct: float
+    team_b_win_given_matchup_pct: float
+    champion_favorite_team_id: str
+
+
+@dataclass(frozen=True)
+class TournamentFinalMatchupsResult:
+    iterations: int
+    matchup_count: int
+    candidates: list[TournamentFinalMatchupCandidate]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str = "これは予測モデルによる決勝カードの集計であり、実際の決勝進出や勝敗を保証するものではありません。"
+
+
 def _in_memory_match(home_team_id: str, away_team_id: str, home_score: int, away_score: int) -> Match:
     """An unpersisted, in-memory Match record. calculate_standings only
     reads plain attributes off it, so a real DB row is never needed."""
@@ -430,4 +453,105 @@ def project_team_tournament_path(
         model_version=config.model_version,
         data_confidence=data_confidence,
         note_ja=f"{team_names[team_id]}（Group {group_label}）の想定ルートです。各ラウンドの相手候補は全試行回数に対する出現率で、到達した場合の条件付き確率ではありません。",
+    )
+
+
+def project_final_matchups(
+    db: Session,
+    iterations: int = DEFAULT_ITERATIONS,
+    base_seed: int = 0,
+    limit: int = 8,
+    config: ModelConfig = DEFAULT_MODEL_CONFIG,
+) -> TournamentFinalMatchupsResult:
+    (
+        _teams,
+        team_names,
+        fifa_ranks,
+        fixed_group_matches,
+        group_matrices,
+        winner_of,
+        data_confidence,
+    ) = _build_tournament_projection_context(db, config)
+
+    matchup_counts: dict[tuple[str, str], int] = {}
+    champion_counts: dict[tuple[str, str], dict[str, int]] = {}
+
+    def resolve_slot(
+        slot: str,
+        group_standings: dict,
+        third_place_team_by_group: dict[str, str],
+        third_place_assignment: dict[str, str],
+    ) -> str:
+        if slot.startswith("3RD:"):
+            source_group = third_place_assignment[slot.removeprefix("3RD:")]
+            return third_place_team_by_group[source_group]
+        group_letter, position = slot[0], int(slot[1])
+        return group_standings[group_letter][position - 1].team_id
+
+    def play_pairs(pairs: list[tuple[str, str]], rng: random.Random) -> list[str]:
+        return [winner_of(home_id, away_id, rng) for home_id, away_id in pairs]
+
+    for i in range(iterations):
+        rng = random.Random(base_seed + i)
+
+        group_standings = {}
+        for letter in GROUP_LETTERS:
+            matches = list(fixed_group_matches[letter])
+            for (home_id, away_id), matrix in group_matrices[letter].items():
+                h, a = sample_scoreline(matrix, rng)
+                matches.append(_in_memory_match(home_id, away_id, h, a))
+            group_standings[letter] = calculate_standings(matches, team_names, fifa_ranks)
+
+        third_place_rows = {letter: standings[2] for letter, standings in group_standings.items()}
+        qualifying_rankings = [r for r in rank_third_place_teams(third_place_rows) if r.qualified]
+        qualifying_third_groups = [r.group_id for r in qualifying_rankings]
+        third_place_team_by_group = {r.group_id: r.team_id for r in qualifying_rankings}
+        third_place_assignment = assign_third_place_slots(qualifying_third_groups)
+
+        r32_pairs = [
+            (
+                resolve_slot(slot_a, group_standings, third_place_team_by_group, third_place_assignment),
+                resolve_slot(slot_b, group_standings, third_place_team_by_group, third_place_assignment),
+            )
+            for slot_a, slot_b in R32_TEMPLATE
+        ]
+        r16_participants = play_pairs(r32_pairs, rng)
+        qf_participants = play_pairs(next_round_pairs(r16_participants), rng)
+        sf_participants = play_pairs(next_round_pairs(qf_participants), rng)
+        finalists = play_pairs(next_round_pairs(sf_participants), rng)
+
+        pair = tuple(sorted(finalists))
+        champion = winner_of(finalists[0], finalists[1], rng)
+        matchup_counts[pair] = matchup_counts.get(pair, 0) + 1
+        champion_counts.setdefault(pair, {})
+        champion_counts[pair][champion] = champion_counts[pair].get(champion, 0) + 1
+
+    def pct(count: int, denominator: int = iterations) -> float:
+        return round(100.0 * count / denominator, 1) if denominator else 0.0
+
+    candidates: list[TournamentFinalMatchupCandidate] = []
+    for (team_a_id, team_b_id), count in sorted(matchup_counts.items(), key=lambda item: (-item[1], item[0])):
+        wins = champion_counts[(team_a_id, team_b_id)]
+        team_a_wins = wins.get(team_a_id, 0)
+        team_b_wins = wins.get(team_b_id, 0)
+        candidates.append(
+            TournamentFinalMatchupCandidate(
+                team_a_id=team_a_id,
+                team_a_name=team_names.get(team_a_id, team_a_id),
+                team_b_id=team_b_id,
+                team_b_name=team_names.get(team_b_id, team_b_id),
+                matchup_pct=pct(count),
+                team_a_win_given_matchup_pct=pct(team_a_wins, count),
+                team_b_win_given_matchup_pct=pct(team_b_wins, count),
+                champion_favorite_team_id=team_a_id if team_a_wins >= team_b_wins else team_b_id,
+            )
+        )
+
+    return TournamentFinalMatchupsResult(
+        iterations=iterations,
+        matchup_count=len(candidates),
+        candidates=candidates[:limit],
+        model_version=config.model_version,
+        data_confidence=data_confidence,
+        note_ja="大会全体のモンテカルロ試行から、決勝で発生しやすいカードを集計しています。勝率はその決勝カードが実現した場合の条件付き比率です。",
     )

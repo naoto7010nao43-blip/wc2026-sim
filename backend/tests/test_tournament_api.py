@@ -177,3 +177,27 @@ def test_tournament_path_projection_returns_stage_opponent_distribution(client):
 def test_tournament_path_projection_unknown_team_returns_404(client):
     resp = client.get("/api/tournament/path-projection?team_id=XXX&iterations=100")
     assert resp.status_code == 404
+
+
+def test_tournament_final_matchups_returns_ranked_candidate_pairs(client):
+    resp = client.get("/api/tournament/final-matchups?iterations=100&limit=6")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["iterations"] == 100
+    assert body["matchup_count"] >= len(body["candidates"]) > 0
+    assert len(body["candidates"]) <= 6
+    assert body["model_version"].startswith("poisson-v")
+    assert "決勝" in body["note_ja"]
+    assert "保証" in body["disclaimer"]
+    _assert_no_mojibake(body["note_ja"])
+    _assert_no_mojibake(body["disclaimer"])
+
+    pcts = [row["matchup_pct"] for row in body["candidates"]]
+    assert pcts == sorted(pcts, reverse=True)
+    for row in body["candidates"]:
+        assert row["team_a_id"] != row["team_b_id"]
+        assert row["team_a_name"]
+        assert row["team_b_name"]
+        assert row["champion_favorite_team_id"] in {row["team_a_id"], row["team_b_id"]}
+        assert row["matchup_pct"] > 0
+        assert 99.0 <= row["team_a_win_given_matchup_pct"] + row["team_b_win_given_matchup_pct"] <= 101.0

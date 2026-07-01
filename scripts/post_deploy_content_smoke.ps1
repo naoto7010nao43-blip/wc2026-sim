@@ -128,6 +128,7 @@ Assert-Contains "frontend bundle" $bundleText "formation-position-fit"
 Assert-Contains "frontend bundle" $bundleText "lineup-engine-parity"
 Assert-Contains "frontend bundle" $bundleText "breakdown"
 Assert-Contains "frontend bundle" $bundleText "path-projection"
+Assert-Contains "frontend bundle" $bundleText "final-matchups"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -202,6 +203,17 @@ if (-not $pathProjection.model_version -or $pathProjection.model_version -notmat
     throw "Tournament path projection model_version is unexpected: $($pathProjection.model_version)"
 }
 Assert-HasJapanese "tournament path projection note" $pathProjection.note_ja
+
+$finalMatchupsJson = Get-Utf8Text "$backend/api/tournament/final-matchups?iterations=100&limit=4"
+Assert-NoMojibakeMarkers "tournament final matchups JSON" $finalMatchupsJson
+$finalMatchups = $finalMatchupsJson | ConvertFrom-Json
+if ($finalMatchups.candidates.Count -lt 1) {
+    throw "Tournament final matchups did not expose any candidates"
+}
+if (-not $finalMatchups.model_version -or $finalMatchups.model_version -notmatch "^poisson-v") {
+    throw "Tournament final matchups model_version is unexpected: $($finalMatchups.model_version)"
+}
+Assert-HasJapanese "tournament final matchups note" $finalMatchups.note_ja
 
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson

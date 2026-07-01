@@ -55,6 +55,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend tournament upset watch" "$backend/api/tournament/upset-watch"
     Invoke-UrlCheck "Backend tournament group difficulty" "$backend/api/tournament/group-difficulty"
     Invoke-UrlCheck "Backend tournament path projection" "$backend/api/tournament/path-projection?team_id=JPN&iterations=100"
+    Invoke-UrlCheck "Backend tournament final matchups" "$backend/api/tournament/final-matchups?iterations=100&limit=4"
 } else {
     Write-Host ""
     Write-Host "BackendBaseUrl not provided; skipped backend checks." -ForegroundColor Yellow
