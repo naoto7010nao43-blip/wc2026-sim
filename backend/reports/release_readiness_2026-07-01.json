@@ -1,8 +1,10 @@
 {
-  "generatedAt": "2026-07-01T08:50:48.462705+00:00",
+  "generatedAt": "2026-07-01T08:52:40.272861+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
-  "readyForManualPush": true,
-  "blockers": [],
+  "readyForManualPush": false,
+  "blockers": [
+    "git status is not clean."
+  ],
   "nonBlockingWarnings": [
     "既存seedデータ（経歴・市場価値・出典）の最終確認が鮮度ポリシーを超過しています。公開は可能ですが、精度改善作業では最新ソースを優先してください。",
     "公式スカッドfeedの最終確認が鮮度ポリシーを超過しています。公開は可能ですが、能力値・戦術値の追加反映前に再確認してください。"
@@ -12,7 +14,9 @@
     "awaitingNextSpec": false,
     "latestCompletedSpecText": null
   },
-  "gitStatusShort": [],
+  "gitStatusShort": [
+    " M backend/reports/release_readiness_2026-07-01.json"
+  ],
   "modelVersions": {
     "baselineModelVersion": "poisson-v1-rank60-order-neutral",
     "currentModelVersion": "poisson-v2-rank75-order-neutral"
