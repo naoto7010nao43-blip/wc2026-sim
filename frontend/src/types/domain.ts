@@ -838,6 +838,46 @@ export interface FormationPositionFitAuditSummary {
   recommendationsJa: string[];
 }
 
+export interface LineupParityMismatch {
+  slotIndex: number;
+  displayedSlotPosition: string | null;
+  simulatedSlotPosition: string | null;
+  displayedPlayerId: string | null;
+  simulatedPlayerId: string | null;
+  displayedName: string | null;
+  simulatedName: string | null;
+}
+
+export interface LineupParityTeamRow {
+  teamId: string;
+  teamName: string | null;
+  defaultFormation: string;
+  rosterSize: number;
+  displayedStarterCount: number;
+  simulatedStarterCount: number;
+  parityOk: boolean;
+  mismatchCount: number;
+  mismatches: LineupParityMismatch[];
+  displayedPlayerIds: string[];
+  simulatedPlayerIds: string[];
+  reasonJa: string;
+}
+
+export interface LineupEngineParityAuditSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  checkedTeamCount: number;
+  fullParityTeamCount: number;
+  mismatchTeamCount: number;
+  mismatchSlotCount: number;
+  incompleteDisplayedLineupTeamCount: number;
+  incompleteSimulatedLineupTeamCount: number;
+  teams: LineupParityTeamRow[];
+  recommendationsJa: string[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

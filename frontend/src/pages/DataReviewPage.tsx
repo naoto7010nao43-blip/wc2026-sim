@@ -4,6 +4,7 @@ import { DataFreshnessPanel } from "../components/DataFreshnessPanel";
 import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
 import { ExternalDataVerificationPanel } from "../components/ExternalDataVerificationPanel";
 import { FormationPositionFitPanel } from "../components/FormationPositionFitPanel";
+import { LineupEngineParityPanel } from "../components/LineupEngineParityPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { PlayerRatingDiffPanel } from "../components/PlayerRatingDiffPanel";
@@ -20,6 +21,7 @@ import type {
   DataQualitySummary,
   ExternalDataVerificationSummary,
   FormationPositionFitAuditSummary,
+  LineupEngineParityAuditSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   PlayerRatingDiffSummary,
@@ -45,6 +47,7 @@ const REVIEW_SECTIONS = [
   { id: "squad-gaps", label: "スカッド" },
   { id: "manager-trust", label: "監督・戦術" },
   { id: "formation-fit", label: "布陣適合" },
+  { id: "lineup-parity", label: "XI一致" },
   { id: "rating-workbench", label: "能力値候補" },
   { id: "rating-decision", label: "判断監査" },
   { id: "rating-diff", label: "能力値差分" },
@@ -62,6 +65,8 @@ export function DataReviewPage() {
   const [managerTrustError, setManagerTrustError] = useState<string | null>(null);
   const [formationFit, setFormationFit] = useState<FormationPositionFitAuditSummary | null>(null);
   const [formationFitError, setFormationFitError] = useState<string | null>(null);
+  const [lineupParity, setLineupParity] = useState<LineupEngineParityAuditSummary | null>(null);
+  const [lineupParityError, setLineupParityError] = useState<string | null>(null);
   const [ratingWorkbench, setRatingWorkbench] = useState<RatingReviewWorkbenchSummary | null>(null);
   const [ratingWorkbenchError, setRatingWorkbenchError] = useState<string | null>(null);
   const [ratingDecisionAudit, setRatingDecisionAudit] = useState<RatingDecisionAuditSummary | null>(null);
@@ -105,6 +110,10 @@ export function DataReviewPage() {
       .getFormationPositionFitAudit()
       .then(setFormationFit)
       .catch(() => setFormationFitError("フォーメーション適合監査の読み込みに失敗しました。"));
+    api
+      .getLineupEngineParityAudit()
+      .then(setLineupParity)
+      .catch(() => setLineupParityError("スタメン一致監査の読み込みに失敗しました。"));
     api
       .getRatingReviewWorkbench()
       .then(setRatingWorkbench)
@@ -164,6 +173,7 @@ export function DataReviewPage() {
         teamReview={summary}
         managerTrust={managerTrust}
         formationFit={formationFit}
+        lineupParity={lineupParity}
         ratingDecisionAudit={ratingDecisionAudit}
         playerRatingDiff={playerRatingDiff}
         sourceProvenanceAudit={sourceProvenanceAudit}
@@ -310,6 +320,17 @@ export function DataReviewPage() {
         )}
         {!formationFit && !formationFitError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {formationFit && <FormationPositionFitPanel summary={formationFit} />}
+      </section>
+
+      <section id="lineup-parity" className="scroll-mt-4">
+        <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">スタメン一致監査</h3>
+        {lineupParityError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {lineupParityError}
+          </div>
+        )}
+        {!lineupParity && !lineupParityError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {lineupParity && <LineupEngineParityPanel summary={lineupParity} />}
       </section>
 
       <section id="rating-workbench" className="scroll-mt-4">

@@ -43,7 +43,7 @@ def build_rosters(seed_dir: Path = SEED_DIR) -> dict[str, list[dict]]:
             "secondary_positions": player.get("secondary_positions") or [],
             "overall": rating.get("overall", player.get("overall", 50)),
             "attributes": {"startingProbability": rating.get("startingProbability")},
-            "stamina_max": player.get("stamina_max", 90),
+            "stamina_max": player.get("stamina_max") or 90,
         })
     return by_team
 

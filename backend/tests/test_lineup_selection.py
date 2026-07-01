@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.engine.state import build_team_state
+from app.engine.state import build_team_state, coerce_stamina_max
 from app.rating_v2.lineup_builder import build_likely_lineup
 
 
@@ -83,3 +83,14 @@ def test_falls_back_to_overall_when_no_starting_probability_is_present():
     team = build_team_state("T", roster, "4-3-3", attacking_direction=1)
     assert len(team.lineup) == 11
     assert team.goalkeeper().primary_position == "GK"
+
+
+def test_null_stamina_max_is_coerced_before_building_runtime_state():
+    roster = _roster()
+    roster[0]["stamina_max"] = None
+    team = build_team_state("T", roster, "4-3-3", attacking_direction=1)
+
+    assert team.goalkeeper().player_id == "GK_NO1"
+    assert team.goalkeeper().stamina_max == 90
+    assert team.goalkeeper().current_stamina == 90.0
+    assert coerce_stamina_max({"stamina_max": None, "attributes": {"stamina": 77}}) == 77

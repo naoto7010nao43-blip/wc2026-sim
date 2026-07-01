@@ -113,6 +113,15 @@ def _mirror_x(x: float) -> float:
     return 100.0 - x
 
 
+def coerce_stamina_max(player: dict, default: int = 90) -> int:
+    value = player.get("stamina_max")
+    if value is None:
+        value = (player.get("attributes") or {}).get("stamina")
+    if value is None:
+        return default
+    return int(value)
+
+
 def build_team_state(
     team_id: str,
     players: list[dict],
@@ -128,7 +137,7 @@ def build_team_state(
     identical to the displayed likely XI (scored by real-world starting
     likelihood, not raw overall)."""
     formation = FORMATIONS[formation_name]
-    available = list(players)
+    available = [{**p, "stamina_max": coerce_stamina_max(p)} for p in players]
     assignments = select_starting_assignments(available, formation_name)
     used_ids = {p["id"] for p in assignments.values()}
 

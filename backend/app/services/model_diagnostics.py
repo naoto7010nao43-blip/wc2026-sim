@@ -405,6 +405,28 @@ def get_formation_position_fit_audit_summary(reports_dir: Path = REPORTS_DIR) ->
     return report
 
 
+def get_lineup_engine_parity_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "lineup_engine_parity_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "スタメン一致監査レポートがまだ生成されていません。表示XIとシミュレーションXIの確認には、まず監査レポートを生成してください。",
+            "teamCount": 0,
+            "checkedTeamCount": 0,
+            "fullParityTeamCount": 0,
+            "mismatchTeamCount": 0,
+            "mismatchSlotCount": 0,
+            "incompleteDisplayedLineupTeamCount": 0,
+            "incompleteSimulatedLineupTeamCount": 0,
+            "teams": [],
+            "recommendationsJa": [
+                "公開前にスタメン一致監査を生成し、表示される予想スタメンと試合エンジンの先発XIが一致しているか確認してください。",
+            ],
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:

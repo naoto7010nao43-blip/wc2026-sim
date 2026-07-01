@@ -562,6 +562,46 @@ class FormationPositionFitAuditSummary(BaseModel):
     recommendationsJa: list[str]
 
 
+class LineupParityMismatch(BaseModel):
+    slotIndex: int
+    displayedSlotPosition: str | None
+    simulatedSlotPosition: str | None
+    displayedPlayerId: str | None
+    simulatedPlayerId: str | None
+    displayedName: str | None
+    simulatedName: str | None
+
+
+class LineupParityTeamRow(BaseModel):
+    teamId: str
+    teamName: str | None
+    defaultFormation: str
+    rosterSize: int
+    displayedStarterCount: int
+    simulatedStarterCount: int
+    parityOk: bool
+    mismatchCount: int
+    mismatches: list[LineupParityMismatch]
+    displayedPlayerIds: list[str]
+    simulatedPlayerIds: list[str]
+    reasonJa: str
+
+
+class LineupEngineParityAuditSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    teamCount: int
+    checkedTeamCount: int
+    fullParityTeamCount: int
+    mismatchTeamCount: int
+    mismatchSlotCount: int
+    incompleteDisplayedLineupTeamCount: int
+    incompleteSimulatedLineupTeamCount: int
+    teams: list[LineupParityTeamRow]
+    recommendationsJa: list[str]
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

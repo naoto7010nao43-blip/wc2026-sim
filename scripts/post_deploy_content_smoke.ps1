@@ -92,6 +92,7 @@ Assert-Contains "frontend bundle" $bundleText "nonBlockingWarnings"
 Assert-Contains "frontend bundle" $bundleText "substitution-profile-candidates"
 Assert-Contains "frontend bundle" $bundleText "player-rating-diff"
 Assert-Contains "frontend bundle" $bundleText "formation-position-fit"
+Assert-Contains "frontend bundle" $bundleText "lineup-engine-parity"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -191,6 +192,20 @@ if ($formationFit.outOfPositionAssignmentCount -lt 1) {
     throw "Formation position fit audit did not expose any position-fit findings"
 }
 Assert-HasJapanese "formation position fit note" $formationFit.note
+
+$lineupParityJson = Get-Utf8Text "$backend/api/model-diagnostics/lineup-engine-parity"
+Assert-NoMojibakeMarkers "lineup engine parity JSON" $lineupParityJson
+$lineupParity = $lineupParityJson | ConvertFrom-Json
+if ($lineupParity.teamCount -ne 48) {
+    throw "Lineup engine parity audit teamCount is unexpected: $($lineupParity.teamCount)"
+}
+if ($lineupParity.mismatchTeamCount -ne 0) {
+    throw "Lineup engine parity audit still has mismatched teams: $($lineupParity.mismatchTeamCount)"
+}
+if ($lineupParity.incompleteSimulatedLineupTeamCount -ne 0) {
+    throw "Lineup engine parity audit still has incomplete simulated XIs: $($lineupParity.incompleteSimulatedLineupTeamCount)"
+}
+Assert-HasJapanese "lineup engine parity note" $lineupParity.note
 
 $japanLineupJson = Get-Utf8Text "$backend/api/teams/JPN/likely-lineup"
 Assert-NoMojibakeMarkers "Japan likely lineup JSON" $japanLineupJson

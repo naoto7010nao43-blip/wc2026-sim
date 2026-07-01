@@ -16,6 +16,7 @@ from app.services.model_diagnostics import (
     REPORTS_DIR,
     get_external_data_verification_summary,
     get_formation_position_fit_audit_summary,
+    get_lineup_engine_parity_audit_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
     get_player_rating_diff_summary,
@@ -931,5 +932,63 @@ def test_get_formation_position_fit_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_formation_position_fit_audit_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_lineup_engine_parity_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/lineup-engine-parity")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "note", "teamCount", "checkedTeamCount",
+        "fullParityTeamCount", "mismatchTeamCount", "mismatchSlotCount",
+        "incompleteDisplayedLineupTeamCount", "incompleteSimulatedLineupTeamCount",
+        "teams", "recommendationsJa",
+    ):
+        assert field in body
+
+
+def test_lineup_engine_parity_endpoint_confirms_current_xi_parity(client):
+    response = client.get("/api/model-diagnostics/lineup-engine-parity")
+    body = response.json()
+    assert body["teamCount"] == 48
+    assert body["checkedTeamCount"] == 48
+    assert body["fullParityTeamCount"] == 48
+    assert body["mismatchTeamCount"] == 0
+    assert body["mismatchSlotCount"] == 0
+    assert body["incompleteDisplayedLineupTeamCount"] == 0
+    assert body["incompleteSimulatedLineupTeamCount"] == 0
+
+
+def test_lineup_engine_parity_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_lineup_engine_parity_audit_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["teamCount"] == 0
+    assert summary["teams"] == []
+    assert summary["note"]
+    assert summary["recommendationsJa"]
+
+
+def test_get_lineup_engine_parity_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "teamCount": 1,
+        "checkedTeamCount": 1,
+        "fullParityTeamCount": 1,
+        "mismatchTeamCount": 0,
+        "mismatchSlotCount": 0,
+        "incompleteDisplayedLineupTeamCount": 0,
+        "incompleteSimulatedLineupTeamCount": 0,
+        "teams": [],
+        "recommendationsJa": ["test"],
+    }
+    report_path = tmp_path / "lineup_engine_parity_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_lineup_engine_parity_audit_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

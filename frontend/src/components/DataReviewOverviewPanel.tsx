@@ -2,6 +2,7 @@ import type {
   DataQualitySummary,
   ExternalDataVerificationSummary,
   FormationPositionFitAuditSummary,
+  LineupEngineParityAuditSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   PlayerRatingDiffSummary,
@@ -18,6 +19,7 @@ interface Props {
   teamReview: TeamReviewSummary | null;
   managerTrust: ManagerTacticalTrustSummary | null;
   formationFit: FormationPositionFitAuditSummary | null;
+  lineupParity: LineupEngineParityAuditSummary | null;
   ratingDecisionAudit: RatingDecisionAuditSummary | null;
   playerRatingDiff: PlayerRatingDiffSummary | null;
   sourceProvenanceAudit: SourceProvenanceAuditSummary | null;
@@ -65,6 +67,7 @@ export function DataReviewOverviewPanel({
   teamReview,
   managerTrust,
   formationFit,
+  lineupParity,
   ratingDecisionAudit,
   playerRatingDiff,
   sourceProvenanceAudit,
@@ -79,6 +82,9 @@ export function DataReviewOverviewPanel({
   const highPriorityTeams = teamReview?.teams.filter((team) => team.priority_band === "high").length ?? 0;
   const managerHighRisk = managerTrust?.bandCounts.high ?? 0;
   const formationHighRisk = formationFit?.highSeverityTeamCount ?? 0;
+  const lineupMismatchTeams = lineupParity?.mismatchTeamCount ?? 0;
+  const incompleteLineupTeams =
+    (lineupParity?.incompleteDisplayedLineupTeamCount ?? 0) + (lineupParity?.incompleteSimulatedLineupTeamCount ?? 0);
   const laterProposalCandidates = ratingDecisionAudit?.bucketCounts.candidate_for_later_proposal ?? 0;
   const manualRatingOverrides = playerRatingDiff?.changedByManualOverrideCount ?? 0;
   const ratingDiffDataRisk =
@@ -106,6 +112,8 @@ export function DataReviewOverviewPanel({
       : null,
     highPriorityTeams > 0 ? `高優先度チーム ${highPriorityTeams}件をデータ更新候補として確認` : null,
     formationHighRisk > 0 ? `布陣適合の高リスク ${formationHighRisk}チームは、実スタメン出典でフォーメーションまたは不足ポジションを確認` : null,
+    lineupMismatchTeams > 0 ? `表示スタメンとシミュレーションXIの差分 ${lineupMismatchTeams}チームは公開前に必ず修正` : null,
+    incompleteLineupTeams > 0 ? `不完全な先発XI ${incompleteLineupTeams}件は、ロスターまたはdefaultFormationを確認` : null,
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
     manualRatingOverrides > 0 ? `能力値差分の手動補正 ${manualRatingOverrides}件は、公開前に出典と意図を確認` : null,
     ratingDiffDataRisk > 0 ? `能力値差分に低信頼度または重要データ欠落 ${ratingDiffDataRisk}件が残っています` : null,
@@ -154,6 +162,11 @@ export function DataReviewOverviewPanel({
         <Metric label="外部URL未確認" value={externalMissingUrls} tone={externalMissingUrls > 0 ? "warn" : "good"} />
         <Metric label="監督・戦術High" value={managerHighRisk} tone={managerHighRisk > 0 ? "warn" : "good"} />
         <Metric label="布陣適合High" value={formationHighRisk} tone={formationHighRisk > 0 ? "warn" : "good"} />
+        <Metric
+          label="XI一致"
+          value={lineupParity ? `${lineupParity.fullParityTeamCount}/${lineupParity.teamCount}` : "未読込"}
+          tone={lineupMismatchTeams + incompleteLineupTeams > 0 ? "warn" : "good"}
+        />
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
         <Metric label="能力値手動補正" value={manualRatingOverrides} tone={manualRatingOverrides > 0 ? "warn" : "good"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />

@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.schemas.model_diagnostics import (
     FormationPositionFitAuditSummary,
+    LineupEngineParityAuditSummary,
     ManagerTacticalTrustSummary,
     ExternalDataVerificationSummary,
     ModelCalibrationSummary,
@@ -18,6 +19,7 @@ from app.schemas.model_diagnostics import (
 )
 from app.services.model_diagnostics import (
     get_formation_position_fit_audit_summary,
+    get_lineup_engine_parity_audit_summary,
     get_manager_tactical_trust_summary,
     get_external_data_verification_summary,
     get_model_calibration_summary,
@@ -104,3 +106,8 @@ def get_substitution_profile_candidates():
 @router.get("/formation-position-fit", response_model=FormationPositionFitAuditSummary)
 def get_formation_position_fit():
     return get_formation_position_fit_audit_summary()
+
+
+@router.get("/lineup-engine-parity", response_model=LineupEngineParityAuditSummary)
+def get_lineup_engine_parity():
+    return get_lineup_engine_parity_audit_summary()
