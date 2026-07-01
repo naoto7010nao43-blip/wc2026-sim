@@ -1,15 +1,8 @@
 {
-  "generatedAt": "2026-07-01T15:28:13.966482+00:00",
+  "generatedAt": "2026-07-01T15:32:35.150032+00:00",
   "totalPlayers": 678,
   "biggestRisers": [],
-  "biggestFallers": [
-    {
-      "playerId": "CPV_GARRYRODRIGUES",
-      "delta": -2,
-      "from": 67,
-      "to": 65
-    }
-  ],
+  "biggestFallers": [],
   "changedByManualOverride": [
     "GER_NEUER",
     "SUI_KOBEL",

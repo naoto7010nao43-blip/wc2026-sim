@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T14:28:18.203181+00:00",
+  "generatedAt": "2026-07-01T15:30:19.651891+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -555,7 +555,7 @@
       "teamId": "COD",
       "teamName": "DR Congo",
       "defaultFormation": "3-5-2",
-      "rosterSize": 13,
+      "rosterSize": 14,
       "starterCount": 11,
       "outOfPositionCount": 2,
       "lowProbabilityStarterCount": 3,
@@ -606,11 +606,11 @@
         },
         {
           "slotPosition": "ST",
-          "playerId": "COD_BAKAMBU",
-          "name": "Cedric Bakambu",
+          "playerId": "COD_BANZA",
+          "name": "Simon Banza",
           "primaryPosition": "ST",
-          "startingProbability": 25,
-          "overall": 77,
+          "startingProbability": 35,
+          "overall": 81,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],

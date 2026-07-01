@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T14:29:53.017103+00:00",
+  "generatedAt": "2026-07-01T15:30:19.664127+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -264,8 +264,8 @@
       "displayedPlayerIds": [
         "MEX_RANGEL",
         "MEX_GALLARDO",
-        "MEX_VASQUEZ",
         "MEX_MONTES",
+        "MEX_VASQUEZ",
         "MEX_SANCHEZ_J",
         "MEX_RODRIGUEZ_E",
         "MEX_GUTIERREZ",
@@ -277,8 +277,8 @@
       "simulatedPlayerIds": [
         "MEX_RANGEL",
         "MEX_GALLARDO",
-        "MEX_VASQUEZ",
         "MEX_MONTES",
+        "MEX_VASQUEZ",
         "MEX_SANCHEZ_J",
         "MEX_RODRIGUEZ_E",
         "MEX_GUTIERREZ",
@@ -1623,7 +1623,7 @@
       "teamId": "COD",
       "teamName": "DR Congo",
       "defaultFormation": "3-5-2",
-      "rosterSize": 13,
+      "rosterSize": 14,
       "displayedStarterCount": 11,
       "simulatedStarterCount": 11,
       "parityOk": true,
@@ -1640,7 +1640,7 @@
         "COD_MASUAKU",
         "COD_BONGONDA",
         "COD_WISSA",
-        "COD_BAKAMBU"
+        "COD_BANZA"
       ],
       "simulatedPlayerIds": [
         "COD_MPASI",
@@ -1653,7 +1653,7 @@
         "COD_MASUAKU",
         "COD_BONGONDA",
         "COD_WISSA",
-        "COD_BAKAMBU"
+        "COD_BANZA"
       ],
       "reasonJa": "表示される予想スタメンと、試合エンジンが実際に使う先発XIは一致しています。"
     },

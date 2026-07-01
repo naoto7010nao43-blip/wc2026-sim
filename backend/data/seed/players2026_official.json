@@ -27249,14 +27249,14 @@
     "primaryPosition": "ST",
     "secondaryPositions": [],
     "preferredFoot": "Right",
-    "heightCm": 190,
+    "heightCm": 189,
     "weightKg": null,
     "clubName": "Al-Jazira Club (UAE)",
     "clubCountry": null,
     "leagueName": null,
-    "caps": null,
-    "nationalTeamGoals": null,
-    "marketValueEur": 8000000,
+    "caps": 17,
+    "nationalTeamGoals": 2,
+    "marketValueEur": 10000000,
     "careerStats": {
       "appearances": 30,
       "goals": 15,
@@ -27271,9 +27271,9 @@
     },
     "qualitativeAdjustments": {},
     "sourceCitations": [
-      "EA SPORTS FC 26 player ratings ea.com id 231652 (2026-07-02): ST overall 81 (pace 79 shooting 81 passing 62 dribbling 77 defending 36 physical 79)",
-      "Wikipedia/Transfermarkt Simon Banza: b.13/08/1996, DR Congo forward, 190cm, right-footed; DR Congo 2026 World Cup 26-man squad forward",
-      "LiveScore/Transfermarkt 2025-26: Al-Jazira Club (UAE Pro League); market value approx EUR 8m"
+      "EA SPORTS FC 26 official player ratings https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/simon-banza/231652: ST overall 81, face stats",
+      "FIFA.com Congo DR 2026 squad announcement https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/congo-dr-squad-announcement-sebastien-desabre: listed among forwards",
+      "Transfermarkt profile https://www.transfermarkt.us/simon-banza/profil/spieler/344869: b.13/08/1996, 189cm, Al-Jazira Club, EUR 10m, 17 caps, 2 goals"
     ],
     "staminaMax": 85,
     "dataConfidence": "external",
