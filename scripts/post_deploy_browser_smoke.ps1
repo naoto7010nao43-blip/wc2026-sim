@@ -60,6 +60,10 @@ $js = @'
     String.fromCodePoint(0x00c3),
     String.fromCodePoint(0x00e3),
   ];
+  const requiredTextByRoute = {
+    "/simulate": ["\u512a\u52e2\u5ea6", "\u52dd\u7387\u5dee", "xG\u5dee"],
+    "/data-review": ["\u80fd\u529b\u5024\u5dee\u5206\u76e3\u67fb", "\u624b\u52d5\u88dc\u6b63", "JPN_NAKAMURA_K"],
+  };
 
   if (backendBase) {
     const controller = new AbortController();
@@ -100,17 +104,18 @@ $js = @'
         await page.waitForLoadState("load", { timeout: timeoutMs }).catch(() => {});
         await page.waitForTimeout(2500);
         const metrics = await page.evaluate(() => ({
-          bodyText: document.body.innerText.slice(0, 20000),
+          bodyText: document.body.innerText.slice(0, 60000),
           scrollWidth: document.documentElement.scrollWidth,
           clientWidth: document.documentElement.clientWidth,
           bodyLength: document.body.innerText.trim().length,
         }));
         const status = response?.status() ?? 0;
         const badMarkers = markers.filter((marker) => metrics.bodyText.includes(marker));
+        const missingRequiredText = (requiredTextByRoute[route] || []).filter((marker) => !metrics.bodyText.includes(marker));
         const hasOverflow = metrics.scrollWidth > metrics.clientWidth + 2;
-        const row = `${viewport.name} ${route} status=${status} body=${metrics.bodyLength} overflow=${hasOverflow} console=${consoleErrors.length} failed=${failedRequests.length} markers=${badMarkers.length}`;
+        const row = `${viewport.name} ${route} status=${status} body=${metrics.bodyLength} overflow=${hasOverflow} console=${consoleErrors.length} failed=${failedRequests.length} markers=${badMarkers.length} missing=${missingRequiredText.length}`;
         console.log(row);
-        if (status >= 400 || consoleErrors.length || failedRequests.length || badMarkers.length || hasOverflow || metrics.bodyLength < 20) {
+        if (status >= 400 || consoleErrors.length || failedRequests.length || badMarkers.length || missingRequiredText.length || hasOverflow || metrics.bodyLength < 20) {
           failures.push({
             viewport: viewport.name,
             route,
@@ -118,6 +123,7 @@ $js = @'
             consoleErrors,
             failedRequests,
             badMarkers: badMarkers.map((marker) => `U+${marker.codePointAt(0).toString(16).toUpperCase()}`),
+            missingRequiredText,
             hasOverflow,
             widths: [metrics.scrollWidth, metrics.clientWidth],
             bodyLength: metrics.bodyLength,
