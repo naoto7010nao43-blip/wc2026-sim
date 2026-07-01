@@ -8,6 +8,7 @@ import type {
   SimulationStabilitySummary,
   SourceProvenanceAuditSummary,
   SubstitutionModelGapSummary,
+  SubstitutionProfileCandidateQueueSummary,
   TeamReviewSummary,
 } from "../types/domain";
 
@@ -22,6 +23,7 @@ interface Props {
   externalDataVerification: ExternalDataVerificationSummary | null;
   simulationStability: SimulationStabilitySummary | null;
   substitutionModelGap: SubstitutionModelGapSummary | null;
+  substitutionProfileCandidates: SubstitutionProfileCandidateQueueSummary | null;
 }
 
 function bandLabel(band: string | null | undefined): string {
@@ -66,6 +68,7 @@ export function DataReviewOverviewPanel({
   externalDataVerification,
   simulationStability,
   substitutionModelGap,
+  substitutionProfileCandidates,
 }: Props) {
   const highPriorityTeams = teamReview?.teams.filter((team) => team.priority_band === "high").length ?? 0;
   const managerHighRisk = managerTrust?.bandCounts.high ?? 0;
@@ -83,6 +86,7 @@ export function DataReviewOverviewPanel({
     0;
   const externalMissingUrls = externalDataVerification?.sourceTraceability?.candidateMissingResolvableUrlCount ?? 0;
   const substitutionNeedsSpec = substitutionModelGap?.summary?.currentModelHasManagerSpecificSubstitutions === false;
+  const substitutionReadyTeams = substitutionProfileCandidates?.readyTeamCount ?? 0;
   const releaseBlocked = releaseReadiness?.readyForManualPush === false;
   const freshnessNeedsReview = dataQuality?.freshness_status === "critical" || dataQuality?.freshness_status === "warning";
 
@@ -97,6 +101,9 @@ export function DataReviewOverviewPanel({
     externalMissingUrls > 0 ? `外部調査候補 ${externalMissingUrls}件はURL付き出典で再確認してから反映判断` : null,
     sourceReviewCandidates > 0 ? `出典確認が先の候補 ${sourceReviewCandidates}件を保留` : null,
     substitutionNeedsSpec ? "選手交代傾向の反映先(プロファイル機構)は実装済みだが、全チーム中立値のため反映は将来spec候補として扱う" : null,
+    substitutionReadyTeams > 0
+      ? `交代プロファイル候補 ${substitutionReadyTeams}チームは、非中立値を作る前のCodexレビュー対象として確認する`
+      : null,
     releaseBlocked ? `本番反映は${releaseReadiness?.blockers.length ?? 0}件の理由で保留` : null,
   ].filter((item): item is string => Boolean(item));
 
@@ -136,6 +143,7 @@ export function DataReviewOverviewPanel({
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />
         <Metric label="交代モデル" value={substitutionNeedsSpec ? "将来仕様候補" : "現行対応"} tone={substitutionNeedsSpec ? "warn" : "good"} />
+        <Metric label="交代候補準備" value={substitutionReadyTeams} tone={substitutionReadyTeams > 0 ? "warn" : "good"} />
         <Metric label="本番反映" value={releaseReadiness?.readyForManualPush ? "可能" : "保留"} tone={releaseReadiness?.readyForManualPush ? "good" : "warn"} />
       </div>
 

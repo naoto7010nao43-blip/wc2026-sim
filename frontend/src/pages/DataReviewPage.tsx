@@ -36,6 +36,7 @@ const REVIEW_SECTIONS = [
   { id: "simulation-stability", label: "確率安定性" },
   { id: "external-data", label: "外部調査" },
   { id: "substitution-gap", label: "選手交代" },
+  { id: "substitution-candidates", label: "交代候補" },
   { id: "team-review", label: "チーム優先度" },
   { id: "squad-gaps", label: "スカッド" },
   { id: "manager-trust", label: "監督・戦術" },
@@ -152,6 +153,7 @@ export function DataReviewPage() {
         externalDataVerification={externalDataVerification}
         simulationStability={simulationStability}
         substitutionModelGap={substitutionModelGap}
+        substitutionProfileCandidates={substitutionProfileCandidates}
       />
 
       {releaseReadinessError && (
