@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T15:30:19.664127+00:00",
+  "generatedAt": "2026-07-01T17:56:10.276587+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -264,8 +264,8 @@
       "displayedPlayerIds": [
         "MEX_RANGEL",
         "MEX_GALLARDO",
-        "MEX_MONTES",
         "MEX_VASQUEZ",
+        "MEX_MONTES",
         "MEX_SANCHEZ_J",
         "MEX_RODRIGUEZ_E",
         "MEX_GUTIERREZ",
@@ -277,8 +277,8 @@
       "simulatedPlayerIds": [
         "MEX_RANGEL",
         "MEX_GALLARDO",
-        "MEX_MONTES",
         "MEX_VASQUEZ",
+        "MEX_MONTES",
         "MEX_SANCHEZ_J",
         "MEX_RODRIGUEZ_E",
         "MEX_GUTIERREZ",

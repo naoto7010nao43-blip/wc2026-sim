@@ -1,0 +1,6265 @@
+{
+  "generatedAt": "2026-07-01T17:56:09.263878+00:00",
+  "source": {
+    "name": "FIFA World Cup 2026 Squad List",
+    "url": "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf"
+  },
+  "officialTeamCount": 48,
+  "seedTeamCount": 48,
+  "teamsCompared": 48,
+  "teamsMissingInOfficialPdf": [],
+  "teamsWithCoachMismatch": [
+    "GER",
+    "USA",
+    "MEX",
+    "BIH",
+    "QAT",
+    "HAI",
+    "TUR",
+    "ECU",
+    "TUN",
+    "EGY",
+    "IRN",
+    "ESP",
+    "POR",
+    "COD",
+    "GHA",
+    "PAN"
+  ],
+  "teamsWithRosterDrift": [
+    "BRA",
+    "ARG",
+    "FRA",
+    "ENG",
+    "GER",
+    "USA",
+    "MEX",
+    "RSA",
+    "KOR",
+    "CZE",
+    "CAN",
+    "BIH",
+    "QAT",
+    "SUI",
+    "MAR",
+    "HAI",
+    "SCO",
+    "PAR",
+    "AUS",
+    "TUR",
+    "CUW",
+    "CIV",
+    "ECU",
+    "NED",
+    "JPN",
+    "SWE",
+    "TUN",
+    "BEL",
+    "EGY",
+    "IRN",
+    "NZL",
+    "ESP",
+    "CPV",
+    "KSA",
+    "URU",
+    "SEN",
+    "IRQ",
+    "NOR",
+    "ALG",
+    "AUT",
+    "JOR",
+    "POR",
+    "COD",
+    "UZB",
+    "COL",
+    "CRO",
+    "GHA",
+    "PAN"
+  ],
+  "teamReports": [
+    {
+      "teamCode": "BRA",
+      "teamName": "Brazil",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "ANCELOTTI Carlo Carlo ANCELOTTI",
+      "seedManagerName": "Carlo Ancelotti",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "MF",
+          "name_block": "EDERSON SILVA Éderson JoséDOS SANTOS LOURENÇO DA SILVA ÉDERSON S.",
+          "dob": "07/07/1999",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 184,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "WEVERTON Weverton PEREIRA DA SILVA WEVERTON",
+          "dob": "13/12/1987",
+          "club": "Grêmio FBPA (BRA)",
+          "height_cm": 189,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "DANILO Danilo Luiz DA SILVA DANILO",
+          "dob": "15/07/1991",
+          "club": "CR Flamengo (BRA)",
+          "height_cm": 184,
+          "caps": 74,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "LEO PEREIRALeonardo PEREIRA LÉO PEREIRA",
+          "dob": "31/01/1996",
+          "club": "CR Flamengo (BRA)",
+          "height_cm": 189,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "DOUGLAS SANTOS Douglas DOS SANTOS JUSTINO DE MELO DOUGLAS S.",
+          "dob": "22/03/1994",
+          "club": "FC Zenit St. Petersburg (RUS)",
+          "height_cm": 173,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "FABINHO Fabio HenriqueTAVARES FABINHO",
+          "dob": "23/10/1993",
+          "club": "Al Ittihad (KSA)",
+          "height_cm": 188,
+          "caps": 36,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "DANILO SANTOS Danilo DOS SANTOS DE OLIVEIRADANILO S.",
+          "dob": "29/04/2001",
+          "club": "Botafogo (BRA)",
+          "height_cm": 177,
+          "caps": 7,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "LUIZ HENRIQUELuiz Henrique André ROSA DA SILVA L. HENRIQUE",
+          "dob": "02/01/2001",
+          "club": "FC Zenit St. Petersburg (RUS)",
+          "height_cm": 182,
+          "caps": 16,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "GABRIEL MARTINELLIGabriel TEODORO MARTINELLI SILVA MARTINELLI",
+          "dob": "18/06/2001",
+          "club": "Arsenal FC (ENG)",
+          "height_cm": 178,
+          "caps": 26,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "ROGER IBANEZRoger IBAÑEZ DA SILVA IBAÑEZ",
+          "dob": "23/11/1998",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 186,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "IGOR THIAGO Igor ThiagoNASCIMENTO RODRIGUESTHIAGO",
+          "dob": "26/06/2001",
+          "club": "Brentford FC (ENG)",
+          "height_cm": 190,
+          "caps": 5,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "RAYAN Rayan Vitor SIMPLICIO ROCHA RAYAN",
+          "dob": "03/08/2006",
+          "club": "AFC Bournemouth (ENG)",
+          "height_cm": 187,
+          "caps": 5,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "BRA_WESLEY",
+          "name": "Wesley",
+          "primaryPosition": "RB"
+        }
+      ]
+    },
+    {
+      "teamCode": "ARG",
+      "teamName": "Argentina",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "SCALONI Lionel Lionel Sebastián SCALONI",
+      "seedManagerName": "Lionel Scaloni",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "MUSSO JuanJuan AgustínMUSSO MUSSO",
+          "dob": "06/05/1994",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 193,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SENESI Marcos Marcos NicolásSENESI BARONSENESI",
+          "dob": "10/05/1997",
+          "club": "AFC Bournemouth (ENG)",
+          "height_cm": 185,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "MONTIEL GonzaloGonzalo ArielMONTIEL MONTIEL",
+          "dob": "01/01/1997",
+          "club": "CA River Plate (ARG)",
+          "height_cm": 175,
+          "caps": 40,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "BARCO Valentin Valentin BARCO BARCO",
+          "dob": "23/07/2004",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 172,
+          "caps": 5,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "PALACIOS Exequiel Exequiel Alejandro PALACIOS PALACIOS",
+          "dob": "05/10/1998",
+          "club": "Bayer 04 Leverkusen (GER)",
+          "height_cm": 177,
+          "caps": 41,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "GONZALEZ NicoNicolas Ivan GONZALEZ N. GONZALEZ",
+          "dob": "06/04/1998",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 180,
+          "caps": 53,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "ALMADA ThiagoThiago Ezequiel ALMADA ALMADA",
+          "dob": "26/04/2001",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 171,
+          "caps": 19,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "SIMEONE GiulianoGiuliano SIMEONESIMEONE",
+          "dob": "18/12/2002",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 174,
+          "caps": 14,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "PAZ Nico Nicolas PAZ MARTÍNEZNICO PAZ",
+          "dob": "08/09/2004",
+          "club": "Como (ITA)",
+          "height_cm": 185,
+          "caps": 11,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "LOPEZ Jose ManuelJose Manuel Alberto LOPEZ LOPEZ",
+          "dob": "06/12/2000",
+          "club": "SE Palmeiras (BRA)",
+          "height_cm": 190,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "MEDINA Facundo Facundo Axel MEDINA MEDINA",
+          "dob": "28/05/1999",
+          "club": "Olympique Marseille (FRA)",
+          "height_cm": 184,
+          "caps": 11,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "FRA",
+      "teamName": "France",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "DESCHAMPS Didier Didier Claude DESCHAMPS",
+      "seedManagerName": "Didier Deschamps",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "MF",
+          "name_block": "KONE ManuKouadio Emmanuel BorisKONE KONE",
+          "dob": "17/05/2001",
+          "club": "AS Roma (ITA)",
+          "height_cm": 185,
+          "caps": 16,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "THURAM Marcus Marcus Lilian THURAM-ULIENTHURAM",
+          "dob": "06/08/1997",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 192,
+          "caps": 35,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "BARCOLA Bradley Bradley Jean-Manuel Essolisa ABARCOLA BARCOLA",
+          "dob": "02/09/2002",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 187,
+          "caps": 24,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "KANTE Ngolo N'golo KANTE KANTE",
+          "dob": "29/03/1991",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 171,
+          "caps": 69,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "KONATE Ibrahima Ibrahima KONATÉ KONATE",
+          "dob": "25/05/1999",
+          "club": "Liverpool FC (ENG)",
+          "height_cm": 194,
+          "caps": 29,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "HERNANDEZ TheoThéo Bernard François HERNANDEZT. HERNANDEZ",
+          "dob": "06/10/1997",
+          "club": "Al Hilal SC (KSA)",
+          "height_cm": 184,
+          "caps": 47,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "HERNANDEZ Lucas Lucas Francois Bernard HERNANDEZL. HERNANDEZ",
+          "dob": "14/02/1996",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 184,
+          "caps": 42,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "MATETA Jean-PhilippeJean-Philippe MATETA MATETA",
+          "dob": "28/06/1997",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 192,
+          "caps": 6,
+          "goals": 2
+        },
+        {
+          "position": "GK",
+          "name_block": "RISSER RobinRobin François PhilippeRISSER RISSER",
+          "dob": "02/12/2004",
+          "club": "RC Lens (FRA)",
+          "height_cm": 193,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AKLIOUCHE MaghnesMaghnes AKLIOUCHEAKLIOUCHE",
+          "dob": "25/02/2002",
+          "club": "AS Monaco (FRA)",
+          "height_cm": 183,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "LACROIX Maxence Maxence Guy LACROIX LACROIX",
+          "dob": "06/04/2000",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 192,
+          "caps": 5,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "ENG",
+      "teamName": "England",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "TUCHEL Thomas Thomas TUCHEL",
+      "seedManagerName": "Thomas Tuchel",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "KONSA EzriEzri Ngoyo KONSA KONSA",
+          "dob": "23/10/1997",
+          "club": "Aston Villa FC (ENG)",
+          "height_cm": 180,
+          "caps": 23,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "CHALOBAH Trevoh Trevoh Tom CHALOBAHCHALOBAH",
+          "dob": "05/07/1999",
+          "club": "Chelsea FC (ENG)",
+          "height_cm": 192,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "HENDERSON Jordan Jordan Brian HENDERSONHENDERSON",
+          "dob": "17/06/1990",
+          "club": "Brentford FC (ENG)",
+          "height_cm": 183,
+          "caps": 91,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "BURN DanDaniel JohnsonBURN BURN",
+          "dob": "09/05/1992",
+          "club": "Newcastle United FC (ENG)",
+          "height_cm": 201,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ROGERS Morgan Morgan Elliot ROGERSROGERS",
+          "dob": "26/07/2002",
+          "club": "Aston Villa FC (ENG)",
+          "height_cm": 187,
+          "caps": 18,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "GORDON AnthonyAnthony MichaelGORDONGORDON",
+          "dob": "24/02/2001",
+          "club": "Newcastle United FC (ENG)",
+          "height_cm": 182,
+          "caps": 21,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "MADUEKE NoniChukwunonso Azuka Tristan MADUEKEMADUEKE",
+          "dob": "10/03/2002",
+          "club": "Arsenal FC (ENG)",
+          "height_cm": 182,
+          "caps": 14,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "TONEY Ivan Ivan Benjamin ElijahTONEY TONEY",
+          "dob": "16/03/1996",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 185,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "TRAFFORD JamesJames Harrington TRAFFORDTRAFFORD",
+          "dob": "10/10/2002",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 197,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SPENCE DjedDiop Tehuti Djed-HotepSPENCESPENCE",
+          "dob": "09/08/2000",
+          "club": "Tottenham Hotspur FC (ENG)",
+          "height_cm": 184,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "QUANSAH Jarell Jarell Amorin QUANSAHQUANSAH",
+          "dob": "29/01/2003",
+          "club": "Bayer 04 Leverkusen (GER)",
+          "height_cm": 190,
+          "caps": 4,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "GER",
+      "teamName": "Germany",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Julian Nagelsmann",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "ANTON Waldemar Waldemar ANTON ANTON",
+          "dob": "20/07/1996",
+          "club": "Borussia Dortmund (GER)",
+          "height_cm": 189,
+          "caps": 15,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "LEWELING JamieJamie Jaleel Jeremy LEWELINGLEWELING",
+          "dob": "26/02/2001",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "GROSS Pascal Pascal AlexanderGROß GROß",
+          "dob": "15/06/1991",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 181,
+          "caps": 19,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "BEIER MaximilianMaximilianBEIER BEIER",
+          "dob": "17/10/2002",
+          "club": "Borussia Dortmund (GER)",
+          "height_cm": 185,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "STILLER AngeloAngelo NicolasSTILLER STILLER",
+          "dob": "04/04/2001",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 183,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BROWN NathanielNathaniel Christopher BROWN BROWN",
+          "dob": "16/06/2003",
+          "club": "Eintracht Frankfurt (GER)",
+          "height_cm": 176,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "AMIRI NadiemNadiem AMIRI AMIRI",
+          "dob": "27/10/1996",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 178,
+          "caps": 13,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "NUEBEL AlexanderAlexander NÜBEL NÜBEL",
+          "dob": "30/09/1996",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 193,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "NMECHA Felix Felix Kalu NMECHA NMECHA",
+          "dob": "10/10/2000",
+          "club": "Borussia Dortmund (GER)",
+          "height_cm": 190,
+          "caps": 12,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "THIAW Malick Malick THIAW THIAW",
+          "dob": "08/08/2001",
+          "club": "Newcastle United FC (ENG)",
+          "height_cm": 194,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "OUEDRAOGO AssanForzan AssanOUÉDRAOGO OUÉDRAOGO",
+          "dob": "09/05/2006",
+          "club": "RB Leipzig (GER)",
+          "height_cm": 191,
+          "caps": 1,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "USA",
+      "teamName": "USA",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Mauricio Pochettino",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "TRUSTY Auston Auston Levi-JesaiahTRUSTY TRUSTY",
+          "dob": "12/08/1998",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 190,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "REYNA Giovanni Giovanni Alejandro REYNA REYNA",
+          "dob": "13/11/2002",
+          "club": "Borussia Mönchengladbach (GER)",
+          "height_cm": 187,
+          "caps": 41,
+          "goals": 10
+        },
+        {
+          "position": "FW",
+          "name_block": "AARONSON Brenden Brenden RussellAARONSONAARONSON",
+          "dob": "22/10/2000",
+          "club": "Leeds United FC (ENG)",
+          "height_cm": 177,
+          "caps": 59,
+          "goals": 9
+        },
+        {
+          "position": "DF",
+          "name_block": "ROBINSON MilesMiles Gordon ROBINSONM. ROBINSON",
+          "dob": "14/03/1997",
+          "club": "FC Cincinnatti (USA)",
+          "height_cm": 187,
+          "caps": 41,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "BERHALTER SebastianSebastian MatthewBERHALTER BERHALTER",
+          "dob": "10/05/2001",
+          "club": "Vancouver Whitecaps FC (CAN)",
+          "height_cm": 175,
+          "caps": 16,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "ROLDAN CristianCristian ROLDAN ROLDAN",
+          "dob": "03/06/1995",
+          "club": "Seattle Sounders FC (USA)",
+          "height_cm": 173,
+          "caps": 47,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ARFSTEN MaxMaximilian MichaelARFSTEN ARFSTEN",
+          "dob": "19/04/2001",
+          "club": "Columbus Crew (USA)",
+          "height_cm": 185,
+          "caps": 20,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "WRIGHT Haji Haji Amir WRIGHT WRIGHT",
+          "dob": "27/03/1998",
+          "club": "Coventry City FC (ENG)",
+          "height_cm": 191,
+          "caps": 21,
+          "goals": 7
+        },
+        {
+          "position": "DF",
+          "name_block": "McKENZIE MarkMark AlexanderMCKENZIEMCKENZIE",
+          "dob": "25/02/1999",
+          "club": "Toulouse FC (FRA)",
+          "height_cm": 186,
+          "caps": 30,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SCALLY Joe Joseph MichaelSCALLY SCALLY",
+          "dob": "31/12/2002",
+          "club": "Borussia Mönchengladbach (GER)",
+          "height_cm": 184,
+          "caps": 28,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "BRADY Chris Christopher Keith BRADY BRADY",
+          "dob": "03/03/2004",
+          "club": "Chicago Fire FC (USA)",
+          "height_cm": 193,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ZENDEJAS Alex Alejandro ZENDEJAS SAAVEDRAZENDEJAS",
+          "dob": "07/02/1998",
+          "club": "Club América (MEX)",
+          "height_cm": 167,
+          "caps": 15,
+          "goals": 2
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "USA_MUSAH",
+          "name": "Yunus Musah",
+          "primaryPosition": "CM"
+        }
+      ]
+    },
+    {
+      "teamCode": "MEX",
+      "teamName": "Mexico",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 16,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 4,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Javier Aguirre",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "MF",
+          "name_block": "LIRA Erik Erik Antonio LIRA MÉNDEZE. LIRA",
+          "dob": "08/05/2000",
+          "club": "CF Cruz Azul (MEX)",
+          "height_cm": 172,
+          "caps": 28,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ROMO Luis Luis FranciscoROMO BARRÓNL. ROMO",
+          "dob": "05/06/1995",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 183,
+          "caps": 65,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "FIDALGO Alvaro Álvaro FIDALGO FERNÁNDEZ FIDALGO",
+          "dob": "09/04/1997",
+          "club": "Real Betis (ESP)",
+          "height_cm": 175,
+          "caps": 6,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "ACEVEDO CarlosCarlos ACEVEDO LÓPEZ C. ACEVEDO",
+          "dob": "19/04/1996",
+          "club": "Club Santos Laguna (MEX)",
+          "height_cm": 185,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "GONZALEZ ArmandoArmando GONZÁLEZ ALBAA. GONZÁLEZ",
+          "dob": "20/04/2003",
+          "club": "CD Guadalajara (MEX)",
+          "height_cm": 182,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "REYES Israel Israel REYES ROMEROI. REYES",
+          "dob": "23/05/2000",
+          "club": "Club América (MEX)",
+          "height_cm": 181,
+          "caps": 38,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "QUINONES JulianJulián Andrés QUIÑONES QUIÑONESJ. QUIÑONES",
+          "dob": "24/03/1997",
+          "club": "Al Qadsiah FC (KSA)",
+          "height_cm": 177,
+          "caps": 26,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "VARGAS ObedObed GomézVARGAS O. VARGAS",
+          "dob": "05/08/2005",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 175,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MORA Gilberto Gilberto RafaelMORA ZAMBRANOG. MORA",
+          "dob": "14/10/2008",
+          "club": "Club Tijuana (MEX)",
+          "height_cm": 175,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "CHAVEZ MateoMateo CHÁVEZ GARCÍA M. CHÁVEZ",
+          "dob": "12/05/2004",
+          "club": "AZ Alkmaar (NED)",
+          "height_cm": 178,
+          "caps": 11,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "HUERTA Cesar César SaúlHUERTA VALERA C. HUERTA",
+          "dob": "03/12/2000",
+          "club": "RSC Anderlecht (BEL)",
+          "height_cm": 171,
+          "caps": 27,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "MARTINEZ GuillermoGuillermoMARTÍNEZ AYALA G. MARTÍNEZ",
+          "dob": "15/03/1995",
+          "club": "Pumas UNAM (MEX)",
+          "height_cm": 191,
+          "caps": 13,
+          "goals": 3
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "MEX_VEGA",
+          "name": "Julio Gonzalez",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "MEX_ARTEAGA",
+          "name": "Gerardo Arteaga",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "MEX_ALVAREZ_E",
+          "name": "Erick Sanchez",
+          "primaryPosition": "CM"
+        },
+        {
+          "playerId": "MEX_LOZANO",
+          "name": "Hirving Lozano",
+          "primaryPosition": "RW"
+        }
+      ]
+    },
+    {
+      "teamCode": "RSA",
+      "teamName": "South Africa",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 9,
+      "unmatchedOfficialPlayerCount": 17,
+      "unmatchedSeedPlayerCount": 4,
+      "officialCoachNameBlock": "BROOS Hugo Hugo Henri BROOS",
+      "seedManagerName": "Hugo Broos",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "MATULUDI ThabangTholo ThabangMATULUDI MATULUDI",
+          "dob": "14/01/1999",
+          "club": "Polokwane City FC (RSA)",
+          "height_cm": 189,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "NDAMANE KhulumaniKhulumaniNDAMANE NDAMANE",
+          "dob": "05/02/2004",
+          "club": "Mamelodi Sundowns FC (RSA)",
+          "height_cm": 183,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MBATHA ThalenteThalente Wandile MBATHA MBATHA",
+          "dob": "06/03/2000",
+          "club": "Orlando Pirates FC (RSA)",
+          "height_cm": 179,
+          "caps": 20,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "MODIBA Aubrey Aubrey MaphosaMODIBAMODIBA",
+          "dob": "22/07/1995",
+          "club": "Mamelodi Sundowns FC (RSA)",
+          "height_cm": 171,
+          "caps": 52,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "MOREMI Tshepang Tshepang MOREMIMOREMI",
+          "dob": "02/10/2000",
+          "club": "Orlando Pirates FC (RSA)",
+          "height_cm": 169,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MOFOKENG RelebohileRelebohile MOFOKENGMOFOKENG",
+          "dob": "23/10/2004",
+          "club": "Orlando Pirates FC (RSA)",
+          "height_cm": 168,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MASEKO ThapeloThapelo MASEKO MASEKO",
+          "dob": "11/11/2003",
+          "club": "AEL Limassol (CYP)",
+          "height_cm": 178,
+          "caps": 11,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "MBOKAZI Mbekezeli Mbekezeli MfanufikileMBOKAZIMBOKAZI",
+          "dob": "19/09/2005",
+          "club": "Chicago Fire FC (USA)",
+          "height_cm": 177,
+          "caps": 14,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "CHAINE SiphoSipho JustinCHAINE CHAINE",
+          "dob": "14/12/1996",
+          "club": "Orlando Pirates FC (RSA)",
+          "height_cm": 186,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "MAKGOPA Evidence Sekotori Evidence MAKGOPA MAKGPA",
+          "dob": "05/06/2000",
+          "club": "Orlando Pirates FC (RSA)",
+          "height_cm": 183,
+          "caps": 31,
+          "goals": 6
+        },
+        {
+          "position": "DF",
+          "name_block": "KABINI Samukele Samukele AluciousKABINI KABINI",
+          "dob": "15/03/2004",
+          "club": "Molde FK (NOR)",
+          "height_cm": 179,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "OKON Ime Ime Daniel OKON OKON",
+          "dob": "20/02/2004",
+          "club": "Hannover 96 (GER)",
+          "height_cm": 187,
+          "caps": 12,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "RSA_PETERSEN",
+          "name": "Ronald Chitiza",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "RSA_MOROAPULA",
+          "name": "Sage Stephens",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "RSA_MEYIWA",
+          "name": "Innocent Maela",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "RSA_MOKOENA_G",
+          "name": "Grant Kekana",
+          "primaryPosition": "CB"
+        }
+      ]
+    },
+    {
+      "teamCode": "KOR",
+      "teamName": "Korea Republic",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "HONG Myungbo Myung Bo HONG Korea",
+      "seedManagerName": "Hong Myung-bo",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "LEE HanbeomHanbeomLEE HANBEOM",
+          "dob": "17/06/2002",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 188,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "LEE GihyukGihyuk LEE GIHYUK",
+          "dob": "07/07/2000",
+          "club": "Gangwon FC (KOR)",
+          "height_cm": 184,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "LEE JaesungJae SungLEE JAESUNG",
+          "dob": "10/08/1992",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 180,
+          "caps": 107,
+          "goals": 15
+        },
+        {
+          "position": "DF",
+          "name_block": "LEE Taeseok Taeseok LEE TAESEOK",
+          "dob": "28/07/2002",
+          "club": "FK Austria Wien (AUT)",
+          "height_cm": 174,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "CHO WijeWije CHO WIJE",
+          "dob": "25/08/2001",
+          "club": "Jeonbuk Hyundai Motors FC (KOR)",
+          "height_cm": 190,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "PARK JinseobJinseobPARK JINSEOB",
+          "dob": "23/10/1995",
+          "club": "Zhejiang FC (CHN)",
+          "height_cm": 183,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "BAE JunhoJunho BAE JUNHO",
+          "dob": "21/08/2003",
+          "club": "Stoke City FC (ENG)",
+          "height_cm": 180,
+          "caps": 13,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "OH HyeongyuHyeongyuOH HYEONGYU",
+          "dob": "12/04/2001",
+          "club": "Be ş ikta ş JK (TUR)",
+          "height_cm": 183,
+          "caps": 30,
+          "goals": 7
+        },
+        {
+          "position": "MF",
+          "name_block": "YANG HyunjunHyunjunYANG HYUNJUN",
+          "dob": "25/05/2002",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 179,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SEOL YoungwooYoungwooSEOL YOUNGWOO",
+          "dob": "05/12/1998",
+          "club": "FK Crvena Zvezda (SRB)",
+          "height_cm": 180,
+          "caps": 37,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "CASTROP JensJens CASTROPJENS",
+          "dob": "29/07/2003",
+          "club": "Borussia Mönchengladbach (GER)",
+          "height_cm": 178,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "KIM JingyuJingyu KIM JINGYU",
+          "dob": "24/02/1997",
+          "club": "Jeonbuk Hyundai Motors FC (KOR)",
+          "height_cm": 177,
+          "caps": 24,
+          "goals": 3
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "KOR_KIMJINSU",
+          "name": "Kim Jin-su",
+          "primaryPosition": "LB"
+        }
+      ]
+    },
+    {
+      "teamCode": "CZE",
+      "teamName": "Czechia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "KOUBEK Miroslav Miroslav KOUBEK Czech",
+      "seedManagerName": "Miroslav Koubek",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "CHALOUPEK StepanŠ t ě pán CHALOUPEKCHALOUPEK",
+          "dob": "08/03/2003",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 188,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "DARIDA VladimirVladimírDARIDA DARIDA",
+          "dob": "08/08/1990",
+          "club": "FC Hradec Králové (CZE)",
+          "height_cm": 172,
+          "caps": 80,
+          "goals": 8
+        },
+        {
+          "position": "FW",
+          "name_block": "HLOZEK AdamAdam HLO Ž EK HLO Ž EK",
+          "dob": "25/07/2002",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 188,
+          "caps": 46,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "KUCHTA Jan Jan KUCHTA KUCHTA",
+          "dob": "08/01/1997",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 185,
+          "caps": 31,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "CERV Lukas Luká š Č ERV Č ERV",
+          "dob": "10/04/2001",
+          "club": "FC Viktoria Plze ň (CZE)",
+          "height_cm": 182,
+          "caps": 19,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "JURASEK David David JURÁSEKJURÁSEK",
+          "dob": "07/08/2000",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 183,
+          "caps": 18,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "SULC Pavel Pavel Š ULC Š ULC",
+          "dob": "29/12/2000",
+          "club": "Olympique Lyonnais (FRA)",
+          "height_cm": 177,
+          "caps": 24,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "SADILEK MichalMichal SADÍLEKSADÍLEK",
+          "dob": "31/05/1999",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 169,
+          "caps": 38,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "CHORY Tomas Tomá š CHORÝ CHORÝ",
+          "dob": "26/01/1995",
+          "club": "SK Slavia Praha (CZE)",
+          "height_cm": 199,
+          "caps": 24,
+          "goals": 7
+        },
+        {
+          "position": "DF",
+          "name_block": "ZELENY Jaroslav Jaroslav ZELENÝ ZELENÝ",
+          "dob": "20/08/1992",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 190,
+          "caps": 25,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SOJKA AlexandrAlexandrSOJKA SOJKA",
+          "dob": "02/04/2003",
+          "club": "FC Viktoria Plze ň (CZE)",
+          "height_cm": 188,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SOCHUREK HugoHugo SOCH Ů REK SOCH Ů REK",
+          "dob": "07/06/2008",
+          "club": "AC Sparta Praha (CZE)",
+          "height_cm": 183,
+          "caps": 1,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "CAN",
+      "teamName": "Canada",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "MARSCH Jesse Jesse Alan MARSCH",
+      "seedManagerName": "Jesse Marsch",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "JONES AlfieAlfie CharlesJONES JONES",
+          "dob": "07/10/1997",
+          "club": "Middlesbrough FC (ENG)",
+          "height_cm": 191,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "DE FOUGEROLLES Luc Luc ROLLET DE FOUGEROLLESDE FOUGEROLLES",
+          "dob": "12/10/2005",
+          "club": "FCV Dender EH (BEL)",
+          "height_cm": 183,
+          "caps": 17,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "WATERMAN JoelJoel Robert WATERMAN WATERMAN",
+          "dob": "24/01/1996",
+          "club": "Chicago Fire FC (USA)",
+          "height_cm": 185,
+          "caps": 17,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CHOINIERE MathieuMathieu CHOINIÈRECHOINIÈRE",
+          "dob": "07/02/1999",
+          "club": "LAFC (USA)",
+          "height_cm": 173,
+          "caps": 25,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MILLAR LiamLiam Alan MILLAR MILLAR",
+          "dob": "27/09/1999",
+          "club": "Hull City FC (ENG)",
+          "height_cm": 176,
+          "caps": 44,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "SHAFFELBURG JacobJacob Everett SHAFFELBURGSHAFFELBURG",
+          "dob": "26/11/1999",
+          "club": "LAFC (USA)",
+          "height_cm": 181,
+          "caps": 35,
+          "goals": 6
+        },
+        {
+          "position": "GK",
+          "name_block": "GOODMAN OwenOwen Olamidayo GOODMAN GOODMAN",
+          "dob": "27/11/2003",
+          "club": "Barnsley (ENG)",
+          "height_cm": 193,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "AHMED AliAli AHMED AHMED",
+          "dob": "10/10/2000",
+          "club": "Norwich City FC (ENG)",
+          "height_cm": 180,
+          "caps": 27,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "SIGUR NikoNiko KristianSIGUR SIGUR",
+          "dob": "09/09/2003",
+          "club": "HNK Hajduk Split (CRO)",
+          "height_cm": 178,
+          "caps": 21,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "DAVID Promise Promise Oluwatobi EmmanuelDAVID PROMISE",
+          "dob": "03/07/2001",
+          "club": "Royale Union Saint-Gilloise (BEL)",
+          "height_cm": 195,
+          "caps": 13,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "SALIBA NathanNathan-DylanSALIBA SALIBA",
+          "dob": "07/02/2004",
+          "club": "RSC Anderlecht (BEL)",
+          "height_cm": 174,
+          "caps": 18,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "NELSON Jayden Jayden NELSON NELSON",
+          "dob": "26/09/2002",
+          "club": "Austin FC (USA)",
+          "height_cm": 170,
+          "caps": 15,
+          "goals": 3
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "BIH",
+      "teamName": "Bosnia And Herzegovina",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 10,
+      "unmatchedOfficialPlayerCount": 16,
+      "unmatchedSeedPlayerCount": 3,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Sergej Barbarez",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "MUJAKIC NihadNihad MUJAKI Ć MUJAKI Ć",
+          "dob": "15/04/1998",
+          "club": "Gaziantep FK (TUR)",
+          "height_cm": 189,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "HADZIKADUNIC DennisDennis HAD Ž IKADUNI Ć HAD Ž IKADUNI Ć",
+          "dob": "09/07/1998",
+          "club": "UC Sampdoria (ITA)",
+          "height_cm": 191,
+          "caps": 33,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "DEDIC AmarAmar DEDI Ć DEDI Ć",
+          "dob": "18/08/2002",
+          "club": "SL Benfica (POR)",
+          "height_cm": 180,
+          "caps": 30,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "GIGOVIC Armin Armin GIGOVI Ć GIGOVI Ć",
+          "dob": "06/04/2002",
+          "club": "BSC Young Boys (SUI)",
+          "height_cm": 187,
+          "caps": 21,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "BAZDAR SamedSamed BA Ž DAR BA Ž DAR",
+          "dob": "31/01/2004",
+          "club": "Jagiellonia Bia ł ystok (POL)",
+          "height_cm": 189,
+          "caps": 14,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "JURKAS MladenMladenJURKAS JURKAS",
+          "dob": "07/10/2007",
+          "club": "FK Borac Banja Luka (BIH)",
+          "height_cm": 193,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "BASIC Ivan Ivan BA Š I Ć BA Š I Ć",
+          "dob": "30/04/2002",
+          "club": "FC Astana (KAZ)",
+          "height_cm": 178,
+          "caps": 20,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SUNJIC Ivan Ivan Š UNJI Ć Š UNJI Ć",
+          "dob": "09/10/1996",
+          "club": "Pafos FC (CYP)",
+          "height_cm": 183,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MEMIC AmarAmar MEMI Ć MEMI Ć",
+          "dob": "20/01/2001",
+          "club": "FC Viktoria Plze ň (CZE)",
+          "height_cm": 176,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "BURNIC Dzenis D ž enis BURNI Ć BURNI Ć",
+          "dob": "22/05/1998",
+          "club": "Karlsruher SC (GER)",
+          "height_cm": 182,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "RADELJIC StjepanStjepanRADELJI Ć RADELJI Ć",
+          "dob": "05/09/1997",
+          "club": "HNK Rijeka (CRO)",
+          "height_cm": 201,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "ZLOMISLIC Martin Martin ZLOMISLI Ć ZLOMISLI Ć",
+          "dob": "16/08/1998",
+          "club": "HNK Rijeka (CRO)",
+          "height_cm": 189,
+          "caps": 3,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "BIH_SEHIC",
+          "name": "Adnan Sehic",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "BIH_KRUNIC",
+          "name": "Rade Krunic",
+          "primaryPosition": "CM"
+        },
+        {
+          "playerId": "BIH_TURKES",
+          "name": "Anel Ahmedhodzic",
+          "primaryPosition": "CB"
+        }
+      ]
+    },
+    {
+      "teamCode": "QAT",
+      "teamName": "Qatar",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Julen Lopetegui",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "LUCAS MENDESLucas Michel MENDES L.MENDES",
+          "dob": "03/07/1990",
+          "club": "Al Wakrah SC (QAT)",
+          "height_cm": 179,
+          "caps": 29,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "ISSA LAYE Gueye SEYDINAISSALAYE GUEYE",
+          "dob": "22/12/1997",
+          "club": "Al Arabi SC (QAT)",
+          "height_cm": 178,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "JASSEM GABERJassem Gaber EABDULSALLAM JASSEM",
+          "dob": "20/02/2002",
+          "club": "Al Rayyan SC (QAT)",
+          "height_cm": 181,
+          "caps": 40,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "AHMED ALAAELDINAhmed Alaaeldin B MABDELMOTAAL ALAAELDIN",
+          "dob": "31/01/1993",
+          "club": "Al Rayyan SC (QAT)",
+          "height_cm": 179,
+          "caps": 79,
+          "goals": 10
+        },
+        {
+          "position": "FW",
+          "name_block": "EDMILSON JUNIOREdmilson Junior PDASILVA EDMILSON JR.",
+          "dob": "19/08/1994",
+          "club": "Al Duhail SC (QAT)",
+          "height_cm": 180,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "AYOUB ALOUI Ayoub MohamedALOUI AYOUB",
+          "dob": "11/03/2005",
+          "club": "Al Gharafa SC (QAT)",
+          "height_cm": 181,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "HOMAM AHMEDHomam Elamin MAHMED HOMAM",
+          "dob": "25/08/1999",
+          "club": "Cultural Leonesa (ESP)",
+          "height_cm": 188,
+          "caps": 78,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "YUSUF ABDURISAG Yusuf AbdurisagYUSUF YUSUF",
+          "dob": "06/08/1999",
+          "club": "Al Wakrah SC (QAT)",
+          "height_cm": 171,
+          "caps": 46,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "AHMED ALGANEHI Ahmed Mohamed H KALGANEHI A. ALGANEHI",
+          "dob": "22/09/2000",
+          "club": "Al Gharafa SC (QAT)",
+          "height_cm": 175,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "SULTAN ALBRAKESultan Hussain M HAL-BRAKESULTAN",
+          "dob": "07/04/1996",
+          "club": "Al Duhail SC (QAT)",
+          "height_cm": 178,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AHMED FATHY Ahmed Fathy M ABDOULLA A. FATHY",
+          "dob": "25/01/1993",
+          "club": "Al Arabi SC (QAT)",
+          "height_cm": 171,
+          "caps": 57,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "SALAH ZAKARIA Salah Zakaria M MHASSAN SALAH",
+          "dob": "24/04/1999",
+          "club": "Al Duhail SC (QAT)",
+          "height_cm": 186,
+          "caps": 10,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "QAT_LAAYE",
+          "name": "Issa Laaye",
+          "primaryPosition": "LB"
+        }
+      ]
+    },
+    {
+      "teamCode": "SUI",
+      "teamName": "Switzerland",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "YAKIN Murat Murat YAKIN",
+      "seedManagerName": "Murat Yakin",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "MUHEIM Miro Miro Max MariaMUHEIM MUHEIM",
+          "dob": "24/03/1998",
+          "club": "Hamburger SV (GER)",
+          "height_cm": 182,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ZAKARIA Denis Denis Lemi ZAKARIA LAKO LADO ZAKARIA",
+          "dob": "20/11/1996",
+          "club": "AS Monaco (FRA)",
+          "height_cm": 189,
+          "caps": 66,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "FREULER RemoRemo Marco FREULER FREULER",
+          "dob": "15/04/1992",
+          "club": "Bologna FC (ITA)",
+          "height_cm": 181,
+          "caps": 91,
+          "goals": 11
+        },
+        {
+          "position": "MF",
+          "name_block": "MANZAMBI JohanJohan Kula MANZAMBI MANZAMBI",
+          "dob": "14/10/2005",
+          "club": "SC Freiburg (GER)",
+          "height_cm": 182,
+          "caps": 15,
+          "goals": 6
+        },
+        {
+          "position": "GK",
+          "name_block": "MVOGO Yvon Yvon Landry MVOGO NGANOMA MVOGO",
+          "dob": "06/06/1994",
+          "club": "FC Lorient (FRA)",
+          "height_cm": 190,
+          "caps": 13,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "FASSNACHT ChristianChristian Andreas FASSNACHT FASSNACHT",
+          "dob": "11/11/1993",
+          "club": "BSC Young Boys (SUI)",
+          "height_cm": 185,
+          "caps": 24,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "COEMERT Eray Eray Ervin CÖMERT CÖMERT",
+          "dob": "04/02/1998",
+          "club": "Valencia CF (ESP)",
+          "height_cm": 183,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "OKAFOR NoahNoah Arinzechukwu OKAFOR OKAFOR",
+          "dob": "24/05/2000",
+          "club": "Leeds United FC (ENG)",
+          "height_cm": 185,
+          "caps": 25,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "AEBISCHER MichelMichel AEBISCHERAEBISCHER",
+          "dob": "06/01/1997",
+          "club": "Pisa SC (ITA)",
+          "height_cm": 183,
+          "caps": 43,
+          "goals": 2
+        },
+        {
+          "position": "GK",
+          "name_block": "KELLER Marvin Marvin KELLER KELLER",
+          "dob": "03/07/2002",
+          "club": "BSC Young Boys (SUI)",
+          "height_cm": 189,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "RIEDER Fabian Fabian RIEDER RIEDER",
+          "dob": "16/02/2002",
+          "club": "FC Augsburg (GER)",
+          "height_cm": 181,
+          "caps": 30,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "AMENDA Aurele Aurèle Florian AMENDA AMENDA",
+          "dob": "31/07/2003",
+          "club": "Eintracht Frankfurt (GER)",
+          "height_cm": 194,
+          "caps": 7,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "SUI_SOMMER",
+          "name": "Yann Sommer",
+          "primaryPosition": "GK"
+        }
+      ]
+    },
+    {
+      "teamCode": "MAR",
+      "teamName": "Morocco",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 11,
+      "unmatchedOfficialPlayerCount": 15,
+      "unmatchedSeedPlayerCount": 4,
+      "officialCoachNameBlock": "OUAHBI Mohamed Mohamed OUAHBI",
+      "seedManagerName": "Mohamed Ouahbi",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "SAADANE Marwane Marwane SAADANE SAADANE",
+          "dob": "17/01/1992",
+          "club": "Al Fateh SC (KSA)",
+          "height_cm": 185,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "BOUADDI Ayyoub Ayyoub BOUADDI BOUADDI",
+          "dob": "02/10/2007",
+          "club": "Lille OSC (FRA)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "TALBI ChemsdineChemsdine TALBI TALBI",
+          "dob": "09/05/2005",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 175,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SAIBARI IsmaelIsmael SAIBARI SAIBARI",
+          "dob": "28/01/2001",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 185,
+          "caps": 34,
+          "goals": 12
+        },
+        {
+          "position": "DF",
+          "name_block": "EL OUAHDI ZakariaZakaria EL OUAHDI EL OUAHDI",
+          "dob": "31/12/2001",
+          "club": "KRC Genk (BEL)",
+          "height_cm": 171,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "EL MOURABET Samir Samir EL MOURABET EL MOURABET",
+          "dob": "06/10/2005",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 187,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "YASSINE GessimeGessime Ben Youssef MustaphaYASSINE YASSINE",
+          "dob": "22/11/2005",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 172,
+          "caps": 6,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "SBAI AmineMohamed AmineSBAI SBAÏ",
+          "dob": "05/11/2000",
+          "club": "Angers SCO (FRA)",
+          "height_cm": 175,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "RIAD Chadi Chadi RIAD RIAD",
+          "dob": "17/06/2003",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 186,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "BELAMMARI Youssef Youssef BELAMMARI BELAMMARI",
+          "dob": "20/09/1998",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 175,
+          "caps": 18,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "AMAIMOUNI Ayoube Ayoube AMAIMOUNIAMAIMOUNI",
+          "dob": "30/11/2004",
+          "club": "Eintracht Frankfurt (GER)",
+          "height_cm": 179,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "TAGNAOUTI Ahmed RedaAhmed Reda TAGNAOUTI TAGNAOUTI",
+          "dob": "05/04/1996",
+          "club": "ASFAR (MAR)",
+          "height_cm": 194,
+          "caps": 3,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "MAR_AGUERD",
+          "name": "Nayef Aguerd",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "MAR_SAISS",
+          "name": "Romain Saiss",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "MAR_MENDYL",
+          "name": "Yahia Attiyat Allah",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "MAR_AKHOMACH",
+          "name": "Ilias Akhomach",
+          "primaryPosition": "LW"
+        }
+      ]
+    },
+    {
+      "teamCode": "HAI",
+      "teamName": "Haiti",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Sebastien Migne",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "THERMONCY Keeto Keeto THERMONCYTHERMONCY",
+          "dob": "29/03/2006",
+          "club": "BSC Young Boys (SUI)",
+          "height_cm": 179,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SAINTE Carl Carl Fred SAINTE SAINTE",
+          "dob": "09/08/2002",
+          "club": "El Paso Locomotive FC (USA)",
+          "height_cm": 182,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "EXPERIENCE Martin Martin Yves Roberns DidierEXPERIENCEEXPERIENCE",
+          "dob": "09/03/1999",
+          "club": "AS Nancy (FRA)",
+          "height_cm": 178,
+          "caps": 24,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "DEEDSON LouiciusDon DeedsonLOUICIUSLOUICIUS",
+          "dob": "11/02/2001",
+          "club": "FC Dallas (USA)",
+          "height_cm": 178,
+          "caps": 35,
+          "goals": 10
+        },
+        {
+          "position": "GK",
+          "name_block": "PIERRE Alexandre Alexandre Jr PIERREA. PIERRE",
+          "dob": "25/02/2001",
+          "club": "FC Sochaux-Montbéliard (FRA)",
+          "height_cm": 190,
+          "caps": 17,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "LACROIX MarkhusMarkhus LACROIX LACROIX",
+          "dob": "14/10/1993",
+          "club": "Colorado Springs Switchbacks FC (USA)",
+          "height_cm": 175,
+          "caps": 16,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "METUSALA Garven Garven-Michee METUSALA METUSALA",
+          "dob": "31/12/1999",
+          "club": "Colorado Springs Switchbacks FC (USA)",
+          "height_cm": 186,
+          "caps": 15,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "PROVIDENCE RubenRuben Fritzner PROVIDENCEPROVIDENCE",
+          "dob": "07/07/2001",
+          "club": "Almere City FC (NED)",
+          "height_cm": 178,
+          "caps": 18,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "JOSEPH LennyLenny Alvin PicoJOSEPHJOSEPH",
+          "dob": "12/10/2000",
+          "club": "Ferencvárosi TC (HUN)",
+          "height_cm": 182,
+          "caps": 5,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "CASIMIR JosueJosue Jeremie CASIMIRCASIMIR",
+          "dob": "24/09/2001",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 178,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "DUVERGER JosueJosue DUVERGERDUVERGER",
+          "dob": "27/04/2000",
+          "club": "FC Cosmos Koblenz (GER)",
+          "height_cm": 187,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "PAUGAIN WilguensWilguens Raphael PolynicePAUGAINPAUGAIN",
+          "dob": "24/08/2001",
+          "club": "SV Zulte Waregem (BEL)",
+          "height_cm": 180,
+          "caps": 8,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "SCO",
+      "teamName": "Scotland",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "CLARKE Steve Stephen CLARKE",
+      "seedManagerName": "Steve Clarke",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "HICKEY Aaron Aaron BuchananHICKEYHICKEY",
+          "dob": "10/06/2002",
+          "club": "Brentford FC (ENG)",
+          "height_cm": 185,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "FLETCHER Tyler Tyler Robert FLETCHER FLETCHER",
+          "dob": "19/03/2007",
+          "club": "Manchester United FC (ENG)",
+          "height_cm": 183,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "DYKES Lyndon Lyndon JohnDYKES DYKES",
+          "dob": "07/10/1995",
+          "club": "Charlton Athletic FC (ENG)",
+          "height_cm": 188,
+          "caps": 53,
+          "goals": 10
+        },
+        {
+          "position": "GK",
+          "name_block": "KELLY Liam Liam Patrick KELLY KELLY",
+          "dob": "23/01/1996",
+          "club": "Rangers FC (SCO)",
+          "height_cm": 184,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "STEWART Ross Ross Cameron STEWART STEWART",
+          "dob": "11/07/1996",
+          "club": "Southampton FC (ENG)",
+          "height_cm": 188,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SOUTTAR John John Francis SOUTTAR SOUTTAR",
+          "dob": "25/09/1996",
+          "club": "Rangers FC (SCO)",
+          "height_cm": 186,
+          "caps": 24,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "HYAM DominicDominic JohnHYAM HYAM",
+          "dob": "20/12/1995",
+          "club": "Wrexham AFC (WAL)",
+          "height_cm": 188,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "HIRST George George David Eric HIRST HIRST",
+          "dob": "15/02/1999",
+          "club": "Ipswich Town FC (ENG)",
+          "height_cm": 191,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "McLEAN Kenny Kenneth MCLEANMCLEAN",
+          "dob": "08/01/1992",
+          "club": "Norwich City FC (ENG)",
+          "height_cm": 183,
+          "caps": 61,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "RALSTON AnthonyAnthony RALSTON RALSTON",
+          "dob": "16/11/1998",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 178,
+          "caps": 29,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "CURTIS Findlay Findlay Kenneth CURTIS CURTIS",
+          "dob": "09/06/2006",
+          "club": "Kilmarnock FC (SCO)",
+          "height_cm": 180,
+          "caps": 5,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "PAR",
+      "teamName": "Paraguay",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 9,
+      "unmatchedOfficialPlayerCount": 17,
+      "unmatchedSeedPlayerCount": 5,
+      "officialCoachNameBlock": "ALFARO Gustavo Gustavo Julio ALFARO",
+      "seedManagerName": "Gustavo Alfaro",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "ALDERETE Omar Omar Federico ALDERETE FERNANDEZALDERETE",
+          "dob": "26/12/1996",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 190,
+          "caps": 39,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "CACERES Juan JoseJuan JoseCACERES CÁCERES",
+          "dob": "01/06/2000",
+          "club": "FC Dynamo Moscow (RUS)",
+          "height_cm": 187,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SOSA RamonRamón SOSA ACOSTA SOSA",
+          "dob": "31/08/1999",
+          "club": "SE Palmeiras (BRA)",
+          "height_cm": 178,
+          "caps": 30,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "GOMEZ DiegoDiego AlexanderGOMEZ AMARILLA D. GÓMEZ",
+          "dob": "27/03/2003",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 183,
+          "caps": 27,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "MAURICIO Mauricio MAGALHAES PRADOMAURICIO",
+          "dob": "22/06/2001",
+          "club": "SE Palmeiras (BRA)",
+          "height_cm": 175,
+          "caps": 6,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "GILL OrlandoOrlando DanielGILL NOLDINO. GILL",
+          "dob": "11/06/2000",
+          "club": "CA San Lorenzo (ARG)",
+          "height_cm": 190,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "CANALE Jose Jose MariaCANALE DOMINGUEZCANALE",
+          "dob": "20/07/1996",
+          "club": "CA Lanús (ARG)",
+          "height_cm": 192,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CUBAS Andres Adrián Andrés CUBAS CUBAS",
+          "dob": "11/05/1996",
+          "club": "Vancouver Whitecaps FC (CAN)",
+          "height_cm": 166,
+          "caps": 37,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ROMERO GAMARRA Alejandro Alejandro SebastianROMERO GAMARRA R. GAMARRA",
+          "dob": "11/01/1995",
+          "club": "Al Ain FC (UAE)",
+          "height_cm": 165,
+          "caps": 35,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "ARCE Alex Alex AdrianARCE BARRIOSARCE",
+          "dob": "16/06/1995",
+          "club": "CS Independiente Rivadavia (ARG)",
+          "height_cm": 188,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "OJEDA Braian Braian OscarOJEDA RODRIGUEZOJEDA",
+          "dob": "27/06/2000",
+          "club": "Orlando City SC (USA)",
+          "height_cm": 173,
+          "caps": 18,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "AVALOS Gabriel Gabriel AVALOS STUMPFSAVALOS",
+          "dob": "09/07/1991",
+          "club": "CA Independiente (ARG)",
+          "height_cm": 185,
+          "caps": 26,
+          "goals": 2
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "PAR_GATITO",
+          "name": "Carlos Coronel",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "PAR_ROJAS_A",
+          "name": "Alberto Espinola",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "PAR_GOMEZ_M",
+          "name": "Mathias Villasanti",
+          "primaryPosition": "CDM"
+        },
+        {
+          "playerId": "PAR_LOPEZ_A",
+          "name": "Adam Bareiro",
+          "primaryPosition": "ST"
+        },
+        {
+          "playerId": "PAR_GONZALEZ_D",
+          "name": "Diego Gonzalez",
+          "primaryPosition": "CDM"
+        }
+      ]
+    },
+    {
+      "teamCode": "AUS",
+      "teamName": "Australia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 7,
+      "unmatchedOfficialPlayerCount": 19,
+      "unmatchedSeedPlayerCount": 6,
+      "officialCoachNameBlock": "POPOVIC Tony Tony POPOVIC",
+      "seedManagerName": "Tony Popovic",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "CIRCATI Alessandro Alessandro CIRCATI CIRCATI",
+          "dob": "10/10/2003",
+          "club": "Parma (ITA)",
+          "height_cm": 191,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "ITALIANO JacobJacob MichaelITALIANO ITALIANO",
+          "dob": "30/07/2001",
+          "club": "Grazer AK (AUT)",
+          "height_cm": 177,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BOS Jordan Jordan JacobBOS BOS",
+          "dob": "29/10/2002",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 180,
+          "caps": 30,
+          "goals": 4
+        },
+        {
+          "position": "DF",
+          "name_block": "GERIA Jason Jason Kato GERIA GERIA",
+          "dob": "10/05/1993",
+          "club": "Albirex Niigata (JPN)",
+          "height_cm": 181,
+          "caps": 16,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "LECKIE MathewMathew AllanLECKIE LECKIE",
+          "dob": "04/02/1991",
+          "club": "Melbourne City FC (AUS)",
+          "height_cm": 181,
+          "caps": 82,
+          "goals": 14
+        },
+        {
+          "position": "MF",
+          "name_block": "METCALFE ConnorConnor IsaacMETCALFE METCALFE",
+          "dob": "05/11/1999",
+          "club": "FC St. Pauli (GER)",
+          "height_cm": 183,
+          "caps": 39,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "TOURE MohamedMohamed ATOURE TOURE",
+          "dob": "26/03/2004",
+          "club": "Norwich City FC (ENG)",
+          "height_cm": 186,
+          "caps": 12,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "HRUSTIC AjdinAjdin HRUSTICHRUSTIC",
+          "dob": "05/07/1996",
+          "club": "SC Heracles Almelo (NED)",
+          "height_cm": 180,
+          "caps": 38,
+          "goals": 3
+        },
+        {
+          "position": "GK",
+          "name_block": "IZZO Paul Paul David IZZO IZZO",
+          "dob": "06/01/1995",
+          "club": "Randers FC (DEN)",
+          "height_cm": 184,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ONEILL AidenAiden ConnorO'NEILL O'NEILL",
+          "dob": "04/07/1998",
+          "club": "New York City FC (USA)",
+          "height_cm": 180,
+          "caps": 34,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "DEVLIN Cameron Cameron Peter DEVLIN DEVLIN",
+          "dob": "07/06/1998",
+          "club": "Heart Of Midlothian FC (SCO)",
+          "height_cm": 170,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "TREWIN KaiKai Clifton TREWIN TREWIN",
+          "dob": "18/05/2001",
+          "club": "New York City FC (USA)",
+          "height_cm": 183,
+          "caps": 6,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "AUS_REDMAYNE",
+          "name": "Joe Redmayne",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "AUS_SOUQUET",
+          "name": "Kye Rowles",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "AUS_KARACIC",
+          "name": "Nathaniel Atkinson",
+          "primaryPosition": "RB"
+        },
+        {
+          "playerId": "AUS_MCGREE",
+          "name": "Riley McGree",
+          "primaryPosition": "CAM"
+        },
+        {
+          "playerId": "AUS_GOODWIN",
+          "name": "Craig Goodwin",
+          "primaryPosition": "LW"
+        },
+        {
+          "playerId": "AUS_DUKE",
+          "name": "Mitchell Duke",
+          "primaryPosition": "ST"
+        }
+      ]
+    },
+    {
+      "teamCode": "TUR",
+      "teamName": "Türkiye",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Vincenzo Montella",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "GUNOK Mert Fehmi Mert GÜNOKMERT",
+          "dob": "01/03/1989",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 196,
+          "caps": 37,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SOYUNCU CaglarÇa ğ lar SÖYÜNCÜ ÇA Ğ LAR",
+          "dob": "23/05/1996",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 185,
+          "caps": 61,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "ELMALI Eren Evren Eren ELMALI EREN ELMALI",
+          "dob": "07/07/2000",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 181,
+          "caps": 25,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "KABAK OzanOzan MuhammedKABAK OZAN KABAK",
+          "dob": "25/03/2000",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 187,
+          "caps": 31,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "YUKSEK Ismailİsma İ l YÜKSEK İSMA İ L",
+          "dob": "26/01/1999",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 183,
+          "caps": 34,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "KAHVECI Irfan Can İrfan KAHVEC İ KAHVEC İ",
+          "dob": "15/07/1995",
+          "club": "Kasımpa ş a SK (TUR)",
+          "height_cm": 180,
+          "caps": 48,
+          "goals": 6
+        },
+        {
+          "position": "DF",
+          "name_block": "MULDUR Mert Mert MÜLDÜRMERT MÜLDÜR",
+          "dob": "03/04/1999",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 184,
+          "caps": 48,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "AKGUN Yunus Yunus AKGÜN YUNUS",
+          "dob": "07/07/2000",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 173,
+          "caps": 21,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "YILMAZ Baris AlperBarı ş Alper YILMAZ BARI Ş",
+          "dob": "23/05/2000",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 186,
+          "caps": 38,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "AYHAN Kaan Kaan AYHAN KAAN",
+          "dob": "10/11/1994",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 185,
+          "caps": 74,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "AYDIN OguzO ğ uz AYDIN O Ğ UZ",
+          "dob": "27/10/2000",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 183,
+          "caps": 12,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "AKAYDIN SametSamet AKAYDIN SAMET AKAYDIN",
+          "dob": "13/03/1994",
+          "club": "Çaykur Rizespor (TUR)",
+          "height_cm": 190,
+          "caps": 19,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "TUR_YALCIN",
+          "name": "Cengiz Under",
+          "primaryPosition": "RW"
+        }
+      ]
+    },
+    {
+      "teamCode": "CUW",
+      "teamName": "Curaçao",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "ADVOCAAT Dick Dirk Nicolaas ADVOCAAT",
+      "seedManagerName": "Dick Advocaat",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "FLORANUS Sherel Sherel ConstancioFLORANUSFLORANUS",
+          "dob": "23/08/1998",
+          "club": "PEC Zwolle (NED)",
+          "height_cm": 181,
+          "caps": 30,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ROEMERATOE GodfriedGodfried ROEMERATOE ROEMERATOE",
+          "dob": "19/08/1999",
+          "club": "RKC Waalwijk (NED)",
+          "height_cm": 178,
+          "caps": 30,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "COMENENCIA Livano Livano Shyron Liomar COMENENCIA COMENENCIA",
+          "dob": "03/02/2004",
+          "club": "FC Zürich (SUI)",
+          "height_cm": 185,
+          "caps": 23,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "ANTONISSE Jeremy Jeremy Cornelis JacobusANTONISSEANTONISSE",
+          "dob": "29/03/2002",
+          "club": "AE Kifisia FC (GRE)",
+          "height_cm": 164,
+          "caps": 29,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "HANSEN SontjeMisjonne Juniffer NaigelinoHANSENHANSEN",
+          "dob": "18/05/2002",
+          "club": "Middlesbrough FC (ENG)",
+          "height_cm": 176,
+          "caps": 7,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "NOSLIN Tyrese Tyrese Yurvencey NOSLINNOSLIN",
+          "dob": "11/09/2002",
+          "club": "SC Telstar (NED)",
+          "height_cm": 182,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "MARTHA Arjany Ar'jany Jainel Archenir MARTHA MARTHA",
+          "dob": "04/09/2003",
+          "club": "Rotherham United FC (ENG)",
+          "height_cm": 180,
+          "caps": 9,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "KUWAS Brandley Brandley Mack-OlienKUWAS KUWAS",
+          "dob": "19/09/1992",
+          "club": "FC Volendam (NED)",
+          "height_cm": 181,
+          "caps": 37,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "CHONG Tahith Tahith Jose Girigorio DjorkaefCHONGCHONG",
+          "dob": "04/12/1999",
+          "club": "Shefield United FC (ENG)",
+          "height_cm": 185,
+          "caps": 9,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "FELIDA Kevin Kevin Antonio FELIDA FELIDA",
+          "dob": "11/11/1999",
+          "club": "FC Den Bosch (NED)",
+          "height_cm": 174,
+          "caps": 19,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "DOORNBUSCH Trevor Trevor Irving DOORNBUSCHDOORNBUSCH",
+          "dob": "06/07/1999",
+          "club": "VVV Venlo (NED)",
+          "height_cm": 188,
+          "caps": 8,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "CIV",
+      "teamName": "Côte D'Ivoire",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "FAE Emerse Emerse FAE Côte",
+      "seedManagerName": "Emerse Fae",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "DIOMANDE OusmaneOusmane DIOMANDEO. DIOMANDE",
+          "dob": "04/12/2003",
+          "club": "Sporting CP (POR)",
+          "height_cm": 190,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "KONAN GhislainN'clomande GhislainKONAN G. KONAN",
+          "dob": "27/12/1995",
+          "club": "Gil Vicente FC (POR)",
+          "height_cm": 176,
+          "caps": 57,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SERI Jean MichaelJean Michael SERI SERI",
+          "dob": "19/07/1991",
+          "club": "NK Maribor (SVN)",
+          "height_cm": 168,
+          "caps": 66,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "BONNY Ange-Yoan Ange-Yoan Laurent BONNY BONNY",
+          "dob": "25/10/2003",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 189,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "DIOMANDE Yan Yan DIOMANDEYAN DIOMANDE",
+          "dob": "14/11/2006",
+          "club": "RB Leipzig (GER)",
+          "height_cm": 180,
+          "caps": 14,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "WAHI Elye Sepe Elye Delmas WAHI WAHI",
+          "dob": "02/01/2003",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 181,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "OPERI Christopher Christopher Tea Domoraud OPERI OPERI",
+          "dob": "29/04/1997",
+          "club": "Ba ş ak ş ehir FK (TUR)",
+          "height_cm": 183,
+          "caps": 13,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "KONE MohamedMohamed KONE KONE",
+          "dob": "07/03/2002",
+          "club": "Sporting Charleroi (BEL)",
+          "height_cm": 186,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "AGBADOU EmmanuelBadobre Emmanuel Elysee DjedjeAGBADOUAGBADOU",
+          "dob": "17/06/1997",
+          "club": "Be ş ikta ş JK (TUR)",
+          "height_cm": 185,
+          "caps": 24,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "GUESSAND Evann Evann Ludovic VidjannagniGUESSANDGUESSAND",
+          "dob": "01/07/2001",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 188,
+          "caps": 23,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "TOURE BazoumanaBazoumana TOURE TOURE",
+          "dob": "02/03/2006",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 178,
+          "caps": 9,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "GUIAGON Parfait Parfait GUIAGON GUIAGON",
+          "dob": "22/02/2001",
+          "club": "Sporting Charleroi (BEL)",
+          "height_cm": 165,
+          "caps": 5,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "ECU",
+      "teamName": "Ecuador",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Sebastian Beccacece",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "TORRES Felix Félix Eduardo TORRES CAICEDOTORRES",
+          "dob": "11/01/1997",
+          "club": "SC Internacional (BRA)",
+          "height_cm": 187,
+          "caps": 50,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "ALCIVAR Jordy Jordy Jose ALCÍVAR MACÍAS ALCIVAR",
+          "dob": "05/08/1999",
+          "club": "Independiente Del Valle (ECU)",
+          "height_cm": 168,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "VALENCIA AnthonyAnthony LeninVALENCIA BAJAÑA A. VALENCIA",
+          "dob": "21/07/2003",
+          "club": "Royal Antwerp FC (BEL)",
+          "height_cm": 173,
+          "caps": 3,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "YEBOAH JohnJohn YEBOAH ZAMORAYEBOAH ZAMORA",
+          "dob": "23/06/2000",
+          "club": "Venezia FC (ITA)",
+          "height_cm": 170,
+          "caps": 26,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "MINDA Alan Alan Steve MINDA GARCIA MINDA",
+          "dob": "14/05/2003",
+          "club": "Atlético Mineiro (BRA)",
+          "height_cm": 174,
+          "caps": 21,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "VITE Pedro Pedro Jeampierre VITE UCA VITE",
+          "dob": "09/03/2002",
+          "club": "Pumas UNAM (MEX)",
+          "height_cm": 172,
+          "caps": 21,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "CAICEDO Jordy Jordy JosueCAICEDO MEDINA J. CAICEDO",
+          "dob": "18/11/1997",
+          "club": "CA Huracán (ARG)",
+          "height_cm": 186,
+          "caps": 23,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "CASTILLO DenilDenil DanielCASTILLO PRECIADO CASTILLO",
+          "dob": "24/03/2004",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 189,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ANGULO NilsonNilson David ANGULO RAMIREZANGULO",
+          "dob": "19/06/2003",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 184,
+          "caps": 18,
+          "goals": 3
+        },
+        {
+          "position": "GK",
+          "name_block": "VALLE GonzaloGonzalo Roberto VALLE BUSTAMANTE VALLE",
+          "dob": "28/02/1996",
+          "club": "LDU Quito (ECU)",
+          "height_cm": 186,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "AREVALO Jeremy Jeremy Alberto AREVALO MERA AREVALO",
+          "dob": "19/03/2005",
+          "club": "VfB Stuttgart (GER)",
+          "height_cm": 182,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "POROZO JacksonJackson GabrielPOROZO VERNAZA POROZO",
+          "dob": "04/08/2000",
+          "club": "Club Tijuana (MEX)",
+          "height_cm": 192,
+          "caps": 10,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "NED",
+      "teamName": "Netherlands",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "KOEMAN Ronald Ronald KOEMAN",
+      "seedManagerName": "Ronald Koeman",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "GEERTRUIDA Lutsharel Lutsharel EmilianoGEERTRUIDA GEERTRUIDA",
+          "dob": "18/07/2000",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 185,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "DE ROON Marten Marten Elco DE ROONDE ROON",
+          "dob": "29/03/1991",
+          "club": "Atalanta Bergamo (ITA)",
+          "height_cm": 186,
+          "caps": 44,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "VAN HECKE Jan Paul Jan-Paul VAN HECKEVAN HECKE",
+          "dob": "08/06/2000",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 189,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "KLUIVERT Justin Justin Dean KLUIVERT KLUIVERT",
+          "dob": "05/05/1999",
+          "club": "AFC Bournemouth (ENG)",
+          "height_cm": 173,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "WIEFFER MatsMats Henrik BerneWIEFFERWIEFFER",
+          "dob": "16/11/1999",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 189,
+          "caps": 15,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "ROEFS RobinRobin Gerardus Petrus ROEFS ROEFS",
+          "dob": "17/01/2003",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 193,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "TIL Guus Guus Berend TIL TIL",
+          "dob": "22/12/1997",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 188,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "LANG Noa Noa Noëll LANG LANG",
+          "dob": "17/06/1999",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 176,
+          "caps": 17,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "BROBBEY BrianBrian Ebenezer Adjei BROBBEYBROBBEY",
+          "dob": "01/02/2002",
+          "club": "Sunderland AFC (ENG)",
+          "height_cm": 181,
+          "caps": 16,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "KOOPMEINERS Teun Teun KOOPMEINERSKOOPMEINERS",
+          "dob": "28/02/1998",
+          "club": "Juventus FC (ITA)",
+          "height_cm": 185,
+          "caps": 32,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "SUMMERVILLE CrysencioCrysencio Jilbert Sylverio Cir SUMMERVILLESUMMERVILLE",
+          "dob": "30/10/2001",
+          "club": "West Ham United FC (ENG)",
+          "height_cm": 172,
+          "caps": 6,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "HATO Jorrel Jorrel Evan HATO HATO",
+          "dob": "07/03/2006",
+          "club": "Chelsea FC (ENG)",
+          "height_cm": 182,
+          "caps": 9,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "NED_DEVENTIMBER",
+          "name": "Jurrien Timber",
+          "primaryPosition": "RB"
+        }
+      ]
+    },
+    {
+      "teamCode": "JPN",
+      "teamName": "Japan",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 17,
+      "matchedSeedPlayerCount": 16,
+      "unmatchedOfficialPlayerCount": 10,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "MORIYASU Hajime Hajime MORIYASU",
+      "seedManagerName": "Hajime Moriyasu",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "TANIGUCHI ShogoShogo TANIGUCHITANIGUCHI",
+          "dob": "15/07/1991",
+          "club": "Sint-Truiden VV (BEL)",
+          "height_cm": 185,
+          "caps": 42,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MACHINO Shuto Shuto MACHINOMACHINO",
+          "dob": "30/09/1999",
+          "club": "Borussia Mönchengladbach (GER)",
+          "height_cm": 185,
+          "caps": 15,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "GOTO Keisuke Keisuke GOTO GOTO",
+          "dob": "03/06/2005",
+          "club": "Sint-Truiden VV (BEL)",
+          "height_cm": 191,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ITO Junya Junya ITO ITO",
+          "dob": "09/03/1993",
+          "club": "KRC Genk (BEL)",
+          "height_cm": 177,
+          "caps": 73,
+          "goals": 16
+        },
+        {
+          "position": "DF",
+          "name_block": "WATANABE Tsuyoshi Tsuyoshi WATANABE WATANABE",
+          "dob": "05/02/1997",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 184,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SUZUKI Yuito Yuito SUZUKI Y. SUZUKI",
+          "dob": "25/10/2001",
+          "club": "SC Freiburg (GER)",
+          "height_cm": 175,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "OGAWA Koki Koki OGAWA OGAWA",
+          "dob": "08/08/1997",
+          "club": "NEC Nijmegen (NED)",
+          "height_cm": 186,
+          "caps": 18,
+          "goals": 11
+        },
+        {
+          "position": "MF",
+          "name_block": "SANO KaishuKaishu SANO SANO",
+          "dob": "30/12/2000",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 176,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "SUZUKI Junnosuke Junnosuke SUZUKI J. SUZUKI",
+          "dob": "12/07/2003",
+          "club": "FC København (DEN)",
+          "height_cm": 180,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "SHIOGAI Kento Kento SHIOGAISHIOGAI",
+          "dob": "26/03/2005",
+          "club": "VfL Wolfsburg (GER)",
+          "height_cm": 180,
+          "caps": 3,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "JPN_ENDO",
+          "name": "Wataru Endo",
+          "primaryPosition": "CDM"
+        }
+      ]
+    },
+    {
+      "teamCode": "SWE",
+      "teamName": "Sweden",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "POTTER Graham Graham Stephen POTTER",
+      "seedManagerName": "Graham Potter",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "WIDELL ZETTERSTROM JacobJacob MikaelWIDELL ZETTERSTRÖMZETTERSTRÖM",
+          "dob": "11/07/1998",
+          "club": "Derby County FC (ENG)",
+          "height_cm": 197,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "LAGERBIELKE GustafGustaf JohanLAGERBIELKELAGERBIELKE",
+          "dob": "10/04/2000",
+          "club": "SC Braga (POR)",
+          "height_cm": 193,
+          "caps": 15,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "JOHANSSON HermanHerman NilsJOHANSSON H. JOHANSSON",
+          "dob": "16/10/1997",
+          "club": "FC Dallas (USA)",
+          "height_cm": 190,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "NYGREN BenjaminErik BenjaminNYGREN NYGREN",
+          "dob": "08/07/2001",
+          "club": "Celtic FC (SCO)",
+          "height_cm": 187,
+          "caps": 15,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "SEMA Ken Ken SEMA SEMA",
+          "dob": "30/09/1993",
+          "club": "Pafos FC (CYP)",
+          "height_cm": 180,
+          "caps": 33,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "KARLSTROM JesperJesper Kewe KARLSTRÖMKARLSTRÖM",
+          "dob": "21/06/1995",
+          "club": "Udinese (ITA)",
+          "height_cm": 182,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AYARI Yasin Yasin AYARI AYARI",
+          "dob": "06/10/2003",
+          "club": "Brighton & Hove Albion FC (ENG)",
+          "height_cm": 172,
+          "caps": 25,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "SMITH Eric Eric AndersSMITH SMITH",
+          "dob": "08/01/1997",
+          "club": "FC St. Pauli (GER)",
+          "height_cm": 192,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BERNHARDSSON AlexanderAlexander OlofBERNHARDSSONBERNHARDSSON",
+          "dob": "08/09/1998",
+          "club": "Holstein Kiel (GER)",
+          "height_cm": 184,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ZENELI Besfort Besfort ZENELI ZENELI",
+          "dob": "21/11/2002",
+          "club": "Royale Union Saint-Gilloise (BEL)",
+          "height_cm": 187,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "STROUD ElliotElliot KarlSTROUD STROUD",
+          "dob": "22/06/2002",
+          "club": "Mjällby AIF (SWE)",
+          "height_cm": 185,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "NILSSON GustafHåkan GustafNILSSON NILSSON",
+          "dob": "23/05/1997",
+          "club": "Club Brugge (BEL)",
+          "height_cm": 197,
+          "caps": 10,
+          "goals": 4
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "SWE_OLSSON_J",
+          "name": "Jens Cajuste",
+          "primaryPosition": "CM"
+        }
+      ]
+    },
+    {
+      "teamCode": "TUN",
+      "teamName": "Tunisia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Herve Renard",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "CHAMAKH MouhibAbdelmouhibCHAMAKH CHAMAKH",
+          "dob": "25/08/2001",
+          "club": "Club Africain (TUN)",
+          "height_cm": 189,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "AROUS AdamAdam AROUS AROUS",
+          "dob": "17/07/2004",
+          "club": "Kasımpa ş a SK (TUR)",
+          "height_cm": 188,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ACHOURI EliasMohamed Elyes ACHOURI ACHOURI",
+          "dob": "10/02/1999",
+          "club": "FC København (DEN)",
+          "height_cm": 187,
+          "caps": 33,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "SAAD Elias Elias SAAD SAAD",
+          "dob": "27/12/1999",
+          "club": "Hannover 96 (GER)",
+          "height_cm": 185,
+          "caps": 17,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "MASTOURI Hazem Hazem MASTOURI MASTOURI",
+          "dob": "18/06/1997",
+          "club": "FC Dynamo Makhachkala (RUS)",
+          "height_cm": 191,
+          "caps": 20,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "GHARBI IsmaelIsmael SeifallahGHARBI GHARBI",
+          "dob": "10/04/2004",
+          "club": "FC Augsburg (GER)",
+          "height_cm": 180,
+          "caps": 20,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "BEN OUANES Mortadha Ahmed Mortadha BEN OUANES BEN OUANES",
+          "dob": "02/07/1994",
+          "club": "Kasımpa ş a SK (TUR)",
+          "height_cm": 188,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AYARI Khalil Khalil AYARI AYARI",
+          "dob": "02/02/2005",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 174,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "HADJ MAHMOUD MohamedMohamedBELHADJ MAHMOUDHADJ MAHMOUD",
+          "dob": "24/04/2000",
+          "club": "FC Lugano (SUI)",
+          "height_cm": 179,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ELLOUMI Rayan Rayan ELLOUMI ELLOUMI",
+          "dob": "17/09/2007",
+          "club": "Vancouver Whitecaps FC (CAN)",
+          "height_cm": 180,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BEN HMIDA Mohamed AmineMohamed AmineBEN HMIDA BEN HMIDA",
+          "dob": "15/12/1995",
+          "club": "Espérance De Tunisie (TUN)",
+          "height_cm": 181,
+          "caps": 16,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "NEFFATI Moutaz Moutaz NEFFATI NEFFATI",
+          "dob": "04/09/2004",
+          "club": "IFK Norrköping FK (SWE)",
+          "height_cm": 182,
+          "caps": 5,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "TUN_SAAD",
+          "name": "Elyes Saad",
+          "primaryPosition": "RW"
+        },
+        {
+          "playerId": "TUN_AYARI",
+          "name": "Kais Ayari",
+          "primaryPosition": "ST"
+        }
+      ]
+    },
+    {
+      "teamCode": "BEL",
+      "teamName": "Belgium",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 19,
+      "matchedSeedPlayerCount": 19,
+      "unmatchedOfficialPlayerCount": 7,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "GARCIA Rudi Rudi José GARCIA",
+      "seedManagerName": "Rudi Garcia",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "MECHELE Brandon Brandon ErikMECHELE MECHELE",
+          "dob": "28/01/1993",
+          "club": "Club Brugge (BEL)",
+          "height_cm": 190,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "SEYS Joaquin Joaquin RonnySEYS SEYS",
+          "dob": "28/03/2005",
+          "club": "Club Brugge (BEL)",
+          "height_cm": 178,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MOREIRA DiegoDiego Manuel JDA SILVA MOREIRAMOREIRA JR",
+          "dob": "06/08/2004",
+          "club": "RC Strasbourg (FRA)",
+          "height_cm": 179,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "VANAKEN HansHans VANAKEN VANAKEN",
+          "dob": "24/08/1992",
+          "club": "Club Brugge (BEL)",
+          "height_cm": 195,
+          "caps": 37,
+          "goals": 7
+        },
+        {
+          "position": "MF",
+          "name_block": "SAELEMAEKERS AlexisAlexis Jesse MSAELEMAEKERSSAELEMAEKERS",
+          "dob": "27/06/1999",
+          "club": "AC Milan (ITA)",
+          "height_cm": 180,
+          "caps": 26,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "NGOY Nathan Nathan NGOY NGOY",
+          "dob": "10/06/2003",
+          "club": "Lille OSC (FRA)",
+          "height_cm": 183,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "FERNANDEZ-PARDO MatiasMatias FERNANDEZ-PARDO FERNANDEZ-PARDO",
+          "dob": "03/02/2005",
+          "club": "Lille OSC (FRA)",
+          "height_cm": 188,
+          "caps": 5,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "EGY",
+      "teamName": "Egypt",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 15,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Hossam Hassan",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "HOSSAM ABDELMAGUID Hossam Abdelmegeed AbdelsalamABDELMEGEEDHOSSAM",
+          "dob": "30/04/2001",
+          "club": "Zamalek SC (EGY)",
+          "height_cm": 193,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "MOHAMED ABDELMONEIMMohamed Abdelmoneim Elsayed M AHMED M. ABDELMONIEM",
+          "dob": "01/02/1999",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 184,
+          "caps": 38,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "HAMZA ABDELKARIMHamza Mohamed Abdelkarim ESELIM ABDELKARIM",
+          "dob": "01/01/2008",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 182,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MOSTAFA ZICO Mostafa Mohamed ZakyABDELRAOUF ZICO",
+          "dob": "27/04/1997",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 179,
+          "caps": 5,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "HAISSEM HASSAN Haissem Yousry Fouad A HASSAN H. HASSAN",
+          "dob": "08/02/2002",
+          "club": "Real Oviedo (ESP)",
+          "height_cm": 175,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MOHANAD LASHIN Mohanad Mostafa Ahmed ALASHIN M. LASHIN",
+          "dob": "29/05/1996",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 186,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "NABIL DONGANabil Emad Aly ElmahdyALY DONGA",
+          "dob": "06/04/1996",
+          "club": "Al Najmah SC (KSA)",
+          "height_cm": 179,
+          "caps": 12,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MARAWAN ATTIA Marawan Attia Fahim GHALLAB M. ATTIA",
+          "dob": "01/08/1998",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 176,
+          "caps": 38,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "IBRAHIM ADELIbrahim Adel Aly MohamedHASSAN I. ADEL",
+          "dob": "23/04/2001",
+          "club": "FC Nordsjælland (DEN)",
+          "height_cm": 178,
+          "caps": 25,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "MAHMOUD SABERMahmoud Saber Abdelmohsen HABDELMOHSENM. SABER",
+          "dob": "30/07/2001",
+          "club": "ZED FC (EGY)",
+          "height_cm": 170,
+          "caps": 16,
+          "goals": 2
+        },
+        {
+          "position": "GK",
+          "name_block": "MOSTAFA SHOUBIRMostafa Ahmed Abdelaziz MohameSHOUBIRSHOUBIR",
+          "dob": "15/05/2000",
+          "club": "Al Ahly FC (EGY)",
+          "height_cm": 195,
+          "caps": 13,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "TAREK ALAA Tarek Alaa Abdelghaffar AbdelELGEBALY T. ALAA",
+          "dob": "05/01/2002",
+          "club": "ZED FC (EGY)",
+          "height_cm": 178,
+          "caps": 3,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "EGY_SHOBEIR",
+          "name": "Mostafa Shobeir",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "EGY_ABDELMONEM",
+          "name": "Mohamed Abdelmonem",
+          "primaryPosition": "CB"
+        }
+      ]
+    },
+    {
+      "teamCode": "IRN",
+      "teamName": "IR Iran",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 17,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 5,
+      "officialCoachNameBlock": "GHALEHNOY Amir Ardeshir GHALEHNOY IR",
+      "seedManagerName": "Amir Ghalenoei",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "HAJISAFI EhsanEhsan HAJI SAFI E. HAJISAFI",
+          "dob": "25/02/1990",
+          "club": "Sepahan SC (IRN)",
+          "height_cm": 178,
+          "caps": 148,
+          "goals": 7
+        },
+        {
+          "position": "MF",
+          "name_block": "MOHEBBI MohammadMohammadMOHEBBI M. MOHEBBI",
+          "dob": "20/12/1998",
+          "club": "FC Rostov (RUS)",
+          "height_cm": 187,
+          "caps": 40,
+          "goals": 14
+        },
+        {
+          "position": "FW",
+          "name_block": "GHAYEDI MehdiMehdi GHAYEDI MEHDI GHAYEDI",
+          "dob": "05/12/1998",
+          "club": "Al Nasr SC (UAE)",
+          "height_cm": 166,
+          "caps": 31,
+          "goals": 10
+        },
+        {
+          "position": "FW",
+          "name_block": "ALIPOUR Ali Ali ALIPOURGHARA A. ALIPOUR",
+          "dob": "11/11/1995",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 181,
+          "caps": 15,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "NIAZMAND Payam Seyedpayam NIAZMAND PAYAM",
+          "dob": "06/04/1995",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 193,
+          "caps": 15,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "KANANI HosseinMohammadhosseinKANANI ZADEGAN KANANI",
+          "dob": "23/03/1994",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 188,
+          "caps": 67,
+          "goals": 6
+        },
+        {
+          "position": "MF",
+          "name_block": "CHESHMI Roozbeh Roozbeh CHESHMI ROOZBEH",
+          "dob": "24/07/1993",
+          "club": "Esteghlal Tehran FC (IRN)",
+          "height_cm": 192,
+          "caps": 41,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "YOUSEFI Arya Arya YOUSEFI ARYA",
+          "dob": "22/04/2002",
+          "club": "Sepahan SC (IRN)",
+          "height_cm": 181,
+          "caps": 15,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "HOSSEINZADEH AmirhosseinAmirhosseinHOSSEINZADEHTAZEHGHESHLAGH AMIRHOSSEIN",
+          "dob": "30/10/2000",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 178,
+          "caps": 20,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "NEMATI Ali Ali NEMATI ALI",
+          "dob": "08/02/1996",
+          "club": "Foolad Khuzestan FC (IRN)",
+          "height_cm": 182,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "MOGHANLOO Shahriyar Shahriyar MOGHANLOO SHAHRIYAR",
+          "dob": "21/12/1994",
+          "club": "Al Ittihad Kalba SCC (UAE)",
+          "height_cm": 189,
+          "caps": 24,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "DARGAHI DennisDennis DARGAHI DARGAHI",
+          "dob": "09/01/1997",
+          "club": "Standard Liège (BEL)",
+          "height_cm": 182,
+          "caps": 0,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "IRN_ABARGHOUEI",
+          "name": "Hossein Abarghouei",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "IRN_KANAANI",
+          "name": "Hossein Kanaani",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "IRN_HAJSAFI",
+          "name": "Ehsan Hajsafi",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "IRN_CHESHMI",
+          "name": "Rouzbeh Cheshmi",
+          "primaryPosition": "CM"
+        },
+        {
+          "playerId": "IRN_GHAEDI",
+          "name": "Mehdi Ghaedi",
+          "primaryPosition": "RW"
+        }
+      ]
+    },
+    {
+      "teamCode": "NZL",
+      "teamName": "New Zealand",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 16,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": "BAZELEY Darren Darren Shaun BAZELEY New",
+      "seedManagerName": "Darren Bazeley",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "FW",
+          "name_block": "ROGERSON LoganLogan TipeneROGERSONROGERSON",
+          "dob": "28/05/1998",
+          "club": "Auckland FC (NZL)",
+          "height_cm": 182,
+          "caps": 18,
+          "goals": 2
+        },
+        {
+          "position": "GK",
+          "name_block": "PAULSEN AlexAlexander NoahPAULSEN PAULSEN",
+          "dob": "04/07/2002",
+          "club": "Lechia Gda ń sk (POL)",
+          "height_cm": 193,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SURMAN Finn Finn SURMAN SURMAN",
+          "dob": "23/09/2003",
+          "club": "Portland Timbers (USA)",
+          "height_cm": 190,
+          "caps": 22,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "BARBAROUSES Kosta Kosta BARBAROUSESBARBAROUSES",
+          "dob": "19/02/1990",
+          "club": "WS Wanderers FC (AUS)",
+          "height_cm": 171,
+          "caps": 76,
+          "goals": 10
+        },
+        {
+          "position": "FW",
+          "name_block": "WAINE Ben Benjamin Peter WAINE WAINE",
+          "dob": "11/06/2001",
+          "club": "Port Vale FC (ENG)",
+          "height_cm": 185,
+          "caps": 31,
+          "goals": 9
+        },
+        {
+          "position": "MF",
+          "name_block": "OLD Ben Benjamin Craig OLD OLD",
+          "dob": "13/08/2002",
+          "club": "AS Saint-Etienne (FRA)",
+          "height_cm": 173,
+          "caps": 27,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "McCOWATT CallumCallum WilliamMCCOWATT MCCOWATT",
+          "dob": "30/04/1999",
+          "club": "Silkeborg IF (DEN)",
+          "height_cm": 180,
+          "caps": 36,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "RANDALL JesseJesse CarmichaelRANDALL RANDALL",
+          "dob": "19/08/2002",
+          "club": "Auckland FC (NZL)",
+          "height_cm": 176,
+          "caps": 14,
+          "goals": 2
+        },
+        {
+          "position": "GK",
+          "name_block": "WOUD MichaelMichael CornelisWOUD WOUD",
+          "dob": "16/01/1999",
+          "club": "Auckland FC (NZL)",
+          "height_cm": 196,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ELLIOT Callan Callan RennieELLIOT ELLIOT",
+          "dob": "07/07/1999",
+          "club": "Auckland FC (NZL)",
+          "height_cm": 177,
+          "caps": 12,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "BAYLISS LachlanLachlan Ryan BAYLISS BAYLISS",
+          "dob": "24/07/2002",
+          "club": "Newcastle United Jets FC (AUS)",
+          "height_cm": 178,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SMITH Tommy Thomas Jefferson SMITH SMITH",
+          "dob": "31/03/1990",
+          "club": "Braintree Town FC (ENG)",
+          "height_cm": 188,
+          "caps": 57,
+          "goals": 2
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "NZL_MARTIN",
+          "name": "Oliver Sail",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "NZL_VICELICH",
+          "name": "Nathaniel Vicelich",
+          "primaryPosition": "GK"
+        }
+      ]
+    },
+    {
+      "teamCode": "ESP",
+      "teamName": "Spain",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Luis de la Fuente",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "PUBILL Marc Marc PUBILL PAGES MARC PUBILL",
+          "dob": "20/06/2003",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 191,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "GRIMALDO AlexAlejandro GRIMALDO GARCÍA GRIMALDO",
+          "dob": "20/09/1995",
+          "club": "Bayer 04 Leverkusen (GER)",
+          "height_cm": 171,
+          "caps": 14,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "GARCIA Eric Eric GARCÍA MARTRET ERIC",
+          "dob": "09/01/2001",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 183,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "LLORENTE Marcos Marcos LLORENTE MORENOM. LLORENTE",
+          "dob": "30/01/1995",
+          "club": "Atlético De Madrid (ESP)",
+          "height_cm": 183,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MERINO Mikel Mikel MERINO ZAZÓN MERINO",
+          "dob": "22/06/1996",
+          "club": "Arsenal FC (ENG)",
+          "height_cm": 188,
+          "caps": 46,
+          "goals": 10
+        },
+        {
+          "position": "FW",
+          "name_block": "TORRES Ferran Ferran TORRES GARCÍA FERRAN",
+          "dob": "29/02/2000",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 183,
+          "caps": 60,
+          "goals": 24
+        },
+        {
+          "position": "MF",
+          "name_block": "RUIZ Fabian Fabian RUIZ PEÑA FABIÁN",
+          "dob": "03/04/1996",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 188,
+          "caps": 45,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "PINO Yeremy Yeremy JesúsPINO SANTOS YEREMY",
+          "dob": "20/10/2002",
+          "club": "Crystal Palace FC (ENG)",
+          "height_cm": 174,
+          "caps": 25,
+          "goals": 4
+        },
+        {
+          "position": "GK",
+          "name_block": "GARCIA Joan Joan GARCIA PONS JOAN GARCIA",
+          "dob": "04/05/2001",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 194,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "RODRI RodrigoHERNÁNDEZ CASCANTE RODRIGO",
+          "dob": "22/06/1996",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 190,
+          "caps": 65,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "MUNOZ Victor Victor MUÑOZ VILLANUEVA VICTOR M.V.",
+          "dob": "13/07/2003",
+          "club": "CA Osasuna (ESP)",
+          "height_cm": 173,
+          "caps": 2,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "IGLESIAS BorjaBorja IGLESIAS QUINTÁS B. IGLESIAS",
+          "dob": "17/01/1993",
+          "club": "RC Celta Vigo (ESP)",
+          "height_cm": 187,
+          "caps": 8,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "CPV",
+      "teamName": "Cabo Verde",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 11,
+      "unmatchedOfficialPlayerCount": 15,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": "BUBISTA Pedro LEITÃO BRITO Cabo",
+      "seedManagerName": "Pedro \"Bubista\" Brito",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "MF",
+          "name_block": "JOVANE CABRALJovane Eduardo BORGES CABRALJOVANE",
+          "dob": "14/06/1998",
+          "club": "CF Estrela Da Amadora (POR)",
+          "height_cm": 174,
+          "caps": 30,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "JOAO PAULO João Paulo MOREIRA FERNANDES JOÃO PAULO",
+          "dob": "26/05/1998",
+          "club": "FC FCSB (ROU)",
+          "height_cm": 180,
+          "caps": 43,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "GILSON BENCHIMOLGilson BENCHIMOL TAVARES BENCHIMOL",
+          "dob": "29/12/2001",
+          "club": "FC Akron Tolyatti (RUS)",
+          "height_cm": 187,
+          "caps": 22,
+          "goals": 6
+        },
+        {
+          "position": "GK",
+          "name_block": "MARCIO ROSAMárcio SalomãoBRAZÃO DA ROSA MARCIO",
+          "dob": "23/02/1997",
+          "club": "PFC Montana (BUL)",
+          "height_cm": 186,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SIDNY LOPES CABRALSidny LOPES CABRALLOPES CABRAL",
+          "dob": "18/09/2002",
+          "club": "SL Benfica (POR)",
+          "height_cm": 176,
+          "caps": 13,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "LAROS DUARTE Laros MichaelD'ENCARNAÇÃO DUARTE L. DUARTE",
+          "dob": "28/02/1997",
+          "club": "Puskás Akadémia FC (HUN)",
+          "height_cm": 180,
+          "caps": 23,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "YANNICK SEMEDOJair SEMEDO MONTEIRO Y. SEMEDO",
+          "dob": "29/12/1995",
+          "club": "SC Farense (POR)",
+          "height_cm": 176,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "WILLY SEMEDOWilly JohnsonSEMEDO AFONSOSEMEDO",
+          "dob": "27/04/1994",
+          "club": "AC Omonia (CYP)",
+          "height_cm": 185,
+          "caps": 40,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "TELMO ARCANJOTelmo EmanuelGOMES ARCANJOARCANJO",
+          "dob": "21/06/2001",
+          "club": "Vitória SC (POR)",
+          "height_cm": 180,
+          "caps": 18,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "NUNO DA COSTA Nuno MiguelDA COSTA JOIA DA COSTA",
+          "dob": "10/02/1991",
+          "club": "Ba ş ak ş ehir FK (TUR)",
+          "height_cm": 182,
+          "caps": 12,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "STEVEN MOREIRASteven MOREIRA MOREIRA",
+          "dob": "13/08/1994",
+          "club": "Columbus Crew (USA)",
+          "height_cm": 178,
+          "caps": 23,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "CJ DOS SANTOS Carlos JoaquimANTUNES DOS SANTOS DOS SANTOS",
+          "dob": "24/08/2000",
+          "club": "San Diego FC (USA)",
+          "height_cm": 189,
+          "caps": 1,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "CPV_JONASANTUNES",
+          "name": "Jonas Antunes",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "CPV_PATRICKANDRADE",
+          "name": "Patrick Andrade",
+          "primaryPosition": "CDM"
+        }
+      ]
+    },
+    {
+      "teamCode": "KSA",
+      "teamName": "Saudi Arabia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 12,
+      "matchedSeedPlayerCount": 8,
+      "unmatchedOfficialPlayerCount": 18,
+      "unmatchedSeedPlayerCount": 4,
+      "officialCoachNameBlock": "DONIS Georgios Georgios DONIS",
+      "seedManagerName": "Georgios Donis",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "ALI MAJRASHI Ali Hassan MMAJRASHIMAJRASHI",
+          "dob": "02/10/1999",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 169,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ALI LAJAMI Ali Mohammed ALAJAMI LAJAMI",
+          "dob": "24/04/1996",
+          "club": "Al Hilal SC (KSA)",
+          "height_cm": 177,
+          "caps": 27,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "NASSER ALDAWSARI Nasser Essa SALDAWSARINASSER",
+          "dob": "19/12/1998",
+          "club": "Al Hilal SC (KSA)",
+          "height_cm": 178,
+          "caps": 50,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "AIMAN YAHYA Aiman Yahya Y AHMED AIMAN",
+          "dob": "14/05/2001",
+          "club": "Al Nassr FC (KSA)",
+          "height_cm": 173,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "FERAS ALBRIKANFeras Tariq N ALBRIKANFERAS",
+          "dob": "14/05/2000",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 185,
+          "caps": 75,
+          "goals": 16
+        },
+        {
+          "position": "FW",
+          "name_block": "SALEH ALSHEHRISaleh Khalid MALSHEHRIALSHEHRI",
+          "dob": "01/11/1993",
+          "club": "Al Ittihad (KSA)",
+          "height_cm": 184,
+          "caps": 59,
+          "goals": 17
+        },
+        {
+          "position": "DF",
+          "name_block": "NAWAF BU WASHL Nawaf Meshari MBU WASHL NAWAF",
+          "dob": "16/09/1999",
+          "club": "Al Nassr FC (KSA)",
+          "height_cm": 173,
+          "caps": 29,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "HASSAN KADISHHassan Kadish YMAHBUB KADISH",
+          "dob": "26/09/1992",
+          "club": "Al Ittihad (KSA)",
+          "height_cm": 179,
+          "caps": 21,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "ABDULLAH ALKHAIBARI Abdullah Mohammed HALKHAIBARIALKHAIBARI",
+          "dob": "16/08/1996",
+          "club": "Al Nassr FC (KSA)",
+          "height_cm": 175,
+          "caps": 45,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ZIYAD ALJOHANI Ziyad Mubarak E ALJOHANI ZIYAD",
+          "dob": "11/11/2001",
+          "club": "Al Ahli FC (KSA)",
+          "height_cm": 180,
+          "caps": 12,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "KHALID ALGHANNAM Khalid Essa MALGHANNAM KHALID",
+          "dob": "08/11/2000",
+          "club": "Al Ettifaq FC (KSA)",
+          "height_cm": 171,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "ALA ALHAJJI Ala Mohsen AALHAJJI ALHAJJI",
+          "dob": "03/12/1995",
+          "club": "Neom SC (KSA)",
+          "height_cm": 178,
+          "caps": 5,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "KSA_ALBULAIHI",
+          "name": "Ali Al-Bulaihi",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "KSA_YASSERALSHAHRANI",
+          "name": "Yasser Al-Shahrani",
+          "primaryPosition": "LB"
+        },
+        {
+          "playerId": "KSA_ABDULLAHALHAMDAN",
+          "name": "Abdullah Al-Hamdan",
+          "primaryPosition": "ST"
+        },
+        {
+          "playerId": "KSA_FIRASALBURAIKAN",
+          "name": "Firas Al-Buraikan",
+          "primaryPosition": "ST"
+        }
+      ]
+    },
+    {
+      "teamCode": "URU",
+      "teamName": "Uruguay",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "BIELSA Marcelo Marcelo Alberto BIELSA",
+      "seedManagerName": "Marcelo Bielsa",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "CACERES SebastianSebastián Enzo CÁCERES RAMOSS. CACERES",
+          "dob": "18/08/1999",
+          "club": "Club América (MEX)",
+          "height_cm": 180,
+          "caps": 26,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "DE LA CRUZ NicolasDiego NicolásDE LA CRUZ ARCOSAN. DE LA CRUZ",
+          "dob": "01/06/1997",
+          "club": "CR Flamengo (BRA)",
+          "height_cm": 167,
+          "caps": 37,
+          "goals": 5
+        },
+        {
+          "position": "GK",
+          "name_block": "MELE SantiagoSantiago Andres MELE CASTAÑERO S. MELE",
+          "dob": "06/09/1997",
+          "club": "CF Monterrey (MEX)",
+          "height_cm": 185,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CANOBBIO AgustinAgustin CANOBBIO A. CANOBBIO",
+          "dob": "01/10/1998",
+          "club": "Fluminense FC (BRA)",
+          "height_cm": 176,
+          "caps": 17,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "MARTINEZ EmilianoEmilianoMARTÍNEZ TORANZA E. MARTINEZ",
+          "dob": "17/08/1999",
+          "club": "SE Palmeiras (BRA)",
+          "height_cm": 184,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "VINA Matias Matías NicolasVIÑA SUSPERREGUYM. VIÑA",
+          "dob": "09/11/1997",
+          "club": "CA River Plate (ARG)",
+          "height_cm": 180,
+          "caps": 44,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "RODRIGUEZ BrianPaul BrianRODRÍGUEZ BRAVO B. RODRIGUEZ",
+          "dob": "20/05/2000",
+          "club": "Club América (MEX)",
+          "height_cm": 175,
+          "caps": 36,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "AGUIRRE RodrigoRodrigo SebastianAGUIRRE SOTO R. AGUIRRE",
+          "dob": "01/10/1994",
+          "club": "Tigres UANL (MEX)",
+          "height_cm": 182,
+          "caps": 11,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "VINAS Federico Federico SebastianVIÑAS BARBOZA F. VIÑAS",
+          "dob": "30/06/1998",
+          "club": "Real Oviedo (ESP)",
+          "height_cm": 181,
+          "caps": 14,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "PIQUEREZ JoaquinJoaquin PIQUEREZ MOREIRAJ. PIQUEREZ",
+          "dob": "24/08/1998",
+          "club": "SE Palmeiras (BRA)",
+          "height_cm": 185,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BUENO SantiagoSantiago IgnacioBUENO SCIUTTO S. BUENO",
+          "dob": "09/11/1998",
+          "club": "Wolverhampton Wanderers FC (ENG)",
+          "height_cm": 191,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SANABRIA Juan ManuelJuan ManuelSANABRIA MAGOLÉ J.M. SANABRIA",
+          "dob": "29/03/2000",
+          "club": "Real Salt Lake (USA)",
+          "height_cm": 170,
+          "caps": 8,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "SEN",
+      "teamName": "Senegal",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "THIAW Pape Pape Bouna THIAW",
+      "seedManagerName": "Pape Thiaw",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "DIOUF Yehvann Yehvann Djibril Victor DIOUF Y. DIOUF",
+          "dob": "16/11/1999",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 188,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SARR MamadouMamadou SARR SARR",
+          "dob": "29/08/2005",
+          "club": "Chelsea FC (ENG)",
+          "height_cm": 194,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SECK Abdoulaye Abdoulaye SECK SECK",
+          "dob": "04/06/1992",
+          "club": "Maccabi Haifa FC (ISR)",
+          "height_cm": 192,
+          "caps": 24,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "CISS Pathe Ismaila Pathe CISS P.I. CISS",
+          "dob": "16/03/1994",
+          "club": "Rayo Vallecano (ESP)",
+          "height_cm": 186,
+          "caps": 34,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "DIAO AssaneAssane DIAO A. DIAO",
+          "dob": "07/09/2005",
+          "club": "Como (ITA)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "DIENG BambaCheikh Ahmadou Bamba Mbacke DIENG BAMBA",
+          "dob": "23/03/2000",
+          "club": "FC Lorient (FRA)",
+          "height_cm": 178,
+          "caps": 24,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "NDIAYE CherifPape Cherif NDIAYE CHÉRIF",
+          "dob": "23/01/1996",
+          "club": "Samsunspor (TUR)",
+          "height_cm": 190,
+          "caps": 19,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "NDIAYE IlimanIliman Cheikh Baroy NDIAYE NDIAYE",
+          "dob": "06/03/2000",
+          "club": "Everton FC (ENG)",
+          "height_cm": 180,
+          "caps": 43,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "JAKOBS IsmailIsmail Joshua JAKOBS JAKOBS",
+          "dob": "17/08/1999",
+          "club": "Galatasaray SK (TUR)",
+          "height_cm": 184,
+          "caps": 33,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "MBAYE Ibrahim Ibrahim MBAYE I. MBAYE",
+          "dob": "24/01/2008",
+          "club": "Paris Saint-Germain (FRA)",
+          "height_cm": 175,
+          "caps": 14,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "NDIAYE Bara SapokoBara Sapoko NDIAYE BARA",
+          "dob": "31/12/2007",
+          "club": "FC Bayern München (GER)",
+          "height_cm": 180,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "MENDY Antoine Antoine Alpha MENDY A. MENDY",
+          "dob": "27/05/2004",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 187,
+          "caps": 7,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "SEN_DIATTA_F",
+          "name": "Formose Mendy",
+          "primaryPosition": "CB"
+        }
+      ]
+    },
+    {
+      "teamCode": "IRQ",
+      "teamName": "Iraq",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 11,
+      "unmatchedOfficialPlayerCount": 15,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": "ARNOLD Graham Graham James ARNOLD",
+      "seedManagerName": "Graham Arnold",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "FAHAD TALIB Fahad Talib RaheemRAHEEMFAHAD",
+          "dob": "21/10/1994",
+          "club": "Al Talaba SC (IRQ)",
+          "height_cm": 192,
+          "caps": 21,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "HUSSEIN ALIHussein Haydar HusseinALI HUSSEIN",
+          "dob": "01/03/2002",
+          "club": "Pogo ń Szczecin (POL)",
+          "height_cm": 182,
+          "caps": 29,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "ZAID TAHSEENZaid Tahseen Abd ZaidHANTOOSH ZAID T.",
+          "dob": "29/01/2001",
+          "club": "Pakhtakor Tashkent FK (UZB)",
+          "height_cm": 187,
+          "caps": 30,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "AKAM HASHIM Akam Hashim RahmanRAHMAN AKAM",
+          "dob": "16/08/1998",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 184,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "MUNAF YOUNUS Munaf Younus HashimAL-TEKREETI MUNAF",
+          "dob": "16/11/1996",
+          "club": "Al Shorta SC (IRQ)",
+          "height_cm": 184,
+          "caps": 35,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "YOUSSEF AMYN Youssef Wali Faeq AMYN YOUSSEF",
+          "dob": "21/08/2003",
+          "club": "AEK Larnaca FC (CYP)",
+          "height_cm": 172,
+          "caps": 28,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "IBRAHIM BAYESH Ibrahim Bayesh Kamil AL-KAABAWI IBRAHIM",
+          "dob": "01/05/2000",
+          "club": "Al Dhafra SCC (UAE)",
+          "height_cm": 180,
+          "caps": 79,
+          "goals": 8
+        },
+        {
+          "position": "FW",
+          "name_block": "AHMED QASEMAhmed Ihab AhmedAHMED AHMED Q.",
+          "dob": "12/07/2003",
+          "club": "Nashville SC (USA)",
+          "height_cm": 183,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "ALI YOUSIF Ali Yousif HashimNAJATEE ALI Y.",
+          "dob": "19/01/1996",
+          "club": "Al Talaba SC (IRQ)",
+          "height_cm": 180,
+          "caps": 8,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "AHMED MAKNAZI Ahmed Hasan MaknaziAL-DEESHAWEE AHMED H.",
+          "dob": "24/09/2001",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 183,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "KEVIN YAKOB Kevin Enkido Yakob WilliamWILLIAM K. YAKOB",
+          "dob": "10/10/2000",
+          "club": "Aarhus GF (DEN)",
+          "height_cm": 180,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AIMAR SHERAimar Hazar AnwarSHER AIMAR",
+          "dob": "20/12/2002",
+          "club": "Sarpsborg 08 FF (NOR)",
+          "height_cm": 180,
+          "caps": 8,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "IRQ_ALI_M",
+          "name": "Manaf Younis",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "IRQ_RAHMAN",
+          "name": "Ahmad Yasin",
+          "primaryPosition": "RB"
+        }
+      ]
+    },
+    {
+      "teamCode": "NOR",
+      "teamName": "Norway",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 16,
+      "matchedSeedPlayerCount": 15,
+      "unmatchedOfficialPlayerCount": 11,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "SOLBAKKEN Stale Ståle SOLBAKKEN",
+      "seedManagerName": "Stale Solbakken",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "TANGVIK SanderSander TANGVIKTANGVIK",
+          "dob": "29/11/2002",
+          "club": "Hamburger SV (GER)",
+          "height_cm": 193,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "SELVIK Egil Egil SELVIK SELVIK",
+          "dob": "30/07/1997",
+          "club": "Watford FC (ENG)",
+          "height_cm": 187,
+          "caps": 8,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "AURSNES Fredrik Fredrik AURSNESAURSNES",
+          "dob": "10/12/1995",
+          "club": "SL Benfica (POR)",
+          "height_cm": 181,
+          "caps": 26,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "BJORKAN Fredrik Andre Fredrik André BJØRKANBJØRKAN",
+          "dob": "21/08/1998",
+          "club": "FK Bodø/Glimt (NOR)",
+          "height_cm": 180,
+          "caps": 22,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "HOLMGREN PEDERSEN Marcus Marcus Holmgren PEDERSENHOLMGREN",
+          "dob": "16/07/2000",
+          "club": "Torino FC (ITA)",
+          "height_cm": 184,
+          "caps": 35,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "THORSTVEDT Kristian Kristian THORSTVEDT THORSTVEDT",
+          "dob": "13/03/1999",
+          "club": "US Sassuolo (ITA)",
+          "height_cm": 189,
+          "caps": 39,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "AASGAARD TheloThelonious Gerard AASGAARDAASGAARD",
+          "dob": "02/05/2002",
+          "club": "Rangers FC (SCO)",
+          "height_cm": 188,
+          "caps": 9,
+          "goals": 6
+        },
+        {
+          "position": "MF",
+          "name_block": "SCHJELDERUP Andreas Andreas Rædergård SCHJELDERUPSCHJELDERUP",
+          "dob": "01/06/2004",
+          "club": "SL Benfica (POR)",
+          "height_cm": 177,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "HAUGE Jens Petter Jens Petter HAUGE HAUGE",
+          "dob": "12/10/1999",
+          "club": "FK Bodø/Glimt (NOR)",
+          "height_cm": 184,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "LANGAS Sondre Sondre Klingen LANGÅSLANGÅS",
+          "dob": "02/02/2001",
+          "club": "Derby County FC (ENG)",
+          "height_cm": 190,
+          "caps": 4,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "FALCHENER HenrikHenrik Sælebakke FALCHENERFALCHENER",
+          "dob": "08/05/2003",
+          "club": "Viking Stavanger (NOR)",
+          "height_cm": 194,
+          "caps": 2,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "NOR_HEIN",
+          "name": "Andre Hansen",
+          "primaryPosition": "GK"
+        }
+      ]
+    },
+    {
+      "teamCode": "ALG",
+      "teamName": "Algeria",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "PETKOVIC Vladimir Vladimir PETKOVI Ć",
+      "seedManagerName": "Vladimir Petkovic",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "MASTIL MelvinMelvin Feycal MASTIL MASTIL",
+          "dob": "19/02/2000",
+          "club": "FC Stade Nyonnais (SUI)",
+          "height_cm": 194,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ABADA Achref Achref ABADA ABADA",
+          "dob": "15/06/1999",
+          "club": "USM Alger (ALG)",
+          "height_cm": 185,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "TOUGAI Mohamed AmineMohamed AmineTOUGAI TOUGAI",
+          "dob": "22/01/2000",
+          "club": "Espérance De Tunisie (TUN)",
+          "height_cm": 186,
+          "caps": 30,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "BELAID ZineddineZineddine BELAÏD BELAID",
+          "dob": "20/03/1999",
+          "club": "JS Kabylie (ALG)",
+          "height_cm": 186,
+          "caps": 20,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "AOUAR HoussemHoussem-Eddine ChaabaneAOUAR AOUAR",
+          "dob": "30/06/1998",
+          "club": "Al Ittihad (KSA)",
+          "height_cm": 175,
+          "caps": 25,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "HADJ MOUSSA AnisAnis HADJ MOUSSAHADJ MOUSSA",
+          "dob": "11/02/2002",
+          "club": "Feyenoord Rotterdam (NED)",
+          "height_cm": 176,
+          "caps": 17,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "BENBOUALI NadhirAhmed NadhirBENBOUALI BENBOUALI",
+          "dob": "17/04/2000",
+          "club": "Györi ETO FC (HUN)",
+          "height_cm": 190,
+          "caps": 5,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "BELGHALI Rafik Rafik BELGHALI BELGHALI",
+          "dob": "07/06/2002",
+          "club": "Hellas Verona FC (ITA)",
+          "height_cm": 180,
+          "caps": 16,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "BOULBINA Adil Adil BOULBINA BOULBINA",
+          "dob": "02/05/2003",
+          "club": "Al Duhail SC (QAT)",
+          "height_cm": 183,
+          "caps": 12,
+          "goals": 5
+        },
+        {
+          "position": "MF",
+          "name_block": "TITRAOUI Yassine Yassine M E GTITRAOUI TITRAOUI",
+          "dob": "26/07/2003",
+          "club": "Sporting Charleroi (BEL)",
+          "height_cm": 180,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "GHEDJEMIS Fares Fares GHEDJEMISGHEDJEMIS",
+          "dob": "06/09/2002",
+          "club": "Frosinone (ITA)",
+          "height_cm": 183,
+          "caps": 2,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "CHERGUI SamirSamir SophianCHERGUICHERGUI",
+          "dob": "06/02/1999",
+          "club": "Paris FC (FRA)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "AUT",
+      "teamName": "Austria",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 12,
+      "unmatchedOfficialPlayerCount": 14,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": "RANGNICK Ralf Ralf Dietrich RANGNICK",
+      "seedManagerName": "Ralf Rangnick",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "AFFENGRUBER David David LeopoldAFFENGRUBERAFFENGRUBER",
+          "dob": "19/03/2001",
+          "club": "Elche CF (ESP)",
+          "height_cm": 185,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SCHLAGER Xaver Xaver SCHLAGER XAVER",
+          "dob": "28/09/1997",
+          "club": "RB Leipzig (GER)",
+          "height_cm": 174,
+          "caps": 54,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "GRILLITSCH FlorianFlorian GRILLITSCH GRILLITSCH",
+          "dob": "07/08/1995",
+          "club": "SC Braga (POR)",
+          "height_cm": 186,
+          "caps": 60,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "WIEGELE FlorianFlorian WIEGELEWIEGELE",
+          "dob": "21/03/2001",
+          "club": "FC Viktoria Plze ň (CZE)",
+          "height_cm": 205,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "KALAJDZIC Sasa Sa š a KALAJD Ž I Ć KALAJDZIC",
+          "dob": "07/07/1997",
+          "club": "LASK Linz (AUT)",
+          "height_cm": 200,
+          "caps": 24,
+          "goals": 5
+        },
+        {
+          "position": "DF",
+          "name_block": "MWENE PhillipPhillip MWENE MWENE",
+          "dob": "29/01/1994",
+          "club": "1. FSV Mainz 05 (GER)",
+          "height_cm": 170,
+          "caps": 32,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CHUKWUEMEKA Carney Carney Chibueze CHUKWUEMEKACHUKWUEMEKA",
+          "dob": "20/10/2003",
+          "club": "Borussia Dortmund (GER)",
+          "height_cm": 187,
+          "caps": 5,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "SCHMID RomanoRomano SCHMIDSCHMID",
+          "dob": "27/01/2000",
+          "club": "SV Werder Bremen (GER)",
+          "height_cm": 168,
+          "caps": 37,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "LJUBICIC DejanDejan LJUBI Č I Ć LJUBICIC",
+          "dob": "08/10/1997",
+          "club": "FC Schalke 04 (GER)",
+          "height_cm": 187,
+          "caps": 9,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "WIMMER Patrick Patrick WIMMERWIMMER",
+          "dob": "30/05/2001",
+          "club": "VfL Wolfsburg (GER)",
+          "height_cm": 182,
+          "caps": 32,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "PRASS AlexanderAlexanderPRASS PRASS",
+          "dob": "26/05/2001",
+          "club": "TSG Hoffenheim (GER)",
+          "height_cm": 180,
+          "caps": 20,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "WANNER Paul Paul WANNER WANNER",
+          "dob": "23/12/2005",
+          "club": "PSV Eindhoven (NED)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "AUT_BAUMGARTNER",
+          "name": "Christoph Baumgartner",
+          "primaryPosition": "CAM"
+        }
+      ]
+    },
+    {
+      "teamCode": "JOR",
+      "teamName": "Jordan",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 7,
+      "unmatchedOfficialPlayerCount": 19,
+      "unmatchedSeedPlayerCount": 6,
+      "officialCoachNameBlock": "SELLAMI Jamal Jamal SELLAMI",
+      "seedManagerName": "Jamal Sellami",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "MOHAMMAD ABUHASHEESHMohammad Ali HasanABUHASHEESHABU HASHEESH",
+          "dob": "09/05/1995",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 179,
+          "caps": 57,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "HUSAM ABUDAHAB Husam Ali MohammadABUDAHAB ABU DAHAB",
+          "dob": "13/05/2000",
+          "club": "Al Faisaly SC (JOR)",
+          "height_cm": 186,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "YAZAN ALARAB Yazan Mousa MahmoudALARAB ALARAB",
+          "dob": "31/01/1996",
+          "club": "FC Seoul (KOR)",
+          "height_cm": 185,
+          "caps": 83,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "AMER JAMOUS Amer Rasem AdelJAMOUSJAMOUS",
+          "dob": "03/07/2002",
+          "club": "Al Zawra'a SC (IRQ)",
+          "height_cm": 177,
+          "caps": 20,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MOHAMMAD ABUZRAIQMohammad Faisal Yousef ABU ZRAIQABU ZRAIQ",
+          "dob": "30/12/1997",
+          "club": "Raja Casablanca (MAR)",
+          "height_cm": 170,
+          "caps": 42,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "ODEH FAKHOURY Odeh Burhan ShehadehFAKHOURY ODEH",
+          "dob": "22/11/2005",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 180,
+          "caps": 13,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "NOUR BANIATEYAH Noureddin Zaid KhaleelBANI ATEYAH BANI ATEYAH",
+          "dob": "25/01/1993",
+          "club": "Al Faisaly SC (JOR)",
+          "height_cm": 179,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "MAHMOUD ALMARDI Mahmoud Nayef Ahmad ALMARDI ALMARDI",
+          "dob": "06/10/1993",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 173,
+          "caps": 90,
+          "goals": 8
+        },
+        {
+          "position": "MF",
+          "name_block": "RAJAEI AYED Raja'ei Ayed Fadel HASAN RAJA'EI",
+          "dob": "25/07/1993",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 175,
+          "caps": 73,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "IBRAHIM SADEHIbrahim Mohammad SamiSA'DEH SA'DEH",
+          "dob": "27/04/2000",
+          "club": "Al Karma SC (IRQ)",
+          "height_cm": 175,
+          "caps": 57,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "MOHAMMAD ABUALNADI Mohammad Majed JamilABUALNADI ABU ALNADI",
+          "dob": "08/02/2001",
+          "club": "Selangor FC (MAS)",
+          "height_cm": 185,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "SALEEM OBAIDSaleem Amer SaleemOBAID SALEEM",
+          "dob": "17/01/1992",
+          "club": "Al Hussein SC (JOR)",
+          "height_cm": 187,
+          "caps": 15,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "JOR_BANIATTIAH",
+          "name": "Noor Bani Attiah",
+          "primaryPosition": "GK"
+        },
+        {
+          "playerId": "JOR_BANAWI",
+          "name": "Anas Banawi",
+          "primaryPosition": "CB"
+        },
+        {
+          "playerId": "JOR_ALDAWOUD",
+          "name": "Mohammad Al-Dawoud",
+          "primaryPosition": "CM"
+        },
+        {
+          "playerId": "JOR_SAADEH",
+          "name": "Ibrahim Saadeh",
+          "primaryPosition": "CM"
+        },
+        {
+          "playerId": "JOR_ABUZRAYQ",
+          "name": "Mohammad Abu Zrayq",
+          "primaryPosition": "ST"
+        },
+        {
+          "playerId": "JOR_FAKHOURI_O",
+          "name": "Odeh Al-Fakhouri",
+          "primaryPosition": "ST"
+        }
+      ]
+    },
+    {
+      "teamCode": "POR",
+      "teamName": "Portugal",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Roberto Martinez",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "NELSON SEMEDONélson CABRAL SEMEDON. SEMEDO",
+          "dob": "16/11/1993",
+          "club": "Fenerbahçe SK (TUR)",
+          "height_cm": 179,
+          "caps": 52,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "TOMAS ARAUJO Tomás LEMOS ARAÚJO TOMÁS A.",
+          "dob": "16/05/2002",
+          "club": "SL Benfica (POR)",
+          "height_cm": 187,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MATHEUS NUNESMatheus Luiz NUNES MATHEUS N.",
+          "dob": "27/08/1998",
+          "club": "Manchester City FC (ENG)",
+          "height_cm": 183,
+          "caps": 21,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "JOAO FELIX João FÉLIX SEQUEIRA JOÃO FÉLIX",
+          "dob": "10/11/1999",
+          "club": "Al Nassr FC (KSA)",
+          "height_cm": 179,
+          "caps": 56,
+          "goals": 12
+        },
+        {
+          "position": "GK",
+          "name_block": "JOSE SA José Pedro MALHEIRO DE SÁJOSÉ SÁ",
+          "dob": "17/01/1993",
+          "club": "Wolverhampton Wanderers FC (ENG)",
+          "height_cm": 192,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "RENATO VEIGA Renato DA PALMA VEIGA RENATO VEIGA",
+          "dob": "29/07/2003",
+          "club": "Villarreal CF (ESP)",
+          "height_cm": 188,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "FRANCISCO TRINCAO Francisco AntónioMACHADO MOTA DE CASTRO TRINCÃO TRINCÃO",
+          "dob": "29/12/1999",
+          "club": "Sporting CP (POR)",
+          "height_cm": 184,
+          "caps": 19,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "GONCALO GUEDESGonçalo ManuelGANCHINHO GUEDESG. GUEDES",
+          "dob": "29/11/1996",
+          "club": "Real Sociedad (ESP)",
+          "height_cm": 179,
+          "caps": 35,
+          "goals": 8
+        },
+        {
+          "position": "DF",
+          "name_block": "JOAO CANCELO João Pedro CAVACO CANCELO JOÃO CANCELO",
+          "dob": "27/05/1994",
+          "club": "FC Barcelona (ESP)",
+          "height_cm": 173,
+          "caps": 71,
+          "goals": 12
+        },
+        {
+          "position": "MF",
+          "name_block": "RUBEN NEVESRúben DiogoDA SILVA NEVES R. NEVES",
+          "dob": "13/03/1997",
+          "club": "Al Hilal SC (KSA)",
+          "height_cm": 183,
+          "caps": 68,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "SAMU COSTA SamuelDE ALMEIDA COSTA SAMU",
+          "dob": "27/11/2000",
+          "club": "RCD Mallorca (ESP)",
+          "height_cm": 185,
+          "caps": 7,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "FRANCISCO CONCEICAO FranciscoFERNANDES DA CONCEIÇÃO F. CONCEIÇÃO",
+          "dob": "14/12/2002",
+          "club": "Juventus FC (ITA)",
+          "height_cm": 166,
+          "caps": 19,
+          "goals": 4
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "COD",
+      "teamName": "Congo DR",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 1,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Sebastien Desabre",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "KAPUADI Steve Steve Nkanu KAPUADI KAPUADI",
+          "dob": "30/04/1998",
+          "club": "Widzew Ł ód ź (POL)",
+          "height_cm": 196,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "BATUBINSIKA DylanDylan Buduka BATUBINSIKABATUBINSIKA",
+          "dob": "15/02/1996",
+          "club": "AEL FC (GRE)",
+          "height_cm": 185,
+          "caps": 15,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "MUKAU Ngalayel Ngal’ayel MUKAU MUKAU",
+          "dob": "03/11/2004",
+          "club": "Lille OSC (FRA)",
+          "height_cm": 186,
+          "caps": 17,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MBUKU NathanaelNathanaël MBUKU MBUKU",
+          "dob": "16/03/2002",
+          "club": "Montpellier HSC (FRA)",
+          "height_cm": 170,
+          "caps": 21,
+          "goals": 2
+        },
+        {
+          "position": "FW",
+          "name_block": "CIPENGA BrianKibambe BrianCIPENGACIPENGA",
+          "dob": "11/03/1998",
+          "club": "CD Castellón (ESP)",
+          "height_cm": 172,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "KAKUTA Gael Mambenga Gaël RoméoKAKUTA KAKUTA",
+          "dob": "21/06/1991",
+          "club": "AEL FC (GRE)",
+          "height_cm": 174,
+          "caps": 31,
+          "goals": 5
+        },
+        {
+          "position": "FW",
+          "name_block": "ELIA MeschackMeschack LinaELIA MESCHACK",
+          "dob": "06/08/1997",
+          "club": "Alanyaspor (TUR)",
+          "height_cm": 173,
+          "caps": 69,
+          "goals": 12
+        },
+        {
+          "position": "MF",
+          "name_block": "TSHIBOLA Aaron Tshibola AARON TSHIBOLA",
+          "dob": "02/01/1995",
+          "club": "Kilmarnock FC (SCO)",
+          "height_cm": 184,
+          "caps": 17,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "PICKEL CharlesCharles MongindaPICKEL PICKEL",
+          "dob": "15/05/1997",
+          "club": "RCD Espanyol (ESP)",
+          "height_cm": 187,
+          "caps": 36,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MAYELE Fiston Mayele Fiston KALALA MAYELE",
+          "dob": "24/06/1994",
+          "club": "Pyramids FC (EGY)",
+          "height_cm": 185,
+          "caps": 37,
+          "goals": 6
+        },
+        {
+          "position": "GK",
+          "name_block": "EPOLO MatthieuMatthieu Luka EPOLO EPOLO",
+          "dob": "15/01/2005",
+          "club": "Standard Liège (BEL)",
+          "height_cm": 183,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "KALULU GedeonGédéon Tchingoma KyatengwaKALULU KALULU",
+          "dob": "29/08/1997",
+          "club": "Aris Limassol FC (CYP)",
+          "height_cm": 178,
+          "caps": 29,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "COD_ELIA",
+          "name": "Meshack Elia",
+          "primaryPosition": "LM"
+        }
+      ]
+    },
+    {
+      "teamCode": "UZB",
+      "teamName": "Uzbekistan",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 11,
+      "unmatchedOfficialPlayerCount": 15,
+      "unmatchedSeedPlayerCount": 2,
+      "officialCoachNameBlock": "CANNAVARO Fabio Fabio CANNAVARO",
+      "seedManagerName": "Fabio Cannavaro",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "GK",
+          "name_block": "YUSUPOV Utkir Utkir YUSUPOV YUSUPOV",
+          "dob": "04/01/1991",
+          "club": "PFC Navbahor Namangan (UZB)",
+          "height_cm": 185,
+          "caps": 46,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ALIJONOV KhojiakbarKhojiakbarALIJONOV ALIJONOV",
+          "dob": "19/04/1997",
+          "club": "Pakhtakor Tashkent FK (UZB)",
+          "height_cm": 180,
+          "caps": 54,
+          "goals": 3
+        },
+        {
+          "position": "MF",
+          "name_block": "MOZGOVOY Akmal Akmal MOZGOVOY MOZGOVOY",
+          "dob": "02/04/1999",
+          "club": "Pakhtakor Tashkent FK (UZB)",
+          "height_cm": 180,
+          "caps": 28,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "SHUKUROV Otabek Otabek SHUKUROV SHUKUROV",
+          "dob": "22/06/1996",
+          "club": "Baniyas Club (UAE)",
+          "height_cm": 183,
+          "caps": 93,
+          "goals": 10
+        },
+        {
+          "position": "MF",
+          "name_block": "ISKANDEROV JamshidJamshidISKANDEROV ISKANDEROV",
+          "dob": "16/10/1993",
+          "club": "FK Neftchi Farg'ona (UZB)",
+          "height_cm": 171,
+          "caps": 47,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "XAMROBEKOV Odiljon Odiljon XAMROBEKOV XAMROBEKOV",
+          "dob": "13/02/1996",
+          "club": "Tractor Sazi Tabriz FC (IRN)",
+          "height_cm": 180,
+          "caps": 78,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "JIYANOV RuslanbekRuslanbekJIYANOV JIYANOV",
+          "dob": "05/06/2001",
+          "club": "PFC Navbahor Namangan (UZB)",
+          "height_cm": 176,
+          "caps": 9,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "URUNOV Oston Oston URUNOV URUNOV",
+          "dob": "19/12/2000",
+          "club": "Persepolis FC (IRN)",
+          "height_cm": 181,
+          "caps": 47,
+          "goals": 10
+        },
+        {
+          "position": "DF",
+          "name_block": "ESHMURODOV Umar UmarbekESHMURODOV ESHMURODOV",
+          "dob": "30/11/1992",
+          "club": "Nasaf Qarshi FC (UZB)",
+          "height_cm": 185,
+          "caps": 40,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "ABDULLAEV AbdullaAbdulla ABDULLAEV ABDULLAEV",
+          "dob": "01/09/1997",
+          "club": "Dibba FC (UAE)",
+          "height_cm": 181,
+          "caps": 31,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "AMONOV Azizbek Azizbek AMONOV AMONOV",
+          "dob": "30/10/1997",
+          "club": "FK Dinamo Samarkand (UZB)",
+          "height_cm": 181,
+          "caps": 14,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "ESANOV Sherzod Sherzod ESANOV ESANOV",
+          "dob": "01/02/2003",
+          "club": "FK Buxoro (UZB)",
+          "height_cm": 190,
+          "caps": 2,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": [
+        {
+          "playerId": "UZB_MASHARIPOV",
+          "name": "Jaloliddin Masharipov",
+          "primaryPosition": "CAM"
+        },
+        {
+          "playerId": "UZB_HAMROBEKOV",
+          "name": "Odiljon Hamrobekov",
+          "primaryPosition": "CDM"
+        }
+      ]
+    },
+    {
+      "teamCode": "COL",
+      "teamName": "Colombia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "LORENZO Nestor Nestor Gabriel LORENZO",
+      "seedManagerName": "Nestor Lorenzo",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "LUCUMI JhonJhon JanerLUCUMI BONILLA J. LUCUMI",
+          "dob": "26/06/1998",
+          "club": "Bologna FC (ITA)",
+          "height_cm": 187,
+          "caps": 40,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "ARIAS SantiagoSantiago ARIAS NARANJO ARIAS",
+          "dob": "13/01/1992",
+          "club": "CA Independiente (ARG)",
+          "height_cm": 177,
+          "caps": 69,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CASTANO Kevin Kevin Duvan CASTAÑO GIL K. CASTAÑO",
+          "dob": "29/09/2000",
+          "club": "CA River Plate (ARG)",
+          "height_cm": 179,
+          "caps": 27,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "CARRASCAL Jorge Jorge Andres CARRASCAL GUARDO CARRASCAL",
+          "dob": "25/05/1998",
+          "club": "CR Flamengo (BRA)",
+          "height_cm": 180,
+          "caps": 25,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "PUERTA Gustavo Gustavo AdolfoPUERTA MOLANO PUERTA",
+          "dob": "23/07/2003",
+          "club": "Racing Santander (ESP)",
+          "height_cm": 173,
+          "caps": 9,
+          "goals": 1
+        },
+        {
+          "position": "MF",
+          "name_block": "PORTILLA Juan Juan CamiloPORTILLA OROZCO PORTILLA",
+          "dob": "12/09/1998",
+          "club": "Athletico Paranaense (BRA)",
+          "height_cm": 181,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "DITTA Willer Willer EmilioDITTA PEREZ W. DITTA",
+          "dob": "23/01/1998",
+          "club": "CF Cruz Azul (MEX)",
+          "height_cm": 179,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "HERNANDEZ CuchoJuan CamiloHERNANDEZ SUAREZ C. HERNANDEZ",
+          "dob": "20/04/1999",
+          "club": "Real Betis (ESP)",
+          "height_cm": 176,
+          "caps": 10,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "QUINTERO JuanJuan FernandoQUINTERO PANIAGUA QUINTERO",
+          "dob": "18/01/1993",
+          "club": "CA River Plate (ARG)",
+          "height_cm": 167,
+          "caps": 51,
+          "goals": 6
+        },
+        {
+          "position": "FW",
+          "name_block": "CAMPAZ Jaminton Jaminton Leandro CAMPAZ CAMPAZ",
+          "dob": "24/05/2000",
+          "club": "CA Rosario Central (ARG)",
+          "height_cm": 166,
+          "caps": 11,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "MACHADO Deiver Deiver MACHADO MENA MACHADO",
+          "dob": "02/09/1993",
+          "club": "FC Nantes (FRA)",
+          "height_cm": 173,
+          "caps": 16,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "MONTERO Alvaro Álvaro David MONTERO PERALESMONTERO",
+          "dob": "29/03/1995",
+          "club": "CA Vélez Sarsfield (ARG)",
+          "height_cm": 201,
+          "caps": 12,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "CRO",
+      "teamName": "Croatia",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 14,
+      "matchedSeedPlayerCount": 14,
+      "unmatchedOfficialPlayerCount": 12,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": "DALIC Zlatko Zlatko DALI Ć",
+      "seedManagerName": "Zlatko Dalic",
+      "coachMatches": true,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "PONGRACIC MarinMarin PONGRA Č I Ć PONGRA Č I Ć",
+          "dob": "11/09/1997",
+          "club": "ACF Fiorentina (ITA)",
+          "height_cm": 193,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MORO NikolaNikola MORO MORO",
+          "dob": "12/03/1998",
+          "club": "Bologna FC (ITA)",
+          "height_cm": 183,
+          "caps": 10,
+          "goals": 0
+        },
+        {
+          "position": "GK",
+          "name_block": "PANDUR Ivor Ivor PANDUR PANDUR",
+          "dob": "25/03/2000",
+          "club": "Hull City FC (ENG)",
+          "height_cm": 187,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "VLASIC NikolaNikola VLA Š I Ć VLA Š I Ć",
+          "dob": "04/10/1997",
+          "club": "Torino FC (ITA)",
+          "height_cm": 179,
+          "caps": 65,
+          "goals": 11
+        },
+        {
+          "position": "MF",
+          "name_block": "SUCIC Petar Petar SU Č I Ć P. SU Č I Ć",
+          "dob": "25/10/2003",
+          "club": "FC Internazionale Milano (ITA)",
+          "height_cm": 183,
+          "caps": 20,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "JAKIC KristijanKristijanJAKI Ć JAKI Ć",
+          "dob": "14/05/1997",
+          "club": "FC Augsburg (GER)",
+          "height_cm": 181,
+          "caps": 17,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "FRUK Toni Toni FRUK FRUK",
+          "dob": "09/03/2001",
+          "club": "HNK Rijeka (CRO)",
+          "height_cm": 177,
+          "caps": 7,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MATANOVIC IgorIgor MATANOVI Ć MATANOVI Ć",
+          "dob": "31/03/2003",
+          "club": "SC Freiburg (GER)",
+          "height_cm": 194,
+          "caps": 11,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "VUSKOVIC Luka Luka VU Š KOVI Ć VU Š KOVI Ć",
+          "dob": "24/02/2007",
+          "club": "Hamburger SV (GER)",
+          "height_cm": 193,
+          "caps": 6,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "PASALIC Marco Marco PA Š ALI Ć M. PA Š ALI Ć",
+          "dob": "14/09/2000",
+          "club": "Orlando City SC (USA)",
+          "height_cm": 177,
+          "caps": 18,
+          "goals": 1
+        },
+        {
+          "position": "DF",
+          "name_block": "ERLIC Martin Martin ERLI Ć ERLI Ć",
+          "dob": "24/01/1998",
+          "club": "FC Midtjylland (DEN)",
+          "height_cm": 192,
+          "caps": 13,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "MUSA Petar Petar MUSA MUSA",
+          "dob": "04/03/1998",
+          "club": "FC Dallas (USA)",
+          "height_cm": 190,
+          "caps": 13,
+          "goals": 2
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "GHA",
+      "teamName": "Ghana",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Carlos Queiroz",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "MF",
+          "name_block": "YIRENKYI CalebCaleb Marfo YIRENKYIYIRENKYI",
+          "dob": "15/01/2006",
+          "club": "FC Nordsjælland (DEN)",
+          "height_cm": 182,
+          "caps": 14,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "ADJETEY JonasJonas Adjei ADJETEY ADJETEY",
+          "dob": "13/12/2003",
+          "club": "VfL Wolfsburg (GER)",
+          "height_cm": 188,
+          "caps": 13,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "SIBO Kwasi Kwasi SIBO SIBO",
+          "dob": "24/06/1998",
+          "club": "Real Oviedo (ESP)",
+          "height_cm": 183,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "THOMAS-ASANTE Brandon Solomon Brandon Michael Clarke THOMAS-ASANTE ASANTE",
+          "dob": "29/12/1998",
+          "club": "Coventry City FC (ENG)",
+          "height_cm": 182,
+          "caps": 10,
+          "goals": 1
+        },
+        {
+          "position": "GK",
+          "name_block": "ANANG JosephJoseph Tetteh ANANG ANANG",
+          "dob": "08/06/2000",
+          "club": "St Patrick's Athletic FC (IRL)",
+          "height_cm": 190,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "position": "FW",
+          "name_block": "BONSU BAAH Christopher Christopher Bonsu BAAH BONSU BAAH",
+          "dob": "14/12/2004",
+          "club": "Al Qadsiah FC (KSA)",
+          "height_cm": 172,
+          "caps": 9,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "OWUSU ElishaElisha OWUSU OWUSU",
+          "dob": "07/11/1997",
+          "club": "AJ Auxerre (FRA)",
+          "height_cm": 182,
+          "caps": 22,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "BOAKYE Augustine Augustine BOAKYE BOAKYE",
+          "dob": "03/11/2000",
+          "club": "AS Saint-Etienne (FRA)",
+          "height_cm": 178,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "OPPONG Kojo Peprah Kojo Peprah OPPONGOPPONG",
+          "dob": "04/06/2004",
+          "club": "OGC Nice (FRA)",
+          "height_cm": 185,
+          "caps": 6,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "LUCKASSEN DerrickDerrick LUCKASSENLUCKASSEN",
+          "dob": "03/07/1995",
+          "club": "Pafos FC (CYP)",
+          "height_cm": 188,
+          "caps": 2,
+          "goals": 1
+        },
+        {
+          "position": "FW",
+          "name_block": "NUAMAH Ernest Ernest NuamahAPPIAH NUAMAH",
+          "dob": "01/11/2003",
+          "club": "Olympique Lyonnais (FRA)",
+          "height_cm": 178,
+          "caps": 21,
+          "goals": 4
+        },
+        {
+          "position": "FW",
+          "name_block": "ADU Prince Prince Kwabena ADU PRINCE",
+          "dob": "23/09/2003",
+          "club": "FC Viktoria Plze ň (CZE)",
+          "height_cm": 179,
+          "caps": 7,
+          "goals": 0
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    },
+    {
+      "teamCode": "PAN",
+      "teamName": "Panama",
+      "status": "compared",
+      "officialPlayerCount": 26,
+      "seedPlayerCount": 13,
+      "matchedSeedPlayerCount": 13,
+      "unmatchedOfficialPlayerCount": 13,
+      "unmatchedSeedPlayerCount": 0,
+      "officialCoachNameBlock": null,
+      "seedManagerName": "Thomas Christiansen",
+      "coachMatches": false,
+      "unmatchedOfficialPlayers": [
+        {
+          "position": "DF",
+          "name_block": "BLACKMAN CesarCesar RodolfoBLACKMAN CAMARENA BLACKMAN",
+          "dob": "02/04/1998",
+          "club": "Š K Slovan Bratislava (SVK)",
+          "height_cm": 174,
+          "caps": 42,
+          "goals": 3
+        },
+        {
+          "position": "DF",
+          "name_block": "FARINA Edgardo Edgardo IssacFARIÑA WYNTER FARIÑA",
+          "dob": "19/10/2001",
+          "club": "FC Pari Nizhny Novgorod (RUS)",
+          "height_cm": 195,
+          "caps": 18,
+          "goals": 0
+        },
+        {
+          "position": "MF",
+          "name_block": "MARTINEZ CristianCristian JesusMARTINEZ MARTÍNEZ",
+          "dob": "06/02/1997",
+          "club": "Hapoel Kiryat Shmona FC (ISR)",
+          "height_cm": 170,
+          "caps": 70,
+          "goals": 2
+        },
+        {
+          "position": "MF",
+          "name_block": "RODRIGUEZ Jose Luis Jose Luis RODRIGUEZ FRANCISJ.L. RODRÍGUEZ",
+          "dob": "19/06/1998",
+          "club": "FC Juárez (MEX)",
+          "height_cm": 180,
+          "caps": 73,
+          "goals": 8
+        },
+        {
+          "position": "FW",
+          "name_block": "RODRIGUEZ Tomas Tomas AbdielRODRIGUEZ MENA T. RODRÍGUEZ",
+          "dob": "09/03/1999",
+          "club": "Deportivo Saprissa (CRC)",
+          "height_cm": 183,
+          "caps": 15,
+          "goals": 4
+        },
+        {
+          "position": "MF",
+          "name_block": "DIAZ Ismael Ismael DIAZ DE LEONISMAEL",
+          "dob": "12/05/1997",
+          "club": "Club León (MEX)",
+          "height_cm": 184,
+          "caps": 58,
+          "goals": 17
+        },
+        {
+          "position": "GK",
+          "name_block": "SAMUDIO CesarCesar JairSAMUDIO MURILLO SAMUDIO",
+          "dob": "23/02/1994",
+          "club": "CD Marathón (HON)",
+          "height_cm": 189,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "position": "DF",
+          "name_block": "RAMOS Jiovany Jiovany Javier RAMOS DIAZ RAMOS",
+          "dob": "26/01/1997",
+          "club": "Puerto Cabello CF (VEN)",
+          "height_cm": 188,
+          "caps": 25,
+          "goals": 2
+        },
+        {
+          "position": "DF",
+          "name_block": "HARVEY CarlosCarlos MiguelHARVEY CESNEROSHARVEY",
+          "dob": "03/02/2000",
+          "club": "Minnesota United FC (USA)",
+          "height_cm": 184,
+          "caps": 31,
+          "goals": 3
+        },
+        {
+          "position": "FW",
+          "name_block": "WATERMAN CecilioCecilio AlfonsoWATERMAN RUIZ WATERMAN",
+          "dob": "13/04/1991",
+          "club": "CD Universidad De Concepción (CHI)",
+          "height_cm": 180,
+          "caps": 57,
+          "goals": 15
+        },
+        {
+          "position": "MF",
+          "name_block": "QUINTERO Alberto Alberto AbdielQUINTERO MEDINA QUINTERO",
+          "dob": "18/12/1987",
+          "club": "CD Plaza Amador (PAN)",
+          "height_cm": 165,
+          "caps": 142,
+          "goals": 7
+        },
+        {
+          "position": "FW",
+          "name_block": "LONDONO Azarias Azarías EmmanuelLONDOÑO GONZALEZ LONDOÑO",
+          "dob": "21/06/2001",
+          "club": "CD Universidad Católica (ECU)",
+          "height_cm": 185,
+          "caps": 15,
+          "goals": 1
+        }
+      ],
+      "unmatchedSeedPlayers": []
+    }
+  ]
+}
