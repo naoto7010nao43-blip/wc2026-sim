@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T14:31:02.478634+00:00",
+  "generatedAt": "2026-07-01T15:35:47.586702+00:00",
   "note": "Manual production release readiness snapshot. This report is read-only and does not run tests; use scripts/pre_release_check.ps1 for the executable verification gate.",
   "readyForManualPush": true,
   "blockers": [],
@@ -75,7 +75,7 @@
     {
       "pattern": "player_rating_diff_*.json",
       "present": true,
-      "path": "backend\\reports\\player_rating_diff_2026-07-01.json"
+      "path": "backend\\reports\\player_rating_diff_2026-07-02.json"
     },
     {
       "pattern": "rating_review_workbench_*.json",
