@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../api/client";
 import { MatchPredictionPanel } from "../components/MatchPredictionPanel";
 import { MatchupBreakdownPanel } from "../components/MatchupBreakdownPanel";
@@ -9,6 +9,9 @@ import type { DataQualitySummary, TeamSummary } from "../types/domain";
 
 export function SimulatorPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const queryHomeTeamId = searchParams.get("home")?.toUpperCase() ?? "";
+  const queryAwayTeamId = searchParams.get("away")?.toUpperCase() ?? "";
   const [teams, setTeams] = useState<TeamSummary[]>([]);
   const [homeTeamId, setHomeTeamId] = useState("");
   const [awayTeamId, setAwayTeamId] = useState("");
@@ -23,11 +26,15 @@ export function SimulatorPage() {
       const sorted = [...data].sort((a, b) => (a.group_id ?? "").localeCompare(b.group_id ?? "") || a.name.localeCompare(b.name));
       setTeams(sorted);
       if (sorted.length >= 2) {
-        setHomeTeamId(sorted[0].id);
-        setAwayTeamId(sorted[1].id);
+        const teamIds = new Set(sorted.map((team) => team.id));
+        const nextHome = teamIds.has(queryHomeTeamId) ? queryHomeTeamId : sorted[0].id;
+        const fallbackAway = sorted.find((team) => team.id !== nextHome)?.id ?? sorted[1].id;
+        const nextAway = teamIds.has(queryAwayTeamId) && queryAwayTeamId !== nextHome ? queryAwayTeamId : fallbackAway;
+        setHomeTeamId(nextHome);
+        setAwayTeamId(nextAway);
       }
     });
-  }, []);
+  }, [queryHomeTeamId, queryAwayTeamId]);
 
   useEffect(() => {
     let cancelled = false;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import { TeamBadge } from "./TeamBadge";
 import type { TournamentUpsetWatchMatch, TournamentUpsetWatchOut } from "../types/domain";
@@ -92,6 +93,12 @@ function UpsetRow({ match, rank }: { match: TournamentUpsetWatchMatch; rank: num
           対抗: <span className="font-semibold text-slate-200">{underdogLabel}</span> / xG差 {match.expected_goal_gap.toFixed(2)}
         </p>
         <p className="leading-relaxed">{match.reason_ja}</p>
+        <Link
+          to={`/simulate?home=${match.home_team_id}&away=${match.away_team_id}`}
+          className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 md:col-span-3"
+        >
+          このカードをシミュレーターで開く →
+        </Link>
       </div>
     </article>
   );
