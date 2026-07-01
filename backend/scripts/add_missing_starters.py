@@ -59,6 +59,18 @@ NEW_STARTERS = [
         "starterSource": "FourFourTwo / SI / Al Jazeera — Uruguay confirmed & predicted 2026 WC lineups",
         "starterUrl": "https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad",
     },
+    {
+        "playerId": "SCO_DOAK", "teamId": "SCO", "name": "Ben Doak", "nameJa": "ベン・ドーク",
+        "age": 20, "dateOfBirth": None, "primaryPosition": "RM", "secondaryPositions": ["RW", "LW"],
+        "heightCm": 176, "clubName": "AFC Bournemouth (ENG)", "staminaMax": 88,
+        "ea": {"eaPlayerId": "266815", "position": "RM", "overall": 71,
+               "pace": 89, "shooting": 61, "passing": 63, "dribbling": 75, "defending": 28, "physical": 60,
+               "url": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/ben-doak/266815"},
+        "startProb": 78,
+        "starterReason": "Confirmed Scotland starter at the 2026 WC: started on the right wing vs Brazil (Group C) and created several chances vs Haiti. The roster lacked a natural right winger, so the slot was wrongly auto-filled by a left-back (Kieran Tierney).",
+        "starterSource": "ESPN — Scotland vs Brazil confirmed line-ups (2026 WC Group C)",
+        "starterUrl": "https://www.espn.com/soccer/story/_/id/49152740/scotland-brazil-line-ups-world-cup-predicted-xis",
+    },
 ]
 
 OBSERVED = "2026-07-01"

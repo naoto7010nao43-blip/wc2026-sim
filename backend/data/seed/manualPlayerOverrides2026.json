@@ -119,5 +119,16 @@
     "overrides": {
       "startingProbability": 72
     }
+  },
+  {
+    "playerId": "SCO_DOAK",
+    "name": "Ben Doak",
+    "reason": "Confirmed Scotland starter at the 2026 WC: started on the right wing vs Brazil (Group C) and created several chances vs Haiti. The roster lacked a natural right winger, so the slot was wrongly auto-filled by a left-back (Kieran Tierney).",
+    "source": "ESPN — Scotland vs Brazil confirmed line-ups (2026 WC Group C)",
+    "sourceUrl": "https://www.espn.com/soccer/story/_/id/49152740/scotland-brazil-line-ups-world-cup-predicted-xis",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 78
+    }
   }
 ]

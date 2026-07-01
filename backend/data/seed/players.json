@@ -21780,5 +21780,25 @@
     ],
     "stamina_max": 86,
     "name_ja": "マキシミリアーノ・アラウホ"
+  },
+  {
+    "id": "SCO_DOAK",
+    "team_id": "SCO",
+    "name": "Ben Doak",
+    "age": 20,
+    "primary_position": "RM",
+    "secondary_positions": [
+      "RW",
+      "LW"
+    ],
+    "career_stats": {},
+    "market_value_eur": null,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 official player ratings (player 266815): overall 71, RM, AFC Bournemouth (ENG) — https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/ben-doak/266815",
+      "Confirmed 2026 World Cup starter — ESPN — Scotland vs Brazil confirmed line-ups (2026 WC Group C): https://www.espn.com/soccer/story/_/id/49152740/scotland-brazil-line-ups-world-cup-predicted-xis"
+    ],
+    "stamina_max": 88,
+    "name_ja": "ベン・ドーク"
   }
 ]

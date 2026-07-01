@@ -8356,5 +8356,22 @@
     "dribbling": 79,
     "defending": 68,
     "physical": 68
+  },
+  {
+    "playerId": "SCO_DOAK",
+    "name": "Ben Doak",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/ben-doak/266815",
+    "sourceDataset": "EA SPORTS FC 26 official player ratings page (fetched 2026-07-01)",
+    "eaPlayerId": "266815",
+    "position": "RM",
+    "observedDate": "2026-07-01",
+    "overall": 71,
+    "pace": 89,
+    "shooting": 61,
+    "passing": 63,
+    "dribbling": 75,
+    "defending": 28,
+    "physical": 60
   }
 ]
