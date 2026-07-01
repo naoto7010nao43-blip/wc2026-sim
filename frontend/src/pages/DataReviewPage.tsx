@@ -12,6 +12,7 @@ import { SimulationStabilityPanel } from "../components/SimulationStabilityPanel
 import { SourceProvenanceAuditPanel } from "../components/SourceProvenanceAuditPanel";
 import { SquadGapPanel } from "../components/SquadGapPanel";
 import { SubstitutionModelGapPanel } from "../components/SubstitutionModelGapPanel";
+import { SubstitutionProfileCandidatePanel } from "../components/SubstitutionProfileCandidatePanel";
 import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
   DataQualitySummary,
@@ -25,6 +26,7 @@ import type {
   SourceProvenanceAuditSummary,
   SquadGapSummary,
   SubstitutionModelGapSummary,
+  SubstitutionProfileCandidateQueueSummary,
   TeamReviewSummary,
 } from "../types/domain";
 
@@ -67,6 +69,9 @@ export function DataReviewPage() {
   const [simulationStabilityError, setSimulationStabilityError] = useState<string | null>(null);
   const [substitutionModelGap, setSubstitutionModelGap] = useState<SubstitutionModelGapSummary | null>(null);
   const [substitutionModelGapError, setSubstitutionModelGapError] = useState<string | null>(null);
+  const [substitutionProfileCandidates, setSubstitutionProfileCandidates] =
+    useState<SubstitutionProfileCandidateQueueSummary | null>(null);
+  const [substitutionProfileCandidatesError, setSubstitutionProfileCandidatesError] = useState<string | null>(null);
 
   useEffect(() => {
     api
@@ -117,6 +122,10 @@ export function DataReviewPage() {
       .getSubstitutionModelGapSummary()
       .then(setSubstitutionModelGap)
       .catch(() => setSubstitutionModelGapError("選手交代モデルのギャップ監査の読み込みに失敗しました。"));
+    api
+      .getSubstitutionProfileCandidates()
+      .then(setSubstitutionProfileCandidates)
+      .catch(() => setSubstitutionProfileCandidatesError("交代プロファイル候補の読み込みに失敗しました。"));
   }, []);
 
   return (
@@ -213,6 +222,18 @@ export function DataReviewPage() {
         )}
         {!substitutionModelGap && !substitutionModelGapError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {substitutionModelGap && <SubstitutionModelGapPanel summary={substitutionModelGap} />}
+      </section>
+
+      <section id="substitution-candidates" className="scroll-mt-4">
+        {substitutionProfileCandidatesError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {substitutionProfileCandidatesError}
+          </div>
+        )}
+        {!substitutionProfileCandidates && !substitutionProfileCandidatesError && (
+          <p className="text-sm text-slate-400">読み込み中...</p>
+        )}
+        {substitutionProfileCandidates && <SubstitutionProfileCandidatePanel summary={substitutionProfileCandidates} />}
       </section>
 
       {error && (

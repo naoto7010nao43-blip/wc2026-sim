@@ -19,6 +19,7 @@ from app.services.model_diagnostics import (
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
     get_substitution_model_gap_summary,
+    get_substitution_profile_candidate_queue_summary,
     get_team_review_summary,
 )
 
@@ -35,6 +36,7 @@ COPY_FIELDS = {
     "precisionRiskJa",
     "evidenceNeededJa",
     "recommendedNextAction",
+    "recommendedHandlingJa",
     "nonBlockingWarnings",
 }
 
@@ -101,3 +103,7 @@ def test_simulation_stability_summary_copy_is_japanese():
 
 def test_substitution_model_gap_summary_copy_is_japanese():
     _walk(get_substitution_model_gap_summary())
+
+
+def test_substitution_profile_candidate_queue_summary_copy_is_japanese():
+    _walk(get_substitution_profile_candidate_queue_summary())

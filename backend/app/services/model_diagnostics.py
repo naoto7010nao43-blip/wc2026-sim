@@ -303,6 +303,24 @@ def get_substitution_model_gap_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     return report
 
 
+def get_substitution_profile_candidate_queue_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "substitution_profile_candidate_queue_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "交代プロファイル候補キューのレポートがまだ生成されていません。",
+            "candidateCount": 0,
+            "teamCount": 0,
+            "readyTeamCount": 0,
+            "holdTeamCount": 0,
+            "signalCounts": {},
+            "teams": [],
+            "recommendationsJa": ["交代傾向候補を反映する前に、候補キューを生成してください。"],
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:

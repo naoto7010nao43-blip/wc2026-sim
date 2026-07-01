@@ -463,6 +463,33 @@ class SubstitutionModelGapSummary(BaseModel):
     summary: SubstitutionModelGapSummaryState | None
 
 
+class SubstitutionProfileCandidateTeam(BaseModel):
+    teamId: str
+    teamName: str | None
+    candidateCount: int
+    strongestSourceTier: str | None
+    confidenceBand: str | None
+    readinessScore: float
+    readinessBand: str
+    suggestedProfileSignals: list[str]
+    evidenceSummaries: list[str]
+    warnings: list[str]
+    recommendedHandlingJa: str
+
+
+class SubstitutionProfileCandidateQueueSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    candidateCount: int
+    teamCount: int
+    readyTeamCount: int
+    holdTeamCount: int
+    signalCounts: dict[str, int]
+    teams: list[SubstitutionProfileCandidateTeam]
+    recommendationsJa: list[str]
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

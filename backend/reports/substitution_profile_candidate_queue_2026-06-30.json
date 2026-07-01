@@ -1,0 +1,705 @@
+{
+  "generatedAt": "2026-06-30T15:48:15.710296+00:00",
+  "sourceReports": [
+    {
+      "name": "external_data_decision_queue",
+      "generatedAt": "2026-06-30T15:40:30.491376+00:00"
+    }
+  ],
+  "note": "交代傾向の外部調査候補を、既存の交代プロファイル機構に将来反映するための読み取り専用キューです。ここではseed、能力値、試合ロジック、予測式を変更せず、反映候補の優先度だけを整理します。",
+  "candidateCount": 37,
+  "teamCount": 37,
+  "readyTeamCount": 12,
+  "holdTeamCount": 9,
+  "signalCounts": {
+    "bench_trust": 17,
+    "first_sub_minute_bias": 24,
+    "leading_defensive_bias": 8,
+    "like_for_like_preference": 17,
+    "manual_substitution_profile_review": 2,
+    "trailing_aggression": 16
+  },
+  "teams": [
+    {
+      "teamId": "CRO",
+      "teamName": "Croatia",
+      "candidateCount": 1,
+      "strongestSourceTier": "S",
+      "confidenceBand": "medium",
+      "readinessScore": 12.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Dalic makes his first substitution around halftime-to-60th-minute when behind (58' vs England) and tends toward like-for-like swaps rather than shape changes; Modric (age 40) is substituted relatively early (58' vs England) as an explicit fatigue-management me"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "JPN",
+      "teamName": "Japan",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "high",
+      "readinessScore": 12.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Moriyasu is known for a 'super-sub' strategy, deliberately holding back attacking depth to exploit tired opponents late; used all 5 substitution slots in the World Cup opener vs Netherlands, with a substitute (Ogawa) scoring the late equalizer."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "CPV",
+      "teamName": "Cape Verde",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 11.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "leading_defensive_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Against Spain, Bubista made a triple substitution at the 61st minute mixing defensive solidity and attacking refresh; against Uruguay, late substitute Helio Varela scored the equalizer, suggesting a 'super-sub' tendency in close games."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "JOR",
+      "teamName": "Jordan",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 11.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Sellami has been criticized for very slow substitution timing: the first change against Austria came at the 87th minute, and against Algeria he delayed changes until a cooling break (during which Algeria scored from a corner); he attributed this to his own ine"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "KOR",
+      "teamName": "South Korea",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 11.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "In both World Cup matches Hong made his first double substitution around the 57th-62nd minute, consistently withdrawing Son Heung-min for fresh attackers (Hwang Hee-chan, Oh Hyeon-gyu) before further changes in the 70s-80s."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "ALG",
+      "teamName": "Algeria",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Against Jordan, Petkovic made a halftime double substitution of both holding midfielders for faster, more attacking players, simultaneously shifting the team's shape to two forwards with higher full-backs -- a clear example of a tactical/system-change substitu"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "ARG",
+      "teamName": "Argentina",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "Scaloni typically uses his first substitution around the 60th-70th minute when comfortably ahead, then makes a batch of changes in the 70s-80s; uses all 5 slots when the game is settled. He rotates the starting XI rather than fielding a fixed XI, and manages M"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "BIH",
+      "teamName": "Bosnia and Herzegovina",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Against Switzerland, Barbarez substituted Dzeko relatively early (64th minute) for fresh legs, then made a double change late (86th minute) to add running power -- a like-for-like-heavy pattern with one veteran-management exception."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "CIV",
+      "teamName": "Ivory Coast",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "leading_defensive_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Against Germany, Fae made 5 substitutions clustered around the 75th-85th minute, mixing like-for-like swaps with a type change (replacing the more defensive Singo with the more attacking Doue); reporting described this round of changes as a tactical success."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "FRA",
+      "teamName": "France",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "leading_defensive_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Deschamps is conservative with substitution timing when leading -- first change typically after 65-68 minutes, often two at once -- and prefers like-for-like positional swaps rather than shape changes, consistent with using all 5 slots in decisive wins (e.g. 5"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "MEX",
+      "teamName": "Mexico",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Aguirre makes substitutions late (typically 66+ minutes), mostly like-for-like, and uses all 5 slots in both confirmed World Cup matches; the Gimenez/Raul Jimenez striker swap has so far been a reactive in-game substitution (R. Jimenez starts, S. Gimenez/A. Go"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "TUR",
+      "teamName": "Turkey",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "profile_review_ready",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "In both World Cup group matches Montella used all 5 substitution slots, with attacking double-changes around the 60th minute and further adjustments in the 70s-80s -- a mix of like-for-like and goal-chasing tactical changes."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "出典付き候補として、交代プロファイル値を作る前のCodexレビュー対象にできます。"
+    },
+    {
+      "teamId": "SUI",
+      "teamName": "Switzerland",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 11.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Yakin made a double substitution in the 72nd minute against Bosnia at the World Cup (Manzambi + Vargas) that directly produced 3 of the team's 4 goals, described in coverage as 'golden substitutions' -- a pattern of using simultaneous attacking double-changes "
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "IRN",
+      "teamName": "Iran",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "manual_substitution_profile_review"
+      ],
+      "evidenceSummaries": [
+        "Several Iran substitutions against New Zealand at the World Cup were explicitly attributed by Ghalenoei to player cramping/fitness issues from travel rather than tactical planning -- a condition-driven substitution pattern rather than a fixed tactical timing."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "POR",
+      "teamName": "Portugal",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "Martinez tends to make his first change at halftime when reacting to a deficit (e.g. 2025 NL semifinal vs Germany), but has been criticized as slow to react in drawn/stagnant matches (last change at 83' in a 1-1 draw vs DR Congo); generally uses ~4 of 5 substi"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "USA",
+      "teamName": "United States",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "medium",
+      "readinessScore": 10.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "Pochettino has made limited rotation so far in the tournament (several players have played every minute), and made an explicitly risk-averse halftime substitution of Pulisic in the opener rather than risk aggravating a minor issue."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "BRA",
+      "teamName": "Brazil",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Ancelotti is statistically a late substituter (average ~72nd minute at his most recent club), tends toward like-for-like swaps, and rarely uses all 5 slots (3+ subs used in ~69% of matches per available stats, not a full 5)."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "COD",
+      "teamName": "DR Congo",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "leading_defensive_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Against Portugal, defensively-minded substitutions were made in the 70s-80s (like-for-like emphasis); Bakambu was substituted before the hour mark against Colombia, suggesting a tendency to manage his minutes."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "ECU",
+      "teamName": "Ecuador",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "When chasing a result Beccacece tends to change formation shape and add attacking players (Plata, Minda, Yeboah) rather than make purely like-for-like swaps; no quantified timing data was found."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "EGY",
+      "teamName": "Egypt",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust"
+      ],
+      "evidenceSummaries": [
+        "Hassan substituted Salah at the 76th minute of the World Cup opener against Belgium and Mostafa Zico around the 75th minute, but a systematic pattern of timing/count across multiple matches was not found."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "ENG",
+      "teamName": "England",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Tuchel tends to make changes later (65-72 minutes) but in clusters of 2-3 at once, often paired with a tactical shape change (e.g. inverting a full-back, converting a player into an auxiliary anchor) rather than pure like-for-like; uses all 5 substitutions in "
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "ESP",
+      "teamName": "Spain",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "De la Fuente tends to make changes later (e.g. first sub at 71' in a 0-0 draw vs Cape Verde, criticized as too slow) but moves earlier (halftime double-sub) when comfortably ahead (4-0 vs Saudi Arabia); uses all 5 slots when the match allows; manages Yamal's m"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "IRQ",
+      "teamName": "Iraq",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Against Norway, Arnold made a like-for-like double substitution at the 59th minute (Zaid Ismael for Zidane Iqbal, Ali Alhamadi for Marko Farji) -- one observed example rather than a confirmed general tendency."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "NED",
+      "teamName": "Netherlands",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "leading_defensive_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Koeman makes his main substitution wave around 60-72 minutes, mixing like-for-like swaps with some role shifts (e.g. bringing on Depay to change the attacking focal point); when leading, the team shifts toward defensive/conservative substitutions which drew cr"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "NZL",
+      "teamName": "New Zealand",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Against Egypt, New Zealand's first substitution came unusually late (66th minute, 21 minutes into the second half, after conceding the equalizer) and was criticized as too slow; none of the 4 substitutes used were forwards."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "PAR",
+      "teamName": "Paraguay",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "manual_substitution_profile_review"
+      ],
+      "evidenceSummaries": [
+        "Against Turkey, Alfaro made a forced substitution at the 28th minute (Diego Gomez injured, replaced by Damian Bobadilla) -- an injury-driven change rather than a tactical example."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "candidateCount": 1,
+      "strongestSourceTier": "A",
+      "confidenceBand": "low",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "bench_trust",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Trailing 0-3 to the Netherlands, Potter made a double substitution at the 55th-56th minute (Elanga, Bergvall, Zeneli all on within 2 minutes) -- an attacking, game-state-driven cluster of changes rather than like-for-like; used all 5 slots in that match. Based"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "URU",
+      "teamName": "Uruguay",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "medium",
+      "readinessScore": 7.0,
+      "readinessBand": "needs_more_match_evidence",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "Bielsa does not believe in 'plan B' substitutions and instead favors early, decisive changes when a player is underperforming -- confirmed by an immediate halftime substitution of a struggling Darwin Nunez in the World Cup opener, which directly preceded an at"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "BEL",
+      "teamName": "Belgium",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 5.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "No specific quantitative substitution-tendency dataset found for Garcia. Preserve Belgium substitution usage as a low-confidence future-engine research question; public tournament reporting confirms Garcia's Belgium context and late attacking substitutions/goa"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "AUS",
+      "teamName": "Australia",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Against the USA, Popovic made 3 substitutions within the first 16 minutes of the second half (including halftime), suggesting a tendency toward early, clustered, motivation/tactically-driven changes rather than late like-for-like swaps; based on limited match "
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "CAN",
+      "teamName": "Canada",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias"
+      ],
+      "evidenceSummaries": [
+        "Against Qatar, Marsch made a triple substitution around the 61st minute (Ali Ahmed, Shaffelburg, Promise David all introduced together) to change the game's momentum -- one observed example of a clustered, momentum-driven change rather than a confirmed general"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "COL",
+      "teamName": "Colombia",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "leading_defensive_bias"
+      ],
+      "evidenceSummaries": [
+        "Lorenzo is conservative with substitutions, e.g. using only 4 of 7 allowed in a friendly vs Brazil, and tends toward late defensive changes to protect a result."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czech Republic",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "bench_trust"
+      ],
+      "evidenceSummaries": [
+        "Against South Korea, Koubek substituted Schick and Pavel Sulc in the second half as they tired in the heat -- a single observed example of fatigue-driven substitution rather than a confirmed general tendency."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "GER",
+      "teamName": "Germany",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "leading_defensive_bias"
+      ],
+      "evidenceSummaries": [
+        "Nagelsmann uses halftime reviews to plan tactical/personnel changes for the second half, and is described as making reactive opponent-specific swaps (e.g. swapping a defensive midfielder for a more progressive one against high-press opponents); specific averag"
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "HAI",
+      "teamName": "Haiti",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "first_sub_minute_bias",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Against Brazil, Migne made a halftime double substitution (a tactical reset) followed by a 72nd-minute attacking change -- one observed example rather than a confirmed general tendency."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "like_for_like_preference"
+      ],
+      "evidenceSummaries": [
+        "Broos has explained at least one substitution as a deliberate tactical correction for midfield ball control (replacing a player 'losing the ball too easily') rather than a fatigue-driven like-for-like swap, suggesting a tactically-reactive substitution style."
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    },
+    {
+      "teamId": "SEN",
+      "teamName": "Senegal",
+      "candidateCount": 1,
+      "strongestSourceTier": "B",
+      "confidenceBand": "low",
+      "readinessScore": 4.0,
+      "readinessBand": "low_confidence_context",
+      "suggestedProfileSignals": [
+        "leading_defensive_bias",
+        "like_for_like_preference",
+        "trailing_aggression"
+      ],
+      "evidenceSummaries": [
+        "Thiaw tends to hold tactical adjustments until the second half, shifting to 3-4-2-1/4-2-4 when behind and to a back-five (5-4-1) when protecting a lead, suggesting system-change substitutions rather than pure like-for-like; no quantified timing/count data was "
+      ],
+      "warnings": [],
+      "recommendedHandlingJa": "まだ直接反映せず、追加の試合別根拠または出典確認を待つ候補として保留します。"
+    }
+  ],
+  "recommendationsJa": [
+    "profile_review_readyのチームから、交代タイミング・スコア状況・控え信頼度を別々にレビューしてください。",
+    "1つの試合記事だけで数値化せず、複数試合または公式記録で同じ傾向が見える場合だけ非中立値を検討してください。",
+    "反映時は試合結果分布とイベント説得力のbefore/afterを必ず比較し、勝率だけが不自然に動く変更は戻してください。"
+  ]
+}

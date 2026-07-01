@@ -24,6 +24,7 @@ from app.services.model_diagnostics import (
     get_squad_gap_summary,
     get_source_provenance_audit_summary,
     get_substitution_model_gap_summary,
+    get_substitution_profile_candidate_queue_summary,
     get_team_review_summary,
 )
 
@@ -729,5 +730,80 @@ def test_get_substitution_model_gap_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_substitution_model_gap_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_substitution_profile_candidates_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/substitution-profile-candidates")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "note", "candidateCount", "teamCount",
+        "readyTeamCount", "holdTeamCount", "signalCounts", "teams", "recommendationsJa",
+    ):
+        assert field in body
+    assert body["candidateCount"] == 37
+    assert body["teamCount"] == len(body["teams"])
+
+
+def test_substitution_profile_candidates_endpoint_keeps_real_values_unset(client):
+    response = client.get("/api/model-diagnostics/substitution-profile-candidates")
+    body = response.json()
+    assert body["readyTeamCount"] > 0
+    assert "first_sub_minute_bias" in body["signalCounts"]
+    sample = body["teams"][0]
+    assert sample["suggestedProfileSignals"]
+    assert sample["evidenceSummaries"]
+    assert "profile" in sample["readinessBand"] or sample["readinessBand"] in {
+        "needs_more_match_evidence",
+        "hold_for_source_review",
+        "low_confidence_context",
+    }
+    assert "seed" not in sample["recommendedHandlingJa"].lower()
+
+
+def test_substitution_profile_candidates_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_substitution_profile_candidate_queue_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["candidateCount"] == 0
+    assert summary["teamCount"] == 0
+    assert summary["readyTeamCount"] == 0
+    assert summary["teams"] == []
+    assert summary["note"]
+
+
+def test_get_substitution_profile_candidates_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "candidateCount": 1,
+        "teamCount": 1,
+        "readyTeamCount": 1,
+        "holdTeamCount": 0,
+        "signalCounts": {"bench_trust": 1},
+        "teams": [
+            {
+                "teamId": "JPN",
+                "teamName": "Japan",
+                "candidateCount": 1,
+                "strongestSourceTier": "A",
+                "confidenceBand": "high",
+                "readinessScore": 9.0,
+                "readinessBand": "profile_review_ready",
+                "suggestedProfileSignals": ["bench_trust"],
+                "evidenceSummaries": ["test"],
+                "warnings": [],
+                "recommendedHandlingJa": "test",
+            }
+        ],
+        "recommendationsJa": ["test"],
+    }
+    report_path = tmp_path / "substitution_profile_candidate_queue_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_substitution_profile_candidate_queue_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

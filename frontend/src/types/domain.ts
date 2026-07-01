@@ -739,6 +739,33 @@ export interface SubstitutionModelGapSummary {
   summary: SubstitutionModelGapSummaryState | null;
 }
 
+export interface SubstitutionProfileCandidateTeam {
+  teamId: string;
+  teamName: string | null;
+  candidateCount: number;
+  strongestSourceTier: string | null;
+  confidenceBand: string | null;
+  readinessScore: number;
+  readinessBand: string;
+  suggestedProfileSignals: string[];
+  evidenceSummaries: string[];
+  warnings: string[];
+  recommendedHandlingJa: string;
+}
+
+export interface SubstitutionProfileCandidateQueueSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  candidateCount: number;
+  teamCount: number;
+  readyTeamCount: number;
+  holdTeamCount: number;
+  signalCounts: Record<string, number>;
+  teams: SubstitutionProfileCandidateTeam[];
+  recommendationsJa: string[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

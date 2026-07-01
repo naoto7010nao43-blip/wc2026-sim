@@ -14,6 +14,7 @@ import type {
   SourceProvenanceAuditSummary,
   SquadGapSummary,
   SubstitutionModelGapSummary,
+  SubstitutionProfileCandidateQueueSummary,
   StandingsRow,
   TeamOut,
   TeamReviewSummary,
@@ -85,4 +86,6 @@ export const api = {
   getModelCalibrationSummary: () => getJson<ModelCalibrationSummary>("/api/model-diagnostics/model-calibration"),
   getSimulationStabilitySummary: () => getJson<SimulationStabilitySummary>("/api/model-diagnostics/simulation-stability"),
   getSubstitutionModelGapSummary: () => getJson<SubstitutionModelGapSummary>("/api/model-diagnostics/substitution-model-gap"),
+  getSubstitutionProfileCandidates: () =>
+    getJson<SubstitutionProfileCandidateQueueSummary>("/api/model-diagnostics/substitution-profile-candidates"),
 };
