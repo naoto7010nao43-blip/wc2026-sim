@@ -160,6 +160,20 @@ if ($breakdown.lineups.Count -ne 2) {
 }
 Assert-HasJapanese "BRA/ARG matchup breakdown summary" $breakdown.summary_ja
 
+$upsetWatchJson = Get-Utf8Text "$backend/api/tournament/upset-watch"
+Assert-NoMojibakeMarkers "tournament upset watch JSON" $upsetWatchJson
+$upsetWatch = $upsetWatchJson | ConvertFrom-Json
+if ($upsetWatch.match_count -ne 72) {
+    throw "Tournament upset watch match_count is unexpected: $($upsetWatch.match_count)"
+}
+if ($upsetWatch.candidates.Count -lt 8) {
+    throw "Tournament upset watch returned too few candidates: $($upsetWatch.candidates.Count)"
+}
+if (-not $upsetWatch.model_version -or $upsetWatch.model_version -notmatch "^poisson-v") {
+    throw "Tournament upset watch model_version is unexpected: $($upsetWatch.model_version)"
+}
+Assert-HasJapanese "tournament upset watch reason" (($upsetWatch.candidates | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
+
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson
 $dataQuality = $dataQualityJson | ConvertFrom-Json

@@ -80,6 +80,30 @@ export interface TournamentSimulationOut {
   disclaimer: string;
 }
 
+export interface TournamentUpsetWatchMatch {
+  group_id: string;
+  home_team_id: string;
+  home_team_name: string;
+  away_team_id: string;
+  away_team_name: string;
+  favorite_team_id: string;
+  underdog_team_id: string;
+  favorite_win_pct: number;
+  underdog_win_pct: number;
+  draw_pct: number;
+  upset_score: number;
+  expected_goal_gap: number;
+  model_version: string;
+  reason_ja: string;
+}
+
+export interface TournamentUpsetWatchOut {
+  match_count: number;
+  candidates: TournamentUpsetWatchMatch[];
+  model_version: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;

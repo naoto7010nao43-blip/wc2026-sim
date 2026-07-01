@@ -25,6 +25,7 @@ import type {
   TeamSummary,
   TournamentResult,
   TournamentSimulationOut,
+  TournamentUpsetWatchOut,
 } from "../types/domain";
 
 function defaultApiBaseUrl(): string {
@@ -79,6 +80,8 @@ export const api = {
       iterations: opts?.iterations ?? 1000,
       seed: opts?.seed ?? 0,
     }),
+  getTournamentUpsetWatch: (limit?: number) =>
+    getJson<TournamentUpsetWatchOut>(`/api/tournament/upset-watch${limit ? `?limit=${limit}` : ""}`),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getReleaseReadinessSummary: () => getJson<ReleaseReadinessSummary>("/api/model-diagnostics/release-readiness"),
   getExternalDataVerificationSummary: () =>

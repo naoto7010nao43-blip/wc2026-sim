@@ -15,6 +15,13 @@ from app.models.player import Player
 from app.models.team import Team
 from app.rating.seed_pipeline import build_player_rows, load_seed_data
 
+MOJIBAKE_MARKERS = ("邵ｺ", "郢・", "闔", "陷・", "陞・", "驍・", "隰・")
+
+
+def _assert_no_mojibake(text: str) -> None:
+    for marker in MOJIBAKE_MARKERS:
+        assert marker not in text
+
 
 @pytest.fixture()
 def client():
@@ -84,3 +91,31 @@ def test_tournament_state_reflects_a_real_run(client):
     body = state.json()
     assert body is not None
     assert len(body["matches"]["group"]) == 72
+
+
+def test_tournament_upset_watch_returns_ranked_group_candidates(client):
+    resp = client.get("/api/tournament/upset-watch")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["match_count"] == 72
+    assert len(body["candidates"]) == 12
+    assert body["model_version"].startswith("poisson-v")
+    assert "予測" in body["disclaimer"]
+    _assert_no_mojibake(body["disclaimer"])
+    scores = [row["upset_score"] for row in body["candidates"]]
+    assert scores == sorted(scores, reverse=True)
+    for row in body["candidates"]:
+        assert row["group_id"] in "ABCDEFGHIJKL"
+        assert row["favorite_team_id"] in {row["home_team_id"], row["away_team_id"]}
+        assert row["underdog_team_id"] in {row["home_team_id"], row["away_team_id"]}
+        assert row["favorite_team_id"] != row["underdog_team_id"]
+        assert row["favorite_win_pct"] >= row["underdog_win_pct"]
+        assert row["upset_score"] >= row["underdog_win_pct"]
+        assert row["reason_ja"]
+        _assert_no_mojibake(row["reason_ja"])
+
+
+def test_tournament_upset_watch_respects_limit(client):
+    resp = client.get("/api/tournament/upset-watch?limit=5")
+    assert resp.status_code == 200
+    assert len(resp.json()["candidates"]) == 5

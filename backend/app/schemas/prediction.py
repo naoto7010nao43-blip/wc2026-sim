@@ -73,3 +73,27 @@ class SimulateMonteCarloRequest(BaseModel):
     # before risking a platform request timeout.
     iterations: int = Field(default=1000, ge=100, le=3000)
     seed: int = 0
+
+
+class TournamentUpsetWatchMatchOut(BaseModel):
+    group_id: str
+    home_team_id: str
+    home_team_name: str
+    away_team_id: str
+    away_team_name: str
+    favorite_team_id: str
+    underdog_team_id: str
+    favorite_win_pct: float
+    underdog_win_pct: float
+    draw_pct: float
+    upset_score: float
+    expected_goal_gap: float
+    model_version: str
+    reason_ja: str
+
+
+class TournamentUpsetWatchOut(BaseModel):
+    match_count: int
+    candidates: list[TournamentUpsetWatchMatchOut]
+    model_version: str
+    disclaimer: str

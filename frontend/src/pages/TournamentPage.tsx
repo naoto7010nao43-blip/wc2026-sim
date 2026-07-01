@@ -4,6 +4,7 @@ import { BracketView } from "../components/BracketView";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
+import { TournamentUpsetWatchPanel } from "../components/TournamentUpsetWatchPanel";
 import type { DataQualitySummary, TournamentResult } from "../types/domain";
 
 export function TournamentPage() {
@@ -91,6 +92,7 @@ export function TournamentPage() {
       </section>
 
       <TournamentOddsPanel />
+      <TournamentUpsetWatchPanel />
 
       {restoring && <p className="text-sm text-slate-400">読み込み中...</p>}
 
