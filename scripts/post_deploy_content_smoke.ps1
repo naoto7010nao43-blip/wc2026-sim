@@ -32,6 +32,39 @@ function Get-Utf8Text {
     throw $lastError
 }
 
+function Post-Utf8Json {
+    param([string]$Url, [string]$JsonBody)
+
+    $lastError = $null
+    for ($attempt = 1; $attempt -le 3; $attempt++) {
+        $client = [System.Net.Http.HttpClient]::new()
+        try {
+            $client.Timeout = [TimeSpan]::FromSeconds($TimeoutSec)
+            $content = [System.Net.Http.StringContent]::new($JsonBody, [System.Text.Encoding]::UTF8, "application/json")
+            $response = $client.PostAsync($Url, $content).GetAwaiter().GetResult()
+            $bytes = $response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult()
+            $text = [System.Text.Encoding]::UTF8.GetString($bytes)
+            if (-not $response.IsSuccessStatusCode) {
+                throw "POST $Url returned HTTP $([int]$response.StatusCode): $text"
+            }
+            return $text
+        } catch {
+            $lastError = $_
+            if ($attempt -eq 3) {
+                throw
+            }
+            Start-Sleep -Seconds (2 * $attempt)
+        } finally {
+            if ($content) {
+                $content.Dispose()
+            }
+            $client.Dispose()
+        }
+    }
+
+    throw $lastError
+}
+
 function Resolve-Url {
     param([string]$BaseUrl, [string]$Path)
     return ([System.Uri]::new([System.Uri]::new($BaseUrl.TrimEnd("/") + "/"), $Path)).AbsoluteUri
@@ -215,6 +248,17 @@ if ($japanLineupIds -notcontains "JPN_NAKAMURA_K") {
     throw "Japan likely lineup does not include EA-sourced Keito Nakamura"
 }
 Assert-HasJapanese "Japan likely lineup player names" (($japanLineup.lineup | ForEach-Object { $_.name_ja }) -join " ")
+
+$japanBrazilMatchJson = Post-Utf8Json "$backend/api/matches/simulate" '{"home_team_id":"JPN","away_team_id":"BRA","seed":20260701,"allow_draw":true}'
+Assert-NoMojibakeMarkers "Japan/Brazil simulated match JSON" $japanBrazilMatchJson
+$japanBrazilMatch = $japanBrazilMatchJson | ConvertFrom-Json
+$japanBrazilHomeLineupIds = @($japanBrazilMatch.home_lineup | ForEach-Object { $_.player_id })
+if ($japanBrazilHomeLineupIds -notcontains "JPN_NAKAMURA_K") {
+    throw "Japan/Brazil simulated match did not field Keito Nakamura despite the likely-lineup correction"
+}
+if ($japanBrazilMatch.home_lineup.Count -ne 11 -or $japanBrazilMatch.away_lineup.Count -ne 11) {
+    throw "Japan/Brazil simulated match did not return two full starting XIs"
+}
 Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
 Write-Host ""
