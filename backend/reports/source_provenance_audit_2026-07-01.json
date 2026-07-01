@@ -1,0 +1,905 @@
+{
+  "generatedAt": "2026-07-01T17:53:02.656196+00:00",
+  "note": "能力値レビュー候補の出典リスクを確認する読み取り専用監査です。ゲーム内評価、二次情報、未来・直近大会記述を直接の能力値変更根拠にしないためのゲートです。",
+  "sourceReports": [
+    {
+      "name": "rating_decision_audit",
+      "generatedAt": "2026-06-25T06:50:52.048287+00:00"
+    }
+  ],
+  "seedSourceSummary": {
+    "seed_player_count": 678,
+    "players_with_source_risk": 69,
+    "marker_counts": {
+      "EA FC": 19,
+      "FC26": 4,
+      "Fotmob": 19,
+      "WC2026": 28,
+      "Wikipedia": 8,
+      "World Cup 2026": 2,
+      "hat trick": 1
+    },
+    "severity_counts": {
+      "high": 24,
+      "medium": 57
+    },
+    "top_risky_seed_players": [
+      {
+        "team_id": "ARG",
+        "player_id": "ARG_MESSI",
+        "name": "Lionel Messi",
+        "risk_score": 11,
+        "risk_flags": [
+          {
+            "marker": "Fotmob",
+            "severity": "medium",
+            "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+          },
+          {
+            "marker": "hat trick",
+            "severity": "high",
+            "reason_ja": "単発イベントの記述は能力値更新の根拠として過大評価しやすく、事実確認が必要です。"
+          },
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          }
+        ],
+        "source_citations": [
+          "Transfermarkt/Fotmob 2026-06",
+          "Inter Miami 2025 MLS season + WC2026 hat trick vs Algeria",
+          "Age 38 - pace declined, vision/finishing retained"
+        ]
+      },
+      {
+        "team_id": "CRO",
+        "player_id": "CRO_LIVAKOVIC",
+        "name": "Dominik Livakovic",
+        "risk_score": 10,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          },
+          {
+            "marker": "FC26",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "Transfermarkt profile 2025-26",
+          "Dinamo Zagreb HNL stats",
+          "WC2022 penalty-shootout pedigree (EA FC26 high reflexes rating used as minor signal)"
+        ]
+      },
+      {
+        "team_id": "CRO",
+        "player_id": "CRO_MODRIC",
+        "name": "Luka Modric",
+        "risk_score": 10,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          },
+          {
+            "marker": "FC26",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "Transfermarkt 2026-06 (e3.5m)",
+          "AC Milan Serie A 2025-26 stats",
+          "Age 40 - elite vision/passing retained, pace heavily declined (EA FC26 passing/vision rating used as minor signal)"
+        ]
+      },
+      {
+        "team_id": "CRO",
+        "player_id": "CRO_BATURINA",
+        "name": "Martin Baturina",
+        "risk_score": 10,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          },
+          {
+            "marker": "FC26",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "Transfermarkt 2026-06",
+          "Como Serie A 2025-26 stats",
+          "Breakout 2025-26 season form (EA FC26 rising-star rating used as minor signal)"
+        ]
+      },
+      {
+        "team_id": "CAN",
+        "player_id": "CAN_DAVID_J",
+        "name": "Jonathan David",
+        "risk_score": 8,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          },
+          {
+            "marker": "Fotmob",
+            "severity": "medium",
+            "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~81 used as Stage C calibration signal",
+          "Transfermarkt 2026-06 (e30m, May update)",
+          "Juventus 2025-26 Serie A stats (6 goals, 4 assists per FotMob)"
+        ]
+      },
+      {
+        "team_id": "SUI",
+        "player_id": "SUI_KOBEL",
+        "name": "Gregor Kobel",
+        "risk_score": 8,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          },
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~85 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "Borussia Dortmund Bundesliga 2025-26 stats",
+          "Squad reporting indicates Kobel as Switzerland's likely first-choice GK for WC2026"
+        ]
+      },
+      {
+        "team_id": "CZE",
+        "player_id": "CZE_JAROS",
+        "name": "Lukas Hornicek",
+        "risk_score": 6,
+        "risk_flags": [
+          {
+            "marker": "Fotmob",
+            "severity": "medium",
+            "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+          },
+          {
+            "marker": "Wikipedia",
+            "severity": "medium",
+            "reason_ja": "Wikipediaは入口情報としては使えますが、能力値変更には一次情報での確認が必要です。"
+          }
+        ],
+        "source_citations": [
+          "EA SPORTS FC 26 player ratings ea.com id 258936 (2026-07-01): GK overall 72, reflexes 75, handling 67, diving 72, kicking 69, positioning 75",
+          "Wikipedia Lukas Hornicek: b.13/07/2002, SC Braga (Primeira Liga), 197cm, Czech Republic senior debut 2026-05-31 vs Kosovo, 1 cap 0 goals; named to 2026 WC squad",
+          "Transfermarkt spieler/629773 / FotMob (2026): market value ~EUR 12m (range 9.4-15m across sources)"
+        ]
+      },
+      {
+        "team_id": "GHA",
+        "player_id": "GHA_FATAWU",
+        "name": "Abdul Fatawu Issahaku",
+        "risk_score": 6,
+        "risk_flags": [
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          },
+          {
+            "marker": "Wikipedia",
+            "severity": "medium",
+            "reason_ja": "Wikipediaは入口情報としては使えますが、能力値変更には一次情報での確認が必要です。"
+          }
+        ],
+        "source_citations": [
+          "Wikipedia/Transfermarkt -- Leicester City Championship 2025-26 stats",
+          "beinsports.com -- Mohammed Kudus ruled out of WC2026 (quadriceps/hamstring injuries)"
+        ]
+      },
+      {
+        "team_id": "MAR",
+        "player_id": "MAR_DIOP",
+        "name": "Issa Diop",
+        "risk_score": 6,
+        "risk_flags": [
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          },
+          {
+            "marker": "Wikipedia",
+            "severity": "medium",
+            "reason_ja": "Wikipediaは入口情報としては使えますが、能力値変更には一次情報での確認が必要です。"
+          }
+        ],
+        "source_citations": [
+          "Wikipedia -- Issa Diop; Premier League regular at Fulham",
+          "Morocco squad announcement -- FIFA-approved eligibility switch from France (March 26 2026), selected to 26-man squad (May 26 2026)",
+          "hespress.com -- Youssef En-Nesyri confirmed NOT in Mohamed Ouahbi's final 26-man WC2026 squad"
+        ]
+      },
+      {
+        "team_id": "SEN",
+        "player_id": "SEN_NIAKHATE",
+        "name": "Moussa Niakhate",
+        "risk_score": 6,
+        "risk_flags": [
+          {
+            "marker": "Fotmob",
+            "severity": "medium",
+            "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+          },
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          }
+        ],
+        "source_citations": [
+          "fotmob.com -- Olympique Lyonnais Ligue 1 2025-26 stats",
+          "worldcuppass.com / heavy.com -- confirmed in Pape Thiaw's official Senegal 26-man WC2026 squad; Abdou Diallo not named"
+        ]
+      },
+      {
+        "team_id": "TUR",
+        "player_id": "TUR_DENIZGUL",
+        "name": "Deniz Gul",
+        "risk_score": 6,
+        "risk_flags": [
+          {
+            "marker": "WC2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          },
+          {
+            "marker": "World Cup 2026",
+            "severity": "medium",
+            "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+          }
+        ],
+        "source_citations": [
+          "OneFootball -- 'Turkey gives Deniz Gul the No 9 for World Cup 2026' -- confirmed sole orthodox striker selected",
+          "FC Porto Liga Portugal 2025-26 stats",
+          "turkiyetoday.com -- Yusuf Yazici not named in Turkey's final 26-man WC2026 squad"
+        ]
+      },
+      {
+        "team_id": "CAN",
+        "player_id": "CAN_DAVIES",
+        "name": "Alphonso Davies",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~84 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "Bayern Munich 2025-26 Bundesliga stats (returning from ACL recovery)"
+        ]
+      },
+      {
+        "team_id": "CZE",
+        "player_id": "CZE_SCHICK",
+        "name": "Patrik Schick",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~81 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "Bayer Leverkusen Bundesliga 2025-26 stats (injury-prone but prolific when fit)",
+          "Czechia's all-time top scoring threat, scored the playoff final winner vs Denmark"
+        ]
+      },
+      {
+        "team_id": "JPN",
+        "player_id": "JPN_SEKO",
+        "name": "Ayumu Seko",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA SPORTS FC 26 official player ratings (player 247264): overall 68, CB",
+          "fcratings.com EA FC 26 profile (Le Havre AC, 185cm, age 26)"
+        ]
+      },
+      {
+        "team_id": "JPN",
+        "player_id": "JPN_SUZUKI_ZION",
+        "name": "Zion Suzuki",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA SPORTS FC 26 official player ratings (player 255981)",
+          "fcratings.com EA FC 26 profile (overall 74, GK)",
+          "Transfermarkt market value EUR 20.00m (2026-05-29)"
+        ]
+      },
+      {
+        "team_id": "KOR",
+        "player_id": "KOR_KIMMINJAE",
+        "name": "Kim Min-jae",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~83 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "Bayern Munich Bundesliga 2025-26 stats",
+          "Korea's defensive leader and captain candidate"
+        ]
+      },
+      {
+        "team_id": "KOR",
+        "player_id": "KOR_LEEKANGIN",
+        "name": "Lee Kang-in",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~82 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "Paris Saint-Germain Ligue 1 2025-26 stats",
+          "Korea's primary creative playmaker"
+        ]
+      },
+      {
+        "team_id": "KOR",
+        "player_id": "KOR_SONHEUNGMIN",
+        "name": "Son Heung-min",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~84 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "LAFC MLS 2025-26 stats",
+          "Korea's captain and all-time record scorer"
+        ]
+      },
+      {
+        "team_id": "MEX",
+        "player_id": "MEX_RODRIGUEZ_E",
+        "name": "Edson Alvarez",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~80 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "West Ham United Premier League 2025-26 stats",
+          "Mexico's defensive midfield anchor and vice-captain"
+        ]
+      },
+      {
+        "team_id": "MEX",
+        "player_id": "MEX_GIMENEZ",
+        "name": "Santiago Gimenez",
+        "risk_score": 5,
+        "risk_flags": [
+          {
+            "marker": "EA FC",
+            "severity": "high",
+            "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+          }
+        ],
+        "source_citations": [
+          "EA FC 26 rating ~80 used as Stage C calibration signal",
+          "Transfermarkt profile 2026-06",
+          "AC Milan Serie A 2025-26 stats",
+          "Mexico's main striker and top scoring threat"
+        ]
+      }
+    ]
+  },
+  "decisionCandidateCount": 64,
+  "clearLaterProposalCandidateCount": 4,
+  "sourceReviewCandidateCount": 13,
+  "teamCount": 8,
+  "teams": [
+    {
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "candidate_count": 7,
+      "source_risk_candidate_count": 5,
+      "decision_bucket_counts": {
+        "monitor_only": 2,
+        "source_review_first": 5
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": [
+        {
+          "player_id": "JOR_NASIB",
+          "name": "Abdallah Nasib",
+          "primary_position": "RB",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Iraqi Premier League 2025-26 stats (Al-Zawraa)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_BANAWI",
+          "name": "Anas Banawi",
+          "primary_position": "CB",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "monitor_only",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Jordan Pro League 2025-26 stats (Al-Faisaly)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_ABUTAHA",
+          "name": "Mohannad Abu Taha",
+          "primary_position": "LB",
+          "current_overall": 45,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Iraqi Premier League 2025-26 stats (Al-Quwa Al-Jawiya)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_RAWABDEH",
+          "name": "Noor Al-Rawabdeh",
+          "primary_position": "CDM",
+          "current_overall": 42,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Malaysia Super League 2025-26 stats (Selangor)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        },
+        {
+          "player_id": "JOR_ABULAILA",
+          "name": "Yazeed Abulaila",
+          "primary_position": "GK",
+          "current_overall": 47,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Jordan Pro League 2025-26 stats (Al-Hussein)",
+            "FIFA.com Jordan WC2026 squad announcement"
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "candidate_count": 10,
+      "source_risk_candidate_count": 3,
+      "decision_bucket_counts": {
+        "candidate_for_later_proposal": 2,
+        "monitor_only": 5,
+        "source_review_first": 3
+      },
+      "clear_later_proposal_candidates": [
+        {
+          "player_id": "MEX_PINEDA",
+          "name": "Orbelin Pineda",
+          "primary_position": "CAM",
+          "current_overall": 48,
+          "decision_bucket": "candidate_for_later_proposal",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 0,
+          "risk_flags": [],
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "AEK Athens/Cruz Azul 2025-26 stats"
+          ]
+        },
+        {
+          "player_id": "MEX_JIMENEZ_R",
+          "name": "Raul Jimenez",
+          "primary_position": "ST",
+          "current_overall": 51,
+          "decision_bucket": "candidate_for_later_proposal",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 0,
+          "risk_flags": [],
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "America/Fulham veteran 2025-26 stats",
+            "Mexico's experienced central striker option"
+          ]
+        }
+      ],
+      "source_review_candidates": [
+        {
+          "player_id": "MEX_RODRIGUEZ_E",
+          "name": "Edson Alvarez",
+          "primary_position": "CDM",
+          "current_overall": 54,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 5,
+          "risk_flags": [
+            {
+              "marker": "EA FC",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            }
+          ],
+          "source_citations": [
+            "EA FC 26 rating ~80 used as Stage C calibration signal",
+            "Transfermarkt profile 2026-06",
+            "West Ham United Premier League 2025-26 stats",
+            "Mexico's defensive midfield anchor and vice-captain"
+          ]
+        },
+        {
+          "player_id": "MEX_GIMENEZ",
+          "name": "Santiago Gimenez",
+          "primary_position": "ST",
+          "current_overall": 62,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 5,
+          "risk_flags": [
+            {
+              "marker": "EA FC",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            }
+          ],
+          "source_citations": [
+            "EA FC 26 rating ~80 used as Stage C calibration signal",
+            "Transfermarkt profile 2026-06",
+            "AC Milan Serie A 2025-26 stats",
+            "Mexico's main striker and top scoring threat"
+          ]
+        },
+        {
+          "player_id": "MEX_RANGEL",
+          "name": "Raul Rangel",
+          "primary_position": "GK",
+          "current_overall": 51,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt 2026-03 (EUR 6.00m)",
+            "FIFA.com -- Mexico's new starting goalkeeper, replaced injured Luis Malagon (Achilles rupture, ruled out of WC2026) ahead of the opener vs South Africa"
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "candidate_count": 5,
+      "source_risk_candidate_count": 2,
+      "decision_bucket_counts": {
+        "monitor_only": 3,
+        "source_review_first": 2
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": [
+        {
+          "player_id": "BIH_DZEKO",
+          "name": "Edin Dzeko",
+          "primary_position": "ST",
+          "current_overall": 50,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "WC2026",
+              "severity": "medium",
+              "reason_ja": "大会関連の将来・直近記述は、公式発表日と文脈を確認してから使う必要があります。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt 2026-06 (e1.5m, age 40)",
+            "Schalke 04 2. Bundesliga 2025-26 stats (6 goals in 11 apps per Transfermarkt)",
+            "Bosnia's all-time record scorer (73 international goals), led WC2026 qualifying campaign"
+          ]
+        },
+        {
+          "player_id": "BIH_BAJRAKTAREVIC",
+          "name": "Esmir Bajraktarevic",
+          "primary_position": "RW",
+          "current_overall": 54,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 3,
+          "risk_flags": [
+            {
+              "marker": "Fotmob",
+              "severity": "medium",
+              "reason_ja": "二次的なスタッツ参照のため、公式成績または別ソースで確認が必要です。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt profile 2026-06",
+            "PSV Eindhoven Eredivisie 2025-26 stats (won league/Super Cup per Fotmob bio)",
+            "Born in Wisconsin, capped by USA youth before switching to Bosnia"
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "candidate_count": 10,
+      "source_risk_candidate_count": 2,
+      "decision_bucket_counts": {
+        "candidate_for_later_proposal": 2,
+        "do_not_use_for_upgrade_proposal": 4,
+        "monitor_only": 2,
+        "source_review_first": 2
+      },
+      "clear_later_proposal_candidates": [
+        {
+          "player_id": "CRO_PASALIC",
+          "name": "Mario Pasalic",
+          "primary_position": "CM",
+          "current_overall": 51,
+          "decision_bucket": "candidate_for_later_proposal",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 0,
+          "risk_flags": [],
+          "source_citations": [
+            "Transfermarkt 2026-06",
+            "Atalanta Serie A 2025-26 stats"
+          ]
+        },
+        {
+          "player_id": "CRO_KOVACIC",
+          "name": "Mateo Kovacic",
+          "primary_position": "CM",
+          "current_overall": 56,
+          "decision_bucket": "candidate_for_later_proposal",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 0,
+          "risk_flags": [],
+          "source_citations": [
+            "Transfermarkt 2026-06",
+            "Manchester City 2025-26 PL stats"
+          ]
+        }
+      ],
+      "source_review_candidates": [
+        {
+          "player_id": "CRO_MODRIC",
+          "name": "Luka Modric",
+          "primary_position": "CM",
+          "current_overall": 49,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_upgrade",
+          "risk_score": 10,
+          "risk_flags": [
+            {
+              "marker": "EA FC",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            },
+            {
+              "marker": "FC26",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt 2026-06 (e3.5m)",
+            "AC Milan Serie A 2025-26 stats",
+            "Age 40 - elite vision/passing retained, pace heavily declined (EA FC26 passing/vision rating used as minor signal)"
+          ]
+        },
+        {
+          "player_id": "CRO_BATURINA",
+          "name": "Martin Baturina",
+          "primary_position": "CAM",
+          "current_overall": 60,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 10,
+          "risk_flags": [
+            {
+              "marker": "EA FC",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            },
+            {
+              "marker": "FC26",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt 2026-06",
+            "Como Serie A 2025-26 stats",
+            "Breakout 2025-26 season form (EA FC26 rising-star rating used as minor signal)"
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "candidate_count": 6,
+      "source_risk_candidate_count": 1,
+      "decision_bucket_counts": {
+        "monitor_only": 5,
+        "source_review_first": 1
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": [
+        {
+          "player_id": "PAR_ENCISO",
+          "name": "Julio Enciso",
+          "primary_position": "CAM",
+          "current_overall": 58,
+          "decision_bucket": "source_review_first",
+          "suggested_codex_action": "inspect_for_possible_downgrade",
+          "risk_score": 5,
+          "risk_flags": [
+            {
+              "marker": "FC26",
+              "severity": "high",
+              "reason_ja": "ゲーム内評価は実データではなく、能力値変更の直接根拠にできません。"
+            }
+          ],
+          "source_citations": [
+            "Transfermarkt profile 2025-26 (eFootball/FC26 attacking rating informed minor nudge)",
+            "Strasbourg Ligue 1 2025-26 stats",
+            "Paraguay's most talented young attacker"
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "candidate_count": 6,
+      "source_risk_candidate_count": 0,
+      "decision_bucket_counts": {
+        "monitor_only": 6
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": []
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "candidate_count": 10,
+      "source_risk_candidate_count": 0,
+      "decision_bucket_counts": {
+        "do_not_use_for_upgrade_proposal": 6,
+        "monitor_only": 4
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": []
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "candidate_count": 10,
+      "source_risk_candidate_count": 0,
+      "decision_bucket_counts": {
+        "do_not_use_for_upgrade_proposal": 9,
+        "monitor_only": 1
+      },
+      "clear_later_proposal_candidates": [],
+      "source_review_candidates": []
+    }
+  ],
+  "recommendations_ja": [
+    "能力値を変更する前に、source_review_candidatesは一次情報または複数ソースで確認する。",
+    "candidate_for_later_proposalでも、数値変更は別途ベンチマーク比較を通過するまで適用しない。",
+    "EA FC/FC26系の記述は補助メモに留め、能力値差分の直接根拠から除外する。"
+  ]
+}
