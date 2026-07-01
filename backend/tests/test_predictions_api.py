@@ -85,6 +85,29 @@ def test_match_prediction_endpoint_404s_for_unknown_team(client):
     assert resp.status_code == 404
 
 
+def test_matchup_breakdown_endpoint_returns_factor_explanations(client):
+    resp = client.get("/api/predictions/BRA/ARG/breakdown")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["home_team_id"] == "BRA"
+    assert body["away_team_id"] == "ARG"
+    assert body["summary_ja"]
+    _assert_no_mojibake(body["summary_ja"])
+    assert len(body["factors"]) >= 4
+    assert {factor["key"] for factor in body["factors"]} >= {"attack", "defense", "strength", "tactical"}
+    assert all("description_ja" in factor for factor in body["factors"])
+    assert all("model_impact" in factor for factor in body["factors"])
+    assert len(body["lineups"]) == 2
+    assert all(lineup["full_xi"] is True for lineup in body["lineups"])
+    assert all(lineup["starter_count"] == 11 for lineup in body["lineups"])
+    assert "予測" in body["disclaimer"]
+
+
+def test_matchup_breakdown_endpoint_404s_for_unknown_team(client):
+    resp = client.get("/api/predictions/BRA/NOPE/breakdown")
+    assert resp.status_code == 404
+
+
 def test_monte_carlo_endpoint_returns_stage_percentages(client):
     resp = client.post("/api/tournament/simulate-monte-carlo", json={"iterations": 100, "seed": 0})
     assert resp.status_code == 200

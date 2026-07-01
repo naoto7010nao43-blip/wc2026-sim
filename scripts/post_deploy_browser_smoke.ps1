@@ -61,7 +61,7 @@ $js = @'
     String.fromCodePoint(0x00e3),
   ];
   const requiredTextByRoute = {
-    "/simulate": ["\u512a\u52e2\u5ea6", "\u52dd\u7387\u5dee", "xG\u5dee"],
+    "/simulate": ["\u512a\u52e2\u5ea6", "\u52dd\u7387\u5dee", "xG\u5dee", "\u52dd\u6557\u8981\u56e0"],
     "/data-review": [
       "\u80fd\u529b\u5024\u5dee\u5206\u76e3\u67fb",
       "\u624b\u52d5\u88dc\u6b63",

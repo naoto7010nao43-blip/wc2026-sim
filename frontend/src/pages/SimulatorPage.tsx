@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
 import { MatchPredictionPanel } from "../components/MatchPredictionPanel";
+import { MatchupBreakdownPanel } from "../components/MatchupBreakdownPanel";
 import { TacticalMatchupPanel } from "../components/TacticalMatchupPanel";
 import { countryNameJa } from "../data/countryNamesJa";
 import type { DataQualitySummary, TeamSummary } from "../types/domain";
@@ -166,6 +167,10 @@ export function SimulatorPage() {
       </section>
 
       <TacticalMatchupPanel homeTeam={homeTeam} awayTeam={awayTeam} />
+
+      {homeTeamId && awayTeamId && homeTeamId !== awayTeamId && (
+        <MatchupBreakdownPanel homeTeamId={homeTeamId} awayTeamId={awayTeamId} />
+      )}
 
       {homeTeamId && awayTeamId && homeTeamId !== awayTeamId && (
         <MatchPredictionPanel homeTeamId={homeTeamId} awayTeamId={awayTeamId} dataQuality={dataQuality} />

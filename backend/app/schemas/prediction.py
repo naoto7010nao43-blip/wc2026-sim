@@ -18,6 +18,39 @@ class MatchPredictionOut(BaseModel):
     model_config = {"from_attributes": True}
 
 
+class MatchupBreakdownFactorOut(BaseModel):
+    key: str
+    label: str
+    home_value: float | None
+    away_value: float | None
+    edge: float
+    edge_team_id: str | None
+    model_impact: float
+    description_ja: str
+
+
+class MatchupBreakdownLineupOut(BaseModel):
+    team_id: str
+    formation: str
+    starter_count: int
+    avg_starting_probability: float | None
+    low_probability_starter_count: int
+    full_xi: bool
+
+
+class MatchupBreakdownOut(BaseModel):
+    home_team_id: str
+    away_team_id: str
+    favorite_team_id: str | None
+    summary_ja: str
+    factors: list[MatchupBreakdownFactorOut]
+    lineups: list[MatchupBreakdownLineupOut]
+    model_version: str
+    disclaimer: str
+
+    model_config = {"from_attributes": True}
+
+
 class TournamentSimulationOut(BaseModel):
     iterations: int
     model_version: str

@@ -4,6 +4,7 @@ import type {
   FormationPositionFitAuditSummary,
   LikelyLineupOut,
   LineupEngineParityAuditSummary,
+  MatchupBreakdownOut,
   ManagerTacticalTrustSummary,
   MatchPredictionOut,
   MatchResult,
@@ -57,6 +58,8 @@ export const api = {
   getLikelyLineup: (teamId: string) => getJson<LikelyLineupOut>(`/api/teams/${teamId}/likely-lineup`),
   getMatchPrediction: (homeTeamId: string, awayTeamId: string) =>
     getJson<MatchPredictionOut>(`/api/predictions/${homeTeamId}/${awayTeamId}`),
+  getMatchupBreakdown: (homeTeamId: string, awayTeamId: string) =>
+    getJson<MatchupBreakdownOut>(`/api/predictions/${homeTeamId}/${awayTeamId}/breakdown`),
   getMatch: (matchId: string) => getJson<MatchResult>(`/api/matches/${matchId}`),
   simulateMatch: (homeTeamId: string, awayTeamId: string, opts?: { seed?: number; allowDraw?: boolean }) =>
     postJson<MatchResult>("/api/matches/simulate", {

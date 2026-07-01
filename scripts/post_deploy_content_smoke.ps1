@@ -126,6 +126,7 @@ Assert-Contains "frontend bundle" $bundleText "substitution-profile-candidates"
 Assert-Contains "frontend bundle" $bundleText "player-rating-diff"
 Assert-Contains "frontend bundle" $bundleText "formation-position-fit"
 Assert-Contains "frontend bundle" $bundleText "lineup-engine-parity"
+Assert-Contains "frontend bundle" $bundleText "breakdown"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -147,6 +148,17 @@ if ($prediction.model_version -notmatch "^poisson-v") {
     throw "Prediction model_version is unexpected: $($prediction.model_version)"
 }
 Assert-HasJapanese "BRA/ARG prediction explanation" (($prediction.explanation | ForEach-Object { $_ }) -join " ")
+
+$breakdownJson = Get-Utf8Text "$backend/api/predictions/BRA/ARG/breakdown"
+Assert-NoMojibakeMarkers "BRA/ARG matchup breakdown JSON" $breakdownJson
+$breakdown = $breakdownJson | ConvertFrom-Json
+if ($breakdown.factors.Count -lt 4) {
+    throw "Matchup breakdown did not expose at least 4 factors"
+}
+if ($breakdown.lineups.Count -ne 2) {
+    throw "Matchup breakdown did not expose two lineup summaries"
+}
+Assert-HasJapanese "BRA/ARG matchup breakdown summary" $breakdown.summary_ja
 
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson

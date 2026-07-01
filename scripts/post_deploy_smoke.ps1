@@ -51,6 +51,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend formation position fit diagnostics" "$backend/api/model-diagnostics/formation-position-fit"
     Invoke-UrlCheck "Backend lineup engine parity diagnostics" "$backend/api/model-diagnostics/lineup-engine-parity"
     Invoke-UrlCheck "Backend sample prediction" "$backend/api/predictions/BRA/ARG"
+    Invoke-UrlCheck "Backend sample matchup breakdown" "$backend/api/predictions/BRA/ARG/breakdown"
 } else {
     Write-Host ""
     Write-Host "BackendBaseUrl not provided; skipped backend checks." -ForegroundColor Yellow

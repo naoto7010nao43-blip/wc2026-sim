@@ -95,6 +95,37 @@ export interface MatchPredictionOut {
   disclaimer: string;
 }
 
+export interface MatchupBreakdownFactor {
+  key: string;
+  label: string;
+  home_value: number | null;
+  away_value: number | null;
+  edge: number;
+  edge_team_id: string | null;
+  model_impact: number;
+  description_ja: string;
+}
+
+export interface MatchupBreakdownLineup {
+  team_id: string;
+  formation: string;
+  starter_count: number;
+  avg_starting_probability: number | null;
+  low_probability_starter_count: number;
+  full_xi: boolean;
+}
+
+export interface MatchupBreakdownOut {
+  home_team_id: string;
+  away_team_id: string;
+  favorite_team_id: string | null;
+  summary_ja: string;
+  factors: MatchupBreakdownFactor[];
+  lineups: MatchupBreakdownLineup[];
+  model_version: string;
+  disclaimer: string;
+}
+
 export interface MatchEvent {
   minute: number;
   event_type: string;
