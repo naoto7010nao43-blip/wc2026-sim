@@ -816,7 +816,7 @@
     "name": "Ghana",
     "confederation": "CAF",
     "fifaRank": 72,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "3-4-2-1",
     "groupId": "L",
     "tacticalProfile": {
       "manager_name": "Carlos Queiroz",
@@ -826,7 +826,7 @@
     },
     "dataConfidence": "official",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
-    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
+    "defaultFormationSource": "Corrected 2026-07-01 (was 4-4-2, which crammed 4 wingers/DMs into a flat midfield). Queiroz deploys a back three: 2 of 3 sources give a back-3 shape (3-4-2-1 / 3-4-3); 3-4-2-1 chosen as it both matches a cited source and keeps Partey at DM with our roster. Sources: https://mylineups.app/world-cup-2026/teams/ghana/ ; https://www.goal.com/en/lists/probable-line-ups-world-cup-2026-starters-and-expected-starting-xi-of-the-48-national-teams/blt0d21c342d47a4cc2 (accessed 2026-07-01)"
   },
   {
     "teamId": "PAN",

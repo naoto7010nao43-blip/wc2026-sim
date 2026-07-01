@@ -656,7 +656,7 @@
     "name": "Ghana",
     "confederation": "CAF",
     "fifa_rank": 72,
-    "default_formation": "4-4-2",
+    "default_formation": "3-4-2-1",
     "group_id": "L",
     "tactical_profile": {
       "manager_name": "Carlos Queiroz",
