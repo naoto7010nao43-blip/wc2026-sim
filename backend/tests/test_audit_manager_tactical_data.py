@@ -8,6 +8,7 @@ from audit_manager_tactical_data import (
     build_team_row,
     compute_review_score,
     duplicate_profile_lookup,
+    has_verified_tactical_basis,
     normalize_name,
     priority_band,
 )
@@ -70,6 +71,16 @@ def test_build_team_row_compares_seed_and_official_manager_names():
     assert "監督名" in row["review_reasons"][0]
 
 
+def test_plain_tactical_basis_note_does_not_clear_audit():
+    team = {"_tactical_profile_basis": "free text with https://example.com/source"}
+    assert has_verified_tactical_basis(team) is False
+
+
+def test_structured_verified_tactical_basis_clears_audit():
+    team = {"tactical_profile_sources": [{"url": "https://example.com/source", "verified": True}]}
+    assert has_verified_tactical_basis(team) is True
+
+
 def test_build_report_sorts_by_review_score_and_counts_bands():
     teams = [
         {
@@ -77,7 +88,7 @@ def test_build_report_sorts_by_review_score_and_counts_bands():
             "name": "Low",
             "fifa_rank": 80,
             "default_formation": "4-4-2",
-            "_tactical_profile_basis": "manual note",
+            "tactical_profile_sources": [{"url": "https://example.com/source", "verified": True}],
             "tactical_profile": {
                 "manager_name": "Same Coach",
                 "press_intensity": 40,

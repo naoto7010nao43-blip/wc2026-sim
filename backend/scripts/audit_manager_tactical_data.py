@@ -8,6 +8,7 @@ Usage: ./venv/Scripts/python.exe scripts/audit_manager_tactical_data.py
 """
 
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,6 +19,7 @@ SEED_DIR = Path(__file__).resolve().parent.parent / "data" / "seed"
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 
 TACTICAL_KEYS = ("press_intensity", "possession_style", "defensive_line_height")
+URL_RE = re.compile(r"https?://[^\s)]+")
 
 
 def load_json(path: Path):
@@ -43,6 +45,26 @@ def profile_key(profile: dict | None) -> tuple:
     if not profile:
         return tuple()
     return tuple(profile.get(k) for k in TACTICAL_KEYS)
+
+
+def has_verified_tactical_basis(team: dict) -> bool:
+    """Only structured, URL-backed evidence clears the tactical-basis audit.
+
+    A legacy free-text `_tactical_profile_basis` note is useful as a review
+    candidate, but it is not enough to mark a team as evidence-backed.
+    """
+    sources = team.get("tactical_profile_sources")
+    if not isinstance(sources, list):
+        return False
+    for source in sources:
+        if not isinstance(source, dict):
+            continue
+        url = str(source.get("url") or "").strip()
+        if not URL_RE.match(url):
+            continue
+        if source.get("verified") is True:
+            return True
+    return False
 
 
 def duplicate_profile_lookup(teams: list[dict]) -> dict[str, list[str]]:
@@ -155,7 +177,7 @@ def build_team_row(
     present_manager_names = {name for name in manager_names if name}
     manager_name_mismatch = len(present_manager_names) > 1
     missing_manager_rating = manager_rating is None
-    missing_tactical_basis = not bool(team.get("_tactical_profile_basis"))
+    missing_tactical_basis = not has_verified_tactical_basis(team)
     fifa_rank = team.get("fifa_rank")
     top_twenty_fifa_rank = fifa_rank is not None and fifa_rank <= 20
     duplicate_profile_team_ids = duplicate_profiles.get(team_id, [])
@@ -182,6 +204,7 @@ def build_team_row(
         "manager_rating_confidence": (manager_rating or {}).get("dataConfidence"),
         "missing_manager_rating": missing_manager_rating,
         "has_tactical_basis": not missing_tactical_basis,
+        "has_tactical_basis_candidate_note": bool(team.get("_tactical_profile_basis")),
         "tactical_profile": {key: seed_profile.get(key) for key in TACTICAL_KEYS},
         "duplicate_profile_team_ids": duplicate_profile_team_ids,
         "team_review_priority_band": team_review_band,
