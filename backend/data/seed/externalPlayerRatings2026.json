@@ -2693,17 +2693,17 @@
   },
   {
     "playerId": "CZE_JAROS",
-    "name": "Antonin Kinsky",
+    "name": "Lukas Hornicek",
     "source": "EA SPORTS FC 26",
-    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/a-kinsky/73580",
-    "sourceDataset": "EAFC26-DataHub fifa_version=26 update=2025-09-19 (validated 20/20 vs EA official)",
-    "eaPlayerId": "73580",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/lukas-hornicek/258936",
+    "sourceDataset": "EA official player ratings (ea.com) id 258936, fetched 2026-07-01: GK overall 72, reflexes 75, handling 67; gkSpeed estimated (EA pace components not published)",
+    "eaPlayerId": "258936",
     "position": "GK",
-    "observedDate": "2026-06-26",
-    "overall": 75,
+    "observedDate": "2026-07-01",
+    "overall": 72,
     "gkReflexes": 75,
-    "gkHandling": 76,
-    "gkSpeed": 25
+    "gkHandling": 67,
+    "gkSpeed": 28
   },
   {
     "playerId": "CZE_KREJCI",
@@ -8373,5 +8373,19 @@
     "dribbling": 75,
     "defending": 28,
     "physical": 60
+  },
+  {
+    "playerId": "CZE_KOVAR",
+    "name": "Matej Kovar",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/matej-kovar/242948",
+    "sourceDataset": "EA official player ratings (ea.com) id 242948, fetched 2026-07-01: GK overall 75, reflexes 75, handling 75; gkSpeed 32 derived via EA pace formula from acc 26 / sprint 37",
+    "eaPlayerId": "242948",
+    "position": "GK",
+    "observedDate": "2026-07-01",
+    "overall": 75,
+    "gkReflexes": 75,
+    "gkHandling": 75,
+    "gkSpeed": 32
   }
 ]

@@ -1,8 +1,34 @@
 {
-  "generatedAt": "2026-07-01T09:08:15.411516+00:00",
+  "generatedAt": "2026-07-01T12:41:08.287731+00:00",
   "totalPlayers": 676,
-  "biggestRisers": [],
-  "biggestFallers": [],
+  "biggestRisers": [
+    {
+      "playerId": "CZE_KOVAR",
+      "delta": 8,
+      "from": 67,
+      "to": 75
+    },
+    {
+      "playerId": "TUN_BENHESSEN",
+      "delta": 1,
+      "from": 66,
+      "to": 67
+    },
+    {
+      "playerId": "ALG_ZIDANE_L",
+      "delta": 1,
+      "from": 66,
+      "to": 67
+    }
+  ],
+  "biggestFallers": [
+    {
+      "playerId": "CZE_JAROS",
+      "delta": -3,
+      "from": 75,
+      "to": 72
+    }
+  ],
   "changedByManualOverride": [
     "GER_NEUER",
     "SUI_KOBEL",
@@ -130,6 +156,7 @@
     "KOR_SONHEUNGMIN",
     "KOR_CHOJUNHOO",
     "CZE_STANEK",
+    "CZE_KOVAR",
     "CZE_JAROS",
     "CZE_COUFAL",
     "CZE_ZIMA",
@@ -546,7 +573,6 @@
     "RSA_MNTAMBO",
     "KOR_KIMSEUNGGYU",
     "KOR_KIMTAEHYEON",
-    "CZE_KOVAR",
     "BIH_SEHIC",
     "BIH_HADZIKADUNIC",
     "BIH_BARISIC",

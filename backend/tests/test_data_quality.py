@@ -69,8 +69,12 @@ def test_summary_matches_current_repository_reports():
     assert summary["control_character_issues"] == 0
     # Ladislav Krejci's 2026-07-01 correction added a source-backed official
     # profile (club/caps/goals) without changing the historical unmatched-seed
-    # merge report count.
-    assert summary["official_profile_players"] == 604
+    # merge report count (603 -> 604). The 2026-07-01 Czech goalkeeper roster
+    # refresh then completed two more profiles that were previously stale
+    # placeholders with null club/caps: CZE_KOVAR (Matyas Vagner -> Matej Kovar,
+    # PSV) and CZE_JAROS (Antonin Kinsky -> Lukas Hornicek, SC Braga), each
+    # confirmed against the final 26-man squad and EA FC 26 (604 -> 606).
+    assert summary["official_profile_players"] == 606
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72

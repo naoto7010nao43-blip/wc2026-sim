@@ -536,7 +536,11 @@ def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
     response = client.get("/api/model-diagnostics/player-rating-diff")
     body = response.json()
     assert body["totalPlayers"] == 676
-    assert body["externallySourcedCount"] == 505
+    # 505 -> 506: the 2026-07-01 Czech GK roster refresh gave CZE_KOVAR
+    # (Matej Kovar, PSV) a first EA FC 26 external rating; it was previously an
+    # estimate-only placeholder (Matyas Vagner). CZE_JAROS (now Lukas Hornicek)
+    # was already externally sourced, so only one entry is added.
+    assert body["externallySourcedCount"] == 506
     assert body["changedByManualOverrideCount"] == 12
     assert body["lowConfidencePlayerCount"] == 0
     assert body["missingCriticalDataCount"] == 0

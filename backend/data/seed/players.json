@@ -4341,62 +4341,64 @@
   {
     "id": "CZE_KOVAR",
     "team_id": "CZE",
-    "name": "Matyas Vagner",
-    "age": 27,
+    "name": "Matej Kovar",
+    "age": 26,
     "primary_position": "GK",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 30,
+      "appearances": 34,
       "goals": 0,
       "assists": 0,
-      "minutes_played": 2600,
+      "minutes_played": 3060,
       "key_passes_per90": 0.05,
       "successful_dribbles_per90": 0.0,
       "tackles_per90": 0.0,
       "interceptions_per90": 0.1,
-      "aerial_duels_won_pct": 49.0,
-      "pass_completion_pct": 72.0,
-      "save_pct": 66.5,
-      "goals_conceded_per90": 1.3
+      "aerial_duels_won_pct": 52.0,
+      "pass_completion_pct": 82.0,
+      "save_pct": 71.0,
+      "goals_conceded_per90": 1.05
     },
-    "market_value_eur": 900000,
+    "market_value_eur": 8000000,
     "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Sparta Prague backup GK 2025-26 stats"
+      "EA SPORTS FC 26 player ratings ea.com id 242948 (2026-07-01): GK overall 75, reflexes 75, handling 75, diving 74, kicking 78, positioning 77",
+      "Wikipedia Matej Kovar: b.17/05/2000, PSV Eindhoven (#32), 196cm, Czech Republic 23 caps 0 goals",
+      "Transfermarkt spieler/550829 (2026-05-28): market value EUR 8m; joined PSV from Bayer Leverkusen (EUR 5m, 2026)"
     ],
-    "stamina_max": 78,
-    "name_ja": "マティアス・ヴァグナー"
+    "stamina_max": 85,
+    "name_ja": "マテイ・コヴァーシュ"
   },
   {
     "id": "CZE_JAROS",
     "team_id": "CZE",
-    "name": "Antonin Kinsky",
+    "name": "Lukas Hornicek",
     "age": 23,
     "primary_position": "GK",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 25,
+      "appearances": 32,
       "goals": 0,
       "assists": 0,
-      "minutes_played": 2200,
+      "minutes_played": 2880,
       "key_passes_per90": 0.05,
       "successful_dribbles_per90": 0.0,
       "tackles_per90": 0.0,
       "interceptions_per90": 0.1,
-      "aerial_duels_won_pct": 50.0,
-      "pass_completion_pct": 76.0,
-      "save_pct": 68.0,
-      "goals_conceded_per90": 1.25
+      "aerial_duels_won_pct": 51.0,
+      "pass_completion_pct": 80.0,
+      "save_pct": 72.0,
+      "goals_conceded_per90": 0.95
     },
-    "market_value_eur": 5000000,
+    "market_value_eur": 12000000,
     "qualitative_adjustments": {},
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Tottenham Hotspur Premier League 2025-26 stats (limited senior minutes, on loan/cup rotation)"
+      "EA SPORTS FC 26 player ratings ea.com id 258936 (2026-07-01): GK overall 72, reflexes 75, handling 67, diving 72, kicking 69, positioning 75",
+      "Wikipedia Lukas Hornicek: b.13/07/2002, SC Braga (Primeira Liga), 197cm, Czech Republic senior debut 2026-05-31 vs Kosovo, 1 cap 0 goals; named to 2026 WC squad",
+      "Transfermarkt spieler/629773 / FotMob (2026): market value ~EUR 12m (range 9.4-15m across sources)"
     ],
-    "stamina_max": 80,
-    "name_ja": "アントニーン・キンスキー"
+    "stamina_max": 82,
+    "name_ja": "ルカーシュ・ホルニーチェク"
   },
   {
     "id": "CZE_COUFAL",
