@@ -66,7 +66,12 @@ def test_summary_matches_current_repository_reports():
     # fielded Turkiye without their key midfielder. Added 2026-07-01 with a
     # sourced profile + EA FC 26 rating (overall 86) and a startingProbability
     # override (confirmed 2026 WC starter).
-    assert summary["seed_player_count"] == 677
+    # 678 = the 677 above + Simon Banza (COD_BANZA), DR Congo's second-highest-
+    # rated attacker (EA FC 26 overall 81, id 231652), who was entirely absent
+    # from the roster. Added 2026-07-02 with a sourced profile + EA rating and
+    # no startingProbability override (the rating blend ranks him as a strong
+    # squad forward behind Yoane Wissa, which is the accurate depth picture).
+    assert summary["seed_player_count"] == 678
     assert summary["seed_team_count"] == 48
     assert summary["remaining_unmatched_official_players"] == 652
     assert summary["remaining_unmatched_seed_players"] == 73
@@ -91,7 +96,9 @@ def test_summary_matches_current_repository_reports():
     # (previously null) flips him into the official-profile count (609 -> 610).
     # The same-day addition of Hakan Calhanoglu (TUR_CALHANOGLU), a fully-
     # profiled new player with club + caps, adds one more (610 -> 611).
-    assert summary["official_profile_players"] == 611
+    # The 2026-07-02 addition of Simon Banza (COD_BANZA), a fully-profiled new
+    # player with a club (Al-Jazira), adds one more (611 -> 612).
+    assert summary["official_profile_players"] == 612
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72

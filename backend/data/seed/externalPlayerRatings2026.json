@@ -8455,5 +8455,22 @@
     "dribbling": 82,
     "defending": 80,
     "physical": 73
+  },
+  {
+    "playerId": "COD_BANZA",
+    "name": "Simon Banza",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/games/ea-sports-fc/ratings/player-ratings/simon-banza/231652",
+    "sourceDataset": "EAFC26 base card (ea.com/futbin id 231652, observed 2026-07-02)",
+    "eaPlayerId": "231652",
+    "position": "ST",
+    "observedDate": "2026-07-02",
+    "overall": 81,
+    "pace": 79,
+    "shooting": 81,
+    "passing": 62,
+    "dribbling": 77,
+    "defending": 36,
+    "physical": 79
   }
 ]

@@ -27238,6 +27238,48 @@
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
   },
   {
+    "playerId": "COD_BANZA",
+    "teamId": "COD",
+    "teamCode": "COD",
+    "name": "Simon Banza",
+    "nameJa": "シモン・バンザ",
+    "age": 29,
+    "dateOfBirth": "13/08/1996",
+    "shirtNumber": null,
+    "primaryPosition": "ST",
+    "secondaryPositions": [],
+    "preferredFoot": "Right",
+    "heightCm": 190,
+    "weightKg": null,
+    "clubName": "Al-Jazira Club (UAE)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": 8000000,
+    "careerStats": {
+      "appearances": 30,
+      "goals": 15,
+      "assists": 4,
+      "minutesPlayed": 2500,
+      "keyPassesPer90": 0.4,
+      "successfulDribblesPer90": 0.7,
+      "tacklesPer90": 0.3,
+      "interceptionsPer90": 0.3,
+      "aerialDuelsWonPct": 52.0,
+      "passCompletionPct": 72.0
+    },
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 player ratings ea.com id 231652 (2026-07-02): ST overall 81 (pace 79 shooting 81 passing 62 dribbling 77 defending 36 physical 79)",
+      "Wikipedia/Transfermarkt Simon Banza: b.13/08/1996, DR Congo forward, 190cm, right-footed; DR Congo 2026 World Cup 26-man squad forward",
+      "LiveScore/Transfermarkt 2025-26: Al-Jazira Club (UAE Pro League); market value approx EUR 8m"
+    ],
+    "staminaMax": 85,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-02T00:00:00+00:00"
+  },
+  {
     "playerId": "COD_SADIKI",
     "teamId": "COD",
     "teamCode": "COD",

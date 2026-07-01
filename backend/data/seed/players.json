@@ -19438,6 +19438,35 @@
     "name_ja": "ジョリス・カイェンベ"
   },
   {
+    "id": "COD_BANZA",
+    "team_id": "COD",
+    "name": "Simon Banza",
+    "age": 29,
+    "primary_position": "ST",
+    "secondary_positions": [],
+    "career_stats": {
+      "appearances": 30,
+      "goals": 15,
+      "assists": 4,
+      "minutes_played": 2500,
+      "key_passes_per90": 0.4,
+      "successful_dribbles_per90": 0.7,
+      "tackles_per90": 0.3,
+      "interceptions_per90": 0.3,
+      "aerial_duels_won_pct": 52.0,
+      "pass_completion_pct": 72.0
+    },
+    "market_value_eur": 8000000,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 player ratings ea.com id 231652 (2026-07-02): ST overall 81 (pace 79 shooting 81 passing 62 dribbling 77 defending 36 physical 79)",
+      "Wikipedia/Transfermarkt Simon Banza: b.13/08/1996, DR Congo forward, 190cm, right-footed; DR Congo 2026 World Cup 26-man squad forward",
+      "LiveScore/Transfermarkt 2025-26: Al-Jazira Club (UAE Pro League); market value approx EUR 8m"
+    ],
+    "stamina_max": 85,
+    "name_ja": "シモン・バンザ"
+  },
+  {
     "id": "COD_SADIKI",
     "team_id": "COD",
     "name": "Noah Sadiki",
