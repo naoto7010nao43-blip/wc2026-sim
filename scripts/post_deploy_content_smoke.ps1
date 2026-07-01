@@ -89,6 +89,7 @@ Assert-Contains "frontend bundle" $bundleText "home_possession_pct"
 Assert-Contains "frontend bundle" $bundleText "manager_name"
 Assert-Contains "frontend bundle" $bundleText "data_source"
 Assert-Contains "frontend bundle" $bundleText "nonBlockingWarnings"
+Assert-Contains "frontend bundle" $bundleText "substitution-profile-candidates"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -149,6 +150,17 @@ if (($releaseReadiness.PSObject.Properties.Name -notcontains "nonBlockingWarning
 if ($releaseReadiness.nonBlockingWarnings.Count -gt 0) {
     Assert-HasJapanese "release readiness warnings" (($releaseReadiness.nonBlockingWarnings | ForEach-Object { $_ }) -join " ")
 }
+
+$substitutionQueueJson = Get-Utf8Text "$backend/api/model-diagnostics/substitution-profile-candidates"
+Assert-NoMojibakeMarkers "substitution profile candidate JSON" $substitutionQueueJson
+$substitutionQueue = $substitutionQueueJson | ConvertFrom-Json
+if ($substitutionQueue.candidateCount -lt 1) {
+    throw "Substitution profile candidate queue did not expose any candidates"
+}
+if ($substitutionQueue.readyTeamCount -lt 1) {
+    throw "Substitution profile candidate queue did not expose any review-ready teams"
+}
+Assert-HasJapanese "substitution profile candidate note" $substitutionQueue.note
 Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
 Write-Host ""
