@@ -12,6 +12,7 @@ from app.models.team import Team
 from app.prediction.monte_carlo import (
     project_dark_horses,
     project_final_matchups,
+    project_group_advancement,
     project_team_tournament_path,
     simulate_tournament_outcomes,
 )
@@ -25,6 +26,7 @@ from app.schemas.prediction import (
     GroupDifficultyTeamOut,
     SimulateMonteCarloRequest,
     TournamentDarkHorsesOut,
+    TournamentGroupAdvancementOut,
     TournamentGroupDifficultyOut,
     TournamentFinalMatchupsOut,
     TournamentPathProjectionOut,
@@ -108,6 +110,15 @@ def get_tournament_dark_horses(
     db: Session = Depends(get_db),
 ):
     return project_dark_horses(db, iterations=iterations, base_seed=seed, limit=limit)
+
+
+@router.get("/group-advancement", response_model=TournamentGroupAdvancementOut, dependencies=[Depends(rate_limit(12))])
+def get_tournament_group_advancement(
+    iterations: int = Query(default=1000, ge=100, le=3000),
+    seed: int = Query(default=0),
+    db: Session = Depends(get_db),
+):
+    return project_group_advancement(db, iterations=iterations, base_seed=seed)
 
 
 def _upset_reason(underdog_win_pct: float, draw_pct: float, expected_goal_gap: float) -> str:

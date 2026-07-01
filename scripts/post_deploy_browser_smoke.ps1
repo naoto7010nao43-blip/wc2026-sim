@@ -61,7 +61,7 @@ $js = @'
     String.fromCodePoint(0x00e3),
   ];
   const requiredTextByRoute = {
-    "/tournament": ["\u6c7a\u52dd\u30ab\u30fc\u30c9\u5019\u88dc", "\u30c0\u30fc\u30af\u30db\u30fc\u30b9\u5019\u88dc", "\u512a\u52dd\u30eb\u30fc\u30c8\u4e88\u6e2c", "\u6b7b\u306e\u7d44\u30e1\u30fc\u30bf\u30fc", "\u6ce2\u4e71\u5019\u88dc\u30a6\u30a9\u30c3\u30c1"],
+    "/tournament": ["\u6c7a\u52dd\u30ab\u30fc\u30c9\u5019\u88dc", "\u30c0\u30fc\u30af\u30db\u30fc\u30b9\u5019\u88dc", "\u30b0\u30eb\u30fc\u30d7\u7a81\u7834\u78ba\u7387", "\u512a\u52dd\u30eb\u30fc\u30c8\u4e88\u6e2c", "\u6b7b\u306e\u7d44\u30e1\u30fc\u30bf\u30fc", "\u6ce2\u4e71\u5019\u88dc\u30a6\u30a9\u30c3\u30c1"],
     "/simulate": ["\u512a\u52e2\u5ea6", "\u52dd\u7387\u5dee", "xG\u5dee", "\u52dd\u6557\u8981\u56e0"],
     "/simulate?home=BRA&away=ARG": ["BRA", "ARG", "\u52dd\u6557\u8981\u56e0"],
     "/data-review": [
@@ -110,7 +110,8 @@ $js = @'
 
         const response = await page.goto(base + route, { waitUntil: "domcontentloaded", timeout: timeoutMs });
         await page.waitForLoadState("load", { timeout: timeoutMs }).catch(() => {});
-        await page.waitForTimeout(2500);
+        await page.waitForLoadState("networkidle", { timeout: timeoutMs }).catch(() => {});
+        await page.waitForTimeout(1000);
         const metrics = await page.evaluate(() => ({
           bodyText: document.body.innerText.slice(0, 60000),
           scrollWidth: document.documentElement.scrollWidth,

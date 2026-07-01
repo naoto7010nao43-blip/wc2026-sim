@@ -230,3 +230,38 @@ def test_tournament_dark_horses_returns_ranked_non_favorite_candidates(client):
         assert row["quarterfinal_pct"] >= 8.0 or row["champion_pct"] >= 0.8
         assert row["reason_ja"]
         _assert_no_mojibake(row["reason_ja"])
+
+
+def test_tournament_group_advancement_returns_all_group_probabilities(client):
+    resp = client.get("/api/tournament/group-advancement?iterations=100")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["iterations"] == 100
+    assert len(body["groups"]) == 12
+    assert body["model_version"].startswith("poisson-v")
+    assert "3位突破" in body["note_ja"]
+    assert "保証" in body["disclaimer"]
+    _assert_no_mojibake(body["note_ja"])
+    _assert_no_mojibake(body["disclaimer"])
+
+    total_advance_pct = 0.0
+    for group in body["groups"]:
+        assert group["group_id"] in "ABCDEFGHIJKL"
+        assert len(group["teams"]) == 4
+        first_sum = sum(row["first_place_pct"] for row in group["teams"])
+        second_sum = sum(row["second_place_pct"] for row in group["teams"])
+        assert abs(first_sum - 100.0) < 1.0
+        assert abs(second_sum - 100.0) < 1.0
+        total_advance_pct += sum(row["advance_pct"] for row in group["teams"])
+        advance_pcts = [row["advance_pct"] for row in group["teams"]]
+        assert advance_pcts == sorted(advance_pcts, reverse=True)
+        for row in group["teams"]:
+            assert row["team_id"]
+            assert row["team_name"]
+            assert 0 <= row["first_place_pct"] <= 100
+            assert 0 <= row["second_place_pct"] <= 100
+            assert 0 <= row["third_place_pct"] <= 100
+            assert 0 <= row["third_place_qualified_pct"] <= 100
+            assert 0 <= row["advance_pct"] <= 100
+            assert row["average_points"] >= 0
+    assert abs(total_advance_pct - 3200.0) < 8.0

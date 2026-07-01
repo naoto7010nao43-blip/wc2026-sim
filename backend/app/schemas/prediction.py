@@ -198,3 +198,30 @@ class TournamentDarkHorsesOut(BaseModel):
     data_confidence: str
     note_ja: str
     disclaimer: str
+
+
+class TournamentGroupAdvancementTeamOut(BaseModel):
+    team_id: str
+    team_name: str
+    group_id: str
+    fifa_rank: int | None
+    first_place_pct: float
+    second_place_pct: float
+    third_place_pct: float
+    third_place_qualified_pct: float
+    advance_pct: float
+    average_points: float
+
+
+class TournamentGroupAdvancementGroupOut(BaseModel):
+    group_id: str
+    teams: list[TournamentGroupAdvancementTeamOut]
+
+
+class TournamentGroupAdvancementOut(BaseModel):
+    iterations: int
+    groups: list[TournamentGroupAdvancementGroupOut]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str

@@ -6,6 +6,7 @@ import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentDarkHorsesPanel } from "../components/TournamentDarkHorsesPanel";
 import { TournamentFinalMatchupsPanel } from "../components/TournamentFinalMatchupsPanel";
+import { TournamentGroupAdvancementPanel } from "../components/TournamentGroupAdvancementPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
 import { TournamentPathProjectionPanel } from "../components/TournamentPathProjectionPanel";
 import { TournamentUpsetWatchPanel } from "../components/TournamentUpsetWatchPanel";
@@ -98,6 +99,7 @@ export function TournamentPage() {
       <TournamentOddsPanel />
       <TournamentFinalMatchupsPanel />
       <TournamentDarkHorsesPanel />
+      <TournamentGroupAdvancementPanel />
       <TournamentPathProjectionPanel />
       <GroupDifficultyPanel />
       <TournamentUpsetWatchPanel />

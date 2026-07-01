@@ -130,6 +130,36 @@ class TournamentDarkHorsesResult:
     disclaimer: str = "これは予測モデル上の注目候補であり、実際の番狂わせや勝ち上がりを保証するものではありません。"
 
 
+@dataclass(frozen=True)
+class TournamentGroupAdvancementTeam:
+    team_id: str
+    team_name: str
+    group_id: str
+    fifa_rank: int | None
+    first_place_pct: float
+    second_place_pct: float
+    third_place_pct: float
+    third_place_qualified_pct: float
+    advance_pct: float
+    average_points: float
+
+
+@dataclass(frozen=True)
+class TournamentGroupAdvancementGroup:
+    group_id: str
+    teams: list[TournamentGroupAdvancementTeam]
+
+
+@dataclass(frozen=True)
+class TournamentGroupAdvancementResult:
+    iterations: int
+    groups: list[TournamentGroupAdvancementGroup]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str = "これは予測モデルによるグループ突破確率であり、実際の順位や3位突破を保証するものではありません。"
+
+
 def _in_memory_match(home_team_id: str, away_team_id: str, home_score: int, away_score: int) -> Match:
     """An unpersisted, in-memory Match record. calculate_standings only
     reads plain attributes off it, so a real DB row is never needed."""
@@ -605,4 +635,91 @@ def project_dark_horses(
         model_version=simulation.model_version,
         data_confidence=simulation.data_confidence,
         note_ja="FIFAランク上位12チームを除外し、勝ち上がり確率が一定以上ある注目候補を抽出しています。低ランクであるほど面白い候補として少しだけ加点しますが、到達率の根拠が薄いチームは残しません。",
+    )
+
+
+def project_group_advancement(
+    db: Session,
+    iterations: int = DEFAULT_ITERATIONS,
+    base_seed: int = 0,
+    config: ModelConfig = DEFAULT_MODEL_CONFIG,
+) -> TournamentGroupAdvancementResult:
+    (
+        teams,
+        team_names,
+        fifa_ranks,
+        fixed_group_matches,
+        group_matrices,
+        _winner_of,
+        data_confidence,
+    ) = _build_tournament_projection_context(db, config)
+
+    teams_by_group: dict[str, list[str]] = {letter: [] for letter in GROUP_LETTERS}
+    for team in teams:
+        if team.group_id in teams_by_group:
+            teams_by_group[team.group_id].append(team.id)
+
+    first_counts = {team.id: 0 for team in teams}
+    second_counts = {team.id: 0 for team in teams}
+    third_counts = {team.id: 0 for team in teams}
+    third_qualified_counts = {team.id: 0 for team in teams}
+    advance_counts = {team.id: 0 for team in teams}
+    points_sum = {team.id: 0 for team in teams}
+
+    for i in range(iterations):
+        rng = random.Random(base_seed + i)
+
+        group_standings = {}
+        for letter in GROUP_LETTERS:
+            matches = list(fixed_group_matches[letter])
+            for (home_id, away_id), matrix in group_matrices[letter].items():
+                h, a = sample_scoreline(matrix, rng)
+                matches.append(_in_memory_match(home_id, away_id, h, a))
+            standings = calculate_standings(matches, team_names, fifa_ranks)
+            group_standings[letter] = standings
+            if len(standings) < 4:
+                continue
+            first_counts[standings[0].team_id] += 1
+            second_counts[standings[1].team_id] += 1
+            third_counts[standings[2].team_id] += 1
+            advance_counts[standings[0].team_id] += 1
+            advance_counts[standings[1].team_id] += 1
+            for row in standings:
+                points_sum[row.team_id] += row.points
+
+        third_place_rows = {letter: standings[2] for letter, standings in group_standings.items() if len(standings) >= 3}
+        qualifying_rankings = [row for row in rank_third_place_teams(third_place_rows) if row.qualified]
+        for row in qualifying_rankings:
+            third_qualified_counts[row.team_id] += 1
+            advance_counts[row.team_id] += 1
+
+    def pct(count: int) -> float:
+        return round(100.0 * count / iterations, 1)
+
+    groups: list[TournamentGroupAdvancementGroup] = []
+    for group_id in GROUP_LETTERS:
+        rows: list[TournamentGroupAdvancementTeam] = []
+        for team_id in sorted(teams_by_group[group_id], key=lambda tid: (-(advance_counts[tid]), fifa_ranks.get(tid) or 999, tid)):
+            rows.append(
+                TournamentGroupAdvancementTeam(
+                    team_id=team_id,
+                    team_name=team_names.get(team_id, team_id),
+                    group_id=group_id,
+                    fifa_rank=fifa_ranks.get(team_id),
+                    first_place_pct=pct(first_counts[team_id]),
+                    second_place_pct=pct(second_counts[team_id]),
+                    third_place_pct=pct(third_counts[team_id]),
+                    third_place_qualified_pct=pct(third_qualified_counts[team_id]),
+                    advance_pct=pct(advance_counts[team_id]),
+                    average_points=round(points_sum[team_id] / iterations, 2),
+                )
+            )
+        groups.append(TournamentGroupAdvancementGroup(group_id=group_id, teams=rows))
+
+    return TournamentGroupAdvancementResult(
+        iterations=iterations,
+        groups=groups,
+        model_version=config.model_version,
+        data_confidence=data_confidence,
+        note_ja="各グループを繰り返し試行し、1位・2位・3位・3位突破・総突破率を集計しています。3位突破は全12組の3位チームを同じ大会ルールで比較した結果です。",
     )

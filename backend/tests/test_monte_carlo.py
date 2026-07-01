@@ -16,6 +16,7 @@ from app.models.team import Team
 from app.prediction.monte_carlo import (
     project_dark_horses,
     project_final_matchups,
+    project_group_advancement,
     project_team_tournament_path,
     simulate_tournament_outcomes,
 )
@@ -111,6 +112,24 @@ def test_dark_horses_are_deterministic_and_exclude_top_ranked_favorites(db_sessi
         assert candidate.fifa_rank is None or candidate.fifa_rank > 12
         assert candidate.quarterfinal_pct >= 8.0 or candidate.champion_pct >= 0.8
         assert candidate.reason_ja
+
+
+def test_group_advancement_is_deterministic_and_balanced_by_group(db_session):
+    result1 = project_group_advancement(db_session, iterations=30, base_seed=19)
+    result2 = project_group_advancement(db_session, iterations=30, base_seed=19)
+    assert result1.groups == result2.groups
+    assert len(result1.groups) == 12
+    total_advance_pct = 0.0
+    for group in result1.groups:
+        assert len(group.teams) == 4
+        assert abs(sum(team.first_place_pct for team in group.teams) - 100.0) < 1.0
+        assert abs(sum(team.second_place_pct for team in group.teams) - 100.0) < 1.0
+        total_advance_pct += sum(team.advance_pct for team in group.teams)
+        for team in group.teams:
+            assert 0 <= team.advance_pct <= 100
+            assert team.advance_pct >= team.first_place_pct + team.second_place_pct - 0.2
+            assert team.average_points >= 0
+    assert abs(total_advance_pct - 3200.0) < 8.0
 
 
 def test_monte_carlo_disclaimer_present(db_session):

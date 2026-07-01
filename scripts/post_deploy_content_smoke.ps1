@@ -130,6 +130,7 @@ Assert-Contains "frontend bundle" $bundleText "breakdown"
 Assert-Contains "frontend bundle" $bundleText "path-projection"
 Assert-Contains "frontend bundle" $bundleText "final-matchups"
 Assert-Contains "frontend bundle" $bundleText "dark-horses"
+Assert-Contains "frontend bundle" $bundleText "group-advancement"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -227,6 +228,17 @@ if (-not $darkHorses.model_version -or $darkHorses.model_version -notmatch "^poi
 }
 Assert-HasJapanese "tournament dark horses note" $darkHorses.note_ja
 Assert-HasJapanese "tournament dark horses reason" (($darkHorses.candidates | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
+
+$groupAdvancementJson = Get-Utf8Text "$backend/api/tournament/group-advancement?iterations=100"
+Assert-NoMojibakeMarkers "tournament group advancement JSON" $groupAdvancementJson
+$groupAdvancement = $groupAdvancementJson | ConvertFrom-Json
+if ($groupAdvancement.groups.Count -ne 12) {
+    throw "Tournament group advancement did not expose all groups: $($groupAdvancement.groups.Count)"
+}
+if (-not $groupAdvancement.model_version -or $groupAdvancement.model_version -notmatch "^poisson-v") {
+    throw "Tournament group advancement model_version is unexpected: $($groupAdvancement.model_version)"
+}
+Assert-HasJapanese "tournament group advancement note" $groupAdvancement.note_ja
 
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson

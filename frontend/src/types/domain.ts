@@ -203,6 +203,33 @@ export interface TournamentDarkHorsesOut {
   disclaimer: string;
 }
 
+export interface TournamentGroupAdvancementTeam {
+  team_id: string;
+  team_name: string;
+  group_id: string;
+  fifa_rank: number | null;
+  first_place_pct: number;
+  second_place_pct: number;
+  third_place_pct: number;
+  third_place_qualified_pct: number;
+  advance_pct: number;
+  average_points: number;
+}
+
+export interface TournamentGroupAdvancementGroup {
+  group_id: string;
+  teams: TournamentGroupAdvancementTeam[];
+}
+
+export interface TournamentGroupAdvancementOut {
+  iterations: number;
+  groups: TournamentGroupAdvancementGroup[];
+  model_version: string;
+  data_confidence: string;
+  note_ja: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;
