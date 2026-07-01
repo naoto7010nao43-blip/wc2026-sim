@@ -18,10 +18,11 @@ sources (no guessing):
 | Club / age / height | Stade de Reims, 25, 180cm | same EA page |
 | PAC/SHO/PAS/DRI/DEF/PHY | 79 / 74 / 71 / 77 / 41 / 74 | same EA page |
 | Date of birth | 28/07/2000 | Wikipedia |
-| Starter status | started & scored Japan's WC opener vs Netherlands; assisted vs Tunisia | Wikipedia + match reports |
+| Starter status | started & scored Japan's first goal/equalizer vs Netherlands; supplied the cross for Kamada's goal vs Tunisia | FOX Sports match reports/video |
 
 - EA page: https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/keito-nakamura/242914
-- Wikipedia: https://en.wikipedia.org/wiki/Keito_Nakamura
+- FOX Sports Netherlands video: https://www.foxsports.com/watch/fmc-gvzq648uzvwmxv64
+- FOX Sports Tunisia report: https://www.foxsports.com/stories/soccer/japan-tunisia-world-cup-4-takeaways
 
 Files touched (the full v2 pipeline, then legacy mirror regenerated canonically):
 - `players2026_official.json` — new profile, `dataConfidence: "external"`, three sourceCitations.

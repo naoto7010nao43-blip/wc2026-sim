@@ -68,9 +68,9 @@
   {
     "playerId": "JPN_NAKAMURA_K",
     "name": "Keito Nakamura",
-    "reason": "Confirmed Japan starter at the 2026 World Cup (scored Japan's opening goal vs Netherlands, assisted vs Tunisia). He was entirely missing from the roster, so the left shadow-striker slot was wrongly auto-filled.",
-    "source": "Wikipedia + 2026 World Cup match reports",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Keito_Nakamura",
+    "reason": "Confirmed Japan starter at the 2026 World Cup (scored Japan's first goal/equalizer vs Netherlands and supplied the cross for Kamada's goal vs Tunisia). He was entirely missing from the roster, so the left shadow-striker slot was wrongly auto-filled.",
+    "source": "EA SPORTS FC 26 official ratings + FOX Sports 2026 World Cup match reports",
+    "sourceUrl": "https://www.foxsports.com/stories/soccer/japan-tunisia-world-cup-4-takeaways",
     "observedDate": "2026-07-01",
     "overrides": {
       "startingProbability": 78
