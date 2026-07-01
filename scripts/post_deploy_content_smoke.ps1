@@ -161,6 +161,15 @@ if ($substitutionQueue.readyTeamCount -lt 1) {
     throw "Substitution profile candidate queue did not expose any review-ready teams"
 }
 Assert-HasJapanese "substitution profile candidate note" $substitutionQueue.note
+
+$japanLineupJson = Get-Utf8Text "$backend/api/teams/JPN/likely-lineup"
+Assert-NoMojibakeMarkers "Japan likely lineup JSON" $japanLineupJson
+$japanLineup = $japanLineupJson | ConvertFrom-Json
+$japanLineupIds = @($japanLineup.lineup | ForEach-Object { $_.player_id })
+if ($japanLineupIds -notcontains "JPN_NAKAMURA_K") {
+    throw "Japan likely lineup does not include EA-sourced Keito Nakamura"
+}
+Assert-HasJapanese "Japan likely lineup player names" (($japanLineup.lineup | ForEach-Object { $_.name_ja }) -join " ")
 Write-Host "OK: backend JSON is UTF-8 and exposes current prediction/team/data-quality fields" -ForegroundColor Green
 
 Write-Host ""
