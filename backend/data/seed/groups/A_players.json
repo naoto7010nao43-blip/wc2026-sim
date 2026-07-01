@@ -291,10 +291,10 @@
     "source_citations": ["Transfermarkt profile 2026-06", "Viktoria Plzen/Bundesliga move 2025-26 stats"], "stamina_max": 85
   },
   {
-    "id": "CZE_KREJCI", "team_id": "CZE", "name": "Vaclav Jurecka", "age": 30, "primary_position": "LB", "secondary_positions": ["LM"],
-    "career_stats": {"appearances": 50, "goals": 4, "assists": 5, "minutes_played": 4200, "key_passes_per90": 0.9, "successful_dribbles_per90": 0.7, "tackles_per90": 1.6, "interceptions_per90": 1.1, "aerial_duels_won_pct": 52.0, "pass_completion_pct": 81.0},
-    "market_value_eur": 3500000, "qualitative_adjustments": {},
-    "source_citations": ["Transfermarkt profile 2026-06", "Slavia Prague Czech First League 2025-26 stats"], "stamina_max": 83
+    "id": "CZE_KREJCI", "team_id": "CZE", "name": "Ladislav Krejci", "age": 27, "primary_position": "CB", "secondary_positions": ["CDM"],
+    "career_stats": {"appearances": 40, "goals": 3, "assists": 1, "minutes_played": 3400, "key_passes_per90": 0.4, "successful_dribbles_per90": 0.5, "tackles_per90": 1.8, "interceptions_per90": 1.5, "aerial_duels_won_pct": 68.0, "pass_completion_pct": 87.0},
+    "market_value_eur": 22000000, "qualitative_adjustments": {},
+    "source_citations": ["EA SPORTS FC 26 player ratings ea.com id 252064", "Transfermarkt profile spieler/345911 2026-07"], "stamina_max": 85
   },
   {
     "id": "CZE_HOLES", "team_id": "CZE", "name": "Tomas Holes", "age": 30, "primary_position": "CDM", "secondary_positions": ["CM"],

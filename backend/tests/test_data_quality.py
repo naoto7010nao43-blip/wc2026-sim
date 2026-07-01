@@ -67,7 +67,10 @@ def test_summary_matches_current_repository_reports():
     assert summary["remaining_unmatched_seed_players"] == 73
     assert summary["matched_player_field_update_candidates"] == 0
     assert summary["control_character_issues"] == 0
-    assert summary["official_profile_players"] == summary["seed_player_count"] - 73
+    # Ladislav Krejci's 2026-07-01 correction added a source-backed official
+    # profile (club/caps/goals) without changing the historical unmatched-seed
+    # merge report count.
+    assert summary["official_profile_players"] == 604
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72

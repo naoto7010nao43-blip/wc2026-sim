@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T08:52:02.927378+00:00",
+  "generatedAt": "2026-07-01T09:08:23.992084+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -20,8 +20,8 @@
   "highSeverityTeamCount": 2,
   "mediumSeverityTeamCount": 24,
   "lowSeverityTeamCount": 22,
-  "outOfPositionAssignmentCount": 41,
-  "lowProbabilityStarterCount": 127,
+  "outOfPositionAssignmentCount": 40,
+  "lowProbabilityStarterCount": 126,
   "teams": [
     {
       "teamId": "BIH",
@@ -182,90 +182,6 @@
       ],
       "recommendedAction": "formation_or_roster_review",
       "recommendedActionJa": "フォーメーションまたは不足ポジションを出典付きで再確認してください。"
-    },
-    {
-      "teamId": "CZE",
-      "teamName": "Czechia",
-      "defaultFormation": "3-5-2",
-      "rosterSize": 13,
-      "starterCount": 11,
-      "outOfPositionCount": 2,
-      "lowProbabilityStarterCount": 5,
-      "severityScore": 11,
-      "severityBand": "medium",
-      "outOfPositionAssignments": [
-        {
-          "slotPosition": "CB",
-          "playerId": "CZE_COUFAL",
-          "name": "Vladimir Coufal",
-          "primaryPosition": "RB",
-          "secondaryPositions": [],
-          "startingProbability": 56,
-          "overall": 73,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        },
-        {
-          "slotPosition": "CDM",
-          "playerId": "CZE_KREJCI",
-          "name": "Vaclav Jurecka",
-          "primaryPosition": "LB",
-          "secondaryPositions": [
-            "LM"
-          ],
-          "startingProbability": 34,
-          "overall": 70,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        }
-      ],
-      "lowProbabilityStarters": [
-        {
-          "slotPosition": "CB",
-          "playerId": "CZE_HRANAC",
-          "name": "Robin Hranac",
-          "primaryPosition": "CB",
-          "startingProbability": 39,
-          "overall": 71,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "LM",
-          "playerId": "CZE_PROVOD",
-          "name": "Lukas Provod",
-          "primaryPosition": "CAM",
-          "startingProbability": 39,
-          "overall": 78,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CDM",
-          "playerId": "CZE_HOLES",
-          "name": "Tomas Holes",
-          "primaryPosition": "CDM",
-          "startingProbability": 32,
-          "overall": 76,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CDM",
-          "playerId": "CZE_KREJCI",
-          "name": "Vaclav Jurecka",
-          "primaryPosition": "LB",
-          "startingProbability": 34,
-          "overall": 70,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "ST",
-          "playerId": "CZE_CHYTIL",
-          "name": "Mojmir Chytil",
-          "primaryPosition": "ST",
-          "startingProbability": 25,
-          "overall": 74,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        }
-      ],
-      "recommendedAction": "monitor_position_flex",
-      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
     },
     {
       "teamId": "RSA",
@@ -896,6 +812,69 @@
           "primaryPosition": "ST",
           "startingProbability": 26,
           "overall": 77,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        }
+      ],
+      "recommendedAction": "monitor_position_flex",
+      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
+    },
+    {
+      "teamId": "CZE",
+      "teamName": "Czechia",
+      "defaultFormation": "3-5-2",
+      "rosterSize": 13,
+      "starterCount": 11,
+      "outOfPositionCount": 1,
+      "lowProbabilityStarterCount": 4,
+      "severityScore": 7,
+      "severityBand": "medium",
+      "outOfPositionAssignments": [
+        {
+          "slotPosition": "CDM",
+          "playerId": "CZE_COUFAL",
+          "name": "Vladimir Coufal",
+          "primaryPosition": "RB",
+          "secondaryPositions": [],
+          "startingProbability": 51,
+          "overall": 73,
+          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
+        }
+      ],
+      "lowProbabilityStarters": [
+        {
+          "slotPosition": "CB",
+          "playerId": "CZE_HRANAC",
+          "name": "Robin Hranac",
+          "primaryPosition": "CB",
+          "startingProbability": 37,
+          "overall": 71,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "LM",
+          "playerId": "CZE_PROVOD",
+          "name": "Lukas Provod",
+          "primaryPosition": "CAM",
+          "startingProbability": 39,
+          "overall": 78,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "CDM",
+          "playerId": "CZE_HOLES",
+          "name": "Tomas Holes",
+          "primaryPosition": "CDM",
+          "startingProbability": 32,
+          "overall": 76,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "ST",
+          "playerId": "CZE_CHYTIL",
+          "name": "Mojmir Chytil",
+          "primaryPosition": "ST",
+          "startingProbability": 25,
+          "overall": 74,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],

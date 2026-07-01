@@ -5,7 +5,7 @@ CZE_HOLES	Tomas Holes	Czechia
 CZE_HRANAC	Robin Hranac	Czechia
 CZE_JAROS	Antonin Kinsky	Czechia
 CZE_KOVAR	Matyas Vagner	Czechia
-CZE_KREJCI	Vaclav Jurecka	Czechia
+CZE_KREJCI	Ladislav Krejci	Czechia
 CZE_PROVOD	Lukas Provod	Czechia
 CZE_SCHICK	Patrik Schick	Czechia
 CZE_SOUCEK	Tomas Soucek	Czechia

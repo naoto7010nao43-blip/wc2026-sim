@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T08:52:02.913944+00:00",
+  "generatedAt": "2026-07-01T09:08:24.002315+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -378,12 +378,12 @@
       "displayedPlayerIds": [
         "CZE_STANEK",
         "CZE_ZIMA",
+        "CZE_KREJCI",
         "CZE_HRANAC",
-        "CZE_COUFAL",
         "CZE_PROVOD",
         "CZE_HOLES",
         "CZE_SOUCEK",
-        "CZE_KREJCI",
+        "CZE_COUFAL",
         "CZE_DOUDERA",
         "CZE_SCHICK",
         "CZE_CHYTIL"
@@ -391,12 +391,12 @@
       "simulatedPlayerIds": [
         "CZE_STANEK",
         "CZE_ZIMA",
+        "CZE_KREJCI",
         "CZE_HRANAC",
-        "CZE_COUFAL",
         "CZE_PROVOD",
         "CZE_HOLES",
         "CZE_SOUCEK",
-        "CZE_KREJCI",
+        "CZE_COUFAL",
         "CZE_DOUDERA",
         "CZE_SCHICK",
         "CZE_CHYTIL"
