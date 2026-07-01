@@ -184,61 +184,15 @@ def simulate_tournament_outcomes(
     base_seed: int = 0,
     config: ModelConfig = DEFAULT_MODEL_CONFIG,
 ) -> TournamentSimulationResult:
-    teams = db.scalars(select(Team)).all()
-    team_names = {t.id: t.name for t in teams}
-    fifa_ranks = {t.id: t.fifa_rank for t in teams}
-    tactical_profiles = {t.id: t.tactical_profile for t in teams}
-    teams_by_group: dict[str, list[str]] = {letter: [] for letter in GROUP_LETTERS}
-    for t in teams:
-        if t.group_id in teams_by_group:
-            teams_by_group[t.group_id].append(t.id)
-
-    # Cache each team's attack/defense/strength rating once -- these don't
-    # change across iterations, only the random scoreline draws do.
-    ratings: dict[str, tuple[float, float, float, str]] = {}
-    for t in teams:
-        players = team_players_as_dicts(db, t.id)
-        attack = attack_rating(players)
-        defense = defense_rating(players)
-        strength, confidence = team_strength_rating(t.fifa_rank, players)
-        ratings[t.id] = (attack, defense, strength, confidence)
-    data_confidence = "estimated" if any(confidence == "estimated" for *_ratings, confidence in ratings.values()) else "official"
-
-    def lambdas_for(home_id: str, away_id: str) -> tuple[float, float]:
-        h_attack, h_defense, h_strength, h_conf = ratings[home_id]
-        a_attack, a_defense, a_strength, a_conf = ratings[away_id]
-        host_bump_home = config.host_advantage if home_id in HOST_NATIONS else 0.0
-        host_bump_away = config.host_advantage if away_id in HOST_NATIONS else 0.0
-        return lambdas_from_ratings(
-            h_attack, h_defense, h_strength, h_conf,
-            a_attack, a_defense, a_strength, a_conf,
-            tactical_profiles.get(home_id), tactical_profiles.get(away_id),
-            host_bump_home, host_bump_away, config,
-        )
-
-    def winner_of(home_id: str, away_id: str, rng: random.Random) -> str:
-        lam_h, lam_a = lambdas_for(home_id, away_id)
-        matrix = score_distribution(lam_h, lam_a, config.max_goals, config.dixon_coles_rho)
-        h, a = sample_scoreline(matrix, rng)
-        if h != a:
-            return home_id if h > a else away_id
-        return home_id if rng.random() < shootout_win_probability(lam_h, lam_a) else away_id
-
-    real_results_by_group = load_real_results()
-    fixed_group_matches: dict[str, list[Match]] = {letter: [] for letter in GROUP_LETTERS}
-    group_matrices: dict[str, dict[tuple[str, str], list[list[float]]]] = {letter: {} for letter in GROUP_LETTERS}
-    for letter in GROUP_LETTERS:
-        real_results = real_results_by_group.get(letter, {})
-        for home_id, away_id in itertools.combinations(sorted(teams_by_group[letter]), 2):
-            real_result = real_results.get(frozenset({home_id, away_id}))
-            if real_result is not None:
-                fixed_group_matches[letter].append(_in_memory_match(
-                    real_result["home_team_id"], real_result["away_team_id"],
-                    real_result["home_score"], real_result["away_score"],
-                ))
-            else:
-                lam_h, lam_a = lambdas_for(home_id, away_id)
-                group_matrices[letter][(home_id, away_id)] = score_distribution(lam_h, lam_a, config.max_goals, config.dixon_coles_rho)
+    (
+        teams,
+        team_names,
+        fifa_ranks,
+        fixed_group_matches,
+        group_matrices,
+        winner_of,
+        data_confidence,
+    ) = _build_tournament_projection_context(db, config)
 
     stage_counts: dict[str, dict[str, int]] = {key: {t.id: 0 for t in teams} for key in _STAGE_KEYS}
 

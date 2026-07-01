@@ -13,7 +13,7 @@ from app.database import Base
 from app.models.match import Match  # noqa: F401  (ensures table is registered with Base.metadata)
 from app.models.player import Player
 from app.models.team import Team
-from app.prediction.monte_carlo import simulate_tournament_outcomes
+from app.prediction.monte_carlo import project_final_matchups, project_team_tournament_path, simulate_tournament_outcomes
 from app.rating.seed_pipeline import build_player_rows, load_seed_data
 
 
@@ -75,6 +75,24 @@ def test_monte_carlo_stage_percentages_sum_to_expected_slot_counts(db_session):
     assert abs(sum(result.final_pct.values()) - 200) < 5
     assert abs(sum(result.champion_pct.values()) - 100) < 5
     assert len(result.champion_pct) >= 1
+
+
+def test_team_path_projection_is_deterministic_given_the_same_seed(db_session):
+    result1 = project_team_tournament_path(db_session, team_id="JPN", iterations=20, base_seed=11)
+    result2 = project_team_tournament_path(db_session, team_id="JPN", iterations=20, base_seed=11)
+    assert result1.champion_pct == result2.champion_pct
+    assert result1.stages == result2.stages
+    assert [stage.stage_key for stage in result1.stages] == ["R32", "R16", "QF", "SF", "FINAL"]
+
+
+def test_final_matchups_are_deterministic_given_the_same_seed(db_session):
+    result1 = project_final_matchups(db_session, iterations=20, base_seed=13, limit=5)
+    result2 = project_final_matchups(db_session, iterations=20, base_seed=13, limit=5)
+    assert result1.candidates == result2.candidates
+    assert result1.matchup_count >= len(result1.candidates) > 0
+    for candidate in result1.candidates:
+        assert candidate.team_a_id != candidate.team_b_id
+        assert candidate.champion_favorite_team_id in {candidate.team_a_id, candidate.team_b_id}
 
 
 def test_monte_carlo_disclaimer_present(db_session):
