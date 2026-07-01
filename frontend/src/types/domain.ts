@@ -786,6 +786,58 @@ export interface SubstitutionProfileCandidateQueueSummary {
   recommendationsJa: string[];
 }
 
+export interface FormationFitAssignment {
+  slotPosition: string;
+  playerId: string | null;
+  name: string | null;
+  primaryPosition: string | null;
+  secondaryPositions: string[];
+  startingProbability: number | null;
+  overall: number | null;
+  reasonJa: string;
+}
+
+export interface FormationFitLowProbabilityStarter {
+  slotPosition: string;
+  playerId: string;
+  name: string;
+  primaryPosition: string;
+  startingProbability: number | null;
+  overall: number | null;
+  reasonJa: string;
+}
+
+export interface FormationFitTeamRow {
+  teamId: string;
+  teamName: string | null;
+  defaultFormation: string;
+  rosterSize: number;
+  starterCount: number;
+  outOfPositionCount: number;
+  lowProbabilityStarterCount: number;
+  severityScore: number;
+  severityBand: "high" | "medium" | "low";
+  outOfPositionAssignments: FormationFitAssignment[];
+  lowProbabilityStarters: FormationFitLowProbabilityStarter[];
+  recommendedAction: string;
+  recommendedActionJa: string;
+}
+
+export interface FormationPositionFitAuditSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  teamCount: number;
+  flaggedTeamCount: number;
+  highSeverityTeamCount: number;
+  mediumSeverityTeamCount: number;
+  lowSeverityTeamCount: number;
+  outOfPositionAssignmentCount: number;
+  lowProbabilityStarterCount: number;
+  teams: FormationFitTeamRow[];
+  recommendationsJa: string[];
+}
+
 export interface DataQualitySummary {
   seed_player_count: number;
   seed_team_count: number;

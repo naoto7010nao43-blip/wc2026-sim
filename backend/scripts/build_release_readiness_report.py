@@ -50,6 +50,7 @@ REQUIRED_REPORT_PATTERNS = (
     "simulation_stability_audit_*.json",
     "substitution_model_gap_audit_*.json",
     "substitution_profile_candidate_queue_*.json",
+    "formation_position_fit_audit_*.json",
     "external_data_verification_candidates_*.json",
     "external_data_verification_validation_*.json",
     "external_data_decision_queue_*.json",

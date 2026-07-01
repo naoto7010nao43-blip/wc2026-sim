@@ -383,6 +383,28 @@ def get_substitution_profile_candidate_queue_summary(reports_dir: Path = REPORTS
     return report
 
 
+def get_formation_position_fit_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "formation_position_fit_audit_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "フォーメーション適合監査レポートがまだ生成されていません。シミュレーターの先発XI確認には、まず監査レポートを生成してください。",
+            "teamCount": 0,
+            "flaggedTeamCount": 0,
+            "highSeverityTeamCount": 0,
+            "mediumSeverityTeamCount": 0,
+            "lowSeverityTeamCount": 0,
+            "outOfPositionAssignmentCount": 0,
+            "lowProbabilityStarterCount": 0,
+            "teams": [],
+            "recommendationsJa": [
+                "defaultFormationを変更する前に、実スタメンまたは通常布陣を示す出典で確認してください。",
+            ],
+        }
+    return report
+
+
 def get_source_provenance_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     report = _latest_report(reports_dir, "source_provenance_audit_*.json")
     if report is None:

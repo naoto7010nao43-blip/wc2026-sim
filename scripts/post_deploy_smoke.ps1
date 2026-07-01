@@ -48,6 +48,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend simulation stability diagnostics" "$backend/api/model-diagnostics/simulation-stability"
     Invoke-UrlCheck "Backend substitution model gap diagnostics" "$backend/api/model-diagnostics/substitution-model-gap"
     Invoke-UrlCheck "Backend substitution profile candidate diagnostics" "$backend/api/model-diagnostics/substitution-profile-candidates"
+    Invoke-UrlCheck "Backend formation position fit diagnostics" "$backend/api/model-diagnostics/formation-position-fit"
     Invoke-UrlCheck "Backend sample prediction" "$backend/api/predictions/BRA/ARG"
 } else {
     Write-Host ""

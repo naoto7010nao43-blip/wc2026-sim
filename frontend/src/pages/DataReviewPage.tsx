@@ -3,6 +3,7 @@ import { api } from "../api/client";
 import { DataFreshnessPanel } from "../components/DataFreshnessPanel";
 import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
 import { ExternalDataVerificationPanel } from "../components/ExternalDataVerificationPanel";
+import { FormationPositionFitPanel } from "../components/FormationPositionFitPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
 import { PlayerRatingDiffPanel } from "../components/PlayerRatingDiffPanel";
@@ -18,6 +19,7 @@ import { TeamDataReviewPanel } from "../components/TeamDataReviewPanel";
 import type {
   DataQualitySummary,
   ExternalDataVerificationSummary,
+  FormationPositionFitAuditSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
   PlayerRatingDiffSummary,
@@ -42,6 +44,7 @@ const REVIEW_SECTIONS = [
   { id: "team-review", label: "チーム優先度" },
   { id: "squad-gaps", label: "スカッド" },
   { id: "manager-trust", label: "監督・戦術" },
+  { id: "formation-fit", label: "布陣適合" },
   { id: "rating-workbench", label: "能力値候補" },
   { id: "rating-decision", label: "判断監査" },
   { id: "rating-diff", label: "能力値差分" },
@@ -57,6 +60,8 @@ export function DataReviewPage() {
   const [squadGapsError, setSquadGapsError] = useState<string | null>(null);
   const [managerTrust, setManagerTrust] = useState<ManagerTacticalTrustSummary | null>(null);
   const [managerTrustError, setManagerTrustError] = useState<string | null>(null);
+  const [formationFit, setFormationFit] = useState<FormationPositionFitAuditSummary | null>(null);
+  const [formationFitError, setFormationFitError] = useState<string | null>(null);
   const [ratingWorkbench, setRatingWorkbench] = useState<RatingReviewWorkbenchSummary | null>(null);
   const [ratingWorkbenchError, setRatingWorkbenchError] = useState<string | null>(null);
   const [ratingDecisionAudit, setRatingDecisionAudit] = useState<RatingDecisionAuditSummary | null>(null);
@@ -96,6 +101,10 @@ export function DataReviewPage() {
       .getManagerTacticalTrust()
       .then(setManagerTrust)
       .catch(() => setManagerTrustError("監督・戦術データレビューの読み込みに失敗しました。"));
+    api
+      .getFormationPositionFitAudit()
+      .then(setFormationFit)
+      .catch(() => setFormationFitError("フォーメーション適合監査の読み込みに失敗しました。"));
     api
       .getRatingReviewWorkbench()
       .then(setRatingWorkbench)
@@ -154,6 +163,7 @@ export function DataReviewPage() {
       <DataReviewOverviewPanel
         teamReview={summary}
         managerTrust={managerTrust}
+        formationFit={formationFit}
         ratingDecisionAudit={ratingDecisionAudit}
         playerRatingDiff={playerRatingDiff}
         sourceProvenanceAudit={sourceProvenanceAudit}
@@ -289,6 +299,17 @@ export function DataReviewPage() {
         )}
         {!managerTrust && !managerTrustError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {managerTrust && <ManagerTacticalTrustPanel summary={managerTrust} />}
+      </section>
+
+      <section id="formation-fit" className="scroll-mt-4">
+        <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">フォーメーション適合監査</h3>
+        {formationFitError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {formationFitError}
+          </div>
+        )}
+        {!formationFit && !formationFitError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {formationFit && <FormationPositionFitPanel summary={formationFit} />}
       </section>
 
       <section id="rating-workbench" className="scroll-mt-4">

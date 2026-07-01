@@ -510,6 +510,58 @@ class SubstitutionProfileCandidateQueueSummary(BaseModel):
     recommendationsJa: list[str]
 
 
+class FormationFitAssignment(BaseModel):
+    slotPosition: str
+    playerId: str | None
+    name: str | None
+    primaryPosition: str | None
+    secondaryPositions: list[str]
+    startingProbability: float | None
+    overall: int | None
+    reasonJa: str
+
+
+class FormationFitLowProbabilityStarter(BaseModel):
+    slotPosition: str
+    playerId: str
+    name: str
+    primaryPosition: str
+    startingProbability: float | None
+    overall: int | None
+    reasonJa: str
+
+
+class FormationFitTeamRow(BaseModel):
+    teamId: str
+    teamName: str | None
+    defaultFormation: str
+    rosterSize: int
+    starterCount: int
+    outOfPositionCount: int
+    lowProbabilityStarterCount: int
+    severityScore: float
+    severityBand: str
+    outOfPositionAssignments: list[FormationFitAssignment]
+    lowProbabilityStarters: list[FormationFitLowProbabilityStarter]
+    recommendedAction: str
+    recommendedActionJa: str
+
+
+class FormationPositionFitAuditSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    teamCount: int
+    flaggedTeamCount: int
+    highSeverityTeamCount: int
+    mediumSeverityTeamCount: int
+    lowSeverityTeamCount: int
+    outOfPositionAssignmentCount: int
+    lowProbabilityStarterCount: int
+    teams: list[FormationFitTeamRow]
+    recommendationsJa: list[str]
+
+
 class SourceRiskFlag(BaseModel):
     marker: str
     severity: str

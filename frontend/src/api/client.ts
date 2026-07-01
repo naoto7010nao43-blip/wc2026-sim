@@ -1,6 +1,7 @@
 import type {
   DataQualitySummary,
   ExternalDataVerificationSummary,
+  FormationPositionFitAuditSummary,
   LikelyLineupOut,
   ManagerTacticalTrustSummary,
   MatchPredictionOut,
@@ -90,4 +91,6 @@ export const api = {
   getSubstitutionModelGapSummary: () => getJson<SubstitutionModelGapSummary>("/api/model-diagnostics/substitution-model-gap"),
   getSubstitutionProfileCandidates: () =>
     getJson<SubstitutionProfileCandidateQueueSummary>("/api/model-diagnostics/substitution-profile-candidates"),
+  getFormationPositionFitAudit: () =>
+    getJson<FormationPositionFitAuditSummary>("/api/model-diagnostics/formation-position-fit"),
 };

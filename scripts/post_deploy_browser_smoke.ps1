@@ -62,7 +62,12 @@ $js = @'
   ];
   const requiredTextByRoute = {
     "/simulate": ["\u512a\u52e2\u5ea6", "\u52dd\u7387\u5dee", "xG\u5dee"],
-    "/data-review": ["\u80fd\u529b\u5024\u5dee\u5206\u76e3\u67fb", "\u624b\u52d5\u88dc\u6b63", "JPN_NAKAMURA_K"],
+    "/data-review": [
+      "\u80fd\u529b\u5024\u5dee\u5206\u76e3\u67fb",
+      "\u624b\u52d5\u88dc\u6b63",
+      "JPN_NAKAMURA_K",
+      "\u30d5\u30a9\u30fc\u30e1\u30fc\u30b7\u30e7\u30f3\u9069\u5408\u76e3\u67fb",
+    ],
   };
 
   if (backendBase) {

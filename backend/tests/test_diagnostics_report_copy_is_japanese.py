@@ -10,6 +10,7 @@ import re
 
 from app.services.model_diagnostics import (
     get_external_data_verification_summary,
+    get_formation_position_fit_audit_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
     get_player_rating_diff_summary,
@@ -37,6 +38,7 @@ COPY_FIELDS = {
     "precisionRiskJa",
     "evidenceNeededJa",
     "recommendedNextAction",
+    "recommendedActionJa",
     "recommendedHandlingJa",
     "nonBlockingWarnings",
 }
@@ -112,3 +114,7 @@ def test_substitution_model_gap_summary_copy_is_japanese():
 
 def test_substitution_profile_candidate_queue_summary_copy_is_japanese():
     _walk(get_substitution_profile_candidate_queue_summary())
+
+
+def test_formation_position_fit_summary_copy_is_japanese():
+    _walk(get_formation_position_fit_audit_summary())

@@ -15,6 +15,7 @@ from app.main import app
 from app.services.model_diagnostics import (
     REPORTS_DIR,
     get_external_data_verification_summary,
+    get_formation_position_fit_audit_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
     get_player_rating_diff_summary,
@@ -873,5 +874,62 @@ def test_get_substitution_profile_candidates_summary_is_read_only(tmp_path):
     before = report_path.read_text(encoding="utf-8")
 
     get_substitution_profile_candidate_queue_summary(reports_dir=tmp_path)
+
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_formation_position_fit_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/formation-position-fit")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "note", "teamCount", "flaggedTeamCount",
+        "highSeverityTeamCount", "mediumSeverityTeamCount", "lowSeverityTeamCount",
+        "outOfPositionAssignmentCount", "lowProbabilityStarterCount", "teams", "recommendationsJa",
+    ):
+        assert field in body
+    assert body["teamCount"] == len(body["teams"])
+
+
+def test_formation_position_fit_endpoint_exposes_high_risk_team_review(client):
+    response = client.get("/api/model-diagnostics/formation-position-fit")
+    body = response.json()
+    assert body["teamCount"] == 48
+    assert body["highSeverityTeamCount"] >= 1
+    assert body["outOfPositionAssignmentCount"] > 0
+    top_team = body["teams"][0]
+    assert top_team["severityBand"] in {"high", "medium", "low"}
+    assert top_team["outOfPositionAssignments"] or top_team["lowProbabilityStarters"]
+
+
+def test_formation_position_fit_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_formation_position_fit_audit_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["teamCount"] == 0
+    assert summary["teams"] == []
+    assert summary["note"]
+    assert summary["recommendationsJa"]
+
+
+def test_get_formation_position_fit_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "sourceReports": [],
+        "note": "test",
+        "teamCount": 1,
+        "flaggedTeamCount": 1,
+        "highSeverityTeamCount": 1,
+        "mediumSeverityTeamCount": 0,
+        "lowSeverityTeamCount": 0,
+        "outOfPositionAssignmentCount": 3,
+        "lowProbabilityStarterCount": 0,
+        "teams": [],
+        "recommendationsJa": ["test"],
+    }
+    report_path = tmp_path / "formation_position_fit_audit_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    get_formation_position_fit_audit_summary(reports_dir=tmp_path)
 
     assert report_path.read_text(encoding="utf-8") == before

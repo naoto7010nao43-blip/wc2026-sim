@@ -91,6 +91,7 @@ Assert-Contains "frontend bundle" $bundleText "data_source"
 Assert-Contains "frontend bundle" $bundleText "nonBlockingWarnings"
 Assert-Contains "frontend bundle" $bundleText "substitution-profile-candidates"
 Assert-Contains "frontend bundle" $bundleText "player-rating-diff"
+Assert-Contains "frontend bundle" $bundleText "formation-position-fit"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -176,6 +177,20 @@ if ($playerRatingDiff.lowConfidencePlayerCount -ne 0) {
     throw "Player rating diff still has low confidence players: $($playerRatingDiff.lowConfidencePlayerCount)"
 }
 Assert-HasJapanese "player rating diff note" $playerRatingDiff.note
+
+$formationFitJson = Get-Utf8Text "$backend/api/model-diagnostics/formation-position-fit"
+Assert-NoMojibakeMarkers "formation position fit JSON" $formationFitJson
+$formationFit = $formationFitJson | ConvertFrom-Json
+if ($formationFit.teamCount -ne 48) {
+    throw "Formation position fit audit teamCount is unexpected: $($formationFit.teamCount)"
+}
+if ($formationFit.highSeverityTeamCount -lt 1) {
+    throw "Formation position fit audit did not expose any high-severity review teams"
+}
+if ($formationFit.outOfPositionAssignmentCount -lt 1) {
+    throw "Formation position fit audit did not expose any position-fit findings"
+}
+Assert-HasJapanese "formation position fit note" $formationFit.note
 
 $japanLineupJson = Get-Utf8Text "$backend/api/teams/JPN/likely-lineup"
 Assert-NoMojibakeMarkers "Japan likely lineup JSON" $japanLineupJson

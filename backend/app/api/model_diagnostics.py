@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.schemas.model_diagnostics import (
+    FormationPositionFitAuditSummary,
     ManagerTacticalTrustSummary,
     ExternalDataVerificationSummary,
     ModelCalibrationSummary,
@@ -16,6 +17,7 @@ from app.schemas.model_diagnostics import (
     TeamReviewSummary,
 )
 from app.services.model_diagnostics import (
+    get_formation_position_fit_audit_summary,
     get_manager_tactical_trust_summary,
     get_external_data_verification_summary,
     get_model_calibration_summary,
@@ -97,3 +99,8 @@ def get_substitution_model_gap():
 @router.get("/substitution-profile-candidates", response_model=SubstitutionProfileCandidateQueueSummary)
 def get_substitution_profile_candidates():
     return get_substitution_profile_candidate_queue_summary()
+
+
+@router.get("/formation-position-fit", response_model=FormationPositionFitAuditSummary)
+def get_formation_position_fit():
+    return get_formation_position_fit_audit_summary()
