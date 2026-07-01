@@ -21,6 +21,13 @@ function freshnessLabel(status: string): string {
   return "良好";
 }
 
+function edgeLabel(edgePct: number, drawIsTop: boolean): string {
+  if (drawIsTop) return "引き分け寄り";
+  if (edgePct >= 18) return "明確な優勢";
+  if (edgePct >= 8) return "やや優勢";
+  return "拮抗";
+}
+
 export function MatchPredictionPanel({ homeTeamId, awayTeamId, dataQuality }: Props) {
   const [prediction, setPrediction] = useState<MatchPredictionOut | null>(null);
   const [error, setError] = useState<ScopedError | null>(null);
@@ -65,6 +72,12 @@ export function MatchPredictionPanel({ homeTeamId, awayTeamId, dataQuality }: Pr
   }
 
   const topScores = prediction.most_likely_scores.slice(0, 3);
+  const drawIsTop =
+    prediction.draw_pct >= prediction.home_win_pct && prediction.draw_pct >= prediction.away_win_pct;
+  const favoriteTeamId =
+    drawIsTop ? null : prediction.home_win_pct >= prediction.away_win_pct ? prediction.home_team_id : prediction.away_team_id;
+  const edgePct = Math.abs(prediction.home_win_pct - prediction.away_win_pct);
+  const xgEdge = prediction.home_expected_goals - prediction.away_expected_goals;
 
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
@@ -86,6 +99,22 @@ export function MatchPredictionPanel({ homeTeamId, awayTeamId, dataQuality }: Pr
           <div className="bg-blue-400" style={{ width: `${prediction.home_win_pct}%` }} />
           <div className="bg-slate-500" style={{ width: `${prediction.draw_pct}%` }} />
           <div className="bg-rose-400" style={{ width: `${prediction.away_win_pct}%` }} />
+        </div>
+      </div>
+
+      <div className="mt-3 rounded border border-slate-700/70 bg-slate-900/45 p-3">
+        <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+          <span className="text-slate-500">優勢度</span>
+          <span className="rounded bg-slate-700/60 px-2 py-0.5 font-semibold text-slate-200">
+            {edgeLabel(edgePct, drawIsTop)}
+          </span>
+        </div>
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-slate-200">
+          {favoriteTeamId ? <TeamBadge teamId={favoriteTeamId} /> : <span className="font-semibold text-slate-200">引き分け</span>}
+          <span className="text-xs text-slate-500">
+            勝率差 {edgePct.toFixed(1)}pt / xG差 {xgEdge >= 0 ? "+" : ""}
+            {xgEdge.toFixed(2)}
+          </span>
         </div>
       </div>
 
