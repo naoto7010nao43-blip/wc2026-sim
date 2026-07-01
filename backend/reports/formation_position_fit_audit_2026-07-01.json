@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T09:08:23.992084+00:00",
+  "generatedAt": "2026-07-01T14:28:18.203181+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -36,12 +36,12 @@
       "outOfPositionAssignments": [
         {
           "slotPosition": "RB",
-          "playerId": "BIH_BARISIC",
-          "name": "Ognjen Vranjes",
+          "playerId": "BIH_HADZIKADUNIC",
+          "name": "Nikola Katic",
           "primaryPosition": "CB",
           "secondaryPositions": [],
           "startingProbability": 12,
-          "overall": 67,
+          "overall": 69,
           "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
         },
         {
@@ -52,7 +52,7 @@
           "secondaryPositions": [
             "CM"
           ],
-          "startingProbability": 57,
+          "startingProbability": 69,
           "overall": 73,
           "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
         },
@@ -64,7 +64,7 @@
           "secondaryPositions": [
             "CM"
           ],
-          "startingProbability": 38,
+          "startingProbability": 35,
           "overall": 63,
           "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
         }
@@ -72,20 +72,20 @@
       "lowProbabilityStarters": [
         {
           "slotPosition": "RB",
-          "playerId": "BIH_BARISIC",
-          "name": "Ognjen Vranjes",
+          "playerId": "BIH_HADZIKADUNIC",
+          "name": "Nikola Katic",
           "primaryPosition": "CB",
           "startingProbability": 12,
-          "overall": 67,
+          "overall": 69,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         },
         {
           "slotPosition": "CM",
           "playerId": "BIH_GOJAK",
-          "name": "Gojko Cimirot",
-          "primaryPosition": "CM",
-          "startingProbability": 38,
-          "overall": 63,
+          "name": "Benjamin Tahirovic",
+          "primaryPosition": "CDM",
+          "startingProbability": 36,
+          "overall": 67,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         },
         {
@@ -93,7 +93,7 @@
           "playerId": "BIH_ALAJBEGOVIC",
           "name": "Kerim Alajbegovic",
           "primaryPosition": "CAM",
-          "startingProbability": 38,
+          "startingProbability": 35,
           "overall": 63,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
@@ -184,92 +184,6 @@
       "recommendedActionJa": "フォーメーションまたは不足ポジションを出典付きで再確認してください。"
     },
     {
-      "teamId": "RSA",
-      "teamName": "South Africa",
-      "defaultFormation": "4-3-3",
-      "rosterSize": 13,
-      "starterCount": 11,
-      "outOfPositionCount": 2,
-      "lowProbabilityStarterCount": 5,
-      "severityScore": 11,
-      "severityBand": "medium",
-      "outOfPositionAssignments": [
-        {
-          "slotPosition": "CM",
-          "playerId": "RSA_ZWANE",
-          "name": "Themba Zwane",
-          "primaryPosition": "CAM",
-          "secondaryPositions": [
-            "LW"
-          ],
-          "startingProbability": 36,
-          "overall": 65,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        },
-        {
-          "slotPosition": "LW",
-          "playerId": "RSA_MABASO",
-          "name": "Iqraam Rayners",
-          "primaryPosition": "ST",
-          "secondaryPositions": [
-            "RW"
-          ],
-          "startingProbability": 32,
-          "overall": 67,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        }
-      ],
-      "lowProbabilityStarters": [
-        {
-          "slotPosition": "CB",
-          "playerId": "RSA_NGCOBO",
-          "name": "Nkosinathi Sibisi",
-          "primaryPosition": "CB",
-          "startingProbability": 19,
-          "overall": 65,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CM",
-          "playerId": "RSA_MAYAMBELA",
-          "name": "Sphephelo Sithole",
-          "primaryPosition": "CM",
-          "startingProbability": 31,
-          "overall": 65,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CM",
-          "playerId": "RSA_ZWANE",
-          "name": "Themba Zwane",
-          "primaryPosition": "CAM",
-          "startingProbability": 36,
-          "overall": 65,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "LW",
-          "playerId": "RSA_MABASO",
-          "name": "Iqraam Rayners",
-          "primaryPosition": "ST",
-          "startingProbability": 32,
-          "overall": 67,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "RW",
-          "playerId": "RSA_MNTAMBO",
-          "name": "Oswin Appollis",
-          "primaryPosition": "RW",
-          "startingProbability": 35,
-          "overall": 68,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        }
-      ],
-      "recommendedAction": "monitor_position_flex",
-      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
-    },
-    {
       "teamId": "ECU",
       "teamName": "Ecuador",
       "defaultFormation": "3-5-2",
@@ -341,6 +255,83 @@
           "primaryPosition": "ST",
           "startingProbability": 31,
           "overall": 67,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        }
+      ],
+      "recommendedAction": "monitor_position_flex",
+      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
+    },
+    {
+      "teamId": "RSA",
+      "teamName": "South Africa",
+      "defaultFormation": "4-3-3",
+      "rosterSize": 13,
+      "starterCount": 11,
+      "outOfPositionCount": 2,
+      "lowProbabilityStarterCount": 4,
+      "severityScore": 10,
+      "severityBand": "medium",
+      "outOfPositionAssignments": [
+        {
+          "slotPosition": "CM",
+          "playerId": "RSA_ZWANE",
+          "name": "Themba Zwane",
+          "primaryPosition": "CAM",
+          "secondaryPositions": [
+            "LW"
+          ],
+          "startingProbability": 40,
+          "overall": 65,
+          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
+        },
+        {
+          "slotPosition": "LW",
+          "playerId": "RSA_MABASO",
+          "name": "Iqraam Rayners",
+          "primaryPosition": "ST",
+          "secondaryPositions": [
+            "RW"
+          ],
+          "startingProbability": 32,
+          "overall": 67,
+          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
+        }
+      ],
+      "lowProbabilityStarters": [
+        {
+          "slotPosition": "CB",
+          "playerId": "RSA_NGCOBO",
+          "name": "Nkosinathi Sibisi",
+          "primaryPosition": "CB",
+          "startingProbability": 19,
+          "overall": 65,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "CM",
+          "playerId": "RSA_MAYAMBELA",
+          "name": "Sphephelo Sithole",
+          "primaryPosition": "CM",
+          "startingProbability": 35,
+          "overall": 65,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "LW",
+          "playerId": "RSA_MABASO",
+          "name": "Iqraam Rayners",
+          "primaryPosition": "ST",
+          "startingProbability": 32,
+          "overall": 67,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "RW",
+          "playerId": "RSA_MNTAMBO",
+          "name": "Oswin Appollis",
+          "primaryPosition": "RW",
+          "startingProbability": 35,
+          "overall": 68,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],
@@ -657,8 +648,8 @@
           "secondaryPositions": [
             "LW"
           ],
-          "startingProbability": 32,
-          "overall": 64,
+          "startingProbability": 28,
+          "overall": 63,
           "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
         }
       ],
@@ -677,8 +668,8 @@
           "playerId": "JOR_ABUZRAYQ",
           "name": "Mohammad Abu Zrayq",
           "primaryPosition": "ST",
-          "startingProbability": 32,
-          "overall": 64,
+          "startingProbability": 28,
+          "overall": 63,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         },
         {
@@ -687,7 +678,7 @@
           "name": "Mohannad Abu Taha",
           "primaryPosition": "LB",
           "startingProbability": 17,
-          "overall": 64,
+          "overall": 63,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],
@@ -1240,6 +1231,62 @@
       "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
     },
     {
+      "teamId": "SWE",
+      "teamName": "Sweden",
+      "defaultFormation": "3-5-2",
+      "rosterSize": 14,
+      "starterCount": 11,
+      "outOfPositionCount": 1,
+      "lowProbabilityStarterCount": 3,
+      "severityScore": 6,
+      "severityBand": "medium",
+      "outOfPositionAssignments": [
+        {
+          "slotPosition": "RM",
+          "playerId": "SWE_ELANGA",
+          "name": "Anthony Elanga",
+          "primaryPosition": "LW",
+          "secondaryPositions": [
+            "RW"
+          ],
+          "startingProbability": 47,
+          "overall": 81,
+          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
+        }
+      ],
+      "lowProbabilityStarters": [
+        {
+          "slotPosition": "CB",
+          "playerId": "SWE_EKDAL",
+          "name": "Hjalmar Ekdal",
+          "primaryPosition": "CB",
+          "startingProbability": 36,
+          "overall": 72,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "CDM",
+          "playerId": "SWE_EKDAL_A",
+          "name": "Mattias Svanberg",
+          "primaryPosition": "CDM",
+          "startingProbability": 35,
+          "overall": 76,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "CDM",
+          "playerId": "SWE_OLSSON_J",
+          "name": "Jens Cajuste",
+          "primaryPosition": "CM",
+          "startingProbability": 32,
+          "overall": 75,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        }
+      ],
+      "recommendedAction": "monitor_position_flex",
+      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
+    },
+    {
       "teamId": "TUN",
       "teamName": "Tunisia",
       "defaultFormation": "3-4-2-1",
@@ -1579,53 +1626,6 @@
       "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
     },
     {
-      "teamId": "SWE",
-      "teamName": "Sweden",
-      "defaultFormation": "3-5-2",
-      "rosterSize": 14,
-      "starterCount": 11,
-      "outOfPositionCount": 1,
-      "lowProbabilityStarterCount": 2,
-      "severityScore": 5,
-      "severityBand": "medium",
-      "outOfPositionAssignments": [
-        {
-          "slotPosition": "RM",
-          "playerId": "SWE_ELANGA",
-          "name": "Anthony Elanga",
-          "primaryPosition": "LW",
-          "secondaryPositions": [
-            "RW"
-          ],
-          "startingProbability": 47,
-          "overall": 81,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        }
-      ],
-      "lowProbabilityStarters": [
-        {
-          "slotPosition": "CB",
-          "playerId": "SWE_EKDAL",
-          "name": "Hjalmar Ekdal",
-          "primaryPosition": "CB",
-          "startingProbability": 36,
-          "overall": 72,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CDM",
-          "playerId": "SWE_EKDAL_A",
-          "name": "Albin Ekdal",
-          "primaryPosition": "CDM",
-          "startingProbability": 17,
-          "overall": 68,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        }
-      ],
-      "recommendedAction": "monitor_position_flex",
-      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
-    },
-    {
       "teamId": "IRQ",
       "teamName": "Iraq",
       "defaultFormation": "4-3-3",
@@ -1719,7 +1719,7 @@
       "teamId": "TUR",
       "teamName": "Turkey",
       "defaultFormation": "4-2-3-1",
-      "rosterSize": 13,
+      "rosterSize": 14,
       "starterCount": 11,
       "outOfPositionCount": 0,
       "lowProbabilityStarterCount": 4,
@@ -1750,7 +1750,7 @@
           "playerId": "TUR_OZCAN",
           "name": "Salih Ozcan",
           "primaryPosition": "CDM",
-          "startingProbability": 32,
+          "startingProbability": 35,
           "overall": 75,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         },
@@ -2383,7 +2383,7 @@
           "name": "Ramin Rezaeian",
           "primaryPosition": "RB",
           "startingProbability": 23,
-          "overall": 64,
+          "overall": 63,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],
