@@ -8438,5 +8438,22 @@
     "dribbling": 66,
     "defending": 62,
     "physical": 71
+  },
+  {
+    "playerId": "TUR_CALHANOGLU",
+    "name": "Hakan Calhanoglu",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/hakan-calhanoglu/208128",
+    "sourceDataset": "EA official player ratings page accessed 2026-07-01",
+    "eaPlayerId": "208128",
+    "position": "CDM",
+    "observedDate": "2026-07-01",
+    "overall": 86,
+    "pace": 71,
+    "shooting": 81,
+    "passing": 87,
+    "dribbling": 82,
+    "defending": 80,
+    "physical": 73
   }
 ]

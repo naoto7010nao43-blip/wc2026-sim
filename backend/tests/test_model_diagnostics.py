@@ -535,7 +535,9 @@ def test_player_rating_diff_endpoint_returns_200_with_expected_top_level_fields(
 def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
     response = client.get("/api/model-diagnostics/player-rating-diff")
     body = response.json()
-    assert body["totalPlayers"] == 676
+    # 677: added Hakan Calhanoglu (TUR_CALHANOGLU), Turkiye's captain/playmaker,
+    # previously absent from the roster (2026-07-01).
+    assert body["totalPlayers"] == 677
     # 505 -> 506: the 2026-07-01 Czech GK roster refresh gave CZE_KOVAR
     # (Matej Kovar, PSV) a first EA FC 26 external rating; it was previously an
     # estimate-only placeholder (Matyas Vagner). CZE_JAROS (now Lukas Hornicek)
@@ -544,8 +546,12 @@ def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
     # ratings to three slots that were estimate-only placeholders for retired
     # players -- BIH_HADZIKADUNIC (now Nikola Katic), BIH_BARISIC (now Tarik
     # Muharemovic) and BIH_GOJAK (now Benjamin Tahirovic).
-    assert body["externallySourcedCount"] == 509
-    assert body["changedByManualOverrideCount"] == 12
+    # 509 -> 510: the 2026-07-01 addition of Hakan Calhanoglu (TUR_CALHANOGLU)
+    # brought his EA FC 26 external rating (overall 86).
+    assert body["externallySourcedCount"] == 510
+    # 12 -> 13: Calhanoglu also carries a startingProbability override (confirmed
+    # 2026 WC starter), so he joins the manual-override set.
+    assert body["changedByManualOverrideCount"] == 13
     assert body["lowConfidencePlayerCount"] == 0
     assert body["missingCriticalDataCount"] == 0
     assert "JPN_NAKAMURA_K" in body["changedByManualOverride"]

@@ -3833,7 +3833,7 @@
     "leagueName": null,
     "caps": 68,
     "nationalTeamGoals": 12,
-    "marketValueEur": 30000000,
+    "marketValueEur": 16000000,
     "careerStats": {
       "appearances": 72,
       "goals": 9,
@@ -12713,6 +12713,51 @@
     "staminaMax": 85,
     "dataConfidence": "external",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "playerId": "TUR_CALHANOGLU",
+    "teamId": "TUR",
+    "teamCode": "TUR",
+    "name": "Hakan Calhanoglu",
+    "nameJa": "ハカン・チャルハノール",
+    "age": 32,
+    "dateOfBirth": "08/02/1994",
+    "shirtNumber": null,
+    "primaryPosition": "CDM",
+    "secondaryPositions": [
+      "CM",
+      "CAM"
+    ],
+    "preferredFoot": "Right",
+    "heightCm": 178,
+    "weightKg": null,
+    "clubName": "FC Internazionale Milano (ITA)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": 108,
+    "nationalTeamGoals": 22,
+    "marketValueEur": 30000000,
+    "careerStats": {
+      "appearances": 34,
+      "goals": 8,
+      "assists": 7,
+      "minutesPlayed": 2900,
+      "keyPassesPer90": 1.8,
+      "successfulDribblesPer90": 0.7,
+      "tacklesPer90": 1.6,
+      "interceptionsPer90": 1.2,
+      "aerialDuelsWonPct": 55.0,
+      "passCompletionPct": 88.0
+    },
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 player ratings https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/hakan-calhanoglu/208128: CDM overall 86, face stats",
+      "Transfermarkt profile https://www.transfermarkt.com/hakan-calhanoglu/profil/spieler/126414: b.08/02/1994, 178cm, defensive midfield, EUR 16m, 108 caps, 22 goals",
+      "Olympics.com FIFA World Cup 2026 Turkiye squad guide https://www.olympics.com/en/news/fifa-world-cup-2026-turkiye-all-players-full-squad-list-key-stats-schedule: Turkiye captain"
+    ],
+    "staminaMax": 88,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
   },
   {
     "playerId": "CUW_ROOM",

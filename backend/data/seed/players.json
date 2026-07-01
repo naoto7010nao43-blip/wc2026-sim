@@ -2754,7 +2754,7 @@
       "aerial_duels_won_pct": 60.0,
       "pass_completion_pct": 86.0
     },
-    "market_value_eur": 30000000,
+    "market_value_eur": 16000000,
     "qualitative_adjustments": {
       "physical": 2,
       "shooting": 1
@@ -9073,6 +9073,38 @@
     ],
     "stamina_max": 85,
     "name_ja": "デニズ・ギュル"
+  },
+  {
+    "id": "TUR_CALHANOGLU",
+    "team_id": "TUR",
+    "name": "Hakan Calhanoglu",
+    "age": 32,
+    "primary_position": "CDM",
+    "secondary_positions": [
+      "CM",
+      "CAM"
+    ],
+    "career_stats": {
+      "appearances": 34,
+      "goals": 8,
+      "assists": 7,
+      "minutes_played": 2900,
+      "key_passes_per90": 1.8,
+      "successful_dribbles_per90": 0.7,
+      "tackles_per90": 1.6,
+      "interceptions_per90": 1.2,
+      "aerial_duels_won_pct": 55.0,
+      "pass_completion_pct": 88.0
+    },
+    "market_value_eur": 30000000,
+    "qualitative_adjustments": {},
+    "source_citations": [
+      "EA SPORTS FC 26 player ratings https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/hakan-calhanoglu/208128: CDM overall 86, face stats",
+      "Transfermarkt profile https://www.transfermarkt.com/hakan-calhanoglu/profil/spieler/126414: b.08/02/1994, 178cm, defensive midfield, EUR 16m, 108 caps, 22 goals",
+      "Olympics.com FIFA World Cup 2026 Turkiye squad guide https://www.olympics.com/en/news/fifa-world-cup-2026-turkiye-all-players-full-squad-list-key-stats-schedule: Turkiye captain"
+    ],
+    "stamina_max": 88,
+    "name_ja": "ハカン・チャルハノール"
   },
   {
     "id": "CUW_ROOM",

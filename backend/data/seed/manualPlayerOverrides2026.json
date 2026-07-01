@@ -130,5 +130,16 @@
     "overrides": {
       "startingProbability": 78
     }
+  },
+  {
+    "playerId": "TUR_CALHANOGLU",
+    "name": "Hakan Calhanoglu",
+    "reason": "Turkiye's captain and chief playmaker (regista at Inter); confirmed starter at the 2026 World Cup. The roster previously lacked him entirely, so the auto-selected midfield wrongly omitted the team's key player.",
+    "source": "Olympics.com FIFA 2026 WC squad guide + Transfermarkt profile",
+    "sourceUrl": "https://www.olympics.com/en/news/fifa-world-cup-2026-turkiye-all-players-full-squad-list-key-stats-schedule",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 92
+    }
   }
 ]

@@ -61,7 +61,12 @@ def test_summary_matches_current_repository_reports():
     # (Scotland RW), each confirmed from a played 2026 WC lineup. (Croatia's
     # Perisic fix was a position/override correction on an existing player, so it
     # does not change the count.)
-    assert summary["seed_player_count"] == 676
+    # 677 = the 676 above + Hakan Calhanoglu (TUR_CALHANOGLU), Turkiye's captain
+    # and chief playmaker, who was entirely absent from the roster so the sim
+    # fielded Turkiye without their key midfielder. Added 2026-07-01 with a
+    # sourced profile + EA FC 26 rating (overall 86) and a startingProbability
+    # override (confirmed 2026 WC starter).
+    assert summary["seed_player_count"] == 677
     assert summary["seed_team_count"] == 48
     assert summary["remaining_unmatched_official_players"] == 652
     assert summary["remaining_unmatched_seed_players"] == 73
@@ -84,7 +89,9 @@ def test_summary_matches_current_repository_reports():
     # in Sweden's final 26 -> Mattias Svanberg, VfL Wolfsburg), a confirmed 2026
     # squad midfielder with a sourced profile + EA FC 26 rating. Adding his club
     # (previously null) flips him into the official-profile count (609 -> 610).
-    assert summary["official_profile_players"] == 610
+    # The same-day addition of Hakan Calhanoglu (TUR_CALHANOGLU), a fully-
+    # profiled new player with club + caps, adds one more (610 -> 611).
+    assert summary["official_profile_players"] == 611
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72
