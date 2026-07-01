@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T08:38:46.949573+00:00",
+  "generatedAt": "2026-07-01T08:52:02.913944+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -1280,7 +1280,7 @@
     {
       "teamId": "KSA",
       "teamName": "Saudi Arabia",
-      "defaultFormation": "3-4-2-1",
+      "defaultFormation": "4-2-3-1",
       "rosterSize": 12,
       "displayedStarterCount": 11,
       "simulatedStarterCount": 11,
@@ -1289,28 +1289,28 @@
       "mismatches": [],
       "displayedPlayerIds": [
         "KSA_ALAQIDI",
+        "KSA_YASSERALSHAHRANI",
         "KSA_ALBULAIHI",
         "KSA_HASSANTAMBAKTI",
-        "KSA_ABDULLAHALHAMDAN",
-        "KSA_YASSERALSHAHRANI",
         "KSA_SAUDABDULHAMID",
         "KSA_ABDULELAHALAMRI",
         "KSA_MOHAMEDKANNO",
-        "KSA_MUSABALJUWAYR",
         "KSA_SALEMALDAWSARI",
+        "KSA_MUSABALJUWAYR",
+        "KSA_ABDULLAHALHAMDAN",
         "KSA_FIRASALBURAIKAN"
       ],
       "simulatedPlayerIds": [
         "KSA_ALAQIDI",
+        "KSA_YASSERALSHAHRANI",
         "KSA_ALBULAIHI",
         "KSA_HASSANTAMBAKTI",
-        "KSA_ABDULLAHALHAMDAN",
-        "KSA_YASSERALSHAHRANI",
         "KSA_SAUDABDULHAMID",
         "KSA_ABDULELAHALAMRI",
         "KSA_MOHAMEDKANNO",
-        "KSA_MUSABALJUWAYR",
         "KSA_SALEMALDAWSARI",
+        "KSA_MUSABALJUWAYR",
+        "KSA_ABDULLAHALHAMDAN",
         "KSA_FIRASALBURAIKAN"
       ],
       "reasonJa": "表示される予想スタメンと、試合エンジンが実際に使う先発XIは一致しています。"
