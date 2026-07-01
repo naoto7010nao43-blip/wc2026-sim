@@ -540,7 +540,11 @@ def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
     # (Matej Kovar, PSV) a first EA FC 26 external rating; it was previously an
     # estimate-only placeholder (Matyas Vagner). CZE_JAROS (now Lukas Hornicek)
     # was already externally sourced, so only one entry is added.
-    assert body["externallySourcedCount"] == 506
+    # 506 -> 509: the same-day Bosnia XI refresh gave first EA FC 26 external
+    # ratings to three slots that were estimate-only placeholders for retired
+    # players -- BIH_HADZIKADUNIC (now Nikola Katic), BIH_BARISIC (now Tarik
+    # Muharemovic) and BIH_GOJAK (now Benjamin Tahirovic).
+    assert body["externallySourcedCount"] == 509
     assert body["changedByManualOverrideCount"] == 12
     assert body["lowConfidencePlayerCount"] == 0
     assert body["missingCriticalDataCount"] == 0

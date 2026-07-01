@@ -1,32 +1,68 @@
 {
-  "generatedAt": "2026-07-01T12:41:08.287731+00:00",
+  "generatedAt": "2026-07-01T12:52:22.325387+00:00",
   "totalPlayers": 676,
   "biggestRisers": [
     {
-      "playerId": "CZE_KOVAR",
-      "delta": 8,
+      "playerId": "BIH_GOJAK",
+      "delta": 4,
+      "from": 63,
+      "to": 67
+    },
+    {
+      "playerId": "BIH_BARISIC",
+      "delta": 3,
       "from": 67,
-      "to": 75
-    },
-    {
-      "playerId": "TUN_BENHESSEN",
-      "delta": 1,
-      "from": 66,
-      "to": 67
-    },
-    {
-      "playerId": "ALG_ZIDANE_L",
-      "delta": 1,
-      "from": 66,
-      "to": 67
+      "to": 70
     }
   ],
   "biggestFallers": [
     {
-      "playerId": "CZE_JAROS",
-      "delta": -3,
-      "from": 75,
-      "to": 72
+      "playerId": "BIH_HADZIKADUNIC",
+      "delta": -2,
+      "from": 71,
+      "to": 69
+    },
+    {
+      "playerId": "IRN_REZAEIAN",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "IRN_HAJSAFI",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "IRN_JAHANBAKHSH",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "CPV_RYANMENDES",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "JOR_ABUTAHA",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "JOR_ABUZRAYQ",
+      "delta": -1,
+      "from": 64,
+      "to": 63
+    },
+    {
+      "playerId": "PAN_MILLER_R",
+      "delta": -1,
+      "from": 64,
+      "to": 63
     }
   ],
   "changedByManualOverride": [
@@ -184,7 +220,10 @@
     "CAN_OLUWASEYI",
     "BIH_VASILJ",
     "BIH_KOLASINAC",
+    "BIH_HADZIKADUNIC",
+    "BIH_BARISIC",
     "BIH_BICAKCIC",
+    "BIH_GOJAK",
     "BIH_BAJRAKTAREVIC",
     "BIH_TURKES",
     "BIH_DEMIROVIC",
@@ -574,9 +613,6 @@
     "KOR_KIMSEUNGGYU",
     "KOR_KIMTAEHYEON",
     "BIH_SEHIC",
-    "BIH_HADZIKADUNIC",
-    "BIH_BARISIC",
-    "BIH_GOJAK",
     "BIH_KRUNIC",
     "QAT_ABUNADA",
     "QAT_HASHMI",

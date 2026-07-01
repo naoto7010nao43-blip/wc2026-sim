@@ -74,7 +74,12 @@ def test_summary_matches_current_repository_reports():
     # placeholders with null club/caps: CZE_KOVAR (Matyas Vagner -> Matej Kovar,
     # PSV) and CZE_JAROS (Antonin Kinsky -> Lukas Hornicek, SC Braga), each
     # confirmed against the final 26-man squad and EA FC 26 (604 -> 606).
-    assert summary["official_profile_players"] == 606
+    # The same-day Bosnia XI refresh then completed three more stale null-club
+    # placeholders, each replaced by a confirmed 2026 WC starter with a sourced
+    # profile + EA FC 26 rating: BIH_HADZIKADUNIC (Toni Sunjic -> Nikola Katic,
+    # Schalke), BIH_BARISIC (Ognjen Vranjes -> Tarik Muharemovic, Sassuolo) and
+    # BIH_GOJAK (Gojko Cimirot -> Benjamin Tahirovic, Brondby) (606 -> 609).
+    assert summary["official_profile_players"] == 609
     assert 0 < summary["official_profile_coverage_pct"] < 100
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72

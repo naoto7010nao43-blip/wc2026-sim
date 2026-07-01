@@ -5264,62 +5264,66 @@
   {
     "id": "BIH_HADZIKADUNIC",
     "team_id": "BIH",
-    "name": "Toni Sunjic",
-    "age": 28,
+    "name": "Nikola Katic",
+    "age": 29,
     "primary_position": "CB",
     "secondary_positions": [],
     "career_stats": {
-      "appearances": 50,
-      "goals": 2,
-      "assists": 1,
-      "minutes_played": 4400,
-      "key_passes_per90": 0.3,
-      "successful_dribbles_per90": 0.3,
-      "tackles_per90": 1.8,
-      "interceptions_per90": 1.7,
-      "aerial_duels_won_pct": 65.0,
+      "appearances": 30,
+      "goals": 1,
+      "assists": 0,
+      "minutes_played": 2600,
+      "key_passes_per90": 0.2,
+      "successful_dribbles_per90": 0.2,
+      "tackles_per90": 1.6,
+      "interceptions_per90": 1.4,
+      "aerial_duels_won_pct": 66.0,
       "pass_completion_pct": 84.0
     },
-    "market_value_eur": 4500000,
+    "market_value_eur": 1800000,
     "qualitative_adjustments": {
       "defending": 1
     },
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Lorient/Ligue 1 2025-26 stats"
+      "EA SPORTS FC 26 player ratings ea.com id 244204 (2026-07-01): CB overall 69 (pace 51 shooting 35 passing 45 dribbling 53 defending 68 physical 79)",
+      "Wikipedia Nikola Katic: b.10/10/1996, FC Schalke 04, 194cm, Bosnia & Herzegovina 13 caps 0 goals; started 2026 WC group matches at CB",
+      "Transfermarkt spieler/422051 (2026): market value EUR 1.8m"
     ],
-    "stamina_max": 84,
-    "name_ja": "トニ・シュニッチ"
+    "stamina_max": 85,
+    "name_ja": "ニコラ・カティッチ"
   },
   {
     "id": "BIH_BARISIC",
     "team_id": "BIH",
-    "name": "Ognjen Vranjes",
-    "age": 36,
+    "name": "Tarik Muharemovic",
+    "age": 23,
     "primary_position": "CB",
-    "secondary_positions": [],
+    "secondary_positions": [
+      "CDM"
+    ],
     "career_stats": {
-      "appearances": 45,
-      "goals": 1,
+      "appearances": 33,
+      "goals": 2,
       "assists": 1,
-      "minutes_played": 3600,
-      "key_passes_per90": 0.2,
-      "successful_dribbles_per90": 0.2,
+      "minutes_played": 2900,
+      "key_passes_per90": 0.3,
+      "successful_dribbles_per90": 0.4,
       "tackles_per90": 1.7,
       "interceptions_per90": 1.5,
-      "aerial_duels_won_pct": 62.0,
-      "pass_completion_pct": 80.0
+      "aerial_duels_won_pct": 63.0,
+      "pass_completion_pct": 88.0
     },
-    "market_value_eur": 800000,
+    "market_value_eur": 14000000,
     "qualitative_adjustments": {
       "pace": -2
     },
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Veteran squad depth CB, domestic Bosnian league"
+      "EA SPORTS FC 26 player ratings ea.com id 262027 (2026-07-01): CB overall 70 (pace 59 shooting 23 passing 47 dribbling 56 defending 73 physical 67)",
+      "Wikipedia Tarik Muharemovic: b.28/02/2003, Sassuolo (Serie A), 187cm, left foot, Bosnia & Herzegovina 13 caps 1 goal; started 2026 WC group matches at CB",
+      "Transfermarkt spieler/679423 (2026): market value EUR 14m"
     ],
-    "stamina_max": 72,
-    "name_ja": "オグニェン・ヴラニェシュ"
+    "stamina_max": 85,
+    "name_ja": "タリク・ムハレモヴィッチ"
   },
   {
     "id": "BIH_BICAKCIC",
@@ -5356,34 +5360,35 @@
   {
     "id": "BIH_GOJAK",
     "team_id": "BIH",
-    "name": "Gojko Cimirot",
-    "age": 33,
-    "primary_position": "CM",
+    "name": "Benjamin Tahirovic",
+    "age": 23,
+    "primary_position": "CDM",
     "secondary_positions": [
-      "CDM"
+      "CM"
     ],
     "career_stats": {
-      "appearances": 55,
-      "goals": 3,
-      "assists": 5,
-      "minutes_played": 4500,
+      "appearances": 30,
+      "goals": 2,
+      "assists": 3,
+      "minutes_played": 2500,
       "key_passes_per90": 1.0,
-      "successful_dribbles_per90": 0.7,
-      "tackles_per90": 2.0,
-      "interceptions_per90": 1.4,
+      "successful_dribbles_per90": 0.8,
+      "tackles_per90": 2.2,
+      "interceptions_per90": 1.6,
       "aerial_duels_won_pct": 55.0,
-      "pass_completion_pct": 85.0
+      "pass_completion_pct": 86.0
     },
-    "market_value_eur": 2000000,
+    "market_value_eur": 4500000,
     "qualitative_adjustments": {
       "physical": -1
     },
     "source_citations": [
-      "Transfermarkt profile 2026-06",
-      "Standard Liege Belgian league 2025-26 stats"
+      "EA SPORTS FC 26 player ratings ea.com id 272596 (2026-07-01): CDM overall 67 (pace 51 shooting 50 passing 62 dribbling 66 defending 62 physical 71)",
+      "Wikipedia Benjamin Tahirovic: b.03/03/2003, Brondby IF (Danish Superliga), 191cm, Bosnia & Herzegovina 27 caps 2 goals; started 2026 WC group matches in midfield",
+      "Transfermarkt spieler/679423 / market value EUR 4.5m"
     ],
-    "stamina_max": 79,
-    "name_ja": "ゴイコ・チミロ"
+    "stamina_max": 88,
+    "name_ja": "ベンヤミン・タヒロヴィッチ"
   },
   {
     "id": "BIH_KRUNIC",
