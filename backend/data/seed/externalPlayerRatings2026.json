@@ -8305,5 +8305,39 @@
     "dribbling": 77,
     "defending": 41,
     "physical": 74
+  },
+  {
+    "playerId": "NOR_NUSA",
+    "name": "Antonio Nusa",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/antonio-nusa/262863",
+    "sourceDataset": "EA SPORTS FC 26 official player ratings page (fetched 2026-07-01)",
+    "eaPlayerId": "262863",
+    "position": "LM",
+    "observedDate": "2026-07-01",
+    "overall": 76,
+    "pace": 89,
+    "shooting": 72,
+    "passing": 68,
+    "dribbling": 81,
+    "defending": 41,
+    "physical": 63
+  },
+  {
+    "playerId": "ECU_ORDONEZ",
+    "name": "Joel Ordonez",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/joel-ordonez/268611",
+    "sourceDataset": "EA SPORTS FC 26 official player ratings page (fetched 2026-07-01)",
+    "eaPlayerId": "268611",
+    "position": "CB",
+    "observedDate": "2026-07-01",
+    "overall": 75,
+    "pace": 74,
+    "shooting": 26,
+    "passing": 54,
+    "dribbling": 56,
+    "defending": 74,
+    "physical": 79
   }
 ]

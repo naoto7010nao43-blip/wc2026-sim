@@ -75,5 +75,27 @@
     "overrides": {
       "startingProbability": 78
     }
+  },
+  {
+    "playerId": "NOR_NUSA",
+    "name": "Antonio Nusa",
+    "reason": "Confirmed Norway starter at the 2026 WC: started the R32 win vs Ivory Coast on the left wing. The roster lacked a natural left winger, so the slot was wrongly auto-filled by a striker (Sorloth).",
+    "source": "World Soccer Talk — Ivory Coast vs Norway confirmed lineups (2026 WC R32)",
+    "sourceUrl": "https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-ivory-coast-vs-norway-confirmed-lineups-for-the-2026-world-cup-match/",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 78
+    }
+  },
+  {
+    "playerId": "ECU_ORDONEZ",
+    "name": "Joel Ordonez",
+    "reason": "Confirmed Ecuador starter at the 2026 WC: started the R32 vs Mexico in the back three (Ordonez-Pacho-Hincapie). Felix Torres, previously assumed, was a substitute. The roster's 3rd centre-back was missing so the slot was auto-filled out of position.",
+    "source": "khelnow / FanDuel Research — Mexico vs Ecuador confirmed lineups (2026 WC R32)",
+    "sourceUrl": "https://khelnow.com/football/ecuador-starting-lineup-vs-mexico-fifa-world-cup-2026",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 80
+    }
   }
 ]

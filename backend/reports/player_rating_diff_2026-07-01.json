@@ -1,66 +1,24 @@
 {
-  "generatedAt": "2026-07-01T03:33:11.716740+00:00",
-  "totalPlayers": 672,
+  "generatedAt": "2026-07-01T04:16:26.407316+00:00",
+  "totalPlayers": 674,
   "biggestRisers": [
     {
-      "playerId": "PAR_GONZALEZ_D",
+      "playerId": "BIH_GOJAK",
       "delta": 1,
       "from": 62,
       "to": 63
     },
     {
-      "playerId": "AUS_DUKE",
+      "playerId": "JOR_SAADEH",
       "delta": 1,
       "from": 62,
       "to": 63
     },
     {
-      "playerId": "CUW_BAZOER",
-      "delta": 1,
-      "from": 61,
-      "to": 62
-    },
-    {
-      "playerId": "CUW_BACUNA_L",
+      "playerId": "UZB_KHAMDAMOV",
       "delta": 1,
       "from": 62,
       "to": 63
-    },
-    {
-      "playerId": "CUW_LOCADIA",
-      "delta": 1,
-      "from": 62,
-      "to": 63
-    },
-    {
-      "playerId": "CUW_MARGARITHA",
-      "delta": 1,
-      "from": 62,
-      "to": 63
-    },
-    {
-      "playerId": "IRN_GHODDOS",
-      "delta": 1,
-      "from": 62,
-      "to": 63
-    },
-    {
-      "playerId": "NZL_SINGH",
-      "delta": 1,
-      "from": 61,
-      "to": 62
-    },
-    {
-      "playerId": "CPV_KEVINPINA",
-      "delta": 1,
-      "from": 62,
-      "to": 63
-    },
-    {
-      "playerId": "JOR_RAWABDEH",
-      "delta": 1,
-      "from": 61,
-      "to": 62
     }
   ],
   "biggestFallers": [],
@@ -71,7 +29,9 @@
     "JPN_SUZUKI_ZION",
     "NZL_MOSS",
     "ESP_UNAISIMON",
-    "JPN_NAKAMURA_K"
+    "JPN_NAKAMURA_K",
+    "NOR_NUSA",
+    "ECU_ORDONEZ"
   ],
   "externallySourced": [
     "BRA_ALISSON",
@@ -574,7 +534,9 @@
     "PAN_ANDRADE",
     "PAN_GODOY",
     "PAN_FAJARDO",
-    "JPN_NAKAMURA_K"
+    "JPN_NAKAMURA_K",
+    "NOR_NUSA",
+    "ECU_ORDONEZ"
   ],
   "calibratedToEaScale": [
     "BRA_ALEXSANDRO",

@@ -53,10 +53,12 @@ def test_summary_endpoint_returns_current_counts(client):
 def test_summary_matches_current_repository_reports():
     summary = compute_data_quality_summary()
 
-    # 672 = 669 + Zion Suzuki (Japan No.1 GK, Phase 2a) + Ayumu Seko (Japan
-    # back-3 CB, Phase 2b) + Keito Nakamura (Japan left shadow-striker, Phase 2b)
-    # -- real 2026 WC starters previously missing from the roster.
-    assert summary["seed_player_count"] == 672
+    # 674 = 669 + real 2026 WC starters that were previously missing from the
+    # roster: Zion Suzuki (Japan No.1 GK, Phase 2a), Ayumu Seko (Japan back-3 CB,
+    # Phase 2b), Keito Nakamura (Japan left shadow-striker, Phase 2b), and the
+    # Phase 2c cross-team additions Antonio Nusa (Norway LW) + Joel Ordonez
+    # (Ecuador back-3 CB), each confirmed from a played R32 lineup.
+    assert summary["seed_player_count"] == 674
     assert summary["seed_team_count"] == 48
     assert summary["remaining_unmatched_official_players"] == 652
     assert summary["remaining_unmatched_seed_players"] == 73

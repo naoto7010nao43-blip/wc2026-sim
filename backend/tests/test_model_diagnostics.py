@@ -533,9 +533,9 @@ def test_player_rating_diff_endpoint_returns_200_with_expected_top_level_fields(
 def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
     response = client.get("/api/model-diagnostics/player-rating-diff")
     body = response.json()
-    assert body["totalPlayers"] == 672
-    assert body["externallySourcedCount"] == 501
-    assert body["changedByManualOverrideCount"] == 7
+    assert body["totalPlayers"] == 674
+    assert body["externallySourcedCount"] == 503
+    assert body["changedByManualOverrideCount"] == 9
     assert body["lowConfidencePlayerCount"] == 0
     assert body["missingCriticalDataCount"] == 0
     assert "JPN_NAKAMURA_K" in body["changedByManualOverride"]

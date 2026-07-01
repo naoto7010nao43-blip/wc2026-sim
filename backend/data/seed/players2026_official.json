@@ -30457,5 +30457,68 @@
     "staminaMax": 86,
     "dataConfidence": "external",
     "lastUpdated": "2026-07-01T00:00:00+00:00"
+  },
+  {
+    "playerId": "NOR_NUSA",
+    "teamId": "NOR",
+    "teamCode": "NOR",
+    "name": "Antonio Nusa",
+    "nameJa": "アントニオ・ヌサ",
+    "age": 21,
+    "dateOfBirth": null,
+    "shirtNumber": null,
+    "primaryPosition": "LM",
+    "secondaryPositions": [
+      "LW",
+      "CAM"
+    ],
+    "preferredFoot": "unknown",
+    "heightCm": 183,
+    "weightKg": null,
+    "clubName": "RB Leipzig (GER)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": null,
+    "careerStats": {},
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 262863): overall 76, LM, RB Leipzig (GER) — https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/antonio-nusa/262863",
+      "Confirmed 2026 World Cup starter — World Soccer Talk — Ivory Coast vs Norway confirmed lineups (2026 WC R32): https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-ivory-coast-vs-norway-confirmed-lineups-for-the-2026-world-cup-match/"
+    ],
+    "staminaMax": 88,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
+  },
+  {
+    "playerId": "ECU_ORDONEZ",
+    "teamId": "ECU",
+    "teamCode": "ECU",
+    "name": "Joel Ordonez",
+    "nameJa": "ジョエル・オルドニェス",
+    "age": 22,
+    "dateOfBirth": null,
+    "shirtNumber": null,
+    "primaryPosition": "CB",
+    "secondaryPositions": [],
+    "preferredFoot": "unknown",
+    "heightCm": 188,
+    "weightKg": null,
+    "clubName": "Club Brugge (BEL)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": null,
+    "careerStats": {},
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 268611): overall 75, CB, Club Brugge (BEL) — https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/joel-ordonez/268611",
+      "Confirmed 2026 World Cup starter — khelnow / FanDuel Research — Mexico vs Ecuador confirmed lineups (2026 WC R32): https://khelnow.com/football/ecuador-starting-lineup-vs-mexico-fifa-world-cup-2026"
+    ],
+    "staminaMax": 82,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
   }
 ]
