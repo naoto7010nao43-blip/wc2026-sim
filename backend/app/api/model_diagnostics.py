@@ -4,6 +4,7 @@ from app.schemas.model_diagnostics import (
     ManagerTacticalTrustSummary,
     ExternalDataVerificationSummary,
     ModelCalibrationSummary,
+    PlayerRatingDiffSummary,
     RatingDecisionAuditSummary,
     RatingReviewWorkbenchSummary,
     ReleaseReadinessSummary,
@@ -18,6 +19,7 @@ from app.services.model_diagnostics import (
     get_manager_tactical_trust_summary,
     get_external_data_verification_summary,
     get_model_calibration_summary,
+    get_player_rating_diff_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_release_readiness_summary,
@@ -70,6 +72,11 @@ def get_source_provenance_audit():
 @router.get("/rating-decision-audit", response_model=RatingDecisionAuditSummary)
 def get_rating_decision_audit():
     return get_rating_decision_audit_summary()
+
+
+@router.get("/player-rating-diff", response_model=PlayerRatingDiffSummary)
+def get_player_rating_diff():
+    return get_player_rating_diff_summary()
 
 
 @router.get("/model-calibration", response_model=ModelCalibrationSummary)

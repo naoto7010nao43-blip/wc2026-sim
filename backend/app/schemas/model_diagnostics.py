@@ -327,6 +327,26 @@ class RatingDecisionAuditSummary(BaseModel):
     teams: list[RatingDecisionTeamRow]
 
 
+class PlayerRatingDiffSummary(BaseModel):
+    generatedAt: str | None
+    sourceReports: list[SourceReportRef]
+    note: str
+    totalPlayers: int
+    biggestRisers: list[dict]
+    biggestFallers: list[dict]
+    changedByManualOverrideCount: int
+    changedByManualOverride: list[str]
+    externallySourcedCount: int
+    externallySourcedSample: list[str]
+    calibratedToEaScaleCount: int
+    calibratedToEaScaleSample: list[str]
+    lowConfidencePlayerCount: int
+    lowConfidencePlayers: list[str]
+    missingCriticalDataCount: int
+    missingCriticalData: list[str]
+    recommendationsJa: list[str]
+
+
 class ModelCalibrationOverall(BaseModel):
     before_matchup_count: int
     after_matchup_count: int

@@ -17,6 +17,7 @@ from app.services.model_diagnostics import (
     get_external_data_verification_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
+    get_player_rating_diff_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_release_readiness_summary,
@@ -512,6 +513,65 @@ def test_get_rating_decision_audit_summary_is_read_only(tmp_path):
 
     get_rating_decision_audit_summary(reports_dir=tmp_path)
 
+    assert report_path.read_text(encoding="utf-8") == before
+
+
+def test_player_rating_diff_endpoint_returns_200_with_expected_top_level_fields(client):
+    response = client.get("/api/model-diagnostics/player-rating-diff")
+    assert response.status_code == 200
+    body = response.json()
+    for field in (
+        "generatedAt", "sourceReports", "note", "totalPlayers", "biggestRisers",
+        "biggestFallers", "changedByManualOverrideCount", "changedByManualOverride",
+        "externallySourcedCount", "externallySourcedSample", "calibratedToEaScaleCount",
+        "calibratedToEaScaleSample", "lowConfidencePlayerCount", "lowConfidencePlayers",
+        "missingCriticalDataCount", "missingCriticalData", "recommendationsJa",
+    ):
+        assert field in body
+
+
+def test_player_rating_diff_endpoint_exposes_current_diff_guardrails(client):
+    response = client.get("/api/model-diagnostics/player-rating-diff")
+    body = response.json()
+    assert body["totalPlayers"] == 672
+    assert body["externallySourcedCount"] == 501
+    assert body["changedByManualOverrideCount"] == 7
+    assert body["lowConfidencePlayerCount"] == 0
+    assert body["missingCriticalDataCount"] == 0
+    assert "JPN_NAKAMURA_K" in body["changedByManualOverride"]
+    assert len(body["biggestRisers"]) > 0
+
+
+def test_player_rating_diff_missing_report_falls_back_to_calm_empty_state(tmp_path):
+    summary = get_player_rating_diff_summary(reports_dir=tmp_path)
+    assert summary["generatedAt"] is None
+    assert summary["totalPlayers"] == 0
+    assert summary["changedByManualOverrideCount"] == 0
+    assert summary["lowConfidencePlayerCount"] == 0
+    assert summary["missingCriticalDataCount"] == 0
+    assert summary["note"]
+    assert summary["recommendationsJa"]
+
+
+def test_get_player_rating_diff_summary_is_read_only(tmp_path):
+    seed_report = {
+        "generatedAt": "2026-01-01T00:00:00+00:00",
+        "totalPlayers": 1,
+        "biggestRisers": [{"playerId": "AAA_ONE", "delta": 1, "from": 60, "to": 61}],
+        "biggestFallers": [],
+        "changedByManualOverride": ["AAA_ONE"],
+        "externallySourced": ["AAA_ONE"],
+        "calibratedToEaScale": [],
+        "lowConfidencePlayers": [],
+        "missingCriticalData": [],
+    }
+    report_path = tmp_path / "player_rating_diff_2026-01-01.json"
+    report_path.write_text(json.dumps(seed_report), encoding="utf-8")
+    before = report_path.read_text(encoding="utf-8")
+
+    summary = get_player_rating_diff_summary(reports_dir=tmp_path)
+
+    assert summary["changedByManualOverride"] == ["AAA_ONE"]
     assert report_path.read_text(encoding="utf-8") == before
 
 

@@ -5,6 +5,7 @@ import { DataReviewOverviewPanel } from "../components/DataReviewOverviewPanel";
 import { ExternalDataVerificationPanel } from "../components/ExternalDataVerificationPanel";
 import { ManagerTacticalTrustPanel } from "../components/ManagerTacticalTrustPanel";
 import { ModelCalibrationPanel } from "../components/ModelCalibrationPanel";
+import { PlayerRatingDiffPanel } from "../components/PlayerRatingDiffPanel";
 import { RatingDecisionAuditPanel } from "../components/RatingDecisionAuditPanel";
 import { RatingReviewWorkbenchPanel } from "../components/RatingReviewWorkbenchPanel";
 import { ReleaseReadinessPanel } from "../components/ReleaseReadinessPanel";
@@ -19,6 +20,7 @@ import type {
   ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
+  PlayerRatingDiffSummary,
   RatingDecisionAuditSummary,
   RatingReviewWorkbenchSummary,
   ReleaseReadinessSummary,
@@ -42,6 +44,7 @@ const REVIEW_SECTIONS = [
   { id: "manager-trust", label: "監督・戦術" },
   { id: "rating-workbench", label: "能力値候補" },
   { id: "rating-decision", label: "判断監査" },
+  { id: "rating-diff", label: "能力値差分" },
   { id: "source-provenance", label: "出典" },
 ];
 
@@ -58,6 +61,8 @@ export function DataReviewPage() {
   const [ratingWorkbenchError, setRatingWorkbenchError] = useState<string | null>(null);
   const [ratingDecisionAudit, setRatingDecisionAudit] = useState<RatingDecisionAuditSummary | null>(null);
   const [ratingDecisionAuditError, setRatingDecisionAuditError] = useState<string | null>(null);
+  const [playerRatingDiff, setPlayerRatingDiff] = useState<PlayerRatingDiffSummary | null>(null);
+  const [playerRatingDiffError, setPlayerRatingDiffError] = useState<string | null>(null);
   const [sourceProvenanceAudit, setSourceProvenanceAudit] = useState<SourceProvenanceAuditSummary | null>(null);
   const [sourceProvenanceAuditError, setSourceProvenanceAuditError] = useState<string | null>(null);
   const [modelCalibration, setModelCalibration] = useState<ModelCalibrationSummary | null>(null);
@@ -99,6 +104,10 @@ export function DataReviewPage() {
       .getRatingDecisionAudit()
       .then(setRatingDecisionAudit)
       .catch(() => setRatingDecisionAuditError("能力値レビュー判断監査の読み込みに失敗しました。"));
+    api
+      .getPlayerRatingDiffSummary()
+      .then(setPlayerRatingDiff)
+      .catch(() => setPlayerRatingDiffError("能力値差分監査の読み込みに失敗しました。"));
     api
       .getSourceProvenanceAudit()
       .then(setSourceProvenanceAudit)
@@ -146,6 +155,7 @@ export function DataReviewPage() {
         teamReview={summary}
         managerTrust={managerTrust}
         ratingDecisionAudit={ratingDecisionAudit}
+        playerRatingDiff={playerRatingDiff}
         sourceProvenanceAudit={sourceProvenanceAudit}
         modelCalibration={modelCalibration}
         releaseReadiness={releaseReadiness}
@@ -301,6 +311,17 @@ export function DataReviewPage() {
         )}
         {!ratingDecisionAudit && !ratingDecisionAuditError && <p className="text-sm text-slate-400">読み込み中...</p>}
         {ratingDecisionAudit && <RatingDecisionAuditPanel summary={ratingDecisionAudit} />}
+      </section>
+
+      <section id="rating-diff" className="scroll-mt-4">
+        <h3 className="mb-2 text-xs uppercase tracking-widest text-slate-500">能力値差分監査</h3>
+        {playerRatingDiffError && (
+          <div className="rounded-lg border border-slate-700 bg-slate-800/40 p-4 text-center text-sm text-rose-400">
+            {playerRatingDiffError}
+          </div>
+        )}
+        {!playerRatingDiff && !playerRatingDiffError && <p className="text-sm text-slate-400">読み込み中...</p>}
+        {playerRatingDiff && <PlayerRatingDiffPanel summary={playerRatingDiff} />}
       </section>
 
       <section id="source-provenance" className="scroll-mt-4">

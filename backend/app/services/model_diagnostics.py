@@ -207,6 +207,68 @@ def get_rating_decision_audit_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     return report
 
 
+def get_player_rating_diff_summary(reports_dir: Path = REPORTS_DIR) -> dict:
+    report = _latest_report(reports_dir, "player_rating_diff_*.json")
+    if report is None:
+        return {
+            "generatedAt": None,
+            "sourceReports": [],
+            "note": "能力値差分レポートがまだ生成されていません。能力値更新の妥当性を確認する前に、差分レポートを生成してください。",
+            "totalPlayers": 0,
+            "biggestRisers": [],
+            "biggestFallers": [],
+            "changedByManualOverrideCount": 0,
+            "changedByManualOverride": [],
+            "externallySourcedCount": 0,
+            "externallySourcedSample": [],
+            "calibratedToEaScaleCount": 0,
+            "calibratedToEaScaleSample": [],
+            "lowConfidencePlayerCount": 0,
+            "lowConfidencePlayers": [],
+            "missingCriticalDataCount": 0,
+            "missingCriticalData": [],
+            "recommendationsJa": [
+                "能力値を公開前に確認するには、player_rating_diff レポートを生成して差分を可視化してください。",
+            ],
+        }
+
+    changed_by_manual = report.get("changedByManualOverride") or []
+    externally_sourced = report.get("externallySourced") or []
+    calibrated_to_ea_scale = report.get("calibratedToEaScale") or []
+    low_confidence = report.get("lowConfidencePlayers") or []
+    missing_critical = report.get("missingCriticalData") or []
+    recommendations = [
+        "手動補正が入った選手は、出典と意図が説明できる状態か確認してください。",
+        "低信頼度または重要データ欠落がある場合は、能力値変更より先に基礎データを補強してください。",
+        "差分は能力値更新の監査用であり、この表示だけで選手能力の正しさを保証するものではありません。",
+    ]
+    if not low_confidence and not missing_critical:
+        recommendations.insert(1, "低信頼度選手と重要データ欠落は検出されていません。次は手動補正と外部出典の説明可能性を確認してください。")
+
+    return {
+        "generatedAt": report.get("generatedAt"),
+        "sourceReports": [{"name": "player_rating_diff", "generatedAt": report.get("generatedAt")}],
+        "note": (
+            "生成済み能力値の差分を読み取り専用で要約した監査パネルです。"
+            "seedデータや予測式は変更せず、手動補正・外部出典・低信頼度データの確認ポイントだけを表示します。"
+        ),
+        "totalPlayers": report.get("totalPlayers", 0),
+        "biggestRisers": report.get("biggestRisers") or [],
+        "biggestFallers": report.get("biggestFallers") or [],
+        "changedByManualOverrideCount": len(changed_by_manual),
+        "changedByManualOverride": changed_by_manual,
+        "externallySourcedCount": len(externally_sourced),
+        "externallySourcedSample": externally_sourced[:12],
+        "calibratedToEaScaleCount": len(calibrated_to_ea_scale),
+        "calibratedToEaScaleSample": calibrated_to_ea_scale[:12],
+        "lowConfidencePlayerCount": len(low_confidence),
+        "lowConfidencePlayers": low_confidence,
+        "missingCriticalDataCount": len(missing_critical),
+        "missingCriticalData": missing_critical,
+        "recommendationsJa": recommendations,
+    }
+
+
 def get_model_calibration_summary(reports_dir: Path = REPORTS_DIR) -> dict:
     comparison = _latest_report(reports_dir, "prediction_benchmark_comparison_rank75_order_neutral_*.json")
     comparison_report_name = "prediction_benchmark_comparison_rank75_order_neutral"

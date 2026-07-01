@@ -42,6 +42,7 @@ if ($backend -ne "") {
     Invoke-UrlCheck "Backend manager tactical diagnostics" "$backend/api/model-diagnostics/manager-tactical-trust"
     Invoke-UrlCheck "Backend rating workbench diagnostics" "$backend/api/model-diagnostics/rating-review-workbench"
     Invoke-UrlCheck "Backend rating decision diagnostics" "$backend/api/model-diagnostics/rating-decision-audit"
+    Invoke-UrlCheck "Backend player rating diff diagnostics" "$backend/api/model-diagnostics/player-rating-diff"
     Invoke-UrlCheck "Backend source provenance diagnostics" "$backend/api/model-diagnostics/source-provenance-audit"
     Invoke-UrlCheck "Backend model calibration diagnostics" "$backend/api/model-diagnostics/model-calibration"
     Invoke-UrlCheck "Backend simulation stability diagnostics" "$backend/api/model-diagnostics/simulation-stability"

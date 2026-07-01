@@ -90,6 +90,7 @@ Assert-Contains "frontend bundle" $bundleText "manager_name"
 Assert-Contains "frontend bundle" $bundleText "data_source"
 Assert-Contains "frontend bundle" $bundleText "nonBlockingWarnings"
 Assert-Contains "frontend bundle" $bundleText "substitution-profile-candidates"
+Assert-Contains "frontend bundle" $bundleText "player-rating-diff"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -161,6 +162,20 @@ if ($substitutionQueue.readyTeamCount -lt 1) {
     throw "Substitution profile candidate queue did not expose any review-ready teams"
 }
 Assert-HasJapanese "substitution profile candidate note" $substitutionQueue.note
+
+$playerRatingDiffJson = Get-Utf8Text "$backend/api/model-diagnostics/player-rating-diff"
+Assert-NoMojibakeMarkers "player rating diff JSON" $playerRatingDiffJson
+$playerRatingDiff = $playerRatingDiffJson | ConvertFrom-Json
+if ($playerRatingDiff.totalPlayers -lt 1) {
+    throw "Player rating diff did not expose any players"
+}
+if ($playerRatingDiff.changedByManualOverride -notcontains "JPN_NAKAMURA_K") {
+    throw "Player rating diff does not include EA-sourced Keito Nakamura in manual override audit"
+}
+if ($playerRatingDiff.lowConfidencePlayerCount -ne 0) {
+    throw "Player rating diff still has low confidence players: $($playerRatingDiff.lowConfidencePlayerCount)"
+}
+Assert-HasJapanese "player rating diff note" $playerRatingDiff.note
 
 $japanLineupJson = Get-Utf8Text "$backend/api/teams/JPN/likely-lineup"
 Assert-NoMojibakeMarkers "Japan likely lineup JSON" $japanLineupJson

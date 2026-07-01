@@ -3,6 +3,7 @@ import type {
   ExternalDataVerificationSummary,
   ManagerTacticalTrustSummary,
   ModelCalibrationSummary,
+  PlayerRatingDiffSummary,
   RatingDecisionAuditSummary,
   ReleaseReadinessSummary,
   SimulationStabilitySummary,
@@ -16,6 +17,7 @@ interface Props {
   teamReview: TeamReviewSummary | null;
   managerTrust: ManagerTacticalTrustSummary | null;
   ratingDecisionAudit: RatingDecisionAuditSummary | null;
+  playerRatingDiff: PlayerRatingDiffSummary | null;
   sourceProvenanceAudit: SourceProvenanceAuditSummary | null;
   modelCalibration: ModelCalibrationSummary | null;
   releaseReadiness: ReleaseReadinessSummary | null;
@@ -61,6 +63,7 @@ export function DataReviewOverviewPanel({
   teamReview,
   managerTrust,
   ratingDecisionAudit,
+  playerRatingDiff,
   sourceProvenanceAudit,
   modelCalibration,
   releaseReadiness,
@@ -73,6 +76,9 @@ export function DataReviewOverviewPanel({
   const highPriorityTeams = teamReview?.teams.filter((team) => team.priority_band === "high").length ?? 0;
   const managerHighRisk = managerTrust?.bandCounts.high ?? 0;
   const laterProposalCandidates = ratingDecisionAudit?.bucketCounts.candidate_for_later_proposal ?? 0;
+  const manualRatingOverrides = playerRatingDiff?.changedByManualOverrideCount ?? 0;
+  const ratingDiffDataRisk =
+    (playerRatingDiff?.lowConfidencePlayerCount ?? 0) + (playerRatingDiff?.missingCriticalDataCount ?? 0);
   const sourceReviewCandidates = sourceProvenanceAudit?.sourceReviewCandidateCount ?? 0;
   const sourceRiskPlayers = sourceProvenanceAudit?.seedSourceSummary.players_with_source_risk ?? 0;
   const stabilityBand = simulationStability?.summary?.stabilityBand;
@@ -96,6 +102,8 @@ export function DataReviewOverviewPanel({
       : null,
     highPriorityTeams > 0 ? `高優先度チーム ${highPriorityTeams}件をデータ更新候補として確認` : null,
     laterProposalCandidates > 0 ? `能力値の将来提案候補 ${laterProposalCandidates}件を出典と照合` : null,
+    manualRatingOverrides > 0 ? `能力値差分の手動補正 ${manualRatingOverrides}件は、公開前に出典と意図を確認` : null,
+    ratingDiffDataRisk > 0 ? `能力値差分に低信頼度または重要データ欠落 ${ratingDiffDataRisk}件が残っています` : null,
     externalReadyForReview > 0 ? `外部調査のCodexレビュー候補 ${externalReadyForReview}件をseed反映前に精査` : null,
     externalWarnings > 0 ? `外部調査の警告 ${externalWarnings}件は反映候補から一段止める` : null,
     externalMissingUrls > 0 ? `外部調査候補 ${externalMissingUrls}件はURL付き出典で再確認してから反映判断` : null,
@@ -141,6 +149,7 @@ export function DataReviewOverviewPanel({
         <Metric label="外部URL未確認" value={externalMissingUrls} tone={externalMissingUrls > 0 ? "warn" : "good"} />
         <Metric label="監督・戦術High" value={managerHighRisk} tone={managerHighRisk > 0 ? "warn" : "good"} />
         <Metric label="能力値提案候補" value={laterProposalCandidates} tone={laterProposalCandidates > 0 ? "warn" : "slate"} />
+        <Metric label="能力値手動補正" value={manualRatingOverrides} tone={manualRatingOverrides > 0 ? "warn" : "good"} />
         <Metric label="出典確認候補" value={sourceReviewCandidates} tone={sourceReviewCandidates > 0 ? "warn" : "good"} />
         <Metric label="交代モデル" value={substitutionNeedsSpec ? "将来仕様候補" : "現行対応"} tone={substitutionNeedsSpec ? "warn" : "good"} />
         <Metric label="交代候補準備" value={substitutionReadyTeams} tone={substitutionReadyTeams > 0 ? "warn" : "good"} />

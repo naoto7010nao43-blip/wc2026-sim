@@ -545,6 +545,26 @@ export interface RatingDecisionAuditSummary {
   teams: RatingDecisionTeamRow[];
 }
 
+export interface PlayerRatingDiffSummary {
+  generatedAt: string | null;
+  sourceReports: SourceReportRef[];
+  note: string;
+  totalPlayers: number;
+  biggestRisers: Array<Record<string, number | string | null>>;
+  biggestFallers: Array<Record<string, number | string | null>>;
+  changedByManualOverrideCount: number;
+  changedByManualOverride: string[];
+  externallySourcedCount: number;
+  externallySourcedSample: string[];
+  calibratedToEaScaleCount: number;
+  calibratedToEaScaleSample: string[];
+  lowConfidencePlayerCount: number;
+  lowConfidencePlayers: string[];
+  missingCriticalDataCount: number;
+  missingCriticalData: string[];
+  recommendationsJa: string[];
+}
+
 export interface SourceRiskFlag {
   marker: string;
   severity: string;

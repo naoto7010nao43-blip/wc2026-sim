@@ -12,6 +12,7 @@ from app.services.model_diagnostics import (
     get_external_data_verification_summary,
     get_manager_tactical_trust_summary,
     get_model_calibration_summary,
+    get_player_rating_diff_summary,
     get_rating_decision_audit_summary,
     get_rating_review_workbench_summary,
     get_release_readiness_summary,
@@ -91,6 +92,10 @@ def test_source_provenance_audit_summary_copy_is_japanese():
 
 def test_rating_decision_audit_summary_copy_is_japanese():
     _walk(get_rating_decision_audit_summary())
+
+
+def test_player_rating_diff_summary_copy_is_japanese():
+    _walk(get_player_rating_diff_summary())
 
 
 def test_model_calibration_summary_copy_is_japanese():
