@@ -7,7 +7,8 @@ start of simulate_match() and discarded afterward.
 
 from dataclasses import dataclass, field
 
-from app.engine.formations import FORMATIONS, SLOT_POSITION_ALIASES, Formation
+from app.engine.formations import FORMATIONS, Formation
+from app.engine.lineup_selection import select_starting_assignments
 
 # Per-manager substitution tendency, estimated/external metadata rather than
 # confirmed fact (see DATA_GOVERNANCE_POLICY.md). Every field defaults to a
@@ -122,44 +123,14 @@ def build_team_state(
 ) -> TeamState:
     """Assign up to 11 players from `players` (list of player dicts with at
     least id/name/primary_position/secondary_positions/overall/attributes/
-    stamina_max) to the slots of the given formation."""
+    stamina_max) to the slots of the given formation. Slot assignment is
+    delegated to select_starting_assignments() so the simulated XI is always
+    identical to the displayed likely XI (scored by real-world starting
+    likelihood, not raw overall)."""
     formation = FORMATIONS[formation_name]
     available = list(players)
-    used_ids: set[str] = set()
-    assignments: dict[int, dict] = {}
-
-    def pick(slot_idx: int, candidates: list[dict]) -> bool:
-        candidates = [p for p in candidates if p["id"] not in used_ids]
-        if not candidates:
-            return False
-        best = max(candidates, key=lambda p: p["overall"])
-        assignments[slot_idx] = best
-        used_ids.add(best["id"])
-        return True
-
-    # Pass 1: exact primary position match.
-    for idx, slot in enumerate(formation.slots):
-        if idx in assignments:
-            continue
-        exact = [p for p in available if p["primary_position"] == slot.position]
-        pick(idx, exact)
-
-    # Pass 2: alias positions (primary or secondary).
-    for idx, slot in enumerate(formation.slots):
-        if idx in assignments:
-            continue
-        aliases = SLOT_POSITION_ALIASES.get(slot.position, [slot.position])
-        candidates = [
-            p for p in available
-            if p["primary_position"] in aliases or any(sp in aliases for sp in p.get("secondary_positions", []))
-        ]
-        pick(idx, candidates)
-
-    # Pass 3: fallback — any remaining unused player, best overall first.
-    for idx, slot in enumerate(formation.slots):
-        if idx in assignments:
-            continue
-        pick(idx, available)
+    assignments = select_starting_assignments(available, formation_name)
+    used_ids = {p["id"] for p in assignments.values()}
 
     lineup: list[PlayerState] = []
     for idx, slot in enumerate(formation.slots):

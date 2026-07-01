@@ -1,13 +1,13 @@
-"""Predicted starting-XI builder for display purposes (e.g. a squad/
-lineup API endpoint) -- NOT used by the match simulator engine. Deliberately
-kept separate from app/engine/state.py's build_team_state(), which already
-does live, in-match slot assignment scored by `overall`; this module reuses
-only the *static* formation data from app.engine.formations (read-only) and
-scores candidates by `startingProbability` instead, so the two stay
-independent and changes here can't affect simulated match outcomes.
+"""Predicted starting-XI builder for display purposes (e.g. a squad/lineup API
+endpoint). Slot assignment is delegated to
+app.engine.lineup_selection.select_starting_assignments(), the *same* selector
+the match simulator uses, so the displayed likely XI is always identical to the
+XI that gets simulated. (This module then just formats the assignment as
+display dicts.)
 """
 
-from app.engine.formations import FORMATIONS, SLOT_POSITION_ALIASES
+from app.engine.formations import FORMATIONS
+from app.engine.lineup_selection import lineup_score, select_starting_assignments
 
 
 def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
@@ -18,52 +18,7 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
     absent. Returns one entry per formation slot, in formation order,
     skipped if the squad has fewer than 11 fielders for that slot."""
     formation = FORMATIONS[formation_name]
-    available = list(players)
-    used_ids: set[str] = set()
-    assignments: dict[int, dict] = {}
-
-    # A goalkeeper must never fill an outfield slot (nor an outfielder the GK
-    # slot). With partial rosters the last-resort fallback below would
-    # otherwise drop a backup keeper into, say, a centre-back slot. Keep the
-    # two pools strictly separate so every pass only ever considers the right
-    # kind of player for the slot.
-    def _is_gk(p: dict) -> bool:
-        return p["primary_position"] == "GK"
-
-    def _slot_pool(slot_position: str) -> list[dict]:
-        want_gk = slot_position == "GK"
-        return [p for p in available if _is_gk(p) == want_gk]
-
-    def _score(p: dict) -> float:
-        starting_probability = (p.get("attributes") or {}).get("startingProbability")
-        return starting_probability if starting_probability is not None else p.get("overall", 50)
-
-    def pick(slot_idx: int, candidates: list[dict]) -> None:
-        candidates = [p for p in candidates if p["id"] not in used_ids]
-        if not candidates:
-            return
-        best = max(candidates, key=_score)
-        assignments[slot_idx] = best
-        used_ids.add(best["id"])
-
-    for idx, slot in enumerate(formation.slots):
-        exact = [p for p in _slot_pool(slot.position) if p["primary_position"] == slot.position]
-        pick(idx, exact)
-
-    for idx, slot in enumerate(formation.slots):
-        if idx in assignments:
-            continue
-        aliases = SLOT_POSITION_ALIASES.get(slot.position, [slot.position])
-        candidates = [
-            p for p in _slot_pool(slot.position)
-            if p["primary_position"] in aliases or any(sp in aliases for sp in p.get("secondary_positions", []))
-        ]
-        pick(idx, candidates)
-
-    for idx, slot in enumerate(formation.slots):
-        if idx in assignments:
-            continue
-        pick(idx, _slot_pool(slot.position))
+    assignments = select_starting_assignments(players, formation_name)
 
     lineup = []
     for idx, slot in enumerate(formation.slots):
@@ -76,6 +31,6 @@ def build_likely_lineup(players: list[dict], formation_name: str) -> list[dict]:
             "name": p["name"],
             "name_ja": p.get("name_ja"),
             "primary_position": p["primary_position"],
-            "starting_probability": _score(p),
+            "starting_probability": lineup_score(p),
         })
     return lineup
