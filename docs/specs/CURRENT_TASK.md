@@ -9,6 +9,14 @@ Read first:
 
 ## Active Claude Code Task
 
+**Spec 019 is Ready:** `docs/specs/019-tactical-basis-validation.md`
+
+Purpose: validate the uncommitted `_tactical_profile_basis` candidates currently present in `backend/data/seed/teams.json`. Do not commit those seed changes as-is. Convert them into a structured, URL-backed review artifact and harden diagnostics so a plain free-text basis cannot silently clear manager/tactical audit flags.
+
+Stop only if the uncommitted tactical-basis diff has disappeared before you start; in that case, report that there is no candidate diff to validate.
+
+## Active Claude Code Task
+
 **Player rating accuracy (started 2026-06-26, autonomous).** The user reported that player
 abilities are poorly reflected on the site. Root cause: the from-scratch estimation pipeline
 (`compute_player_rating_v2` -> Stage A/B/C) compresses the top of the scale — before the fix,
