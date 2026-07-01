@@ -30423,5 +30423,39 @@
     "staminaMax": 83,
     "dataConfidence": "external",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00"
+  },
+  {
+    "playerId": "JPN_NAKAMURA_K",
+    "teamId": "JPN",
+    "teamCode": "JPN",
+    "name": "Keito Nakamura",
+    "nameJa": "中村敬斗",
+    "age": 25,
+    "dateOfBirth": "28/07/2000",
+    "shirtNumber": null,
+    "primaryPosition": "LM",
+    "secondaryPositions": [
+      "LW",
+      "CAM"
+    ],
+    "preferredFoot": "unknown",
+    "heightCm": 180,
+    "weightKg": null,
+    "clubName": "Stade de Reims (FRA)",
+    "clubCountry": null,
+    "leagueName": null,
+    "caps": null,
+    "nationalTeamGoals": null,
+    "marketValueEur": null,
+    "careerStats": {},
+    "qualitativeAdjustments": {},
+    "sourceCitations": [
+      "EA SPORTS FC 26 official player ratings (player 242914): overall 76, LM, Stade de Reims, age 25, 180cm — https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/keito-nakamura/242914",
+      "Wikipedia: born 28/07/2000, Japan winger/forward, 2026 World Cup squad — https://en.wikipedia.org/wiki/Keito_Nakamura",
+      "Secondary CAM annotates his shadow-striker role in Japan 3-4-2-1 at the 2026 WC (started and scored the opener vs Netherlands)."
+    ],
+    "staminaMax": 86,
+    "dataConfidence": "external",
+    "lastUpdated": "2026-07-01T00:00:00+00:00"
   }
 ]

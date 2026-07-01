@@ -8288,5 +8288,22 @@
     "overall": 74,
     "gkReflexes": 76,
     "gkHandling": 72
+  },
+  {
+    "playerId": "JPN_NAKAMURA_K",
+    "name": "Keito Nakamura",
+    "source": "EA SPORTS FC 26",
+    "sourceUrl": "https://www.ea.com/en/games/ea-sports-fc/ratings/player-ratings/keito-nakamura/242914",
+    "sourceDataset": "EA SPORTS FC 26 official player ratings page (fetched 2026-07-01)",
+    "eaPlayerId": "242914",
+    "position": "LM",
+    "observedDate": "2026-07-01",
+    "overall": 76,
+    "pace": 79,
+    "shooting": 74,
+    "passing": 71,
+    "dribbling": 77,
+    "defending": 41,
+    "physical": 74
   }
 ]

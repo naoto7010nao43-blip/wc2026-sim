@@ -6,7 +6,9 @@
     "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
     "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/japan",
     "observedDate": "2026-06-26",
-    "overrides": { "startingProbability": 92 }
+    "overrides": {
+      "startingProbability": 92
+    }
   },
   {
     "playerId": "JPN_SEKO",
@@ -15,7 +17,9 @@
     "source": "World Soccer Talk / beIN Sports confirmed 2026 WC group-stage lineups",
     "sourceUrl": "https://worldsoccertalk.com/world-cup/japan-vs-sweden-projected-lineups-for-the-2026-world-cup-group-f-game/",
     "observedDate": "2026-06-30",
-    "overrides": { "startingProbability": 75 }
+    "overrides": {
+      "startingProbability": 75
+    }
   },
   {
     "playerId": "GER_NEUER",
@@ -24,7 +28,9 @@
     "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
     "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/germany",
     "observedDate": "2026-06-26",
-    "overrides": { "startingProbability": 92 }
+    "overrides": {
+      "startingProbability": 92
+    }
   },
   {
     "playerId": "SUI_KOBEL",
@@ -33,7 +39,9 @@
     "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
     "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/switzerland",
     "observedDate": "2026-06-26",
-    "overrides": { "startingProbability": 92 }
+    "overrides": {
+      "startingProbability": 92
+    }
   },
   {
     "playerId": "NZL_MOSS",
@@ -42,7 +50,9 @@
     "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
     "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/new-zealand",
     "observedDate": "2026-06-26",
-    "overrides": { "startingProbability": 92 }
+    "overrides": {
+      "startingProbability": 92
+    }
   },
   {
     "playerId": "ESP_UNAISIMON",
@@ -51,6 +61,19 @@
     "source": "mylineups.app/world-cup-2026 (2026 group stage) + match reports",
     "sourceUrl": "https://www.mylineups.app/world-cup-2026/teams/spain",
     "observedDate": "2026-06-26",
-    "overrides": { "startingProbability": 92 }
+    "overrides": {
+      "startingProbability": 92
+    }
+  },
+  {
+    "playerId": "JPN_NAKAMURA_K",
+    "name": "Keito Nakamura",
+    "reason": "Confirmed Japan starter at the 2026 World Cup (scored Japan's opening goal vs Netherlands, assisted vs Tunisia). He was entirely missing from the roster, so the left shadow-striker slot was wrongly auto-filled.",
+    "source": "Wikipedia + 2026 World Cup match reports",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Keito_Nakamura",
+    "observedDate": "2026-07-01",
+    "overrides": {
+      "startingProbability": 78
+    }
   }
 ]
