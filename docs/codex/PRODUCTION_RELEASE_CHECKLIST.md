@@ -97,3 +97,4 @@ When Edge or Chrome is available, also run the browser smoke:
 ```
 
 This opens the live frontend in a headless browser at desktop and mobile widths, creates one deterministic sample match when a backend URL is provided, and fails on console errors, failed requests, likely mojibake markers, blank pages, or full-page horizontal overflow.
+It also checks that the current key user-facing markers are present on `/simulate` and `/data-review`, including the simulator edge summary and the player-rating diff audit panel.
