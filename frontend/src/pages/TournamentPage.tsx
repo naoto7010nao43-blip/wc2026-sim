@@ -5,6 +5,7 @@ import { GroupDifficultyPanel } from "../components/GroupDifficultyPanel";
 import { GroupStandingsGrid } from "../components/GroupStandingsGrid";
 import { TournamentHighlightsPanel } from "../components/TournamentHighlightsPanel";
 import { TournamentOddsPanel } from "../components/TournamentOddsPanel";
+import { TournamentPathProjectionPanel } from "../components/TournamentPathProjectionPanel";
 import { TournamentUpsetWatchPanel } from "../components/TournamentUpsetWatchPanel";
 import type { DataQualitySummary, TournamentResult } from "../types/domain";
 
@@ -93,6 +94,7 @@ export function TournamentPage() {
       </section>
 
       <TournamentOddsPanel />
+      <TournamentPathProjectionPanel />
       <GroupDifficultyPanel />
       <TournamentUpsetWatchPanel />
 

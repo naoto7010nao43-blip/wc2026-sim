@@ -126,3 +126,31 @@ class TournamentGroupDifficultyOut(BaseModel):
     groups: list[GroupDifficultyOut]
     model_version: str
     disclaimer: str
+
+
+class TournamentPathOpponentOut(BaseModel):
+    team_id: str
+    team_name: str
+    probability_pct: float
+
+
+class TournamentPathStageOut(BaseModel):
+    stage_key: str
+    stage_label_ja: str
+    reach_pct: float
+    most_likely_slot: str | None
+    opponent_options: list[TournamentPathOpponentOut]
+
+
+class TournamentPathProjectionOut(BaseModel):
+    team_id: str
+    team_name: str
+    iterations: int
+    champion_pct: float
+    stages: list[TournamentPathStageOut]
+    model_version: str
+    data_confidence: str
+    note_ja: str
+    disclaimer: str
+
+    model_config = {"from_attributes": True}

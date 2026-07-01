@@ -25,6 +25,7 @@ import type {
   TeamSummary,
   TournamentResult,
   TournamentGroupDifficultyOut,
+  TournamentPathProjectionOut,
   TournamentSimulationOut,
   TournamentUpsetWatchOut,
 } from "../types/domain";
@@ -84,6 +85,10 @@ export const api = {
   getTournamentUpsetWatch: (limit?: number) =>
     getJson<TournamentUpsetWatchOut>(`/api/tournament/upset-watch${limit ? `?limit=${limit}` : ""}`),
   getTournamentGroupDifficulty: () => getJson<TournamentGroupDifficultyOut>("/api/tournament/group-difficulty"),
+  getTournamentPathProjection: (teamId: string, opts?: { iterations?: number; seed?: number }) =>
+    getJson<TournamentPathProjectionOut>(
+      `/api/tournament/path-projection?team_id=${encodeURIComponent(teamId)}&iterations=${opts?.iterations ?? 1000}&seed=${opts?.seed ?? 0}`,
+    ),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),
   getReleaseReadinessSummary: () => getJson<ReleaseReadinessSummary>("/api/model-diagnostics/release-readiness"),
   getExternalDataVerificationSummary: () =>

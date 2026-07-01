@@ -133,6 +133,32 @@ export interface TournamentGroupDifficultyOut {
   disclaimer: string;
 }
 
+export interface TournamentPathOpponent {
+  team_id: string;
+  team_name: string;
+  probability_pct: number;
+}
+
+export interface TournamentPathStage {
+  stage_key: "R32" | "R16" | "QF" | "SF" | "FINAL";
+  stage_label_ja: string;
+  reach_pct: number;
+  most_likely_slot: string | null;
+  opponent_options: TournamentPathOpponent[];
+}
+
+export interface TournamentPathProjectionOut {
+  team_id: string;
+  team_name: string;
+  iterations: number;
+  champion_pct: number;
+  stages: TournamentPathStage[];
+  model_version: string;
+  data_confidence: string;
+  note_ja: string;
+  disclaimer: string;
+}
+
 export interface MatchPredictionOut {
   home_team_id: string;
   away_team_id: string;

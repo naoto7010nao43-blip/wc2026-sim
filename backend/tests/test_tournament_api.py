@@ -145,3 +145,35 @@ def test_tournament_group_difficulty_returns_ranked_groups(client):
         assert row["upset_pressure"] >= 0
         assert row["reason_ja"]
         _assert_no_mojibake(row["reason_ja"])
+
+
+def test_tournament_path_projection_returns_stage_opponent_distribution(client):
+    resp = client.get("/api/tournament/path-projection?team_id=JPN&iterations=100")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["team_id"] == "JPN"
+    assert body["iterations"] == 100
+    assert body["model_version"].startswith("poisson-v")
+    assert 0 <= body["champion_pct"] <= 100
+    assert "想定ルート" in body["note_ja"]
+    assert "保証" in body["disclaimer"]
+    _assert_no_mojibake(body["note_ja"])
+    _assert_no_mojibake(body["disclaimer"])
+
+    stages = body["stages"]
+    assert [stage["stage_key"] for stage in stages] == ["R32", "R16", "QF", "SF", "FINAL"]
+    for stage in stages:
+        assert 0 <= stage["reach_pct"] <= 100
+        assert stage["stage_label_ja"]
+        _assert_no_mojibake(stage["stage_label_ja"])
+        opponent_pcts = [row["probability_pct"] for row in stage["opponent_options"]]
+        assert opponent_pcts == sorted(opponent_pcts, reverse=True)
+        for opponent in stage["opponent_options"]:
+            assert opponent["team_id"] != "JPN"
+            assert opponent["team_name"]
+            assert 0 <= opponent["probability_pct"] <= 100
+
+
+def test_tournament_path_projection_unknown_team_returns_404(client):
+    resp = client.get("/api/tournament/path-projection?team_id=XXX&iterations=100")
+    assert resp.status_code == 404

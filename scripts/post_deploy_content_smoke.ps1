@@ -127,6 +127,7 @@ Assert-Contains "frontend bundle" $bundleText "player-rating-diff"
 Assert-Contains "frontend bundle" $bundleText "formation-position-fit"
 Assert-Contains "frontend bundle" $bundleText "lineup-engine-parity"
 Assert-Contains "frontend bundle" $bundleText "breakdown"
+Assert-Contains "frontend bundle" $bundleText "path-projection"
 Write-Host "OK: frontend bundle includes latest match-detail/data markers" -ForegroundColor Green
 
 Write-Host "==> Backend UTF-8 JSON content" -ForegroundColor Cyan
@@ -187,6 +188,20 @@ if (-not $groupDifficulty.model_version -or $groupDifficulty.model_version -notm
     throw "Tournament group difficulty model_version is unexpected: $($groupDifficulty.model_version)"
 }
 Assert-HasJapanese "tournament group difficulty reason" (($groupDifficulty.groups | Select-Object -First 3 | ForEach-Object { $_.reason_ja }) -join " ")
+
+$pathProjectionJson = Get-Utf8Text "$backend/api/tournament/path-projection?team_id=JPN&iterations=100"
+Assert-NoMojibakeMarkers "tournament path projection JSON" $pathProjectionJson
+$pathProjection = $pathProjectionJson | ConvertFrom-Json
+if ($pathProjection.team_id -ne "JPN") {
+    throw "Tournament path projection team_id is unexpected: $($pathProjection.team_id)"
+}
+if ($pathProjection.stages.Count -ne 5) {
+    throw "Tournament path projection did not expose all knockout stages: $($pathProjection.stages.Count)"
+}
+if (-not $pathProjection.model_version -or $pathProjection.model_version -notmatch "^poisson-v") {
+    throw "Tournament path projection model_version is unexpected: $($pathProjection.model_version)"
+}
+Assert-HasJapanese "tournament path projection note" $pathProjection.note_ja
 
 $dataQualityJson = Get-Utf8Text "$backend/api/data-quality/summary"
 Assert-NoMojibakeMarkers "data quality JSON" $dataQualityJson

@@ -1,7 +1,7 @@
 import itertools
 import uuid
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
@@ -9,7 +9,7 @@ from app.api.matches import team_players_as_dicts
 from app.database import get_db
 from app.models.match import Match
 from app.models.team import Team
-from app.prediction.monte_carlo import simulate_tournament_outcomes
+from app.prediction.monte_carlo import project_team_tournament_path, simulate_tournament_outcomes
 from app.prediction.model_config import DEFAULT_MODEL_CONFIG
 from app.prediction.poisson_model import predict_match
 from app.prediction.ratings import team_strength_rating
@@ -20,6 +20,7 @@ from app.schemas.prediction import (
     GroupDifficultyTeamOut,
     SimulateMonteCarloRequest,
     TournamentGroupDifficultyOut,
+    TournamentPathProjectionOut,
     TournamentSimulationOut,
     TournamentUpsetWatchMatchOut,
     TournamentUpsetWatchOut,
@@ -67,6 +68,19 @@ def run_tournament(req: RunTournamentRequest, db: Session = Depends(get_db)):
 @router.post("/simulate-monte-carlo", response_model=TournamentSimulationOut, dependencies=[Depends(rate_limit(3))])
 def simulate_monte_carlo(req: SimulateMonteCarloRequest, db: Session = Depends(get_db)):
     return simulate_tournament_outcomes(db, iterations=req.iterations, base_seed=req.seed)
+
+
+@router.get("/path-projection", response_model=TournamentPathProjectionOut, dependencies=[Depends(rate_limit(12))])
+def get_tournament_path_projection(
+    team_id: str = Query(..., min_length=2, max_length=3),
+    iterations: int = Query(default=1000, ge=100, le=3000),
+    seed: int = Query(default=0),
+    db: Session = Depends(get_db),
+):
+    try:
+        return project_team_tournament_path(db, team_id=team_id.upper(), iterations=iterations, base_seed=seed)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=f"Team {team_id} not found") from exc
 
 
 def _upset_reason(underdog_win_pct: float, draw_pct: float, expected_goal_gap: float) -> str:
