@@ -72,3 +72,11 @@ def test_sync_reference_data_populates_full_team_and_player_set(session):
 
     assert session.query(Team).count() >= 48
     assert session.query(Player).count() > 0
+
+
+def test_sync_reference_data_coerces_null_stamina_max_to_default(session):
+    sync_reference_data(session)
+
+    suzuki = session.get(Player, "JPN_SUZUKI_ZION")
+    assert suzuki is not None
+    assert suzuki.stamina_max == 100

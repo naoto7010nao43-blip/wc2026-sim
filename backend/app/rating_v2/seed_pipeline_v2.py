@@ -81,7 +81,7 @@ def load_v2_seed_data() -> tuple[list[dict], list[dict]]:
             "secondary_positions": p.get("secondaryPositions", []),
             "overall": rating.overall,
             "attributes": attributes,
-            "stamina_max": p.get("staminaMax", 100),
+            "stamina_max": p.get("staminaMax") or 100,
             "source_notes": "; ".join(p.get("sourceCitations", [])) or None,
         })
     return teams, player_rows
