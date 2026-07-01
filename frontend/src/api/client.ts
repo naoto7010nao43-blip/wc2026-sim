@@ -71,7 +71,7 @@ export const api = {
   getTournamentState: () => getJson<TournamentResult | null>("/api/tournament/state"),
   simulateTournamentMonteCarlo: (opts?: { iterations?: number; seed?: number }) =>
     postJson<TournamentSimulationOut>("/api/tournament/simulate-monte-carlo", {
-      iterations: opts?.iterations ?? 500,
+      iterations: opts?.iterations ?? 1000,
       seed: opts?.seed ?? 0,
     }),
   getDataQualitySummary: () => getJson<DataQualitySummary>("/api/data-quality/summary"),

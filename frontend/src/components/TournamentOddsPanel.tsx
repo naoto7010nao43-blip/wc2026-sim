@@ -3,7 +3,7 @@ import { api } from "../api/client";
 import { TeamBadge } from "./TeamBadge";
 import type { SimulationStabilitySummary, TournamentSimulationOut } from "../types/domain";
 
-const DEFAULT_ITERATIONS = 500;
+const DEFAULT_ITERATIONS = 1000;
 const ITERATION_OPTIONS = [500, 1000, 2000, 3000] as const;
 const TOP_N = 5;
 
