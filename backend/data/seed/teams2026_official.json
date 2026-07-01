@@ -93,7 +93,7 @@
     "name": "United States",
     "confederation": "CONCACAF",
     "fifaRank": 17,
-    "defaultFormation": "3-5-2",
+    "defaultFormation": "4-2-3-1",
     "groupId": "D",
     "tacticalProfile": {
       "manager_name": "Mauricio Pochettino",
@@ -103,7 +103,7 @@
     },
     "dataConfidence": "official",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
-    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
+    "defaultFormationSource": "Corrected 2026-07-01 (was 3-5-2). US Soccer 26-man roster + reporting that Pochettino's WC base is a back-four 4-4-1-1, rendered here as 4-2-3-1: https://www.ussoccer.com/stories/2026/05/usmnt/us-mens-national-team-head-coach-mauricio-pochettino-names-26-player-roster-for-fifa-world-cup-2026 ; https://www.foxsports.com/stories/soccer/usmnt-world-cup-starting-lineup-pulisic-turkiye ; https://www.si.com/soccer/usmnt-predicted-world-cup-lineup-following-roster-reveal (accessed 2026-07-01)"
   },
   {
     "teamId": "MEX",
@@ -234,7 +234,7 @@
     "name": "Switzerland",
     "confederation": "UEFA",
     "fifaRank": 19,
-    "defaultFormation": "4-4-2",
+    "defaultFormation": "4-2-3-1",
     "groupId": "B",
     "tacticalProfile": {
       "manager_name": "Murat Yakin",
@@ -244,7 +244,7 @@
     },
     "dataConfidence": "official",
     "lastUpdated": "2026-06-22T13:53:50.747375+00:00",
-    "defaultFormationSource": "mylineups.app/world-cup-2026 (2026 group stage)"
+    "defaultFormationSource": "Corrected 2026-07-01 (was 4-4-2). MyLineups + Goal/UEFA: Switzerland line up 4-2-3-1 (back four, Kobel in goal): https://mylineups.app/world-cup-2026/teams/switzerland/ ; https://www.goal.com/en/lists/switzerland-squad-world-cup-2026/bltf2af984bafb74a30 (accessed 2026-07-01)"
   },
   {
     "teamId": "MAR",

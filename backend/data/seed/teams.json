@@ -74,7 +74,7 @@
     "name": "United States",
     "confederation": "CONCACAF",
     "fifa_rank": 17,
-    "default_formation": "3-5-2",
+    "default_formation": "4-2-3-1",
     "group_id": "D",
     "tactical_profile": {
       "manager_name": "Mauricio Pochettino",
@@ -193,7 +193,7 @@
     "name": "Switzerland",
     "confederation": "UEFA",
     "fifa_rank": 19,
-    "default_formation": "4-4-2",
+    "default_formation": "4-2-3-1",
     "group_id": "B",
     "tactical_profile": {
       "manager_name": "Murat Yakin",
