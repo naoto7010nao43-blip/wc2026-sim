@@ -1,0 +1,973 @@
+{
+  "generatedAt": "2026-07-01T18:17:51.051817+00:00",
+  "note": "戦術根拠の自由文候補を、seedへ直接反映せずレビューキューへ変換する読み取り専用レポートです。数値戦術・予測式・seedデータは変更しません。",
+  "urlCheckPerformed": true,
+  "teamCount": 48,
+  "candidateTeamCount": 25,
+  "urlCount": 51,
+  "urlLessCandidateCount": 8,
+  "statusCounts": {
+    "ready_for_human_review": 14,
+    "blocked_source_review": 3,
+    "needs_sources": 8
+  },
+  "urlResults": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Mauricio_Pochettino",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/julian-nagelsmann/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/lionel-scaloni/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/marcelo-bielsa/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/mohamed-ouahbi/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/ronald-koeman/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwctimes.com/rudi-garcia/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwcumc.com/news/didier-deschamps-france-coach-profile-tactics/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://fwcumc.com/news/nestor-lorenzo-colombia-coach-profile-tactics/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://getfootballnewsbene.com/ronald-koeman-defends-negative-tactics-as-the-netherlands-crash-out-of-the-world-cup/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://learning.coachesvoice.com/cv/afcon-final-senegal-morocco-tactics-jan-2026/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://medium.com/@cellis.14/how-de-la-fuentes-spain-dominate-each-phase-of-play-2f0848515c76",
+      "status": null,
+      "method": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://mundialanalytics.com/japan-national-team-analysis",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://portugoal.net/selecao/5576-portugal-at-world-cup-2026-what-the-numbers-say-what-martinez-believes-and-why-the-odds-may-undervalue-the-selecao",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://sports.yahoo.com/articles/usa-soccer-coach-mauricio-pochettino-191032225.html",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/coaching-modern-press-mohamed-ouahbi-morocco-2026-world-cup-tactics/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/japan-tactics-world-cup-2026-hajime-moriyasu-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/julian-nagelsmann-tactics-germany-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/lionel-scaloni-tactics-argentina-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/luis-de-la-fuente-tactics-spain-2026-world-cup-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/marcelo-bielsa-tactics-uruguay-2026-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/roberto-martinez-tactics-portugal-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/ronald-koeman-netherlands-tactics-world-cup-2026-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/rudi-garcia-tactics-belgium-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-at-england-2026-building-a-world-cup-ready-system-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-england-2026-world-cup-data-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://tacticalfootballanalysis.com/zlatko-dalic-tactics-croatia-2026-world-cup-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://the-footballanalyst.com/marcelo-bielsa-uruguay-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://totalfootballanalysis.com/data-analysis/carlo-ancelotti-brazil-data-analysis-statistics",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://whyfootball.org/teams/senegal-brief",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/belgium-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/germany-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/iran-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/japan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://worldsoccertalk.com/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.croatiaweek.com/croatia-2026-world-cup-squad-zlatko-dalic/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/amir-ghalenoei-ir-iran-interview",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/luis-de-la-fuente-spain-feature",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-morocco-challenge",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/roberto-martinez-portugal-interview",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.forbes.com/sites/clementelisi/2026/04/25/pochettino-and-the-ideology-shaping-the-uss-world-cup-team/",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.goal.com/en-us/news/portugal-croatia-world-cup-preview/blt9fb0907531786204",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.goal.com/en/lists/carlo-ancelotti-brazil-eder-militao-corrected-weaknesses-world-cup/blt6ae33bc3729108a2",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.nst.com.my/amp/sports/football/2026/06/1476278/france-will-not-give-attacking-philosophy-says-deschamps",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.si.com/soccer/iran-2026-world-cup-preview",
+      "status": 200,
+      "method": "HEAD",
+      "error": null
+    },
+    {
+      "url": "https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch",
+      "status": 200,
+      "method": "GET",
+      "error": null
+    },
+    {
+      "url": "https://www.squawka.com/en/news/world-cup/colombia-world-cup-2026-route-to-the-final/",
+      "status": null,
+      "method": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.squawka.com/us/news/lionel-scaloni/",
+      "status": null,
+      "method": null,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    }
+  ],
+  "teams": [
+    {
+      "team_id": "BRA",
+      "team_name": "Brazil",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/",
+        "https://totalfootballanalysis.com/data-analysis/carlo-ancelotti-brazil-data-analysis-statistics",
+        "https://www.goal.com/en/lists/carlo-ancelotti-brazil-eder-militao-corrected-weaknesses-world-cup/blt6ae33bc3729108a2"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "ARG",
+      "team_name": "Argentina",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 2,
+      "blocked_or_failed_url_count": 1,
+      "url_less_candidate": false,
+      "recommended_status": "blocked_source_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/lionel-scaloni-tactics-argentina-2026-world-cup-tactical-analysis/",
+        "https://fwctimes.com/lionel-scaloni/",
+        "https://www.squawka.com/us/news/lionel-scaloni/"
+      ],
+      "notes_ja": "URL 3件のうち到達不能または未確認が1件あります。本文確認まで保留します。"
+    },
+    {
+      "team_id": "FRA",
+      "team_name": "France",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://worldsoccertalk.com/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://fwcumc.com/news/didier-deschamps-france-coach-profile-tactics/",
+        "https://www.nst.com.my/amp/sports/football/2026/06/1476278/france-will-not-give-attacking-philosophy-says-deschamps"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "ENG",
+      "team_name": "England",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-at-england-2026-building-a-world-cup-ready-system-tactical-analysis/",
+        "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-england-2026-world-cup-data-analysis/",
+        "https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "GER",
+      "team_name": "Germany",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/julian-nagelsmann-tactics-germany-2026-world-cup-tactical-analysis/",
+        "https://fwctimes.com/julian-nagelsmann/",
+        "https://worldsoccertalk.com/world-cup/germany-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "USA",
+      "team_name": "United States",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://www.forbes.com/sites/clementelisi/2026/04/25/pochettino-and-the-ideology-shaping-the-uss-world-cup-team/",
+        "https://sports.yahoo.com/articles/usa-soccer-coach-mauricio-pochettino-191032225.html",
+        "https://en.wikipedia.org/wiki/Mauricio_Pochettino"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "RSA",
+      "team_name": "South Africa",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "KOR",
+      "team_name": "South Korea",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "CZE",
+      "team_name": "Czechia",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "CAN",
+      "team_name": "Canada",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "QAT",
+      "team_name": "Qatar",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "SUI",
+      "team_name": "Switzerland",
+      "candidate_present": true,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": true,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文はありますがURLがないため、根拠としては未採用です。"
+    },
+    {
+      "team_id": "MAR",
+      "team_name": "Morocco",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/coaching-modern-press-mohamed-ouahbi-morocco-2026-world-cup-tactics/",
+        "https://fwctimes.com/mohamed-ouahbi/",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-morocco-challenge"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "HAI",
+      "team_name": "Haiti",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "SCO",
+      "team_name": "Scotland",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "TUR",
+      "team_name": "Turkey",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "CUW",
+      "team_name": "Curacao",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "CIV",
+      "team_name": "Ivory Coast",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "ECU",
+      "team_name": "Ecuador",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/ronald-koeman-netherlands-tactics-world-cup-2026-tactical-analysis/",
+        "https://fwctimes.com/ronald-koeman/",
+        "https://getfootballnewsbene.com/ronald-koeman-defends-negative-tactics-as-the-netherlands-crash-out-of-the-world-cup/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "JPN",
+      "team_name": "Japan",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/japan-tactics-world-cup-2026-hajime-moriyasu-tactical-analysis/",
+        "https://worldsoccertalk.com/world-cup/japan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://mundialanalytics.com/japan-national-team-analysis"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "SWE",
+      "team_name": "Sweden",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "TUN",
+      "team_name": "Tunisia",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "BEL",
+      "team_name": "Belgium",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/rudi-garcia-tactics-belgium-2026-world-cup-tactical-analysis/",
+        "https://fwctimes.com/rudi-garcia/",
+        "https://worldsoccertalk.com/world-cup/belgium-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "EGY",
+      "team_name": "Egypt",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "IRN",
+      "team_name": "Iran",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://worldsoccertalk.com/world-cup/iran-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://www.si.com/soccer/iran-2026-world-cup-preview",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/amir-ghalenoei-ir-iran-interview"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "NZL",
+      "team_name": "New Zealand",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "ESP",
+      "team_name": "Spain",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 2,
+      "blocked_or_failed_url_count": 1,
+      "url_less_candidate": false,
+      "recommended_status": "blocked_source_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/luis-de-la-fuente-tactics-spain-2026-world-cup-analysis/",
+        "https://medium.com/@cellis.14/how-de-la-fuentes-spain-dominate-each-phase-of-play-2f0848515c76",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/luis-de-la-fuente-spain-feature"
+      ],
+      "notes_ja": "URL 3件のうち到達不能または未確認が1件あります。本文確認まで保留します。"
+    },
+    {
+      "team_id": "CPV",
+      "team_name": "Cape Verde",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "KSA",
+      "team_name": "Saudi Arabia",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "URU",
+      "team_name": "Uruguay",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/marcelo-bielsa-tactics-uruguay-2026-tactical-analysis/",
+        "https://the-footballanalyst.com/marcelo-bielsa-uruguay-tactical-analysis/",
+        "https://fwctimes.com/marcelo-bielsa/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "SEN",
+      "team_name": "Senegal",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://whyfootball.org/teams/senegal-brief",
+        "https://worldsoccertalk.com/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://learning.coachesvoice.com/cv/afcon-final-senegal-morocco-tactics-jan-2026/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "IRQ",
+      "team_name": "Iraq",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "NOR",
+      "team_name": "Norway",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "ALG",
+      "team_name": "Algeria",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "AUT",
+      "team_name": "Austria",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/roberto-martinez-tactics-portugal-2026-world-cup-tactical-analysis/",
+        "https://portugoal.net/selecao/5576-portugal-at-world-cup-2026-what-the-numbers-say-what-martinez-believes-and-why-the-odds-may-undervalue-the-selecao",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/roberto-martinez-portugal-interview"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "COD",
+      "team_name": "DR Congo",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "UZB",
+      "team_name": "Uzbekistan",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "COL",
+      "team_name": "Colombia",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 2,
+      "blocked_or_failed_url_count": 1,
+      "url_less_candidate": false,
+      "recommended_status": "blocked_source_review",
+      "urls": [
+        "https://fwcumc.com/news/nestor-lorenzo-colombia-coach-profile-tactics/",
+        "https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://www.squawka.com/en/news/world-cup/colombia-world-cup-2026-route-to-the-final/"
+      ],
+      "notes_ja": "URL 3件のうち到達不能または未確認が1件あります。本文確認まで保留します。"
+    },
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "candidate_present": true,
+      "url_count": 3,
+      "reachable_url_count": 3,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "ready_for_human_review",
+      "urls": [
+        "https://tacticalfootballanalysis.com/zlatko-dalic-tactics-croatia-2026-world-cup-tactical-analysis/",
+        "https://www.goal.com/en-us/news/portugal-croatia-world-cup-preview/blt9fb0907531786204",
+        "https://www.croatiaweek.com/croatia-2026-world-cup-squad-zlatko-dalic/"
+      ],
+      "notes_ja": "URL 3件が到達可能です。本文が戦術値を支持するか確認してから構造化します。"
+    },
+    {
+      "team_id": "GHA",
+      "team_name": "Ghana",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    },
+    {
+      "team_id": "PAN",
+      "team_name": "Panama",
+      "candidate_present": false,
+      "url_count": 0,
+      "reachable_url_count": 0,
+      "blocked_or_failed_url_count": 0,
+      "url_less_candidate": false,
+      "recommended_status": "needs_sources",
+      "urls": [],
+      "notes_ja": "候補文がありません。"
+    }
+  ],
+  "recommendationsJa": [
+    "URLなし候補はseed反映せず、外部調査キューへ戻す。",
+    "自由文の存在だけでmanager/tactical auditの根拠あり判定を通さない。",
+    "採用する場合はtactical_profile_sourcesのような構造化フィールドへ移し、verified=trueを明示する。"
+  ]
+}
