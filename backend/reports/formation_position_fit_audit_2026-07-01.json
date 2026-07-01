@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T08:33:26.144898+00:00",
+  "generatedAt": "2026-07-01T08:49:28.964648+00:00",
   "sourceReports": [
     {
       "name": "teams2026_official",
@@ -18,9 +18,9 @@
   "teamCount": 48,
   "flaggedTeamCount": 47,
   "highSeverityTeamCount": 2,
-  "mediumSeverityTeamCount": 25,
-  "lowSeverityTeamCount": 21,
-  "outOfPositionAssignmentCount": 42,
+  "mediumSeverityTeamCount": 24,
+  "lowSeverityTeamCount": 22,
+  "outOfPositionAssignmentCount": 41,
   "lowProbabilityStarterCount": 127,
   "teams": [
     {
@@ -1204,62 +1204,6 @@
       "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
     },
     {
-      "teamId": "KSA",
-      "teamName": "Saudi Arabia",
-      "defaultFormation": "3-4-2-1",
-      "rosterSize": 12,
-      "starterCount": 11,
-      "outOfPositionCount": 1,
-      "lowProbabilityStarterCount": 3,
-      "severityScore": 6,
-      "severityBand": "medium",
-      "outOfPositionAssignments": [
-        {
-          "slotPosition": "CB",
-          "playerId": "KSA_ABDULLAHALHAMDAN",
-          "name": "Abdullah Al-Hamdan",
-          "primaryPosition": "ST",
-          "secondaryPositions": [
-            "RW"
-          ],
-          "startingProbability": 17,
-          "overall": 64,
-          "reasonJa": "選手の主ポジション・副ポジションが割り当てスロットと一致していません。"
-        }
-      ],
-      "lowProbabilityStarters": [
-        {
-          "slotPosition": "CB",
-          "playerId": "KSA_ABDULLAHALHAMDAN",
-          "name": "Abdullah Al-Hamdan",
-          "primaryPosition": "ST",
-          "startingProbability": 17,
-          "overall": 64,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "LB",
-          "playerId": "KSA_YASSERALSHAHRANI",
-          "name": "Yasser Al-Shahrani",
-          "primaryPosition": "LB",
-          "startingProbability": 35,
-          "overall": 66,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        },
-        {
-          "slotPosition": "CDM",
-          "playerId": "KSA_ABDULELAHALAMRI",
-          "name": "Abdulelah Al-Amri",
-          "primaryPosition": "CDM",
-          "startingProbability": 32,
-          "overall": 70,
-          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
-        }
-      ],
-      "recommendedAction": "monitor_position_flex",
-      "recommendedActionJa": "隣接ポジション起用の範囲として監視し、断定的な変更は避けてください。"
-    },
-    {
       "teamId": "QAT",
       "teamName": "Qatar",
       "defaultFormation": "4-3-3",
@@ -2010,6 +1954,49 @@
           "primaryPosition": "ST",
           "startingProbability": 17,
           "overall": 82,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        }
+      ],
+      "recommendedAction": "roster_depth_review",
+      "recommendedActionJa": "低い先発確率の選手が先発するため、該当ポジションのロスター深度を確認してください。"
+    },
+    {
+      "teamId": "KSA",
+      "teamName": "Saudi Arabia",
+      "defaultFormation": "4-2-3-1",
+      "rosterSize": 12,
+      "starterCount": 11,
+      "outOfPositionCount": 0,
+      "lowProbabilityStarterCount": 3,
+      "severityScore": 3,
+      "severityBand": "low",
+      "outOfPositionAssignments": [],
+      "lowProbabilityStarters": [
+        {
+          "slotPosition": "LB",
+          "playerId": "KSA_YASSERALSHAHRANI",
+          "name": "Yasser Al-Shahrani",
+          "primaryPosition": "LB",
+          "startingProbability": 35,
+          "overall": 66,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "CDM",
+          "playerId": "KSA_ABDULELAHALAMRI",
+          "name": "Abdulelah Al-Amri",
+          "primaryPosition": "CDM",
+          "startingProbability": 32,
+          "overall": 70,
+          "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
+        },
+        {
+          "slotPosition": "RW",
+          "playerId": "KSA_ABDULLAHALHAMDAN",
+          "name": "Abdullah Al-Hamdan",
+          "primaryPosition": "ST",
+          "startingProbability": 17,
+          "overall": 64,
           "reasonJa": "先発確率が低い選手がフォーメーション上の先発枠に入っています。"
         }
       ],
