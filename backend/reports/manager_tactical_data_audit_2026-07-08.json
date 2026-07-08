@@ -1,0 +1,1289 @@
+{
+  "generatedAt": "2026-07-08T16:37:23.203158+00:00",
+  "note": "監督名・戦術プロフィールデータの信頼性を示す読み取り専用の監査です。監督名の不一致、戦術プロフィールの根拠情報の欠如、戦術値の重複、上流のチームデータレビュー優先度などから、人によるレビューが望ましいチームを示します。試合予測そのものは変更しません。",
+  "sourceReports": [
+    {
+      "name": "team_data_review_plan",
+      "generatedAt": "2026-06-25T06:50:51.493483+00:00"
+    }
+  ],
+  "teamCount": 48,
+  "bandCounts": {
+    "high": 0,
+    "medium": 15,
+    "low": 33
+  },
+  "teams": [
+    {
+      "team_id": "PAR",
+      "team_name": "Paraguay",
+      "fifa_rank": 54,
+      "default_formation": "4-4-2",
+      "manager_name_seed": "Gustavo Alfaro",
+      "manager_name_official": "Gustavo Alfaro",
+      "manager_name_official_profile": "Gustavo Alfaro",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 38,
+        "possession_style": 32,
+        "defensive_line_height": 30
+      },
+      "duplicate_profile_team_ids": [
+        "CUW",
+        "PAR"
+      ],
+      "team_review_priority_band": "high",
+      "review_score": 19.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "AUS",
+      "team_name": "Australia",
+      "fifa_rank": 26,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Tony Popovic",
+      "manager_name_official": "Tony Popovic",
+      "manager_name_official_profile": "Tony Popovic",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 50,
+        "possession_style": 44,
+        "defensive_line_height": 45
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "BIH",
+      "team_name": "Bosnia and Herzegovina",
+      "fifa_rank": 64,
+      "default_formation": "4-4-2",
+      "manager_name_seed": "Sergej Barbarez",
+      "manager_name_official": "Sergej Barbarez",
+      "manager_name_official_profile": "Sergej Barbarez",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 42,
+        "possession_style": 28,
+        "defensive_line_height": 38
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "CRO",
+      "team_name": "Croatia",
+      "fifa_rank": 10,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Zlatko Dalic",
+      "manager_name_official": "Zlatko Dalic",
+      "manager_name_official_profile": "Zlatko Dalic",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 48,
+        "possession_style": 68,
+        "defensive_line_height": 50
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "IRN",
+      "team_name": "Iran",
+      "fifa_rank": 20,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Amir Ghalenoei",
+      "manager_name_official": "Amir Ghalenoei",
+      "manager_name_official_profile": "Amir Ghalenoei",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 42,
+        "possession_style": 35,
+        "defensive_line_height": 28
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "JOR",
+      "team_name": "Jordan",
+      "fifa_rank": 63,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Jamal Sellami",
+      "manager_name_official": "Jamal Sellami",
+      "manager_name_official_profile": "Jamal Sellami",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 40,
+        "possession_style": 36,
+        "defensive_line_height": 34
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "KSA",
+      "team_name": "Saudi Arabia",
+      "fifa_rank": 56,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Georgios Donis",
+      "manager_name_official": "Georgios Donis",
+      "manager_name_official_profile": "Georgios Donis",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 58,
+        "possession_style": 48,
+        "defensive_line_height": 46
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "MEX",
+      "team_name": "Mexico",
+      "fifa_rank": 14,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Javier Aguirre",
+      "manager_name_official": "Javier Aguirre",
+      "manager_name_official_profile": "Javier Aguirre",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 58,
+        "possession_style": 60,
+        "defensive_line_height": 52
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "NED",
+      "team_name": "Netherlands",
+      "fifa_rank": 7,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Ronald Koeman",
+      "manager_name_official": "Ronald Koeman",
+      "manager_name_official_profile": "Ronald Koeman",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 68,
+        "possession_style": 66,
+        "defensive_line_height": 64
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "POR",
+      "team_name": "Portugal",
+      "fifa_rank": 5,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Roberto Martinez",
+      "manager_name_official": "Roberto Martinez",
+      "manager_name_official_profile": "Roberto Martinez",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 68,
+        "possession_style": 66,
+        "defensive_line_height": 60
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "RSA",
+      "team_name": "South Africa",
+      "fifa_rank": 60,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Hugo Broos",
+      "manager_name_official": "Hugo Broos",
+      "manager_name_official_profile": "Hugo Broos",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 48,
+        "possession_style": 45,
+        "defensive_line_height": 45
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "high",
+      "review_score": 15.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が高です"
+      ]
+    },
+    {
+      "team_id": "KOR",
+      "team_name": "South Korea",
+      "fifa_rank": 23,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Hong Myung-bo",
+      "manager_name_official": "Hong Myung-bo",
+      "manager_name_official_profile": "Hong Myung-bo",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": false,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 62,
+        "possession_style": 56,
+        "defensive_line_height": 58
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 12.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
+      ]
+    },
+    {
+      "team_id": "TUN",
+      "team_name": "Tunisia",
+      "fifa_rank": 38,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Herve Renard",
+      "manager_name_official": "Herve Renard",
+      "manager_name_official_profile": "Herve Renard",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": false,
+      "has_tactical_basis_candidate_note": false,
+      "tactical_profile": {
+        "press_intensity": 42,
+        "possession_style": 38,
+        "defensive_line_height": 36
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 12.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です",
+        "戦術プロフィールの根拠情報がありません"
+      ]
+    },
+    {
+      "team_id": "EGY",
+      "team_name": "Egypt",
+      "fifa_rank": 29,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Hossam Hassan",
+      "manager_name_official": "Hossam Hassan",
+      "manager_name_official_profile": "Hossam Hassan",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 58,
+        "possession_style": 42,
+        "defensive_line_height": 40
+      },
+      "duplicate_profile_team_ids": [
+        "EGY",
+        "GHA"
+      ],
+      "team_review_priority_band": "medium",
+      "review_score": 11.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "GHA",
+      "team_name": "Ghana",
+      "fifa_rank": 72,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Carlos Queiroz",
+      "manager_name_official": "Carlos Queiroz",
+      "manager_name_official_profile": "Carlos Queiroz",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 58,
+        "possession_style": 42,
+        "defensive_line_height": 40
+      },
+      "duplicate_profile_team_ids": [
+        "EGY",
+        "GHA"
+      ],
+      "team_review_priority_band": "medium",
+      "review_score": 11.0,
+      "review_band": "medium",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です",
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "ALG",
+      "team_name": "Algeria",
+      "fifa_rank": 28,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Vladimir Petkovic",
+      "manager_name_official": "Vladimir Petkovic",
+      "manager_name_official_profile": "Vladimir Petkovic",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 56,
+        "possession_style": 54,
+        "defensive_line_height": 48
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "AUT",
+      "team_name": "Austria",
+      "fifa_rank": 24,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Ralf Rangnick",
+      "manager_name_official": "Ralf Rangnick",
+      "manager_name_official_profile": "Ralf Rangnick",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 84,
+        "possession_style": 56,
+        "defensive_line_height": 68
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "CAN",
+      "team_name": "Canada",
+      "fifa_rank": 30,
+      "default_formation": "4-4-2",
+      "manager_name_seed": "Jesse Marsch",
+      "manager_name_official": "Jesse Marsch",
+      "manager_name_official_profile": "Jesse Marsch",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 88,
+        "possession_style": 38,
+        "defensive_line_height": 72
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "CIV",
+      "team_name": "Ivory Coast",
+      "fifa_rank": 39,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Emerse Fae",
+      "manager_name_official": "Emerse Fae",
+      "manager_name_official_profile": "Emerse Fae",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 62,
+        "possession_style": 50,
+        "defensive_line_height": 52
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "COD",
+      "team_name": "DR Congo",
+      "fifa_rank": 58,
+      "default_formation": "3-5-2",
+      "manager_name_seed": "Sebastien Desabre",
+      "manager_name_official": "Sebastien Desabre",
+      "manager_name_official_profile": "Sebastien Desabre",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 48,
+        "possession_style": 38,
+        "defensive_line_height": 40
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "COL",
+      "team_name": "Colombia",
+      "fifa_rank": 14,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Nestor Lorenzo",
+      "manager_name_official": "Nestor Lorenzo",
+      "manager_name_official_profile": "Nestor Lorenzo",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 70,
+        "possession_style": 60,
+        "defensive_line_height": 58
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "CPV",
+      "team_name": "Cape Verde",
+      "fifa_rank": 70,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Pedro \"Bubista\" Brito",
+      "manager_name_official": "Pedro \"Bubista\" Brito",
+      "manager_name_official_profile": "Pedro \"Bubista\" Brito",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 46,
+        "possession_style": 34,
+        "defensive_line_height": 36
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "CZE",
+      "team_name": "Czechia",
+      "fifa_rank": 41,
+      "default_formation": "3-5-2",
+      "manager_name_seed": "Miroslav Koubek",
+      "manager_name_official": "Miroslav Koubek",
+      "manager_name_official_profile": "Miroslav Koubek",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 50,
+        "possession_style": 42,
+        "defensive_line_height": 44
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "ECU",
+      "team_name": "Ecuador",
+      "fifa_rank": 22,
+      "default_formation": "3-5-2",
+      "manager_name_seed": "Sebastian Beccacece",
+      "manager_name_official": "Sebastian Beccacece",
+      "manager_name_official_profile": "Sebastian Beccacece",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 70,
+        "possession_style": 40,
+        "defensive_line_height": 35
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "ESP",
+      "team_name": "Spain",
+      "fifa_rank": 2,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Luis de la Fuente",
+      "manager_name_official": "Luis de la Fuente",
+      "manager_name_official_profile": "Luis de la Fuente",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 76,
+        "possession_style": 88,
+        "defensive_line_height": 68
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "HAI",
+      "team_name": "Haiti",
+      "fifa_rank": 83,
+      "default_formation": "4-4-2",
+      "manager_name_seed": "Sebastien Migne",
+      "manager_name_official": "Sebastien Migne",
+      "manager_name_official_profile": "Sebastien Migne",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 38,
+        "possession_style": 28,
+        "defensive_line_height": 24
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "IRQ",
+      "team_name": "Iraq",
+      "fifa_rank": 58,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Graham Arnold",
+      "manager_name_official": "Graham Arnold",
+      "manager_name_official_profile": "Graham Arnold",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 48,
+        "possession_style": 40,
+        "defensive_line_height": 38
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "JPN",
+      "team_name": "Japan",
+      "fifa_rank": 18,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Hajime Moriyasu",
+      "manager_name_official": "Hajime Moriyasu",
+      "manager_name_official_profile": "Hajime Moriyasu",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 60,
+        "possession_style": 61,
+        "defensive_line_height": 52
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "MAR",
+      "team_name": "Morocco",
+      "fifa_rank": 8,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Mohamed Ouahbi",
+      "manager_name_official": "Mohamed Ouahbi",
+      "manager_name_official_profile": "Mohamed Ouahbi",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 78,
+        "possession_style": 56,
+        "defensive_line_height": 64
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "NZL",
+      "team_name": "New Zealand",
+      "fifa_rank": 85,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Darren Bazeley",
+      "manager_name_official": "Darren Bazeley",
+      "manager_name_official_profile": "Darren Bazeley",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 38,
+        "possession_style": 28,
+        "defensive_line_height": 25
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "PAN",
+      "team_name": "Panama",
+      "fifa_rank": 30,
+      "default_formation": "3-4-3",
+      "manager_name_seed": "Thomas Christiansen",
+      "manager_name_official": "Thomas Christiansen",
+      "manager_name_official_profile": "Thomas Christiansen",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 55,
+        "possession_style": 56,
+        "defensive_line_height": 45
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "QAT",
+      "team_name": "Qatar",
+      "fifa_rank": 56,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Julen Lopetegui",
+      "manager_name_official": "Julen Lopetegui",
+      "manager_name_official_profile": "Julen Lopetegui",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 55,
+        "possession_style": 58,
+        "defensive_line_height": 50
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "SCO",
+      "team_name": "Scotland",
+      "fifa_rank": 38,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Steve Clarke",
+      "manager_name_official": "Steve Clarke",
+      "manager_name_official_profile": "Steve Clarke",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 52,
+        "possession_style": 42,
+        "defensive_line_height": 40
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "SEN",
+      "team_name": "Senegal",
+      "fifa_rank": 18,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Pape Thiaw",
+      "manager_name_official": "Pape Thiaw",
+      "manager_name_official_profile": "Pape Thiaw",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 74,
+        "possession_style": 48,
+        "defensive_line_height": 58
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "SUI",
+      "team_name": "Switzerland",
+      "fifa_rank": 19,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Murat Yakin",
+      "manager_name_official": "Murat Yakin",
+      "manager_name_official_profile": "Murat Yakin",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 60,
+        "possession_style": 66,
+        "defensive_line_height": 55
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "SWE",
+      "team_name": "Sweden",
+      "fifa_rank": 25,
+      "default_formation": "3-5-2",
+      "manager_name_seed": "Graham Potter",
+      "manager_name_official": "Graham Potter",
+      "manager_name_official_profile": "Graham Potter",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 55,
+        "possession_style": 53,
+        "defensive_line_height": 48
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "TUR",
+      "team_name": "Turkey",
+      "fifa_rank": 22,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Vincenzo Montella",
+      "manager_name_official": "Vincenzo Montella",
+      "manager_name_official_profile": "Vincenzo Montella",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 64,
+        "possession_style": 56,
+        "defensive_line_height": 55
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "URU",
+      "team_name": "Uruguay",
+      "fifa_rank": 16,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Marcelo Bielsa",
+      "manager_name_official": "Marcelo Bielsa",
+      "manager_name_official_profile": "Marcelo Bielsa",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 88,
+        "possession_style": 54,
+        "defensive_line_height": 74
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "UZB",
+      "team_name": "Uzbekistan",
+      "fifa_rank": 56,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Fabio Cannavaro",
+      "manager_name_official": "Fabio Cannavaro",
+      "manager_name_official_profile": "Fabio Cannavaro",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 44,
+        "possession_style": 40,
+        "defensive_line_height": 36
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "medium",
+      "review_score": 7.0,
+      "review_band": "low",
+      "review_reasons": [
+        "チームデータレビューの優先度が中です"
+      ]
+    },
+    {
+      "team_id": "CUW",
+      "team_name": "Curacao",
+      "fifa_rank": 82,
+      "default_formation": "3-4-2-1",
+      "manager_name_seed": "Dick Advocaat",
+      "manager_name_official": "Dick Advocaat",
+      "manager_name_official_profile": "Dick Advocaat",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 38,
+        "possession_style": 32,
+        "defensive_line_height": 30
+      },
+      "duplicate_profile_team_ids": [
+        "CUW",
+        "PAR"
+      ],
+      "team_review_priority_band": "low",
+      "review_score": 4.0,
+      "review_band": "low",
+      "review_reasons": [
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "ENG",
+      "team_name": "England",
+      "fifa_rank": 4,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Thomas Tuchel",
+      "manager_name_official": "Thomas Tuchel",
+      "manager_name_official_profile": "Thomas Tuchel",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 78,
+        "possession_style": 62,
+        "defensive_line_height": 68
+      },
+      "duplicate_profile_team_ids": [
+        "ENG",
+        "GER"
+      ],
+      "team_review_priority_band": "low",
+      "review_score": 4.0,
+      "review_band": "low",
+      "review_reasons": [
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "GER",
+      "team_name": "Germany",
+      "fifa_rank": 10,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Julian Nagelsmann",
+      "manager_name_official": "Julian Nagelsmann",
+      "manager_name_official_profile": "Julian Nagelsmann",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 78,
+        "possession_style": 62,
+        "defensive_line_height": 68
+      },
+      "duplicate_profile_team_ids": [
+        "ENG",
+        "GER"
+      ],
+      "team_review_priority_band": "low",
+      "review_score": 4.0,
+      "review_band": "low",
+      "review_reasons": [
+        "他の1チームと同じ戦術値の組み合わせを共有しています"
+      ]
+    },
+    {
+      "team_id": "ARG",
+      "team_name": "Argentina",
+      "fifa_rank": 1,
+      "default_formation": "4-4-2",
+      "manager_name_seed": "Lionel Scaloni",
+      "manager_name_official": "Lionel Scaloni",
+      "manager_name_official_profile": "Lionel Scaloni",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 62,
+        "possession_style": 64,
+        "defensive_line_height": 58
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    },
+    {
+      "team_id": "BEL",
+      "team_name": "Belgium",
+      "fifa_rank": 9,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Rudi Garcia",
+      "manager_name_official": "Rudi Garcia",
+      "manager_name_official_profile": "Rudi Garcia",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 68,
+        "possession_style": 64,
+        "defensive_line_height": 60
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    },
+    {
+      "team_id": "BRA",
+      "team_name": "Brazil",
+      "fifa_rank": 6,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Carlo Ancelotti",
+      "manager_name_official": "Carlo Ancelotti",
+      "manager_name_official_profile": "Carlo Ancelotti",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 60,
+        "possession_style": 68,
+        "defensive_line_height": 58
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    },
+    {
+      "team_id": "FRA",
+      "team_name": "France",
+      "fifa_rank": 3,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Didier Deschamps",
+      "manager_name_official": "Didier Deschamps",
+      "manager_name_official_profile": "Didier Deschamps",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 58,
+        "possession_style": 54,
+        "defensive_line_height": 52
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    },
+    {
+      "team_id": "NOR",
+      "team_name": "Norway",
+      "fifa_rank": 25,
+      "default_formation": "4-3-3",
+      "manager_name_seed": "Stale Solbakken",
+      "manager_name_official": "Stale Solbakken",
+      "manager_name_official_profile": "Stale Solbakken",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 56,
+        "possession_style": 50,
+        "defensive_line_height": 48
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    },
+    {
+      "team_id": "USA",
+      "team_name": "United States",
+      "fifa_rank": 17,
+      "default_formation": "4-2-3-1",
+      "manager_name_seed": "Mauricio Pochettino",
+      "manager_name_official": "Mauricio Pochettino",
+      "manager_name_official_profile": "Mauricio Pochettino",
+      "manager_name_mismatch": false,
+      "manager_rating_confidence": "estimated",
+      "missing_manager_rating": false,
+      "has_tactical_basis": true,
+      "has_tactical_basis_candidate_note": true,
+      "tactical_profile": {
+        "press_intensity": 72,
+        "possession_style": 58,
+        "defensive_line_height": 62
+      },
+      "duplicate_profile_team_ids": [],
+      "team_review_priority_band": "low",
+      "review_score": 0.0,
+      "review_band": "low",
+      "review_reasons": [
+        "現時点で監督・戦術データの信頼性に関する重大な指摘はありません"
+      ]
+    }
+  ]
+}

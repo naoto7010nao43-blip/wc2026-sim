@@ -28,27 +28,31 @@
 - `audit_simulation_accuracy`: NED/BRA/MAR/BEL/MEX/URU の squad 評価が FIFA ランクを「下回る可能性」（キャリブレーション観察であってバグではない）。NED が最大（7 matchup）。
 - `build_formation_position_fit_audit`: 約40件の out-of-position XI 割当（テンプレート適合上ほぼ不可避、47チームで平均~1件）。
 - `build_squad_rating_gap_review`: POR/MEX/JOR/BIH/AUS/PAR に shallow_seed_roster / stale_seed_review_needed。
-- `audit_manager_tactical_data`: 自由文の `_tactical_profile_basis` 候補が追加されたが、Codexレビューで「自由文があるだけでは根拠ありにしない」と判断。`tactical_basis_candidate_review_2026-07-01.json` に候補を退避し、監査側は構造化・URL付き・verified=true の根拠だけを認めるように変更した。high優先バンドは未解消のまま残す。
+- `audit_manager_tactical_data`: ~~high優先バンドは未解消のまま残す~~ → **2026-07-09 に解消（下記「実施した対応」参照）**。構造化 `tactical_profile_sources`（verified=true + URL）を46/48チームに整備し、監査は **high=0, medium=15, low=33**。残medium は主に `team_review_band`（ロースター深度/鮮度）や重複戦術値が要因で、根拠欠落ではない。未整備は **KOR/TUN の2チームのみ**（両監督とも大会中に辞任し体制流動中のため意図的に保留）。
 
 `audit_simulation_accuracy` / `build_formation_position_fit_audit` / `build_squad_rating_gap_review` への対応は**主観的判断**を要し、私の2025-26知識は古い（このセッションで監督4件・低評価4件の「バグ」疑いが全て私の誤りだった）ため、正しい・より新しいデータを退行させるリスクが高い。よって不在中は着手せず記録に留めた。
 
 ## ユーザー復帰時の推奨アクション（優先順）
 
-1. **戦術根拠候補の構造化レビュー** — URLなし候補、403候補、本文未確認候補を分ける。自由文をそのままseed根拠にしない。
+1. ~~**戦術根拠候補の構造化レビュー**~~ → **完了（2026-07-09）**。自由文をそのままではなく、各監督をWeb検証のうえ実URLを構造化 `tactical_profile_sources`（verified=true）へ整備。
 2. **監査レポート群の再生成**（source_provenance / rating_decision / fifa_squad_diff / manager_tactical_data）— 現データに同期させ、将来の監査を正確化。安全（レポートファイルのみ書き込み）。
 3. **NED の squad 評価の妥当性確認（任意）** — simulation_accuracy が最も強く「下回る可能性」を示唆。ただし NED の主力（Gakpo/Depay/Malen/Weghorst 等）は既に妥当なEA値。深堀りは主観的。
 
-## 実施した対応（戦術根拠候補の安全化）
+## 実施した対応（戦術根拠の整備 — 2026-07-09 完了）
 
-`audit_manager_tactical_data` がフラグする「戦術プロフィールの根拠情報が無い」ガバナンス欠落に対し、自由文候補を直接採用せず、レビューキューとして扱う方針に変更した。
+監査が要求する構造化根拠を、**既存の戦術数値（press/possession/line）・フォーメーション・監督名・予測式を一切変えず**に整備した。加算的ドキュメント整備のみ。
 
-- 25チームに `_tactical_profile_basis` 候補文が存在し、URLは合計51件。機械到達性では48件が200、3件が403、8チームはURLなし。
-- `build_tactical_basis_candidate_review.py` を追加し、候補文を `tactical_basis_candidate_review_*.json` に構造化して退避する。
-- `audit_manager_tactical_data` は、自由文 `_tactical_profile_basis` ではなく、将来の `tactical_profile_sources[].verified === true` のような構造化根拠だけを `has_tactical_basis=true` とみなす。
-- 既存の戦術数値（press/possession/line）、フォーメーション、監督名、予測式は変更しない。
-- これにより、未検証のURL付き文章で監査が「解消済み」に見えるリスクを避ける。
+**手法（各チーム共通）:**
+1. 各監督の実証された戦術的アイデンティティを Web 検証（複数ソースの一致を確認）。
+2. 既存の数値と整合することを確認（数値の妥当性を裏付ける根拠として記述。乖離があるケースは数値を変えず透明に橋渡し — 例: SWE Potter の positional 志向 vs 本大会の直線的採用、NZL のOFC予選ポゼッションと本大会ミッドブロックの差、ENG の予選70%ポゼッションと構造優先の poss=62）。
+3. 実URLを構造化 `tactical_profile_sources: [{url, verified:true}]` として付与（自由文 `_tactical_profile_basis` は人間可読の根拠ノートとして併存）。
+
+**結果:**
+- **46/48チーム**に検証済み構造化ソースを整備（今セッション検証39 + 旧散文8チーム中7を追検証）。監査 **high 5→0**、low 2→33。
+- `regenerate_legacy_teams_json()` は LEGACY_FIELD_ORDER 外のキー（`_tactical_profile_basis` / `tactical_profile_sources`）を保持する設計のため、teams.json 直接編集で足り、`test_seed_file_consistency` を含む**フルテスト 481 passed**。
+- **KOR/TUN のみ意図的に未整備**: Hong Myung-bo（KOR）は 2026-06-28、Herve Renard（TUN）は 2026-07-04 に**辞任**。辞任監督の体制を現行として検証ソースを付けるのは不適切なため、**現監督のWeb確認と `manager_name` 見直しが先**。これは別軸（監督名の鮮度）の課題として残す。
 
 ## このセッションでのその他の変更
 
 - 記憶に網羅監査の結論を記録（`project_wc2026_thorough_audit_clean_2026-07-02`）— 将来セッションが解決済みリード（coach/provenance）を再追跡しないため。
-- **注**: teams.json の `_tactical_profile_basis` 候補差分はコミット/pushしない。構造化・本文確認・verified判定を経るまでseedには入れない。
+- **注**: teams.json の差分（`_tactical_profile_basis` / `tactical_profile_sources`）はコミット/push未実施（露出トークン不使用の方針）。監査/診断専用フィールドでライブアプリは `teams2026_official.json` からシードするため**サイト挙動に影響せずデプロイ不要**。反映はユーザーのコミット/push、または有効トークン提供後。

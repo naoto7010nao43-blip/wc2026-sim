@@ -11,7 +11,22 @@
       "press_intensity": 60,
       "possession_style": 68,
       "defensive_line_height": 58
-    }
+    },
+    "_tactical_profile_basis": "Ancelotti's Brazil is built for attacking freedom and technical expression in possession from a 4-3-3 (poss 68) while staying organised and compact in a 4-4-2 block out of possession; the press is selective-to-aggressive near the opponent's box (Vinicius, Cunha) rather than a full-pitch gegenpress, so press_intensity (60) and defensive_line_height (58) sit at balanced levels (sources: Tactical Football Analysis 'Carlo Ancelotti Tactics at Brazil 2026' https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/ ; Total Football Analysis 'How Will Carlo Ancelotti Rebuild Brazil? Data Analysis' https://totalfootballanalysis.com/data-analysis/carlo-ancelotti-brazil-data-analysis-statistics ; Goal.com Ancelotti Brazil World Cup https://www.goal.com/en/lists/carlo-ancelotti-brazil-eder-militao-corrected-weaknesses-world-cup/blt6ae33bc3729108a2).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/carlo-ancelotti-tactics-brazil-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://totalfootballanalysis.com/data-analysis/carlo-ancelotti-brazil-data-analysis-statistics",
+        "verified": true
+      },
+      {
+        "url": "https://www.goal.com/en/lists/carlo-ancelotti-brazil-eder-militao-corrected-weaknesses-world-cup/blt6ae33bc3729108a2",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "ARG",
@@ -25,7 +40,22 @@
       "press_intensity": 62,
       "possession_style": 64,
       "defensive_line_height": 58
-    }
+    },
+    "_tactical_profile_basis": "Scaloni's world champions play a structured, collective 4-3-3 (shifting to 4-4-2) that leverages the midfield's technical quality through fluid possession and positional rotations, but stays pragmatic - happy to go direct in behind when the game demands - so press_intensity (62), possession_style (64) and defensive_line_height (58) reflect a balanced, disciplined side rather than an extreme presser or possession-hoarder (sources: Tactical Football Analysis 'Lionel Scaloni Tactics at Argentina 2026' https://tacticalfootballanalysis.com/lionel-scaloni-tactics-argentina-2026-world-cup-tactical-analysis/ ; FWCTimes Scaloni profile https://fwctimes.com/lionel-scaloni/ ; Squawka Scaloni profile https://www.squawka.com/us/news/lionel-scaloni/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/lionel-scaloni-tactics-argentina-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/lionel-scaloni/",
+        "verified": true
+      },
+      {
+        "url": "https://www.squawka.com/us/news/lionel-scaloni/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "FRA",
@@ -39,7 +69,22 @@
       "press_intensity": 58,
       "possession_style": 54,
       "defensive_line_height": 52
-    }
+    },
+    "_tactical_profile_basis": "Deschamps sets France up pragmatically for tournament football - a protected defensive base, selective rather than constant pressing, and devastating transition attacks once the first line is broken - so the moderate press_intensity (58), possession_style (54) and defensive_line_height (52) reflect a balanced, counter-capable side that does not force a possession identity (sources: World Soccer Talk 'France 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; FWCUMC Deschamps profile and tactics https://fwcumc.com/news/didier-deschamps-france-coach-profile-tactics/ ; New Straits Times 'France will not give up attacking philosophy' https://www.nst.com.my/amp/sports/football/2026/06/1476278/france-will-not-give-attacking-philosophy-says-deschamps).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/france-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwcumc.com/news/didier-deschamps-france-coach-profile-tactics/",
+        "verified": true
+      },
+      {
+        "url": "https://www.nst.com.my/amp/sports/football/2026/06/1476278/france-will-not-give-attacking-philosophy-says-deschamps",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "ENG",
@@ -53,7 +98,22 @@
       "press_intensity": 78,
       "possession_style": 62,
       "defensive_line_height": 68
-    }
+    },
+    "_tactical_profile_basis": "Tuchel's England pressed high and controlled matches (over 70% possession in all eight qualifiers) but the tournament model prioritizes structural security over possession maximalism, so possession_style sits at a controlled 62 alongside a high press_intensity (78) and high defensive_line_height (68) as the whole side defends together from the front (sources: Tactical Football Analysis 'Thomas Tuchel Tactics at England 2026: Building a World Cup Ready System' https://tacticalfootballanalysis.com/thomas-tuchel-tactics-at-england-2026-building-a-world-cup-ready-system-tactical-analysis/ ; Tactical Football Analysis 'Thomas Tuchel Tactics at England 2026 Data Analysis' https://tacticalfootballanalysis.com/thomas-tuchel-tactics-england-2026-world-cup-data-analysis/ ; Sky Sports Tuchel WC2026 interview https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-at-england-2026-building-a-world-cup-ready-system-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://tacticalfootballanalysis.com/thomas-tuchel-tactics-england-2026-world-cup-data-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.skysports.com/football/news/11095/13556912/world-cup-2026-england-boss-thomas-tuchel-on-how-he-has-given-his-attackers-freedom-on-the-pitch",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "GER",
@@ -67,7 +127,22 @@
       "press_intensity": 78,
       "possession_style": 62,
       "defensive_line_height": 68
-    }
+    },
+    "_tactical_profile_basis": "Nagelsmann's Germany runs a fluid 4-2-3-1 / 3-4-2-1 defined by aggressive counter-pressing (analysts note a very low PPDA, i.e. extreme pressing intensity - press_intensity 78) and a directed, territory-based high block (defensive_line_height 68); in possession it balances controlled build-up with ruthless vertical attacks through Musiala and Wirtz to avoid sterile possession, hence a moderate possession_style (62) (sources: Tactical Football Analysis 'Julian Nagelsmann Tactics at Germany 2026' https://tacticalfootballanalysis.com/julian-nagelsmann-tactics-germany-2026-world-cup-tactical-analysis/ ; FWCTimes Nagelsmann profile https://fwctimes.com/julian-nagelsmann/ ; World Soccer Talk 'Germany 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/germany-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/julian-nagelsmann-tactics-germany-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/julian-nagelsmann/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/germany-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "USA",
@@ -81,7 +156,22 @@
       "press_intensity": 72,
       "possession_style": 58,
       "defensive_line_height": 62
-    }
+    },
+    "_tactical_profile_basis": "Pochettino's USA plays his signature high-pressing, aggressive style - hunting the ball, compressing space and pushing fullbacks high with wingers as inside forwards - from a 4-2-3-1 / hybrid 3-4-3, so the high press_intensity (72) and high defensive_line_height (62) capture the pressing identity while possession_style (58) reflects a transition-and-press team rather than a possession-first one (sources: Forbes 'Pochettino and the Tactics Shaping the U.S.'s World Cup Team' https://www.forbes.com/sites/clementelisi/2026/04/25/pochettino-and-the-ideology-shaping-the-uss-world-cup-team/ ; Yahoo Sports 'Who is USA's soccer coach Mauricio Pochettino?' https://sports.yahoo.com/articles/usa-soccer-coach-mauricio-pochettino-191032225.html ; Wikipedia Mauricio Pochettino https://en.wikipedia.org/wiki/Mauricio_Pochettino).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.forbes.com/sites/clementelisi/2026/04/25/pochettino-and-the-ideology-shaping-the-uss-world-cup-team/",
+        "verified": true
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/usa-soccer-coach-mauricio-pochettino-191032225.html",
+        "verified": true
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mauricio_Pochettino",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "MEX",
@@ -96,7 +186,21 @@
       "possession_style": 60,
       "defensive_line_height": 52
     },
-    "_tactical_profile_basis": "Aguirre (in his third spell as Mexico coach) favors a pragmatic, structured 4-3-3 built on patient short-passing buildup through midfield (Alvarez/Lozano-type carriers) rather than extreme gegenpress; as co-hosts Mexico have prepared with a long uninterrupted camp and friendlies emphasizing possession control and a mid-to-moderately-high block rather than all-out pressing (sources: Transfermarkt Mexico national team profile 2026, ESPN/Marca Aguirre tactics analysis for Copa Oro/WC2026 buildup, FMF official squad and friendlies coverage 2025-26)."
+    "_tactical_profile_basis": "Aguirre (in his third spell as Mexico coach) favors a pragmatic, structured 4-3-3 built on patient short-passing buildup through midfield (Alvarez/Lozano-type carriers) rather than extreme gegenpress; as co-hosts Mexico have prepared with a long uninterrupted camp and friendlies emphasizing possession control and a mid-to-moderately-high block rather than all-out pressing (sources: Transfermarkt Mexico national team profile 2026, ESPN/Marca Aguirre tactics analysis for Copa Oro/WC2026 buildup, FMF official squad and friendlies coverage 2025-26).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.espn.com/soccer/story/_/id/49172297/aguirres-pragmatic-mexico-doubters-built-world-cup-success",
+        "verified": true
+      },
+      {
+        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/javier-aguirre-the-coach-who-inspired-mexico-to-believe-again-2026-07-05",
+        "verified": true
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Javier_Aguirre",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "RSA",
@@ -111,7 +215,21 @@
       "possession_style": 45,
       "defensive_line_height": 45
     },
-    "_tactical_profile_basis": "Broos (Belgian, also won AFCON 2023 with Cameroon) runs a disciplined, compact 4-2-3-1/4-4-2 mid-block prioritizing defensive organization and direct transitions through pacey wide players (Mokoena, Foster) over sustained possession; Bafana Bafana qualified for their first WC since 2010 largely on the back of a low-goals-conceded CAF qualifying campaign (sources: CAF Online South Africa WC2026 qualifying review 2025, SAFA official Hugo Broos squad/tactics statements 2025-26, KickOff.com Bafana Bafana tactical preview 2026)."
+    "_tactical_profile_basis": "Broos (Belgian, also won AFCON 2023 with Cameroon) runs a disciplined, compact 4-2-3-1/4-4-2 mid-block prioritizing defensive organization and direct transitions through pacey wide players (Mokoena, Foster) over sustained possession; Bafana Bafana qualified for their first WC since 2010 largely on the back of a low-goals-conceded CAF qualifying campaign (sources: CAF Online South Africa WC2026 qualifying review 2025, SAFA official Hugo Broos squad/tactics statements 2025-26, KickOff.com Bafana Bafana tactical preview 2026).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.aljazeera.com/sports/2026/6/27/south-africas-broos-smiles-and-snarls-ahead-of-canada-world-cup-showdown",
+        "verified": true
+      },
+      {
+        "url": "https://www.legit.ng/sports/football/1715133-2026-world-cup-south-africa-coach-hugo-broos-talks-tough-group-a-clash-czechia/",
+        "verified": true
+      },
+      {
+        "url": "https://iol.co.za/fifa-world-cup-2026/updates/2026-07-03-hugo-broos-reveals-turning-point-behind-bafana-bafanas-historic-world-cup-rise/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "KOR",
@@ -141,7 +259,21 @@
       "possession_style": 42,
       "defensive_line_height": 44
     },
-    "_tactical_profile_basis": "Hasek was fired in October 2025 after a loss to the Faroe Islands; Miroslav Koubek (ex-Viktoria Plzen) was appointed December 19, 2025 ahead of the March 2026 playoffs, bringing his signature 3-4-2-1 system, a pragmatic mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil (sources: AP/Yahoo/KVUE Dec 19 2025 coaching-change report, koskingdom.com Koubek tactical profile)."
+    "_tactical_profile_basis": "Hasek was fired in October 2025 after a loss to the Faroe Islands; Miroslav Koubek (ex-Viktoria Plzen) was appointed December 19, 2025 ahead of the March 2026 playoffs, bringing his signature 3-4-2-1 system, a pragmatic mid-to-low block built on defensive solidity, set-piece threat, and direct service into Schick/Chytil (sources: AP/Yahoo/KVUE Dec 19 2025 coaching-change report, koskingdom.com Koubek tactical profile).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.fifa.com/en/articles/miroslav-koubek-interview-czechia",
+        "verified": true
+      },
+      {
+        "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/czech-republic-at-the-2026-world-cup-squad-key-players-and-everything-you-need-to-know-2026-05-26",
+        "verified": true
+      },
+      {
+        "url": "https://www.uefa.com/european-qualifiers/news/02a6-20d15945d06d-c1587a40d2a4-1000--czechia-at-the-world-cup-2026-squad-results-group-and-hi/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "CAN",
@@ -156,7 +288,21 @@
       "possession_style": 38,
       "defensive_line_height": 72
     },
-    "_tactical_profile_basis": "Marsch built his reputation at RB Salzburg/RB Leipzig on the Red Bull high-press 'Maplepress' identity; Canada press in two compact banks of four with a high line and prioritize rapid transitions over sustained possession (sources: Squawka 'Canada lineup and formation' 2026, FWCTimes Jesse Marsch coach profile 2026, CBS Sports coaching appointment piece)."
+    "_tactical_profile_basis": "Marsch built his reputation at RB Salzburg/RB Leipzig on the Red Bull high-press 'Maplepress' identity; Canada press in two compact banks of four with a high line and prioritize rapid transitions over sustained possession (sources: Squawka 'Canada lineup and formation' 2026, FWCTimes Jesse Marsch coach profile 2026, CBS Sports coaching appointment piece).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.onesoccer.ca/a/what-is-maplepressing-a-deep-dive-into-the-jesse-marsch-s-high-press-tactics-for-canmnt-canada",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/canada-playing-style-world-cup/",
+        "verified": true
+      },
+      {
+        "url": "https://www.goal.com/en/lists/who-is-jesse-marsch-canada-2026-world-cup-coach/blte065c04ad25f4233",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "BIH",
@@ -171,7 +317,21 @@
       "possession_style": 28,
       "defensive_line_height": 38
     },
-    "_tactical_profile_basis": "Barbarez (first-time senior manager) has used a pragmatic 4-4-2/4-2-3-1 built on compact mid-to-low block defending, direct long-ball progression to target men (Dzeko/Demirovic) and set-piece threat rather than a press-and-possess game; Bosnia recorded the highest long-pass share of any team in the opening WC26 matches (sources: FWCTimes Sergej Barbarez coach profile 2026, TotalFootballAnalysis Bosnia tactical preview 2026, TacticalFootballAnalysis Canada-Bosnia WC26 analysis)."
+    "_tactical_profile_basis": "Barbarez (first-time senior manager) has used a pragmatic 4-4-2/4-2-3-1 built on compact mid-to-low block defending, direct long-ball progression to target men (Dzeko/Demirovic) and set-piece threat rather than a press-and-possess game; Bosnia recorded the highest long-pass share of any team in the opening WC26 matches (sources: FWCTimes Sergej Barbarez coach profile 2026, TotalFootballAnalysis Bosnia tactical preview 2026, TacticalFootballAnalysis Canada-Bosnia WC26 analysis).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/sergej-barbarez/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/bosnia-and-herzegovina-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Sergej_Barbarez",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "QAT",
@@ -186,7 +346,21 @@
       "possession_style": 58,
       "defensive_line_height": 50
     },
-    "_tactical_profile_basis": "Lopetegui (ex-Real Madrid/Porto/Sevilla) is a possession-coaching, structured-buildup manager by reputation, but Qatar's squad (drawn almost entirely from the Qatar Stars League around the Afif/Almoez Ali/Al-Haydos generation) defended fragilely in Asian qualifying (~1.56 goals conceded/game), so moderate, conservative numbers are used pending his short tenure (appointed May 2025) reshaping the side (sources: QNA Qatar coach squad announcement 2026, WorldSoccerTalk Qatar 2026 preview/tactical analysis, Olympics.com Qatar WC26 squad overview)."
+    "_tactical_profile_basis": "Lopetegui (ex-Real Madrid/Porto/Sevilla) is a possession-coaching, structured-buildup manager by reputation, but Qatar's squad (drawn almost entirely from the Qatar Stars League around the Afif/Almoez Ali/Al-Haydos generation) defended fragilely in Asian qualifying (~1.56 goals conceded/game), so moderate, conservative numbers are used pending his short tenure (appointed May 2025) reshaping the side (sources: QNA Qatar coach squad announcement 2026, WorldSoccerTalk Qatar 2026 preview/tactical analysis, Olympics.com Qatar WC26 squad overview).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/julen-lopetegui/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/qatar-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.tribalfootball.com/article/julen-lopetegui-s-qatar-rebuild-analysed-as-world-cup-success-eyed-d8cf3878-f9f1-4827-9706-bffcd1545620",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "SUI",
@@ -201,7 +375,21 @@
       "possession_style": 66,
       "defensive_line_height": 55
     },
-    "_tactical_profile_basis": "Yakin runs a flexible possession-based 4-3-3 (shifting to 3-4-3/4-2-3-1) built from the back through Xhaka/Sow, with a compact mid-block that prioritizes closing central space; Switzerland conceded just two goals across their qualifying campaign, reflecting defensive solidity over an extremely high line (sources: TacticalFootballAnalysis 'Murat Yakin Tactics at Switzerland WC2026', Squawka Switzerland WC2026 squad/tactics analysis, FWCUMC Murat Yakin coach profile)."
+    "_tactical_profile_basis": "Yakin runs a flexible possession-based 4-3-3 (shifting to 3-4-3/4-2-3-1) built from the back through Xhaka/Sow, with a compact mid-block that prioritizes closing central space; Switzerland conceded just two goals across their qualifying campaign, reflecting defensive solidity over an extremely high line (sources: TacticalFootballAnalysis 'Murat Yakin Tactics at Switzerland WC2026', Squawka Switzerland WC2026 squad/tactics analysis, FWCUMC Murat Yakin coach profile).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/switzerland-tactics-world-cup-2026-murat-yakin-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/murat-yakin-switzerland-interview",
+        "verified": true
+      },
+      {
+        "url": "https://www.squawka.com/en/news/world-cup/switzerland-world-cup-2026-route-to-the-final-july-3/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "MAR",
@@ -215,7 +403,22 @@
       "press_intensity": 78,
       "possession_style": 56,
       "defensive_line_height": 64
-    }
+    },
+    "_tactical_profile_basis": "Ouahbi (promoted from the U20s he led to the 2025 title, succeeding Regragui in March 2026) plays a high-pressing 4-3-3 with overlapping full-backs: coordinated pressing waves, a high defensive block and quick attacking support once the line breaks, imposing the game with a possession-minded brand ('when we defend, it is so we can attack better'). This underpins the high press_intensity (78) and defensive_line_height (64) with a balanced possession_style (56) (sources: Tactical Football Analysis 'How To Coach Pressing Like Mohamed Ouahbi' https://tacticalfootballanalysis.com/coaching-modern-press-mohamed-ouahbi-morocco-2026-world-cup-tactics/ ; FWCTimes Ouahbi profile https://fwctimes.com/mohamed-ouahbi/ ; FIFA.com 'Ouahbi's Morocco look to build a legacy' https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-morocco-challenge).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/coaching-modern-press-mohamed-ouahbi-morocco-2026-world-cup-tactics/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/mohamed-ouahbi/",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mohamed-ouahbi-morocco-challenge",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "HAI",
@@ -229,7 +432,22 @@
       "press_intensity": 38,
       "possession_style": 28,
       "defensive_line_height": 24
-    }
+    },
+    "_tactical_profile_basis": "Sebastien Migne's Haiti is rooted in defensive resilience: a deep, compact low block that absorbs pressure and frustrates opponents, conceding just six goals across six final-round qualifiers, then relying on quick transitions rather than sustained build-up (they often end isolated in the final third). This absorb-and-counter identity, sitting as deep as any side in the field, anchors the very low profile: press_intensity 38, possession_style 28, and a very deep defensive_line_height of 24. (https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sebastien-mign-haiti-interview ; https://worldsoccertalk.com/world-cup/haiti-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://worldcupstats.football/coaches/sebastien-migne/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sebastien-mign-haiti-interview",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/haiti-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://worldcupstats.football/coaches/sebastien-migne/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "SCO",
@@ -243,7 +461,22 @@
       "press_intensity": 52,
       "possession_style": 42,
       "defensive_line_height": 40
-    }
+    },
+    "_tactical_profile_basis": "Steve Clarke ditched his long-favoured back five after Euro 2024 for a 4-2-3-1 whose exact shape he adapts to personnel and opponent, but the underlying identity remains the organized, compact, defence-first side that reached a first World Cup since 1998 by out-structuring opponents rather than dominating the ball -- hence a low possession_style of 42, a deeper defensive_line_height of 40, and a moderate, disciplined press_intensity of 52 that prioritizes shape over swarming. (https://tacticalfootballanalysis.com/steve-clarke-tactics-scotland-2026-tactical-analysis/ ; https://www.espn.com/soccer/story/_/id/48769157/all-26-players-picked-steve-clarke-why ; https://www.skysports.com/football/news/11096/13546541/world-cup-2026-scotland-boss-steve-clarke-facing-five-selection-questions-ahead-of-campaign)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/steve-clarke-tactics-scotland-2026-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.espn.com/soccer/story/_/id/48769157/all-26-players-picked-steve-clarke-why",
+        "verified": true
+      },
+      {
+        "url": "https://www.skysports.com/football/news/11096/13546541/world-cup-2026-scotland-boss-steve-clarke-facing-five-selection-questions-ahead-of-campaign",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "PAR",
@@ -257,7 +490,22 @@
       "press_intensity": 38,
       "possession_style": 32,
       "defensive_line_height": 30
-    }
+    },
+    "_tactical_profile_basis": "Gustavo Alfaro engineers a suffocating, defence-first system: Paraguay defends from a compact mid-to-low block (4-4-2 / 4-2-3-1) built to slow build-up and protect the back four, then springs rapid counters through wide runners -- the identity that carried them to the finals. This deep, containment-first, low-possession approach fully justifies the very low profile: press_intensity 38 (it presses in calculated zonal jumps rather than continuously), possession_style 32, and a deep defensive_line_height of 30. (https://fwctimes.com/gustavo-alfaro/ ; https://footballkit.lazada.sg/teams/paraguay-low-block-tactics-2026-world/ ; https://worldsoccertalk.com/world-cup/paraguay-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/gustavo-alfaro/",
+        "verified": true
+      },
+      {
+        "url": "https://footballkit.lazada.sg/teams/paraguay-low-block-tactics-2026-world/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/paraguay-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "AUS",
@@ -271,7 +519,22 @@
       "press_intensity": 50,
       "possession_style": 44,
       "defensive_line_height": 45
-    }
+    },
+    "_tactical_profile_basis": "Tony Popovic's Socceroos are built on a highly disciplined, attritional defensive structure that absorbs pressure and launches fierce counters from a 3-4-2-1 / 4-2-3-1, with the squad drilled to be comfortable without the ball -- so possession_style is low at 44 and press_intensity is a modest 50 (containment, not swarming). The back line sits at a mid-deep 45 to keep compact lines and protect central zones, consistent with his long-established defensive, counter-attacking identity. (https://fwctimes.com/tony-popovic/ ; https://worldsoccertalk.com/world-cup/australia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://www.sbs.com.au/news/article/fifa-world-cup-2026-socceroos-tony-popovic-coaching-style/23k10gzyy)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/tony-popovic/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/australia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.sbs.com.au/news/article/fifa-world-cup-2026-socceroos-tony-popovic-coaching-style/23k10gzyy",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "TUR",
@@ -285,7 +548,22 @@
       "press_intensity": 64,
       "possession_style": 56,
       "defensive_line_height": 55
-    }
+    },
+    "_tactical_profile_basis": "Vincenzo Montella's Turkiye is a controlled, positional side rather than the old counter-attacking model: it averaged 53.6% possession with 85.5% passing accuracy across World Cup qualifying and builds from the back in a 3+1 structure, which supports a moderate-to-high possession_style of 56. Pressing is man-oriented and selective rather than constant swarming, so press_intensity sits at a measured 64, and the back line holds a mid-height 55 to balance the aggressive man-marking against transition risk. (https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/ ; https://worldsoccertalk.com/world-cup/turkiye-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://mundialanalytics.com/turkey-national-team-analysis)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/vincenzo-montella-tactics-turkiye-2026-world-cup-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/turkiye-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://mundialanalytics.com/turkey-national-team-analysis",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "CUW",
@@ -299,7 +577,22 @@
       "press_intensity": 38,
       "possession_style": 32,
       "defensive_line_height": 30
-    }
+    },
+    "_tactical_profile_basis": "Dick Advocaat built Curacao on a deep 4-4-2 block -- two compact banks of four, minimal space between the lines, disciplined positional play -- that shifts instantly to explosive counters through Kastaneer, Kuwas and Locadia, with set pieces a genuine weapon. The structure was miserly (only three goals conceded in the final six qualifiers) and drops even deeper against elite opponents, fully justifying the very low profile: press_intensity 38, possession_style 32, defensive_line_height 30. (https://worldsoccertalk.com/world-cup/curazao-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://www.skysports.com/football/news/12098/13545528/world-cup-2026-curacao-caribbean-nations-historic-first-appearance ; https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dick-advocaat-curacao-feature)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/curazao-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.skysports.com/football/news/12098/13545528/world-cup-2026-curacao-caribbean-nations-historic-first-appearance",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/dick-advocaat-curacao-feature",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "CIV",
@@ -313,7 +606,22 @@
       "press_intensity": 62,
       "possession_style": 50,
       "defensive_line_height": 52
-    }
+    },
+    "_tactical_profile_basis": "Emerse Fae explicitly targets the balance between defence and attack -- Ivory Coast were solid but low-scoring in qualifying and now pair a Kessie holding pivot with physical, creative midfielders (Fofana, Oulai) in a 4-4-2 or 4-3-3, combining attacking quality with improved defensive discipline (they beat France in preparation). That balanced, physically aggressive identity supports a moderate-to-high press_intensity of 62, a balanced possession_style of 50, and a slightly proactive defensive_line_height of 52. (https://www.espn.com/espn/story/_/id/49131550/world-cup-2026-ivory-coast-emulate-morocco-2022-emerse-fae-eyes-semifinal-run ; https://www.sportsmole.co.uk/football/ivory-coast/world-cup-2026/news/oulai-emergence-leaves-fae-with-fascinating-midfield-dilemma-ahead-of-germany-test_599638.html ; https://dailysports.net/news/emerse-fae-has-bigger-ambitions-for-ivory-coast-than-simply-qualifying-for-the-round-of-32-of-the-2026-world-cup/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.espn.com/espn/story/_/id/49131550/world-cup-2026-ivory-coast-emulate-morocco-2022-emerse-fae-eyes-semifinal-run",
+        "verified": true
+      },
+      {
+        "url": "https://www.sportsmole.co.uk/football/ivory-coast/world-cup-2026/news/oulai-emergence-leaves-fae-with-fascinating-midfield-dilemma-ahead-of-germany-test_599638.html",
+        "verified": true
+      },
+      {
+        "url": "https://dailysports.net/news/emerse-fae-has-bigger-ambitions-for-ivory-coast-than-simply-qualifying-for-the-round-of-32-of-the-2026-world-cup/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "ECU",
@@ -327,7 +635,22 @@
       "press_intensity": 70,
       "possession_style": 40,
       "defensive_line_height": 35
-    }
+    },
+    "_tactical_profile_basis": "Sebastian Beccacece drills a high-energy, physically intense pressing system with quick transitions in a 4-3-3 / 3-4-3, so press_intensity is set high at 70. Ecuador conceded only five goals in eighteen South American qualifiers (second only to Argentina), a record built on defensive solidity and a deeper, compact block that protects against the space its own press concedes -- hence a low defensive_line_height of 35. The side is transition-first rather than possession-based, giving a low possession_style of 40. (https://fwctimes.com/sebastian-beccacece/ ; https://www.citimuzik.com/world-cup-2026/managers/sebastian-beccacece/ ; https://bolavip.com/en/world-cup/sebastian-becaccece-profile)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/sebastian-beccacece/",
+        "verified": true
+      },
+      {
+        "url": "https://www.citimuzik.com/world-cup-2026/managers/sebastian-beccacece/",
+        "verified": true
+      },
+      {
+        "url": "https://bolavip.com/en/world-cup/sebastian-becaccece-profile",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "NED",
@@ -341,7 +664,22 @@
       "press_intensity": 68,
       "possession_style": 66,
       "defensive_line_height": 64
-    }
+    },
+    "_tactical_profile_basis": "Koeman's baseline Netherlands is a traditional, possession-based 4-3-3 that seeks to dominate through midfield control and progressive short passing (Reijnders and co.), justifying the high possession_style (66), press_intensity (68) and defensive_line_height (64) of a front-foot, proactive side. These values encode Koeman's default identity, not the more conservative counter-attacking, five-at-the-back setup he used in the 2026 Round-of-32 defeat to Morocco, which was a tournament-specific adjustment (sources: Tactical Football Analysis 'Ronald Koeman Netherlands Tactics WC2026' https://tacticalfootballanalysis.com/ronald-koeman-netherlands-tactics-world-cup-2026-tactical-analysis/ ; FWCTimes Koeman profile https://fwctimes.com/ronald-koeman/ ; Get Football News BeNe 2026 WC coverage https://getfootballnewsbene.com/ronald-koeman-defends-negative-tactics-as-the-netherlands-crash-out-of-the-world-cup/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/ronald-koeman-netherlands-tactics-world-cup-2026-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/ronald-koeman/",
+        "verified": true
+      },
+      {
+        "url": "https://getfootballnewsbene.com/ronald-koeman-defends-negative-tactics-as-the-netherlands-crash-out-of-the-world-cup/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "JPN",
@@ -355,7 +693,22 @@
       "press_intensity": 60,
       "possession_style": 61,
       "defensive_line_height": 52
-    }
+    },
+    "_tactical_profile_basis": "Moriyasu runs a 'chameleon' Japan that can dominate possession against mid-tier sides through controlled circulation and quick combinations (Mitoma, Kubo) or switch to a low-block counter against giants, from a flexible 4-2-3-1 / 4-3-3 / signature 3-4-2-1; it has shifted toward a more organised, intense collective press. The balanced press_intensity (60), possession_style (61) and defensive_line_height (52) capture that adaptable identity rather than one extreme (sources: Tactical Football Analysis 'Hajime Moriyasu Tactics at Japan 2026' https://tacticalfootballanalysis.com/japan-tactics-world-cup-2026-hajime-moriyasu-tactical-analysis/ ; World Soccer Talk 'Japan 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/japan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; Mundial Analytics 'Japan National Team Analysis' https://mundialanalytics.com/japan-national-team-analysis).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/japan-tactics-world-cup-2026-hajime-moriyasu-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/japan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://mundialanalytics.com/japan-national-team-analysis",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "SWE",
@@ -369,7 +722,18 @@
       "press_intensity": 55,
       "possession_style": 53,
       "defensive_line_height": 48
-    }
+    },
+    "_tactical_profile_basis": "Graham Potter is by pedigree a positional, possession coach (Brighton), which anchors a balanced possession_style of 53 rather than a low one; but with a top-heavy squad built around Isak, Gyokeres and Elanga he pragmatically leaned direct at the tournament, ceding territory to spring fast counters from a flexible 3-4-3. Pressing is coordinated but not a gegenpressing swarm, giving a moderate press_intensity of 55, and the back line sits slightly deep at 48 to guard the transitions his forwards feed on. The number encodes Potter's adaptable identity rather than any single match's possession share. (https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-potter-sweden-world-cup-interview ; https://www.sportsmole.co.uk/football/france/world-cup-2026/news/not-isak-not-gyokeres-this-sweden-star-can-stun-france-at-world-cup_600408.html)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-potter-sweden-world-cup-interview",
+        "verified": true
+      },
+      {
+        "url": "https://www.sportsmole.co.uk/football/france/world-cup-2026/news/not-isak-not-gyokeres-this-sweden-star-can-stun-france-at-world-cup_600408.html",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "TUN",
@@ -397,7 +761,22 @@
       "press_intensity": 68,
       "possession_style": 64,
       "defensive_line_height": 60
-    }
+    },
+    "_tactical_profile_basis": "Garcia's Belgium plays proactive, possession-heavy attacking football from a 4-3-3 / 4-2-3-1 (about 61.6% possession and 88.5% pass accuracy in qualifying, hence possession_style 64), pressing high to win the ball in dangerous areas (press_intensity 68) behind a high defensive line that leaves the side transition-vulnerable (defensive_line_height 60) (sources: Tactical Football Analysis 'Rudi Garcia Tactics at Belgium 2026' https://tacticalfootballanalysis.com/rudi-garcia-tactics-belgium-2026-world-cup-tactical-analysis/ ; FWCTimes Rudi Garcia profile https://fwctimes.com/rudi-garcia/ ; World Soccer Talk 'Belgium 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/belgium-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/rudi-garcia-tactics-belgium-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/rudi-garcia/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/belgium-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "EGY",
@@ -411,7 +790,22 @@
       "press_intensity": 58,
       "possession_style": 42,
       "defensive_line_height": 40
-    }
+    },
+    "_tactical_profile_basis": "Hossam Hassan sets Egypt up in a 4-2-3-1 / 4-3-3 that prioritizes defensive solidity and quick transitions through the pace of Salah and Marmoush, with Salah himself as the press trigger and a narrow, compact midfield -- Egypt conceded only two goals with seven clean sheets in ten CAF qualifiers. The side deliberately does not chase possession dominance (low possession_style 42) and protects central zones with a compact, deeper block (defensive_line_height 40), while the Salah-triggered press gives a moderate press_intensity of 58. (https://fwctimes.com/hossam-hassan/ ; https://mundialanalytics.com/egypt-national-team-analysis ; https://www.rotowire.com/soccer/article/2026-world-cup-group-g-preview-belgium-egypt-iran-new-zealand-tactics-lineups-set-pieces-odds-109591)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/hossam-hassan/",
+        "verified": true
+      },
+      {
+        "url": "https://mundialanalytics.com/egypt-national-team-analysis",
+        "verified": true
+      },
+      {
+        "url": "https://www.rotowire.com/soccer/article/2026-world-cup-group-g-preview-belgium-egypt-iran-new-zealand-tactics-lineups-set-pieces-odds-109591",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "IRN",
@@ -425,7 +819,22 @@
       "press_intensity": 42,
       "possession_style": 35,
       "defensive_line_height": 28
-    }
+    },
+    "_tactical_profile_basis": "Ghalenoei is a pragmatist who lines Iran up in a disciplined 4-2-3-1 built on a deep, compact defensive block that frustrates opponents before launching rapid counter-attacks, so the low possession_style (35) and low defensive_line_height (28) mirror a counter-based, deep-block identity rather than a possession game. press_intensity (42) is moderate rather than high: the block sits deep, though Iran recorded about 4.7 high turnovers per match in qualifying, keeping the value from being lower (sources: World Soccer Talk 'Iran 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/iran-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; Sports Illustrated Iran 2026 preview https://www.si.com/soccer/iran-2026-world-cup-preview ; FIFA.com Ghalenoei interview 2026 https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/amir-ghalenoei-ir-iran-interview).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/iran-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.si.com/soccer/iran-2026-world-cup-preview",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/amir-ghalenoei-ir-iran-interview",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "NZL",
@@ -439,7 +848,22 @@
       "press_intensity": 38,
       "possession_style": 28,
       "defensive_line_height": 25
-    }
+    },
+    "_tactical_profile_basis": "Darren Bazeley's All Whites carry a nominal ~48-52% possession profile, but that figure is inflated by weak OFC opposition; at World Cup level New Zealand is a pragmatic, direct 4-2-3-1 that sits in a compact mid-block, presses only in short situational triggers (allowing opposition centre-backs some build-up), and attacks directly with long passes and early crosses to exploit Chris Wood's aerial dominance. Against elite sides the block drops deep, so the numbers encode the World Cup context rather than the qualifying share: press_intensity 38, possession_style 28, defensive_line_height 25. (https://worldsoccertalk.com/world-cup/new-zealand-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://fwctimes.com/darren-bazeley/ ; https://mundialanalytics.com/new-zealand-national-team-analysis)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/new-zealand-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/darren-bazeley/",
+        "verified": true
+      },
+      {
+        "url": "https://mundialanalytics.com/new-zealand-national-team-analysis",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "ESP",
@@ -453,7 +877,22 @@
       "press_intensity": 76,
       "possession_style": 88,
       "defensive_line_height": 68
-    }
+    },
+    "_tactical_profile_basis": "De la Fuente runs a modern positional-play Spain that builds in a 4-3-3 and dominates the ball through midfield triangles and zone occupation - among the most possession-heavy sides at the tournament, hence the very high possession_style (88) - while pressing high in a flexible man-to-man structure to win it back immediately (press_intensity 76) behind a high line (68) (sources: Tactical Football Analysis 'Luis de la Fuente Tactics at Spain WC2026' https://tacticalfootballanalysis.com/luis-de-la-fuente-tactics-spain-2026-world-cup-analysis/ ; Medium/Charlie Ellis 'How de la Fuente's Spain dominate each phase of play' https://medium.com/@cellis.14/how-de-la-fuentes-spain-dominate-each-phase-of-play-2f0848515c76 ; FIFA.com de la Fuente feature https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/luis-de-la-fuente-spain-feature).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/luis-de-la-fuente-tactics-spain-2026-world-cup-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://medium.com/@cellis.14/how-de-la-fuentes-spain-dominate-each-phase-of-play-2f0848515c76",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/luis-de-la-fuente-spain-feature",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "CPV",
@@ -467,7 +906,22 @@
       "press_intensity": 46,
       "possession_style": 34,
       "defensive_line_height": 36
-    }
+    },
+    "_tactical_profile_basis": "Bubista (Pedro Brito), CAF Coach of the Year 2025, built one of Africa's most disciplined sides in a 4-2-3-1 / 4-1-4-1: rather than dominate the ball, Cape Verde is comfortable defending deep and attacking efficiently on transition, using wingers to isolate fullbacks -- an approach that held Spain to a scoreless draw despite a 65-place ranking gap. The deep, low-retention identity gives a low possession_style of 34 and a deep defensive_line_height of 36, while energetic work-rate pressing in bursts supports a moderate press_intensity of 46. (https://worldsoccertalk.com/amp/world-cup/cape-verde-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://www.cafonline.com/fifa-world-cup/news/fifa-world-cup-2026-bubista-hails-cape-verde-organisation-after-historic-debut-draw-with-spain/ ; https://www.outlookindia.com/sports/football/cape-verde-at-fifa-world-cup-2026-who-is-coach-bubista)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/amp/world-cup/cape-verde-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.cafonline.com/fifa-world-cup/news/fifa-world-cup-2026-bubista-hails-cape-verde-organisation-after-historic-debut-draw-with-spain/",
+        "verified": true
+      },
+      {
+        "url": "https://www.outlookindia.com/sports/football/cape-verde-at-fifa-world-cup-2026-who-is-coach-bubista",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "KSA",
@@ -481,7 +935,22 @@
       "press_intensity": 58,
       "possession_style": 48,
       "defensive_line_height": 46
-    }
+    },
+    "_tactical_profile_basis": "Georgios Donis prioritizes a compact, disciplined 4-4-2 / 4-3-3 block with Kanno shielding the back line, releasing Al-Dawsari and Al-Buraikan on the counter and threatening from set-pieces rather than through possession -- 'very organised, very disciplined' in his own words. This organization-first, counter-and-set-piece identity supports a moderate press_intensity of 58, a below-midpoint possession_style of 48 (not a possession side), and a mid-deep defensive_line_height of 46. (https://tacticalfootballanalysis.com/georgios-donis-tactics-saudi-arabia-world-cup-set-piece-analysis/ ; https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/georgios-donis-saudi-arabia-feature ; https://worldsoccertalk.com/world-cup/saudi-arabia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/georgios-donis-tactics-saudi-arabia-world-cup-set-piece-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/georgios-donis-saudi-arabia-feature",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/saudi-arabia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "URU",
@@ -495,7 +964,22 @@
       "press_intensity": 88,
       "possession_style": 54,
       "defensive_line_height": 74
-    }
+    },
+    "_tactical_profile_basis": "Bielsa's Uruguay is the tournament's most aggressive pressing side: relentless man-marking across the pitch led from the front by Darwin Nunez, an extreme press (press_intensity 88, the highest in the dataset) and a very high defensive line (74) to compress space, paired with vertical counter-attacks rather than sustained possession (possession_style 54) (sources: Tactical Football Analysis 'Marcelo Bielsa Tactics at Uruguay 2026' https://tacticalfootballanalysis.com/marcelo-bielsa-tactics-uruguay-2026-tactical-analysis/ ; The Football Analyst 'Marcelo Bielsa Uruguay Tactical Analysis' https://the-footballanalyst.com/marcelo-bielsa-uruguay-tactical-analysis/ ; FWCTimes Bielsa profile https://fwctimes.com/marcelo-bielsa/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/marcelo-bielsa-tactics-uruguay-2026-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://the-footballanalyst.com/marcelo-bielsa-uruguay-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/marcelo-bielsa/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "SEN",
@@ -509,7 +993,22 @@
       "press_intensity": 74,
       "possession_style": 48,
       "defensive_line_height": 58
-    }
+    },
+    "_tactical_profile_basis": "Thiaw's Senegal is a direct, transition-first side: a 4-3-3 / compact 4-1-4-1 that sits in two organised blocks and hard-codes an intense counter-press (a roughly seven-second frenzy on loss) with a vertical first pass to spring pacey wide players, and it deliberately does not waste time in possession. The high press_intensity (74) reflects the selective high-pressing waves, the low possession_style (48) the direct transition identity, and defensive_line_height (58) the two-block balance (sources: whyfootball.org 'Senegal World Cup 2026: Tactics, Pace & AFCON Fallout' https://whyfootball.org/teams/senegal-brief ; World Soccer Talk 'Senegal 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; Coaches' Voice 'AFCON final Senegal-Morocco tactical analysis' https://learning.coachesvoice.com/cv/afcon-final-senegal-morocco-tactics-jan-2026/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://whyfootball.org/teams/senegal-brief",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://learning.coachesvoice.com/cv/afcon-final-senegal-morocco-tactics-jan-2026/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "IRQ",
@@ -523,7 +1022,22 @@
       "press_intensity": 48,
       "possession_style": 40,
       "defensive_line_height": 38
-    }
+    },
+    "_tactical_profile_basis": "Graham Arnold's Iraq, at a first World Cup in 40 years, leans on energetic forward pressing (Al-Hamadi's relentless work rate applying pressure on opposing backlines) and a fighting, 'nothing to lose' mentality, but as an underdog it concedes territory and defends from a deeper block. That mix gives a moderate, forward-led press_intensity of 48 alongside a low possession_style of 40 and a deep defensive_line_height of 38. (https://www.aljazeera.com/sports/2026/6/5/we-are-fighters-iraq-aim-to-shock-rivals-at-2026-world-cup ; https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-arnold-iraq-interview ; https://www.iraqinews.com/sports/iraq-world-cup-2026-squad-forwards-tactics-arnold/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.aljazeera.com/sports/2026/6/5/we-are-fighters-iraq-aim-to-shock-rivals-at-2026-world-cup",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/graham-arnold-iraq-interview",
+        "verified": true
+      },
+      {
+        "url": "https://www.iraqinews.com/sports/iraq-world-cup-2026-squad-forwards-tactics-arnold/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "NOR",
@@ -537,7 +1051,18 @@
       "press_intensity": 56,
       "possession_style": 50,
       "defensive_line_height": 48
-    }
+    },
+    "_tactical_profile_basis": "Stale Solbakken's Norway plays quick, vertical, progressive football rather than possession-hoarding: attacks are built on collective combinations and intelligent off-the-ball movement (Bobb, Nusa, Odegaard) feeding Haaland from a 4-4-2 or 4-3-3, which supports a balanced possession_style of 50. It is not a heavy-pressing side -- the identity is transition speed and progressive passing, so press_intensity is a moderate 56 and the back line holds a mid-height 48. (https://tacticalfootballanalysis.com/norway-tactics-fifa-world-cup-2026-tactical-analysis/ ; https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/stale-solbakken-norway-interview)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/norway-tactics-fifa-world-cup-2026-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/stale-solbakken-norway-interview",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "ALG",
@@ -551,7 +1076,22 @@
       "press_intensity": 56,
       "possession_style": 54,
       "defensive_line_height": 48
-    }
+    },
+    "_tactical_profile_basis": "Vladimir Petkovic drills a disciplined, compact block with rapid transitions, alternating 4-2-3-1 / 4-3-3 / 3-4-2-1, but Algeria also controls matches through its midfield and carries a constant attacking threat down the right -- so possession_style sits slightly above midpoint at 54 with a moderate press_intensity of 56. The emphasis on defensive compactness and countering keeps the back line at a balanced 48 rather than high. (https://fwctimes.com/vladimir-petkovic/ ; https://tacticalfootballanalysis.com/algeria-vladimir-petkovic-tactics-world-cup-2026-tactical-analysis/ ; https://leaguelane.com/algeria-world-cup-2026-squad-key-players-tactics-predictions/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/vladimir-petkovic/",
+        "verified": true
+      },
+      {
+        "url": "https://tacticalfootballanalysis.com/algeria-vladimir-petkovic-tactics-world-cup-2026-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://leaguelane.com/algeria-world-cup-2026-squad-key-players-tactics-predictions/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "AUT",
@@ -565,7 +1105,22 @@
       "press_intensity": 84,
       "possession_style": 56,
       "defensive_line_height": 68
-    }
+    },
+    "_tactical_profile_basis": "Ralf Rangnick is the godfather of gegenpressing and his Austria was the most aggressive pressing team at Euro 2024 (8.64 PPDA), with the four closest players converging on the ball the instant possession is lost -- fully justifying an extreme press_intensity of 84. The system uses a high line to compress play and trigger turnovers, so defensive_line_height is a high 68. In settled possession Austria evolves from a 2+2 build to a 3-1-6 to control the attacking half, which supports a solid-but-not-dominant possession_style of 56. (https://fwctimes.com/ralf-rangnick/ ; https://en.wikipedia.org/wiki/Ralf_Rangnick ; https://worldsoccertalk.com/world-cup/austria-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/ralf-rangnick/",
+        "verified": true
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ralf_Rangnick",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/austria-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "JOR",
@@ -579,7 +1134,22 @@
       "press_intensity": 40,
       "possession_style": 36,
       "defensive_line_height": 34
-    }
+    },
+    "_tactical_profile_basis": "Jamal Sellami's calling card is defensive solidity: Jordan defends in a compact 3-4-2-1 that becomes a rigid 5-4-1 without the ball, sitting in a deep low block against superior opposition and releasing Al-Tamari and Olwan on the counter -- they averaged just 40.2% possession in AFC qualifying, one of the lowest shares in their group. That deep, transition-first, low-retention identity justifies the low profile: press_intensity 40, possession_style 36, defensive_line_height 34. (https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://leaguelane.com/jordan-world-cup-2026-squad-key-players-tactics-predictions/ ; https://www.lemaroc360.com/article/jamal-sellami-a-tactical-visionary-leading-jordan-to-the-2026-world-cup)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://leaguelane.com/jordan-world-cup-2026-squad-key-players-tactics-predictions/",
+        "verified": true
+      },
+      {
+        "url": "https://www.lemaroc360.com/article/jamal-sellami-a-tactical-visionary-leading-jordan-to-the-2026-world-cup",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "POR",
@@ -593,7 +1163,22 @@
       "press_intensity": 68,
       "possession_style": 66,
       "defensive_line_height": 60
-    }
+    },
+    "_tactical_profile_basis": "Martinez's Portugal is built to control territory, averaging about 71% possession and morphing into a 3-2-5 in-possession shape with extreme width, which underpins the high possession_style (66). Defensively they counter-press aggressively on loss (Fernandes, Vitinha and Felix swarming the ball) and hold a high line behind Ruben Dias and Antonio Silva, matching the high press_intensity (68) and defensive_line_height (60) (sources: Tactical Football Analysis 'Roberto Martinez Tactics at Portugal 2026' https://tacticalfootballanalysis.com/roberto-martinez-tactics-portugal-2026-world-cup-tactical-analysis/ ; Portugoal.net 'Portugal at World Cup 2026: what the numbers say' https://portugoal.net/selecao/5576-portugal-at-world-cup-2026-what-the-numbers-say-what-martinez-believes-and-why-the-odds-may-undervalue-the-selecao ; FIFA.com Martinez WC2026 interview https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/roberto-martinez-portugal-interview).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/roberto-martinez-tactics-portugal-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://portugoal.net/selecao/5576-portugal-at-world-cup-2026-what-the-numbers-say-what-martinez-believes-and-why-the-odds-may-undervalue-the-selecao",
+        "verified": true
+      },
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/roberto-martinez-portugal-interview",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "COD",
@@ -607,7 +1192,22 @@
       "press_intensity": 48,
       "possession_style": 38,
       "defensive_line_height": 40
-    }
+    },
+    "_tactical_profile_basis": "Sebastien Desabre sets DR Congo up in a 4-2-3-1 / 4-3-3 that values compact defending before quick forward release, and at the tournament the Leopards dropped into a 4-5-1 / five-man line that sat progressively deeper against higher-ranked sides (they held Portugal to 1-1 and resisted Colombia until the 76th minute), prioritizing solidity over aggressive pressing. This organization-first identity gives a moderate press_intensity of 48, a low possession_style of 38, and a deep defensive_line_height of 40. (https://fwcmania.com/coach/sebastien-desabre/ ; https://www.sportsmole.co.uk/football/congo-dr/world-cup-2026/news/how-dr-congo-nearly-pulled-off-a-world-cup-shock-against-england_600497.html ; https://en.wikipedia.org/wiki/S%C3%A9bastien_Desabre)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwcmania.com/coach/sebastien-desabre/",
+        "verified": true
+      },
+      {
+        "url": "https://www.sportsmole.co.uk/football/congo-dr/world-cup-2026/news/how-dr-congo-nearly-pulled-off-a-world-cup-shock-against-england_600497.html",
+        "verified": true
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/S%C3%A9bastien_Desabre",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "UZB",
@@ -621,7 +1221,22 @@
       "press_intensity": 44,
       "possession_style": 40,
       "defensive_line_height": 36
-    }
+    },
+    "_tactical_profile_basis": "Fabio Cannavaro, on Uzbekistan's World Cup debut, builds around compact defending, central protection and tactical discipline as the non-negotiable foundation, wanting the team measured and organized without the ball. Although he values possession in principle, for a debutant he prioritizes defensive structure, which anchors the cautious profile: press_intensity 44, possession_style 40, and a deep defensive_line_height of 36 to stay compact against stronger opponents. (https://fwctimes.com/fabio-cannavaro/ ; https://staddoha.com/en/2026-fifa-world-cup/fabio-cannavaros-new-mission-leading-uzbekistan-to-glory/ ; https://sports.yahoo.com/articles/cannavaro-uzbekistan-world-cup-adventure-143500586.html)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwctimes.com/fabio-cannavaro/",
+        "verified": true
+      },
+      {
+        "url": "https://staddoha.com/en/2026-fifa-world-cup/fabio-cannavaros-new-mission-leading-uzbekistan-to-glory/",
+        "verified": true
+      },
+      {
+        "url": "https://sports.yahoo.com/articles/cannavaro-uzbekistan-world-cup-adventure-143500586.html",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "COL",
@@ -635,7 +1250,22 @@
       "press_intensity": 70,
       "possession_style": 60,
       "defensive_line_height": 58
-    }
+    },
+    "_tactical_profile_basis": "Lorenzo sets Colombia up pragmatically for balance: a high-pressing 4-3-3 / 4-2-3-1 that stays compact, protects the middle and attacks with creativity and rapid vertical transitions once space appears ('compact, aggressive in the final third, and exploit the counterattack'). The high press_intensity (70) with a balanced possession_style (60) and defensive_line_height (58) reflect that press-and-transition identity (sources: FWCUMC 'Nestor Lorenzo Colombia Coach Profile and Tactics' https://fwcumc.com/news/nestor-lorenzo-colombia-coach-profile-tactics/ ; World Soccer Talk 'Colombia 2026 World Cup preview: tactical analysis' https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; Squawka 'Colombia World Cup 2026 tactical analysis' https://www.squawka.com/en/news/world-cup/colombia-world-cup-2026-route-to-the-final/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://fwcumc.com/news/nestor-lorenzo-colombia-coach-profile-tactics/",
+        "verified": true
+      },
+      {
+        "url": "https://worldsoccertalk.com/world-cup/colombia-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.squawka.com/en/news/world-cup/colombia-world-cup-2026-route-to-the-final/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "CRO",
@@ -649,7 +1279,22 @@
       "press_intensity": 48,
       "possession_style": 68,
       "defensive_line_height": 50
-    }
+    },
+    "_tactical_profile_basis": "Dalic sets Croatia up as a structured, possession-first 4-3-3 that runs the game through Modric and Kovacic in central midfield, averaging close to 70% possession during 2026 qualifying (hence the high possession_style of 68) while deliberately slowing tempo rather than pressing aggressively. Out of possession the side drops into a compact 4-4-2 mid-block that conceded only about 5.1 expected goals across eight qualifiers, so press_intensity (48) and defensive_line_height (50) reflect a patient mid-block rather than a high-pressing, high-line system (sources: Tactical Football Analysis 'Zlatko Dalic Tactics at Croatia 2026' https://tacticalfootballanalysis.com/zlatko-dalic-tactics-croatia-2026-world-cup-tactical-analysis/ ; Goal.com Portugal vs Croatia WC2026 preview https://www.goal.com/en-us/news/portugal-croatia-world-cup-preview/blt9fb0907531786204 ; Croatia Week 2026 squad coverage https://www.croatiaweek.com/croatia-2026-world-cup-squad-zlatko-dalic/).",
+    "tactical_profile_sources": [
+      {
+        "url": "https://tacticalfootballanalysis.com/zlatko-dalic-tactics-croatia-2026-world-cup-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://www.goal.com/en-us/news/portugal-croatia-world-cup-preview/blt9fb0907531786204",
+        "verified": true
+      },
+      {
+        "url": "https://www.croatiaweek.com/croatia-2026-world-cup-squad-zlatko-dalic/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "GHA",
@@ -663,7 +1308,22 @@
       "press_intensity": 58,
       "possession_style": 42,
       "defensive_line_height": 40
-    }
+    },
+    "_tactical_profile_basis": "Carlos Queiroz gave Ghana his career-long identity: pragmatic defensive organization, compact positioning and quick counters, conceding possession to stronger opponents (a low-block 0-0 grind-out against England) before striking in transition through Semenyo, Kamaldeen and Jordan Ayew off a Partey pivot in a back-five / 4-1-4-1. This concede-and-counter approach anchors a low possession_style of 42 and a deep defensive_line_height of 40, with athletic transition pressing giving a moderate press_intensity of 58. (https://www.espn.com/espn/story/_/id/48908368/ghana-boss-carlos-queiroz-tactical-vision-clear-does-squad-meet-it ; https://www.sportsmole.co.uk/football/ghana/world-cup-2026/feature/how-carlos-queiroz-instantly-gave-ghana-a-new-identity_600175.html ; https://tacticalfootballanalysis.com/croatia-ghana-world-cup-2026-tactical-analysis-tactics/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://www.espn.com/espn/story/_/id/48908368/ghana-boss-carlos-queiroz-tactical-vision-clear-does-squad-meet-it",
+        "verified": true
+      },
+      {
+        "url": "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/feature/how-carlos-queiroz-instantly-gave-ghana-a-new-identity_600175.html",
+        "verified": true
+      },
+      {
+        "url": "https://tacticalfootballanalysis.com/croatia-ghana-world-cup-2026-tactical-analysis-tactics/",
+        "verified": true
+      }
+    ]
   },
   {
     "id": "PAN",
@@ -677,6 +1337,21 @@
       "press_intensity": 55,
       "possession_style": 56,
       "defensive_line_height": 45
-    }
+    },
+    "_tactical_profile_basis": "Thomas Christiansen brings a Barcelona-inspired, possession-oriented, positional-play model -- Panama averaged 61.9% possession in CONCACAF qualifying, building from the back to dictate tempo -- which anchors an above-midpoint possession_style of 56 (tempered below the qualifying figure because the model expects less of the ball against World Cup-level opposition, where Christiansen pragmatically shifts to a compact block). Out of possession the side defends compactly and strikes on quick transitions, giving a moderate press_intensity of 55 and a mid-deep defensive_line_height of 45. (https://worldsoccertalk.com/world-cup/panama-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/ ; https://mundialanalytics.com/panama-national-team-analysis ; https://fwctimes.com/thomas-christiansen/)",
+    "tactical_profile_sources": [
+      {
+        "url": "https://worldsoccertalk.com/world-cup/panama-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "verified": true
+      },
+      {
+        "url": "https://mundialanalytics.com/panama-national-team-analysis",
+        "verified": true
+      },
+      {
+        "url": "https://fwctimes.com/thomas-christiansen/",
+        "verified": true
+      }
+    ]
   }
 ]
