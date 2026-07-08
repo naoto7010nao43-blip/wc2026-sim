@@ -64,6 +64,10 @@ def _score_value(value: object) -> bool:
     return isinstance(value, int) and value >= 0
 
 
+def _is_score_only_entry(entry: dict) -> bool:
+    return entry.get("goals_verified") is False and not entry.get("goals")
+
+
 def _check_score_and_goals(scope: str, entry: dict) -> list[RealResultsFinding]:
     findings: list[RealResultsFinding] = []
     home_id = entry.get("home_team_id")
@@ -77,6 +81,11 @@ def _check_score_and_goals(scope: str, entry: dict) -> list[RealResultsFinding]:
         findings.append(RealResultsFinding(scope, f"away_score must be a non-negative integer: {away_score!r}"))
     if not isinstance(entry.get("date"), str) or not entry["date"]:
         findings.append(RealResultsFinding(scope, "date is required"))
+
+    if _is_score_only_entry(entry):
+        if not entry.get("score_source_url"):
+            findings.append(RealResultsFinding(scope, "score-only result must include score_source_url"))
+        return findings
 
     if not findings:
         goal_counts = {home_id: 0, away_id: 0}

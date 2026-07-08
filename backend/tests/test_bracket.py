@@ -52,11 +52,16 @@ def test_r32_template_has_16_matches_covering_each_slot_once():
 
 def test_next_round_pairs_builds_the_knockout_tree():
     r32_winners = list(range(16))
-    r16 = next_round_pairs(r32_winners)
-    assert r16 == [(0, 1), (2, 3), (4, 5), (6, 7), (8, 9), (10, 11), (12, 13), (14, 15)]
+    r16 = next_round_pairs(r32_winners, "R16")
+    assert r16 == [(2, 3), (1, 0), (9, 8), (10, 11), (5, 4), (7, 6), (12, 13), (14, 15)]
 
-    qf = next_round_pairs([f"r16_winner_{i}" for i in range(8)])
-    assert len(qf) == 4
+    qf = next_round_pairs([f"r16_winner_{i}" for i in range(8)], "QF")
+    assert qf == [
+        ("r16_winner_1", "r16_winner_0"),
+        ("r16_winner_4", "r16_winner_5"),
+        ("r16_winner_2", "r16_winner_3"),
+        ("r16_winner_6", "r16_winner_7"),
+    ]
 
     sf = next_round_pairs([f"qf_winner_{i}" for i in range(4)])
     assert len(sf) == 2

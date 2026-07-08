@@ -85,5 +85,211 @@
         "scorer_name": "Issa Diop"
       }
     ]
+  },
+  {
+    "round": "R32",
+    "home_team_id": "CIV",
+    "away_team_id": "NOR",
+    "home_score": 1,
+    "away_score": 2,
+    "date": "2026-06-30",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "FRA",
+    "away_team_id": "SWE",
+    "home_score": 3,
+    "away_score": 0,
+    "date": "2026-06-30",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "MEX",
+    "away_team_id": "ECU",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-07-01",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "ENG",
+    "away_team_id": "COD",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-07-01",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "BEL",
+    "away_team_id": "SEN",
+    "home_score": 3,
+    "away_score": 2,
+    "date": "2026-07-01",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "USA",
+    "away_team_id": "BIH",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-07-01",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "ESP",
+    "away_team_id": "AUT",
+    "home_score": 3,
+    "away_score": 0,
+    "date": "2026-07-02",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "POR",
+    "away_team_id": "CRO",
+    "home_score": 2,
+    "away_score": 1,
+    "date": "2026-07-02",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "SUI",
+    "away_team_id": "ALG",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-07-02",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "AUS",
+    "away_team_id": "EGY",
+    "home_score": 1,
+    "away_score": 1,
+    "went_to_penalties": true,
+    "penalty_home_score": 2,
+    "penalty_away_score": 4,
+    "date": "2026-07-03",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "ARG",
+    "away_team_id": "CPV",
+    "home_score": 3,
+    "away_score": 2,
+    "date": "2026-07-03",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R32",
+    "home_team_id": "COL",
+    "away_team_id": "GHA",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-07-03",
+    "goals_verified": false,
+    "score_source_url": "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch/"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "CAN",
+    "away_team_id": "MAR",
+    "home_score": 0,
+    "away_score": 3,
+    "date": "2026-07-04",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "FRA",
+    "away_team_id": "PAR",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-07-04",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "NOR",
+    "away_team_id": "BRA",
+    "home_score": 2,
+    "away_score": 0,
+    "date": "2026-07-05",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "MEX",
+    "away_team_id": "ENG",
+    "home_score": 2,
+    "away_score": 3,
+    "date": "2026-07-05",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "ESP",
+    "away_team_id": "POR",
+    "home_score": 1,
+    "away_score": 0,
+    "date": "2026-07-06",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "BEL",
+    "away_team_id": "USA",
+    "home_score": 4,
+    "away_score": 1,
+    "date": "2026-07-06",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "ARG",
+    "away_team_id": "EGY",
+    "home_score": 4,
+    "away_score": 2,
+    "date": "2026-07-07",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
+  },
+  {
+    "round": "R16",
+    "home_team_id": "SUI",
+    "away_team_id": "COL",
+    "home_score": 0,
+    "away_score": 0,
+    "went_to_penalties": true,
+    "penalty_home_score": 4,
+    "penalty_away_score": 3,
+    "date": "2026-07-07",
+    "goals_verified": false,
+    "score_source_url": "https://www.foxsports.com/stories/soccer/2026-world-cup-schedule-bracket-results-dates-times-tv-channels"
   }
 ]

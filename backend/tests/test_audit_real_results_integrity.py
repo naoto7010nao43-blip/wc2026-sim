@@ -44,6 +44,35 @@ def test_score_goal_mismatch_is_reported():
     assert any("home goals list has 1 goals but score is 2" in f.message for f in findings)
 
 
+def test_score_only_result_can_skip_unverified_scorers():
+    entry = {
+        "home_team_id": "AAA",
+        "away_team_id": "BBB",
+        "home_score": 3,
+        "away_score": 1,
+        "date": "2026-07-01",
+        "goals_verified": False,
+        "score_source_url": "https://example.com/match-report",
+    }
+
+    assert audit._check_score_and_goals("fixture", entry) == []
+
+
+def test_score_only_result_requires_source_url():
+    entry = {
+        "home_team_id": "AAA",
+        "away_team_id": "BBB",
+        "home_score": 3,
+        "away_score": 1,
+        "date": "2026-07-01",
+        "goals_verified": False,
+    }
+
+    findings = audit._check_score_and_goals("fixture", entry)
+
+    assert any("score_source_url" in f.message for f in findings)
+
+
 def test_knockout_draw_requires_penalty_winner(monkeypatch, tmp_path):
     real_results = tmp_path / "real_results"
     real_results.mkdir()

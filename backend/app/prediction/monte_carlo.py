@@ -263,10 +263,10 @@ def simulate_tournament_outcomes(
         group_letter, position = slot[0], int(slot[1])
         return group_standings[group_letter][position - 1].team_id
 
-    def play_round(participants: list[str], stage_key: str, rng: random.Random) -> list[str]:
+    def play_round(participants: list[str], stage_key: str, rng: random.Random, next_round_name: str | None = None) -> list[str]:
         for tid in participants:
             stage_counts[stage_key][tid] += 1
-        pairs = next_round_pairs(participants)
+        pairs = next_round_pairs(participants, next_round_name)
         return [winner_of(h, a, rng) for h, a in pairs]
 
     for i in range(iterations):
@@ -292,8 +292,8 @@ def simulate_tournament_outcomes(
             for slot in pair
         ]
         round_of_16_participants = play_round(r32_participants, "round_of_32", rng)
-        quarterfinal_participants = play_round(round_of_16_participants, "round_of_16", rng)
-        semifinal_participants = play_round(quarterfinal_participants, "quarterfinal", rng)
+        quarterfinal_participants = play_round(round_of_16_participants, "round_of_16", rng, "R16")
+        semifinal_participants = play_round(quarterfinal_participants, "quarterfinal", rng, "QF")
         finalists = play_round(semifinal_participants, "semifinal", rng)
         for tid in finalists:
             stage_counts["final"][tid] += 1
@@ -406,11 +406,11 @@ def project_team_tournament_path(
         record_stage("R32", r32_pairs, R32_TEMPLATE)
         r16_participants = play_pairs(r32_pairs, rng)
 
-        r16_pairs = next_round_pairs(r16_participants)
+        r16_pairs = next_round_pairs(r16_participants, "R16")
         record_stage("R16", r16_pairs)
         qf_participants = play_pairs(r16_pairs, rng)
 
-        qf_pairs = next_round_pairs(qf_participants)
+        qf_pairs = next_round_pairs(qf_participants, "QF")
         record_stage("QF", qf_pairs)
         sf_participants = play_pairs(qf_pairs, rng)
 
@@ -525,8 +525,8 @@ def project_final_matchups(
             for slot_a, slot_b in R32_TEMPLATE
         ]
         r16_participants = play_pairs(r32_pairs, rng)
-        qf_participants = play_pairs(next_round_pairs(r16_participants), rng)
-        sf_participants = play_pairs(next_round_pairs(qf_participants), rng)
+        qf_participants = play_pairs(next_round_pairs(r16_participants, "R16"), rng)
+        sf_participants = play_pairs(next_round_pairs(qf_participants, "QF"), rng)
         finalists = play_pairs(next_round_pairs(sf_participants), rng)
 
         pair = tuple(sorted(finalists))

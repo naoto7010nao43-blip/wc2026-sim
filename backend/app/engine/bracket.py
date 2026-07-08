@@ -67,6 +67,27 @@ R32_TEMPLATE: list[tuple[str, str]] = [
     ("K1", "3RD:K1"),
 ]
 
+# FIFA's published knockout tree does not simply pair consecutive R32 match
+# winners. Keep R32_TEMPLATE in match-number order, then apply the verified
+# advancement maps for the real 2026 bracket.
+R16_FROM_R32_INDEXES: list[tuple[int, int]] = [
+    (2, 3),   # Canada/Morocco quadrant
+    (1, 0),   # France/Paraguay quadrant
+    (9, 8),   # Norway/Brazil quadrant
+    (10, 11), # Mexico/England quadrant
+    (5, 4),   # Spain/Portugal quadrant
+    (7, 6),   # Belgium/USA quadrant
+    (12, 13), # Argentina/Egypt quadrant
+    (14, 15), # Switzerland/Colombia quadrant
+]
+
+QF_FROM_R16_INDEXES: list[tuple[int, int]] = [
+    (1, 0), # France/Morocco quadrant
+    (4, 5), # Spain/Belgium quadrant
+    (2, 3), # Norway/England quadrant
+    (6, 7), # Argentina/Switzerland quadrant
+]
+
 T = TypeVar("T")
 
 # Curated rows of FIFA's Annex C table for combinations whose real-world
@@ -115,9 +136,22 @@ def assign_third_place_slots(qualifying_groups: list[str]) -> dict[str, str]:
     raise ValueError(f"No valid third-place slot assignment exists for groups {groups}")
 
 
-def next_round_pairs(prev_round_results: list[T]) -> list[tuple[T, T]]:
-    """Pair up consecutive results from one round to form the next round's
-    matchups (R32->R16, R16->QF, QF->SF, SF->Final), per the bracket tree."""
+def _pairs_from_indexes(prev_round_results: list[T], indexes: list[tuple[int, int]]) -> list[tuple[T, T]]:
+    if len(prev_round_results) != max(max(pair) for pair in indexes) + 1:
+        raise ValueError(f"Expected {max(max(pair) for pair in indexes) + 1} results, got {len(prev_round_results)}")
+    return [(prev_round_results[a], prev_round_results[b]) for a, b in indexes]
+
+
+def next_round_pairs(prev_round_results: list[T], next_round_name: str | None = None) -> list[tuple[T, T]]:
+    """Build matchups from one round's winners.
+
+    ``next_round_name`` is needed for the real 2026 R32->R16 and R16->QF
+    bracket maps. Later rounds pair consecutive winners.
+    """
+    if next_round_name == "R16":
+        return _pairs_from_indexes(prev_round_results, R16_FROM_R32_INDEXES)
+    if next_round_name == "QF":
+        return _pairs_from_indexes(prev_round_results, QF_FROM_R16_INDEXES)
     if len(prev_round_results) % 2 != 0:
         raise ValueError("Expected an even number of results to pair up")
     return [(prev_round_results[i], prev_round_results[i + 1]) for i in range(0, len(prev_round_results), 2)]

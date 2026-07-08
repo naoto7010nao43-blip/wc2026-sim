@@ -44,7 +44,7 @@ def test_summary_endpoint_returns_current_counts(client):
     assert body["real_group_match_count"] == 72
     assert body["real_group_match_expected"] == 72
     assert body["real_group_match_coverage_pct"] == 100.0
-    assert body["real_knockout_match_count"] == 4
+    assert body["real_knockout_match_count"] == 24
     assert body["freshness_status"] == "critical"
     assert body["freshness_critical_count"] == 1
     assert body["freshness_warning_count"] >= 1
@@ -103,7 +103,7 @@ def test_summary_matches_current_repository_reports():
     assert summary["real_group_match_count"] == 72
     assert summary["real_group_match_expected"] == 72
     assert summary["real_group_match_coverage_pct"] == 100.0
-    assert summary["real_knockout_match_count"] == 4
+    assert summary["real_knockout_match_count"] == 24
     assert summary["freshness_status"] == "critical"
     assert summary["freshness_critical_count"] == 1
     assert summary["freshness_warning_count"] >= 1

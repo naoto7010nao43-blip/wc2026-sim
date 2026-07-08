@@ -126,7 +126,7 @@ def run_full_tournament(db: Session, base_seed: int = 0) -> dict:
 
     def play_next_round(prev_matches: list[Match], round_name: str) -> list[Match]:
         winners = [match_winner(m) for m in prev_matches]
-        pairs = next_round_pairs(winners)
+        pairs = next_round_pairs(winners, round_name)
         return [
             play_knockout(home_id, away_id, round=round_name, bracket_slot=f"{round_name}_{i + 1}")
             for i, (home_id, away_id) in enumerate(pairs)
