@@ -3,8 +3,8 @@ import { api } from "../api/client";
 import type { TournamentGroupAdvancementGroup, TournamentGroupAdvancementOut } from "../types/domain";
 import { TeamBadge } from "./TeamBadge";
 
-const DEFAULT_ITERATIONS = 500;
-const ITERATION_OPTIONS = [500, 1000, 2000] as const;
+const DEFAULT_ITERATIONS = 200;
+const ITERATION_OPTIONS = [200, 500, 1000] as const;
 
 export function TournamentGroupAdvancementPanel() {
   const [summary, setSummary] = useState<TournamentGroupAdvancementOut | null>(null);
