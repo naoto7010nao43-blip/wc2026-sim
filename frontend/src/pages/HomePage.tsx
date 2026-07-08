@@ -9,7 +9,7 @@ export function HomePage() {
         <svg
           aria-hidden
           viewBox="0 0 600 260"
-          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[300px] w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-[0.16]"
+          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[300px] w-[calc(100vw-2rem)] max-w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-[0.16]"
         >
           <g fill="none" stroke="#34d26b" strokeWidth="1.5">
             <line x1="300" y1="0" x2="300" y2="260" />
