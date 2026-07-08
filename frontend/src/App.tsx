@@ -11,19 +11,31 @@ import { TeamsPage } from "./pages/TeamsPage";
 import { TournamentPage } from "./pages/TournamentPage";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `whitespace-nowrap rounded-md px-2 py-1.5 text-xs font-medium transition sm:px-3 sm:text-sm ${
-    isActive ? "bg-emerald-600 text-white" : "text-slate-300 hover:bg-slate-700 hover:text-white"
+  `relative whitespace-nowrap px-2 py-2 text-xs font-semibold transition sm:px-3 sm:text-sm ${
+    isActive
+      ? "text-emerald-300 after:absolute after:inset-x-2 after:-bottom-[13px] after:h-[3px] after:rounded-t-full after:bg-emerald-400 sm:after:inset-x-3"
+      : "text-slate-400 hover:text-slate-100"
   }`;
 
 function App() {
   return (
     <TeamsProvider>
-      <div className="min-h-screen bg-slate-900 text-slate-100">
-        <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+      <div className="stadium-bg min-h-screen text-slate-100">
+        {/* ピッチグリーンのトップライン */}
+        <div className="h-[3px] bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600" />
+        <header className="sticky top-0 z-40 border-b border-slate-700/70 bg-slate-950/85 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
-            <Link to="/" className="shrink-0 whitespace-nowrap text-base font-bold tracking-tight sm:text-lg">
-              <span className="text-emerald-400">WC</span>2026
-              <span className="hidden sm:inline"> シミュレーター</span>
+            <Link to="/" className="group flex shrink-0 items-center gap-2 whitespace-nowrap">
+              <span className="score-num flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-b from-emerald-500 to-emerald-700 text-sm text-white shadow-[0_4px_12px_-4px_rgba(31,179,94,0.6)]">
+                26
+              </span>
+              <span className="font-display text-lg font-extrabold tracking-wide">
+                <span className="text-emerald-400">WC</span>
+                <span className="text-slate-100">2026</span>
+                <span className="ml-1.5 hidden align-middle text-xs font-bold tracking-widest text-slate-500 sm:inline">
+                  SIMULATOR
+                </span>
+              </span>
             </Link>
             <nav className="flex min-w-0 gap-1 overflow-x-auto sm:gap-2">
               <NavLink to="/tournament" className={navLinkClass}>
@@ -52,6 +64,9 @@ function App() {
             </Routes>
           </AppErrorBoundary>
         </main>
+        <footer className="mt-10 border-t border-slate-800 py-6 text-center text-xs text-slate-600">
+          WC2026 シミュレーター — Poissonモデル × 実結果データによる非公式予測
+        </footer>
       </div>
     </TeamsProvider>
   );

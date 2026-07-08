@@ -19,13 +19,24 @@ const ROUND_LABELS: Record<RoundName, string> = {
 const BRACKET_ROUNDS: RoundName[] = ["R32", "R16", "QF", "SF", "FINAL"];
 
 function BracketColumn({ round, matches }: { round: RoundName; matches: MatchSummary[] }) {
+  const isFinal = round === "FINAL";
   return (
-    <div className="flex w-[180px] flex-shrink-0 flex-col justify-around gap-4">
-      <h4 className="text-center text-xs font-semibold tracking-wide text-slate-400">{ROUND_LABELS[round]}</h4>
+    <div className="flex w-[190px] flex-shrink-0 flex-col gap-3">
+      <h4
+        className={`rounded border px-2 py-1 text-center font-display text-xs font-bold tracking-widest ${
+          isFinal
+            ? "border-amber-500/40 bg-amber-500/10 text-amber-300"
+            : "border-slate-700 bg-slate-800/60 text-slate-400"
+        }`}
+      >
+        {ROUND_LABELS[round]}
+      </h4>
       <div className="flex flex-1 flex-col justify-around gap-3">
-        {matches.length === 0
-          ? <p className="text-center text-xs text-slate-500">未実施</p>
-          : matches.map((m) => <MatchCard key={m.id} match={m} />)}
+        {matches.length === 0 ? (
+          <p className="rounded border border-dashed border-slate-700 py-4 text-center text-xs text-slate-600">未実施</p>
+        ) : (
+          matches.map((m) => <MatchCard key={m.id} match={m} />)
+        )}
       </div>
     </div>
   );
@@ -37,24 +48,34 @@ export function BracketView({ result }: Props) {
   return (
     <div>
       {champion && (
-        <div className="mb-6 rounded-lg border border-amber-500 bg-amber-500/10 p-4 text-center">
-          <p className="text-xs uppercase tracking-widest text-amber-400">優勝</p>
-          <div className="mt-1 flex justify-center text-lg">
-            <TeamBadge teamId={champion} className="font-extrabold text-amber-300" />
+        <div className="fade-up relative mb-6 overflow-hidden rounded-xl border border-amber-500/50 bg-gradient-to-b from-amber-500/15 via-slate-900/60 to-slate-900/60 p-6 text-center">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background: "radial-gradient(ellipse 60% 80% at 50% 0%, rgba(238,190,51,0.18), transparent 70%)",
+            }}
+          />
+          <p className="font-display text-xs font-bold uppercase tracking-[0.35em] text-amber-400">Champion</p>
+          <div className="mt-2 flex justify-center text-2xl">
+            <TeamBadge teamId={champion} className="font-display font-extrabold text-amber-200" />
           </div>
+          <p className="mt-1 text-xs text-slate-400">2026 FIFAワールドカップ 優勝(シミュレーション)</p>
         </div>
       )}
-      <div className="flex gap-4 overflow-x-auto pb-2">
+      <div className="scroll-thin flex gap-4 overflow-x-auto pb-2">
         {BRACKET_ROUNDS.map((round) => (
           <BracketColumn key={round} round={round} matches={result.matches[round] ?? []} />
         ))}
       </div>
       {result.matches.THIRD_PLACE?.length > 0 && (
         <div className="mt-6 max-w-xs">
-          <h4 className="mb-2 text-center text-xs font-semibold tracking-wide text-slate-400">
+          <h4 className="mb-2 rounded border border-slate-700 bg-slate-800/60 px-2 py-1 text-center font-display text-xs font-bold tracking-widest text-slate-400">
             {ROUND_LABELS.THIRD_PLACE}
           </h4>
-          {result.matches.THIRD_PLACE.map((m) => <MatchCard key={m.id} match={m} />)}
+          {result.matches.THIRD_PLACE.map((m) => (
+            <MatchCard key={m.id} match={m} />
+          ))}
         </div>
       )}
     </div>

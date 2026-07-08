@@ -69,8 +69,9 @@ export function TournamentPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
-        <h2 className="text-xl font-bold">大会モード</h2>
+      <section className="panel fade-up p-5 sm:p-6">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] text-emerald-400">Tournament Mode</p>
+        <h2 className="mt-1 font-display text-2xl font-extrabold tracking-wide">大会モード</h2>
         <p className="mt-1 text-sm text-slate-400">
           ボタンひとつでグループステージから決勝までの全104試合をシミュレーションします。
           各試合カードをクリックすると、詳細なリプレイとデータを確認できます。
@@ -79,14 +80,14 @@ export function TournamentPage() {
           <button
             onClick={runTournament}
             disabled={loading || restoring}
-            className="rounded-lg bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+            className="btn-primary px-6 py-2.5"
           >
             {loading ? "シミュレーション中..." : result ? "もう一度シミュレーション" : "大会を一括シミュレーション"}
           </button>
           {result && !loading && (
             <button
               onClick={resetTournament}
-              className="rounded-lg border border-slate-600 px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-700"
+              className="btn-secondary px-4 py-2.5 text-sm"
             >
               リセット
             </button>
@@ -116,11 +117,11 @@ export function TournamentPage() {
         <div className={loading ? "pointer-events-none space-y-8 opacity-40 transition-opacity" : "space-y-8 transition-opacity"}>
           <TournamentHighlightsPanel result={result} />
           <section>
-            <h3 className="mb-3 text-lg font-bold">決勝トーナメント</h3>
+            <h3 className="mb-3 flex items-center gap-2 font-display text-xl font-extrabold tracking-wide"><span className="h-5 w-1 rounded-full bg-emerald-400" />決勝トーナメント</h3>
             <BracketView result={result} />
           </section>
           <section>
-            <h3 className="mb-3 text-lg font-bold">グループステージ順位表</h3>
+            <h3 className="mb-3 flex items-center gap-2 font-display text-xl font-extrabold tracking-wide"><span className="h-5 w-1 rounded-full bg-emerald-400" />グループステージ順位表</h3>
             <GroupStandingsGrid groupStandings={result.group_standings} groupMatches={result.matches.group} />
           </section>
         </div>

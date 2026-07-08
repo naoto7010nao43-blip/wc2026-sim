@@ -11,45 +11,38 @@ export function MatchCard({ match, className = "" }: Props) {
   const homeWon = match.home_score > match.away_score;
   const awayWon = match.away_score > match.home_score;
   const played = match.status === "completed";
-
   const isReal = played && match.is_real;
 
   return (
     <Link
       to={`/matches/${match.id}`}
-      className={`block rounded-lg border-l-4 px-3 py-2 text-sm transition hover:bg-slate-700 ${
+      className={`group block overflow-hidden rounded-lg border transition ${
         isReal
-          ? "border-l-amber-400 border border-amber-500/40 bg-amber-950/20 hover:border-amber-400"
-          : "border-l-slate-600 border border-slate-700 bg-slate-800 hover:border-emerald-500"
+          ? "border-amber-500/45 bg-gradient-to-b from-amber-950/45 to-slate-800/60 hover:border-amber-400"
+          : "border-slate-700 bg-slate-800/70 hover:border-emerald-500 hover:bg-slate-800"
       } ${className}`}
     >
-      <div className={`flex items-center justify-between gap-2 ${homeWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
-        <span className="flex min-w-0 items-center gap-1.5">
-          <TeamBadge teamId={match.home_team_id} />
-          {played && homeWon && <WinnerBadge />}
-        </span>
-        <span className="shrink-0 tabular-nums">{played ? match.home_score : "-"}</span>
-      </div>
-      <div className={`mt-1 flex items-center justify-between gap-2 ${awayWon ? "font-bold text-slate-100" : "text-slate-300"}`}>
-        <span className="flex min-w-0 items-center gap-1.5">
-          <TeamBadge teamId={match.away_team_id} />
-          {played && awayWon && <WinnerBadge />}
-        </span>
-        <span className="shrink-0 tabular-nums">{played ? match.away_score : "-"}</span>
-      </div>
-      {match.went_to_penalties && (
-        <div className="mt-1 text-xs text-amber-400">
-          PK {match.penalty_home_score}-{match.penalty_away_score}
+      <div className="px-2.5 py-2">
+        <TeamRow teamId={match.home_team_id} score={match.home_score} played={played} won={homeWon} />
+        <div className="mt-1.5">
+          <TeamRow teamId={match.away_team_id} score={match.away_score} played={played} won={awayWon} />
         </div>
-      )}
-      {played && (
-        <div className="mt-1 flex items-center gap-1">
-          {isReal ? (
-            <span className="flex items-center gap-1 rounded bg-amber-500/25 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              実結果
-            </span>
+      </div>
+      {(match.went_to_penalties || played) && (
+        <div className="flex items-center justify-between gap-2 border-t border-white/5 bg-slate-900/50 px-2.5 py-1">
+          {played ? (
+            isReal ? (
+              <span className="text-[10px] font-bold tracking-wider text-amber-300">実結果</span>
+            ) : (
+              <span className="text-[10px] tracking-wider text-slate-500">SIM</span>
+            )
           ) : (
-            <span className="rounded bg-slate-700 px-1.5 py-0.5 text-[10px] text-slate-400">シミュレーション</span>
+            <span />
+          )}
+          {match.went_to_penalties && (
+            <span className="score-num text-[11px] text-amber-300">
+              PK {match.penalty_home_score}–{match.penalty_away_score}
+            </span>
           )}
         </div>
       )}
@@ -57,6 +50,23 @@ export function MatchCard({ match, className = "" }: Props) {
   );
 }
 
-function WinnerBadge() {
-  return <span className="rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-300">勝</span>;
+function TeamRow({ teamId, score, played, won }: { teamId: string; score: number; played: boolean; won: boolean }) {
+  return (
+    <div className={`flex items-center justify-between gap-2 text-sm ${won ? "text-slate-100" : "text-slate-300"}`}>
+      <span className={`flex min-w-0 items-center gap-1.5 ${won ? "font-bold" : ""}`}>
+        <TeamBadge teamId={teamId} />
+      </span>
+      <span
+        className={`score-num shrink-0 rounded px-1.5 py-0.5 text-base ${
+          played
+            ? won
+              ? "bg-emerald-500/20 text-emerald-300"
+              : "text-slate-300"
+            : "text-slate-600"
+        }`}
+      >
+        {played ? score : "–"}
+      </span>
+    </div>
+  );
 }

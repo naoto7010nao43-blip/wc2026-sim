@@ -85,19 +85,21 @@ export function SimulatorPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
-        <h2 className="text-xl font-bold">試合シミュレーター</h2>
+      <section className="panel fade-up p-5 sm:p-6">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] text-emerald-400">Match Simulator</p>
+        <h2 className="mt-1 font-display text-2xl font-extrabold tracking-wide">試合シミュレーター</h2>
         <p className="mt-1 text-sm text-slate-400">
           気になる対戦カードを選んで、その1試合だけを詳細にシミュレーションします。
         </p>
 
-        <div className="mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="relative mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10">
+          <span aria-hidden className="score-num pointer-events-none absolute left-1/2 top-9 hidden -translate-x-1/2 text-xl text-slate-600 sm:block">VS</span>
           <div>
-            <label className="block text-sm font-medium text-slate-300">ホームチーム</label>
+            <label className="block text-sm font-medium text-slate-300"><span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle" />ホームチーム</label>
             <select
               value={homeTeamId}
               onChange={(e) => setHomeTeamId(e.target.value)}
-              className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-slate-100"
+              className="mt-1 w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-slate-100 transition focus:border-emerald-500"
             >
               {teams.map((t) => (
                 <option key={t.id} value={t.id}>
@@ -116,11 +118,11 @@ export function SimulatorPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-300">アウェイチーム</label>
+            <label className="block text-sm font-medium text-slate-300"><span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-slate-500 align-middle" />アウェイチーム</label>
             <select
               value={awayTeamId}
               onChange={(e) => setAwayTeamId(e.target.value)}
-              className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-slate-100"
+              className="mt-1 w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-slate-100 transition focus:border-emerald-500"
             >
               {teams.map((t) => (
                 <option key={t.id} value={t.id}>
@@ -167,7 +169,7 @@ export function SimulatorPage() {
         <button
           onClick={runSimulation}
           disabled={!canRunSimulation}
-          className="mt-5 rounded-lg bg-emerald-600 px-5 py-2.5 font-semibold text-white shadow transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-primary mt-5 px-6 py-2.5"
         >
           {loading ? "シミュレーション中..." : "シミュレーション開始"}
         </button>

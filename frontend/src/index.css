@@ -1,6 +1,204 @@
 @import "tailwindcss";
 
+/* ============================================================
+   WC2026 Simulator — "Stadium Night" design system
+   Base: pitch-green-tinted dark / Accent: pitch green / Gold: real results
+   ============================================================ */
+
+@theme {
+  /* --- Night-pitch neutral scale (overrides slate) --- */
+  --color-slate-950: #060d0a;
+  --color-slate-900: #0b1512;
+  --color-slate-800: #121f1a;
+  --color-slate-700: #22362d;
+  --color-slate-600: #35513f;
+  --color-slate-500: #6b8577;
+  --color-slate-400: #93aa9c;
+  --color-slate-300: #b7cabd;
+  --color-slate-200: #d3e2d7;
+  --color-slate-100: #ecf4ee;
+  --color-slate-50: #f6faf7;
+
+  /* --- Pitch green accent (overrides emerald) --- */
+  --color-emerald-950: #03271a;
+  --color-emerald-900: #06402b;
+  --color-emerald-800: #0a5637;
+  --color-emerald-700: #0e7040;
+  --color-emerald-600: #15954f;
+  --color-emerald-500: #1fb35e;
+  --color-emerald-400: #34d26b;
+  --color-emerald-300: #7fe8a3;
+  --color-emerald-200: #b6f3cb;
+
+  /* --- Gold (real results / champion, overrides amber) --- */
+  --color-amber-950: #2b1d02;
+  --color-amber-900: #4a3305;
+  --color-amber-500: #d9a514;
+  --color-amber-400: #eebe33;
+  --color-amber-300: #f5d574;
+
+  /* --- Fonts --- */
+  --font-sans: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Saira Condensed", "Noto Sans JP", system-ui, sans-serif;
+}
+
+html {
+  scrollbar-color: var(--color-slate-600) var(--color-slate-900);
+}
+
 body {
   margin: 0;
-  background-color: #0f172a;
+  background-color: var(--color-slate-950);
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ピッチの芝のような、ごく薄い縦ストライプ + 上部の照明グラデーション */
+.stadium-bg {
+  background-color: var(--color-slate-950);
+  background-image:
+    radial-gradient(ellipse 90% 45% at 50% -12%, rgba(52, 210, 107, 0.14), transparent 62%),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 72px,
+      rgba(255, 255, 255, 0.012) 72px,
+      rgba(255, 255, 255, 0.012) 144px
+    );
+}
+
+/* 見出し・スコア用ディスプレイ書体 */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* スコアボード数字 */
+.score-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* 共通フォーカスリング */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-emerald-400);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 主要CTAボタン */
+.btn-primary {
+  background: linear-gradient(180deg, var(--color-emerald-500), var(--color-emerald-600));
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-emerald-400);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 6px 18px -6px rgba(31, 179, 94, 0.55);
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 8px 24px -6px rgba(52, 210, 107, 0.65);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-slate-600);
+  color: var(--color-slate-300);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--color-slate-700);
+  border-color: var(--color-slate-500);
+  color: var(--color-slate-100);
+}
+
+/* パネル(カード)共通 */
+.panel {
+  border: 1px solid var(--color-slate-700);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%),
+    color-mix(in srgb, var(--color-slate-800) 55%, transparent);
+  border-radius: 0.75rem;
+}
+
+/* select / input 共通 */
+select,
+input[type="text"],
+input:not([type]) {
+  accent-color: var(--color-emerald-500);
+}
+input[type="checkbox"] {
+  accent-color: var(--color-emerald-500);
+}
+
+/* 横スクロール領域のスクロールバー */
+.scroll-thin {
+  scrollbar-width: thin;
+}
+.scroll-thin::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-slate-600);
+  border-radius: 4px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: var(--color-slate-900);
+}
+
+/* 順位表の突破圏カラーバー */
+.qual-bar {
+  position: relative;
+}
+.qual-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 3px;
+  border-radius: 2px;
+}
+.qual-bar--advance::before {
+  background: var(--color-emerald-400);
+}
+.qual-bar--playoff::before {
+  background: var(--color-amber-400);
+}
+
+/* 登場アニメーション(reduced motion 尊重) */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    animation: fadeUp 0.45s ease both;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }

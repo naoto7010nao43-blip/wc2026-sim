@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import { countryNameJa } from "../data/countryNamesJa";
+import { flagUrl } from "../data/teamFlags";
 import type { TeamSummary } from "../types/domain";
 
 const CONFEDERATION_ORDER = ["UEFA", "CONMEBOL", "CONCACAF", "CAF", "AFC", "OFC"];
@@ -56,10 +57,11 @@ export function TeamsPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-lg border border-slate-700 bg-slate-800/40 p-5">
+      <section className="panel fade-up p-5 sm:p-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-xl font-bold">チーム一覧</h2>
+            <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] text-emerald-400">Teams</p>
+            <h2 className="mt-1 font-display text-2xl font-extrabold tracking-wide">チーム一覧</h2>
             <p className="mt-1 text-sm text-slate-400">
               出場48チームの監督、フォーメーション、FIFAランク、グループを確認できます。
             </p>
@@ -88,7 +90,7 @@ export function TeamsPage() {
       {confederations.map(([confederation, rows]) => (
         <section key={confederation}>
           <div className="mb-3 flex items-center justify-between gap-3">
-            <h3 className="text-sm font-bold tracking-wide text-emerald-400">{confederation}</h3>
+            <h3 className="flex items-center gap-2 font-display text-sm font-bold tracking-[0.2em] text-emerald-400"><span className="h-4 w-1 rounded-full bg-emerald-400" />{confederation}</h3>
             <span className="text-xs text-slate-500">{rows.length}チーム</span>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -96,12 +98,24 @@ export function TeamsPage() {
               <Link
                 key={team.id}
                 to={`/teams/${team.id}`}
-                className="group rounded-lg border border-slate-700 bg-slate-800/55 p-4 transition hover:border-emerald-500 hover:bg-slate-800"
+                className="group panel p-4 transition hover:border-emerald-500/70 hover:shadow-[0_8px_30px_-12px_rgba(31,179,94,0.35)]"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="rounded bg-slate-700 px-1.5 py-0.5 text-xs font-bold text-slate-100">{team.id}</span>
+                      {flagUrl(team.id) ? (
+                        <img
+                          src={flagUrl(team.id)!}
+                          srcSet={`${flagUrl(team.id, 80)} 2x`}
+                          alt=""
+                          width={28}
+                          height={20}
+                          loading="lazy"
+                          className="h-5 w-7 shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
+                        />
+                      ) : (
+                        <span className="rounded bg-slate-700 px-1.5 py-0.5 font-display text-xs font-bold text-slate-100">{team.id}</span>
+                      )}
                       <h4 className="truncate text-sm font-bold text-slate-100 group-hover:text-emerald-300">
                         {countryNameJa(team.id, team.name)}
                       </h4>
