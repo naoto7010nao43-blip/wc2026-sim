@@ -218,7 +218,7 @@ function OddsBar({ teamId, pct, rank, maxPct }: { teamId: string; pct: number; r
   return (
     <div className="flex items-center gap-3 text-sm">
       <span className="score-num w-6 shrink-0 text-right text-xs text-slate-500">{rank}</span>
-      <div className="w-36 shrink-0 sm:w-44">
+      <div className="w-28 shrink-0 sm:w-44">
         <TeamBadge teamId={teamId} />
       </div>
       <div className="h-4 min-w-0 flex-1 overflow-hidden rounded bg-slate-800/80">
@@ -227,7 +227,7 @@ function OddsBar({ teamId, pct, rank, maxPct }: { teamId: string; pct: number; r
           style={{ width: `${width}%` }}
         />
       </div>
-      <span className="score-num w-14 shrink-0 text-right text-emerald-300">{pct.toFixed(1)}%</span>
+      <span className="score-num w-12 shrink-0 text-right text-sm text-emerald-300 sm:w-14 sm:text-base">{pct.toFixed(1)}%</span>
     </div>
   );
 }

@@ -123,7 +123,7 @@ export function TournamentPage() {
               role="tab"
               aria-selected={activeTab === tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative px-4 py-2.5 text-sm font-semibold transition ${
+              className={`relative flex-1 px-2 py-2.5 text-center text-sm font-semibold transition sm:flex-none sm:px-4 ${
                 activeTab === tab.id
                   ? "text-emerald-300 after:absolute after:inset-x-3 after:bottom-0 after:h-[3px] after:rounded-t-full after:bg-emerald-400"
                   : "text-slate-400 hover:text-slate-100"

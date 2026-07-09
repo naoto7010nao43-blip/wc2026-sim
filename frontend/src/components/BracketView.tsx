@@ -22,7 +22,7 @@ const BRACKET_ROUNDS: RoundName[] = ["R32", "R16", "QF", "SF", "FINAL"];
 function BracketColumn({ round, matches }: { round: RoundName; matches: MatchSummary[] }) {
   const isFinal = round === "FINAL";
   return (
-    <div className="flex w-[190px] flex-shrink-0 flex-col gap-3">
+    <div className="flex w-[190px] flex-shrink-0 snap-start flex-col gap-3">
       <h4
         className={`rounded border px-2 py-1 text-center font-display text-xs font-bold tracking-widest ${
           isFinal
@@ -42,7 +42,7 @@ function BracketColumn({ round, matches }: { round: RoundName; matches: MatchSum
               {!m.is_real && (
                 <Link
                   to={`/simulate?home=${m.home_team_id}&away=${m.away_team_id}&run=1`}
-                  className="mt-0.5 block text-center text-[10px] text-slate-600 opacity-0 transition hover:text-emerald-300 group-hover/whatif:opacity-100"
+                  className="mt-0.5 block text-center text-[10px] text-slate-500 transition hover:text-emerald-300 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover/whatif:opacity-100"
                   title="このカードを別の乱数でもう一度シミュレーションします"
                 >
                   ⟳ もしもう一度戦ったら?
@@ -77,7 +77,8 @@ export function BracketView({ result }: Props) {
           <p className="mt-1 text-xs text-slate-400">2026 FIFAワールドカップ 優勝(シミュレーション)</p>
         </div>
       )}
-      <div className="scroll-thin flex gap-4 overflow-x-auto pb-2">
+      <p className="mb-2 text-[11px] text-slate-500 lg:hidden">← 横にスワイプして全ラウンドを表示 →</p>
+      <div className="scroll-thin flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 lg:snap-none">
         {BRACKET_ROUNDS.map((round) => (
           <BracketColumn key={round} round={round} matches={result.matches[round] ?? []} />
         ))}

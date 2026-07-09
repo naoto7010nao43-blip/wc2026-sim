@@ -46,6 +46,17 @@ html {
   scrollbar-color: var(--color-slate-600) var(--color-slate-900);
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+select,
+label {
+  touch-action: manipulation; /* ダブルタップズームによる300ms遅延を除去 */
+}
+
 body {
   margin: 0;
   background-color: var(--color-slate-950);

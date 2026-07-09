@@ -38,7 +38,7 @@ function App() {
                 </span>
               </span>
             </Link>
-            <nav className="flex min-w-0 gap-1 overflow-x-auto sm:gap-2">
+            <nav className="hidden min-w-0 gap-2 sm:flex">
               <NavLink to="/tournament" className={navLinkClass}>
                 大会モード
               </NavLink>
@@ -54,7 +54,7 @@ function App() {
             </nav>
           </div>
         </header>
-        <main className="mx-auto max-w-6xl px-4 py-6">
+        <main className="mx-auto max-w-6xl px-4 py-6 pb-24 sm:pb-6">
           <AppErrorBoundary>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -69,11 +69,105 @@ function App() {
             </Routes>
           </AppErrorBoundary>
         </main>
-        <footer className="mt-10 border-t border-slate-800 py-6 text-center text-xs text-slate-600">
+        <footer className="mt-10 border-t border-slate-800 py-6 pb-24 text-center text-xs text-slate-600 sm:pb-6">
           WC2026 シミュレーター — Poissonモデル × 実結果データによる非公式予測
         </footer>
+        <MobileBottomNav />
       </div>
     </TeamsProvider>
+  );
+}
+
+function MobileBottomNav() {
+  const itemClass = ({ isActive }: { isActive: boolean }) =>
+    `flex flex-col items-center justify-center gap-0.5 py-2 text-[10px] font-semibold transition ${
+      isActive ? "text-emerald-300" : "text-slate-500"
+    }`;
+  return (
+    <nav
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-700/70 bg-slate-950/95 backdrop-blur sm:hidden"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      aria-label="メインナビゲーション"
+    >
+      <div className="grid grid-cols-5">
+        <NavLink to="/" end className={itemClass}>
+          <HomeIcon />
+          ホーム
+        </NavLink>
+        <NavLink to="/tournament" className={itemClass}>
+          <TrophyIcon />
+          大会
+        </NavLink>
+        <NavLink to="/simulate" className={itemClass}>
+          <BoltIcon />
+          シミュ
+        </NavLink>
+        <NavLink to="/teams" className={itemClass}>
+          <FlagIcon />
+          チーム
+        </NavLink>
+        <NavLink to="/accuracy" className={itemClass}>
+          <TargetIcon />
+          的中
+        </NavLink>
+      </div>
+    </nav>
+  );
+}
+
+const iconProps = {
+  width: 22,
+  height: 22,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+} as const;
+
+function HomeIcon() {
+  return (
+    <svg {...iconProps} aria-hidden>
+      <path d="M3 10.5 12 3l9 7.5" />
+      <path d="M5 9.5V21h14V9.5" />
+    </svg>
+  );
+}
+
+function TrophyIcon() {
+  return (
+    <svg {...iconProps} aria-hidden>
+      <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z" />
+      <path d="M7 6H4a3 3 0 0 0 3 5M17 6h3a3 3 0 0 1-3 5" />
+    </svg>
+  );
+}
+
+function BoltIcon() {
+  return (
+    <svg {...iconProps} aria-hidden>
+      <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+    </svg>
+  );
+}
+
+function FlagIcon() {
+  return (
+    <svg {...iconProps} aria-hidden>
+      <path d="M5 21V4" />
+      <path d="M5 4c4-2 8 2 14 0v9c-6 2-10-2-14 0" />
+    </svg>
+  );
+}
+
+function TargetIcon() {
+  return (
+    <svg {...iconProps} aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1" />
+    </svg>
   );
 }
 
