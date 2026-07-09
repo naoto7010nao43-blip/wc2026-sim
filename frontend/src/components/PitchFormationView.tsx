@@ -9,6 +9,11 @@ interface Props {
   upToIndex?: number;
 }
 
+function isGoalEvent(e: MatchEvent | undefined): boolean {
+  if (!e) return false;
+  return e.event_type === "goal" || (e.event_type === "penalty_kick" && e.event_metadata?.scored === true);
+}
+
 const HOME_COLOR = "#60a5fa";
 const AWAY_COLOR = "#fb7185";
 const BALL_TRAIL_LENGTH = 6;
@@ -96,10 +101,27 @@ export function PitchFormationView({ events, homeTeamId, homeLineup, awayLineup,
             </circle>
           )}
 
-          {/* The ball itself: bright, distinct, always on top. */}
-          <circle cx={ball.x ?? 50} cy={ball.y ?? 50} r={1.1} fill="white" stroke="#0f172a" strokeWidth="0.4" />
+          {/* The ball itself: bright, distinct, always on top. CSS transitionで移動を補間する。 */}
+          <g
+            className="transition-transform duration-500 ease-out"
+            style={{ transform: `translate(${ball.x ?? 50}px, ${ball.y ?? 50}px)` }}
+          >
+            <circle r={1.1} fill="white" stroke="#0f172a" strokeWidth="0.4" />
+          </g>
         </svg>
 
+        {isGoalEvent(current) && (
+          <div key={currentIdx} className="goal-flash pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+            <div className="absolute inset-0" style={{ background: `radial-gradient(ellipse 70% 60% at 50% 50%, ${isHome ? "rgba(96,165,250,0.35)" : "rgba(251,113,133,0.35)"}, transparent 70%)` }} />
+            <p
+              className="font-display text-5xl font-extrabold tracking-widest text-white"
+              style={{ textShadow: `0 0 24px ${isHome ? HOME_COLOR : AWAY_COLOR}, 0 2px 8px rgba(0,0,0,0.6)` }}
+            >
+              GOAL!
+            </p>
+            {primary && <p className="mt-1 rounded bg-slate-950/70 px-2 py-0.5 text-sm font-bold text-white">{primary.name}</p>}
+          </div>
+        )}
         {primaryPos && primary && (
           <div
             className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded bg-slate-900/90 px-1.5 py-0.5 text-[11px] font-bold whitespace-nowrap text-white shadow"

@@ -197,6 +197,38 @@ input[type="checkbox"] {
   background: var(--color-amber-400);
 }
 
+/* GOAL!フラッシュ演出(reduced motion 尊重) */
+@media (prefers-reduced-motion: no-preference) {
+  .goal-flash {
+    animation: goalFlash 2s ease-out both;
+  }
+  @keyframes goalFlash {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    12% {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    24% {
+      transform: scale(1);
+    }
+    78% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .goal-flash {
+    display: none;
+  }
+}
+
 /* 登場アニメーション(reduced motion 尊重) */
 @media (prefers-reduced-motion: no-preference) {
   .fade-up {

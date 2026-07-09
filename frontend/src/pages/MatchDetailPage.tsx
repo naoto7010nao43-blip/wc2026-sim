@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import { CountryIntroPanel } from "../components/CountryIntroPanel";
@@ -124,7 +124,7 @@ export function MatchDetailPage() {
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [speed, setSpeed] = useState(1);
 
   useEffect(() => {
     if (!matchId) return;
@@ -168,19 +168,19 @@ export function MatchDetailPage() {
 
   useEffect(() => {
     if (!isPlaying || !match) return;
-    timerRef.current = setInterval(() => {
-      setCurrentIndex((idx) => {
-        if (idx >= match.events.length - 1) {
-          setIsPlaying(false);
-          return idx;
-        }
-        return idx + 1;
-      });
-    }, PLAYBACK_INTERVAL_MS);
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isPlaying, match]);
+    if (currentIndex >= match.events.length - 1) return;
+    const current = match.events[currentIndex];
+    const isGoal =
+      current != null &&
+      (current.event_type === "goal" || (current.event_type === "penalty_kick" && current.event_metadata?.scored === true));
+    // ゴールの瞬間は演出を見せるため長めに停止する
+    const delay = (PLAYBACK_INTERVAL_MS * (isGoal ? 6 : 1)) / speed;
+    const timer = setTimeout(() => {
+      setCurrentIndex((idx) => Math.min(idx + 1, match.events.length - 1));
+      if (currentIndex + 1 >= match.events.length - 1) setIsPlaying(false);
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [isPlaying, match, currentIndex, speed]);
 
   if (error) {
     return (
@@ -197,6 +197,12 @@ export function MatchDetailPage() {
   if (!match || match.id !== matchId) return <p className="text-slate-400">読み込み中...</p>;
 
   const isAtEnd = currentIndex >= match.events.length - 1;
+  // リプレイ位置時点のスコア。イベント上のゴール総数が最終スコアと一致する場合のみ表示する
+  const totalEventGoals = match.events.filter((e) => e.event_type === "goal").length;
+  const liveScoreValid = match.went_to_penalties || totalEventGoals === match.home_score + match.away_score;
+  const seen = match.events.slice(0, currentIndex + 1).filter((e) => e.event_type === "goal");
+  const liveHome = seen.filter((e) => e.team_id === match.home_team_id).length;
+  const liveAway = seen.filter((e) => e.team_id === match.away_team_id).length;
   const matchKind = matchKindOf(match);
   const hasEvents = match.events.length > 0;
   const showRatingsSection = match.is_real || hasEvents;
@@ -281,18 +287,53 @@ export function MatchDetailPage() {
             >
               最初に戻る
             </button>
-            <input
-              type="range"
-              min={0}
-              max={Math.max(match.events.length - 1, 0)}
-              value={currentIndex}
-              onChange={(e) => {
-                setIsPlaying(false);
-                setCurrentIndex(Number(e.target.value));
-              }}
-              className="min-w-[160px] flex-1"
-            />
-            <span className="w-16 shrink-0 text-right text-sm text-slate-400">{match.events[currentIndex]?.minute ?? 0}'</span>
+            <div className="flex shrink-0 overflow-hidden rounded-md border border-slate-600 text-xs">
+              {[0.5, 1, 2].map((sp) => (
+                <button
+                  key={sp}
+                  onClick={() => setSpeed(sp)}
+                  className={`px-2.5 py-1.5 font-semibold transition ${
+                    speed === sp ? "bg-emerald-600 text-white" : "text-slate-400 hover:bg-slate-700"
+                  }`}
+                >
+                  {sp}x
+                </button>
+              ))}
+            </div>
+            <div className="relative min-w-[160px] flex-1">
+              {/* ゴール位置マーカー */}
+              {match.events.length > 1 &&
+                match.events.map((e, idx) =>
+                  e.event_type === "goal" ? (
+                    <span
+                      key={idx}
+                      aria-hidden
+                      className="pointer-events-none absolute -top-1 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-amber-400"
+                      style={{ left: `${(100 * idx) / (match.events.length - 1)}%` }}
+                      title={`${e.minute}' ゴール`}
+                    />
+                  ) : null,
+                )}
+              <input
+                type="range"
+                min={0}
+                max={Math.max(match.events.length - 1, 0)}
+                value={currentIndex}
+                onChange={(e) => {
+                  setIsPlaying(false);
+                  setCurrentIndex(Number(e.target.value));
+                }}
+                className="w-full"
+              />
+            </div>
+            <span className="score-num w-24 shrink-0 text-right text-sm text-slate-300">
+              {match.events[currentIndex]?.minute ?? 0}'
+              {liveScoreValid && (
+                <span className="ml-2 rounded bg-slate-900/80 px-1.5 py-0.5 text-emerald-300">
+                  {liveHome}–{liveAway}
+                </span>
+              )}
+            </span>
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-[380px_1fr]">
