@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../api/client";
 import { MatchPredictionPanel } from "../components/MatchPredictionPanel";
@@ -12,12 +12,17 @@ export function SimulatorPage() {
   const [searchParams] = useSearchParams();
   const queryHomeTeamId = searchParams.get("home")?.toUpperCase() ?? "";
   const queryAwayTeamId = searchParams.get("away")?.toUpperCase() ?? "";
+  const querySeed = searchParams.get("seed") ?? "";
+  const queryRun = searchParams.get("run") === "1";
+  const queryDecisive = searchParams.get("decisive") === "1";
   const [teams, setTeams] = useState<TeamSummary[]>([]);
   const [homeTeamId, setHomeTeamId] = useState("");
   const [awayTeamId, setAwayTeamId] = useState("");
   const [dataQuality, setDataQuality] = useState<DataQualitySummary | null>(null);
-  const [seed, setSeed] = useState("");
-  const [decisive, setDecisive] = useState(false);
+  const [seed, setSeed] = useState(querySeed);
+  const [decisive, setDecisive] = useState(queryDecisive);
+  const [copied, setCopied] = useState(false);
+  const autoRunRef = useRef(queryRun);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -59,6 +64,27 @@ export function SimulatorPage() {
   const sameTeamsSelected = Boolean(homeTeamId && awayTeamId && homeTeamId === awayTeamId);
   const canRunSimulation = teams.length > 0 && !loading && !sameTeamsSelected && seedIsValid;
 
+  // 共有URL(run=1)からの自動実行: チームがURL通りに確定した後、一度だけ走らせる
+  useEffect(() => {
+    if (!autoRunRef.current) return;
+    if (!homeTeamId || !awayTeamId || homeTeamId === awayTeamId) return;
+    if (homeTeamId !== queryHomeTeamId || awayTeamId !== queryAwayTeamId) return;
+    autoRunRef.current = false;
+    const sharedSeed = querySeed.trim() === "" ? undefined : Number(querySeed);
+    if (sharedSeed !== undefined && !Number.isInteger(sharedSeed)) return;
+    api
+      .simulateMatch(homeTeamId, awayTeamId, { seed: sharedSeed, allowDraw: !queryDecisive })
+      .then((match) => {
+        navigate(`/matches/${match.id}`);
+      })
+      .catch((e) => {
+        setError(String(e));
+        setLoading(false);
+      });
+    // 非同期チェーン内でのみ状態を更新する(eslint: set-state-in-effect 対応)
+    queueMicrotask(() => setLoading(true));
+  }, [homeTeamId, awayTeamId, queryHomeTeamId, queryAwayTeamId, querySeed, queryDecisive, navigate]);
+
   async function runSimulation() {
     if (!homeTeamId || !awayTeamId || homeTeamId === awayTeamId) {
       setError("異なる2チームを選択してください。");
@@ -80,6 +106,24 @@ export function SimulatorPage() {
       setError(String(e));
     } finally {
       setLoading(false);
+    }
+  }
+
+  function shareUrl(): string {
+    const params = new URLSearchParams({ home: homeTeamId, away: awayTeamId });
+    if (trimmedSeed !== "") params.set("seed", trimmedSeed);
+    if (decisive) params.set("decisive", "1");
+    params.set("run", "1");
+    return `${window.location.origin}/simulate?${params.toString()}`;
+  }
+
+  async function copyShareUrl() {
+    try {
+      await navigator.clipboard.writeText(shareUrl());
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.prompt("このURLをコピーしてください:", shareUrl());
     }
   }
 
@@ -166,13 +210,22 @@ export function SimulatorPage() {
 
         {error && <p className="mt-3 text-sm text-rose-400">{error}</p>}
 
-        <button
-          onClick={runSimulation}
-          disabled={!canRunSimulation}
-          className="btn-primary mt-5 px-6 py-2.5"
-        >
-          {loading ? "シミュレーション中..." : "シミュレーション開始"}
-        </button>
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <button onClick={runSimulation} disabled={!canRunSimulation} className="btn-primary px-6 py-2.5">
+            {loading ? "シミュレーション中..." : "シミュレーション開始"}
+          </button>
+          <button
+            onClick={copyShareUrl}
+            disabled={!homeTeamId || !awayTeamId || sameTeamsSelected}
+            className="btn-secondary px-4 py-2.5 text-sm"
+            title="この対戦条件(チーム・シード)を再現できるURLをコピーします"
+          >
+            {copied ? "コピーしました ✓" : "対戦リンクをコピー"}
+          </button>
+        </div>
+        <p className="mt-2 text-[11px] text-slate-500">
+          対戦リンクを開くと同じ条件で自動実行されます。シードを指定すると全く同じ試合展開を再現できます。
+        </p>
       </section>
 
       <TacticalMatchupPanel homeTeam={homeTeam} awayTeam={awayTeam} />

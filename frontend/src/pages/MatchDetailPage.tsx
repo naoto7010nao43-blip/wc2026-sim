@@ -21,6 +21,17 @@ const ROUND_LABELS: Record<RoundName, string> = {
 
 const PLAYBACK_INTERVAL_MS = 350;
 
+function replayUrl(match: MatchResult): string | null {
+  if (match.is_real || match.seed == null) return null;
+  const params = new URLSearchParams({
+    home: match.home_team_id,
+    away: match.away_team_id,
+    seed: String(match.seed),
+    run: "1",
+  });
+  return `${window.location.origin}/simulate?${params.toString()}`;
+}
+
 function ratio(home: number | null, away: number | null): number {
   const h = home ?? 0;
   const a = away ?? 0;
@@ -66,6 +77,29 @@ const NO_EVENTS_DESCRIPTIONS: Record<MatchKind, string> = {
   predicted_detail: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
   poisson: "この試合はスコア予測モデルによる結果のため、イベント再現は利用できません。",
 };
+
+function ShareReplayButton({ match }: { match: MatchResult }) {
+  const [copied, setCopied] = useState(false);
+  const url = replayUrl(match);
+  if (!url) return null;
+  async function copy() {
+    if (!url) return;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.prompt("このURLをコピーしてください:", url);
+    }
+  }
+  return (
+    <div className="mt-3 text-center">
+      <button onClick={copy} className="btn-secondary px-3 py-1.5 text-xs">
+        {copied ? "コピーしました ✓" : "この試合を再現するリンクをコピー"}
+      </button>
+    </div>
+  );
+}
 
 function StatRow({ label, home, away, homePct }: { label: string; home: string; away: string; homePct: number }) {
   return (
@@ -206,6 +240,7 @@ export function MatchDetailPage() {
             フォーメーション: {match.home_formation} vs {match.away_formation}
           </p>
         )}
+        <ShareReplayButton match={match} />
         {match.home_possession_pct != null && (
           <div className="mx-auto mt-3 max-w-md space-y-1.5 text-xs text-slate-300">
             <StatRow label="ボール保持率" home={`${match.home_possession_pct}%`} away={`${match.away_possession_pct}%`} homePct={match.home_possession_pct} />

@@ -1,6 +1,7 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { AppErrorBoundary } from "./components/AppErrorBoundary";
 import { TeamsProvider } from "./context/TeamsContext";
+import { AccuracyPage } from "./pages/AccuracyPage";
 import { DataReviewPage } from "./pages/DataReviewPage";
 import { HomePage } from "./pages/HomePage";
 import { MatchDetailPage } from "./pages/MatchDetailPage";
@@ -47,6 +48,9 @@ function App() {
               <NavLink to="/teams" className={navLinkClass}>
                 チーム一覧
               </NavLink>
+              <NavLink to="/accuracy" className={navLinkClass}>
+                的中実績
+              </NavLink>
             </nav>
           </div>
         </header>
@@ -59,6 +63,7 @@ function App() {
               <Route path="/teams" element={<TeamsPage />} />
               <Route path="/matches/:matchId" element={<MatchDetailPage />} />
               <Route path="/teams/:teamId" element={<TeamPage />} />
+              <Route path="/accuracy" element={<AccuracyPage />} />
               <Route path="/data-review" element={<DataReviewPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

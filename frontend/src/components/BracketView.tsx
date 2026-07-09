@@ -1,4 +1,5 @@
 import type { MatchSummary, RoundName, TournamentResult } from "../types/domain";
+import { Link } from "react-router-dom";
 import { MatchCard } from "./MatchCard";
 import { TeamBadge } from "./TeamBadge";
 
@@ -35,7 +36,20 @@ function BracketColumn({ round, matches }: { round: RoundName; matches: MatchSum
         {matches.length === 0 ? (
           <p className="rounded border border-dashed border-slate-700 py-4 text-center text-xs text-slate-600">未実施</p>
         ) : (
-          matches.map((m) => <MatchCard key={m.id} match={m} />)
+          matches.map((m) => (
+            <div key={m.id} className="group/whatif">
+              <MatchCard match={m} />
+              {!m.is_real && (
+                <Link
+                  to={`/simulate?home=${m.home_team_id}&away=${m.away_team_id}&run=1`}
+                  className="mt-0.5 block text-center text-[10px] text-slate-600 opacity-0 transition hover:text-emerald-300 group-hover/whatif:opacity-100"
+                  title="このカードを別の乱数でもう一度シミュレーションします"
+                >
+                  ⟳ もしもう一度戦ったら?
+                </Link>
+              )}
+            </div>
+          ))
         )}
       </div>
     </div>
